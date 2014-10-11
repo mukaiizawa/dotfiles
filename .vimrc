@@ -15,7 +15,7 @@ NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/webapi-vim'    " for browser.vim
 NeoBundle 'open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-jp/vimdoc-ja'
@@ -100,8 +100,11 @@ nnoremap <S-SPACE> <C-b>zz
 nnoremap <F3> :e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :source ~/dotfiles/.vimrc<CR>
-inoremap <ESC> <ESC>:set iminsert=0<CR>
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 
 " Key Map For Plugin "
-" noremap <Plug>(caw:i)
+nmap gci <Plug>(caw:i:toggle)
+vmap gci <Plug>(caw:i:toggle)
+nmap gcc <Plug>(caw:wrap:toggle)
+vmap gcc <Plug>(caw:wrap:toggle)
