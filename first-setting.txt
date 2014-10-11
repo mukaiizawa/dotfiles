@@ -1,0 +1,22 @@
+The first setup for vim
+
+1.Dowonload gvimxx.exe from "www.vim.org"
+
+2.Clone "dotfiles" repository from git.
+
+3.Clone "neobundle.vim" repository from git.
+
+4.Dowonload "vimproc.vim" and build vimproc_win32.dll
+  >cd C:\Users\ユーザー名\.vim\bundle
+  >git clone https://github.com/Shougo/vimproc.vim.git vimproc
+  >cd vimproc
+  >make -f make_mingw32.mak
+
+5.Execute "symbolic.bat" to make symboliclink.
+
+
+
+Cautions!
+The path of git is letting it pass. 
+
+
