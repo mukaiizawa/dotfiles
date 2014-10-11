@@ -10,6 +10,7 @@ set guioptions+=c
 set visualbell t_vb=
 au GUIEnter * simalt ~x
 colorscheme shin-dark
+syntax on
 
 " Mouse
 set mouse=a

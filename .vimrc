@@ -1,3 +1,6 @@
+scriptencoding utf-8
+syntax enable
+
 " Setting for Runtime " 
 if !1 | finish | endif
 
@@ -5,7 +8,6 @@ if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -18,19 +20,10 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Shougo/vimproc', 
-" {
-"   'build' : {
-"     'windows' : 'make -f make_mingw32.mak',
-"     'cygwin' : 'make -f make_cygwin.mak',
-"     'mac' : 'make -f make_mac.mak',
-"     'unix' : 'make -f make_unix.mak',
-"   },
-" }
 
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-
 
 
 
@@ -91,26 +84,24 @@ nnoremap sr <C-w>r
 nnoremap st :tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
-
 nnoremap sq :q<CR>
 
-nnoremap U <C-r>
-
-nnoremap <SPACE> <C-f>zz
-nnoremap <S-SPACE> <C-b>zz
+nnoremap <S-u> <C-r>
 
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
 nnoremap <C-f> <NOP>
-
 nnoremap <C-y> <NOP>
 nnoremap <C-u> <NOP>
 nnoremap <C-b> <NOP>
+nnoremap <SPACE> <C-f>zz
+nnoremap <S-SPACE> <C-b>zz
 
 nnoremap <F3> :e ~/dotfiles/.vimrc<CR>
-
+nnoremap <F4> :e ~/dotfiles/.gvimrc<CR>
+nnoremap <F5> :source ~/dotfiles/.vimrc<CR>
 inoremap <ESC> <ESC>:set iminsert=0<CR>
 
 
 " Key Map For Plugin "
-
+" noremap <Plug>(caw:i)
