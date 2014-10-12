@@ -9,10 +9,10 @@ if /i {%ANSWER%}=={no} (goto :no)
 echo It is interrupted. & pause > nul & exit
 
 :yes
-mklink /D "C:\users\shintarou\vimfiles" "C:\users\shintarou\dotfiles\.vim"
-mklink /D "C:\users\shintarou\.vim" "C:\users\shintarou\dotfiles\.vim"
-mklink    "C:\users\shintarou\_vimrc"    "C:\users\shintarou\dotfiles\.vimrc"
-mklink    "C:\users\shintarou\_gvimrc"   "C:\users\shintarou\dotfiles\.gvimrc"
+mklink /D "C:\users\user-name\vimfiles" "C:\users\user-name\dotfiles\.vim"
+mklink /D "C:\users\user-name\.vim" "C:\users\user-name\dotfiles\.vim"
+mklink    "C:\users\user-name\_vimrc"    "C:\users\user-name\dotfiles\.vimrc"
+mklink    "C:\users\user-name\_gvimrc"   "C:\users\user-name\dotfiles\.gvimrc"
  
 echo It finished. & pause > nul & exit
 
