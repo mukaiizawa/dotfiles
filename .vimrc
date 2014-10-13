@@ -11,6 +11,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
@@ -23,18 +24,15 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'mattn/excitetranslate-vim'
-NeoBundle 'mattn/webapi-vim'    " for browser.vim
+NeoBundle 'mattn/webapi-vim'    " for open-browser.vim
 NeoBundle 'vim-jp/vimdoc-ja'
-
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
-
 
 
 " System "
@@ -78,8 +76,6 @@ set showtabline=2
 set tabpagemax=300
 set autoindent
 set smartindent
-set nocindent
-set lisp
 set list
 set listchars=tab:->,eol:<,trail:>
 
@@ -92,10 +88,10 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sr <C-w>r
-nnoremap st :tabnew<CR>
+nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
-nnoremap sq :q<CR>
+nnoremap sq :<C-u>q<CR>
 
 nnoremap <Up>    <C-w>-
 nnoremap <Down>  <C-w>+
@@ -113,26 +109,54 @@ nnoremap <C-b> <NOP>
 nnoremap <SPACE>   <C-f>zz
 nnoremap <S-SPACE> <C-b>zz
 
-nnoremap <F3> :e ~/dotfiles/.vimrc<CR>
-nnoremap <F4> :e ~/dotfiles/.gvimrc<CR>
-nnoremap <F5> :source ~/dotfiles/.vimrc<CR>
+nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
+nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
+nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 nnoremap } <NOP>
 nnoremap { <NOP>
+nnoremap <Home> <NOP>
 nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
 
+nnoremap gs' wbi'<Esc>ea'<Esc>
+nnoremap gs" wbi"<Esc>ea"<Esc>
+nnoremap gs< wbi<<Esc>ea><Esc>
+nnoremap gs> wbi<<Esc>ea><Esc>
+nnoremap gs( wbi(<Esc>ea)<Esc>
+nnoremap gs) wbi(<Esc>ea)<Esc>
+nnoremap gs{ wbi{<Esc>ea}<Esc>
+nnoremap gs} wbi{<Esc>ea}<Esc>
+vnoremap gs' c''<Esc>hp
+vnoremap gs" c""<Esc>hp
+vnoremap gs< c<><Esc>hp
+vnoremap gs> c<><Esc>hp
+vnoremap gs( c()<Esc>hp
+vnoremap gs) c()<Esc>hp
+vnoremap gs{ c{}<Esc>hp
+vnoremap gs} c{}<Esc>hp
 
 " Key Map For Plugin "
-nmap <silent>mm :VimShell<CR>
+nnoremap <silent>ms :<C-u>VimShell<CR>
+nnoremap <silent>mf :<C-u>VimFilerBufferDir -quit<CR>
+nnoremap <silent>mm :<C-u>Unite file_mru<CR>
+nnoremap <silent>mb :<C-u>Unite bookmark<CR>
+nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
 
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
+
 nmap gw <Plug>(openbrowser-open)
 vmap gw <Plug>(openbrowser-open)
+
+" Unite, VimFiler, VimShell{{{
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+" }}}
+
