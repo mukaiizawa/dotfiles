@@ -11,16 +11,24 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unitevim'
-NeoBundle 'tyru/caw.vim.git'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'mattn/excitetranslate-vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mattn/webapi-vim'    " for browser.vim
-NeoBundle 'open-browser.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tyru/caw.vim'
+NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'mattn/excitetranslate-vim'
+NeoBundle 'mattn/webapi-vim'    " for browser.vim
 NeoBundle 'vim-jp/vimdoc-ja'
 
 call neobundle#end()
@@ -120,7 +128,11 @@ nnoremap <PageDown> <NOP>
 
 " Key Map For Plugin "
 nmap <silent>mm :VimShell<CR>
+
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
+
+nmap gw <Plug>(openbrowser-open)
+vmap gw <Plug>(openbrowser-open)
