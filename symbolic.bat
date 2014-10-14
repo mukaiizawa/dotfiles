@@ -13,6 +13,7 @@ mklink /D "C:\users\user-name\vimfiles" "C:\users\user-name\dotfiles\.vim"
 mklink /D "C:\users\user-name\.vim" "C:\users\user-name\dotfiles\.vim"
 mklink    "C:\users\user-name\_vimrc"    "C:\users\user-name\dotfiles\.vimrc"
 mklink    "C:\users\user-name\_gvimrc"   "C:\users\user-name\dotfiles\.gvimrc"
+mklink    "C:\users\user-name\.vimshrc"   "C:\users\user-name\dotfiles\.vimshrc"
  
 echo It finished. & pause > nul & exit
 

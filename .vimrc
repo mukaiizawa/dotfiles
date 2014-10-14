@@ -92,10 +92,10 @@ nnoremap sn gt
 nnoremap sp gT
 nnoremap sq :<C-u>q<CR>
 
-nnoremap <Up>    <C-w>-
-nnoremap <Down>  <C-w>+
-nnoremap <Right> <C-w>>
-nnoremap <Left>  <C-w><
+nnoremap <Up>     2<C-w>-
+nnoremap <Down>  30<C-w>+
+nnoremap <Right>  2<C-w>>
+nnoremap <Left>   2<C-w><
 
 nnoremap <S-u> <C-r>
 
@@ -113,6 +113,7 @@ nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
+nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
 nnoremap <Home> <NOP>
@@ -139,10 +140,12 @@ vnoremap gs{ c{}<Esc>hp
 vnoremap gs} c{}<Esc>hp
 
 " Key Map For Plugin "
-nnoremap <silent>ms :<C-u>VimShell<CR>
-nnoremap <silent>mf :<C-u>VimFilerBufferDir -quit<CR>
-nnoremap <silent>mm :<C-u>Unite file_mru<CR>
-nnoremap <silent>mb :<C-u>Unite bookmark<CR>
+nnoremap <silent>ms  :<C-u>VimShellTab<CR>
+nnoremap <silent>mf  :<C-u>VimFilerBufferDir<CR>
+nnoremap <silent>mft :<C-u>VimFilerBufferDir -tab<CR>
+nnoremap <silent>mfd :<C-u>VimFilerBufferDir -double -tab<CR>
+nnoremap <silent>mm  :<C-u>Unite file_mru<CR>
+nnoremap <silent>mb  :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
 
 nmap gci <Plug>(caw:i:toggle)
