@@ -1,3 +1,4 @@
-.vim/bundle
-.gitconfig
 *.ini
+.gitconfig
+.vim/bundle/*
+!.vim/bundle/neobundle.vim
