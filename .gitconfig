@@ -11,3 +11,16 @@
 	default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
 	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "origin"]
+	url = https://github.com/mukaiizawa/dotfiles.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
