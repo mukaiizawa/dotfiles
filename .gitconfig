@@ -7,7 +7,7 @@
 	branch = auto
 	interactive = auto
 	grep = auto
-# [push]
-# 	default = tracking       # defaultのpush先はtrackingしているリポジトリ
+[push]
+	default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
 	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
