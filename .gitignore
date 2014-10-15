@@ -1,5 +1,5 @@
 *.ini
 .gitconfig
 .vim/bundle/*
-!.vim/bundle/neobundle.vim
+/* !.vim/bundle/neobundle.vim */
 *.netrwhist

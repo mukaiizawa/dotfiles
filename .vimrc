@@ -11,10 +11,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -23,6 +19,10 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'make -f make_unix.mak',
       \    }
       \ }
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
