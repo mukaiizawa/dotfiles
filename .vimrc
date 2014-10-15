@@ -158,7 +158,10 @@ nmap gw <Plug>(openbrowser-open)
 vmap gw <Plug>(openbrowser-open)
 
 " Unite, VimFiler, VimShell{{{
+let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
+call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
+autocmd FileType vimfiler call unite#custom_default_action('directory', 'lcd')
 " }}}
 
