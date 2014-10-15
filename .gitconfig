@@ -1,3 +1,13 @@
 [user]
 	name = mukaiizawa
 	email = mukaiizawa@yahoo.co.jp
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+# [push]
+# 	default = tracking       # defaultのpush先はtrackingしているリポジトリ
+[core]
+	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
