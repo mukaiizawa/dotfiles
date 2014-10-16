@@ -26,8 +26,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/excitetranslate-vim'
-NeoBundle 'mattn/webapi-vim'    " for open-browser.vim
 NeoBundle 'vim-jp/vimdoc-ja'
 call neobundle#end()
 filetype plugin indent on
@@ -169,8 +167,10 @@ vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
-nmap gw <Plug>(openbrowser-open)
-vmap gw <Plug>(openbrowser-open)
+nmap gw  <Plug>(openbrowser-open)
+vmap gw  <Plug>(openbrowser-open)
+nmap gww <Plug>(openbrowser-search)
+vmap gww <Plug>(openbrowser-search)
 
 nnoremap <silent>ms  :<C-u>VimShellTab<CR>
 nnoremap <silent>mf  :<C-u>VimFilerBufferDir<CR>
