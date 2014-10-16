@@ -170,6 +170,8 @@ vmap gcc <Plug>(caw:wrap:toggle)
 nmap gw <Plug>(openbrowser-open)
 vmap gw <Plug>(openbrowser-open)
 
-
+set nrformats-=octal
 vnoremap <silent> co :ContinuousNumber <C-a><CR>
-command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <count>?<count>-line('.'):1)|exec 'normal! j' . n . <q-args>|call cursor('.', c)|endfor
+
+
+
