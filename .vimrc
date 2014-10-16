@@ -38,7 +38,6 @@ NeoBundleCheck
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
-" call vimfiler#set_execute_file('xlsx', 'Excel')
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
@@ -114,6 +113,8 @@ nnoremap <C-u> <NOP>
 nnoremap <C-b> <NOP>
 nnoremap <SPACE>   <C-f>zz
 nnoremap <S-SPACE> <C-b>zz
+nmap n nzz
+nmap N nzz
 
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
@@ -155,7 +156,7 @@ nnoremap <silent>ms  :<C-u>VimShellTab<CR>
 nnoremap <silent>mf  :<C-u>VimFilerBufferDir<CR>
 nnoremap <silent>mft :<C-u>VimFilerBufferDir -tab<CR>
 nnoremap <silent>mfd :<C-u>VimFilerBufferDir -double -tab<CR>
-nnoremap <silent>mm  :<C-u>Unite file_mru<CR>
+nnoremap <silent>mr  :<C-u>Unite file_mru<CR>
 nnoremap <silent>mb  :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
 
@@ -169,6 +170,6 @@ vmap gcc <Plug>(caw:wrap:toggle)
 nmap gw <Plug>(openbrowser-open)
 vmap gw <Plug>(openbrowser-open)
 
-nnoremap ge ggk<Plug>(vimfiler_execute_external_filer)
 
-
+vnoremap <silent> co :ContinuousNumber <C-a><CR>
+command! -count -nargs=1 ContinuousNumber let c = col('.')|for n in range(1, <count>?<count>-line('.'):1)|exec 'normal! j' . n . <q-args>|call cursor('.', c)|endfor
