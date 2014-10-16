@@ -5,8 +5,8 @@ if exists("syntax_on")
 endif
 let g:colors_name = "shin-dark"
 
-" :help group-name
 
+" :help group-name "{{{
 "Comment
 highlight Comment				guifg=#00ff00
 "Constant
@@ -38,10 +38,9 @@ highlight Ignore				guifg=#ff0000
 highlight Error					guifg=#ffffff guibg=#ff0000
 "Todo
 highlight Todo					guifg=#ffffff guibg=#ff0000
+" }}}
 
-
-" :help highlight-groups
-
+" :help highlight-groups "{{{
 highlight Conseal				guifg=#606060 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
 highlight CursorIM									 	guibg=#ff0000
@@ -53,5 +52,10 @@ highlight Normal				guifg=#ffffff guibg=#000004
 highlight Search				guifg=#000000 guibg=#ff00ff
 highlight SpecialKey		guifg=#606060 guibg=#000004
 highlight StatusLine		guifg=#000000 guibg=#ffffff gui=bold
+" Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
 highlight StatusLineNC	guifg=#aaaaaa guibg=#000000
-" ªStatusLineNC fg‚Æbg‚Ìˆ—‚ª‹t‚É‚È
+" }}}
+
+" help: highlight-default "{{{
+highlight Folded guifg=#c0c0c0 guibg=#303030
+" }}}
