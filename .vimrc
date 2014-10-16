@@ -34,8 +34,15 @@ filetype plugin indent on
 NeoBundleCheck
 
 
+" Unite, VimFiler, VimShell{{{
+let g:loaded_netrwPlugin = 1
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+" call vimfiler#set_execute_file('xlsx', 'Excel')
+call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
+" }}}
+
 " System "
-set encoding=utf-8
 set iminsert=0
 set imsearch=0
 set wildmenu
@@ -113,6 +120,7 @@ nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
+" map to NOP {{{
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
@@ -122,7 +130,9 @@ nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
+" }}}
 
+" sorround {{{
 nnoremap gs' wbi'<Esc>ea'<Esc>
 nnoremap gs" wbi"<Esc>ea"<Esc>
 nnoremap gs< wbi<<Esc>ea><Esc>
@@ -139,8 +149,8 @@ vnoremap gs( c()<Esc>hp
 vnoremap gs) c()<Esc>hp
 vnoremap gs{ c{}<Esc>hp
 vnoremap gs} c{}<Esc>hp
+" }}}
 
-" Key Map For Plugin "
 nnoremap <silent>ms  :<C-u>VimShellTab<CR>
 nnoremap <silent>mf  :<C-u>VimFilerBufferDir<CR>
 nnoremap <silent>mft :<C-u>VimFilerBufferDir -tab<CR>
@@ -149,19 +159,16 @@ nnoremap <silent>mm  :<C-u>Unite file_mru<CR>
 nnoremap <silent>mb  :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
 
+" Key Map For Plugin "
+
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
-
 nmap gw <Plug>(openbrowser-open)
 vmap gw <Plug>(openbrowser-open)
 
-" Unite, VimFiler, VimShell{{{
-let g:loaded_netrwPlugin = 1
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_safe_mode_by_default = 0
-call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
-" }}}
+nnoremap ge ggk<Plug>(vimfiler_execute_external_filer)
+
 
