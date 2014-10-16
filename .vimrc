@@ -35,7 +35,6 @@ NeoBundleCheck
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
-call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
 " Setting "{{{
@@ -173,9 +172,9 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
 nnoremap <silent>ms  :<C-u>VimShellTab<CR>
-nnoremap <silent>mf  :<C-u>VimFilerBufferDir<CR>
-nnoremap <silent>mft :<C-u>VimFilerBufferDir -tab<CR>
-nnoremap <silent>mfd :<C-u>VimFilerBufferDir -double -tab<CR>
+nnoremap <silent>mf  :<C-u>VimFilerBufferDir -status -find<CR>
+nnoremap <silent>mft :<C-u>VimFilerBufferDir -status -find -tab<CR>
+nnoremap <silent>mfd :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
 nnoremap <silent>mr  :<C-u>Unite file_mru<CR>
 nnoremap <silent>mb  :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
