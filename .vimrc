@@ -35,7 +35,11 @@ NeoBundleCheck
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
+let g:unite_source_rec_min_cache_files = 300
+let g:unite_source_rec_max_cache_files = 30000
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
+call unite#custom#source('file,file/new,buffer,file_rec','matchers', 'matcher_fuzzy')
 " }}}
 
 " Setting "{{{
@@ -172,13 +176,13 @@ vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
-nnoremap <silent>ms  :<C-u>VimShellTab<CR>
-nnoremap <silent>mf  :<C-u>VimFilerBufferDir -status -find<CR>
-nnoremap <silent>mft :<C-u>VimFilerBufferDir -status -find -tab<CR>
-nnoremap <silent>mfd :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
-nnoremap <silent>mr  :<C-u>Unite file_mru<CR>
-nnoremap <silent>mb  :<C-u>Unite bookmark<CR>
-nnoremap <silent>mba :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
+nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
+nnoremap <silent>ms    :<C-u>VimShellTab<CR>
+nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
+nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
+nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
 
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
