@@ -39,7 +39,7 @@ let g:unite_source_rec_min_cache_files = 300
 let g:unite_source_rec_max_cache_files = 30000
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
-call unite#custom#source('file,file/new,buffer,file_rec','matchers', 'matcher_fuzzy')
+call unite#custom#source('file,file/new,buffer,file_rec,file_mru','matchers', 'matcher_fuzzy')
 " }}}
 
 " Setting "{{{
@@ -177,7 +177,7 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
-nnoremap <silent>mru   :<C-u>Unite  -start-insert -tab file_mru<CR>
+nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellTab<CR>
