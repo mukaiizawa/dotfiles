@@ -177,6 +177,7 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
+nnoremap <silent>mru   :<C-u>Unite  -start-insert -tab file_mru<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellTab<CR>
