@@ -37,9 +37,7 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:unite_source_rec_min_cache_files = 300
 let g:unite_source_rec_max_cache_files = 30000
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
-call unite#custom#source('file,file/new,buffer,file_rec,file_mru','matchers', 'matcher_fuzzy')
 " }}}
 
 " Setting "{{{
@@ -127,6 +125,8 @@ nnoremap <C-u> <NOP>
 nnoremap <C-b> <NOP>
 nnoremap <SPACE>   <C-f>zz
 nnoremap <S-SPACE> <C-b>zz
+vnoremap <SPACE>   <C-f>zz
+vnoremap <S-SPACE> <C-b>zz
 
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
