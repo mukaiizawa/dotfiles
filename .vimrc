@@ -180,7 +180,10 @@ nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
 nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
-nnoremap <silent>ms    :<C-u>VimShellTab<CR>
+nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
+nnoremap <silent>mst   :<C-u>VimShellTab<CR>
+nnoremap <silent>msx   :<C-u>VimShellExecute<CR>
+nnoremap <silent>mse   :VimShellSendString<CR>
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
 nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
