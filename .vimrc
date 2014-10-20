@@ -117,15 +117,9 @@ nnoremap <S-u> <C-r>
 
 nmap n nzz
 nmap N Nzz
-nnoremap <C-e> <NOP>
-nnoremap <C-d> <NOP>
-nnoremap <C-f> <NOP>
-nnoremap <C-y> <NOP>
-nnoremap <C-u> <NOP>
-nnoremap <C-b> <NOP>
 nnoremap <SPACE>   <C-f>zz
-nnoremap <S-SPACE> <C-b>zz
 vnoremap <SPACE>   <C-f>zz
+nnoremap <S-SPACE> <C-b>zz
 vnoremap <S-SPACE> <C-b>zz
 
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
@@ -144,6 +138,13 @@ nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
+
+nnoremap <C-e> <NOP>
+nnoremap <C-d> <NOP>
+nnoremap <C-f> <NOP>
+nnoremap <C-y> <NOP>
+nnoremap <C-u> <NOP>
+nnoremap <C-b> <NOP>
 " }}}
 
 " Map for Surround "{{{
@@ -176,19 +177,20 @@ vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
+vnoremap <silent>co :ContinuousNumber <C-a><CR>
+
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
-nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
+nnoremap <silent>msv   :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
-nnoremap <silent>msx   :<C-u>VimShellExecute<CR>
-nnoremap <silent>mse   :VimShellSendString<CR>
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
 nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
+nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
 
-vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
 
 
