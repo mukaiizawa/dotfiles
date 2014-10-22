@@ -1,1 +1,0 @@
-set fileencoding=cp932
