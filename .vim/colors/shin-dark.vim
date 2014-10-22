@@ -1,7 +1,7 @@
 set background=dark
 hi clear
 if exists("syntax_on")
-  syntax reset
+syntax reset
 endif
 let g:colors_name = "shin-dark"
 
@@ -53,7 +53,7 @@ highlight LineNr				guifg=#ffff00 guibg=#000004
 highlight MatchParen		guifg=#ffffff	guibg=#880000
 highlight NonText				guifg=#606060 guibg=#000004
 highlight Normal				guifg=#f0f0f0 guibg=#000004
-highlight Search				guifg=#000000 guibg=#ff00ff
+highlight Search				guifg=#000000 guibg=#66ff99
 highlight SpecialKey		guifg=#606060 guibg=#000004
 highlight StatusLine		guifg=#000000 guibg=#eeeeee gui=bold
 " Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
