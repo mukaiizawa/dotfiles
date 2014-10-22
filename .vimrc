@@ -3,12 +3,12 @@ syntax enable
 
 " Setting for Runtime " 
 if !1 | finish | endif
-
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+" NeoBundle "{{{
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimshell.vim'
@@ -30,6 +30,7 @@ NeoBundle 'vim-jp/vimdoc-ja'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+" }}}
 
 " Unite, VimFiler, VimShell "{{{
 let g:loaded_netrwPlugin = 1
@@ -54,12 +55,13 @@ set backspace=start,eol,indent
 "}}}
 
 " Setting for Window "{{{
-set laststatus=2
-set showmatch
 set title
-set number
 set ruler
+set number
 set nowrap
+set showmatch
+set laststatus=2
+set showtabline=2
 "}}}
 
 " Setting for File "{{{
@@ -81,11 +83,10 @@ set ignorecase
 
 " Setting for Tab,Indent "{{{
 set tabstop=2
+set expandtab
 set autoindent
 set smartindent
-set noexpandtab
 set shiftwidth=2
-set showtabline=2
 set tabpagemax=300
 set list
 set listchars=tab:->,eol:<,trail:>
