@@ -1,5 +1,5 @@
-
 set nocindent
+set expandtab
 set lisp
-set tabstop=4
-set showtabline=4
+set shiftwidth=2
+set listchars=tab:->,eol:<,trail:>

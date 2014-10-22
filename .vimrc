@@ -40,9 +40,8 @@ let g:unite_source_rec_max_cache_files = 30000
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
-" Setting "{{{
 
-" for System "{{{
+" Setting for System "{{{
 set encoding=utf-8
 set wildmenu
 set showcmd
@@ -54,7 +53,7 @@ set helplang=ja
 set backspace=start,eol,indent
 "}}}
 
-" for Window "{{{
+" Setting for Window "{{{
 set laststatus=2
 set showmatch
 set title
@@ -63,7 +62,7 @@ set ruler
 set nowrap
 "}}}
 
-" for File "{{{
+" Setting for File "{{{
 set nobackup
 set noswapfile
 set noundofile
@@ -73,14 +72,14 @@ set fileencoding=utf-8
 set foldmethod=marker
 "}}}
 
-" for Search,Substitute "{{{
+" Setting for Search,Substitute "{{{
 set hlsearch
 set wrapscan
 set smartcase
 set ignorecase
 "}}}
 
-" for Tab,Indent "{{{
+" Setting for Tab,Indent "{{{
 set tabstop=2
 set autoindent
 set smartindent
@@ -92,7 +91,6 @@ set list
 set listchars=tab:->,eol:<,trail:>
 "}}}
 
-"}}}
 
 " Key Map " {{{
 nnoremap s  <NOP>

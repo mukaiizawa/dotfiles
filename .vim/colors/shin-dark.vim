@@ -5,55 +5,59 @@ if exists("syntax_on")
 endif
 let g:colors_name = "shin-dark"
 
-
 " :help group-name "{{{
 "Comment
 highlight Comment				guifg=#00ff00
 "Constant
-highlight Constant			guifg=#00ffff
-highlight String				guifg=#ee22aa
-highlight Character			guifg=#ff00ff
-highlight Number				guifg=#ffff44
-highlight Boolean				guifg=#00ffff
-highlight Float					guifg=#ffff44
+highlight Constant			guifg=#00eeee
+highlight String				guifg=#99ff33
+highlight Character			guifg=#db7093
+highlight Number				guifg=#eeee00
+highlight Boolean				guifg=#00eeee gui=bold
+highlight Float					guifg=#eeee00
 "Identifier
-highlight Identifier		guifg=#22ccee
-highlight Function			guifg=#c0c0c0
+highlight Identifier		guifg=#22ccee gui=bold
+highlight Function			guifg=#cccccc gui=bold
 "Statement
 highlight Statement			guifg=#cc6622 gui=bold
+highlight Conditional		guifg=#bb6633 gui=bold
+highlight Repeat				guifg=#cc6633 gui=bold
+highlight Label					guifg=#ff9933 gui=bold
+highlight Operator			guifg=#eeeeee gui=bold
 highlight Keyword				guifg=#cc0000 gui=bold
 highlight Exception			guifg=#cc0000 gui=bold
 "Preproc
-highlight PreProc				guifg=#ffff44
+highlight PreProc				guifg=#eeee00 gui=bold
 "Type
-highlight Type					guifg=#00ffff
-highlight Structure			guifg=#cc6622
+highlight Type					guifg=#66eeee gui=bold
+highlight StorageClass	guifg=#00ffff gui=bold
+highlight Structure			guifg=#cc6622 gui=bold
 "Special
-highlight Special				guifg=#00ffff
+highlight Special				guifg=#00eeee gui=bold
 "Underlined
-highlight Underlined		guifg=#0000ff
+highlight Underlined		guifg=#00bfff
 "Ignore
 highlight Ignore				guifg=#ff0000
 "Error
-highlight Error					guifg=#ffffff guibg=#ff0000
+highlight Error					guifg=#ffffff guibg=#cc0000
 "Todo
-highlight Todo					guifg=#ffffff guibg=#ff0000
+highlight Todo					guifg=#ffffff guibg=#cc0000
 " }}}
 
 " :help highlight-groups "{{{
-highlight Conseal				guifg=#606060 guibg=#000004
+highlight Conceal				guifg=#606060 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
 highlight CursorIM									 	guibg=#ff0000
-highlight Directory 		guifg=#00ffff guibg=#000004
+highlight Directory 		guifg=#00eeee guibg=#000004
 highlight LineNr				guifg=#ffff00 guibg=#000004
 highlight MatchParen		guifg=#ffffff	guibg=#880000
 highlight NonText				guifg=#606060 guibg=#000004
-highlight Normal				guifg=#ffffff guibg=#000004
+highlight Normal				guifg=#f0f0f0 guibg=#000004
 highlight Search				guifg=#000000 guibg=#ff00ff
 highlight SpecialKey		guifg=#606060 guibg=#000004
-highlight StatusLine		guifg=#000000 guibg=#ffffff gui=bold
+highlight StatusLine		guifg=#000000 guibg=#eeeeee gui=bold
 " Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
-highlight StatusLineNC	guifg=#aaaaaa guibg=#000000
+highlight StatusLineNC	guifg=#888888 guibg=#000000
 " }}}
 
 " help: highlight-default "{{{
