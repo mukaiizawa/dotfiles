@@ -186,6 +186,8 @@ nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
 nnoremap <silent>msv   :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
+nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
+nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
 nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
 nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
