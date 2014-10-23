@@ -45,16 +45,16 @@ highlight Todo					guifg=#ffffff guibg=#cc0000
 " }}}
 
 " :help highlight-groups "{{{
-highlight Conceal				guifg=#606060 guibg=#000004
+highlight Conceal				guifg=#808080 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
 highlight CursorIM									 	guibg=#ff0000
 highlight Directory 		guifg=#00eeee guibg=#000004
 highlight LineNr				guifg=#ffff00 guibg=#000004
 highlight MatchParen		guifg=#ffffff	guibg=#880000
-highlight NonText				guifg=#606060 guibg=#000004
+highlight NonText				guifg=#808080 guibg=#000004
 highlight Normal				guifg=#f0f0f0 guibg=#000004
 highlight Search				guifg=#000000 guibg=#66ff99
-highlight SpecialKey		guifg=#606060 guibg=#000004
+highlight SpecialKey		guifg=#808080 guibg=#000004
 highlight StatusLine		guifg=#000000 guibg=#eeeeee gui=bold
 " Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
 highlight StatusLineNC	guifg=#888888 guibg=#000000
