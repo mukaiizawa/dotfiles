@@ -10,30 +10,25 @@ let g:colors_name = "shin-dark"
 highlight Comment				guifg=#00ff00
 "Constant
 highlight Constant			guifg=#00ffff
-highlight String				guifg=#99ff33
+highlight String				guifg=#cc6622
 highlight Character			guifg=#db7093
 highlight Number				guifg=#ffff00
-highlight Boolean				guifg=#00eeee gui=bold
+highlight Boolean				guifg=#00ffff gui=bold
 highlight Float					guifg=#ffff00
 "Identifier
-highlight Identifier		guifg=#22ccee gui=bold
-highlight Function			guifg=#cccccc gui=bold
+highlight Identifier		guifg=#22ccee
+highlight Function			guifg=#c0c0c0
 "Statement
-highlight Statement			guifg=#cc6622 gui=bold
-highlight Conditional		guifg=#bb6633 gui=bold
-highlight Repeat				guifg=#cc6633 gui=bold
-highlight Label					guifg=#ff9933 gui=bold
-highlight Operator			guifg=#eeeeee gui=bold
+highlight Statement			guifg=#dd6622
 highlight Keyword				guifg=#cc0000 gui=bold
 highlight Exception			guifg=#cc0000 gui=bold
 "Preproc
 highlight PreProc				guifg=#ffff00
 "Type
-highlight Type					guifg=#66eeee gui=bold
-highlight StorageClass	guifg=#00ffff gui=bold
-highlight Structure			guifg=#cc6622 gui=bold
+highlight Type					guifg=#00ffff
+highlight Structure			guifg=#cc6622
 "Special
-highlight Special				guifg=#00ffff gui=bold
+highlight Special				guifg=#40e0db gui=bold
 "Underlined
 highlight Underlined		guifg=#00bfff
 "Ignore
@@ -48,7 +43,7 @@ highlight Todo					guifg=#ffffff guibg=#cc0000
 highlight Conceal				guifg=#808080 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
 highlight CursorIM										guibg=#ff0000
-highlight Directory 		guifg=#00ffff guibg=#000004
+highlight Directory 		guifg=#40e0db guibg=#000004
 highlight LineNr				guifg=#ffff00 guibg=#000004
 highlight MatchParen		guifg=#ffffff guibg=#880000
 highlight NonText				guifg=#808080 guibg=#000004

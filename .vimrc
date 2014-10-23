@@ -62,6 +62,7 @@ set nowrap
 set showmatch
 set laststatus=2
 set showtabline=2
+set tabpagemax=300
 "}}}
 
 " Setting for File "{{{
@@ -87,7 +88,6 @@ set autoindent
 set smartindent
 set noexpandtab
 set shiftwidth=2
-set tabpagemax=300
 set list
 set listchars=tab:->,eol:<,trail:>
 "}}}
