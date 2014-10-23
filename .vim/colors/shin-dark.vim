@@ -9,7 +9,7 @@ let g:colors_name = "shin-dark"
 "Comment
 highlight Comment				guifg=#00ff00
 "Constant
-highlight Constant			guifg=#00eeee
+highlight Constant			guifg=#00ffff
 highlight String				guifg=#99ff33
 highlight Character			guifg=#db7093
 highlight Number				guifg=#ffff00
@@ -33,7 +33,7 @@ highlight Type					guifg=#66eeee gui=bold
 highlight StorageClass	guifg=#00ffff gui=bold
 highlight Structure			guifg=#cc6622 gui=bold
 "Special
-highlight Special				guifg=#00eeee gui=bold
+highlight Special				guifg=#00ffff gui=bold
 "Underlined
 highlight Underlined		guifg=#00bfff
 "Ignore
@@ -48,7 +48,7 @@ highlight Todo					guifg=#ffffff guibg=#cc0000
 highlight Conceal				guifg=#808080 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
 highlight CursorIM										guibg=#ff0000
-highlight Directory 		guifg=#00eeee guibg=#000004
+highlight Directory 		guifg=#00ffff guibg=#000004
 highlight LineNr				guifg=#ffff00 guibg=#000004
 highlight MatchParen		guifg=#ffffff guibg=#880000
 highlight NonText				guifg=#808080 guibg=#000004
