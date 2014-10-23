@@ -12,9 +12,9 @@ highlight Comment				guifg=#00ff00
 highlight Constant			guifg=#00eeee
 highlight String				guifg=#99ff33
 highlight Character			guifg=#db7093
-highlight Number				guifg=#eeee00
+highlight Number				guifg=#ffff00
 highlight Boolean				guifg=#00eeee gui=bold
-highlight Float					guifg=#eeee00
+highlight Float					guifg=#ffff00
 "Identifier
 highlight Identifier		guifg=#22ccee gui=bold
 highlight Function			guifg=#cccccc gui=bold
@@ -27,7 +27,7 @@ highlight Operator			guifg=#eeeeee gui=bold
 highlight Keyword				guifg=#cc0000 gui=bold
 highlight Exception			guifg=#cc0000 gui=bold
 "Preproc
-highlight PreProc				guifg=#eeee00 gui=bold
+highlight PreProc				guifg=#ffff00
 "Type
 highlight Type					guifg=#66eeee gui=bold
 highlight StorageClass	guifg=#00ffff gui=bold
@@ -47,10 +47,10 @@ highlight Todo					guifg=#ffffff guibg=#cc0000
 " :help highlight-groups "{{{
 highlight Conceal				guifg=#808080 guibg=#000004
 highlight Cursor				guifg=#000000 guibg=#ffffff
-highlight CursorIM									 	guibg=#ff0000
+highlight CursorIM										guibg=#ff0000
 highlight Directory 		guifg=#00eeee guibg=#000004
 highlight LineNr				guifg=#ffff00 guibg=#000004
-highlight MatchParen		guifg=#ffffff	guibg=#880000
+highlight MatchParen		guifg=#ffffff guibg=#880000
 highlight NonText				guifg=#808080 guibg=#000004
 highlight Normal				guifg=#f0f0f0 guibg=#000004
 highlight Search				guifg=#000000 guibg=#66ff99
