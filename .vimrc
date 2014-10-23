@@ -83,9 +83,9 @@ set ignorecase
 
 " Setting for Tab,Indent "{{{
 set tabstop=2
-set expandtab
 set autoindent
 set smartindent
+set noexpandtab
 set shiftwidth=2
 set tabpagemax=300
 set list
