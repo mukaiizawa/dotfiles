@@ -4,8 +4,8 @@ syntax enable
 " Setting for Runtime " 
 if !1 | finish | endif
 if has('vim_starting')
-set nocompatible
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+	set nocompatible
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " NeoBundle "{{{
@@ -16,13 +16,13 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin'  : 'make -f make_cygwin.mak',
-\     'mac'     : 'make -f make_mac.mak',
-\     'unix'    : 'make -f make_unix.mak',
-\    }
-\ }
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin'  : 'make -f make_cygwin.mak',
+			\     'mac'     : 'make -f make_mac.mak',
+			\     'unix'    : 'make -f make_unix.mak',
+			\    }
+			\ }
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
@@ -83,8 +83,8 @@ set ignorecase
 "}}}
 
 " Setting for Tab,Indent "{{{
-set tabstop=2
 set autoindent
+set tabstop=2
 set smartindent
 set noexpandtab
 set shiftwidth=2
