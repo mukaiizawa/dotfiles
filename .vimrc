@@ -147,22 +147,81 @@ nnoremap <C-b> <NOP>
 " }}}
 
 " Map for Surround "{{{
-nnoremap gs' wbi'<Esc>ea'<Esc>
-nnoremap gs" wbi"<Esc>ea"<Esc>
-nnoremap gs< wbi<<Esc>ea><Esc>
-nnoremap gs> wbi<<Esc>ea><Esc>
-nnoremap gs( wbi(<Esc>ea)<Esc>
-nnoremap gs) wbi(<Esc>ea)<Esc>
-nnoremap gs{ wbi{<Esc>ea}<Esc>
-nnoremap gs} wbi{<Esc>ea}<Esc>
-vnoremap gs' c''<Esc>hp
-vnoremap gs" c""<Esc>hp
-vnoremap gs< c<><Esc>hp
-vnoremap gs> c<><Esc>hp
-vnoremap gs( c()<Esc>hp
-vnoremap gs) c()<Esc>hp
-vnoremap gs{ c{}<Esc>hp
-vnoremap gs} c{}<Esc>hp
+nnoremap s' wbi'<Esc>ea'<Esc>
+nnoremap s" wbi"<Esc>ea"<Esc>
+nnoremap s< wbi<<Esc>ea><Esc>
+nnoremap s> wbi<<Esc>ea><Esc>
+nnoremap s( wbi(<Esc>ea)<Esc>
+nnoremap s) wbi<<Esc>ea><Esc>
+nnoremap s{ wbi{<Esc>ea}<Esc>
+nnoremap s} wbi{<Esc>ea}<Esc>
+
+nnoremap sd' f'x,x
+nnoremap sd" f"x,x
+nnoremap sd< f>xF<x
+nnoremap sd> f>xF<x
+nnoremap sd( f)xF(x
+nnoremap sd) f)xF(x
+nnoremap sd{ f}xF{x
+nnoremap sd} f}xF{x
+
+nnoremap s'" f'x,x wbi"<Esc>ea"<Esc>
+nnoremap s'< f'x,x wbi<<Esc>ea><Esc>
+nnoremap s'> f'x,x wbi<<Esc>ea><Esc>
+nnoremap s'( f'x,x wbi(<Esc>ea)<Esc>
+nnoremap s') f'x,x wbi(<Esc>ea)<Esc>
+nnoremap s'{ f'x,x wbi{<Esc>ea}<Esc>
+nnoremap s'} f'x,x wbi{<Esc>ea}<Esc>
+
+nnoremap s"' f"x,x wbi'<Esc>ea'<Esc>
+nnoremap s"< f"x,x wbi<<Esc>ea><Esc>
+nnoremap s"> f"x,x wbi<<Esc>ea><Esc>
+nnoremap s"( f"x,x wbi(<Esc>ea)<Esc>
+nnoremap s") f"x,x wbi(<Esc>ea)<Esc>
+nnoremap s"{ f"x,x wbi{<Esc>ea}<Esc>
+nnoremap s"} f"x,x wbi{<Esc>ea}<Esc>
+
+nnoremap s<' f>xF<x wbi'<Esc>ea'<Esc>
+nnoremap s<" f>xF<x wbi"<Esc>ea"<Esc>
+nnoremap s<( f>xF<x wbi(<Esc>ea)<Esc>
+nnoremap s<) f>xF<x wbi(<Esc>ea)<Esc>
+nnoremap s<{ f>xF<x wbi{<Esc>ea}<Esc>
+nnoremap s<} f>xF<x wbi{<Esc>ea}<Esc>
+
+nnoremap s>' f>xF<x wbi'<Esc>ea'<Esc>
+nnoremap s>" f>xF<x wbi"<Esc>ea"<Esc>
+nnoremap s>( f>xF<x wbi(<Esc>ea)<Esc>
+nnoremap s>) f>xF<x wbi(<Esc>ea)<Esc>
+nnoremap s>{ f>xF<x wbi{<Esc>ea}<Esc>
+nnoremap s>} f>xF<x wbi{<Esc>ea}<Esc>
+
+nnoremap s(' f)xF(x wbi'<Esc>ea'<Esc>
+nnoremap s(" f)xF(x wbi"<Esc>ea"<Esc>
+nnoremap s(< f)xF(x wbi<<Esc>ea><Esc>
+nnoremap s(> f)xF(x wbi<<Esc>ea><Esc>
+nnoremap s({ f)xF(x wbi{<Esc>ea}<Esc>
+nnoremap s(} f)xF(x wbi{<Esc>ea}<Esc>
+
+nnoremap s)' f)xF(x wbi'<Esc>ea'<Esc>
+nnoremap s)" f)xF(x wbi"<Esc>ea"<Esc>
+nnoremap s)< f)xF(x wbi<<Esc>ea><Esc>
+nnoremap s)> f)xF(x wbi<<Esc>ea><Esc>
+nnoremap s){ f)xF(x wbi{<Esc>ea}<Esc>
+nnoremap s)} f)xF(x wbi{<Esc>ea}<Esc>
+
+nnoremap s{' f}xF{x wbi'<Esc>ea'<Esc>
+nnoremap s{" f}xF{x wbi"<Esc>ea"<Esc>
+nnoremap s{< f}xF{x wbi<<Esc>ea><Esc>
+nnoremap s{> f}xF{x wbi<<Esc>ea><Esc>
+nnoremap s{( f}xF{x wbi(<Esc>ea)<Esc>
+nnoremap s{) f}xF{x wbi(<Esc>ea)<Esc>
+
+nnoremap s}' f}xF{x wbi'<Esc>ea'<Esc>
+nnoremap s}" f}xF{x wbi"<Esc>ea"<Esc>
+nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
+nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
+nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
+nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
 "}}}
 
 " Key Map For Plugin "{{{
