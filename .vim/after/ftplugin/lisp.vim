@@ -1,4 +1,3 @@
-set nocindent
-set lisp
-set shiftwidth=4
-set listchars=tab:->,eol:<,trail:>
+autocmd Filetype lisp set nocindent
+autocmd Filetype lisp set lisp
+autocmd Filetype lisp set shiftwidth=4

@@ -31,7 +31,6 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 " }}}
-
 " Unite, VimFiler, VimShell "{{{
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
@@ -41,7 +40,7 @@ let g:unite_source_rec_max_cache_files = 30000
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
-
+" Setting "
 " Setting for System "{{{
 set encoding=utf-8
 set wildmenu
@@ -53,7 +52,6 @@ set history=10000
 set helplang=ja
 set backspace=start,eol,indent
 "}}}
-
 " Setting for Window "{{{
 set title
 set ruler
@@ -64,7 +62,6 @@ set laststatus=2
 set showtabline=2
 set tabpagemax=300
 "}}}
-
 " Setting for File "{{{
 set nobackup
 set noswapfile
@@ -74,26 +71,42 @@ set nrformats-=octal
 set fileencoding=utf-8
 set foldmethod=marker
 "}}}
-
 " Setting for Search,Substitute "{{{
 set hlsearch
 set wrapscan
 set smartcase
 set ignorecase
 "}}}
-
 " Setting for Tab,Indent "{{{
 set autoindent
 set tabstop=2
 set smartindent
-set noexpandtab
+set expandtab
 set shiftwidth=2
 set list
 set listchars=tab:->,eol:<,trail:>
 "}}}
 
+" Mapping "
+" Mapping to NOP "{{{
+nnoremap Q <NOP>
+nnoremap } <NOP>
+nnoremap { <NOP>
+nnoremap ZZ <NOP>
+nnoremap <C-e> <NOP>
+nnoremap <C-d> <NOP>
+nnoremap <C-f> <NOP>
+nnoremap <C-y> <NOP>
+nnoremap <C-u> <NOP>
+nnoremap <C-b> <NOP>
 
-" Key Map " {{{
+nnoremap <Home> <NOP>
+nnoremap <End> <NOP>
+nnoremap <Insert> <NOP>
+nnoremap <PageUp> <NOP>
+nnoremap <PageDown> <NOP>
+" }}}
+" Mapping for Tab, Window "{{{
 nnoremap s  <NOP>
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
@@ -111,44 +124,14 @@ nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
 nnoremap <Left>   4<C-w><
 
-nnoremap - 0
-
-nnoremap <S-u> <C-r>
-
 nmap n nzz
 nmap N Nzz
 nnoremap <SPACE>   <C-f>zz
 vnoremap <SPACE>   <C-f>zz
 nnoremap <S-SPACE> <C-b>zz
 vnoremap <S-SPACE> <C-b>zz
-
-nnoremap <F2> :<C-u>!clisp -i %<CR>
-nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
-nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
-nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
-inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " }}}
-
-" Map to NOP "{{{
-nnoremap Q <NOP>
-nnoremap } <NOP>
-nnoremap { <NOP>
-nnoremap ZZ <NOP>
-nnoremap <Home> <NOP>
-nnoremap <End> <NOP>
-nnoremap <Insert> <NOP>
-nnoremap <PageUp> <NOP>
-nnoremap <PageDown> <NOP>
-
-nnoremap <C-e> <NOP>
-nnoremap <C-d> <NOP>
-nnoremap <C-f> <NOP>
-nnoremap <C-y> <NOP>
-nnoremap <C-u> <NOP>
-nnoremap <C-b> <NOP>
-" }}}
-
-" Map for Surround "{{{
+" Mapping for Surround "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
@@ -225,8 +208,7 @@ nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
 "}}}
-
-" Key Map For Plugin "{{{
+" Mappnig for plugin"{{{
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
@@ -253,6 +235,17 @@ nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
 nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
 "}}}
+" Mapping for etc "{{{
+nnoremap - 0
 
+nnoremap <S-u> <C-r>
+
+nnoremap <F2> :<C-u>!clisp -i %<CR>
+nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
+nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
+nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
+nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+" }}}
 
 
