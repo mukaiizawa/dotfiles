@@ -106,11 +106,12 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sq :<C-u>q<CR>
-
 nnoremap <Up>     4<C-w>-
 nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
 nnoremap <Left>   4<C-w><
+
+nnoremap - 0
 
 nnoremap <S-u> <C-r>
 
@@ -121,6 +122,7 @@ vnoremap <SPACE>   <C-f>zz
 nnoremap <S-SPACE> <C-b>zz
 vnoremap <S-SPACE> <C-b>zz
 
+nnoremap <F2> :<C-u>!clisp -i %<CR>
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
