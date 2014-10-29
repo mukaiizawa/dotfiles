@@ -4,28 +4,29 @@ syntax enable
 " Setting for Runtime " 
 if !1 | finish | endif
 if has('vim_starting')
-	set nocompatible
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " NeoBundle "{{{
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin'  : 'make -f make_cygwin.mak',
-			\     'mac'     : 'make -f make_mac.mak',
-			\     'unix'    : 'make -f make_unix.mak',
-			\    }
-			\ }
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin'  : 'make -f make_cygwin.mak',
+      \     'mac'     : 'make -f make_mac.mak',
+      \     'unix'    : 'make -f make_unix.mak',
+      \    }
+      \ }
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-jp/vimdoc-ja'
 call neobundle#end()
 filetype plugin indent on
@@ -33,10 +34,17 @@ NeoBundleCheck
 " }}}
 " Unite, VimFiler, VimShell "{{{
 let g:loaded_netrwPlugin = 1
+let g:unite_enable_start_insert = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 10000
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
@@ -223,12 +231,11 @@ vnoremap <silent>co :ContinuousNumber <C-a><CR>
 
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
-nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
-nnoremap <silent>mg    :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent>mg    :<C-u>UniteWithCursorWord grep<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
-nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec/async<CR>
-nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
-nnoremap <silent>msv   :<C-u>VimShellBufferDir -split<CR>
+nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
+nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
+nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
 nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
 nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
@@ -249,9 +256,4 @@ nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " }}}
 
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
 
