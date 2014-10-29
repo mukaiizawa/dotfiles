@@ -35,8 +35,8 @@ NeoBundleCheck
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
-let g:unite_source_rec_min_cache_files = 300
-let g:unite_source_rec_max_cache_files = 30000
+let g:unite_source_rec_min_cache_files = 50
+let g:unite_source_rec_max_cache_files = 10000
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
@@ -224,7 +224,9 @@ vnoremap <silent>co :ContinuousNumber <C-a><CR>
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent>mru   :<C-u>Unite  -start-insert file_mru<CR>
-nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec<CR>
+nnoremap <silent>mg    :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent><C-f> :<C-u>UniteWithBufferDir -start-insert file_rec/async<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
 nnoremap <silent>msv   :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
@@ -240,7 +242,6 @@ nnoremap - 0
 
 nnoremap <S-u> <C-r>
 
-nnoremap <F2> :<C-u>!clisp -i %<CR>
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
@@ -248,4 +249,9 @@ nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " }}}
 
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
