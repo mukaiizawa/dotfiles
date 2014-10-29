@@ -39,6 +39,7 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 10000
+
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
@@ -131,13 +132,6 @@ nnoremap <Up>     4<C-w>-
 nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
 nnoremap <Left>   4<C-w><
-
-nmap n nzz
-nmap N Nzz
-nnoremap <SPACE>   <C-f>zz
-vnoremap <SPACE>   <C-f>zz
-nnoremap <S-SPACE> <C-b>zz
-vnoremap <S-SPACE> <C-b>zz
 " }}}
 " Mapping for Surround "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
@@ -231,7 +225,7 @@ vnoremap <silent>co :ContinuousNumber <C-a><CR>
 
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
-nnoremap <silent>mg    :<C-u>UniteWithCursorWord grep<CR>
+nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
@@ -242,17 +236,24 @@ nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
 nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
 nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
-nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -tab -double<CR>
+nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
 "}}}
 " Mapping for etc "{{{
 nnoremap - 0
-
 nnoremap <S-u> <C-r>
+nmap n nzz
+nmap N Nzz
+nnoremap <SPACE>   <C-f>zz
+vnoremap <SPACE>   <C-f>zz
+nnoremap <S-SPACE> <C-b>zz
+vnoremap <S-SPACE> <C-b>zz
+
+nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
-nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " }}}
 
