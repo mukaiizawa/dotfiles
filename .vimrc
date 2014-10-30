@@ -243,6 +243,7 @@ nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
 nnoremap <S-u> <C-r>
 nmap n nzz
 nmap N Nzz
+nnoremap g, g,zz
 nnoremap <SPACE>h  0
 nnoremap <SPACE>l  $
 nnoremap <SPACE>j   <C-f>zz
