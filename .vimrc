@@ -102,13 +102,15 @@ nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
 nnoremap ZZ <NOP>
+nnoremap s  <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
 nnoremap <C-f> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <C-u> <NOP>
 nnoremap <C-b> <NOP>
-
+nnoremap <Space> <NOP>
+nnoremap <Home> <NOP>
 nnoremap <Home> <NOP>
 nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
@@ -116,7 +118,6 @@ nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
 " }}}
 " Mapping for Tab, Window "{{{
-nnoremap s  <NOP>
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
 nnoremap sh <C-w>h
@@ -239,14 +240,17 @@ nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
 "}}}
 " Mapping for etc "{{{
-nnoremap - 0
 nnoremap <S-u> <C-r>
 nmap n nzz
 nmap N Nzz
-nnoremap <SPACE>   <C-f>zz
-vnoremap <SPACE>   <C-f>zz
-nnoremap <S-SPACE> <C-b>zz
-vnoremap <S-SPACE> <C-b>zz
+nnoremap <SPACE>h  0
+nnoremap <SPACE>l  $
+nnoremap <SPACE>j   <C-f>zz
+nnoremap <SPACE>k  <C-b>zz
+vnoremap <SPACE>h  0
+vnoremap <SPACE>l  $
+vnoremap <SPACE>j   <C-f>zz
+vnoremap <SPACE>k  <C-b>zz
 
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
