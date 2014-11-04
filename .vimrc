@@ -35,10 +35,14 @@ NeoBundleCheck
 " Unite, VimFiler, VimShell "{{{
 let g:loaded_netrwPlugin = 1
 let g:unite_enable_start_insert = 1
+
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
+
 let g:unite_source_rec_min_cache_files = 50
-let g:unite_source_rec_max_cache_files = 10000
+let g:unite_source_rec_max_cache_files = 1000
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_history_yank_limit = 200
 
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
@@ -212,6 +216,8 @@ nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
 "}}}
 " Mappnig for plugin"{{{
+
+" prefix g
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
@@ -222,13 +228,14 @@ vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
-vnoremap <silent>co :ContinuousNumber <C-a><CR>
-
+" prefix m
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent>my    :<C-u>Unite history/yank<CR>
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
+nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
@@ -238,6 +245,8 @@ nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
 nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
 nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
+
+vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
 " Mapping for etc "{{{
 nnoremap <S-u> <C-r>
@@ -261,5 +270,6 @@ nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " }}}
+
 
 
