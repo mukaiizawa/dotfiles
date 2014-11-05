@@ -9,7 +9,7 @@ set showcmd
 set iminsert=0
 set imsearch=0
 set cmdheight=2
-set history=10000
+set history=2000
 set helplang=ja
 set backspace=start,eol,indent
 "}}}
