@@ -39,6 +39,8 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 
 let g:neomru#file_mru_limit = 500
+let g:neomru#directory_mru_limit = 1000
+
 let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 1000
