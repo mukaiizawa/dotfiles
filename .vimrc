@@ -1,4 +1,4 @@
-scriptencoding utf-8
+scriptencoding utf-u
 syntax enable
 
 " Setting for Runtime " 
@@ -270,6 +270,7 @@ vnoremap <Space>j <C-f>zz
 vnoremap <Space>k <C-b>zz
 
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap <silent>mm :e #<CR>
 nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 
 nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
