@@ -34,11 +34,12 @@ NeoBundleCheck
 " }}}
 " Unite, VimFiler, VimShell "{{{
 let g:loaded_netrwPlugin = 1
-let g:unite_enable_start_insert = 1
 
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 
+let g:neomru#file_mru_limit = 500
+let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 1000
 let g:unite_source_history_yank_enable = 1
@@ -50,6 +51,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 " }}}
 
@@ -235,6 +237,7 @@ nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffe
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
+nnoremap <silent>mrd   :<C-u>Unite directory_mru<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
