@@ -64,36 +64,36 @@ set wildmenu
 set showcmd
 set iminsert=0
 set imsearch=0
-set cmdheight=2
-set history=2000
 set helplang=ja
-set backspace=start,eol,indent
-"}}}
+set history=2000
+set nrformats-=octal
+" }}}
 " Setting for Window "{{{
-set title
 set ruler
+set title
 set number
 set nowrap
 set showmatch
+set cmdheight=2
 set laststatus=2
 set showtabline=2
 set tabpagemax=300
-"}}}
+set backspace=start,eol,indent
+" }}}
 " Setting for File "{{{
 set nobackup
 set noswapfile
 set noundofile
 set viminfo=
-set nrformats-=octal
 set fileencoding=utf-8
 set foldmethod=marker
-"}}}
+" }}}
 " Setting for Search,Substitute "{{{
 set hlsearch
 set wrapscan
 set smartcase
 set ignorecase
-"}}}
+" }}}
 " Setting for Tab,Indent "{{{
 set autoindent
 set tabstop=2
