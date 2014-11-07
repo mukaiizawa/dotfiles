@@ -40,6 +40,7 @@ let g:vimfiler_safe_mode_by_default = 0
 
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
+let g:neomru#update_interval = 30    " 0.5 minutes
 
 let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
