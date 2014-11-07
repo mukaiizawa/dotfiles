@@ -11,7 +11,7 @@ set imsearch=0
 set helplang=ja
 set history=2000
 set nrformats-=octal
-" }}}
+"}}}
 " Setting for Window "{{{
 set ruler
 set title
@@ -23,7 +23,7 @@ set laststatus=2
 set showtabline=2
 set tabpagemax=300
 set backspace=start,eol,indent
-" }}}
+"}}}
 " Setting for File "{{{
 set nobackup
 set noswapfile
@@ -31,13 +31,13 @@ set noundofile
 set viminfo=
 set fileencoding=utf-8
 set foldmethod=marker
-" }}}
+"}}}
 " Setting for Search,Substitute "{{{
 set hlsearch
 set wrapscan
 set smartcase
 set ignorecase
-" }}}
+"}}}
 " Setting for Tab,Indent "{{{
 set autoindent
 set tabstop=2
@@ -47,11 +47,15 @@ set shiftwidth=2
 set list
 set listchars=tab:->,eol:<,trail:>
 "}}}
+
 " Mapping "
 " Mapping to NOP "{{{
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
+nnoremap zd <NOP>
+nnoremap zD <NOP>
+nnoremap zE <NOP>
 nnoremap ZZ <NOP>
 nnoremap s  <NOP>
 nnoremap <C-e> <NOP>
@@ -67,7 +71,7 @@ nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
-" }}}
+"}}}
 " Mapping for Tab, Window "{{{
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
@@ -84,7 +88,7 @@ nnoremap <Up>     4<C-w>-
 nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
 nnoremap <Left>   4<C-w><
-" }}}
+"}}}
 " Mapping for Surround "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
@@ -163,11 +167,11 @@ nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
 "}}}
 " Mapping for etc "{{{
-nnoremap <S-u> <C-r>
 nmap n nzz
 nmap N Nzz
 
 inoremap jj <Esc>
+nnoremap <S-u> <C-r>
 
 nnoremap g, g,zz
 nnoremap <Space>h 0
@@ -188,7 +192,7 @@ nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-" }}}
+"}}}
 
 
 
