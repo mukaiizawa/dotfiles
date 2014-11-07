@@ -43,9 +43,9 @@ let g:neomru#directory_mru_limit = 1000
 
 let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
-let g:unite_source_rec_max_cache_files = 1000
+let g:unite_source_rec_max_cache_files = 2000
 let g:unite_source_history_yank_enable = 1
-let g:unite_source_history_yank_limit = 200
+let g:unite_source_history_yank_limit = 2000
 
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
