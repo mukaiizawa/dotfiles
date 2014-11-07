@@ -255,11 +255,11 @@ nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
 " Mapping for etc "{{{
-nnoremap <S-u> <C-r>
 nmap n nzz
 nmap N Nzz
 
 inoremap jj <Esc>
+nnoremap <S-u> <C-r>
 
 nnoremap g, g,zz
 nnoremap <Space>h 0
