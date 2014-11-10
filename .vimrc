@@ -257,7 +257,6 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-call unite#custom_default_action('source/bookmark/directory', 'vimfiler')
 call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 "}}}
 " Setting for VimFiler "{{{
@@ -295,8 +294,8 @@ vmap gww <Plug>(openbrowser-search)
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
-nnoremap <silent>mru   :<C-u>Unite neomru/file<CR>
-nnoremap <silent>mrd   :<C-u>Unite neomru/directory<CR>
+nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
+nnoremap <silent>mrd   :<C-u>Unite directory_mru<CR>
 nnoremap <silent>mrr   :<C-u>NeoMRUReload<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
