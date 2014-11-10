@@ -257,6 +257,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+call unite#custom_default_action('source/bookmark/directory', 'vimfiler')
 call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 "}}}
 " Setting for VimFiler "{{{
