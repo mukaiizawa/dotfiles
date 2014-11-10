@@ -258,7 +258,6 @@ if executable('ag')
 endif
 
 call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
-call unite#custom_default_action('source/bookmark/directory' , 'vimfiler')
 "}}}
 " Setting for VimFiler "{{{
 let g:loaded_netrwPlugin = 1
@@ -276,7 +275,7 @@ let g:quickrun_config = {
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 60    " 1.0 minutes
+let g:neomru#update_interval = 10    " 10 seconds 
 "}}}
 
 " Mappnig for Plugin
@@ -292,12 +291,12 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 "}}}
 " Prefix m "{{{
-nnoremap mb    :<C-u>NeoMRUSave<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
-nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
-nnoremap <silent>mrd   :<C-u>Unite directory_mru<CR>
+nnoremap <silent>mru   :<C-u>Unite neomru/file<CR>
+nnoremap <silent>mrd   :<C-u>Unite neomru/directory<CR>
+nnoremap <silent>mrr   :<C-u>NeoMRUReload<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
