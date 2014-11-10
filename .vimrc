@@ -249,7 +249,7 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 2000
 let g:unite_source_history_yank_enable = 1
-let g:unite_source_history_yank_limit = 2000
+let g:unite_source_history_yank_limit = 1000
 
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
@@ -262,7 +262,20 @@ call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 " Setting for VimFiler "{{{
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_safe_mode_by_default = 0
+
+call vimfiler#custom#profile('default', 'context', {
+      \ 'safe' : 0,
+      \ 'auto-expand' : 1,
+      \ })
+
+" view
+let g:vimfiler_tree_leaf_icon = '|'
+let g:vimfiler_tree_opened_icon = '-'
+let g:vimfiler_tree_closed_icon = '+'
+let g:vimfiler_file_icon = ' '
+let g:vimfiler_readonly_file_icon = 'X'
+let g:vimfiler_marked_file_icon = '*'
+let g:vimfiler_tree_indentation = 1
 "}}}
 " Setting for QuickRun "{{{
 let g:quickrun_config = {
@@ -275,7 +288,7 @@ let g:quickrun_config = {
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 10    " 10 seconds 
+let g:neomru#update_interval = 1    " 1 seconds 
 "}}}
 
 " Mappnig for Plugin
@@ -291,23 +304,26 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 "}}}
 " Prefix m "{{{
+
+" Unite
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
-nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
-nnoremap <silent>mrd   :<C-u>Unite directory_mru<CR>
-nnoremap <silent>mrr   :<C-u>NeoMRUReload<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
+" NeoMRU
+nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
+nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
+" VimShell
 nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
 nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
 nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
-nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find<CR>
-nnoremap <silent>mft   :<C-u>VimFilerBufferDir -status -find -tab<CR>
-nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -split<CR>
-nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -double<CR>
-
+" VimFiler
+nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find -auto-cd<CR>
+nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -auto-cd -split<CR>
+nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -auto-cd -double<CR>
+" ContinuousNumber
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
 
