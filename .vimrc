@@ -276,7 +276,7 @@ let g:quickrun_config = {
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 30    " 0.5 minutes
+let g:neomru#update_interval = 60    " 1.0 minutes
 "}}}
 
 " Mappnig for Plugin
@@ -292,8 +292,7 @@ nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 "}}}
 " Prefix m "{{{
-nnoremap <silent>mb    :<C-u>Unite bookmark<CR>
-nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
+nnoremap mb    :<C-u>NeoMRUSave<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
