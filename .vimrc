@@ -24,14 +24,38 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    }
       \ }
+NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-jp/vimdoc-ja'
+
+" Colorscheme "{{{
+" solarized カラースキーム
+NeoBundle 'altercation/vim-colors-solarized'
+" mustang カラースキーム
+NeoBundle 'croaker/mustang-vim'
+" wombat カラースキーム
+NeoBundle 'jeffreyiacono/vim-colors-wombat'
+" jellybeans カラースキーム
+NeoBundle 'nanotech/jellybeans.vim'
+" lucius カラースキーム
+NeoBundle 'vim-scripts/Lucius'
+" zenburn カラースキーム
+NeoBundle 'vim-scripts/Zenburn'
+" mrkn256 カラースキーム
+NeoBundle 'mrkn/mrkn256.vim'
+" railscasts カラースキーム
+NeoBundle 'jpo/vim-railscasts-theme'
+" pyte カラースキーム
+NeoBundle 'therubymug/vim-pyte'
+" molokai カラースキーム
+NeoBundle 'tomasr/molokai'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+"}}}
 "}}}
 
 " A fundamental setting bigins from here.
@@ -110,6 +134,8 @@ nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
+
+vnoremap s <NOP>
 "}}}
 " Mapping for Tab, Window "{{{
 nnoremap ss <C-w>s
@@ -306,6 +332,7 @@ vmap gww <Plug>(openbrowser-search)
 " Prefix m "{{{
 
 " Unite
+nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>

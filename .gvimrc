@@ -7,6 +7,7 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 set guioptions+=c
+set cursorline
 set visualbell t_vb=
 au GUIEnter * simalt ~x
 colorscheme shin-dark
