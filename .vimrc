@@ -32,6 +32,7 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-jp/vimdoc-ja'
 
 " Colorscheme "{{{
+" famous colorsheme
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
@@ -43,6 +44,7 @@ NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'tomasr/molokai'
 "}}}
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -150,7 +152,7 @@ nnoremap s" wbi"<Esc>ea"<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
 nnoremap s> wbi<<Esc>ea><Esc>
 nnoremap s( wbi(<Esc>ea)<Esc>
-nnoremap s) wbi<<Esc>ea><Esc>
+nnoremap s) wbi(<Esc>ea)<Esc>
 nnoremap s{ wbi{<Esc>ea}<Esc>
 nnoremap s} wbi{<Esc>ea}<Esc>
 
