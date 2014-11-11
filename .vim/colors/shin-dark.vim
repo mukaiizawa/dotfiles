@@ -45,7 +45,7 @@ highlight Normal        guifg=#f0f0f0 guibg=#060606
 highlight NonText       guifg=#808080 guibg=#060606
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
-highlight CursorLine                  guibg=#111111
+highlight CursorLine                  guibg=#121214
 highlight LineNr        guifg=#bbbbbb
 highlight CursorLineNr  guifg=#fad07a
 highlight Conceal       guifg=#808080 guibg=#000004

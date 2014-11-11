@@ -296,13 +296,14 @@ let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
 "}}}
 " Setting for QuickRun "{{{
-let g:quickrun_config = {
-      \   "_" : {
-      \       "runner" : "vimproc",
-      \       "runner/vimproc/updatetime" : 60
-      \   },
-      \}
+" let g:quickrun_config = {
+"       \   "_" : {
+"       \       "runner" : "vimproc",
+"       \       "runner/vimproc/updatetime" : 60
+"       \   },
+"       \}
 "}}}
+"
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
@@ -342,6 +343,10 @@ nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find -auto-cd<CR>
 nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -auto-cd -split<CR>
 nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -auto-cd -double<CR>
+
+" Quick Run
+nnoremap <silent>mq    :<C-u>QuickRun<CR>
+
 " ContinuousNumber
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
