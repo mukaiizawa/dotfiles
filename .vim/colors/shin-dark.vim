@@ -14,10 +14,10 @@ highlight String        guifg=#ff9800
 highlight Character     guifg=#db7093
 highlight Number        guifg=#fadd5a
 highlight Boolean       guifg=#66d9ef gui=bold
-highlight Float         guifg=#fad07a
+highlight Float         guifg=#fadd5a
 "Identifier
 highlight Identifier    guifg=#66d9ef
-highlight Function      guifg=#c0c0c0
+highlight Function      guifg=#fad07a
 "Statement
 highlight Statement     guifg=#cc7833
 highlight Keyword       guifg=#cc0000 gui=bold
