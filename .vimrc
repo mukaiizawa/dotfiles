@@ -296,13 +296,32 @@ let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
 "}}}
 " Setting for QuickRun "{{{
-" let g:quickrun_config = {
-"       \   "_" : {
-"       \       "runner" : "vimproc",
-"       \       "runner/vimproc/updatetime" : 60
-"       \   },
-"       \}
-"}}}
+
+" Define key mapping to execute quickrun as 'mq'.
+" Refer to " Mappnig for Plugin " of " Plefix m ".
+let g:quickrun_no_default_key_mappings = 1
+
+let g:quickrun_config = {
+      \  '_' : {
+      \    'split' : 'vertical',
+      \  },
+      \
+      \  'lisp' : {
+      \    'runner' : 'vimproc',
+      \    'runner/vimproc/updatetime' : 10,
+      \    'hook/time/enable' : 1,
+      \  },
+      \
+      \  'html' : {
+      \    'command' : 'cat',
+      \    'exec' : '%c %s',
+      \    'outputter' : 'browser',
+      \ }
+      \
+      \}
+
+" }}}
+
 "
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
