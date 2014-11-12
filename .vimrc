@@ -311,6 +311,7 @@ let g:vimfiler_tree_indentation = 1
 " ================================================
 " Note:
 " Define key mapping to execute quickrun as 'mq'.
+" Therefore, repeal defaults key mappings.
 " Refer to " Mappnig for Plugin " of " Plefix m ".
 " ================================================
 let g:quickrun_no_default_key_mappings = 1
@@ -336,6 +337,7 @@ let g:quickrun_config = {
       \    'command' : 'cat',
       \    'exec' : '%c %s',
       \    'outputter' : 'browser',
+      \    'hook/output_encode' : 'sjis',
       \ }
       \
       \}
