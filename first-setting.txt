@@ -5,6 +5,9 @@ The first setup for vim
 2.Clone "dotfiles" repository from git.
 
 3.Clone "neobundle.vim" repository from git.
+  git clone git://github.com/Shougo/neobundle.vim c:\Users\user-name\.vim\bundle\neobundle.vim
+  or
+  git clone https://github.com/Shougo/neobundle.vim c:\Users\user-name\.vim\bundle\neobundle.vim
 
 4.Dowonload "vimproc.vim" and build vimproc_win32.dll
   >cd C:\Users\ユーザー名\.vim\bundle

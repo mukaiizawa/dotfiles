@@ -52,10 +52,9 @@ let s:type = {
       \ }
 
 function! s:type.detect(path, opts) "{{{
-  if s:is_git_dir(a:path.'/.git')
+  if a:path =~ '^/\|^\a:/' && s:is_git_dir(a:path.'/.git')
     " Local repository.
-    return { 'name' : split(a:path, '/')[-1],
-          \  'uri' : a:path, 'type' : 'git' }
+    return { 'uri' : a:path, 'type' : 'git' }
   elseif isdirectory(a:path)
     return {}
   endif
@@ -96,8 +95,7 @@ function! s:type.detect(path, opts) "{{{
     let uri .= '.git'
   endif
 
-  return { 'name': neobundle#util#name_conversion(uri),
-        \  'uri': uri, 'type' : 'git' }
+  return { 'uri': uri, 'type' : 'git' }
 endfunction"}}}
 function! s:type.get_sync_command(bundle) "{{{
   if !executable(g:neobundle#types#git#command_path)
@@ -186,7 +184,7 @@ function! s:type.get_revision_lock_command(bundle) "{{{
   let rev = a:bundle.rev
   if rev == ''
     " Fix detach HEAD.
-    let rev = 'master'
+    let rev = 'HEAD'
   endif
 
   return g:neobundle#types#git#command_path . ' checkout ' . rev

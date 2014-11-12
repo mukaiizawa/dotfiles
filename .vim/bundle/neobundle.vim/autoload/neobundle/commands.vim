@@ -82,17 +82,17 @@ function! neobundle#commands#install(bang, bundle_names) "{{{
 
   call neobundle#installer#update(installed)
 
-  call neobundle#installer#log(
+  call neobundle#installer#update_log(
         \ "[neobundle/install] Installed/Updated bundles:\n".
         \ join((empty(installed) ?
         \   ['no new bundles installed'] :
         \   map(copy(installed), 'v:val.name')),"\n"))
 
   if !empty(errored)
-    call neobundle#installer#log(
+    call neobundle#installer#update_log(
           \ "[neobundle/install] Error installing bundles:\n".join(
           \ map(copy(errored), 'v:val.name')), "\n")
-    call neobundle#installer#log(
+    call neobundle#installer#update_log(
           \ 'Please read the error message log with the :message command.')
   endif
 
@@ -175,9 +175,12 @@ function! neobundle#commands#check_update(bundle_names) "{{{
           \ && len(context.source__processes) <
           \      g:neobundle#install_max_processes
 
-      call s:check_update_init(
-            \ context.source__bundles[context.source__number],
-            \ context, 0)
+      let bundle = context.source__bundles[context.source__number]
+      call s:check_update_init(bundle, context, 0)
+      call neobundle#util#redraw_echo(
+            \ neobundle#installer#get_progress_message(bundle,
+            \ context.source__number,
+            \ context.source__max_bundles))
     endwhile
 
     for process in context.source__processes
@@ -501,9 +504,14 @@ function! s:install(bang, bundles) "{{{
           \ && len(context.source__processes) <
           \      g:neobundle#install_max_processes
 
+      let bundle = context.source__bundles[context.source__number]
       call neobundle#installer#sync(
             \ context.source__bundles[context.source__number],
             \ context, 0)
+      call neobundle#util#redraw_echo(
+            \ neobundle#installer#get_progress_message(bundle,
+            \ context.source__number,
+            \ context.source__max_bundles))
     endwhile
 
     for process in context.source__processes

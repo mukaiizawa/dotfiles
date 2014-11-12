@@ -21,7 +21,6 @@
 "     TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 "     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " }}}
-" Version: 0.1, for Vim 7.2
 "=============================================================================
 
 let s:save_cpo = &cpo
@@ -306,7 +305,7 @@ function! neobundle#installer#sync(bundle, context, is_unite)
   elseif cmd =~# '^E: '
     " Errored.
 
-    call neobundle#installer#log(
+    call neobundle#installer#update_log(
           \ printf('[neobundle/install] (%'.len(max).'d/%d): |%s| %s',
           \ num, max, a:bundle.name, 'Error'), a:is_unite)
     call neobundle#installer#error(cmd[3:], a:is_unite)
@@ -427,11 +426,12 @@ function! neobundle#installer#check_output(context, process, is_unite)
   if is_failed || build_failed
     let message = printf('[neobundle/install] (%'.len(max).'d/%d): |%s| %s',
           \ num, max, bundle.name, 'Error')
-    call neobundle#installer#log(message, a:is_unite)
+    call neobundle#installer#update_log(message, a:is_unite)
     call neobundle#installer#error(bundle.path, a:is_unite)
 
     if build_failed
-      if confirm('Build failed. Uninstall "'.bundle.name.'" now?', "yes\nNo", 2) == 1
+      if confirm('Build failed. Uninstall "'
+            \ .bundle.name.'" now?', "yes\nNo", 2) == 1
         " Remove.
         call neobundle#commands#clean(1, bundle.name)
       endif
@@ -598,19 +598,15 @@ function! s:get_skipped_message(number, max, bundle, prefix, message)
 endfunction
 
 function! neobundle#installer#log(msg, ...)
-  let is_unite = get(a:000, 0, 0)
   let msg = type(a:msg) == type([]) ?
         \ a:msg : split(a:msg, '\n')
   call extend(s:log, msg)
-
-  if !(&filetype == 'unite' || is_unite)
-    call neobundle#util#redraw_echo(msg)
-  endif
 
   call s:append_log_file(msg)
 endfunction
 
 function! neobundle#installer#update_log(msg, ...)
+  let is_unite = get(a:000, 0, 0)
   let msgs = []
   for msg in type(a:msg) == type([]) ?
         \ a:msg : [a:msg]
@@ -621,24 +617,22 @@ function! neobundle#installer#update_log(msg, ...)
           \ map(msg_nrs[1:], "source_name . v:val")
   endfor
 
-  call call('neobundle#installer#log', [msgs] + a:000)
+  if !(&filetype == 'unite' || is_unite)
+    call neobundle#util#redraw_echo(msg)
+  endif
+
+  call neobundle#installer#log(msgs)
 
   let s:updates_log += msgs
 endfunction
 
 function! neobundle#installer#error(msg, ...)
-  let is_unite = get(a:000, 0, 0)
   let msg = type(a:msg) == type([]) ?
         \ a:msg : split(a:msg, '\r\?\n')
   call extend(s:log, msg)
   call extend(s:updates_log, msg)
 
-  if &filetype == 'unite' || is_unite
-    call unite#print_error(msg)
-  else
-    call neobundle#util#print_error(msg)
-  endif
-
+  call neobundle#util#print_error(msg)
   call s:append_log_file(msg)
 endfunction
 
@@ -671,6 +665,12 @@ endfunction
 function! neobundle#installer#clear_log()
   let s:log = []
   let s:updates_log = []
+endfunction
+
+function! neobundle#installer#get_progress_message(bundle, number, max)
+  return printf('(%'.len(a:max).'d/%d) [%-20s] %s',
+          \ a:number, a:max,
+          \ repeat('=', (a:number*20/a:max)), a:bundle.name)
 endfunction
 
 function! neobundle#installer#get_tags_info()
