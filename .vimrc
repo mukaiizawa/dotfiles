@@ -8,7 +8,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 "}}}
-
 " NeoBundle "{{{
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -53,7 +52,7 @@ NeoBundleCheck
 " A fundamental setting bigins from here.
 "
 " ====================================
-" Note. It is applicable to .minvimrc.
+" Note: It is applicable to .minvimrc.
 " ====================================
 
 " Setting "
@@ -258,7 +257,7 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " An expansive setting bigins from here
 "
 " ======================================
-" Note. It is noapplicable to .minvimrc.
+" Note: It is noapplicable to .minvimrc.
 " ======================================
 
 " Setting of variable.
@@ -297,13 +296,22 @@ let g:vimfiler_tree_indentation = 1
 "}}}
 " Setting for QuickRun "{{{
 
+" ================================================
+" Note:
 " Define key mapping to execute quickrun as 'mq'.
 " Refer to " Mappnig for Plugin " of " Plefix m ".
+" ================================================
 let g:quickrun_no_default_key_mappings = 1
 
 let g:quickrun_config = {
       \  '_' : {
       \    'split' : 'vertical',
+      \  },
+      \
+      \  'c' : {
+      \    'runner' : 'vimproc',
+      \    'runner/vimproc/updatetime' : 10,
+      \    'hook/time/enable' : 1,
       \  },
       \
       \  'lisp' : {
