@@ -24,12 +24,13 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    }
       \ }
-NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'Yggdroot/indentLine'
 
 " Colorscheme "{{{
 " famous colorsheme
@@ -395,7 +396,12 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 
 "}}}
+" Prefix t "{{{
+if executable('ctags')
+  nnoremap tt :<C-u>!ctags -R<CR>
+endif
 
+"}}}
 
 
 
