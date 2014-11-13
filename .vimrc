@@ -15,6 +15,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -24,6 +25,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    }
       \ }
+NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'tyru/caw.vim'
@@ -371,6 +373,7 @@ nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>my    :<C-u>Unite history/yank<CR>
+" nnoremap <silent>mo    :<C-u>Unite -vertical -no-quit outline<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 
@@ -398,7 +401,7 @@ vnoremap <silent>co :ContinuousNumber <C-a><CR>
 "}}}
 " Prefix t "{{{
 if executable('ctags')
-  nnoremap tt :<C-u>!ctags -R<CR>
+  nnoremap tt :<C-u>!ctags -R 'pwd'<CR>
 endif
 
 "}}}
