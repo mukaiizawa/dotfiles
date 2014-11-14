@@ -306,7 +306,7 @@ let g:vimfiler_ignore_pattern = '^\.'
 " ===============================================================
 " Note: This variable controls vimfiler sorts directories as top.
 " ===============================================================
-let g:vimfiler_directory_display_top	*g:vimfiler_directory_display_top = 1
+let g:vimfiler_directory_display_top = 1
 
 call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0,
