@@ -291,15 +291,33 @@ call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 
 "}}}
 " Setting for VimFiler "{{{
+
+" =============================================================
+" Note: Disable netrw.vim and set vimfiler as default explorer.
+" =============================================================
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
+
+" ============================================================================
+" Note: This applies on the filenames of candidates.  It's not case sensitive.
+" ============================================================================
+let g:vimfiler_ignore_pattern = '^\.'
+
+" ===============================================================
+" Note: This variable controls vimfiler sorts directories as top.
+" ===============================================================
+let g:vimfiler_directory_display_top	*g:vimfiler_directory_display_top = 1
 
 call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0,
       \ 'auto-expand' : 1,
+      \ 'auto-cd' : 1,
+      \ 'find' : 1,
+      \ 'status' : 1,
+      \ 'ignore_pattern' : 1,
       \ })
 
-" view
+" set vimfiler's icon
 let g:vimfiler_tree_leaf_icon = '|'
 let g:vimfiler_tree_opened_icon = '-'
 let g:vimfiler_tree_closed_icon = '+'
@@ -355,11 +373,14 @@ let g:neomru#update_interval = 1    " 1 seconds
 
 " Mappnig for Plugin
 " Prefix g "{{{
+
+" for caw.vim
 nmap gci <Plug>(caw:i:toggle)
 vmap gci <Plug>(caw:i:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
+" for open-browser.vim
 nmap gw  <Plug>(openbrowser-open)
 vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
@@ -368,7 +389,7 @@ vmap gww <Plug>(openbrowser-search)
 "}}}
 " Prefix m "{{{
 
-" Unite
+" for Unite
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
@@ -377,25 +398,25 @@ nnoremap <silent>my    :<C-u>Unite history/yank<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 
-" NeoMRU
+" for NeoMRU
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
 nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 
-" VimShell
+" for VimShell
 nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
 nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
 nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 
-" VimFiler
-nnoremap <silent>mf    :<C-u>VimFilerBufferDir -status -find -auto-cd<CR>
-nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -status -find -auto-cd -split<CR>
-nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -status -find -auto-cd -double<CR>
+" for VimFiler
+nnoremap <silent>mf    :<C-u>VimFilerBufferDir<CR>
+nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -split<CR>
+nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -double<CR>
 
-" Quick Run
+" for Quick Run
 nnoremap <silent>mq    :<C-u>QuickRun<CR>
 
-" ContinuousNumber
+" for ContinuousNumber
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 
 "}}}
