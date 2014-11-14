@@ -275,12 +275,29 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " Setting of Plugin.
 " Setting for Unite "{{{
 
-let g:unite_enable_start_insert = 1
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 2000
+let g:unite_source_rec_async_command = 'files -A'
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_history_yank_limit = 100
 
+
+call unite#custom#profile('default', 'context', {
+      \   'start_insert': 1,
+      \   'candidate_icon': '*',
+      \   'direction': 'topleft',
+      \   'cursor_line_time': 0.0,
+      \   'prompt': '> ',
+      \ })
+
+" ====================================
+" Note: This variable is not work well
+" ====================================
+      " \   'cursor_line_highlight': 'CursorLine',
+
+" =============================================================
+" Note: if executable ag.exe, execute grep command with ag.exe
+" =============================================================
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
@@ -343,8 +360,6 @@ let g:quickrun_config = {
       \  },
       \
       \  'c' : {
-      \    'runner' : 'vimproc',
-      \    'runner/vimproc/updatetime' : 10,
       \    'hook/time/enable' : 1,
       \  },
       \
@@ -358,7 +373,7 @@ let g:quickrun_config = {
       \    'command' : 'cat',
       \    'exec' : '%c %s',
       \    'outputter' : 'browser',
-      \    'hook/output_encode' : 'sjis',
+      \    'hook/output_encode' : 'cp932',
       \ }
       \
       \}

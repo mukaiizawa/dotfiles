@@ -20,8 +20,8 @@ highlight Identifier    guifg=#66d9ef
 highlight Function      guifg=#fad07a
 "Statement
 highlight Statement     guifg=#cc7833
-highlight Keyword       guifg=#f92672 gui=bold
-highlight Exception     guifg=#cc0000 gui=bold
+highlight Keyword       guifg=#f82060 gui=bold
+highlight Exception     guifg=#f82060 gui=bold
 "Preproc
 highlight PreProc       guifg=#fad07a
 "Type
@@ -45,7 +45,7 @@ highlight Normal        guifg=#f0f0f0 guibg=#060606
 highlight NonText       guifg=#808080 guibg=#060606
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
-highlight CursorLine                  guibg=#121214
+highlight CursorLine                  guibg=#161616
 highlight LineNr        guifg=#bbbbbb
 highlight CursorLineNr  guifg=#fad07a               gui=bold
 highlight Conceal       guifg=#808080 guibg=#000004
