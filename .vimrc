@@ -1,4 +1,4 @@
-scriptencoding utf-u
+scriptencoding utf-8
 syntax enable
 
 " Initialization "{{{
@@ -287,13 +287,10 @@ call unite#custom#profile('default', 'context', {
       \   'candidate_icon': '*',
       \   'direction': 'topleft',
       \   'cursor_line_time': 0.0,
+      \   'cursor_line_highlight': 'CursorLine',
       \   'prompt': '> ',
       \ })
 
-" ====================================
-" Note: This variable is not work well
-" ====================================
-      " \   'cursor_line_highlight': 'CursorLine',
 
 " =============================================================
 " Note: if executable ag.exe, execute grep command with ag.exe

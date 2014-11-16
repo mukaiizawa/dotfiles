@@ -1,6 +1,12 @@
 scriptencoding utf-8
 syntax enable
 
+" A fundamental setting bigins from here.
+"
+" ====================================
+" Note: It is applicable to .minvimrc.
+" ====================================
+
 " Setting "
 " Setting for System "{{{
 set encoding=utf-8
@@ -11,6 +17,7 @@ set imsearch=0
 set helplang=ja
 set history=2000
 set nrformats-=octal
+
 "}}}
 " Setting for Window "{{{
 set ruler
@@ -23,6 +30,7 @@ set laststatus=2
 set showtabline=2
 set tabpagemax=300
 set backspace=start,eol,indent
+
 "}}}
 " Setting for File "{{{
 set nobackup
@@ -31,12 +39,14 @@ set noundofile
 set viminfo=
 set fileencoding=utf-8
 set foldmethod=marker
+
 "}}}
 " Setting for Search,Substitute "{{{
 set hlsearch
 set wrapscan
 set smartcase
 set ignorecase
+
 "}}}
 " Setting for Tab,Indent "{{{
 set autoindent
@@ -46,6 +56,7 @@ set expandtab
 set shiftwidth=2
 set list
 set listchars=tab:->,eol:<,trail:>
+
 "}}}
 
 " Mapping "
@@ -71,6 +82,9 @@ nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
+
+vnoremap s <NOP>
+
 "}}}
 " Mapping for Tab, Window "{{{
 nnoremap ss <C-w>s
@@ -88,6 +102,7 @@ nnoremap <Up>     4<C-w>-
 nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
 nnoremap <Left>   4<C-w><
+
 "}}}
 " Mapping for Surround "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
@@ -95,7 +110,7 @@ nnoremap s" wbi"<Esc>ea"<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
 nnoremap s> wbi<<Esc>ea><Esc>
 nnoremap s( wbi(<Esc>ea)<Esc>
-nnoremap s) wbi<<Esc>ea><Esc>
+nnoremap s) wbi(<Esc>ea)<Esc>
 nnoremap s{ wbi{<Esc>ea}<Esc>
 nnoremap s} wbi{<Esc>ea}<Esc>
 
@@ -165,6 +180,7 @@ nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
+
 "}}}
 " Mapping for etc "{{{
 nmap n nzz
@@ -192,7 +208,5 @@ nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
 nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
 nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
 "}}}
-
-
-
