@@ -15,7 +15,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
@@ -258,10 +257,20 @@ nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 
-nnoremap <F3> :<C-u>e ~/dotfiles/.vimrc<CR>
-nnoremap <F4> :<C-u>e ~/dotfiles/.gvimrc<CR>
-nnoremap <F5> :<C-u>source ~/dotfiles/.vimrc<CR>
+nnoremap <F3> :<C-u>e $MYVIMRC<CR>
+nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
+nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
+
+" ================================================
+" Note: If executable ctags.exe, create tags file.
+" ================================================
+if executable('ctags')
+  nnoremap tt :<C-u>lcd %:h<CR> :!ctags -R<CR>
+else
+  nnoremap tt :<C-u>echo "ctags: command not found"<CR>
+endif
 
 "}}}
 
@@ -278,8 +287,6 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 let g:unite_source_rec_min_cache_files = 50
 let g:unite_source_rec_max_cache_files = 2000
 let g:unite_source_rec_async_command = 'files -A'
-let g:unite_source_history_yank_enable = 1
-let g:unite_source_history_yank_limit = 100
 
 
 call unite#custom#profile('default', 'context', {
@@ -301,7 +308,68 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
+call unite#custom_default_action('directory', 'vimfiler')
+
+
+"}}}
+" Setting for Unite menu "{{{
+
+let g:unite_source_alias_aliases = {
+      \   "startup_file_mru" : {
+      \       "source" : "file_mru",
+      \   },
+      \   "startup_directory_mru" : {
+      \       "source" : "directory_mru",
+      \   },
+      \}
+call unite#custom_max_candidates("startup_file_mru", 10)
+call unite#custom_max_candidates("startup_directory_mru", 10)
+
+if !exists("g:unite_source_menu_menus")
+  let g:unite_source_menu_menus = {}
+endif
+
+
+" =============================================================================
+" Note: If you add command on launch menu like a "file/mru", append as follows.
+" =============================================================================
+" ["name", "command"]
+" [ "Most Recently Used directory", "Unite directory_mru" ],
+
+let g:unite_source_menu_menus.startup = {
+      \   "description" : "startup menu",
+      \   "command_candidates" : [
+      \       [ "vimrc",  "edit " . $MYVIMRC ],
+      \       [ "gvimrc", "edit " . $MYGVIMRC ],
+      \   ]
+      \}
+
+
+" =========================================================================
+" Note: If you want to start with quick match, add -quick-match as follows.
+" =========================================================================
+"  -quick-match
+command! UniteStartup
+      \   Unite
+      \   output:echo:"===:menu:===":! menu:startup
+      \   output:echo:":":!
+      \   output:echo:"===:Most:Recently:Used:file:===":! startup_file_mru
+      \   output:echo:":":!
+      \   output:echo:"===:Most:Recently:Used:directory:===":! startup_directory_mru
+      \   -hide-source-names
+      \   -no-split
+
+augroup startup
+  autocmd!
+  autocmd VimEnter * nested :UniteStartup
+augroup END
+
+
+"}}}
+" Setting for NeoMru "{{{
+let g:neomru#file_mru_limit = 500
+let g:neomru#directory_mru_limit = 1000
+let g:neomru#update_interval = 1    " 1 seconds 
 
 "}}}
 " Setting for VimFiler "{{{
@@ -312,10 +380,13 @@ call unite#custom_default_action('source/directory_mru/directory', 'vimfiler')
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 
+
 " ============================================================================
 " Note: This applies on the filenames of candidates.  It's not case sensitive.
+" Example: "dot files pattern."
+" let g:vimfiler_ignore_pattern = '^\.'
 " ============================================================================
-let g:vimfiler_ignore_pattern = '^\.'
+let g:vimfiler_ignore_pattern = ''
 
 " ===============================================================
 " Note: This variable controls vimfiler sorts directories as top.
@@ -328,7 +399,6 @@ call vimfiler#custom#profile('default', 'context', {
       \ 'auto-cd' : 1,
       \ 'find' : 1,
       \ 'status' : 1,
-      \ 'ignore_pattern' : 1,
       \ })
 
 " set vimfiler's icon
@@ -371,25 +441,47 @@ let g:quickrun_config = {
       \    'exec' : '%c %s',
       \    'outputter' : 'browser',
       \    'hook/output_encode' : 'cp932',
-      \ }
+      \  }
       \
       \}
 
 " }}}
-" Setting for NeoMru "{{{
-let g:neomru#file_mru_limit = 500
-let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 1    " 1 seconds 
+" Setting for IndentLine "{{{
+
+let g:indentLine_char = '|'
+
+" ============================================================
+" Note:
+" This variable specify a list of file types.
+" When opening these types of files, the plugin is disabled by
+" default.
+" ============================================================
+let g:indentLine_fileTypeExclude = [
+      \  'lisp', 
+      \  'java',
+      \  'cpp',
+      \  'vim',
+      \  'txt',
+      \]
 
 "}}}
+" Setting for caw "{{{
+
+let g:caw_no_default_keymappings = 1
+
+"}}}
+
 
 " Mappnig for Plugin
 " Prefix g "{{{
 
 " for caw.vim
 nmap gci <Plug>(caw:i:toggle)
-vmap gci <Plug>(caw:i:toggle)
+nmap gca <Plug>(caw:a:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
+
+vmap gci <Plug>(caw:i:toggle)
+vmap gca <Plug>(caw:a:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
 " for open-browser.vim
@@ -405,8 +497,8 @@ vmap gww <Plug>(openbrowser-search)
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
-nnoremap <silent>my    :<C-u>Unite history/yank<CR>
-" nnoremap <silent>mo    :<C-u>Unite -vertical -no-quit outline<CR>
+nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
+nnoremap <silent>mo    :<C-u>Unite -vertical -no-quit outline<CR>
 nnoremap <silent>mre   :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
 
@@ -432,13 +524,5 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
 
 "}}}
-" Prefix t "{{{
-if executable('ctags')
-  nnoremap tt :<C-u>!ctags -R 'pwd'<CR>
-endif
-
-"}}}
-
-
 
 
