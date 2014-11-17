@@ -339,6 +339,9 @@ let g:unite_source_menu_menus.startup = {
       \  ]
       \}
 
+" ==============================================
+" Note: The font was block written using figlet.
+" ==============================================
 command! UniteStartup
       \  Unite
       \  output:echo:"===:menu:===":! menu:startup
