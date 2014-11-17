@@ -239,6 +239,8 @@ nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
 nmap n nzz
 nmap N Nzz
 
+vmap R r
+
 inoremap jj <Esc>
 nnoremap <S-u> <C-r>
 
@@ -314,6 +316,10 @@ call unite#custom_default_action('directory', 'vimfiler')
 "}}}
 " Setting for Unite menu "{{{
 
+
+" =========================================
+" Note: Define alias to set max candidates.
+" =========================================
 let g:unite_source_alias_aliases = {
       \   "startup_file_mru" : {
       \       "source" : "file_mru",
@@ -325,47 +331,65 @@ let g:unite_source_alias_aliases = {
       \       "source" : "bookmark",
       \   },
       \}
-call unite#custom_max_candidates("startup_file_mru", 10)
-call unite#custom_max_candidates("startup_directory_mru", 10)
+call unite#custom_max_candidates("startup_file_mru", 5)
+call unite#custom_max_candidates("startup_file_mru", 5)
+call unite#custom_max_candidates("startup_directory_mru", 5)
 
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
-
-" =============================================================================
-" Note: If you add command on launch menu like a "file/mru", append as follows.
-" =============================================================================
-" ["name", "command"]
-" [ "Most Recently Used directory", "Unite directory_mru" ],
-
 let g:unite_source_menu_menus.startup = {
-      \   "description" : "startup menu",
-      \   "command_candidates" : [
-      \       [ "vimrc",  "edit " . $MYVIMRC ],
-      \       [ "gvimrc", "edit " . $MYGVIMRC ],
-      \   ]
+      \  "description" : "startup menu",
+      \  "command_candidates" : [
+      \      [ "vimrc",  "edit " . $MYVIMRC ],
+      \      [ "gvimrc", "edit " . $MYGVIMRC ],
+      \      [ "file/mru", "Unite directory_mru" ],
+      \      [ "directory/mru", "Unite directory_mru" ],
+      \  ]
       \}
 
-
-" =========================================================================
-" Note: If you want to start with quick match, add -quick-match as follows.
-" =========================================================================
-"  -quick-match
 command! UniteStartup
-      \   Unite
-      \   output:echo:"===:menu:===":! menu:startup
-      \   output:echo:":":!
-      \   output:echo:"===:bookmark:===":! bookmark
-      \   output:echo:":":!
-      \   output:echo:"===:Most:Recently:Used:file:===":! startup_file_mru
-      \   output:echo:":":!
-      \   output:echo:"===:Most:Recently:Used:directory:===":! startup_directory_mru
-      \   -hide-source-names
-      \   -no-split
-      \   -no-start-insert
+      \  Unite
+      \  output:echo:"===:menu:===":! menu:startup
+      \  output:echo:":":!
+      \  output:echo:"===:bookmark:===":! bookmark
+      \  output:echo:":":!
+      \  output:echo:"===:Most:Recently:Used:file:===":! startup_file_mru
+      \  output:echo:":":!
+      \  output:echo:"===:Most:Recently:Used:directory:===":! startup_directory_mru
+      \  output:echo:":":!
+      \  output:echo:"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
+      \  output:echo:":********:::::::::::********:iiii:::::::::::::::::::::::::::":!
+      \  output:echo:":**:::::*:::::::::::*::::::*i::::i::::::::::::::::::::::::::":!
+      \  output:echo:":**:::::*:::::::::::*::::::*:iiii:::::::::::::::::::::::::::":!
+      \  output:echo:":**:::::*:::::::::::*::::::*::::::::::::::::::::::::::::::::":!
+      \  output:echo:"::**::::*:::::::::::*:::::*iiiiiii::::mmmmmmm::::mmmmmmm::::":!
+      \  output:echo:":::**::::*:::::::::*:::::*:ii::::i::mm:::::::m::m:::::::mm::":!
+      \  output:echo:"::::**::::*:::::::*:::::*:::i::::i:m::::::::::mm::::::::::m:":!
+      \  output:echo:":::::**::::*:::::*:::::*::::i::::i:m::::::::::::::::::::::m:":!
+      \  output:echo:"::::::**::::*:::*:::::*:::::i::::i:m:::::mmm::::::mmm:::::m:":!
+      \  output:echo:":::::::**::::*:*:::::*::::::i::::i:m::::m:::m::::m:::m::::m:":!
+      \  output:echo:"::::::::**::::*:::::*:::::::i::::i:m::::m:::m::::m:::m::::m:":!
+      \  output:echo:"::::::::::*:::::::*::::::::ii:::::im::::m:::m::::m:::m::::m:":!
+      \  output:echo:":::::::::::**::::*:::::::::ii:::::im::::m:::m::::m:::m::::m:":!
+      \  output:echo:":::::::::::::***:::::::::::iiiiiiiimmmmmm:::mmmmmm:::mmmmmm:":!
+      \  output:echo:"::::::::::::::*:::::::::::::::::::::::::::::::::::::::::::::":!
+      \  output:echo:"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::|::":!
+      \  output:echo:":::::::::::::::::::::::::::::::::::::_|:::::::::_|::::_|::::::::::_|_|_|::_|::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
+      \  output:echo:"::::::::::::::::::::::::::::::::::::::_|:::::::_|:::::::::::::::::::_|::::_|_|::_|_|::_|_|_|::::_|::_|_|::::_|_|::::_|::::::::_|:::_|_|::::::_|_|_|::":!
+      \  output:echo:":::::::::::::::::::::::::::::::::::::::_|:::::_|::::::_|::::::::::::_|::::_|::_|::_|::_|::::_|::_|_|::::::_|::::_|:::_|::::::_|::_|_____|::_|::::_|::":!
+      \  output:echo:":::::::::::::::::::::::::::::::::::::::::_|::_|:::::::_|::::::::::::_|::::_|::::::_|::_|::::_|::_|::::::::_|::::_|:::::_|::_|::::_|::::::::_|::::_|::":!
+      \  output:echo:":::::::::::::::::::::::::::::::::::::::::::_|:::::::::_|::::::::::_|_|_|::_|::::::_|::_|_|_|::::_|::::::::::_|_|:::::::::_|::::::::_|_|_|::::_|_|_|::":!
+      \  output:echo:"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
+      \  output:echo:"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
+      \  -hide-source-names
+      \  -no-split
+      \  -no-start-insert
+      \  -quick-match
 
-augroup startup
+
+augroup startupMenu
   autocmd!
   autocmd VimEnter * nested :UniteStartup
 augroup END
