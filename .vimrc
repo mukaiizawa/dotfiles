@@ -321,6 +321,9 @@ let g:unite_source_alias_aliases = {
       \   "startup_directory_mru" : {
       \       "source" : "directory_mru",
       \   },
+      \   "startup_bookmark" : {
+      \       "source" : "bookmark",
+      \   },
       \}
 call unite#custom_max_candidates("startup_file_mru", 10)
 call unite#custom_max_candidates("startup_directory_mru", 10)
@@ -352,6 +355,8 @@ let g:unite_source_menu_menus.startup = {
 command! UniteStartup
       \   Unite
       \   output:echo:"===:menu:===":! menu:startup
+      \   output:echo:":":!
+      \   output:echo:"===:bookmark:===":! bookmark
       \   output:echo:":":!
       \   output:echo:"===:Most:Recently:Used:file:===":! startup_file_mru
       \   output:echo:":":!
