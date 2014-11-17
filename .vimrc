@@ -499,6 +499,8 @@ vmap gww <Plug>(openbrowser-search)
 " Prefix m "{{{
 
 " for Unite
+nnoremap <silent>mb    :<C-u>Unite bookmark<CR> 
+nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR> 
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
