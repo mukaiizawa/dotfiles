@@ -363,6 +363,7 @@ command! UniteStartup
       \   output:echo:"===:Most:Recently:Used:directory:===":! startup_directory_mru
       \   -hide-source-names
       \   -no-split
+      \   -no-start-insert
 
 augroup startup
   autocmd!
