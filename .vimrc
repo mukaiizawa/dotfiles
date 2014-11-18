@@ -49,7 +49,6 @@ NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
 filetype plugin indent on
-NeoBundleCheck
 
 "}}}
 
@@ -313,7 +312,9 @@ endif
 call unite#custom_default_action('directory', 'vimfiler')
 
 
-" Unite menu "{{{
+
+"}}}
+" Setting for Unite.menu "{{{
 
 " =========================================
 " Note: Define alias to set max candidates.
@@ -329,6 +330,7 @@ if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
+" startup-menu
 let g:unite_source_menu_menus.startup = {
       \  "description" : "startup menu",
       \  "command_candidates" : [
@@ -339,12 +341,28 @@ let g:unite_source_menu_menus.startup = {
       \  ]
       \}
 
+" startup-NeoBundle
+let g:unite_source_menu_menus.NeoBundle = {
+      \  "description" : "NeoBundle",
+      \  "command_candidates" : [
+      \      [ "NeoBundleLog" , "NeoBundleLog" ],
+      \      [ "NeoBundleList" , "NeoBundleList" ],
+      \      [ "NeoBundleClean" , "NeoBundleClean" ],
+      \      [ "NeoBundleCheck" , "NeoBundleCheck" ],
+      \      [ "NeoBundleInstall" , "NeoBundleInstall" ],
+      \      [ "NeoBundleCheckUpdate" , "NeoBundleUpdate" ],
+      \  ]
+      \}
+
 " ==============================================
 " Note: The font was block written using figlet.
 " ==============================================
 command! UniteStartup
       \  Unite
+      \  output:echo:":":!
       \  output:echo:"===:menu:===":! menu:startup
+      \  output:echo:":":!
+      \  output:echo:"===:Neobundle:===":! menu:NeoBundle
       \  output:echo:":":!
       \  output:echo:"===:bookmark:===":! bookmark
       \  output:echo:":":!
@@ -378,16 +396,17 @@ command! UniteStartup
       \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
       \  -hide-source-names
       \  -no-split
-      \  -quick-match
 
+" ===========================================================
+" Note: If you want to start with 'quick match', append this.
+" ===========================================================
+" \  -quick-match
 
 augroup startupMenu
   autocmd!
   autocmd VimEnter * nested :UniteStartup
 augroup END
 
-
-"}}}
 
 "}}}
 " Setting for NeoMru "{{{
