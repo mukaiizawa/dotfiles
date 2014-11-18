@@ -296,7 +296,7 @@ call unite#custom#profile('default', 'context', {
       \   'candidate_icon': '*',
       \   'direction': 'topleft',
       \   'cursor_line_time': 0.0,
-      \   'cursor_line_highlight': 'CursorLine',
+      \   'cursor_line_highlight': 'Visual',
       \   'prompt': '> ',
       \ })
 
@@ -332,10 +332,10 @@ endif
 let g:unite_source_menu_menus.startup = {
       \  "description" : "startup menu",
       \  "command_candidates" : [
-      \      [ "Edit vimrc"  , "edit $MYVIMRC"  ],
-      \      [ "Edit gvimrc" , "edit $MYGVIMRC" ],
-      \      [ "Search file with file/mru" , "Unite directory_mru" ],
-      \      [ "Search directory with directory/mru" , "Unite directory_mru" ],
+      \      [ "Edit a vimrc."  , "edit $MYVIMRC"  ],
+      \      [ "Edit a gvimrc." , "edit $MYGVIMRC" ],
+      \      [ "Search a file with file/mru" , "Unite directory_mru" ],
+      \      [ "Search a directory with directory/mru" , "Unite directory_mru" ],
       \  ]
       \}
 
@@ -455,6 +455,12 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
+      \    'runner' : 'vimproc',
+      \    'runner/vimproc/updatetime' : 10,
+      \    'hook/time/enable' : 1,
+      \  },
+      \
+      \  'java' : {
       \    'runner' : 'vimproc',
       \    'runner/vimproc/updatetime' : 10,
       \    'hook/time/enable' : 1,
