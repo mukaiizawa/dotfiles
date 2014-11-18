@@ -56,7 +56,7 @@ highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#cc7833 guibg=#a6f02e gui=bold
 highlight SpecialKey    guifg=#808080 guibg=#000004
 highlight Title         guifg=#ff0000 guibg=#000000
-highlight Visual        guifg=#fad07a guibg=#505050
+highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#606060               gui=bold
 
 " pop up menu
