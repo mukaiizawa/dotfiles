@@ -28,7 +28,7 @@ highlight PreProc        guifg=#fad07a
 highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#cc7833
 "Special
-highlight Special        guifg=#ffdead
+highlight Special        guifg=#66d9ef
 highlight SpecialComment guifg=#a6f02e
 "Underlined
 highlight Underlined     guifg=#00bfff
@@ -47,12 +47,12 @@ highlight NonText       guifg=#666666 guibg=#202020
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
 highlight CursorLine                  guibg=#333333
-highlight LineNr        guifg=#bbbbbb
+highlight LineNr        guifg=#aaaaaa
 highlight CursorLineNr  guifg=#fad07a               gui=bold
 highlight Conceal       guifg=#666666 guibg=#202020
 highlight CursorIM                    guibg=#ff0000
 highlight Directory     guifg=#40e0db guibg=#202020
-highlight Folded        guifg=#c0c0c0 guibg=#303030
+highlight Folded        guifg=#aaaaaa guibg=#303030
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#cc7833 guibg=#a6f02e gui=bold
 highlight SpecialKey    guifg=#666666 guibg=#202020
