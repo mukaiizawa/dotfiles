@@ -316,34 +316,28 @@ call unite#custom_default_action('directory', 'vimfiler')
 "}}}
 " Setting for Unite.menu "{{{
 
-" =========================================
-" Note: Define alias to set max candidates.
-" =========================================
-let g:unite_source_alias_aliases = {
-      \   "startup_bookmark" : {
-      \       "source" : "bookmark",
-      \   },
-      \}
-call unite#custom_max_candidates("startup_directory_mru", 5)
-
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
-" startup-menu
-let g:unite_source_menu_menus.startup = {
-      \  "description" : "startup menu",
+" Edit
+let g:unite_source_menu_menus.Edit = {
       \  "command_candidates" : [
-      \      [ "Edit a vimrc."  , "edit $MYVIMRC"  ],
-      \      [ "Edit a gvimrc." , "edit $MYGVIMRC" ],
-      \      [ "Search a file with file/mru" , "Unite directory_mru" ],
-      \      [ "Search a directory with directory/mru" , "Unite directory_mru" ],
+      \      [ "vimrc"  , "edit $MYVIMRC"  ],
+      \      [ "gvimrc" , "edit $MYGVIMRC" ],
       \  ]
       \}
 
-" startup-NeoBundle
+" Search
+let g:unite_source_menu_menus.Search = {
+      \  "command_candidates" : [
+      \      [ "file/mru" , "Unite file_mru" ],
+      \      [ "directory/mru" , "Unite directory_mru" ],
+      \  ]
+      \}
+
+" NeoBundle
 let g:unite_source_menu_menus.NeoBundle = {
-      \  "description" : "NeoBundle",
       \  "command_candidates" : [
       \      [ "NeoBundleLog" , "NeoBundleLog" ],
       \      [ "NeoBundleList" , "NeoBundleList" ],
@@ -360,11 +354,11 @@ let g:unite_source_menu_menus.NeoBundle = {
 command! UniteStartup
       \  Unite
       \  output:echo:":":!
-      \  output:echo:"===:menu:===":! menu:startup
+      \  output:echo:"===:Edit:===":! menu:Edit
+      \  output:echo:":":!
+      \  output:echo:"===:Search:===":! menu:Search
       \  output:echo:":":!
       \  output:echo:"===:Neobundle:===":! menu:NeoBundle
-      \  output:echo:":":!
-      \  output:echo:"===:bookmark:===":! bookmark
       \  output:echo:":":!
       \  output:echo:":":!
       \  output:echo:":::::::::::::::::::::.##.::::::::::::::::::::":!
@@ -507,6 +501,7 @@ let g:indentLine_char = '|'
 " ============================================================
 let g:indentLine_fileTypeExclude = [
       \  'lisp', 
+      \  'unite', 
       \  'java',
       \  'cpp',
       \  'vim',
