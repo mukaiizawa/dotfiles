@@ -241,9 +241,11 @@ nmap N Nzz
 vmap R r
 
 inoremap jj <Esc>
-nnoremap <S-u> <C-r>
+nnoremap U  <C-r>
 
 nnoremap g, g,zz
+
+" cursor
 nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space>j <C-f>zz
@@ -534,6 +536,7 @@ vmap gww <Plug>(openbrowser-search)
 " Prefix m "{{{
 
 " for Unite
+nnoremap <silent>me    :<C-u>Unite menu<CR> 
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR> 
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR> 
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
