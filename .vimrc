@@ -406,7 +406,7 @@ augroup END
 " Setting for NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 1    " 1 seconds 
+let g:neomru#update_interval = 10    " 10 seconds 
 
 "}}}
 " Setting for VimFiler "{{{
@@ -496,17 +496,13 @@ let g:indentLine_char = '|'
 " ============================================================
 " Note:
 " This variable specify a list of file types.
-" When opening these types of files, the plugin is disabled by
+" When opening these types of files, the plugin is enabled by
 " default.
 " ============================================================
-let g:indentLine_fileTypeExclude = [
-      \  'lisp', 
-      \  'unite', 
-      \  'java',
-      \  'cpp',
-      \  'vim',
-      \  'txt',
+let g:indentLine_fileType = [
+      \ 'c',
       \]
+
 
 "}}}
 " Setting for caw "{{{
