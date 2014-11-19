@@ -28,7 +28,7 @@ highlight PreProc        guifg=#fad07a
 highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#cc7833
 "Special
-highlight Special        guifg=#66d9ef
+highlight Special        guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
 "Underlined
 highlight Underlined     guifg=#00bfff
