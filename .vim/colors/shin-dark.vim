@@ -7,72 +7,73 @@ let g:colors_name = "shin-dark"
 
 " :help group-name "{{{
 "Comment
-highlight Comment       guifg=#a6f02e
+highlight Comment        guifg=#a6f02e
 "Constant
-highlight Constant      guifg=#66d9ef
-highlight String        guifg=#ff9800
-highlight Character     guifg=#db7093
-highlight Number        guifg=#fadd5a
-highlight Boolean       guifg=#66d9ef gui=bold
-highlight Float         guifg=#fadd5a
+highlight Constant       guifg=#87ceeb
+highlight String         guifg=#ff9800
+highlight Character      guifg=#db7093
+highlight Number         guifg=#fadd5a
+highlight Boolean        guifg=#87ceeb gui=bold
+highlight Float          guifg=#fadd5a
 "Identifier
-highlight Identifier    guifg=#66d9ef
-highlight Function      guifg=#fad07a
+highlight Identifier     guifg=#87ceeb
+highlight Function       guifg=#fad07a
 "Statement
-highlight Statement     guifg=#cc7833
-highlight Keyword       guifg=#f82060 gui=bold
-highlight Exception     guifg=#f82060 gui=bold
+highlight Statement      guifg=#cc7833
+highlight Keyword        guifg=#f82060 gui=bold
+highlight Exception      guifg=#f82060 gui=bold
 "Preproc
-highlight PreProc       guifg=#fad07a
+highlight PreProc        guifg=#fad07a
 "Type
-highlight Type          guifg=#66d9ef
-highlight Structure     guifg=#cc7833
+highlight Type           guifg=#87ceeb
+highlight Structure      guifg=#cc7833
 "Special
-highlight Special       guifg=#40e0db gui=bold
+highlight Special        guifg=#ffdead
+highlight SpecialComment guifg=#a6f02e
 "Underlined
-highlight Underlined    guifg=#00bfff
+highlight Underlined     guifg=#00bfff
 "Ignore
-highlight Ignore        guifg=#ff0000
+highlight Ignore         guifg=#ff0000
 "Error
-highlight Error         guifg=#ffffff guibg=#cc0000
+highlight Error          guifg=#ffffff guibg=#cc0000
 "Todo
-highlight Todo          guifg=#ffffff guibg=#cc0000
+highlight Todo           guifg=#ffffff guibg=#cc0000
 " }}}
 
 " :help highlight-groups "{{{
 
-highlight Normal        guifg=#f0f0f0 guibg=#060606
-highlight NonText       guifg=#808080 guibg=#060606
+highlight Normal        guifg=#f0f0f0 guibg=#202020
+highlight NonText       guifg=#666666 guibg=#202020
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
-highlight CursorLine                  guibg=#161616
+highlight CursorLine                  guibg=#333333
 highlight LineNr        guifg=#bbbbbb
 highlight CursorLineNr  guifg=#fad07a               gui=bold
-highlight Conceal       guifg=#808080 guibg=#000004
+highlight Conceal       guifg=#666666 guibg=#202020
 highlight CursorIM                    guibg=#ff0000
-highlight Directory     guifg=#40e0db guibg=#000004
+highlight Directory     guifg=#40e0db guibg=#202020
 highlight Folded        guifg=#c0c0c0 guibg=#303030
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#cc7833 guibg=#a6f02e gui=bold
-highlight SpecialKey    guifg=#808080 guibg=#000004
+highlight SpecialKey    guifg=#666666 guibg=#202020
 highlight Title         guifg=#ff0000 guibg=#000000
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
-highlight VertSplit     guifg=#606060               gui=bold
+highlight VertSplit     guifg=#666666               gui=bold
 
 " pop up menu
-highlight Pmenu         guifg=#ffffff guibg=#606060
-highlight PmenuSel      guifg=#101010 guibg=#eeeeee
-highlight PmenuSbar                   guibg=#aaaaaa
-highlight PmenuThumb    guifg=#66D9EF
-highlight WildMenu      guifg=#101010 guibg=#eeeeee
+hi Pmenu                guifg=#f0f0f0 guibg=#666666
+hi PmenuSel             guifg=#66d9ef guibg=#000000 gui=bold
+hi PmenuSbar                          guibg=#101010
+hi PmenuThumb           guifg=#101010
+hi WildMenu             guifg=#66d9ef guibg=#000000 gui=bold
 
 " for tab
-highlight TabLine       guifg=#cccccc guibg=#808080
-highlight TabLineFill                 guibg=#404040
-highlight TabLineSel    guifg=#eeeeee guibg=#606060
+highlight TabLine       guifg=#cccccc guibg=#666666
+highlight TabLineFill                 guibg=#666666
+highlight TabLineSel    guifg=#eeeeee guibg=#666666
 
 " statusline
-highlight StatusLine    guifg=#f0f0f0 guibg=#606060 gui=bold
+highlight StatusLine    guifg=#f0f0f0 guibg=#404040 gui=bold
 highlight StatusLineNC  guifg=#666666 guibg=#cccccc gui=bold
 " Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
 " }}}
