@@ -350,6 +350,20 @@ let g:unite_source_menu_menus.NeoBundle = {
       \  ]
       \}
 
+" file encoding
+let g:unite_source_menu_menus.file_encoding = {
+      \  "command_candidates" : [
+      \       ['utf8', 'set fenc=Utf8'],
+      \       ['cp932', 'set fenc=cp932'],
+      \       ['euc', 'set fenc=euc'],
+      \       ['utf16', 'set fenc=utf16'],
+      \       ['utf16-be', 'set fenc=utf16be'],
+      \       ['jis', 'set fenc=jis'],
+      \       ['sjis', 'set fenc=sjis'],
+      \       ['unicode', 'set fenc=unicode'],
+      \  ]
+      \}
+
 " ==============================================
 " Note: The font was block written using figlet.
 " ==============================================
