@@ -61,12 +61,12 @@ filetype plugin indent on
 
 " Setting "
 " Setting for System "{{{
-set encoding=utf-8
-set wildmenu
-set showcmd
-set iminsert=0
-set imsearch=0
-set helplang=ja
+set encoding=utf-8            " Sets the character encoding used inside Vim.
+set wildmenu                  " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
+set showcmd                   " Show (partial) command in the last line of the screen.
+set iminsert=0                " 0 :lmap is off and IM is off
+set imsearch=0                " 0 :lmap is off and IM is off
+set helplang=en
 set history=2000
 set nrformats-=octal
 
@@ -75,11 +75,11 @@ set nrformats-=octal
 set ruler
 set title
 set number
-set nowrap
-set showmatch
-set cmdheight=2
-set laststatus=2
-set showtabline=2
+set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
+set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
+set cmdheight=2                " Number of screen lines to use for the command-line.
+set laststatus=2               " Always, window show status.
+set showtabline=2              " Always, tab page labels show status.
 set tabpagemax=300
 set backspace=start,eol,indent
 
@@ -88,21 +88,21 @@ set backspace=start,eol,indent
 set nobackup
 set noswapfile
 set noundofile
-set viminfo=
+set viminfo=                   " Not use viminfo file.
 set fileencoding=utf-8
 set foldmethod=marker
 
 "}}}
 " Setting for Search,Substitute "{{{
-set hlsearch
+set hlsearch                   " When search word, highlight all its matches.
 set wrapscan
-set smartcase
-set ignorecase
+set ignorecase                 " The case of normal letters is ignored.
+set smartcase                  " Override the ignorecase option if the search pattern contains uppercase charachers.
 
 "}}}
 " Setting for Tab,Indent "{{{
 set autoindent
-set tabstop=2
+set tabstop=2                  " Number of spaces that a <Tab> in the file counts for.
 set smartindent
 set expandtab
 set shiftwidth=2
@@ -150,6 +150,8 @@ nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
 nnoremap sq :<C-u>q<CR>
+
+" change current window height(width).
 nnoremap <Up>     4<C-w>-
 nnoremap <Down>  30<C-w>+
 nnoremap <Right>  4<C-w>>
@@ -157,6 +159,14 @@ nnoremap <Left>   4<C-w><
 
 "}}}
 " Mapping for Surround "{{{
+
+" =========================================
+" Note: You can surround with these symble.
+" Quotation: '',""
+" Brackets: <>,(),{},[]
+" =========================================
+
+" Surround with symble. "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
@@ -165,7 +175,11 @@ nnoremap s( wbi(<Esc>ea)<Esc>
 nnoremap s) wbi(<Esc>ea)<Esc>
 nnoremap s{ wbi{<Esc>ea}<Esc>
 nnoremap s} wbi{<Esc>ea}<Esc>
+nnoremap s[ wbi[<Esc>ea]<Esc>
+nnoremap s] wbi[<Esc>ea]<Esc>
 
+"}}}
+" Delete surround. "{{{
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
 nnoremap sd< f>xF<x
@@ -174,7 +188,11 @@ nnoremap sd( f)xF(x
 nnoremap sd) f)xF(x
 nnoremap sd{ f}xF{x
 nnoremap sd} f}xF{x
+nnoremap sd[ f]xF[x
+nnoremap sd[ f]xF[x
 
+"}}}
+" Change surround from ' to something. "{{{
 nnoremap s'" f'x,x wbi"<Esc>ea"<Esc>
 nnoremap s'< f'x,x wbi<<Esc>ea><Esc>
 nnoremap s'> f'x,x wbi<<Esc>ea><Esc>
@@ -182,7 +200,11 @@ nnoremap s'( f'x,x wbi(<Esc>ea)<Esc>
 nnoremap s') f'x,x wbi(<Esc>ea)<Esc>
 nnoremap s'{ f'x,x wbi{<Esc>ea}<Esc>
 nnoremap s'} f'x,x wbi{<Esc>ea}<Esc>
+nnoremap s'[ f'x,x wbi[<Esc>ea]<Esc>
+nnoremap s'] f'x,x wbi[<Esc>ea]<Esc>
 
+"}}}
+" Change surround from " to something. "{{{
 nnoremap s"' f"x,x wbi'<Esc>ea'<Esc>
 nnoremap s"< f"x,x wbi<<Esc>ea><Esc>
 nnoremap s"> f"x,x wbi<<Esc>ea><Esc>
@@ -190,13 +212,19 @@ nnoremap s"( f"x,x wbi(<Esc>ea)<Esc>
 nnoremap s") f"x,x wbi(<Esc>ea)<Esc>
 nnoremap s"{ f"x,x wbi{<Esc>ea}<Esc>
 nnoremap s"} f"x,x wbi{<Esc>ea}<Esc>
+nnoremap s"[ f"x,x wbi[<Esc>ea]<Esc>
+nnoremap s"] f"x,x wbi[<Esc>ea]<Esc>
 
+"}}}
+" Change surround from < > to something. "{{{
 nnoremap s<' f>xF<x wbi'<Esc>ea'<Esc>
 nnoremap s<" f>xF<x wbi"<Esc>ea"<Esc>
 nnoremap s<( f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s<) f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s<{ f>xF<x wbi{<Esc>ea}<Esc>
 nnoremap s<} f>xF<x wbi{<Esc>ea}<Esc>
+nnoremap s<[ f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s<] f>xF<x wbi[<Esc>ea]<Esc>
 
 nnoremap s>' f>xF<x wbi'<Esc>ea'<Esc>
 nnoremap s>" f>xF<x wbi"<Esc>ea"<Esc>
@@ -204,13 +232,19 @@ nnoremap s>( f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s>) f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s>{ f>xF<x wbi{<Esc>ea}<Esc>
 nnoremap s>} f>xF<x wbi{<Esc>ea}<Esc>
+nnoremap s>[ f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s>] f>xF<x wbi[<Esc>ea]<Esc>
 
+"}}}
+" Change surround from ( ) to something. "{{{
 nnoremap s(' f)xF(x wbi'<Esc>ea'<Esc>
 nnoremap s(" f)xF(x wbi"<Esc>ea"<Esc>
 nnoremap s(< f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s(> f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s({ f)xF(x wbi{<Esc>ea}<Esc>
 nnoremap s(} f)xF(x wbi{<Esc>ea}<Esc>
+nnoremap s([ f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s(] f)xF(x wbi[<Esc>ea]<Esc>
 
 nnoremap s)' f)xF(x wbi'<Esc>ea'<Esc>
 nnoremap s)" f)xF(x wbi"<Esc>ea"<Esc>
@@ -218,13 +252,19 @@ nnoremap s)< f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s)> f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s){ f)xF(x wbi{<Esc>ea}<Esc>
 nnoremap s)} f)xF(x wbi{<Esc>ea}<Esc>
+nnoremap s)[ f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s)] f)xF(x wbi[<Esc>ea]<Esc>
 
+"}}}
+" Change surround from { } to something. "{{{
 nnoremap s{' f}xF{x wbi'<Esc>ea'<Esc>
 nnoremap s{" f}xF{x wbi"<Esc>ea"<Esc>
 nnoremap s{< f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s{> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s{( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s{) f}xF{x wbi(<Esc>ea)<Esc>
+nnoremap s{[ f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s{] f}xF{x wbi[<Esc>ea]<Esc>
 
 nnoremap s}' f}xF{x wbi'<Esc>ea'<Esc>
 nnoremap s}" f}xF{x wbi"<Esc>ea"<Esc>
@@ -232,18 +272,50 @@ nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
 nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
+nnoremap s}[ f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s}] f}xF{x wbi[<Esc>ea]<Esc>
+
+"}}}
+" Change surround from [ ] to something. "{{{
+nnoremap s[' f]xF[x wbi'<Esc>ea'<Esc>
+nnoremap s[" f]xF[x wbi"<Esc>ea"<Esc>
+nnoremap s[< f]xF[x wbi<<Esc>ea><Esc>
+nnoremap s[> f]xF[x wbi<<Esc>ea><Esc>
+nnoremap s[( f]xF[x wbi(<Esc>ea)<Esc>
+nnoremap s[) f]xF[x wbi(<Esc>ea)<Esc>
+nnoremap s[{ f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s[} f]xF[x wbi{<Esc>ea}<Esc>
+
+nnoremap s]' f]xF[x wbi'<Esc>ea'<Esc>
+nnoremap s]" f]xF[x wbi"<Esc>ea"<Esc>
+nnoremap s]< f]xF[x wbi<<Esc>ea><Esc>
+nnoremap s]> f]xF[x wbi<<Esc>ea><Esc>
+nnoremap s]( f]xF[x wbi(<Esc>ea)<Esc>
+nnoremap s]) f]xF[x wbi(<Esc>ea)<Esc>
+nnoremap s]{ f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s]} f]xF[x wbi{<Esc>ea}<Esc>
+
+"}}}
 
 "}}}
 " Mapping for etc "{{{
-nmap n nzz
-nmap N Nzz
 
-vmap R r
-
+" End insert mode with jj.
 inoremap jj <Esc>
+
+" IM turn off automatically when leaving Insert mode.
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
+" Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-nnoremap g, g,zz
+" toggle highlight
+nnoremap <Space>/ :set hlsearch!<CR>
+
+" Redraw at center of window.
+nmap n nzz
+nmap N Nzz
+nmap g, g,zz
 
 " cursor
 nnoremap <Space>h 0
@@ -256,14 +328,21 @@ vnoremap <Space>l $
 vnoremap <Space>j <C-f>zz
 vnoremap <Space>k <C-b>zz
 
+" Change directory to carrent buffer directory.
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+
+" Toggle a buffer which edit the one befor.
 nnoremap <silent>mm :e #<CR>
+
+" Execute current buffer with clisp.
 nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
 
+" Edit vimrc, gvimrc.
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
+
+" Read vimrc.
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
-inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 
 " ================================================
@@ -353,16 +432,26 @@ let g:unite_source_menu_menus.NeoBundle = {
 " file encoding
 let g:unite_source_menu_menus.file_encoding = {
       \  "command_candidates" : [
-      \       ['utf8', 'set fenc=Utf8'],
-      \       ['cp932', 'set fenc=cp932'],
-      \       ['euc', 'set fenc=euc'],
-      \       ['utf16', 'set fenc=utf16'],
-      \       ['utf16-be', 'set fenc=utf16be'],
-      \       ['jis', 'set fenc=jis'],
-      \       ['sjis', 'set fenc=sjis'],
-      \       ['unicode', 'set fenc=unicode'],
+      \      ["utf8", "set fenc=Utf8"],
+      \      ["cp932", "set fenc=cp932"],
+      \      ["euc", "set fenc=euc"],
+      \      ["utf16", "set fenc=utf16"],
+      \      ["utf16-be", "set fenc=utf16be"],
+      \      ["jis", "set fenc=jis"],
+      \      ["sjis", "set fenc=sjis"],
+      \      ["unicode", "set fenc=unicode"],
       \  ]
-      \}
+      \ }
+
+" toggle option
+let g:unite_source_menu_menus.toggle_option ={
+      \  "command_candidates" : [
+      \      ["Toggle number", "set number!"],
+      \      ["Toggle hlsearch", "set hlsearch!"],
+      \      ["Toggle wrap", "set wrap!"],
+      \  ]
+      \ }
+
 
 " ==============================================
 " Note: The font was block written using figlet.
