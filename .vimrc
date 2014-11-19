@@ -579,7 +579,9 @@ nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 
 "}}}
 " Quick Run "{{{
+
 nnoremap <silent>mq    :<C-u>QuickRun<CR>
+
 "}}}
 " ContinuousNumber "{{{
 
@@ -594,6 +596,7 @@ nmap gcc <Plug>(caw:wrap:toggle)
 vmap gci <Plug>(caw:i:toggle)
 vmap gca <Plug>(caw:a:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
+
 "}}}
 " open-browser"{{{
 nmap gw  <Plug>(openbrowser-open)
