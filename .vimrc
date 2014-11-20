@@ -360,7 +360,7 @@ nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 nnoremap <silent>mm :e #<CR>
 
 " Execute current buffer with clisp.
-nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
+nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
 
 " Edit vimrc, gvimrc.
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
