@@ -162,13 +162,14 @@ nnoremap <Left>   4<C-w><
 
 " =========================================
 " Note: You can surround with these symble.
-" Quotation: '',""
+" Quotation: '', "", **
 " Brackets: <>,(),{},[]
 " =========================================
 
 " Surround with symble. "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
+nnoremap s* wbi*<Esc>ea*<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
 nnoremap s> wbi<<Esc>ea><Esc>
 nnoremap s( wbi(<Esc>ea)<Esc>
@@ -182,6 +183,7 @@ nnoremap s] wbi[<Esc>ea]<Esc>
 " Delete surround. "{{{
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
+nnoremap sd* f*x,x
 nnoremap sd< f>xF<x
 nnoremap sd> f>xF<x
 nnoremap sd( f)xF(x
@@ -194,6 +196,7 @@ nnoremap sd[ f]xF[x
 "}}}
 " Change surround from ' to something. "{{{
 nnoremap s'" f'x,x wbi"<Esc>ea"<Esc>
+nnoremap s'* f'x,x wbi*<Esc>ea*<Esc>
 nnoremap s'< f'x,x wbi<<Esc>ea><Esc>
 nnoremap s'> f'x,x wbi<<Esc>ea><Esc>
 nnoremap s'( f'x,x wbi(<Esc>ea)<Esc>
@@ -206,6 +209,7 @@ nnoremap s'] f'x,x wbi[<Esc>ea]<Esc>
 "}}}
 " Change surround from " to something. "{{{
 nnoremap s"' f"x,x wbi'<Esc>ea'<Esc>
+nnoremap s"* f"x,x wbi*<Esc>ea*<Esc>
 nnoremap s"< f"x,x wbi<<Esc>ea><Esc>
 nnoremap s"> f"x,x wbi<<Esc>ea><Esc>
 nnoremap s"( f"x,x wbi(<Esc>ea)<Esc>
@@ -216,9 +220,23 @@ nnoremap s"[ f"x,x wbi[<Esc>ea]<Esc>
 nnoremap s"] f"x,x wbi[<Esc>ea]<Esc>
 
 "}}}
+" Change surround from * to something. "{{{
+nnoremap s*' f*x,x wbi'<Esc>ea'<Esc>
+nnoremap s*" f*x,x wbi"<Esc>ea"<Esc>
+nnoremap s*< f*x,x wbi<<Esc>ea><Esc>
+nnoremap s*> f*x,x wbi<<Esc>ea><Esc>
+nnoremap s*( f*x,x wbi(<Esc>ea)<Esc>
+nnoremap s*) f*x,x wbi(<Esc>ea)<Esc>
+nnoremap s*{ f*x,x wbi{<Esc>ea}<Esc>
+nnoremap s*} f*x,x wbi{<Esc>ea}<Esc>
+nnoremap s*[ f*x,x wbi[<Esc>ea]<Esc>
+nnoremap s*] f*x,x wbi[<Esc>ea]<Esc>
+
+"}}}
 " Change surround from < > to something. "{{{
 nnoremap s<' f>xF<x wbi'<Esc>ea'<Esc>
 nnoremap s<" f>xF<x wbi"<Esc>ea"<Esc>
+nnoremap s<* f>xF<x wbi*<Esc>ea*<Esc>
 nnoremap s<( f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s<) f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s<{ f>xF<x wbi{<Esc>ea}<Esc>
@@ -228,6 +246,7 @@ nnoremap s<] f>xF<x wbi[<Esc>ea]<Esc>
 
 nnoremap s>' f>xF<x wbi'<Esc>ea'<Esc>
 nnoremap s>" f>xF<x wbi"<Esc>ea"<Esc>
+nnoremap s>* f>xF<x wbi*<Esc>ea*<Esc>
 nnoremap s>( f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s>) f>xF<x wbi(<Esc>ea)<Esc>
 nnoremap s>{ f>xF<x wbi{<Esc>ea}<Esc>
@@ -239,6 +258,7 @@ nnoremap s>] f>xF<x wbi[<Esc>ea]<Esc>
 " Change surround from ( ) to something. "{{{
 nnoremap s(' f)xF(x wbi'<Esc>ea'<Esc>
 nnoremap s(" f)xF(x wbi"<Esc>ea"<Esc>
+nnoremap s(* f)xF(x wbi*<Esc>ea*<Esc>
 nnoremap s(< f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s(> f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s({ f)xF(x wbi{<Esc>ea}<Esc>
@@ -248,6 +268,7 @@ nnoremap s(] f)xF(x wbi[<Esc>ea]<Esc>
 
 nnoremap s)' f)xF(x wbi'<Esc>ea'<Esc>
 nnoremap s)" f)xF(x wbi"<Esc>ea"<Esc>
+nnoremap s)* f)xF(x wbi*<Esc>ea*<Esc>
 nnoremap s)< f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s)> f)xF(x wbi<<Esc>ea><Esc>
 nnoremap s){ f)xF(x wbi{<Esc>ea}<Esc>
@@ -259,6 +280,7 @@ nnoremap s)] f)xF(x wbi[<Esc>ea]<Esc>
 " Change surround from { } to something. "{{{
 nnoremap s{' f}xF{x wbi'<Esc>ea'<Esc>
 nnoremap s{" f}xF{x wbi"<Esc>ea"<Esc>
+nnoremap s{* f}xF{x wbi*<Esc>ea*<Esc>
 nnoremap s{< f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s{> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s{( f}xF{x wbi(<Esc>ea)<Esc>
@@ -268,6 +290,7 @@ nnoremap s{] f}xF{x wbi[<Esc>ea]<Esc>
 
 nnoremap s}' f}xF{x wbi'<Esc>ea'<Esc>
 nnoremap s}" f}xF{x wbi"<Esc>ea"<Esc>
+nnoremap s}* f}xF{x wbi*<Esc>ea*<Esc>
 nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
 nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
@@ -279,6 +302,7 @@ nnoremap s}] f}xF{x wbi[<Esc>ea]<Esc>
 " Change surround from [ ] to something. "{{{
 nnoremap s[' f]xF[x wbi'<Esc>ea'<Esc>
 nnoremap s[" f]xF[x wbi"<Esc>ea"<Esc>
+nnoremap s[* f]xF[x wbi*<Esc>ea*<Esc>
 nnoremap s[< f]xF[x wbi<<Esc>ea><Esc>
 nnoremap s[> f]xF[x wbi<<Esc>ea><Esc>
 nnoremap s[( f]xF[x wbi(<Esc>ea)<Esc>
@@ -288,6 +312,7 @@ nnoremap s[} f]xF[x wbi{<Esc>ea}<Esc>
 
 nnoremap s]' f]xF[x wbi'<Esc>ea'<Esc>
 nnoremap s]" f]xF[x wbi"<Esc>ea"<Esc>
+nnoremap s]* f]xF[x wbi*<Esc>ea*<Esc>
 nnoremap s]< f]xF[x wbi<<Esc>ea><Esc>
 nnoremap s]> f]xF[x wbi<<Esc>ea><Esc>
 nnoremap s]( f]xF[x wbi(<Esc>ea)<Esc>
