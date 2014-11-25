@@ -41,20 +41,20 @@ highlight Todo           guifg=#ffffff guibg=#cc0000
 " }}}
 " :help highlight-groups "{{{
 
-highlight Normal        guifg=#f0f0f0 guibg=#242424
-highlight NonText       guifg=#666666 guibg=#242424
+highlight Normal        guifg=#f0f0f0 guibg=#303030
+highlight NonText       guifg=#666666 guibg=#303030
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
-highlight CursorLine                  guibg=#393939
+highlight CursorLine                  guibg=#404040
 highlight LineNr        guifg=#aaaaaa
 highlight CursorLineNr  guifg=#fad07a               gui=bold
-highlight Conceal       guifg=#666666 guibg=#242424
+highlight Conceal       guifg=#666666 guibg=#303030
 highlight CursorIM                    guibg=#ff0000
-highlight Directory     guifg=#40e0db guibg=#242424
-highlight Folded        guifg=#aaaaaa guibg=#393939
+highlight Directory     guifg=#40e0db guibg=#303030
+highlight Folded        guifg=#aaaaaa guibg=#404040
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
-highlight SpecialKey    guifg=#666666 guibg=#242424
+highlight SpecialKey    guifg=#666666 guibg=#303030
 highlight Title         guifg=#ff0000 guibg=#000000
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
