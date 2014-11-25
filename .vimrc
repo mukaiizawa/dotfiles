@@ -429,16 +429,16 @@ endif
 " Edit
 let g:unite_source_menu_menus.Edit = {
       \  "command_candidates" : [
-      \      [ "vimrc"  , "edit $MYVIMRC"  ],
-      \      [ "gvimrc" , "edit $MYGVIMRC" ],
+      \      [ "vimrc         :<F3>"  , "edit $MYVIMRC"  ],
+      \      [ "gvimrc        :<F4>" , "edit $MYGVIMRC" ],
       \  ]
       \}
 
 " Search
 let g:unite_source_menu_menus.Search = {
       \  "command_candidates" : [
-      \      [ "file/mru" , "Unite file_mru" ],
-      \      [ "directory/mru" , "Unite directory_mru" ],
+      \      [ "file/mru      :mru" , "Unite file_mru" ],
+      \      [ "directory/mru :mrd" , "Unite directory_mru" ],
       \  ]
       \}
 
@@ -514,6 +514,20 @@ command! UniteStartup
       \  output:echo:":::::::::::::::::::::`##':::::::::::::::::::::::::_|:::::::_|::::::_|_|_|::_|::::::_|::_|_|_|::::_|::::::::::_|_|:::::::::_|::::::::_|_|_|::::_|_|_|::":!
       \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
       \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  neomru/directory
+      \  neomru/file
       \  -hide-source-names
       \  -no-split
 
