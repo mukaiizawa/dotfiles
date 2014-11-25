@@ -10,7 +10,7 @@ let g:colors_name = "shin-dark"
 highlight Comment        guifg=#a6f02e
 "Constant
 highlight Constant       guifg=#87ceeb
-highlight String         guifg=#ff9800
+highlight String         guifg=#ff8870
 highlight Character      guifg=#db7093
 highlight Number         guifg=#fadd5a
 highlight Boolean        guifg=#87ceeb gui=bold
@@ -39,42 +39,42 @@ highlight Error          guifg=#ffffff guibg=#cc0000
 "Todo
 highlight Todo           guifg=#ffffff guibg=#cc0000
 " }}}
-
 " :help highlight-groups "{{{
 
-highlight Normal        guifg=#f0f0f0 guibg=#202020
-highlight NonText       guifg=#666666 guibg=#202020
+highlight Normal        guifg=#f0f0f0 guibg=#242424
+highlight NonText       guifg=#666666 guibg=#242424
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
-highlight CursorLine                  guibg=#333333
+highlight CursorLine                  guibg=#393939
 highlight LineNr        guifg=#aaaaaa
 highlight CursorLineNr  guifg=#fad07a               gui=bold
-highlight Conceal       guifg=#666666 guibg=#202020
+highlight Conceal       guifg=#666666 guibg=#242424
 highlight CursorIM                    guibg=#ff0000
-highlight Directory     guifg=#40e0db guibg=#202020
-highlight Folded        guifg=#aaaaaa guibg=#303030
+highlight Directory     guifg=#40e0db guibg=#242424
+highlight Folded        guifg=#aaaaaa guibg=#393939
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
-highlight SpecialKey    guifg=#666666 guibg=#202020
+highlight SpecialKey    guifg=#666666 guibg=#242424
 highlight Title         guifg=#ff0000 guibg=#000000
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
 " pop up menu
-hi Pmenu                guifg=#f0f0f0 guibg=#666666
+hi Pmenu                guifg=#f0f0f0 guibg=#303030
 hi PmenuSel             guifg=#66d9ef guibg=#000000 gui=bold
 hi PmenuSbar                          guibg=#101010
 hi PmenuThumb           guifg=#101010
 hi WildMenu             guifg=#66d9ef guibg=#000000 gui=bold
+
+" statusline
+highlight StatusLine    guifg=#f0f0f0 guibg=#404040 gui=bold
+highlight StatusLineNC  guifg=#666666 guibg=#cccccc gui=bold
+" Note: The guifg and the guibg of a 'StatusLineNC' are reverse.
 
 " for tab
 highlight TabLine       guifg=#cccccc guibg=#666666
 highlight TabLineFill                 guibg=#666666
 highlight TabLineSel    guifg=#eeeeee guibg=#666666
 
-" statusline
-highlight StatusLine    guifg=#f0f0f0 guibg=#404040 gui=bold
-highlight StatusLineNC  guifg=#666666 guibg=#cccccc gui=bold
-" Note. The guifg and the guibg of a 'StatusLineNC' are reverse.
 " }}}
 
