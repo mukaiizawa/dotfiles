@@ -10,7 +10,7 @@ let g:colors_name = "shin-dark"
 highlight Comment        guifg=#a6f02e
 "Constant
 highlight Constant       guifg=#87ceeb
-highlight String         guifg=#ff8870
+highlight String         guifg=#ffaaaa
 highlight Character      guifg=#db7093
 highlight Number         guifg=#fadd5a
 highlight Boolean        guifg=#87ceeb gui=bold
@@ -28,16 +28,17 @@ highlight PreProc        guifg=#fad07a
 highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#cc7833
 "Special
-highlight Special        guifg=#40e0db gui=bold
+highlight Special        guifg=#87ceeb
+highlight Delimiter      guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
 "Underlined
 highlight Underlined     guifg=#00bfff
 "Ignore
 highlight Ignore         guifg=#ff0000
 "Error
-highlight Error          guifg=#ffffff guibg=#cc0000
+highlight Error          guifg=#ffffff guibg=#aa0000
 "Todo
-highlight Todo           guifg=#ffffff guibg=#cc0000
+highlight Todo           guifg=#ffffff guibg=#aa0000
 " }}}
 " :help highlight-groups "{{{
 
