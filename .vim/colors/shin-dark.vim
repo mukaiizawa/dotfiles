@@ -55,7 +55,7 @@ highlight Folded        guifg=#aaaaaa guibg=#404040
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
 highlight SpecialKey    guifg=#666666 guibg=#303030
-highlight Title         guifg=#ff0000 guibg=#000000
+highlight Title         guifg=#f86060
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
