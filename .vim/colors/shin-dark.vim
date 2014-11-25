@@ -20,8 +20,8 @@ highlight Identifier     guifg=#87ceeb
 highlight Function       guifg=#fad07a
 "Statement
 highlight Statement      guifg=#cc7833
-highlight Keyword        guifg=#f82060 gui=bold
-highlight Exception      guifg=#f82060 gui=bold
+highlight Keyword        guifg=#f86060 gui=bold
+highlight Exception      guifg=#f86060 gui=bold
 "Preproc
 highlight PreProc        guifg=#fad07a
 "Type
