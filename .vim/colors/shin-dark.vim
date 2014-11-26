@@ -41,7 +41,7 @@ highlight Todo           guifg=#ffffff guibg=#aa0000
 " }}}
 " :help highlight-groups "{{{
 
-highlight Normal        guifg=#f0f0f0 guibg=#303030
+highlight Normal        guifg=#ffffff guibg=#303030
 highlight NonText       guifg=#666666 guibg=#303030
 
 highlight Cursor        guifg=#000000 guibg=#ffffff
