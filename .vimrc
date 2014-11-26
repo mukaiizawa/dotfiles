@@ -426,11 +426,12 @@ if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
+
 " Edit
 let g:unite_source_menu_menus.Edit = {
       \  "command_candidates" : [
-      \      [ "vimrc         :<F3>"  , "edit $MYVIMRC"  ],
-      \      [ "gvimrc        :<F4>" , "edit $MYGVIMRC" ],
+      \      [ "vimrc         :<F3>"  , "edit $MYVIMRC " ],
+      \      [ "gvimrc        :<F4>"  , "edit $MYGVIMRC" ],
       \  ]
       \}
 
