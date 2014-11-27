@@ -359,8 +359,13 @@ nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 " Toggle a buffer which edit the one befor.
 nnoremap <silent>mm :e #<CR>
 
+
 " Execute current buffer with clisp.
-nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+if executable('clisp')
+    nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+else
+  nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
+endif
 
 " Edit vimrc, gvimrc.
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
