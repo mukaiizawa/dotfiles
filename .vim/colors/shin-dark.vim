@@ -66,16 +66,15 @@ highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
 " pop up menu
-hi Pmenu                guifg=#f0f0f0 guibg=#303030
+hi Pmenu                guifg=#ffffff guibg=#303030
 hi PmenuSel             guifg=#66d9ef guibg=#000000 gui=bold
 hi PmenuSbar                          guibg=#101010
 hi PmenuThumb           guifg=#101010
 hi WildMenu             guifg=#66d9ef guibg=#000000 gui=bold
 
 " statusline
-highlight StatusLine    guifg=#f0f0f0 guibg=#404040 gui=bold
-highlight StatusLineNC  guifg=#666666 guibg=#cccccc gui=bold
-" Note: The guifg and the guibg of a 'StatusLineNC' are reverse.
+highlight StatusLine    guifg=#ffffff guibg=#4a4a4a gui=bold
+highlight StatusLineNC  guifg=#808080               gui=bold
 
 " for tab
 highlight TabLine       guifg=#cccccc guibg=#666666
