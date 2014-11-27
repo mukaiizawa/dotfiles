@@ -44,17 +44,23 @@ highlight Todo           guifg=#ffffff guibg=#aa0000
 highlight Normal        guifg=#ffffff guibg=#303030
 highlight NonText       guifg=#666666 guibg=#303030
 
+" curcor
 highlight Cursor        guifg=#000000 guibg=#ffffff
+highlight CursorIM                    guibg=#ff0000
 highlight CursorLine                  guibg=#404040
+
+" number
 highlight LineNr        guifg=#aaaaaa
 highlight CursorLineNr  guifg=#fad07a               gui=bold
-highlight Conceal       guifg=#666666 guibg=#303030
-highlight CursorIM                    guibg=#ff0000
-highlight Directory     guifg=#40e0db guibg=#303030
+
+" conceal
+highlight Conceal       guifg=#666666
+highlight SpecialKey    guifg=#666666
+
+highlight Directory     guifg=#40e0db
 highlight Folded        guifg=#aaaaaa guibg=#404040
 highlight MatchParen    guifg=#ffffff guibg=#880000
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
-highlight SpecialKey    guifg=#666666 guibg=#303030
 highlight Title         guifg=#f86060
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
