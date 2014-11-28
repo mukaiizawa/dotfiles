@@ -404,6 +404,7 @@ let g:unite_source_rec_async_command = 'files -A'
 call unite#custom#profile('default', 'context', {
       \   'start_insert': 1,
       \   'candidate_icon': '*',
+      \   'marked_icon': '@',
       \   'direction': 'topleft',
       \   'cursor_line_time': 0.0,
       \   'cursor_line_highlight': 'Visual',
