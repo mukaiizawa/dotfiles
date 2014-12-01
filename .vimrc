@@ -632,32 +632,24 @@ set splitright
 
 let g:quickrun_config = {
       \  '_' : {
-      \    'split' : 'vertical',
-      \    "outputter/buffer/splt" : ":botright 8sp",
+      \    'split': 'vertical',
       \  },
       \
       \  'c' : {
-      \    'hook/time/enable' : 1,
+      \    'hook/time/enable': 1,
       \  },
       \
       \  'lisp' : {
       \    'runner' : 'vimproc',
-      \    'runner/vimproc/updatetime' : 10,
-      \    'hook/time/enable' : 1,
+      \    'runner/vimproc/updatetime': 10,
+      \    'hook/time/enable': 1,
       \  },
       \
       \  'java' : {
       \    'runner' : 'vimproc',
-      \    'runner/vimproc/updatetime' : 10,
-      \    'hook/time/enable' : 1,
+      \    'runner/vimproc/updatetime': 10,
+      \    'hook/time/enable': 1,
       \  },
-      \
-      \  'html' : {
-      \    'command' : 'cat',
-      \    'exec' : '%c %s',
-      \    'outputter' : 'browser',
-      \    'hook/output_encode' : 'cp932',
-      \  }
       \
       \}
 
