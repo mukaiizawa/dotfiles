@@ -700,7 +700,7 @@ nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
 
 " outline
-nnoremap <silent>mo    :<C-u>Unite -vertical -no-quit outline<CR>
+nnoremap <silent>mo    :<C-u>Unite -vertical outline<CR>
 
 " register
 nnoremap <silent>mre   :<C-u>Unite register<CR>
