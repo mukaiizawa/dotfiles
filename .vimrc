@@ -195,130 +195,130 @@ nnoremap sd[ f]xF[x
 
 "}}}
 " Change surround from ' to something. "{{{
-nnoremap s'" f'x,x wbi"<Esc>ea"<Esc>
-nnoremap s'* f'x,x wbi*<Esc>ea*<Esc>
-nnoremap s'< f'x,x wbi<<Esc>ea><Esc>
-nnoremap s'> f'x,x wbi<<Esc>ea><Esc>
-nnoremap s'( f'x,x wbi(<Esc>ea)<Esc>
-nnoremap s') f'x,x wbi(<Esc>ea)<Esc>
-nnoremap s'{ f'x,x wbi{<Esc>ea}<Esc>
-nnoremap s'} f'x,x wbi{<Esc>ea}<Esc>
-nnoremap s'[ f'x,x wbi[<Esc>ea]<Esc>
-nnoremap s'] f'x,x wbi[<Esc>ea]<Esc>
+nnoremap s'" f'r",r"
+nnoremap s'* f'r*,r*
+nnoremap s'< f'r>,r<
+nnoremap s'> f'r>,r<
+nnoremap s'( f'r),r(
+nnoremap s') f'r),r(
+nnoremap s'{ f'r},r{
+nnoremap s'} f'r},r{
+nnoremap s'[ f'r],r[
+nnoremap s'] f'r],r[
 
 "}}}
 " Change surround from " to something. "{{{
-nnoremap s"' f"x,x wbi'<Esc>ea'<Esc>
-nnoremap s"* f"x,x wbi*<Esc>ea*<Esc>
-nnoremap s"< f"x,x wbi<<Esc>ea><Esc>
-nnoremap s"> f"x,x wbi<<Esc>ea><Esc>
-nnoremap s"( f"x,x wbi(<Esc>ea)<Esc>
-nnoremap s") f"x,x wbi(<Esc>ea)<Esc>
-nnoremap s"{ f"x,x wbi{<Esc>ea}<Esc>
-nnoremap s"} f"x,x wbi{<Esc>ea}<Esc>
-nnoremap s"[ f"x,x wbi[<Esc>ea]<Esc>
-nnoremap s"] f"x,x wbi[<Esc>ea]<Esc>
+nnoremap s"' f"r',r'
+nnoremap s"* f"r*,r*
+nnoremap s"< f"r>,r<
+nnoremap s"> f"r>,r<
+nnoremap s"( f"r),r(
+nnoremap s") f"r),r(
+nnoremap s"{ f"r},r{
+nnoremap s"} f"r},r{
+nnoremap s"[ f"r],r[
+nnoremap s"] f"r],r[
 
 "}}}
 " Change surround from * to something. "{{{
-nnoremap s*' f*x,x wbi'<Esc>ea'<Esc>
-nnoremap s*" f*x,x wbi"<Esc>ea"<Esc>
-nnoremap s*< f*x,x wbi<<Esc>ea><Esc>
-nnoremap s*> f*x,x wbi<<Esc>ea><Esc>
-nnoremap s*( f*x,x wbi(<Esc>ea)<Esc>
-nnoremap s*) f*x,x wbi(<Esc>ea)<Esc>
-nnoremap s*{ f*x,x wbi{<Esc>ea}<Esc>
-nnoremap s*} f*x,x wbi{<Esc>ea}<Esc>
-nnoremap s*[ f*x,x wbi[<Esc>ea]<Esc>
-nnoremap s*] f*x,x wbi[<Esc>ea]<Esc>
+nnoremap s*' f*r',r'
+nnoremap s*" f*r",r"
+nnoremap s*< f*r>,r<
+nnoremap s*> f*r>,r<
+nnoremap s*( f*r),r(
+nnoremap s*) f*r),r(
+nnoremap s*{ f*r},r{
+nnoremap s*} f*r},r{
+nnoremap s*[ f*r],r[
+nnoremap s*] f*r],r[
 
 "}}}
 " Change surround from < > to something. "{{{
-nnoremap s<' f>xF<x wbi'<Esc>ea'<Esc>
-nnoremap s<" f>xF<x wbi"<Esc>ea"<Esc>
-nnoremap s<* f>xF<x wbi*<Esc>ea*<Esc>
-nnoremap s<( f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s<) f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s<{ f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s<} f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s<[ f>xF<x wbi[<Esc>ea]<Esc>
-nnoremap s<] f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s<' f>r'F<r'
+nnoremap s<" f>r"F<r"
+nnoremap s<* f>r*F<r*
+nnoremap s<( f>r)F<r(
+nnoremap s<) f>r)F<r(
+nnoremap s<{ f>r}F<r{
+nnoremap s<} f>r}F<r{
+nnoremap s<[ f>r]F<r[
+nnoremap s<] f>r]F<r[
 
-nnoremap s>' f>xF<x wbi'<Esc>ea'<Esc>
-nnoremap s>" f>xF<x wbi"<Esc>ea"<Esc>
-nnoremap s>* f>xF<x wbi*<Esc>ea*<Esc>
-nnoremap s>( f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s>) f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s>{ f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s>} f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s>[ f>xF<x wbi[<Esc>ea]<Esc>
-nnoremap s>] f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s>' f>r'F<r'
+nnoremap s>" f>r"F<r"
+nnoremap s>* f>r*F<r*
+nnoremap s>( f>r)F<r(
+nnoremap s>) f>r)F<r(
+nnoremap s>{ f>r}F<r{
+nnoremap s>} f>r}F<r{
+nnoremap s>[ f>r]F<r[
+nnoremap s>] f>r]F<r[
 
 "}}}
 " Change surround from ( ) to something. "{{{
-nnoremap s(' f)xF(x wbi'<Esc>ea'<Esc>
-nnoremap s(" f)xF(x wbi"<Esc>ea"<Esc>
-nnoremap s(* f)xF(x wbi*<Esc>ea*<Esc>
-nnoremap s(< f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s(> f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s({ f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s(} f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s([ f)xF(x wbi[<Esc>ea]<Esc>
-nnoremap s(] f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s(' f)r'F(r'
+nnoremap s(" f)r"F(r"
+nnoremap s(* f)r*F(r*
+nnoremap s(< f)r>F(r<
+nnoremap s(> f)r>F(r<
+nnoremap s({ f)r}F(r{
+nnoremap s(} f)r}F(r{
+nnoremap s([ f)r]F(r[
+nnoremap s(] f)r]F(r[
 
-nnoremap s)' f)xF(x wbi'<Esc>ea'<Esc>
-nnoremap s)" f)xF(x wbi"<Esc>ea"<Esc>
-nnoremap s)* f)xF(x wbi*<Esc>ea*<Esc>
-nnoremap s)< f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s)> f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s){ f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s)} f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s)[ f)xF(x wbi[<Esc>ea]<Esc>
-nnoremap s)] f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s)' f)r'F(r'
+nnoremap s)" f)r"F(r"
+nnoremap s)* f)r*F(r*
+nnoremap s)< f)r>F(r<
+nnoremap s)> f)r>F(r<
+nnoremap s){ f)r}F(r{
+nnoremap s)} f)r}F(r{
+nnoremap s)[ f)r]F(r[
+nnoremap s)] f)r]F(r[
 
 "}}}
 " Change surround from { } to something. "{{{
-nnoremap s{' f}xF{x wbi'<Esc>ea'<Esc>
-nnoremap s{" f}xF{x wbi"<Esc>ea"<Esc>
-nnoremap s{* f}xF{x wbi*<Esc>ea*<Esc>
-nnoremap s{< f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s{> f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s{( f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s{) f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s{[ f}xF{x wbi[<Esc>ea]<Esc>
-nnoremap s{] f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s{' f}r'F{r'
+nnoremap s{" f}r"F{r"
+nnoremap s{* f}r*F{r*
+nnoremap s{< f}r>F{r<
+nnoremap s{> f}r>F{r<
+nnoremap s{( f}r)F{r(
+nnoremap s{) f}r)F{r(
+nnoremap s{[ f}r]F{r[
+nnoremap s{] f}r]F{r[
 
-nnoremap s}' f}xF{x wbi'<Esc>ea'<Esc>
-nnoremap s}" f}xF{x wbi"<Esc>ea"<Esc>
-nnoremap s}* f}xF{x wbi*<Esc>ea*<Esc>
-nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s}[ f}xF{x wbi[<Esc>ea]<Esc>
-nnoremap s}] f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s}' f}r'F{r'
+nnoremap s}" f}r"F{r"
+nnoremap s}* f}r*F{r*
+nnoremap s}< f}r>F{r<
+nnoremap s}> f}r>F{r<
+nnoremap s}( f}r)F{r(
+nnoremap s}) f}r)F{r(
+nnoremap s}[ f}r]F{r[
+nnoremap s}] f}r]F{r[
 
 "}}}
 " Change surround from [ ] to something. "{{{
-nnoremap s[' f]xF[x wbi'<Esc>ea'<Esc>
-nnoremap s[" f]xF[x wbi"<Esc>ea"<Esc>
-nnoremap s[* f]xF[x wbi*<Esc>ea*<Esc>
-nnoremap s[< f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s[> f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s[( f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s[) f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s[{ f]xF[x wbi{<Esc>ea}<Esc>
-nnoremap s[} f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s[' f]r'F[r'
+nnoremap s[" f]r"F[r"
+nnoremap s[* f]r*F[r*
+nnoremap s[< f]r>F[r<
+nnoremap s[> f]r>F[r<
+nnoremap s[( f]r)F[r(
+nnoremap s[) f]r)F[r(
+nnoremap s[{ f]r}F[r{
+nnoremap s[} f]r}F[r{
 
-nnoremap s]' f]xF[x wbi'<Esc>ea'<Esc>
-nnoremap s]" f]xF[x wbi"<Esc>ea"<Esc>
-nnoremap s]* f]xF[x wbi*<Esc>ea*<Esc>
-nnoremap s]< f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s]> f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s]( f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s]) f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s]{ f]xF[x wbi{<Esc>ea}<Esc>
-nnoremap s]} f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s]' f]r'F[r'
+nnoremap s]" f]r"F[r"
+nnoremap s]* f]r*F[r*
+nnoremap s]< f]r>F[r<
+nnoremap s]> f]r>F[r<
+nnoremap s]( f]r)F[r(
+nnoremap s]) f]r)F[r(
+nnoremap s]{ f]r}F[r{
+nnoremap s]} f]r}F[r{
 
 "}}}
 
@@ -628,9 +628,12 @@ let g:vimfiler_tree_indentation = 1
 " ================================================
 let g:quickrun_no_default_key_mappings = 1
 
+set splitright
+
 let g:quickrun_config = {
       \  '_' : {
       \    'split' : 'vertical',
+      \    "outputter/buffer/splt" : ":botright 8sp",
       \  },
       \
       \  'c' : {
