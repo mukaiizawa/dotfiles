@@ -53,11 +53,11 @@ filetype plugin indent on
 "}}}
 
 
+" =======================================
+" Note:
 " A fundamental setting bigins from here.
-"
-" ====================================
-" Note: It is applicable to .minvimrc.
-" ====================================
+" It is applicable to .minvimrc.
+" =======================================
 
 " Setting "
 " Setting for System "{{{
@@ -389,10 +389,10 @@ endif
 "}}}
 
 
-" An expansive setting bigins from here
-"
 " ======================================
-" Note: It is noapplicable to .minvimrc.
+" Note:
+" It is noapplicable to .minvimrc.
+" An expansive setting bigins from here
 " ======================================
 
 " Setting of Plugin.
