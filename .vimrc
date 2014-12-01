@@ -16,6 +16,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -24,7 +25,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix'    : 'make -f make_unix.mak',
       \    }
       \ }
-NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'tyru/caw.vim'

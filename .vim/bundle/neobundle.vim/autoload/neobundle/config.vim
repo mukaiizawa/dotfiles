@@ -126,10 +126,8 @@ endfunction"}}}
 function! neobundle#config#source(names, ...) "{{{
   let is_force = get(a:000, 0, 1)
 
-  let names = neobundle#util#convert2list(a:names)
-  let bundles = empty(names) ?
-        \ neobundle#config#get_neobundles() :
-        \ neobundle#config#search(names)
+  let bundles = neobundle#config#search(
+        \ neobundle#util#convert2list(a:names))
 
   let rtps = neobundle#util#split_rtp(&runtimepath)
   let bundles = filter(bundles,
@@ -160,7 +158,13 @@ function! neobundle#config#source(names, ...) "{{{
     call neobundle#config#rtp_add(bundle)
 
     if exists('g:loaded_neobundle') || is_force
-      call s:on_source(bundle)
+      try
+        call s:on_source(bundle)
+      catch
+        call neobundle#util#print_error(
+              \ '[neobundle] Uncaught error while sourcing "' . bundle.name .
+              \ '": '.v:exception . ' in ' . v:throwpoint)
+      endtry
     endif
 
     call neobundle#autoload#source(bundle.name)
@@ -427,18 +431,6 @@ function! neobundle#config#add(bundle, ...) "{{{
   elseif bundle.lazy
     call s:add_lazy(bundle)
   endif
-
-  if !is_force && bundle.overwrite &&
-        \ !empty(prev_bundle) && prev_bundle.overwrite &&
-        \ bundle.orig_arg !=# prev_bundle.orig_arg &&
-        \ prev_bundle.resettable && prev_bundle.overwrite
-    " echomsg string(bundle.orig_arg)
-    " echomsg string(prev_bundle.orig_arg)
-    " Warning.
-    call neobundle#util#print_error(
-          \ '[neobundle] Plugin "' . bundle.name .
-          \ '" appears to be defined multiple times in .vimrc.')
-  endif
 endfunction"}}}
 
 function! neobundle#config#tsort(bundles) "{{{
@@ -535,6 +527,16 @@ function! s:add_lazy(bundle) "{{{
     call remove(bundle, key)
   endfor
 
+  " Auto convert2list.
+  for key in filter([
+        \ 'filetypes', 'filename_patterns', 'on_source',
+        \ 'commands', 'functions', 'mappings', 'unite_sources',
+        \ ], "has_key(bundle.autoload, v:val)
+        \     && type(bundle.autoload[v:val]) != type([])
+        \")
+    let bundle.autoload[key] = [bundle.autoload[key]]
+  endfor
+
   if !has_key(bundle.autoload, 'function_prefix')
     let bundle.autoload.function_prefix =
           \ neobundle#parser#_function_prefix(bundle.name)
@@ -544,9 +546,11 @@ function! s:add_lazy(bundle) "{{{
           \ substitute(bundle.normalized_name, '[_-]', '', 'g')
   endif
   if !has_key(bundle.autoload, 'unite_sources')
-        \ && bundle.name =~ '^\%(vim-\)\?unite-'
-    let bundle.autoload.unite_sources =
-          \ matchstr(bundle.name, '^\%(vim-\)\?-unite-\zs.*')
+        \ && bundle.name =~# '^\%(vim-\)\?unite-'
+    let unite_source = matchstr(bundle.name, '^\%(vim-\)\?unite-\zs.*')
+    if unite_source != ''
+      let bundle.autoload.unite_sources = [unite_source]
+    endif
   endif
 
   if neobundle#config#is_sourced(bundle.name)
@@ -565,8 +569,7 @@ endfunction"}}}
 
 function! s:add_dummy_commands(bundle) "{{{
   let a:bundle.dummy_commands = []
-  for command in map(copy(neobundle#util#convert2list(
-        \ a:bundle.autoload.commands)), "
+  for command in map(copy(a:bundle.autoload.commands), "
         \ type(v:val) == type('') ?
           \ { 'name' : v:val } : v:val
           \")
@@ -586,8 +589,7 @@ function! s:add_dummy_commands(bundle) "{{{
 endfunction"}}}
 function! s:add_dummy_mappings(bundle) "{{{
   let a:bundle.dummy_mappings = []
-  for [modes, mappings] in map(neobundle#util#convert2list(
-        \ copy(a:bundle.autoload.mappings)), "
+  for [modes, mappings] in map(copy(a:bundle.autoload.mappings), "
         \   type(v:val) == type([]) ?
         \     [v:val[0], v:val[1:]] : ['nxo', [v:val]]
         \ ")
@@ -620,19 +622,22 @@ function! s:on_source(bundle) "{{{
   endif
 
   " Reload script files.
-  for directory in filter(
-        \ ['ftdetect', 'after/ftdetect', 'plugin', 'after/plugin'],
+  for directory in filter(['plugin', 'after/plugin'],
         \ "isdirectory(a:bundle.rtp.'/'.v:val)")
     for file in split(glob(a:bundle.rtp.'/'.directory.'/**/*.vim'), '\n')
-      silent! execute 'source' fnameescape(file)
+      " NOTE: "silent!" is required to ignore E122, E174 and E227.
+      "       try/catching them aborts sourcing of the file.
+      "       "unsilent" then displays any messages while sourcing.
+      execute 'silent! unsilent source' fnameescape(file)
     endfor
   endfor
 
   if !has('vim_starting') && exists('#'.a:bundle.augroup.'#VimEnter')
-    execute 'silent doautocmd' a:bundle.augroup 'VimEnter'
+    execute 'doautocmd' a:bundle.augroup 'VimEnter'
 
     if has('gui_running') && &term ==# 'builtin_gui'
-      execute 'silent doautocmd' a:bundle.augroup 'GUIEnter'
+          \ && exists('#'.a:bundle.augroup.'#GUIEnter')
+      execute 'doautocmd' a:bundle.augroup 'GUIEnter'
     endif
   endif
 
