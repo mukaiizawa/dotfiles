@@ -551,6 +551,26 @@ augroup END
 
 
 "}}}
+"  Unite-Outline "{{{
+
+call unite#custom#profile('source/outline', 'context', {
+      \   'winwidth' : 30,
+      \   'direction' : 'botright',
+      \ })
+
+let g:unite_source_outline_filetype_options = {
+      \ '*': {
+      \   'auto_update': 1,
+      \   'auto_update_event': 'write',
+      \ },
+      \
+      \ 'cpp': {
+      \   'auto_update': 0,
+      \ },
+      \
+      \}
+
+"}}}
 "  NeoMru "{{{
 let g:neomru#file_mru_limit = 500
 let g:neomru#directory_mru_limit = 1000
