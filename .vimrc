@@ -334,8 +334,10 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" toggle highlight
+" toggle
 nnoremap <Space>/ :set hlsearch!<CR>
+nnoremap <Space>n :set number!<CR>
+nnoremap <Space>w :set wrap!<CR>
 
 " Redraw at center of window.
 nmap n nzz
@@ -462,7 +464,7 @@ let g:unite_source_menu_menus.NeoBundle = {
       \}
 
 " file encoding
-let g:unite_source_menu_menus.file_encoding = {
+let g:unite_source_menu_menus.File_Encoding = {
       \  "command_candidates" : [
       \      ["utf8", "set fenc=Utf8"],
       \      ["cp932", "set fenc=cp932"],
@@ -476,14 +478,14 @@ let g:unite_source_menu_menus.file_encoding = {
       \ }
 
 " toggle option
-let g:unite_source_menu_menus.toggle_option ={
+let g:unite_source_menu_menus.Toggle_Option ={
       \  "command_candidates" : [
-      \      ["Toggle number", "set number!"],
-      \      ["Toggle hlsearch", "set hlsearch!"],
-      \      ["Toggle wrap", "set wrap!"],
+      \      ["Toggle number     :<Space>n", "set number!"],
+      \      ["Toggle hlsearch   :<Space>/", "set hlsearch!"],
+      \      ["Toggle wrap       :<Space>w", "set wrap!"],
+      \      ["Toggle IndentLine :<Space>i", "IndentLinesToggle"],
       \  ]
       \ }
-
 
 " ==============================================
 " Note: The font was block written using figlet.
@@ -661,6 +663,7 @@ let g:quickrun_config = {
 
 let g:indentLine_char = '|'
 
+
 " ============================================================
 " Note:
 " This variable specify a list of file types.
@@ -669,6 +672,8 @@ let g:indentLine_char = '|'
 " ============================================================
 let g:indentLine_fileType = [
       \ 'c',
+      \ 'jsp',
+      \ 'html',
       \]
 
 
@@ -738,6 +743,11 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 " ContinuousNumber "{{{
 
 vnoremap <silent>co :ContinuousNumber <C-a><CR>
+
+"}}}
+" IndentLine "{{{
+
+nnoremap <Space>i :IndentLinesToggle<CR>
 
 "}}}
 " caw"{{{
