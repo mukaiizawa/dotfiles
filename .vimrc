@@ -418,11 +418,10 @@ call unite#custom#profile('default', 'context', {
 call unite#custom#profile('source/line', 'context', {
       \   'vertical' : 1,
       \   'direction' : 'botright',
-      \   'winwidth' : 40,
+      \   'winwidth' : 70,
       \ })
 
 call unite#custom_default_action('directory', 'vimfiler')
-
 
 " =============================================================
 " Note: if executable ag.exe, execute grep command with ag.exe
@@ -434,7 +433,7 @@ if executable('ag')
 endif
 
 "}}}
-"  Unite.menu "{{{
+"  Unite menu "{{{
 
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
@@ -559,10 +558,10 @@ augroup END
 
 
 "}}}
-"  Unite-Outline "{{{
+"  Unite outline "{{{
 
 call unite#custom#profile('source/outline', 'context', {
-      \   'winwidth' : 30,
+      \   'winwidth' : 40,
       \   'direction' : 'botright',
       \ })
 
@@ -570,13 +569,11 @@ let g:unite_source_outline_filetype_options = {
       \ '*': {
       \   'auto_update': 1,
       \   'auto_update_event': 'write',
-      \ },
-      \
-      \ 'cpp': {
-      \   'auto_update': 0,
+      \   'ignore_types': ['comment'],
       \ },
       \
       \}
+
 
 "}}}
 "  NeoMru "{{{
@@ -694,6 +691,9 @@ nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR>
 " colorsheme
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 
+" file_rec
+nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
+
 " grep
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
@@ -704,17 +704,15 @@ nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
 
-" tag
-nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
-
 " outline
 nnoremap <silent>mo    :<C-u>Unite -vertical outline<CR>
 
 " register
 nnoremap <silent>mre   :<C-u>Unite register<CR>
 
-" file_rec
-nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
+" tag
+nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
+
 
 "}}}
 " NeoMRU "{{{
