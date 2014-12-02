@@ -405,15 +405,23 @@ let g:unite_source_rec_async_command = 'files -A'
 
 
 call unite#custom#profile('default', 'context', {
-      \   'start_insert': 1,
-      \   'no_empty': 1,
-      \   'candidate_icon': '*',
-      \   'marked_icon': '@',
-      \   'direction': 'topleft',
-      \   'cursor_line_time': 0.0,
-      \   'cursor_line_highlight': 'Visual',
-      \   'prompt': '> ',
+      \   'start_insert' : 1,
+      \   'no_empty' : 1,
+      \   'prompt' : '> ',
+      \   'marked_icon' : '@',
+      \   'candidate_icon' : '*',
+      \   'direction' : 'topleft',
+      \   'cursor_line_time' : 0.0,
+      \   'cursor_line_highlight' : 'Visual',
       \ })
+
+call unite#custom#profile('source/line', 'context', {
+      \   'vertical' : 1,
+      \   'direction' : 'botright',
+      \   'winwidth' : 40,
+      \ })
+
+call unite#custom_default_action('directory', 'vimfiler')
 
 
 " =============================================================
@@ -424,10 +432,6 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
-
-call unite#custom_default_action('directory', 'vimfiler')
-
-
 
 "}}}
 "  Unite.menu "{{{
@@ -683,9 +687,6 @@ let g:caw_no_default_keymappings = 1
 " Mapping of Plugin.
 " Unite "{{{
 
-" menu
-nnoremap <silent>me    :<C-u>Unite menu<CR> 
-
 " bookmark
 nnoremap <silent>mb    :<C-u>Unite bookmark<CR> 
 nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR> 
@@ -696,6 +697,12 @@ nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 " grep
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
+
+" line
+nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
+
+" menu
+nnoremap <silent>me    :<C-u>Unite menu<CR> 
 
 " tag
 nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
