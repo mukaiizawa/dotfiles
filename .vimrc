@@ -82,6 +82,7 @@ set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
 set tabpagemax=300
 set backspace=start,eol,indent
+set splitright
 
 "}}}
 " Setting for File "{{{
@@ -629,7 +630,6 @@ let g:vimfiler_tree_indentation = 1
 " ================================================
 let g:quickrun_no_default_key_mappings = 1
 
-set splitright
 
 let g:quickrun_config = {
       \  '_' : {
