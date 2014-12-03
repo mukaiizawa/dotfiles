@@ -1,1 +1,1 @@
-setlocal fileencoding=cp932
+setlocal fileencoding=utf-8
