@@ -35,9 +35,9 @@ highlight Underlined     guifg=#00bfff
 "Ignore
 highlight Ignore         guifg=#ff0000
 "Error
-highlight Error          guifg=#ffffff guibg=#aa0000
+highlight Error          guifg=#66d9ef guibg=#202020 gui=bold
 "Todo
-highlight Todo           guifg=#ffffff guibg=#aa0000
+highlight Todo           guifg=#66d9ef guibg=#202020 gui=bold
 " }}}
 " :help highlight-groups "{{{
 

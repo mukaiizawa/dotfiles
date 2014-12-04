@@ -467,7 +467,7 @@ let g:unite_source_menu_menus.NeoBundle = {
       \  ]
       \}
 "}}}
-" file encoding "{{{
+" Encoding "{{{
 
 let g:unite_source_menu_menus.Encoding = {
       \  "command_candidates" : [
@@ -494,7 +494,7 @@ let g:unite_source_menu_menus.Encoding = {
       \ }
 
 "}}}
-" file format "{{{
+" Format "{{{
 
 let g:unite_source_menu_menus.Format = {
       \  "command_candidates" : [
@@ -509,7 +509,7 @@ let g:unite_source_menu_menus.Format = {
       \ }
 
 "}}}
-" toggle option "{{{
+" Toggle Option "{{{
 let g:unite_source_menu_menus.Toggle_Option ={
       \  "command_candidates" : [
       \      ["Toggle number     :<Space>n", "set number!"],
@@ -519,7 +519,14 @@ let g:unite_source_menu_menus.Toggle_Option ={
       \  ]
       \ }
 "}}}
-" startup menu "{{{
+" Toggle Option "{{{
+let g:unite_source_menu_menus.Trim ={
+      \  "command_candidates" : [
+      \      ["Trim ", "%s///g"],
+      \  ]
+      \ }
+"}}}
+" Startup "{{{
 " ==============================================
 " Note: The font was block written using figlet.
 " ==============================================
