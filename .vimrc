@@ -137,7 +137,6 @@ nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
 
 vnoremap s <NOP>
-vnoremap J <NOP>
 
 "}}}
 " Mapping for Tab, Window "{{{
