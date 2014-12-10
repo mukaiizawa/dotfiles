@@ -117,11 +117,12 @@ set listchars=tab:->,eol:<,trail:>
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
+nnoremap s  <NOP>
+nnoremap C  <NOP>
 nnoremap zd <NOP>
 nnoremap zD <NOP>
 nnoremap zE <NOP>
 nnoremap ZZ <NOP>
-nnoremap s  <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
 nnoremap <C-f> <NOP>
