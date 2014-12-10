@@ -118,7 +118,6 @@ nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
 nnoremap s  <NOP>
-nnoremap C  <NOP>
 nnoremap zd <NOP>
 nnoremap zD <NOP>
 nnoremap zE <NOP>
@@ -138,6 +137,7 @@ nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
 
 vnoremap s <NOP>
+vnoremap J <NOP>
 
 "}}}
 " Mapping for Tab, Window "{{{
