@@ -4,7 +4,6 @@ syntax enable
 " Initialization "{{{
 if !1 | finish | endif
 if has('vim_starting')
-  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
