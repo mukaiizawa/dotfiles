@@ -180,6 +180,11 @@ nnoremap s[ wbi[<Esc>ea]<Esc>
 nnoremap s] wbi[<Esc>ea]<Esc>
 
 "}}}
+" Surround with print "{{{
+
+nnoremap sp PrintSurround
+
+"}}}
 " Delete surround. "{{{
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
@@ -319,8 +324,6 @@ nnoremap s]( f]r)F[r(
 nnoremap s]) f]r)F[r(
 nnoremap s]{ f]r}F[r{
 nnoremap s]} f]r}F[r{
-
-"}}}
 
 "}}}
 " Mapping for etc "{{{
@@ -518,7 +521,7 @@ let g:unite_source_menu_menus.Toggle_Option ={
       \  ]
       \ }
 "}}}
-" Toggle Option "{{{
+" Trim "{{{
 let g:unite_source_menu_menus.Trim ={
       \  "command_candidates" : [
       \      ["Trim ", "%s///g"],
