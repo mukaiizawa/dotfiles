@@ -326,6 +326,7 @@ nnoremap s]{ f]r}F[r{
 nnoremap s]} f]r}F[r{
 
 "}}}
+"}}}
 " Mapping for etc "{{{
 
 " End insert mode with jj.
