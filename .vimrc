@@ -147,8 +147,6 @@ nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
-nnoremap sn gt
-nnoremap sp gT
 nnoremap sq :<C-u>q<CR>
 
 " change current window height(width).
