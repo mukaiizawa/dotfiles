@@ -180,7 +180,7 @@ nnoremap s] wbi[<Esc>ea]<Esc>
 "}}}
 " Surround with print "{{{
 
-nnoremap sp PrintSurround
+nnoremap sp :<C-u>PrintSurround<CR>
 
 "}}}
 " Delete surround. "{{{
@@ -366,7 +366,7 @@ nnoremap <silent>mm :e #<CR>
 
 " Execute current buffer with clisp.
 if executable('clisp')
-    nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+  nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
 else
   nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
 endif
@@ -781,12 +781,12 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 "}}}
 " ContinuousNumber "{{{
 
-vnoremap <silent>co :ContinuousNumber <C-a><CR>
+vnoremap <silent>co    :<C-u>ContinuousNumber <C-a><CR>
 
 "}}}
 " IndentLine "{{{
 
-nnoremap <Space>i :IndentLinesToggle<CR>
+nnoremap <Space>i      :<C-u>IndentLinesToggle<CR>
 
 "}}}
 " caw"{{{
