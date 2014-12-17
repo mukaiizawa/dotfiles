@@ -6,7 +6,7 @@ function! PrintSurround()
         \  'vim'       : ['echo "', '"'],
         \  'dosbatch'  : ['echo "', '"'],
         \  'c'         : ['printf("', '\n");'],
-        \  'java'      : ['Systemm.out.println("', '");'],
+        \  'java'      : ['System.out.println("', '");'],
         \  'lisp'      : ['(print ', ')'],
         \
         \  }
