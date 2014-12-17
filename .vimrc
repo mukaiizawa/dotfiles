@@ -615,9 +615,9 @@ let g:unite_source_outline_filetype_options = {
 
 "}}}
 "  NeoMru "{{{
-let g:neomru#file_mru_limit = 500
-let g:neomru#directory_mru_limit = 1000
-let g:neomru#update_interval = 10    " 10 seconds 
+let g:neomru#file_mru_limit = 1000      " default
+let g:neomru#directory_mru_limit = 1000 " default
+let g:neomru#update_interval = 10       " 10 seconds 
 
 "}}}
 "  VimFiler "{{{
