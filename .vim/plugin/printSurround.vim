@@ -7,7 +7,7 @@ function! PrintSurround()
         \  'dosbatch'  : ['echo "', '"'],
         \  'c'         : ['printf("', '\n");'],
         \  'java'      : ['System.out.println("', '");'],
-        \  'lisp'      : ['(print ', ')'],
+        \  'lisp'      : ['(print "', '")'],
         \
         \  }
 
@@ -16,7 +16,7 @@ if has_key(s:printSurroundDic, s:printSurroundKey ) == 1
   execute ':normal A ' . remove(s:printSurroundDic[s:printSurroundKey], 0)
   execute ':normal == '
 else
-  echo 'This file type not supported.'
+  echo "This file type isn't supported."
 endif
 
 endfunction
