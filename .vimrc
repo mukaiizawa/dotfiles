@@ -166,7 +166,7 @@ nnoremap <Left>   4<C-w><
 
 " =========================================
 " Note: You can surround with these symble.
-" Quotation: '', "", **
+" Symbol: '', "", **
 " Brackets: <>,(),{},[]
 " =========================================
 
