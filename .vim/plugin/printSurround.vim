@@ -1,7 +1,7 @@
 
 function! PrintSurround()
 
-  let s:keyOfPrintDic = &filetype
+  let s:filetype = &filetype
   let s:printDic = {
         \  'c'         : ['printf("', '\n");'],
         \  'cpp'       : ['std::cout << "', '";'],
@@ -14,7 +14,7 @@ function! PrintSurround()
         \
         \  }
 
-  if has_key(s:printDic, s:keyOfPrintDic ) != 1    " Is this file type supported?
+  if has_key(s:printDic, s:filetype ) != 1    " Is this file type supported?
     echo "This file type isn't supported."
     return
   else
@@ -22,8 +22,8 @@ function! PrintSurround()
     " Move the first non-blank character of the line.
     execute ':normal ^'
     let s:targetString = getline('.')[col('.') - 1 : ]    " Removed blanc of current line.
-    let s:leftPart = (s:printDic[s:keyOfPrintDic])[0]
-    let s:rightPart = (s:printDic[s:keyOfPrintDic])[1]
+    let s:leftPart = (s:printDic[s:filetype])[0]
+    let s:rightPart = (s:printDic[s:filetype])[1]
     let s:substIndex = stridx(s:targetString, s:leftPart)
 
 
