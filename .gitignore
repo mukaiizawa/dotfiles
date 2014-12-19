@@ -1,4 +1,4 @@
-.vim/.back/*
+.back/*
 .vim/bundle/*
 !.vim/bundle/neobundle.vim
 tags
