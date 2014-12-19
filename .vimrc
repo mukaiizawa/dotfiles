@@ -68,29 +68,37 @@ set imsearch=0                " 0 :lmap is off and IM is off
 set helplang=en
 set history=2000
 set nrformats-=octal
+set fileencoding=utf-8
 
 "}}}
-" Setting for Window "{{{
-set ruler
-set title
+" Setting for Display "{{{
+set t_Co=256
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
 set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
+set foldmethod=marker
+set splitright
+set list
+set listchars=tab:->,eol:<,trail:>
+
+"}}}
+" Setting for Status line, Tab page "{{{
+set ruler
+set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
 set tabpagemax=300
 set backspace=start,eol,indent
-set splitright
 
 "}}}
 " Setting for File "{{{
-set nobackup
-set noswapfile
 set noundofile
 set viminfo=                   " Not use viminfo file.
-set fileencoding=utf-8
-set foldmethod=marker
+set backup
+set backupext=.back
+set backupdir=~/dotfiles/.back/
+set noswapfile
 
 "}}}
 " Setting for Search,Substitute "{{{
@@ -106,8 +114,6 @@ set tabstop=2                  " Number of spaces that a <Tab> in the file count
 set smartindent
 set expandtab
 set shiftwidth=2
-set list
-set listchars=tab:->,eol:<,trail:>
 
 "}}}
 
