@@ -3,11 +3,14 @@ function! PrintSurround()
 
   let s:keyOfPrintDic = &filetype
   let s:printDic = {
-        \  'vim'       : ['echo "', '"'],
-        \  'dosbatch'  : ['echo "', '"'],
         \  'c'         : ['printf("', '\n");'],
+        \  'cpp'       : ['std::cout << "', '";'],
+        \  'dosbatch'  : ['echo "', '"'],
         \  'java'      : ['System.out.println("', '");'],
         \  'lisp'      : ['(print "', '")'],
+        \  'peal'      : ['print "', '";'],
+        \  'ruby'      : ['puts "', '"'],
+        \  'vim'       : ['echo "', '"'],
         \
         \  }
 
