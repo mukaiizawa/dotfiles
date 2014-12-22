@@ -17,14 +17,23 @@ set imsearch=0                " 0 :lmap is off and IM is off
 set helplang=en
 set history=2000
 set nrformats-=octal
+set fileencoding=utf-8
 
 "}}}
-" Setting for Window "{{{
-set ruler
-set title
+" Setting for Display "{{{
+set t_Co=256
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
 set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
+set foldmethod=marker
+set splitright
+set list
+set listchars=tab:->,eol:<,trail:>
+
+"}}}
+" Setting for Status line, Tab page "{{{
+set ruler
+set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
@@ -33,12 +42,12 @@ set backspace=start,eol,indent
 
 "}}}
 " Setting for File "{{{
-set nobackup
-set noswapfile
 set noundofile
 set viminfo=                   " Not use viminfo file.
-set fileencoding=utf-8
-set foldmethod=marker
+set backup
+set backupext=.back
+set backupdir=~/dotfiles/.back/
+set noswapfile
 
 "}}}
 " Setting for Search,Substitute "{{{
@@ -54,8 +63,6 @@ set tabstop=2                  " Number of spaces that a <Tab> in the file count
 set smartindent
 set expandtab
 set shiftwidth=2
-set list
-set listchars=tab:->,eol:<,trail:>
 
 "}}}
 
@@ -64,11 +71,11 @@ set listchars=tab:->,eol:<,trail:>
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
+nnoremap s  <NOP>
 nnoremap zd <NOP>
 nnoremap zD <NOP>
 nnoremap zE <NOP>
 nnoremap ZZ <NOP>
-nnoremap s  <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
 nnoremap <C-f> <NOP>
@@ -95,8 +102,6 @@ nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
-nnoremap sn gt
-nnoremap sp gT
 nnoremap sq :<C-u>q<CR>
 
 " change current window height(width).
@@ -110,13 +115,14 @@ nnoremap <Left>   4<C-w><
 
 " =========================================
 " Note: You can surround with these symble.
-" Quotation: '',""
+" Symbol: '', "", **
 " Brackets: <>,(),{},[]
 " =========================================
 
 " Surround with symble. "{{{
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
+nnoremap s* wbi*<Esc>ea*<Esc>
 nnoremap s< wbi<<Esc>ea><Esc>
 nnoremap s> wbi<<Esc>ea><Esc>
 nnoremap s( wbi(<Esc>ea)<Esc>
@@ -127,9 +133,15 @@ nnoremap s[ wbi[<Esc>ea]<Esc>
 nnoremap s] wbi[<Esc>ea]<Esc>
 
 "}}}
+" Surround with print "{{{
+
+nnoremap sp :<C-u>PrintSurround<CR>
+
+"}}}
 " Delete surround. "{{{
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
+nnoremap sd* f*x,x
 nnoremap sd< f>xF<x
 nnoremap sd> f>xF<x
 nnoremap sd( f)xF(x
@@ -137,114 +149,136 @@ nnoremap sd) f)xF(x
 nnoremap sd{ f}xF{x
 nnoremap sd} f}xF{x
 nnoremap sd[ f]xF[x
-nnoremap sd[ f]xF[x
+nnoremap sd] f]xF[x
 
 "}}}
 " Change surround from ' to something. "{{{
-nnoremap s'" f'x,x wbi"<Esc>ea"<Esc>
-nnoremap s'< f'x,x wbi<<Esc>ea><Esc>
-nnoremap s'> f'x,x wbi<<Esc>ea><Esc>
-nnoremap s'( f'x,x wbi(<Esc>ea)<Esc>
-nnoremap s') f'x,x wbi(<Esc>ea)<Esc>
-nnoremap s'{ f'x,x wbi{<Esc>ea}<Esc>
-nnoremap s'} f'x,x wbi{<Esc>ea}<Esc>
-nnoremap s'[ f'x,x wbi[<Esc>ea]<Esc>
-nnoremap s'] f'x,x wbi[<Esc>ea]<Esc>
+nnoremap s'" f'r",r"
+nnoremap s'* f'r*,r*
+nnoremap s'< f'r>,r<
+nnoremap s'> f'r>,r<
+nnoremap s'( f'r),r(
+nnoremap s') f'r),r(
+nnoremap s'{ f'r},r{
+nnoremap s'} f'r},r{
+nnoremap s'[ f'r],r[
+nnoremap s'] f'r],r[
 
 "}}}
 " Change surround from " to something. "{{{
-nnoremap s"' f"x,x wbi'<Esc>ea'<Esc>
-nnoremap s"< f"x,x wbi<<Esc>ea><Esc>
-nnoremap s"> f"x,x wbi<<Esc>ea><Esc>
-nnoremap s"( f"x,x wbi(<Esc>ea)<Esc>
-nnoremap s") f"x,x wbi(<Esc>ea)<Esc>
-nnoremap s"{ f"x,x wbi{<Esc>ea}<Esc>
-nnoremap s"} f"x,x wbi{<Esc>ea}<Esc>
-nnoremap s"[ f"x,x wbi[<Esc>ea]<Esc>
-nnoremap s"] f"x,x wbi[<Esc>ea]<Esc>
+nnoremap s"' f"r',r'
+nnoremap s"* f"r*,r*
+nnoremap s"< f"r>,r<
+nnoremap s"> f"r>,r<
+nnoremap s"( f"r),r(
+nnoremap s") f"r),r(
+nnoremap s"{ f"r},r{
+nnoremap s"} f"r},r{
+nnoremap s"[ f"r],r[
+nnoremap s"] f"r],r[
+
+"}}}
+" Change surround from * to something. "{{{
+nnoremap s*' f*r',r'
+nnoremap s*" f*r",r"
+nnoremap s*< f*r>,r<
+nnoremap s*> f*r>,r<
+nnoremap s*( f*r),r(
+nnoremap s*) f*r),r(
+nnoremap s*{ f*r},r{
+nnoremap s*} f*r},r{
+nnoremap s*[ f*r],r[
+nnoremap s*] f*r],r[
 
 "}}}
 " Change surround from < > to something. "{{{
-nnoremap s<' f>xF<x wbi'<Esc>ea'<Esc>
-nnoremap s<" f>xF<x wbi"<Esc>ea"<Esc>
-nnoremap s<( f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s<) f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s<{ f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s<} f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s<[ f>xF<x wbi[<Esc>ea]<Esc>
-nnoremap s<] f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s<' f>r'F<r'
+nnoremap s<" f>r"F<r"
+nnoremap s<* f>r*F<r*
+nnoremap s<( f>r)F<r(
+nnoremap s<) f>r)F<r(
+nnoremap s<{ f>r}F<r{
+nnoremap s<} f>r}F<r{
+nnoremap s<[ f>r]F<r[
+nnoremap s<] f>r]F<r[
 
-nnoremap s>' f>xF<x wbi'<Esc>ea'<Esc>
-nnoremap s>" f>xF<x wbi"<Esc>ea"<Esc>
-nnoremap s>( f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s>) f>xF<x wbi(<Esc>ea)<Esc>
-nnoremap s>{ f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s>} f>xF<x wbi{<Esc>ea}<Esc>
-nnoremap s>[ f>xF<x wbi[<Esc>ea]<Esc>
-nnoremap s>] f>xF<x wbi[<Esc>ea]<Esc>
+nnoremap s>' f>r'F<r'
+nnoremap s>" f>r"F<r"
+nnoremap s>* f>r*F<r*
+nnoremap s>( f>r)F<r(
+nnoremap s>) f>r)F<r(
+nnoremap s>{ f>r}F<r{
+nnoremap s>} f>r}F<r{
+nnoremap s>[ f>r]F<r[
+nnoremap s>] f>r]F<r[
 
 "}}}
 " Change surround from ( ) to something. "{{{
-nnoremap s(' f)xF(x wbi'<Esc>ea'<Esc>
-nnoremap s(" f)xF(x wbi"<Esc>ea"<Esc>
-nnoremap s(< f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s(> f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s({ f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s(} f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s([ f)xF(x wbi[<Esc>ea]<Esc>
-nnoremap s(] f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s(' f)r'F(r'
+nnoremap s(" f)r"F(r"
+nnoremap s(* f)r*F(r*
+nnoremap s(< f)r>F(r<
+nnoremap s(> f)r>F(r<
+nnoremap s({ f)r}F(r{
+nnoremap s(} f)r}F(r{
+nnoremap s([ f)r]F(r[
+nnoremap s(] f)r]F(r[
 
-nnoremap s)' f)xF(x wbi'<Esc>ea'<Esc>
-nnoremap s)" f)xF(x wbi"<Esc>ea"<Esc>
-nnoremap s)< f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s)> f)xF(x wbi<<Esc>ea><Esc>
-nnoremap s){ f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s)} f)xF(x wbi{<Esc>ea}<Esc>
-nnoremap s)[ f)xF(x wbi[<Esc>ea]<Esc>
-nnoremap s)] f)xF(x wbi[<Esc>ea]<Esc>
+nnoremap s)' f)r'F(r'
+nnoremap s)" f)r"F(r"
+nnoremap s)* f)r*F(r*
+nnoremap s)< f)r>F(r<
+nnoremap s)> f)r>F(r<
+nnoremap s){ f)r}F(r{
+nnoremap s)} f)r}F(r{
+nnoremap s)[ f)r]F(r[
+nnoremap s)] f)r]F(r[
 
 "}}}
 " Change surround from { } to something. "{{{
-nnoremap s{' f}xF{x wbi'<Esc>ea'<Esc>
-nnoremap s{" f}xF{x wbi"<Esc>ea"<Esc>
-nnoremap s{< f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s{> f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s{( f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s{) f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s{[ f}xF{x wbi[<Esc>ea]<Esc>
-nnoremap s{] f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s{' f}r'F{r'
+nnoremap s{" f}r"F{r"
+nnoremap s{* f}r*F{r*
+nnoremap s{< f}r>F{r<
+nnoremap s{> f}r>F{r<
+nnoremap s{( f}r)F{r(
+nnoremap s{) f}r)F{r(
+nnoremap s{[ f}r]F{r[
+nnoremap s{] f}r]F{r[
 
-nnoremap s}' f}xF{x wbi'<Esc>ea'<Esc>
-nnoremap s}" f}xF{x wbi"<Esc>ea"<Esc>
-nnoremap s}< f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s}> f}xF{x wbi<<Esc>ea><Esc>
-nnoremap s}( f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s}) f}xF{x wbi(<Esc>ea)<Esc>
-nnoremap s}[ f}xF{x wbi[<Esc>ea]<Esc>
-nnoremap s}] f}xF{x wbi[<Esc>ea]<Esc>
+nnoremap s}' f}r'F{r'
+nnoremap s}" f}r"F{r"
+nnoremap s}* f}r*F{r*
+nnoremap s}< f}r>F{r<
+nnoremap s}> f}r>F{r<
+nnoremap s}( f}r)F{r(
+nnoremap s}) f}r)F{r(
+nnoremap s}[ f}r]F{r[
+nnoremap s}] f}r]F{r[
 
 "}}}
 " Change surround from [ ] to something. "{{{
-nnoremap s[' f]xF[x wbi'<Esc>ea'<Esc>
-nnoremap s[" f]xF[x wbi"<Esc>ea"<Esc>
-nnoremap s[< f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s[> f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s[( f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s[) f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s[{ f]xF[x wbi{<Esc>ea}<Esc>
-nnoremap s[} f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s[' f]r'F[r'
+nnoremap s[" f]r"F[r"
+nnoremap s[* f]r*F[r*
+nnoremap s[< f]r>F[r<
+nnoremap s[> f]r>F[r<
+nnoremap s[( f]r)F[r(
+nnoremap s[) f]r)F[r(
+nnoremap s[{ f]r}F[r{
+nnoremap s[} f]r}F[r{
 
-nnoremap s]' f]xF[x wbi'<Esc>ea'<Esc>
-nnoremap s]" f]xF[x wbi"<Esc>ea"<Esc>
-nnoremap s]< f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s]> f]xF[x wbi<<Esc>ea><Esc>
-nnoremap s]( f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s]) f]xF[x wbi(<Esc>ea)<Esc>
-nnoremap s]{ f]xF[x wbi{<Esc>ea}<Esc>
-nnoremap s]} f]xF[x wbi{<Esc>ea}<Esc>
+nnoremap s]' f]r'F[r'
+nnoremap s]" f]r"F[r"
+nnoremap s]* f]r*F[r*
+nnoremap s]< f]r>F[r<
+nnoremap s]> f]r>F[r<
+nnoremap s]( f]r)F[r(
+nnoremap s]) f]r)F[r(
+nnoremap s]{ f]r}F[r{
+nnoremap s]} f]r}F[r{
 
 "}}}
-
 "}}}
 " Mapping for etc "{{{
 
@@ -257,8 +291,10 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" toggle highlight
+" toggle
 nnoremap <Space>/ :set hlsearch!<CR>
+nnoremap <Space>n :set number!<CR>
+nnoremap <Space>w :set wrap!<CR>
 
 " Redraw at center of window.
 nmap n nzz
@@ -282,8 +318,13 @@ nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 " Toggle a buffer which edit the one befor.
 nnoremap <silent>mm :e #<CR>
 
+
 " Execute current buffer with clisp.
-nnoremap <silent>gcl  :<C-u>!clisp -i %<CR>
+if executable('clisp')
+  nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+else
+  nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
+endif
 
 " Edit vimrc, gvimrc.
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
