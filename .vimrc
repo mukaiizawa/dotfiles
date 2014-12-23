@@ -1,4 +1,5 @@
 scriptencoding utf-8
+colorscheme desert
 syntax enable
 
 " Initialization "{{{
