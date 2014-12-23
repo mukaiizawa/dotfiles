@@ -1,4 +1,4 @@
-The first setup for vim
+The first setup of vim for Windows.
 
 1.Dowonload gvimxx.exe from "www.vim.org"
 
@@ -9,7 +9,7 @@ The first setup for vim
   or
   git clone https://github.com/Shougo/neobundle.vim c:\Users\user-name\.vim\bundle\neobundle.vim
 
-4.Dowonload "vimproc.vim" and build vimproc_win32.dll
+4.Clone "vimproc.vim" and build vimproc_win32.dll
   >cd C:\Users\ユーザー名\.vim\bundle
   >git clone https://github.com/Shougo/vimproc.vim.git vimproc
   >cd vimproc
