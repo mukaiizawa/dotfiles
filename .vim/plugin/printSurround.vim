@@ -3,14 +3,15 @@ function! PrintSurround()
 
   let s:filetype = &filetype
   let s:printDic = {
-        \  'c'         : ['printf("', '\n");'],
-        \  'cpp'       : ['std::cout << "', '";'],
-        \  'dosbatch'  : ['echo "', '"'],
-        \  'java'      : ['System.out.println("', '");'],
-        \  'lisp'      : ['(print "', '")'],
-        \  'peal'      : ['print "', '";'],
-        \  'ruby'      : ['puts "', '"'],
-        \  'vim'       : ['echo "', '"'],
+        \  'c'         : ['printf("' , '\n");'],
+        \  'cpp'       : ['std::cout << "' , '";'],
+        \  'dosbatch'  : ['echo "' , '"'],
+        \  'java'      : ['System.out.println("' , '");'],
+        \  'lisp'      : ['(print "' , '")'],
+        \  'peal'      : ['print "' , '";'],
+        \  'python'    : ['print "' , '"'],
+        \  'ruby'      : ['puts "' , '"'],
+        \  'vim'       : ['echo "' , '"'],
         \
         \  }
 
