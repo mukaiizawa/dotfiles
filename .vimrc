@@ -96,9 +96,7 @@ set backspace=start,eol,indent
 " Setting for File "{{{
 set noundofile
 set viminfo=                   " Not use viminfo file.
-set backup
-set backupext=.back
-set backupdir=~/dotfiles/.back/
+set nobackup
 set noswapfile
 
 "}}}
