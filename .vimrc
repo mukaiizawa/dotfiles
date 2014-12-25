@@ -86,12 +86,11 @@ set listchars=tab:->,eol:<,trail:>
 
 "}}}
 " Setting for Status line, Tab page "{{{
-set ruler
 set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{&ff}\ %l,%c\ %p%%
+set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{EOLType()}\ %l,%c\ %p%%
 set tabpagemax=300
 set backspace=start,eol,indent
 
