@@ -12,12 +12,12 @@ echo It is interrupted. & pause > nul & exit
 REM N.B mklink:  (to)  (from)
 mklink /D "C:\users\user-name\.vim"        "C:\users\user-name\dotfiles\.vim"
 mklink /D "C:\users\user-name\vimfiles"    "C:\users\user-name\dotfiles\.vim"
-mklink    "C:\users\user-name\_vimrc"      "C:\users\user-name\dotfiles\.vimrc"
-mklink    "C:\users\user-name\_gvimrc"     "C:\users\user-name\dotfiles\.gvimrc"
+mklink    "C:\users\user-name\.vimrc"      "C:\users\user-name\dotfiles\.vimrc"
+mklink    "C:\users\user-name\.gvimrc"     "C:\users\user-name\dotfiles\.gvimrc"
 mklink    "C:\users\user-name\.vimshrc"    "C:\users\user-name\dotfiles\.vimshrc"
 mklink    "C:\users\user-name\.gitignore"  "C:\users\user-name\dotfiles\.gitignore"
 
-REM mklink    "C:\users\user-name\_vimrc"      "C:\users\user-name\dotfiles\.minvimrc"
+REM mklink    "C:\users\user-name\.vimrc"      "C:\users\user-name\dotfiles\.minvimrc"
 REM mklink    "C:\users\user-name\.gitconfig"  "C:\users\user-name\dotfiles\.gitconfig"
  
 echo It finished. & pause > nul & exit
