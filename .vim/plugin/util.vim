@@ -1,4 +1,4 @@
-
+" for statusline
 function! EOLType()
   if &fileformat == 'unix'
     return 'LF'
