@@ -70,6 +70,8 @@ set helplang=en
 set history=2000
 set nrformats-=octal
 set fileencoding=utf-8
+set fileformat=unix
+set fileformats=unix,dos
 
 "}}}
 " Setting for Display "{{{

@@ -1,6 +1,10 @@
 function! MakeBackupFile()
 
-  let s:backupDir = $Home . '/dotfiles/.back'
+  if has('win32') || has ('win64')
+    let s:backupDir = $Home . '/dotfiles/.back'
+  else
+    let s:backupDir = $Home . '/dotfiles/.back'
+  endif
 
   if isdirectory(s:backupDir) == 0
     call mkdir(s:backupDir , 'p')
