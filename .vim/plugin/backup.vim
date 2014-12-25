@@ -3,13 +3,13 @@ function! MakeBackupFile()
   let s:backupDir = $Home . '/dotfiles/.back'
 
   if isdirectory(s:backupDir) == 0
-    call mkdir(s:backupDir , "")
+    call mkdir(s:backupDir , 'p')
   endif
 
   if exists("*strftime")    " if executable 'strftime'
     let s:today = strftime("%y%m%d")
     if isdirectory(s:backupDir . '/' . s:today) == 0
-      call mkdir(s:backupDir . '/' . s:today , "")
+      call mkdir(s:backupDir . '/' . s:today , 'p')
     endif
     return writefile(getline(1,'$'),
           \  s:backupDir .
