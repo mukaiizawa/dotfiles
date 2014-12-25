@@ -1,5 +1,5 @@
 scriptencoding utf-8
-colorscheme desert
+colorscheme shin-dark-term
 syntax enable
 
 " Initialization "{{{
