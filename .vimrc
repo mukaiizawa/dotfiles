@@ -814,3 +814,4 @@ vmap gww <Plug>(openbrowser-search)
 "}}}
 
 
+" vim: foldmethod=marker

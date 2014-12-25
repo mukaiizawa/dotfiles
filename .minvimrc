@@ -345,3 +345,4 @@ endif
 
 "}}}
 
+" vim: foldmethod=marker
