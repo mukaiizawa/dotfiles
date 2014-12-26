@@ -1,5 +1,5 @@
 " for statusline
-function! EOLType()
+function! CurrentFileformat()
   if &fileformat == 'unix'
     return 'LF'
   elseif &fileformat == 'dos'
@@ -9,10 +9,14 @@ function! EOLType()
   endif
 endfunction
 
-function! CurrentLocation()
-  let s:currentCol = FillWhiteSpace(col('.'), 3)
-  let s:currentLine = FillWhiteSpace(line('.'), 6)
-  let s:returnStr = s:currentLine. ',' . s:currentCol 
-  return s:returnStr
+function! CurrentLine()
+  let s:numOfDigit = strlen(line('$'))
+  return FillWhiteSpace(line('.'), s:numOfDigit) .
+        \  '/' . FillWhiteSpace(line('$'), s:numOfDigit)
 endfunction
 
+function! CurrentCol()
+  let s:numOfDigit = 3    " hard cording
+  return FillWhiteSpace(col('.'), s:numOfDigit) .
+        \  '/' . FillWhiteSpace(col('$'), s:numOfDigit)
+endfunction
