@@ -451,8 +451,12 @@ function! neobundle#commands#complete_deleted_bundles(arglead, cmdline, cursorpo
         \ 'stridx(v:val, a:arglead) == 0')
 endfunction"}}}
 
-function! neobundle#commands#get_cache_file() "{{{
+function! neobundle#commands#get_default_cache_file() "{{{
   return neobundle#get_rtp_dir() . '/cache'
+endfunction"}}}
+
+function! neobundle#commands#get_cache_file() "{{{
+  return get(g:, 'neobundle#cache_file', neobundle#commands#get_default_cache_file())
 endfunction"}}}
 
 function! neobundle#commands#save_cache() "{{{
@@ -490,7 +494,7 @@ function! neobundle#commands#load_cache() "{{{
     endfor
   catch
     call neobundle#util#print_error(
-          \ '[neobundle] Error occured while loading cache : ' . v:errmsg)
+          \ '[neobundle] Error occurred while loading cache : ' . v:errmsg)
   endtry
 endfunction"}}}
 function! neobundle#commands#clear_cache() "{{{
