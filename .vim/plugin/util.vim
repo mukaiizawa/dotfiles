@@ -1,11 +1,9 @@
-" for statusline
-function! EOLType()
-  if &fileformat == 'unix'
-    return 'LF'
-  elseif &fileformat == 'dos'
-    return 'CRLF'
-  else
-    return 'CR'
-  endif
+
+function! FillWhiteSpace(argStr, targetLength)
+  let s:returnStr = a:argStr
+  while strlen(s:returnStr) < a:targetLength
+    let s:returnStr = ' ' . s:returnStr
+  endwhile
+  return s:returnStr
 endfunction
 
