@@ -94,7 +94,7 @@ set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ %{CurrentLine()},%{CurrentCol()}
+set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
 set tabpagemax=300
 set backspace=start,eol,indent
 
@@ -425,12 +425,6 @@ call unite#custom#profile('default', 'context', {
       \   'direction' : 'topleft',
       \   'cursor_line_time' : 0.0,
       \   'cursor_line_highlight' : 'Visual',
-      \ })
-
-call unite#custom#profile('source/line', 'context', {
-      \   'vertical' : 1,
-      \   'direction' : 'botright',
-      \   'winwidth' : 70,
       \ })
 
 call unite#custom_default_action('directory', 'vimfiler')
