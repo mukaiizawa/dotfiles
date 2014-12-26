@@ -1,5 +1,9 @@
 scriptencoding utf-8
-colorscheme shin-dark-term
+
+if !has('gui_running')
+  colorscheme shin-dark-term
+endif
+
 syntax enable
 
 " Initialization "{{{
