@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
 if !has('gui_running')
+  set t_Co=256
   colorscheme shin-dark-term
 endif
 
@@ -37,8 +38,12 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Yggdroot/indentLine'
 
-" Colorscheme "{{{
-" famous colorsheme
+" Colorscheme
+NeoBundleLazy 'godlygeek/csapprox', {
+      \ 'terminal' : 1 
+      \ }
+
+" famous colorsheme {{{
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'jeffreyiacono/vim-colors-wombat'
@@ -79,7 +84,6 @@ set fileformats=unix,dos
 
 "}}}
 " Setting for Display "{{{
-set t_Co=256
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
 set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
