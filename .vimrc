@@ -690,14 +690,10 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
-      \    'runner' : 'vimproc',
-      \    'runner/vimproc/updatetime': 10,
       \    'hook/time/enable': 1,
       \  },
       \
       \  'java' : {
-      \    'runner' : 'vimproc',
-      \    'runner/vimproc/updatetime': 10,
       \    'hook/time/enable': 1,
       \  },
       \
