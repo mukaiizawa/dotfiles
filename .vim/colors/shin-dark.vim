@@ -66,11 +66,11 @@ highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
 " pop up menu
-hi Pmenu                guifg=#ffffff guibg=#303030
-hi PmenuSel             guifg=#66d9ef guibg=#000000 gui=bold
-hi PmenuSbar                          guibg=#101010
-hi PmenuThumb           guifg=#101010
-hi WildMenu             guifg=#66d9ef guibg=#000000 gui=bold
+highlight Pmenu         guifg=#ffffff guibg=#303030
+highlight PmenuSel      guifg=#66d9ef guibg=#000000 gui=bold
+highlight PmenuSbar                   guibg=#101010
+highlight PmenuThumb    guifg=#101010
+highlight WildMenu      guifg=#66d9ef guibg=#000000 gui=bold
 
 " statusline
 highlight StatusLine    guifg=#ffffff guibg=#4a4a4a gui=bold

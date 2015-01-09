@@ -38,11 +38,6 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Yggdroot/indentLine'
 
-" Colorscheme
-NeoBundleLazy 'godlygeek/csapprox', {
-      \ 'terminal' : 1 
-      \ }
-
 " famous colorsheme {{{
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
