@@ -7,54 +7,63 @@ let g:colors_name = "shin-dark-term"
 
 " :help group-name "{{{
 "Comment
-highlight Comment        ctermfg=137
+" highlight Comment       ctermfg=137 orange
+highlight Comment        ctermfg=120   cterm=NONE
 "Constant
-highlight Constant       ctermfg=73
-highlight String         ctermfg=107
-highlight Number         ctermfg=107
+highlight Constant       ctermfg=123    cterm=NONE
+highlight String         ctermfg=217   cterm=NONE
+highlight Character      ctermfg=13    cterm=NONE
+highlight Number         ctermfg=229   cterm=NONE
+highlight Boolean        ctermfg=123    cterm=bold
+highlight float          ctermfg=229   cterm=NONE
 "Identifier
-highlight Identifier     ctermfg=73  cterm=NONE
-highlight Function       ctermfg=221 cterm=NONE
+highlight Identifier     ctermfg=123    cterm=NONE
+highlight Constant       ctermfg=123    cterm=NONE
+highlight Function       ctermfg=222   cterm=NONE
 "Statement
-highlight Statement      ctermfg=172 cterm=NONE
+highlight Statement      ctermfg=172   cterm=NONE
+highlight Exception      ctermfg=161   cterm=NONE
 "Preproc
-highlight PreProc        ctermfg=103
-highlight Include        ctermfg=173 cterm=NONE
-highlight Define         ctermfg=173
+highlight PreProc        ctermfg=222   cterm=NONE
 "Type
+highlight Type           ctermfg=123
+highlight Structure      ctermfg=172
 "Special
+highlight Special        ctermfg=123
+highlight Delimiter      ctermfg=14    cterm=bold
+highlight SpecialComment ctermfg=120
 "Underlined
+highlight Underlined     ctermfg=33
 "Ignore
+highlight Ignore         ctermfg=161
 "Error
-highlight Error          ctermfg=221 ctermbg=88
+highlight Error          ctermfg=45    ctermbg=232
 "Todo
-highlight Todo           ctermfg=94
+highlight TODO           ctermfg=45    ctermbg=232
 " }}}
 " :help highlight-groups "{{{
 
-highlight Normal        ctermfg=white ctermbg=234
-
-" curcor
-highlight Cursor        ctermfg=0 ctermbg=15
-highlight CursorLine    ctermbg=235 cterm=NONE
+highlight Normal        ctermfg=231 ctermbg=235
+highlight NonText       ctermfg=244 ctermbg=235
 
 " number
-highlight LineNr        ctermfg=242
-highlight CursorLineNr  ctermfg=248
+highlight LineNr        ctermfg=244
 
-highlight Folded                          ctermbg=256
-highlight Search        ctermfg=NONE ctermbg=236 cterm=underline
-highlight Title         ctermfg=15
-highlight Visual        ctermbg=60
+highlight Folded        ctermfg=244 ctermbg=237
+highlight Search        ctermfg=229 ctermbg=244
+highlight Visual                    ctermbg=242
+highlight VertSplit     ctermfg=239             cterm=bold
+
+" pop up menu
+highlight Pmenu         ctermfg=231 ctermbg=244
+highlight PmenuSel      ctermfg=45  ctermbg=232 cterm=bold
+highlight PmenuSbar                 ctermbg=232
+highlight PmenuThumb    ctermfg=232
+highlight WildMenu      ctermfg=45  ctermbg=232 cterm=bold
 
 " statusline
-highlight StatusLine    guifg=#ffffff guibg=#4a4a4a gui=bold
-highlight StatusLineNC  guifg=#808080               gui=bold
-
-" for tab
-highlight TabLine       guifg=#cccccc guibg=#666666
-highlight TabLineFill                 guibg=#666666
-highlight TabLineSel    guifg=#eeeeee guibg=#666666
+highlight StatusLine    ctermfg=231 ctermbg=235 cterm=bold
+highlight StatusLineNC  ctermfg=239             cterm=bold
 
 " }}}
 
