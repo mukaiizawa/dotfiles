@@ -353,6 +353,8 @@ nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
 
 " Redraw at center of window.
+nmap * *zz
+nmap # #zz
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
