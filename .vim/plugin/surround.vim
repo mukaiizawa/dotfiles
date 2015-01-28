@@ -1,10 +1,10 @@
 
 " SurroundWith {{{
-function! SurroundWith(leftPart, rightPart)
+function! SurroundWith(leftPart, rightPart, currentLine)
 
   " Move the first non-blank character of the line.
   execute ':normal ^'
-  let s:targetString = getline('.')[col('.') - 1 : ]    " Removed blanc of current line.
+  let s:targetString = getline(a:currentLine)[col('.') - 1 : ]    " Removed blanc of current line.
   let s:substIndex = stridx(s:targetString, a:leftPart)
 
 
@@ -30,13 +30,13 @@ function! SurroundWith(leftPart, rightPart)
   endif
 
   " write and indent
-  call setline('.', s:outputLine)
+  call setline(a:currentLine, s:outputLine)
   execute ':normal == '
 
 endfunction
-"}}}
-
-function! PrintSurround()
+" }}}
+" PrintSurround {{{
+function! PrintSurround() range
 
   let s:filetype = &filetype
   let s:printDic = {
@@ -44,10 +44,10 @@ function! PrintSurround()
         \  'cpp'        : ['std::cout << "' , '";'],
         \  'dosbatch'   : ['echo "' , '"'],
         \  'html'       : ['<script>document.write("' , '")</script>'],
-        \  'java'       : ['System.out.println("' , '");'],
+        \  'java'       : ['System.out.println(' , ');'],
         \  'javascript' : ['document.write("' , '");'],
         \  'jsp'        : ['document.write("' , '");'],
-        \  'lisp'       : ['(print "' , '")'],
+        \  'lisp'       : ['(print ' , ')'],
         \  'peal'       : ['print "' , '";'],
         \  'python'     : ['print "' , '"'],
         \  'ruby'       : ['puts "' , '"'],
@@ -62,11 +62,15 @@ function! PrintSurround()
 
     let s:leftPart = (s:printDic[s:filetype])[0]
     let s:rightPart = (s:printDic[s:filetype])[1]
-    call SurroundWith(s:leftPart, s:rightPart)
+
+    " Surround each line
+    for n in range(a:firstline, a:lastline)
+      call SurroundWith(s:leftPart, s:rightPart, n)
+    endfor
 
   endif
 
 endfunction
 
-command! PrintSurround call PrintSurround()
-
+command! -range PrintSurround <line1>, <line2>call PrintSurround()
+" }}}

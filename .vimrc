@@ -192,6 +192,7 @@ nnoremap s] wbi[<Esc>ea]<Esc>
 " Surround with print "{{{
 
 nnoremap sp :<C-u>PrintSurround<CR>
+vnoremap sp :PrintSurround<CR>
 
 "}}}
 " Delete surround. "{{{
