@@ -4,7 +4,6 @@ if !has('gui_running')
   set t_Co=256
   colorscheme shin-dark-term
 endif
-
 syntax enable
 
 " Initialization "{{{
@@ -352,6 +351,12 @@ nnoremap U  <C-r>
 nnoremap <Space>/ :set hlsearch!<CR>
 nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
+
+" Yank or copy with clipboard
+nnoremap <S-Insert> "*p
+nnoremap <C-Insert> "*y
+vnoremap <S-Insert> "*p
+vnoremap <C-Insert> "*y
 
 " Redraw at center of window.
 nmap * *zz
