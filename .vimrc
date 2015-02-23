@@ -147,6 +147,11 @@ nnoremap <PageDown> <NOP>
 
 vnoremap s <NOP>
 
+nnoremap dh <NOP>
+nnoremap dj <NOP>
+nnoremap dk <NOP>
+nnoremap dl <NOP>
+
 "}}}
 " Mapping for Tab, Window "{{{
 nnoremap ss <C-w>s
@@ -790,7 +795,7 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 "}}}
 " ContinuousNumber "{{{
 
-vnoremap <silent>co    :<C-u>ContinuousNumber <C-a><CR>
+vnoremap <silent>co    :ContinuousNumber <C-a><CR>
 
 "}}}
 " IndentLine "{{{
