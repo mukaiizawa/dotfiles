@@ -373,13 +373,13 @@ nmap g, g,zz
 " cursor
 nnoremap <Space>h 0
 nnoremap <Space>l $
-nnoremap <Space>j <C-f>zz
-nnoremap <Space>k <C-b>zz
+nnoremap <Space>j Lzz
+nnoremap <Space>k Hzz
 nnoremap <Space><Space> zz
 vnoremap <Space>h 0
 vnoremap <Space>l $
-vnoremap <Space>j <C-f>zz
-vnoremap <Space>k <C-b>zz
+vnoremap <Space>j Lzz
+vnoremap <Space>k Hzz
 
 " Change directory to carrent buffer directory.
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
