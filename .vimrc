@@ -152,6 +152,11 @@ nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
 
+nnoremap ch <NOP>
+nnoremap cj <NOP>
+nnoremap ck <NOP>
+nnoremap cl <NOP>
+
 "}}}
 " Mapping for Tab, Window "{{{
 nnoremap ss <C-w>s
