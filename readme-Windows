@@ -18,6 +18,14 @@ The first setup of vim for Windows.
 5.Execute "symbolic.bat" to make symboliclink.
 
 
+6.Make gitconfig
+.gitconfig
+[user]
+  name = mukaiizawa
+  email = mukaiizawa@yahoo.co.jp
+[http]
+  proxy = http://xxx
+
 
 Cautions!
 The path of git is letting it pass. 
