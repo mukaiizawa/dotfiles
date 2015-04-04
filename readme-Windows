@@ -2,29 +2,26 @@ The first setup of vim for Windows.
 
 1.Dowonload gvimxx.exe from "www.vim.org"
 
-2.Clone "dotfiles" repository from git.
-
-3.Clone "neobundle.vim" repository from git.
-  git clone git://github.com/Shougo/neobundle.vim c:\Users\user-name\.vim\bundle\neobundle.vim
+2.Install git and Clone "dotfiles" repository from git.
+  $ git clone git://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
   or
-  git clone https://github.com/Shougo/neobundle.vim c:\Users\user-name\.vim\bundle\neobundle.vim
+  $ git clone https://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
 
-4.Clone "vimproc.vim" and build vimproc_win32.dll
-  >cd C:\Users\ユーザー名\.vim\bundle
-  >git clone https://github.com/Shougo/vimproc.vim.git vimproc
-  >cd vimproc
-  >make -f make_mingw32.mak
+3.Install mingw to build "vimproc"
 
-5.Execute "symbolic.bat" to make symboliclink.
+4.Execute "symbolic.bat" to make symboliclink.
 
+5.Make gitconfig
+  $ git config user.name "mukaiizawa"
+  $ git config user.email "mukaiizawa@yahoo.co.jp"
+  $ git config --global http.proxy http://proxy.example.com:8080
 
-6.Make gitconfig
 .gitconfig
 [user]
   name = mukaiizawa
   email = mukaiizawa@yahoo.co.jp
 [http]
-  proxy = http://xxx
+  proxy = http://proxy.example.com:8080
 
 
 Cautions!
