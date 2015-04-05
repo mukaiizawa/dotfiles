@@ -31,6 +31,6 @@ command! MakeBackupFile call MakeBackupFile()
 
 augroup makeBackupFile
   autocmd!
-  autocmd BufWritePre * nested :MakeBackupFile
+  autocmd BufRead * nested :MakeBackupFile
 augroup END
 
