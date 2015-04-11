@@ -1,8 +1,12 @@
 scriptencoding utf-8
 
 if !has('gui_running')
-  set t_Co=256
-  colorscheme shin-dark-term
+  if has('win32') || has ('win64')
+    colorscheme default
+  else
+    set t_Co=256
+    colorscheme shin-dark-term
+  endif
 endif
 syntax enable
 
