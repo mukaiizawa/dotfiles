@@ -18,5 +18,5 @@ endfunction
 function! CurrentCol()
   let s:numOfDigit = 3    " hard cording
   return FillWhiteSpace(col('.'), s:numOfDigit) .
-        \  '/' . FillWhiteSpace(col('$'), s:numOfDigit)
+        \  '/' . FillWhiteSpace(col('$') - 1, s:numOfDigit)
 endfunction
