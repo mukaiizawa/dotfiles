@@ -700,8 +700,7 @@ let g:quickrun_no_default_key_mappings = 1
 let g:quickrun_config = {
       \  '_' : {
       \    'split': 'vertical',
-      \    'hook/close_buffer/enable_empty_data' : 1,
-      \    'hook/close_buffer/enable_failure' : 1,
+      \    'outputter/buffer/close_on_empty' :1
       \  },
       \
       \  'c' : {
