@@ -33,7 +33,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    }
       \ }
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -755,10 +754,6 @@ nnoremap <silent>me    :<C-u>Unite menu<CR>
 
 " register
 nnoremap <silent>mre   :<C-u>Unite register<CR>
-
-" tag
-nnoremap <silent>mt    :<C-u>Unite tag -auto-preview<CR>
-
 
 "}}}
 " NeoMRU "{{{
