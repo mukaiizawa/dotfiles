@@ -364,14 +364,11 @@ else
   nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
 endif
 
-
-" ================================================
-" Note: If executable ctags.exe, create tags file.
-" ================================================
-if executable('ctags')
-  nnoremap tt :<C-u>lcd %:h<CR> :!ctags -R<CR>
+" Execute current buffer with ccl.
+if executable('sbcl')
+  nnoremap <silent>gsb  :<C-u>lcd %:h<CR> :!sbcl --script %<CR>
 else
-  nnoremap tt :<C-u>echo "ctags: command not found"<CR>
+  nnoremap <silent>gsb  :<C-u>echo "sbcl: command not found"<CR>
 endif
 
 "}}}
