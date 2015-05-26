@@ -24,7 +24,6 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -350,6 +349,33 @@ nnoremap s]} f]r}F[r{
 
 "}}}
 "}}}
+" Mapping for calling external program {{{
+
+" Execute current buffer with clisp.
+if executable('clisp')
+  nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+else
+  nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
+endif
+
+" Execute current buffer with ccl.
+if executable('wx86cl')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl -l %<CR>
+else
+  nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
+endif
+
+
+" ================================================
+" Note: If executable ctags.exe, create tags file.
+" ================================================
+if executable('ctags')
+  nnoremap tt :<C-u>lcd %:h<CR> :!ctags -R<CR>
+else
+  nnoremap tt :<C-u>echo "ctags: command not found"<CR>
+endif
+
+"}}}
 " Mapping for etc "{{{
 
 " End insert mode with jj.
@@ -378,6 +404,7 @@ nmap # #zz
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
+nmap g; g;zz
 
 " cursor
 nnoremap <Space>h 0
@@ -396,30 +423,12 @@ nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 " Toggle a buffer which edit the one befor.
 nnoremap <silent>mm :e #<CR>
 
-
-" Execute current buffer with clisp.
-if executable('clisp')
-  nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
-else
-  nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
-endif
-
 " Edit vimrc, gvimrc.
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 
-" Read vimrc.
+" Reroad vimrc.
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
-
-
-" ================================================
-" Note: If executable ctags.exe, create tags file.
-" ================================================
-if executable('ctags')
-  nnoremap tt :<C-u>lcd %:h<CR> :!ctags -R<CR>
-else
-  nnoremap tt :<C-u>echo "ctags: command not found"<CR>
-endif
 
 "}}}
 
@@ -623,24 +632,6 @@ augroup END
 "}}}
 
 "}}}
-"  Unite outline "{{{
-
-call unite#custom#profile('source/outline', 'context', {
-      \   'winwidth' : 40,
-      \   'direction' : 'botright',
-      \ })
-
-let g:unite_source_outline_filetype_options = {
-      \ '*': {
-      \   'auto_update': 1,
-      \   'auto_update_event': 'write',
-      \   'ignore_types': ['comment'],
-      \ },
-      \
-      \}
-
-
-"}}}
 "  NeoMru "{{{
 let g:neomru#file_mru_limit = 1000      " default
 let g:neomru#directory_mru_limit = 1000 " default
@@ -746,10 +737,6 @@ let g:caw_no_default_keymappings = 1
 " Mapping of Plugin.
 " Unite "{{{
 
-" bookmark
-nnoremap <silent>mb    :<C-u>Unite bookmark<CR> 
-nnoremap <silent>mba   :<C-u>UniteBookmarkAdd<CR> 
-
 " colorsheme
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 
@@ -765,9 +752,6 @@ nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
-
-" outline
-nnoremap <silent>mo    :<C-u>Unite -vertical outline<CR>
 
 " register
 nnoremap <silent>mre   :<C-u>Unite register<CR>
