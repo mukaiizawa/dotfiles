@@ -366,9 +366,9 @@ endif
 
 " Execute current buffer with ccl.
 if executable('sbcl')
-  nnoremap <silent>gsb  :<C-u>lcd %:h<CR> :!sbcl --script %<CR>
+  nnoremap <silent>gcs  :<C-u>lcd %:h<CR> :!sbcl --script %<CR>
 else
-  nnoremap <silent>gsb  :<C-u>echo "sbcl: command not found"<CR>
+  nnoremap <silent>gcs  :<C-u>echo "sbcl: command not found"<CR>
 endif
 
 "}}}
