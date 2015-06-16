@@ -472,6 +472,16 @@ if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
+" Diff "{{{
+let g:unite_source_menu_menus.Diff = {
+      \  "command_candidates" : [
+      \      [ "diffoff     "  , "windo diffoff | set nowrap | set foldmethod=marker" ],
+      \      [ "diffthis    "  , "diffthis" ],
+      \      [ "diffupdate  "  , "diffupdate" ],
+      \      [ "diffbuffers "  , "windo diffthis" ],
+      \  ]
+      \}
+"}}}
 " Edit "{{{
 let g:unite_source_menu_menus.Edit = {
       \  "command_candidates" : [
@@ -491,12 +501,13 @@ let g:unite_source_menu_menus.Search = {
 " NeoBundle "{{{
 let g:unite_source_menu_menus.NeoBundle = {
       \  "command_candidates" : [
-      \      [ "NeoBundleLog" , "NeoBundleLog" ],
-      \      [ "NeoBundleList" , "NeoBundleList" ],
-      \      [ "NeoBundleClean" , "NeoBundleClean" ],
-      \      [ "NeoBundleCheck" , "NeoBundleCheck" ],
-      \      [ "NeoBundleInstall" , "NeoBundleInstall" ],
-      \      [ "NeoBundleCheckUpdate" , "NeoBundleUpdate" ],
+      \      [ "NeoBundleLog"         , "NeoBundleLog" ],
+      \      [ "NeoBundleList"        , "NeoBundleList" ],
+      \      [ "NeoBundleClean"       , "NeoBundleClean" ],
+      \      [ "NeoBundleCheck"       , "NeoBundleCheck" ],
+      \      [ "NeoBundleUpdate"      , "NeoBundleUpdate" ],
+      \      [ "NeoBundleInstall"     , "NeoBundleInstall" ],
+      \      [ "NeoBundleCheckUpdate" , "NeoBundleCheckUpdate" ],
       \  ]
       \}
 "}}}
