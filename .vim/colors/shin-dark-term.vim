@@ -46,6 +46,12 @@ highlight TODO           ctermfg=45    ctermbg=232
 highlight Normal        ctermfg=231 ctermbg=235
 highlight NonText       ctermfg=244 ctermbg=235
 
+" diff
+highlight DiffAdd       ctermfg=black ctermbg=2
+highlight DiffChange    ctermfg=black ctermbg=3
+highlight DiffDelete    ctermfg=black ctermbg=6
+highlight DiffText      ctermfg=black ctermbg=7
+
 " number
 highlight LineNr        ctermfg=244
 

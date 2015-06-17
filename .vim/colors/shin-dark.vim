@@ -49,6 +49,12 @@ highlight Cursor        guifg=#000000 guibg=#ffffff
 highlight CursorIM                    guibg=#ff0000
 highlight CursorLine                  guibg=#404040
 
+" diff
+highlight DiffAdd       guifg=#000000 guibg=#a6f02e
+highlight DiffChange    guifg=#000000 guibg=#fadd5a
+highlight DiffDelete    guifg=#000000 guibg=#87ceeb
+highlight DiffText      guifg=#000000 guibg=#404040
+
 " number
 highlight LineNr        guifg=#aaaaaa
 highlight CursorLineNr  guifg=#fad07a               gui=bold
