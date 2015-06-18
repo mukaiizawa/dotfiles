@@ -50,10 +50,10 @@ highlight CursorIM                    guibg=#ff0000
 highlight CursorLine                  guibg=#404040
 
 " diff
-highlight DiffAdd       guifg=#000000 guibg=#a6f02e
-highlight DiffChange    guifg=#000000 guibg=#fadd5a
-highlight DiffDelete    guifg=#000000 guibg=#87ceeb
-highlight DiffText      guifg=#000000 guibg=#404040
+highlight DiffAdd       guifg=#000000 guibg=#f8b500
+highlight DiffChange    guifg=#000000 guibg=#ffaaaa
+highlight DiffDelete    guifg=#666666 guibg=#505050
+highlight DiffText      guifg=#000000 guibg=#d0d0d0
 
 " number
 highlight LineNr        guifg=#aaaaaa
