@@ -372,13 +372,23 @@ else
 endif
 
 "}}}
-" Mapping for etc "{{{
+" Mapping for insert mode "{{{
 
 " End insert mode with jj.
 inoremap jj <Esc>
 
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
+if exists("*strftime")
+  " insert date
+  inoremap <C-d> <Esc>:InsertDate<CR>
+else
+  echo "not exists strftime"
+endif
+
+"}}}
+" Mapping for etc "{{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
