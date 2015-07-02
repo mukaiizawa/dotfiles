@@ -285,7 +285,7 @@ nnoremap s]} f]r}F[r{
 
 "}}}
 "}}}
-" Mapping for calling external program {{{
+" Mapping for Calling External Program {{{
 
 " Execute current buffer with clisp.
 if executable('clisp')
@@ -309,13 +309,23 @@ else
 endif
 
 "}}}
-" Mapping for etc "{{{
+" Mapping for Insert Mode "{{{
 
 " End insert mode with jj.
 inoremap jj <Esc>
 
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
+if exists("*strftime")
+  " insert date
+  inoremap <C-d> <Esc>:InsertDate<CR>
+else
+  echo "not exists strftime"
+endif
+
+"}}}
+" Mapping for etc "{{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
@@ -325,7 +335,7 @@ nnoremap <Space>/ :set hlsearch!<CR>
 nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
 
-" Yank or copy with clipboard
+" Yank or Paste with clipboard
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
@@ -339,7 +349,7 @@ nmap N Nzz
 nmap g, g,zz
 nmap g; g;zz
 
-" cursor
+" Cursor motion
 nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space>j Lzz

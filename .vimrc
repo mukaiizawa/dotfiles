@@ -348,7 +348,7 @@ nnoremap s]} f]r}F[r{
 
 "}}}
 "}}}
-" Mapping for calling external program {{{
+" Mapping for Calling External Program {{{
 
 " Execute current buffer with clisp.
 if executable('clisp')
@@ -372,7 +372,7 @@ else
 endif
 
 "}}}
-" Mapping for insert mode "{{{
+" Mapping for Insert Mode "{{{
 
 " End insert mode with jj.
 inoremap jj <Esc>
@@ -398,7 +398,7 @@ nnoremap <Space>/ :set hlsearch!<CR>
 nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
 
-" Yank or copy with clipboard
+" Yank or Paste with clipboard
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
@@ -412,7 +412,7 @@ nmap N Nzz
 nmap g, g,zz
 nmap g; g;zz
 
-" cursor
+" Cursor motion
 nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space>j Lzz
@@ -566,10 +566,10 @@ let g:unite_source_menu_menus.Format = {
 " Toggle Option "{{{
 let g:unite_source_menu_menus.Toggle_Option ={
       \  "command_candidates" : [
-      \      ["Toggle number     :<Space>n", "set number!"],
-      \      ["Toggle hlsearch   :<Space>/", "set hlsearch!"],
-      \      ["Toggle wrap       :<Space>w", "set wrap!"],
-      \      ["Toggle IndentLine :<Space>i", "IndentLinesToggle"],
+      \      ["Toggle number     : <Space>n", "set number!"],
+      \      ["Toggle hlsearch   : <Space>/", "set hlsearch!"],
+      \      ["Toggle wrap       : <Space>w", "set wrap!"],
+      \      ["Toggle IndentLine : <Space>i", "IndentLinesToggle"],
       \  ]
       \ }
 "}}}
@@ -783,8 +783,8 @@ nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 " VimFiler "{{{
 
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir<CR>
-nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -split<CR>
-nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -double<CR>
+" nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -split<CR>
+" nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -double<CR>
 
 "}}}
 " VimShell "{{{
