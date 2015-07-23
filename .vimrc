@@ -359,7 +359,7 @@ endif
 
 " Execute current buffer with ccl.
 if executable('wx86cl')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl --terminal-encoding cp932 --load  %<CR>
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
 else
   nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
 endif
@@ -704,6 +704,18 @@ let g:vimfiler_tree_indentation = 1
 " ================================================
 let g:quickrun_no_default_key_mappings = 1
 
+" ==========================================================
+" Note:
+" --------	------
+" Symbol    Result ~
+" --------	------
+" %%        %
+" %c        Command (|quickrun-option-command|)
+" %o        Command line option (|quickrun-option-cmdopt|)
+" %s        Source (|quickrun-option-src|)
+" %a        Script's arguments (|quickrun-option-args|)
+" ==========================================================
+
 
 let g:quickrun_config = {
       \  '_' : {
@@ -716,8 +728,25 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
+      \    'type': executable('clisp')? 'lisp/clisp':
+      \            executable('wx86cl64')? 'lisp/ccl':
+      \            executable('sbcl')? 'lisp/sbcl': '',
       \    'hook/time/enable': 1,
       \  },
+      \
+      \  'lisp/sbcl': {
+      \   'command': 'sbcl',
+      \   'cmdopt': '--script',
+      \ },
+      \
+      \  'lisp/ccl': {
+      \   'command': 'wx86cl64',
+      \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
+      \ },
+      \
+      \  'lisp/clisp': {
+      \   'command': 'clisp',
+      \ },
       \
       \  'java' : {
       \    'hook/time/enable': 1,
