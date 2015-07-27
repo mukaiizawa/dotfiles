@@ -1,24 +1,27 @@
 @Echo off
-SET /P ANSWER="May I make a symbolic link ? (Y/N)"
-if /i {%ANSWER%}=={y} (goto :yes)
-if /i {%ANSWER%}=={yes} (goto :yes)
-if /i {%ANSWER%}=={n} (goto :no)
-if /i {%ANSWER%}=={no} (goto :no)
+ECHO May I make a symbolic link ? Yes[y]/No[n]
+SET /P ANSWER=">> "
+if /i {%ANSWER%}=={y} (GOTO :yes)
+if /i {%ANSWER%}=={yes} (GOTO :yes)
+if /i {%ANSWER%}=={n} (GOTO :no)
+if /i {%ANSWER%}=={no} (GOTO :no)
 
 :no
-echo It is interrupted. & pause > nul & exit
+ECHO It is interrupted. & pause > nul & EXIT
 
 :yes
+ECHO Type user name.
+SET /P HOME=">> "
 REM N.B mklink:  (to)  (from)
-mklink /D "C:\users\user-name\.vim"        "C:\users\user-name\dotfiles\.vim"
-mklink /D "C:\users\user-name\vimfiles"    "C:\users\user-name\dotfiles\.vim"
-mklink    "C:\users\user-name\.vimrc"      "C:\users\user-name\dotfiles\.vimrc"
-mklink    "C:\users\user-name\.gvimrc"     "C:\users\user-name\dotfiles\.gvimrc"
-mklink    "C:\users\user-name\.vimshrc"    "C:\users\user-name\dotfiles\.vimshrc"
-mklink    "C:\users\user-name\.gitignore"  "C:\users\user-name\dotfiles\.gitignore"
+MKLINK /D "C:\users\%HOME%\.vim"        "C:\users\%HOME%\dotfiles\.vim"
+MKLINK /D "C:\users\%HOME%\vimfiles"    "C:\users\%HOME%\dotfiles\.vim"
+MKLINK    "C:\users\%HOME%\_vimrc"      "C:\users\%HOME%\dotfiles\.vimrc"
+MKLINK    "C:\users\%HOME%\_gvimrc"     "C:\users\%HOME%\dotfiles\.gvimrc"
 
-REM mklink    "C:\users\user-name\.vimrc"      "C:\users\user-name\dotfiles\.minvimrc"
-REM mklink    "C:\users\user-name\.gitconfig"  "C:\users\user-name\dotfiles\.gitconfig"
+REM mklink    "C:\users\%HOME%\.vimrc"      "C:\users\%HOME%\dotfiles\.minvimrc"
+REM mklink    "C:\users\%HOME%\.vimshrc"    "C:\users\%HOME%\dotfiles\.vimshrc"
+REM mklink    "C:\users\%HOME%\.gitignore"  "C:\users\%HOME%\dotfiles\.gitignore"
+REM mklink    "C:\users\%HOME%\.gitconfig"  "C:\users\%HOME%\dotfiles\.gitconfig"
  
-echo It finished. & pause > nul & exit
+echo It finished. & pause > nul & EXIT
 

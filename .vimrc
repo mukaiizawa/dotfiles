@@ -811,14 +811,12 @@ nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 "}}}
 " VimFiler "{{{
 
-nnoremap <silent>mf    :<C-u>VimFilerBufferDir<CR>
-" nnoremap <silent>mfv   :<C-u>VimFilerBufferDir -split<CR>
-" nnoremap <silent>mfd   :<C-u>VimFilerBufferDir -double<CR>
+nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
 
 "}}}
 " VimShell "{{{
 
-nnoremap <silent>ms    :<C-u>VimShellBufferDir -split<CR>
+nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
 nnoremap <silent>mst   :<C-u>VimShellTab<CR>
 nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
 nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
