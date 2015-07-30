@@ -82,5 +82,5 @@ syn keyword lispFunc mapfile
 syn keyword lispFunc mapfilerec
 " }}}
 " keyword {{{
-syn keyword lispKey :extension :enc :ff
+syn keyword lispKey :extension :enc :ff :print-object
 " }}}
