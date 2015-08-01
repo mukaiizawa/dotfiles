@@ -74,6 +74,7 @@ syn keyword lispFunc ls-file
 syn keyword lispFunc ls-dir
 syn keyword lispFunc file-exists-p
 syn keyword lispFunc pathname-as-file
+syn keyword lispFunc read-from
 syn keyword lispFunc write-to
 syn keyword lispFunc write-to!
 syn keyword lispFunc mkfile
@@ -82,5 +83,8 @@ syn keyword lispFunc mapfile
 syn keyword lispFunc mapfilerec
 " }}}
 " keyword {{{
-syn keyword lispKey :extension :enc :ff :print-object
+syn keyword lispKey :extension
+syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
+syn keyword lispKey :ff :unix :windows :CR :CRLF
+syn keyword lispKey :print-object
 " }}}
