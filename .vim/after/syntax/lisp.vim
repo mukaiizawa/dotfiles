@@ -82,9 +82,14 @@ syn keyword lispFunc mkfile!
 syn keyword lispFunc mapfile
 syn keyword lispFunc mapfilerec
 " }}}
+" abbrevs function {{{
+syn keyword lispFunc hash-size
+syn keyword lispFunc make-hash
+" }}}
 " keyword {{{
 syn keyword lispKey :extension
 syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
 syn keyword lispKey :ff :unix :windows :CR :CRLF
 syn keyword lispKey :print-object
+syn keyword lispKey :hashp
 " }}}
