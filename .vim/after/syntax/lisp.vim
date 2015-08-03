@@ -91,5 +91,5 @@ syn keyword lispKey :extension
 syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
 syn keyword lispKey :ff :unix :windows :CR :CRLF
 syn keyword lispKey :print-object
-syn keyword lispKey :return-hash
+syn keyword lispKey :vector
 " }}}
