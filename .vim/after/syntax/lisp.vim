@@ -74,6 +74,7 @@ syn keyword lispFunc ls-file
 syn keyword lispFunc ls-dir
 syn keyword lispFunc file-exists-p
 syn keyword lispFunc pathname-as-file
+syn keyword lispFunc parent-directory
 syn keyword lispFunc read-from
 syn keyword lispFunc write-to
 syn keyword lispFunc write-to!
