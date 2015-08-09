@@ -1,6 +1,8 @@
 
-" macro {{{
+"  macro
+"  {{{
 syn keyword lispFunc with-gensyms
+syn keyword lispFunc with-trace
 syn keyword lispFunc while
 syn keyword lispFunc for
 syn keyword lispFunc aif
@@ -13,13 +15,18 @@ syn keyword lispFunc each-line
 syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
 " }}}
-" function {{{
-syn keyword lispFunc mkstr
+
+" function
+" sequential {{{
 syn keyword lispFunc before
 syn keyword lispFunc after
+" }}}
+" logical function {{{
 syn keyword lispFunc fn-if
 syn keyword lispFunc fn-and
 syn keyword lispFunc fn-or
+" }}}
+" list-utils {{{
 syn keyword lispFunc last1
 syn keyword lispFunc singlep
 syn keyword lispFunc append1
@@ -46,16 +53,22 @@ syn keyword lispFunc repeat
 syn keyword lispFunc exit
 syn keyword lispFunc executable
 syn keyword lispFunc call
+" }}}
+" string-utils {{{
 syn keyword lispFunc emptyp
 syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc split
+syn keyword lispFunc BM
 syn keyword lispFunc replstr
 syn keyword lispFunc trimstr
 syn keyword lispFunc fillstr
 syn keyword lispFunc lastchar
 syn keyword lispFunc countchar
+" }}}
+" io-utils {{{
 syn keyword lispFunc encoding
+syn keyword lispFunc show-hash
 syn keyword lispFunc princln
 syn keyword lispFunc println
 syn keyword lispFunc echo
@@ -64,6 +77,8 @@ syn keyword lispFunc input-str
 syn keyword lispFunc input-char
 syn keyword lispFunc input-list
 syn keyword lispFunc args
+" }}}
+" file utils {{{
 syn keyword lispFunc component-present-p
 syn keyword lispFunc dir-pathname-p
 syn keyword lispFunc pathname-as-directory
@@ -83,11 +98,15 @@ syn keyword lispFunc mkfile!
 syn keyword lispFunc mapfile
 syn keyword lispFunc mapfilerec
 " }}}
-" abbrevs function {{{
+
+" abbrevs function
+" {{{
 syn keyword lispFunc hash-size
-syn keyword lispFunc make-hash
+syn keyword lispFunc mkhash
 " }}}
-" keyword {{{
+
+" keyword
+" {{{
 syn keyword lispKey :extension
 syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
 syn keyword lispKey :ff :unix :windows :CR :CRLF
