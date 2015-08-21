@@ -57,7 +57,7 @@ highlight DiffText      guifg=#000000 guibg=#d0d0d0
 
 " number
 highlight LineNr        guifg=#aaaaaa
-highlight CursorLineNr  guifg=#fad07a               gui=bold
+highlight CursorLineNr  guifg=#fad07a gui=bold
 
 " conceal
 highlight Conceal       guifg=#666666
