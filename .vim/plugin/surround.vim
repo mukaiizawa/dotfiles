@@ -49,7 +49,7 @@ function! PrintSurround() range
         \  'jsp'        : ['document.write(' , ');'],
         \  'lisp'       : ['(print ' , ')'],
         \  'peal'       : ['print "' , '";'],
-        \  'python'     : ['print "' , '"'],
+        \  'python'     : ['print("' , '")'],
         \  'ruby'       : ['puts "' , '"'],
         \  'vim'        : ['echo "' , '"'],
         \
