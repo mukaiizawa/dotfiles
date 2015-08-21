@@ -6,39 +6,38 @@ endif
 let g:colors_name = "shin-dark-term"
 
 " :help group-name "{{{
-"Comment
-" highlight Comment       ctermfg=137 orange
+" Comment
 highlight Comment        ctermfg=120   cterm=NONE
-"Constant
+" Constant
 highlight Constant       ctermfg=123    cterm=NONE
 highlight String         ctermfg=217   cterm=NONE
 highlight Character      ctermfg=13    cterm=NONE
 highlight Number         ctermfg=229   cterm=NONE
 highlight Boolean        ctermfg=123    cterm=bold
 highlight float          ctermfg=229   cterm=NONE
-"Identifier
+" Identifier
 highlight Identifier     ctermfg=123    cterm=NONE
 highlight Constant       ctermfg=123    cterm=NONE
 highlight Function       ctermfg=222   cterm=NONE
-"Statement
+" Statement
 highlight Statement      ctermfg=172   cterm=NONE
 highlight Exception      ctermfg=161   cterm=NONE
-"Preproc
+" Preproc
 highlight PreProc        ctermfg=222   cterm=NONE
-"Type
+" Type
 highlight Type           ctermfg=123
 highlight Structure      ctermfg=172
-"Special
+" Special
 highlight Special        ctermfg=123
 highlight Delimiter      ctermfg=14    cterm=bold
 highlight SpecialComment ctermfg=120
-"Underlined
+" Underlined
 highlight Underlined     ctermfg=33
-"Ignore
+" Ignore
 highlight Ignore         ctermfg=161
-"Error
+" Error
 highlight Error          ctermfg=45    ctermbg=232
-"Todo
+" Todo
 highlight TODO           ctermfg=45    ctermbg=232
 " }}}
 " :help highlight-groups "{{{

@@ -6,37 +6,37 @@ endif
 let g:colors_name = "shin-green"
 
 " :help group-name "{{{
-"Comment
+" Comment
 highlight Comment        guifg=#a6f02e
-"Constant
+" Constant
 highlight Constant       guifg=#87ceeb
 highlight String         guifg=#ffaaaa
 highlight Character      guifg=#db7093
 highlight Number         guifg=#fadd5a
 highlight Boolean        guifg=#87ceeb gui=bold
 highlight Float          guifg=#fadd5a
-"Identifier
+" Identifier
 highlight Identifier     guifg=#87ceeb
 highlight Function       guifg=#fad07a
-"Statement
+" Statement
 highlight Statement      guifg=#cc7833
 highlight Exception      guifg=#f86060 gui=bold
-"Preproc
+" Preproc
 highlight PreProc        guifg=#fad07a
-"Type
+" Type
 highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#cc7833
-"Special
+" Special
 highlight Special        guifg=#87ceeb
 highlight Delimiter      guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
-"Underlined
+" Underlined
 highlight Underlined     guifg=#00bfff
-"Ignore
+" Ignore
 highlight Ignore         guifg=#ff0000
-"Error
+" Error
 highlight Error          guifg=#66d9ef guibg=#202020 gui=bold
-"Todo
+" Todo
 highlight Todo           guifg=#66d9ef guibg=#202020 gui=bold
 " }}}
 " :help highlight-groups "{{{
