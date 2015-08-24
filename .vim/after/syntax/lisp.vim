@@ -12,6 +12,7 @@ syn keyword lispFunc aand
 syn keyword lispFunc acond
 syn keyword lispFunc alambda
 syn keyword lispFunc each-line
+syn keyword lispFunc defapp
 syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
 " }}}
@@ -112,4 +113,5 @@ syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
 syn keyword lispKey :ff :unix :windows :CR :CRLF
 syn keyword lispKey :print-object
 syn keyword lispKey :vector
+syn keyword lispKey :capitalize
 " }}}
