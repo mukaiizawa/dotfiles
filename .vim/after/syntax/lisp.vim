@@ -20,6 +20,12 @@ syn keyword lispFunc defapp
 " function
 " {{{
 
+syn keyword lispFunc executable
+syn keyword lispFunc exit
+syn keyword lispFunc call
+syn keyword lispFunc args
+syn keyword lispFunc before
+syn keyword lispFunc after
 syn keyword lispFunc fn-if
 syn keyword lispFunc fn-and
 syn keyword lispFunc fn-or
@@ -66,7 +72,6 @@ syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
 syn keyword lispFunc input-list
-syn keyword lispFunc args
 syn keyword lispFunc component-present-p
 syn keyword lispFunc dir-pathname-p
 syn keyword lispFunc pathname-as-directory
