@@ -11,4 +11,4 @@ setlocal lispwords+=awhen
 setlocal lispwords+=aand
 setlocal lispwords+=acond
 setlocal lispwords+=alambda
-setlocal lispwords+=deffapp
+setlocal lispwords+=defapp
