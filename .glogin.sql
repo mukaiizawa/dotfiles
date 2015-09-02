@@ -83,12 +83,13 @@
 /* %ORACLE_HOME%/product/11.2.0/client_1/sqlplus/admin/glogin.sql */
 
 define_editor= 'C:/Program Files (x86)/Vim/vim74/gvim.exe'
-set linesize 32767
-set trimspool on
-set feedback off
-set wrap off
-set pagesize 20
-set colsep ','
+SET LINESIZE 32767
+SET TRIMSPOOL ON
+SET FEEDBACK OFF
+SET WRAP OFF
+SET UNDERLINE OFF
+SET PAGESIZE 20
+SET COLSEP ','
 
 
 
