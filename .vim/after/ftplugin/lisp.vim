@@ -2,6 +2,8 @@ setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
 
+setlocal lispwords+=set-macro-character
+setlocal lispwords+=set-dispatch-macro-character
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-trace
 setlocal lispwords+=while
