@@ -10,18 +10,24 @@ function! SurroundWith(leftPart, rightPart, currentLine)
 
   if s:substIndex == 0    " Is it surrounded already?
 
+    " leftPart.
     " Remove leftPart from targetString.
     let s:targetString = s:targetString[strlen(a:leftPart) : ]
     let s:copyOfTargetString = s:targetString
 
-    " Get substIndex of rightPart.
-    while s:substIndex != -1
-      let s:copyOfTargetString = s:copyOfTargetString[s:substIndex + 1: ]
-      let s:substIndex = stridx(s:copyOfTargetString, a:rightPart)
-    endwhile
-
-    " Remove rightPart from targetString.
-    let s:outputLine = s:targetString[ : s:substIndex - strlen(a:rightPart)]
+    " rightPart.
+    if strlen(a:rightPart) > 0
+      " Get substIndex of rightPart.
+      while s:substIndex != -1
+        let s:copyOfTargetString = s:copyOfTargetString[s:substIndex + 1: ]
+        let s:substIndex = stridx(s:copyOfTargetString, a:rightPart)
+      endwhile
+      " Remove rightPart from targetString.
+      let s:outputLine = s:targetString[ : s:substIndex - strlen(a:rightPart)]
+    else
+      " Case of empty rightPart.
+      let s:outputLine = s:targetString
+    endif
 
   else
     " Surround print string!
@@ -47,7 +53,7 @@ function! PrintSurround() range
         \  'java'       : ['System.out.println(' , ');'],
         \  'javascript' : ['document.write(' , ');'],
         \  'jsp'        : ['document.write(' , ');'],
-        \  'lisp'       : ['(print ' , ')'],
+        \  'lisp'       : ['#p' , ''],
         \  'peal'       : ['print "' , '";'],
         \  'python'     : ['print("' , '")'],
         \  'ruby'       : ['puts "' , '"'],
