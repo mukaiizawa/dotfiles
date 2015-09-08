@@ -57,7 +57,7 @@ syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
 syn keyword lispFunc split
-syn keyword lispFunc BM
+syn keyword lispFunc boyer-moore
 syn keyword lispFunc replstr
 syn keyword lispFunc trimstr
 syn keyword lispFunc fillstr
