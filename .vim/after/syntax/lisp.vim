@@ -14,6 +14,8 @@ syn keyword lispFunc alambda
 syn keyword lispFunc each-line
 syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
+syn keyword lispFunc getopt
+syn keyword lispFunc parse-args
 syn keyword lispFunc defapp
 " }}}
 
