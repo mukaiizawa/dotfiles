@@ -16,7 +16,7 @@ syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
 syn keyword lispFunc getopt
 syn keyword lispFunc parse-args
-syn keyword lispFunc defapp
+syn keyword lispFunc defexe
 " }}}
 
 " function
