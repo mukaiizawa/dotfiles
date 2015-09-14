@@ -91,7 +91,6 @@ syn keyword lispFunc write-to!
 syn keyword lispFunc mkfile
 syn keyword lispFunc mkfile!
 syn keyword lispFunc mapfile
-syn keyword lispFunc mapfilerec
 
 " }}}
 
@@ -109,5 +108,6 @@ syn keyword lispKey :ff :unix :windows :CR :CRLF
 syn keyword lispKey :print-object
 syn keyword lispKey :vector
 syn keyword lispKey :capitalize
+syn keyword lispKey :recursive
 " }}}
 
