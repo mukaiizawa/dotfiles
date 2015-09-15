@@ -11,7 +11,6 @@ setlocal lispwords+=while
 setlocal lispwords+=for
 setlocal lispwords+=aif
 setlocal lispwords+=awhen
-setlocal lispwords+=aand
 setlocal lispwords+=acond
 setlocal lispwords+=alambda
 setlocal lispwords+=getopt
