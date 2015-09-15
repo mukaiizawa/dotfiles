@@ -3,6 +3,7 @@
 "  {{{
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-trace
+syn keyword lispFunc surround
 syn keyword lispFunc while
 syn keyword lispFunc for
 syn keyword lispFunc aif
