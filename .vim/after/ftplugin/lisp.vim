@@ -15,4 +15,4 @@ setlocal lispwords+=acond
 setlocal lispwords+=alambda
 setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
-setlocal lispwords+=defapp
+setlocal lispwords+=defexe
