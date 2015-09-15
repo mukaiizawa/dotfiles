@@ -66,6 +66,7 @@ syn keyword lispFunc trimstr
 syn keyword lispFunc fillstr
 syn keyword lispFunc lastchar
 syn keyword lispFunc countchar
+syn keyword lispFunc list->string
 syn keyword lispFunc encoding
 syn keyword lispFunc show-hash
 syn keyword lispFunc princln
