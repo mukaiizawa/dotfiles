@@ -27,6 +27,7 @@ syn keyword lispFunc executable
 syn keyword lispFunc exit
 syn keyword lispFunc call
 syn keyword lispFunc args
+syn keyword lispFunc usage
 syn keyword lispFunc before
 syn keyword lispFunc after
 syn keyword lispFunc fn-if
@@ -63,7 +64,7 @@ syn keyword lispFunc split
 syn keyword lispFunc boyer-moore
 syn keyword lispFunc replstr
 syn keyword lispFunc trimstr
-syn keyword lispFunc fillstr
+syn keyword lispFunc format-string
 syn keyword lispFunc lastchar
 syn keyword lispFunc countchar
 syn keyword lispFunc list->string
@@ -111,5 +112,6 @@ syn keyword lispKey :print-object
 syn keyword lispKey :vector
 syn keyword lispKey :capitalize
 syn keyword lispKey :recursive
+syn keyword lispKey :left :right :float :padding
 " }}}
 
