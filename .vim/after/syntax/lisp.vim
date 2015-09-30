@@ -60,6 +60,7 @@ syn keyword lispFunc emptyp
 syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
+syn keyword lispFunc explode
 syn keyword lispFunc split
 syn keyword lispFunc boyer-moore
 syn keyword lispFunc replstr
