@@ -63,14 +63,14 @@ syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
 syn keyword lispFunc explode
-syn keyword lispFunc split
+syn keyword lispFunc string->list
+syn keyword lispFunc list->string
 syn keyword lispFunc boyer-moore
 syn keyword lispFunc replstr
 syn keyword lispFunc trimstr
 syn keyword lispFunc format-string
 syn keyword lispFunc lastchar
 syn keyword lispFunc countchar
-syn keyword lispFunc list->string
 syn keyword lispFunc encoding
 syn keyword lispFunc show-hash
 syn keyword lispFunc princln

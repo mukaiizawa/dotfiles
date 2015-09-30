@@ -13,6 +13,7 @@ setlocal lispwords+=for
 setlocal lispwords+=aif
 setlocal lispwords+=awhen
 setlocal lispwords+=acond
+setlocal lispwords+=dcond
 setlocal lispwords+=alambda
 setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
