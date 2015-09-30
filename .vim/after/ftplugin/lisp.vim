@@ -4,6 +4,7 @@ setlocal shiftwidth=4
 
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
+setlocal lispwords+=dostring
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-trace
 setlocal lispwords+=surround
