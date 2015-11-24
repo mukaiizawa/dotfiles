@@ -364,9 +364,14 @@ endif
 
 " Execute current buffer with ccl.
 if executable('wx86cl')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
 else
   nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
+endif
+if executable('wx86cl64')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+else
+  nnoremap <silent>gcw  :<C-u>echo "wx86cl64: command not found"<CR>
 endif
 
 " Execute current buffer with sbcl.
