@@ -432,6 +432,8 @@ vnoremap <Space>h 0
 vnoremap <Space>l $
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
+nnoremap ) }
+nnoremap ( {
 
 " Change directory to carrent buffer directory.
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
