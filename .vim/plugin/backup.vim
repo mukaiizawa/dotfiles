@@ -3,7 +3,7 @@ function! MakeBackupFile()
   if has('win32') || has ('win64')
     let s:backupDir = $Home . '/.back'
   else
-    let s:backupDir = $Home . '.back'
+    let s:backupDir = $Home . '../.back/'
   endif
 
   if isdirectory(s:backupDir) == 0
