@@ -601,13 +601,19 @@ function! UniteStartup()
       if argc()==0 && bufnr('$')==1 
 
       \  Unite
-      \  output:echo:"":!
+      \  output:echo:":":!
       \  output:echo:"===:Edit:===":! menu:Edit
-      \  output:echo:"":!
+      \  output:echo:":":!
+      \  output:echo:":":!
       \  output:echo:"===:Search:===":! menu:Search
-      \  output:echo:"":!
+      \  output:echo:":":!
+      \  output:echo:":":!
       \  output:echo:"===:Neobundle:===":! menu:NeoBundle
-      \  output:echo:"":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
       \  output:echo:":::::::::::::::::::::.##.::::::::::::::::::":!
       \  output:echo:"::::::::::::::::::::.####.:::::::::::::::::":!
       \  output:echo:"::::::::::::::::::.########.:::::::::::::::":!
@@ -631,7 +637,22 @@ function! UniteStartup()
       \  output:echo:":::::::::::::::::::::`##'::::::::::::::::::_|:::::::_|:::::_|_|_|::_|::::::_|::_|_|_|::::_|::::::::::_|_|:::::::_|::::::::_|_|_|::::_|_|_|:":!
       \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
       \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
-      \  output:echo:"":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
+      \  output:echo:":":!
       \  neomru/directory
       \  neomru/file
       \  -hide-source-names
