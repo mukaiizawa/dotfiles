@@ -53,7 +53,7 @@ function! PrintSurround() range
         \  'java'       : ['System.out.println(' , ');'],
         \  'javascript' : ['document.write(' , ');'],
         \  'jsp'        : ['document.write(' , ');'],
-        \  'lisp'       : ['#p' , ''],
+        \  'lisp'       : ['#o' , ''],
         \  'peal'       : ['print "' , '";'],
         \  'python'     : ['print("' , '")'],
         \  'ruby'       : ['puts "' , '"'],
