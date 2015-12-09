@@ -116,5 +116,6 @@ syn keyword lispKey :vector
 syn keyword lispKey :capitalize
 syn keyword lispKey :recursive
 syn keyword lispKey :left :right :float :padding
+syn keyword lispKey :title :desc :opts :foot
 " }}}
 
