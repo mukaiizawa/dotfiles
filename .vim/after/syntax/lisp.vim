@@ -94,6 +94,7 @@ syn keyword lispFunc parent-directory
 syn keyword lispFunc read-from
 syn keyword lispFunc write-to
 syn keyword lispFunc write-to!
+syn keyword lispFunc mkdir
 syn keyword lispFunc mkfile
 syn keyword lispFunc mkfile!
 syn keyword lispFunc mapfile
