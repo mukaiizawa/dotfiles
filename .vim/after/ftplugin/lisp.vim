@@ -9,6 +9,7 @@ setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-trace
 setlocal lispwords+=surround
 setlocal lispwords+=while
+setlocal lispwords+=awhile
 setlocal lispwords+=for
 setlocal lispwords+=aif
 setlocal lispwords+=awhen
