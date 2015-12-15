@@ -363,15 +363,28 @@ else
 endif
 
 " Execute current buffer with ccl.
-if executable('wx86cl')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+if has("win32")
+  if executable('wx86cl')
+    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+  else
+    nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
+  endif
+  if executable('wx86cl64')
+    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+  else
+    nnoremap <silent>gcw  :<C-u>echo "wx86cl64: command not found"<CR>
+  endif
 else
-  nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
-endif
-if executable('wx86cl64')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-else
-  nnoremap <silent>gcw  :<C-u>echo "wx86cl64: command not found"<CR>
+  if executable('lx86cl')
+    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+  else
+    nnoremap <silent>gcw  :<C-u>echo "lx86cl: command not found"<CR>
+  endif
+  if executable('lx86cl64')
+    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+  else
+    nnoremap <silent>gcw  :<C-u>echo "lx86cl64: command not found"<CR>
+  endif
 endif
 
 " Execute current buffer with sbcl.
