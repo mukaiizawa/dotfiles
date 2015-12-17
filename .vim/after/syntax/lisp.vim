@@ -69,6 +69,7 @@ syn keyword lispFunc beforep
 syn keyword lispFunc afterp
 syn keyword lispFunc last-member
 syn keyword lispFunc most
+syn keyword lispFunc convert-tree
 
 " }}}
 
