@@ -108,12 +108,12 @@ syn keyword lispFunc format-string
 " {{{
 syn keyword lispFunc encoding
 syn keyword lispFunc guess-encoding
+syn keyword lispFunc stdin
+syn keyword lispFunc stdout
 syn keyword lispFunc show-hash
 syn keyword lispFunc princln
 syn keyword lispFunc println
 syn keyword lispFunc echo
-syn keyword lispFunc stdin
-syn keyword lispFunc stdout
 syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
