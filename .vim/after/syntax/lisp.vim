@@ -4,7 +4,7 @@
 "  {{{
 
 syn keyword lispFunc with-gensyms
-syn keyword lispFunc with-trace
+syn keyword lispFunc with-encoding
 syn keyword lispFunc surround
 syn keyword lispFunc dostring
 syn keyword lispFunc while
@@ -112,6 +112,8 @@ syn keyword lispFunc show-hash
 syn keyword lispFunc princln
 syn keyword lispFunc println
 syn keyword lispFunc echo
+syn keyword lispFunc stdin
+syn keyword lispFunc stdout
 syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
