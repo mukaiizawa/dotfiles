@@ -114,6 +114,7 @@ syn keyword lispFunc show-hash
 syn keyword lispFunc princln
 syn keyword lispFunc println
 syn keyword lispFunc echo
+syn keyword lispFunc info
 syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
