@@ -83,6 +83,7 @@
 /* %ORACLE_HOME%/product/11.2.0/client_1/sqlplus/admin/glogin.sql */
 
 define_editor= 'C:/Program Files (x86)/Vim/vim74/gvim.exe'
+SET SQLPROMPT "@&_CONNECT_IDENTIFIER> "
 SET LINESIZE 32767
 SET TRIMSPOOL ON
 SET TRIMOUT ON
