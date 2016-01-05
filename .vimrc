@@ -363,28 +363,12 @@ else
 endif
 
 " Execute current buffer with ccl.
-if has("win32")
-  if executable('wx86cl')
-    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-  else
-    nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
-  endif
-  if executable('wx86cl64')
-    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-  else
-    nnoremap <silent>gcw  :<C-u>echo "wx86cl64: command not found"<CR>
-  endif
+if executable('wx86cl64')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+elseif executable('lx86cl64')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
 else
-  if executable('lx86cl')
-    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-  else
-    nnoremap <silent>gcw  :<C-u>echo "lx86cl: command not found"<CR>
-  endif
-  if executable('lx86cl64')
-    nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-  else
-    nnoremap <silent>gcw  :<C-u>echo "lx86cl64: command not found"<CR>
-  endif
+  nnoremap <silent>gcw  :<C-u>echo "ccl: command not found"<CR>
 endif
 
 " Execute current buffer with sbcl.
@@ -772,8 +756,9 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
-      \    'type': executable('clisp')? 'lisp/clisp':
+      \    'type': executable('lx86cl64')? 'lisp/ccl':
       \            executable('wx86cl64')? 'lisp/ccl':
+      \            executable('clisp')? 'lisp/clisp':
       \            executable('sbcl')? 'lisp/sbcl': '',
       \    'hook/time/enable': 1,
       \  },
