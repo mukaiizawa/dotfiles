@@ -13,6 +13,7 @@ syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
 
 " abbrevs function
+syn keyword lispFunc mvl
 syn keyword lispFunc hash-size
 syn keyword lispFunc mkhash
 
