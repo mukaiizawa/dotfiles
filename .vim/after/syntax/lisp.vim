@@ -11,6 +11,7 @@ syn keyword lispFunc while
 syn keyword lispFunc for
 syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
+syn keyword lispFunc s-expr
 
 " abbrevs function
 syn keyword lispFunc mvl
