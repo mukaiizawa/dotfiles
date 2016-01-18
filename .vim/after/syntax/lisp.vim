@@ -109,7 +109,6 @@ syn keyword lispFunc format-string
 
 " io utils
 " {{{
-syn keyword lispFunc encoding
 syn keyword lispFunc guess-encoding
 syn keyword lispFunc stdin
 syn keyword lispFunc stdout
