@@ -148,7 +148,6 @@ syn keyword lispFunc mapfile
 syn keyword lispFunc parse-int
 syn keyword lispFunc parse-sym
 syn keyword lispFunc getopt
-syn keyword lispFunc parse-args
 syn keyword lispFunc defexe
 syn keyword lispFunc executable
 syn keyword lispFunc exit
