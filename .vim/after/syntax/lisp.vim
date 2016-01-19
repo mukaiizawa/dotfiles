@@ -58,6 +58,7 @@ syn keyword lispFunc fn-or
 
 syn keyword lispFunc last1
 syn keyword lispFunc singlep
+syn keyword lispFunc alistp
 syn keyword lispFunc append1
 syn keyword lispFunc conc1
 syn keyword lispFunc mklist
