@@ -4,6 +4,7 @@ setlocal shiftwidth=4
 
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
+setlocal lispwords+=alambda
 setlocal lispwords+=dlambda
 setlocal lispwords+=olambda
 setlocal lispwords+=dostring
@@ -19,7 +20,6 @@ setlocal lispwords+=acond
 setlocal lispwords+=dcond
 setlocal lispwords+=dbind
 setlocal lispwords+=mvl
-setlocal lispwords+=alambda
 setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
 setlocal lispwords+=defexe
