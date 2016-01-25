@@ -756,9 +756,10 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
-      \    'type': executable('lx86cl64')? 'lisp/ccl':
-      \            executable('wx86cl64')? 'lisp/ccl':
+      \    'type':
       \            executable('clisp')? 'lisp/clisp':
+      \            executable('lx86cl64')? 'lisp/ccl':
+      \            executable('wx86cl64')? 'lisp/ccl':
       \            executable('sbcl')? 'lisp/sbcl': '',
       \    'hook/time/enable': 1,
       \  },
