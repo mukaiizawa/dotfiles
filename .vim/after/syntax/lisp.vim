@@ -5,6 +5,7 @@
 
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-encoding
+syn keyword lispFunc canonical-letargs
 syn keyword lispFunc alambda
 syn keyword lispFunc dlambda
 syn keyword lispFunc olambda
