@@ -756,21 +756,25 @@ let g:quickrun_config = {
       \  },
       \
       \  'lisp' : {
-      \    'type':
+      \    'type': executable('lx86cl64')? 'lisp/ccll':
+      \            executable('wx86cl64')? 'lisp/cclw':
       \            executable('clisp')? 'lisp/clisp':
-      \            executable('lx86cl64')? 'lisp/ccl':
-      \            executable('wx86cl64')? 'lisp/ccl':
       \            executable('sbcl')? 'lisp/sbcl': '',
       \    'hook/time/enable': 1,
       \  },
       \
-      \  'lisp/sbcl': {
-      \   'command': 'sbcl',
-      \   'cmdopt': '--script',
+      \  'lisp/sbcl' : {
+      \   'command' : 'sbcl',
+      \   'cmdopt' : '--script',
       \ },
       \
-      \  'lisp/ccl': {
-      \   'command': 'wx86cl64',
+      \  'lisp/ccll' : {
+      \   'command' : 'lx86cl64',
+      \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
+      \ },
+      \
+      \  'lisp/cclw' : {
+      \   'command' : 'wx86cl64',
       \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
       \ },
       \
@@ -779,10 +783,12 @@ let g:quickrun_config = {
       \ },
       \
       \  'java' : {
+      \    'exec' : ['javac -J-Dfile.encoding=UTF8 %o %s', '%c -Dfile.encoding=UTF8 %s:t:r %a'],
       \    'hook/time/enable': 1,
       \  },
       \
       \}
+
 
 " }}}
 "  IndentLine "{{{
