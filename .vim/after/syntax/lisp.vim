@@ -23,6 +23,7 @@ syn keyword lispFunc mvl
 syn keyword lispFunc hash-size
 syn keyword lispFunc mkhash
 
+
 " }}}
 
 " anaphoric macros
@@ -36,6 +37,7 @@ syn keyword lispFunc acond
 syn keyword lispFunc dcond
 syn keyword lispFunc each-line
 
+
 " }}}
 
 " sequential
@@ -43,7 +45,7 @@ syn keyword lispFunc each-line
 
 syn keyword lispFunc before
 syn keyword lispFunc after
-syn keyword lispFunc lastelt
+
 
 " }}}
 
@@ -53,6 +55,7 @@ syn keyword lispFunc lastelt
 syn keyword lispFunc fn-if
 syn keyword lispFunc fn-and
 syn keyword lispFunc fn-or
+
 
 " }}}
 
@@ -77,6 +80,7 @@ syn keyword lispFunc afterp
 syn keyword lispFunc last-member
 syn keyword lispFunc most
 
+
 " }}}
 
 " functional utils
@@ -89,6 +93,7 @@ syn keyword lispFunc maprec
 syn keyword lispFunc memoize
 syn keyword lispFunc compose
 syn keyword lispFunc repeat
+
 
 " }}}
 
@@ -108,6 +113,7 @@ syn keyword lispFunc replstr
 syn keyword lispFunc trimstr
 syn keyword lispFunc format-string
 
+
 " }}}
 
 " io utils
@@ -124,6 +130,7 @@ syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
 syn keyword lispFunc input-list
+
 
 " }}}
 
@@ -143,10 +150,12 @@ syn keyword lispFunc mkfile
 syn keyword lispFunc ls
 syn keyword lispFunc mapfile
 
+
 " }}}
 
 " for application
 " {{{
+
 syn keyword lispFunc parse-int
 syn keyword lispFunc parse-sym
 syn keyword lispFunc getopt
@@ -156,6 +165,7 @@ syn keyword lispFunc exit
 syn keyword lispFunc call
 syn keyword lispFunc args
 syn keyword lispFunc usage
+
 
 " }}}
 
@@ -172,6 +182,7 @@ syn keyword lispKey :capitalize
 syn keyword lispKey :recursive
 syn keyword lispKey :left :right :float :padding
 syn keyword lispKey :title :desc :opts :foot
+
 
 " }}}
 
@@ -296,6 +307,8 @@ syn keyword lispFunc ul
 syn keyword lispFunc var
 syn keyword lispFunc video
 syn keyword lispFunc wbr
+
+
 " }}}
 
 
