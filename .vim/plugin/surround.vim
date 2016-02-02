@@ -57,6 +57,7 @@ function! PrintSurround() range
         \  'peal'       : ['print "' , '";'],
         \  'python'     : ['print("' , '")'],
         \  'ruby'       : ['puts "' , '"'],
+        \  'vb'        : ['MsgBox ' , ''],
         \  'vim'        : ['echo "' , '"'],
         \
         \  }
