@@ -11,6 +11,7 @@ syn keyword lispFunc dlambda
 syn keyword lispFunc olambda
 syn keyword lispFunc surround
 syn keyword lispFunc dostring
+syn keyword lispFunc *=
 syn keyword lispFunc while
 syn keyword lispFunc for
 syn keyword lispFunc abbrev
@@ -18,6 +19,8 @@ syn keyword lispFunc abbrevs
 syn keyword lispFunc s-expr
 
 " abbrevs function
+syn keyword lispFunc +=
+syn keyword lispFunc -=
 syn keyword lispFunc dbind
 syn keyword lispFunc mvb
 syn keyword lispFunc mvl
