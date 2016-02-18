@@ -192,6 +192,8 @@ syn keyword lispKey :title :desc :opts :foot
 
 " for html
 " {{{
+
+syn keyword lispFunc with-html-output
 syn keyword lispKey :a
 syn keyword lispKey :abbr
 syn keyword lispKey :acronym

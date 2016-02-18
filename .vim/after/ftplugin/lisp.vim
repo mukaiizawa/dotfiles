@@ -1,3 +1,4 @@
+
 setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
@@ -26,6 +27,8 @@ setlocal lispwords+=defexe
 
 " for html
 " {{{
+
+setlocal lispwords+=with-html-output
 setlocal lispwords+=:a
 setlocal lispwords+=:abbr
 setlocal lispwords+=:acronym
