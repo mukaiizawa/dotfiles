@@ -80,6 +80,7 @@ set helplang=en
 set history=2000
 set nrformats-=octal
 set fileencoding=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 set fileformat=unix
 set fileformats=unix,dos
 
