@@ -40,7 +40,6 @@ syn keyword lispFunc awhile
 syn keyword lispFunc aand
 syn keyword lispFunc acond
 syn keyword lispFunc dcond
-syn keyword lispFunc each-line
 
 
 " }}}
