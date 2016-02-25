@@ -22,8 +22,8 @@ syn keyword lispFunc s-expr
 syn keyword lispFunc +=
 syn keyword lispFunc -=
 syn keyword lispFunc dbind
-syn keyword lispFunc mvb
-syn keyword lispFunc mvl
+syn keyword lispFunc mbind
+syn keyword lispFunc mlist
 syn keyword lispFunc hash-size
 syn keyword lispFunc mkhash
 
