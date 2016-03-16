@@ -65,7 +65,7 @@ highlight SpecialKey    guifg=#666666
 
 highlight Directory     guifg=#40e0db
 highlight Folded        guifg=#aaaaaa guibg=#404040
-highlight MatchParen    guifg=#ffffff guibg=#880000
+highlight MatchParen    guifg=#000000 guibg=#fd971f gui=bold
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
 highlight Title         guifg=#f86060
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
