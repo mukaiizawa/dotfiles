@@ -176,6 +176,7 @@ syn keyword lispFunc usage
 " keyword
 " {{{
 
+syn keyword lispKey :keyword
 syn keyword lispKey :extension
 syn keyword lispKey :external-format
 syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
