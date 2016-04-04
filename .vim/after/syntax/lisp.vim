@@ -108,6 +108,7 @@ syn keyword lispFunc emptyp
 syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
+syn keyword lispFunc mkkey
 syn keyword lispFunc explode
 syn keyword lispFunc string->list
 syn keyword lispFunc list->string
