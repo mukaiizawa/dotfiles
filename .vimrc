@@ -141,10 +141,8 @@ nnoremap zE <NOP>
 nnoremap ZZ <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
-nnoremap <C-f> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <C-u> <NOP>
-nnoremap <C-b> <NOP>
 nnoremap <Space> <NOP>
 nnoremap <Home> <NOP>
 nnoremap <Home> <NOP>
