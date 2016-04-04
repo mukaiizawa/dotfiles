@@ -108,6 +108,7 @@ syn keyword lispFunc emptyp
 syn keyword lispFunc blankp
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
+syn keyword lispFunc mkkey
 syn keyword lispFunc explode
 syn keyword lispFunc string->list
 syn keyword lispFunc list->string
@@ -176,6 +177,7 @@ syn keyword lispFunc usage
 " keyword
 " {{{
 
+syn keyword lispKey :keyword
 syn keyword lispKey :extension
 syn keyword lispKey :external-format
 syn keyword lispKey :enc :utf-8 :uft-16 :cp932 :euc-jp
