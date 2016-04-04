@@ -824,7 +824,7 @@ let g:caw_no_default_keymappings = 1
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 
 " file_rec
-nnoremap <silent><C-f> :<C-u>UniteWithBufferDir file_rec<CR>
+nnoremap <silent>mrf   :<C-u>UniteWithBufferDir file_rec<CR>
 
 " grep
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
@@ -866,7 +866,7 @@ nnoremap <silent>mq    :<C-u>QuickRun<CR>
 "}}}
 " ContinuousNumber "{{{
 
-vnoremap <silent>co    :ContinuousNumber <C-a><CR>
+vnoremap <silent>gco    :ContinuousNumber <C-a><CR>
 
 "}}}
 " IndentLine "{{{
