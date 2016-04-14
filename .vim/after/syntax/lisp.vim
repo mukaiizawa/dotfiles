@@ -73,7 +73,7 @@ syn keyword lispFunc append1
 syn keyword lispFunc conc1
 syn keyword lispFunc mklist
 syn keyword lispFunc iota
-syn keyword lispFunc longerp
+syn keyword lispFunc longer
 syn keyword lispFunc filter
 syn keyword lispFunc group
 syn keyword lispFunc flatten
