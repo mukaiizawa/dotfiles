@@ -15,6 +15,7 @@ syn keyword lispFunc dofile
 syn keyword lispFunc *=
 syn keyword lispFunc while
 syn keyword lispFunc for
+syn keyword lispFunc for-each
 syn keyword lispFunc abbrev
 syn keyword lispFunc abbrevs
 syn keyword lispFunc s-expr

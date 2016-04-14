@@ -16,6 +16,7 @@ setlocal lispwords+=surround
 setlocal lispwords+=while
 setlocal lispwords+=awhile
 setlocal lispwords+=for
+setlocal lispwords+=for-each
 setlocal lispwords+=aif
 setlocal lispwords+=awhen
 setlocal lispwords+=acond
