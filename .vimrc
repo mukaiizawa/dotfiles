@@ -39,23 +39,6 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Yggdroot/indentLine'
 
-" famous colorsheme {{{
-" background => dark
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'croaker/mustang-vim'
-NeoBundle 'jeffreyiacono/vim-colors-wombat'
-NeoBundle 'nanotech/jellybeans'
-NeoBundle 'vim-scripts/Lucius'
-NeoBundle 'vim-scripts/Zenburn'
-NeoBundle 'mrkn/mrkn256'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'therubymug/vim-pyte'
-NeoBundle 'tomasr/molokai'
-
-" background => light
-NeoBundle 'vim-scripts/eclipse'
-
-"}}}
 
 call neobundle#end()
 filetype plugin indent on
