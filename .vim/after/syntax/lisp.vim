@@ -46,8 +46,8 @@ syn keyword lispFunc group
 syn keyword lispFunc flatten
 syn keyword lispFunc prune
 syn keyword lispFunc find2
-syn keyword lispFunc beforep
-syn keyword lispFunc afterp
+syn keyword lispFunc before?
+syn keyword lispFunc after?
 syn keyword lispFunc last-member
 syn keyword lispFunc most
 syn keyword lispFunc map0-n
@@ -57,8 +57,8 @@ syn keyword lispFunc maprec
 syn keyword lispFunc memoize
 syn keyword lispFunc compose
 syn keyword lispFunc repeat
-syn keyword lispFunc emptyp
-syn keyword lispFunc blankp
+syn keyword lispFunc empty?
+syn keyword lispFunc blank?
 syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
 syn keyword lispFunc mkkey
@@ -81,10 +81,10 @@ syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
 syn keyword lispFunc input-list
-syn keyword lispFunc dir-pathname-p
+syn keyword lispFunc dir-pathname?
 syn keyword lispFunc pathname-as-directory
 syn keyword lispFunc directory-wildcard
-syn keyword lispFunc file-exists-p
+syn keyword lispFunc file-exists?
 syn keyword lispFunc pathname-as-file
 syn keyword lispFunc parent-directory
 syn keyword lispFunc read-from
