@@ -856,12 +856,12 @@ nnoremap <Space>i      :<C-u>IndentLinesToggle<CR>
 
 "}}}
 " caw"{{{
-nmap gci <Plug>(caw:i:toggle)
-nmap gca <Plug>(caw:a:toggle)
+nmap gci <Plug>(caw:hatpos:toggle)
+nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 
-vmap gci <Plug>(caw:i:toggle)
-vmap gca <Plug>(caw:a:toggle)
+vmap gci <Plug>(caw:hatpos:toggle)
+vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
 "}}}
