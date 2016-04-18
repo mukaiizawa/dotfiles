@@ -19,11 +19,13 @@ function! CompleteLispWords(findstart, base)
     let s:result = []
     for s:line in s:lines
       let s:splitedLine = split(s:line, ',')
-      if len(s:splitedLine) == 3 && s:splitedLine[0] =~ '^' . a:base
+      if s:splitedLine[0] =~ '^' . a:base
         call add(s:result, {
               \   'word' : s:splitedLine[0],
               \   'abbr' : printf('%s %s => %s',
-              \                    s:splitedLine[0], s:splitedLine[1], s:splitedLine[2])
+              \                    s:splitedLine[0],
+              \                    (len(s:splitedLine)>1)? s:splitedLine[1] : '',
+              \                    (len(s:splitedLine)>2)? s:splitedLine[2] : '')
               \ })
       endif
     endfor
