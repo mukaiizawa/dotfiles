@@ -440,6 +440,7 @@ nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 " Setting of Plugin.
 "  Unite "{{{
 
+let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 1000
 let g:unite_source_rec_max_cache_files = 2000
 let g:unite_source_rec_async_command = 'files -A'
