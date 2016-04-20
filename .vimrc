@@ -114,6 +114,7 @@ set shiftwidth=2
 
 " Mapping "
 " Mapping to NOP "{{{
+
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
@@ -149,6 +150,7 @@ nnoremap cl <NOP>
 
 "}}}
 " Mapping for Tab, Window "{{{
+
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
 nnoremap sh <C-w>h
@@ -159,11 +161,6 @@ nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
 
-" change current window height(width).
-nnoremap <Up>     4<C-w>-
-nnoremap <Down>  30<C-w>+
-nnoremap <Right>  4<C-w>>
-nnoremap <Left>   4<C-w><
 
 "}}}
 " Mapping for Surround "{{{
