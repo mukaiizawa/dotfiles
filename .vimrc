@@ -441,8 +441,8 @@ nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 "  Unite "{{{
 
 let g:unite_no_default_keymappings = 1
-let g:unite_source_rec_min_cache_files = 1000
-let g:unite_source_rec_max_cache_files = 2000
+let g:unite_source_rec_min_cache_files = 100
+let g:unite_source_rec_max_cache_files = 200
 let g:unite_source_rec_async_command = 'files -A'
 
 
@@ -662,8 +662,8 @@ augroup END
 
 "}}}
 "  NeoMru "{{{
-let g:neomru#file_mru_limit = 3000
-let g:neomru#directory_mru_limit = 1000 " default
+let g:neomru#file_mru_limit = 2500
+let g:neomru#directory_mru_limit = 500
 let g:neomru#update_interval = 10       " 10 seconds 
 
 "}}}
