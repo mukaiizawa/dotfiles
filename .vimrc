@@ -161,6 +161,8 @@ nnoremap <PageDown> <NOP>
 
 " visual mode
 vnoremap s <NOP>
+vnoremap <BS> <NOP>
+vnoremap <CR> <NOP>
 
 
 "}}}
