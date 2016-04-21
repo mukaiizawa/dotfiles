@@ -11,13 +11,16 @@ endif
 syntax enable
 
 " Initialization "{{{
+
 if !1 | finish | endif
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+
 "}}}
 " NeoBundle "{{{
+
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
@@ -41,6 +44,7 @@ NeoBundle 'Yggdroot/indentLine'
 call neobundle#end()
 filetype plugin indent on
 
+
 "}}}
 
 
@@ -52,6 +56,7 @@ filetype plugin indent on
 
 " Setting "
 " Setting for System "{{{
+
 set encoding=utf-8            " Sets the character encoding used inside Vim.
 set wildmenu                  " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 set showcmd                   " Show (partial) command in the last line of the screen.
@@ -65,8 +70,10 @@ set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
 
+
 "}}}
 " Setting for Display "{{{
+
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
 set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
@@ -76,8 +83,10 @@ set list
 set listchars=tab:->,eol:<,trail:>
 set backspace=start,eol,indent
 
+
 "}}}
 " Setting for Status line, Tab page "{{{
+
 set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
@@ -86,33 +95,41 @@ set tabline=%t
 set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
 set tabpagemax=300
 
+
 "}}}
 " Setting for File "{{{
+
 set noundofile
 set viminfo=                   " Not use viminfo file.
 set nobackup
 set noswapfile
 
+
 "}}}
 " Setting for Search,Substitute "{{{
+
 set hlsearch                   " When search word, highlight all its matches.
 set wrapscan
 set ignorecase                 " The case of normal letters is ignored.
 set smartcase                  " Override the ignorecase option if the search pattern contains uppercase charachers.
 
+
 "}}}
 " Setting for Tab,Indent "{{{
+
 set autoindent
 set tabstop=2                  " Number of spaces that a <Tab> in the file counts for.
 set smartindent
 set expandtab
 set shiftwidth=2
 
+
 "}}}
 
 " Mapping "
 " Mapping to NOP "{{{
 
+" normal mode
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
@@ -121,6 +138,14 @@ nnoremap zd <NOP>
 nnoremap zD <NOP>
 nnoremap zE <NOP>
 nnoremap ZZ <NOP>
+nnoremap dh <NOP>
+nnoremap dj <NOP>
+nnoremap dk <NOP>
+nnoremap dl <NOP>
+nnoremap ch <NOP>
+nnoremap cj <NOP>
+nnoremap ck <NOP>
+nnoremap cl <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
 nnoremap <C-y> <NOP>
@@ -134,17 +159,9 @@ nnoremap <Del> <NOP>
 nnoremap <PageUp> <NOP>
 nnoremap <PageDown> <NOP>
 
+" visual mode
 vnoremap s <NOP>
 
-nnoremap dh <NOP>
-nnoremap dj <NOP>
-nnoremap dk <NOP>
-nnoremap dl <NOP>
-
-nnoremap ch <NOP>
-nnoremap cj <NOP>
-nnoremap ck <NOP>
-nnoremap cl <NOP>
 
 "}}}
 " Mapping for Tab, Window "{{{
