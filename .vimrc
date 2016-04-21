@@ -187,6 +187,7 @@ nnoremap sq :<C-u>q<CR>
 " =========================================
 
 " Surround with symble. "{{{
+
 nnoremap s' wbi'<Esc>ea'<Esc>
 nnoremap s" wbi"<Esc>ea"<Esc>
 nnoremap s* wbi*<Esc>ea*<Esc>
@@ -199,14 +200,17 @@ nnoremap s} wbi{<Esc>ea}<Esc>
 nnoremap s[ wbi[<Esc>ea]<Esc>
 nnoremap s] wbi[<Esc>ea]<Esc>
 
+
 "}}}
 " Surround with print "{{{
 
 nnoremap sp :<C-u>PrintSurround<CR>
 vnoremap sp :PrintSurround<CR>
 
+
 "}}}
 " Delete surround. "{{{
+
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
 nnoremap sd* f*x,x
@@ -219,8 +223,10 @@ nnoremap sd} f}xF{x
 nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
+
 "}}}
 " Change surround from ' to something. "{{{
+
 nnoremap s'" f'r",r"
 nnoremap s'* f'r*,r*
 nnoremap s'< f'r>,r<
@@ -232,8 +238,10 @@ nnoremap s'} f'r},r{
 nnoremap s'[ f'r],r[
 nnoremap s'] f'r],r[
 
+
 "}}}
 " Change surround from " to something. "{{{
+
 nnoremap s"' f"r',r'
 nnoremap s"* f"r*,r*
 nnoremap s"< f"r>,r<
@@ -245,8 +253,10 @@ nnoremap s"} f"r},r{
 nnoremap s"[ f"r],r[
 nnoremap s"] f"r],r[
 
+
 "}}}
 " Change surround from * to something. "{{{
+
 nnoremap s*' f*r',r'
 nnoremap s*" f*r",r"
 nnoremap s*< f*r>,r<
@@ -258,8 +268,10 @@ nnoremap s*} f*r},r{
 nnoremap s*[ f*r],r[
 nnoremap s*] f*r],r[
 
+
 "}}}
 " Change surround from < > to something. "{{{
+
 nnoremap s<' f>r'F<r'
 nnoremap s<" f>r"F<r"
 nnoremap s<* f>r*F<r*
@@ -280,8 +292,10 @@ nnoremap s>} f>r}F<r{
 nnoremap s>[ f>r]F<r[
 nnoremap s>] f>r]F<r[
 
+
 "}}}
 " Change surround from ( ) to something. "{{{
+
 nnoremap s(' f)r'F(r'
 nnoremap s(" f)r"F(r"
 nnoremap s(* f)r*F(r*
@@ -302,8 +316,10 @@ nnoremap s)} f)r}F(r{
 nnoremap s)[ f)r]F(r[
 nnoremap s)] f)r]F(r[
 
+
 "}}}
 " Change surround from { } to something. "{{{
+
 nnoremap s{' f}r'F{r'
 nnoremap s{" f}r"F{r"
 nnoremap s{* f}r*F{r*
@@ -324,8 +340,10 @@ nnoremap s}) f}r)F{r(
 nnoremap s}[ f}r]F{r[
 nnoremap s}] f}r]F{r[
 
+
 "}}}
 " Change surround from [ ] to something. "{{{
+
 nnoremap s[' f]r'F[r'
 nnoremap s[" f]r"F[r"
 nnoremap s[* f]r*F[r*
@@ -346,7 +364,10 @@ nnoremap s]) f]r)F[r(
 nnoremap s]{ f]r}F[r{
 nnoremap s]} f]r}F[r{
 
+
 "}}}
+
+
 "}}}
 " Mapping for Calling External Program {{{
 
