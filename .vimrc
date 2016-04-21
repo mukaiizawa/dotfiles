@@ -463,6 +463,7 @@ nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 " Reroad vimrc.
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 
+
 "}}}
 
 
@@ -503,6 +504,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+
 "}}}
 "  Unite menu "{{{
 
@@ -511,6 +513,7 @@ if !exists("g:unite_source_menu_menus")
 endif
 
 " Diff "{{{
+
 let g:unite_source_menu_menus.Diff = {
       \  "command_candidates" : [
       \      [ "diffoff     "  , "windo diffoff | set nowrap | set foldmethod=marker" ],
@@ -519,61 +522,73 @@ let g:unite_source_menu_menus.Diff = {
       \      [ "diffbuffers "  , "windo diffthis" ],
       \  ]
       \}
+
+
 "}}}
 " Edit "{{{
+
 let g:unite_source_menu_menus.Edit = {
       \  "command_candidates" : [
       \      [ "vimrc         :<F3>"  , "edit $MYVIMRC " ],
       \      [ "gvimrc        :<F4>"  , "edit $MYGVIMRC" ],
       \  ]
       \}
+
+
 "}}}
 " Search "{{{
+
 let g:unite_source_menu_menus.Search = {
       \  "command_candidates" : [
       \      [ "file/mru      :mru" , "Unite file_mru" ],
       \      [ "directory/mru :mrd" , "Unite directory_mru" ],
       \  ]
       \}
+
+
 "}}}
 " NeoBundle "{{{
+
 let g:unite_source_menu_menus.NeoBundle = {
-      \  "command_candidates" : [
-      \      [ "NeoBundleLog"         , "NeoBundleLog" ],
-      \      [ "NeoBundleList"        , "NeoBundleList" ],
-      \      [ "NeoBundleClean"       , "NeoBundleClean" ],
-      \      [ "NeoBundleCheck"       , "NeoBundleCheck" ],
-      \      [ "NeoBundleUpdate"      , "NeoBundleUpdate" ],
-      \      [ "NeoBundleInstall"     , "NeoBundleInstall" ],
-      \      [ "NeoBundleCheckUpdate" , "NeoBundleCheckUpdate" ],
-      \  ]
-      \}
+      \   "command_candidates" : [
+      \       [ "NeoBundleLog"         , "NeoBundleLog" ],
+      \       [ "NeoBundleList"        , "NeoBundleList" ],
+      \       [ "NeoBundleClean"       , "NeoBundleClean" ],
+      \       [ "NeoBundleCheck"       , "NeoBundleCheck" ],
+      \       [ "NeoBundleUpdate"      , "NeoBundleUpdate" ],
+      \       [ "NeoBundleInstall"     , "NeoBundleInstall" ],
+      \       [ "NeoBundleCheckUpdate" , "NeoBundleCheckUpdate" ],
+      \   ]
+      \ }
+
+
 "}}}
 " Encoding "{{{
 
 let g:unite_source_menu_menus.Encoding = {
-      \  "command_candidates" : [
-      \    [ "utf8"    , "setlocal fenc=Utf8"    ],
-      \    [ "cp932"   , "setlocal fenc=cp932"   ],
-      \    [ "euc "    , "setlocal fenc=euc"     ],
-      \    [ "euc-jp"  , "setlocal fenc=euc-jp"  ],
-      \    [ "utf16"   , "setlocal fenc=utf16"   ],
-      \    [ "utf16-be", "setlocal fenc=utf16be" ],
-      \    [ "jis"     , "setlocal fenc=jis"     ],
-      \    [ "sjis"    , "setlocal fenc=sjis"    ],
-      \    [ "unicode" , "setlocal fenc=unicode" ],
-      \    [ "utf8     -re edit" , "e ++enc=Utf8"    ],
-      \    [ "cp932    -re edit" , "e ++enc=cp932"   ],
-      \    [ "euc      -re edit" , "e ++enc=euc"     ],
-      \    [ "euc-jp   -re edit" , "e ++enc=euc-jp"  ],
-      \    [ "utf16    -re edit" , "e ++enc=utf16"   ],
-      \    [ "utf16-be -re edit" , "e ++enc=utf16be" ],
-      \    [ "jis      -re edit" , "e ++enc=jis"     ],
-      \    [ "sjis     -re edit" , "e ++enc=sjis"    ],
-      \    [ "unicode  -re edit" , "e ++enc=unicode" ],
+      \ "command_candidates" : [
+      \      [ "utf8"    , "setlocal fenc=Utf8"    ],
+      \      [ "cp932"   , "setlocal fenc=cp932"   ],
+      \      [ "euc "    , "setlocal fenc=euc"     ],
+      \      [ "euc-jp"  , "setlocal fenc=euc-jp"  ],
+      \      [ "utf16"   , "setlocal fenc=utf16"   ],
+      \      [ "utf16-be", "setlocal fenc=utf16be" ],
+      \      [ "jis"     , "setlocal fenc=jis"     ],
+      \      [ "sjis"    , "setlocal fenc=sjis"    ],
+      \      [ "unicode" , "setlocal fenc=unicode" ],
+      \      [ "utf8     -re edit" , "e ++enc=Utf8"    ],
+      \      [ "cp932    -re edit" , "e ++enc=cp932"   ],
+      \      [ "euc      -re edit" , "e ++enc=euc"     ],
+      \      [ "euc-jp   -re edit" , "e ++enc=euc-jp"  ],
+      \      [ "utf16    -re edit" , "e ++enc=utf16"   ],
+      \      [ "utf16-be -re edit" , "e ++enc=utf16be" ],
+      \      [ "jis      -re edit" , "e ++enc=jis"     ],
+      \      [ "sjis     -re edit" , "e ++enc=sjis"    ],
+      \      [ "unicode  -re edit" , "e ++enc=unicode" ],
       \  ]
       \
       \ }
+
 
 "}}}
 " Format "{{{

@@ -1,7 +1,10 @@
 
+
 setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
+setlocal dictionary=~/dotfiles/dict/lisp.dict
+inoremap <buffer><C-k> <C-x><C-k>
 
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
@@ -152,3 +155,7 @@ setlocal lispwords+=:var
 setlocal lispwords+=:video
 setlocal lispwords+=:wbr
 " }}}
+
+
+
+

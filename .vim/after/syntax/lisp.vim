@@ -1,7 +1,6 @@
 
 setlocal iskeyword=38,42,43,45,47-58,60-90,97-122,_
 
-
 " abbrevs
 syn keyword lispFunc +=
 syn keyword lispFunc -=
