@@ -394,6 +394,7 @@ else
   nnoremap <silent>gcs  :<C-u>echo "sbcl: command not found"<CR>
 endif
 
+
 "}}}
 " Mapping for Insert Mode "{{{
 
@@ -410,13 +411,14 @@ else
   echo "not exists strftime"
 endif
 
+
 "}}}
 " Mapping for etc "{{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" toggle
+" Toggle option
 nnoremap <Space>/ :set hlsearch!<CR>
 nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
