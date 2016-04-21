@@ -38,8 +38,6 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Yggdroot/indentLine'
-
-
 call neobundle#end()
 filetype plugin indent on
 
