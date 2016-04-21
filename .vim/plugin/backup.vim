@@ -10,20 +10,20 @@ function! MakeBackupFile()
     call mkdir(s:backupDir , 'p')
   endif
 
-  if exists("*strftime")    " if executable 'strftime'
+  if exists("*strftime")    " if executable `strftime'
     let s:today = strftime("%y%m%d")
     if isdirectory(s:backupDir . '/' . s:today) == 0
       call mkdir(s:backupDir . '/' . s:today , 'p')
     endif
-    return writefile(getline(1,'$'),
+    return writefile(readfile(expand('%')),
           \  s:backupDir .
           \  '/' . s:today . 
           \  '/' . expand('%:t') . '.' . localtime())
+  else    " not implemented `strftime'
+    return writefile(readfile(expand('%')),
+          \  s:backupDir .
+          \  '/' . expand('%:t') . '.' . localtime())
   endif
-
-  return writefile(getline(1,'$'),
-        \  s:backupDir .
-        \  '/' . expand('%:t') . '.' . localtime())
 
 endfunction
 
@@ -31,6 +31,6 @@ command! MakeBackupFile call MakeBackupFile()
 
 augroup makeBackupFile
   autocmd!
-  autocmd BufRead * nested :MakeBackupFile
+  autocmd BufWritePre * nested :MakeBackupFile
 augroup END
 
