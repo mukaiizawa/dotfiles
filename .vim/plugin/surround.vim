@@ -46,21 +46,21 @@ function! PrintSurround() range
 
   let s:filetype = &filetype
   let s:printDic = {
-        \  'c'          : ['printf("' , '\n");'],
-        \  'cpp'        : ['std::cout << "' , '";'],
-        \  'dosbatch'   : ['echo "' , '"'],
-        \  'html'       : ['<script>document.write("' , '")</script>'],
-        \  'java'       : ['System.out.println(' , ');'],
-        \  'javascript' : ['document.write(' , ');'],
-        \  'jsp'        : ['document.write(' , ');'],
-        \  'lisp'       : ['#o' , ''],
-        \  'peal'       : ['print "' , '";'],
-        \  'python'     : ['print("' , '")'],
-        \  'ruby'       : ['puts "' , '"'],
-        \  'vb'         : ['MsgBox ' , ''],
-        \  'vim'        : ['echo "' , '"'],
+        \   'c'          : ['printf("' , '\n");'],
+        \   'cpp'        : ['std::cout << "' , '";'],
+        \   'dosbatch'   : ['echo "' , '"'],
+        \   'html'       : ['<script>document.write("' , '")</script>'],
+        \   'java'       : ['System.out.println(' , ');'],
+        \   'javascript' : ['document.write(' , ');'],
+        \   'jsp'        : ['document.write(' , ');'],
+        \   'lisp'       : ['#o' , ''],
+        \   'peal'       : ['print "' , '";'],
+        \   'python'     : ['print("' , '")'],
+        \   'ruby'       : ['puts "' , '"'],
+        \   'vb'         : ['MsgBox ' , ''],
+        \   'vim'        : ['echo "' , '"'],
         \
-        \  }
+        \ }
 
   if has_key(s:printDic, s:filetype ) != 1    " Is this file type supported?
     echo "This file type isn't supported."
