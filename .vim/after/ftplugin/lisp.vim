@@ -4,7 +4,7 @@ setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
 setlocal dictionary+=~/dotfiles/dict/lisp.dict
-inoremap <buffer><C-k> <C-x><C-k>
+setlocal complete+=k~/dotfiles/dict/lisp.dict
 
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
