@@ -1,24 +1,34 @@
 
 function! CompleteLispWords(findstart, base)
-  if a:findstart
-    let s:cur_text = strpart(getline('.'), 0, col('.') - 1)
-    return match(s:cur_text, '\f*$')
+  let s:path = $HOME . '/dotfiles/dict/lisp.dict'
+  if !filereadable(s:path)
+    call PrintError(printf('CompleteLispWords: "%s" is not found.', s:path))
+    return []
   endif
-  let s:words = {
-        \   'list0' : ['a b c &rest d', 'value0'],
-        \   'list1' : ['a b c &rest d', 'value1'],
-        \   'list2' : ['a b c &rest d', 'value2'],
-        \   'list3' : ['a b c &rest d', 'value3'],
-        \   'list4' : ['a b c &rest d', 'value4']
-        \ }
-  let s:list = []
-  for s:word in keys(s:words)
-    call add(s:list, {
-          \ 'word' : s:word,
-          \ 'abbr' : printf('%s %s => %s', s:word, (s:words[s:word])[0], (s:words[s:word])[1])
-          \ })
-  endfor
-  return s:list
+  if a:findstart
+    " locate the start of the word
+    let line = getline('.')
+    let start = col('.') - 1
+    while start > 0 && line[start - 1] !~ '(\|\ \|)'
+      let start -= 1
+    endwhile
+    return start
+  else
+    " find word matching with `a:base'
+    let s:lines = readfile(s:path)
+    let s:result = []
+    for s:line in s:lines
+      let s:splitedLine = split(s:line, ',')
+      if len(s:splitedLine) == 3 && s:splitedLine[0] =~ '^' . a:base
+        call add(s:result, {
+              \   'word' : s:splitedLine[0],
+              \   'abbr' : printf('%s %s => %s',
+              \                    s:splitedLine[0], s:splitedLine[1], s:splitedLine[2])
+              \ })
+      endif
+    endfor
+    return s:result
+  endif
 endfunction
 
 
