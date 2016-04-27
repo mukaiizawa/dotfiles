@@ -1,8 +1,5 @@
 
 setlocal iskeyword=38,42,43,45,47-58,60-90,97-122,_
-set completefunc=CompleteLispWords
-" complete with `CompleteLispWords()'
-inoremap <C-k> <C-x><C-u>
 
 " abbrevs
 syn keyword lispFunc +=

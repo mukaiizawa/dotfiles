@@ -2,6 +2,8 @@
 setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
+setlocal completefunc=CompleteLispWords
+inoremap <C-k> <C-x><C-u>
 
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
