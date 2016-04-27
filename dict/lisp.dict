@@ -1,987 +1,987 @@
-&allow-other-keys
-&aux
-&body
-&environment
-&key
-&optional
-&rest
-&whole
-*
-**
-***
-*break-on-signals*
-*compile-file-pathname*
-*compile-file-truename*
-*compile-print*
-*compile-verbose*
-*debug-io*
-*debugger-hook*
-*default-pathname-defaults*
-*error-output*
-*features*
-*gensym-counter*
-*load-pathname*
-*load-print*
-*load-truename*
-*load-verbose*
-*macroexpand-hook*
-*modules*
-*package*
-*print-array*
-*print-base*
-*print-case*
-*print-circle*
-*print-escape*
-*print-gensym*
-*print-length*
-*print-level*
-*print-lines*
-*print-miser-width*
-*print-pprint-dispatch*
-*print-pretty*
-*print-radix*
-*print-readably*
-*print-right-margin*
-*query-io*
-*random-state*
-*read-base*
-*read-default-float-format*
-*read-eval*
-*read-suppress*
-*readtable*
-*standard-input*
-*standard-output*
-*terminal-io*
-*trace-output*
-+
-++
-+++
--
-/
-//
-///
-/=
-1+
-1-
-:append
-:create
-:direction
-:error
-:if-does-not-exist
-:if-exists
-:input
-:output
-:supersede
-<
-<=
-=
->
->=
-abort
-abs
-acons
-acos
-acosh
-add-method
-adjoin
-adjust-array
-adjustable-array-p
-allocate-instance
-alpha-char-p
-alphanumericp
-and
-append
-apply
-apropos
-apropos-list
-aref
-arithmetic-error
-arithmetic-error-operands
-arithmetic-error-operation
-array
-array-dimension
-array-dimension-limit
-array-dimensions
-array-displacement
-array-element-type
-array-has-fill-pointer-p
-array-in-bounds-p
-array-rank
-array-rank-limit
-array-row-major-index
-array-total-size
-array-total-size-limit
-arrayp
-ash
-asin
-asinh
-assert
-assoc
-assoc-if
-assoc-if-not
-atan
-atanh
-atom
-base-char
-base-string
-bignum
-bit
-bit-and
-bit-andc1
-bit-andc2
-bit-eqv
-bit-ior
-bit-nand
-bit-nor
-bit-not
-bit-orc1
-bit-orc2
-bit-vector
-bit-vector-p
-bit-xor
-block
-boole
-boole-1
-boole-2
-boole-and
-boole-andc1
-boole-andc2
-boole-c1
-boole-c2
-boole-clr
-boole-eqv
-boole-ior
-boole-nand
-boole-nor
-boole-orc1
-boole-orc2
-boole-set
-boole-xor
-boolean
-both-case-p
-boundp
-break
-broadcast-stream
-broadcast-stream-streams
-built-in-class
-butlast
-byte
-byte-position
-byte-size
-caaaar
-caaadr
-caaar
-caadar
-caaddr
-caadr
-caar
-cadaar
-cadadr
-cadar
-caddar
-cadddr
-caddr
-cadr
-call-arguments-limit
-call-method
-call-next-method
-car
-case
-catch
-ccase
-cdaaar
-cdaadr
-cdaar
-cdadar
-cdaddr
-cdadr
-cdar
-cddaar
-cddadr
-cddar
-cdddar
-cddddr
-cdddr
-cddr
-cdr
-ceiling
-cell-error
-cell-error-name
-cerror
-change-class
-char
-char-code
-char-code-limit
-char-downcase
-char-equal
-char-greaterp
-char-int
-char-lessp
-char-name
-char-not-equal
-char-not-greaterp
-char-not-lessp
-char-upcase
-char/=
-char<
-char<=
-char=
-char>
-char>=
-character
-characterp
-check-type
-cis
-class
-class-name
-class-of
-clear-input
-clear-output
-close
-clrhash
-code-char
-coerce
-compilation-speed
-compile
-compile-file
-compile-file-pathname
-compiled-function
-compiled-function-p
-compiler-macro
-compiler-macro-function
-complement
-complex
-complexp
-compute-applicable-methods
-compute-restarts
-concatenate
-concatenated-stream
-concatenated-stream-streams
-cond
-condition
-conjugate
-cons
-consp
-constantly
-constantp
-continue
-control-error
-copy-alist
-copy-list
-copy-pprint-dispatch
-copy-readtable
-copy-seq
-copy-structure
-copy-symbol
-copy-tree
-cos
-cosh
-count
-count-if
-count-if-not
-ctypecase
-debug
-decf
-declaim
-declaration
-declare
-decode-float
-decode-universal-time
-defclass
-defconstant
-defgeneric
-define-compiler-macro
-define-condition
-define-method-combination
-define-modify-macro
-define-setf-expander
-define-symbol-macro
-defmacro
-defmethod
-defpackage
-defparameter
-defsetf
-defstruct
-deftype
-defun
-defvar
-delete
-delete-duplicates
-delete-file
-delete-if
-delete-if-not
-delete-package
-denominator
-deposit-field
-describe
-describe-object
-destructuring-bind
-digit-char
-digit-char-p
-directory
-directory-namestring
-disassemble
-division-by-zero
-do
-do*
-do-all-symbols
-do-external-symbols
-do-symbols
-documentation
-dolist
-dotimes
-double-float
-double-float-epsilon
-double-float-negative-epsilon
-dpb
-dribble
-dynamic-extent
-ecase
-echo-stream
-echo-stream-input-stream
-echo-stream-output-stream
-ed
-eighth
-elt
-encode-universal-time
-end-of-file
-endp
-enough-namestring
-ensure-directories-exist
-ensure-generic-function
-eq
-eql
-equal
-equalp
-error
-etypecase
-eval
-eval-when
-evenp
-every
-exp
-export
-expt
-extended-char
-fboundp
-fceiling
-fdefinition
-ffloor
-fifth
-file-author
-file-error
-file-error-pathname
-file-length
-file-namestring
-file-position
-file-stream
-file-string-length
-file-write-date
-fill
-fill-pointer
-find
-find-all-symbols
-find-class
-find-if
-find-if-not
-find-method
-find-package
-find-restart
-find-symbol
-finish-output
-first
-fixnum
-flet
-float
-float-digits
-float-precision
-float-radix
-float-sign
-floating-point-inexact
-floating-point-invalid-operation
-floating-point-overflow
-floating-point-underflow
-floatp
-floor
-fmakunbound
-force-output
-format
-formatter
-fourth
-fresh-line
-fround
-ftruncate
-ftype
-funcall
-function
-function-keywords
-function-lambda-expression
-functionp
-gcd
-generic-function
-gensym
-gentemp
-get
-get-decoded-time
-get-dispatch-macro-character
-get-internal-real-time
-get-internal-run-time
-get-macro-character
-get-output-stream-string
-get-properties
-get-setf-expansion
-get-universal-time
-getf
-gethash
-go
-graphic-char-p
-handler-bind
-handler-case
-hash-table
-hash-table-count
-hash-table-p
-hash-table-rehash-size
-hash-table-rehash-threshold
-hash-table-size
-hash-table-test
-host-namestring
-identity
-if
-ignorable
-ignore
-ignore-errors
-imagpart
-import
-in-package
-incf
-initialize-instance
-inline
-input-stream-p
-inspect
-integer
-integer-decode-float
-integer-length
-integerp
-interactive-stream-p
-intern
-internal-time-units-per-second
-intersection
-invalid-method-error
-invoke-debugger
-invoke-restart
-invoke-restart-interactively
-isqrt
-keyword
-keywordp
-labels
-lambda
-lambda-list-keywords
-lambda-parameters-limit
-last
-lcm
-ldb
-ldb-test
-ldiff
-least-negative-double-float
-least-negative-long-float
-least-negative-normalized-double-float
-least-negative-normalized-long-float
-least-negative-normalized-short-float
-least-negative-normalized-single-float
-least-negative-short-float
-least-negative-single-float
-least-positive-double-float
-least-positive-long-float
-least-positive-normalized-double-float
-least-positive-normalized-long-float
-least-positive-normalized-short-float
-least-positive-normalized-single-float
-least-positive-short-float
-least-positive-single-float
-length
-let
-let*
-lisp-implementation-type
-lisp-implementation-version
-list
-list*
-list-all-packages
-list-length
-listen
-listp
-load
-load-logical-pathname-translations
-load-time-value
-locally
-log
-logand
-logandc1
-logandc2
-logbitp
-logcount
-logeqv
-logical-pathname
-logical-pathname-translations
-logior
-lognand
-lognor
-lognot
-logorc1
-logorc2
-logtest
-logxor
-long-float
-long-float-epsilon
-long-float-negative-epsilon
-long-site-name
-loop
-loop-finish
-lower-case-p
-machine-instance
-machine-type
-machine-version
-macro-function
-macroexpand
-macroexpand-1
-macrolet
-make-array
-make-broadcast-stream
-make-concatenated-stream
-make-condition
-make-dispatch-macro-character
-make-echo-stream
-make-hash-table
-make-instance
-make-instances-obsolete
-make-list
-make-load-form
-make-load-form-saving-slots
-make-method
-make-package
-make-pathname
-make-random-state
-make-sequence
-make-string
-make-string-input-stream
-make-string-output-stream
-make-symbol
-make-synonym-stream
-make-two-way-stream
-makunbound
-map
-map-into
-mapc
-mapcan
-mapcar
-mapcon
-maphash
-mapl
-maplist
-mask-field
-max
-member
-member-if
-member-if-not
-merge
-merge-pathnames
-method
-method-combination
-method-combination-error
-method-qualifiers
-min
-minusp
-mismatch
-mod
-most-negative-double-float
-most-negative-fixnum
-most-negative-long-float
-most-negative-short-float
-most-negative-single-float
-most-positive-double-float
-most-positive-fixnum
-most-positive-long-float
-most-positive-short-float
-most-positive-single-float
-muffle-warning
-multiple-value-bind
-multiple-value-call
-multiple-value-list
-multiple-value-prog1
-multiple-value-setq
-multiple-values-limit
-name-char
-namestring
-nbutlast
-nconc
-next-method-p
-nil
-nintersection
-ninth
-no-applicable-method
-no-next-method
-not
-notany
-notevery
-notinline
-nreconc
-nreverse
-nset-difference
-nset-exclusive-or
-nstring-capitalize
-nstring-downcase
-nstring-upcase
-nsublis
-nsubst
-nsubst-if
-nsubst-if-not
-nsubstitute
-nsubstitute-if
-nsubstitute-if-not
-nth
-nth-value
-nthcdr
-null
-number
-numberp
-numerator
-nunion
-oddp
-open
-open-stream-p
-optimize
-or
-otherwise
-output-stream-p
-package
-package-error
-package-error-package
-package-name
-package-nicknames
-package-shadowing-symbols
-package-use-list
-package-used-by-list
-packagep
-pairlis
-parse-error
-parse-integer
-parse-namestring
-pathname
-pathname-device
-pathname-directory
-pathname-host
-pathname-match-p
-pathname-name
-pathname-type
-pathname-version
-pathnamep
-peek-char
-phase
-pi
-plusp
-pop
-position
-position-if
-position-if-not
-pprint
-pprint-dispatch
-pprint-exit-if-list-exhausted
-pprint-fill
-pprint-indent
-pprint-linear
-pprint-logical-block
-pprint-newline
-pprint-pop
-pprint-tab
-pprint-tabular
-prin1
-prin1-to-string
-princ
-princ-to-string
-print
-print-not-readable
-print-not-readable-object
-print-object
-print-unreadable-object
-probe-file
-proclaim
-prog
-prog*
-prog1
-prog2
-progn
-program-error
-progv
-provide
-psetf
-psetq
-push
-pushnew
-quote
-random
-random-state
-random-state-p
-rassoc
-rassoc-if
-rassoc-if-not
-ratio
-rational
-rationalize
-rationalp
-read
-read-byte
-read-char
-read-char-no-hang
-read-delimited-list
-read-from-string
-read-line
-read-preserving-whitespace
-read-sequence
-reader-error
-readtable
-readtable-case
-readtablep
-real
-realp
-realpart
-reduce
-reinitialize-instance
-rem
-remf
-remhash
-remove
-remove-duplicates
-remove-if
-remove-if-not
-remove-method
-remprop
-rename-file
-rename-package
-replace
-require
-rest
-restart
-restart-bind
-restart-case
-restart-name
-return
-return-from
-revappend
-reverse
-room
-rotatef
-round
-row-major-aref
-rplaca
-rplacd
-safety
-satisfies
-sbit
-scale-float
-schar
-search
-second
-sequence
-serious-condition
-set
-set-difference
-set-dispatch-macro-character
-set-exclusive-or
-set-macro-character
-set-pprint-dispatch
-set-syntax-from-char
-setf
-setq
-seventh
-shadow
-shadowing-import
-shared-initialize
-shiftf
-short-float
-short-float-epsilon
-short-float-negative-epsilon
-short-site-name
-signal
-signed-byte
-signum
-simple-array
-simple-base-string
-simple-bit-vector
-simple-bit-vector-p
-simple-condition
-simple-condition-format-arguments
-simple-condition-format-control
-simple-error
-simple-string
-simple-string-p
-simple-type-error
-simple-vector
-simple-vector-p
-simple-warning
-sin
-single-float
-single-float-epsilon
-single-float-negative-epsilon
-sinh
-sixth
-sleep
-slot-boundp
-slot-exists-p
-slot-makunbound
-slot-missing
-slot-unbound
-slot-value
-software-type
-software-version
-some
-sort
-space
-special
-special-operator-p
-speed
-sqrt
-stable-sort
-standard
-standard-char
-standard-char-p
-standard-class
-standard-generic-function
-standard-method
-standard-object
-step
-storage-condition
-store-value
-stream
-stream-element-type
-stream-error
-stream-error-stream
-stream-external-format
-streamp
-string
-string-capitalize
-string-downcase
-string-equal
-string-greaterp
-string-left-trim
-string-lessp
-string-not-equal
-string-not-greaterp
-string-not-lessp
-string-right-trim
-string-stream
-string-trim
-string-upcase
-string/=
-string<
-string<=
-string=
-string>
-string>=
-stringp
-structure
-structure-class
-structure-object
-style-warning
-sublis
-subseq
-subsetp
-subst
-subst-if
-subst-if-not
-substitute
-substitute-if
-substitute-if-not
-subtypep
-svref
-sxhash
-symbol
-symbol-function
-symbol-macrolet
-symbol-name
-symbol-package
-symbol-plist
-symbol-value
-symbolp
-synonym-stream
-synonym-stream-symbol
-t
-tagbody
-tailp
-tan
-tanh
-tenth
-terpri
-the
-third
-throw
-time
-trace
-translate-logical-pathname
-translate-pathname
-tree-equal
-truename
-truncate
-two-way-stream
-two-way-stream-input-stream
-two-way-stream-output-stream
-type
-type-error
-type-error-datum
-type-error-expected-type
-type-of
-typecase
-typep
-unbound-slot
-unbound-slot-instance
-unbound-variable
-undefined-function
-unexport
-unintern
-union
-unless
-unread-char
-unsigned-byte
-untrace
-unuse-package
-unwind-protect
-update-instance-for-different-class
-update-instance-for-redefined-class
-upgraded-array-element-type
-upgraded-complex-part-type
-upper-case-p
-use-package
-use-value
-user-homedir-pathname
-values
-values-list
-variable
-vector
-vector-pop
-vector-push
-vector-push-extend
-vectorp
-warn
-warning
-when
-wild-pathname-p
-with-accessors
-with-compilation-unit
-with-condition-restarts
-with-hash-table-iterator
-with-input-from-string
-with-open-file
-with-open-stream
-with-output-to-string
-with-package-iterator
-with-simple-restart
-with-slots
-with-standard-io-syntax
-write
-write-byte
-write-char
-write-line
-write-sequence
-write-string
-write-to-string
-y-or-n-p
-yes-or-no-p
-zerop
+&allow-other-keys,x1 x2 x3y1 y2
+&aux,x1 x2 x3,y1 y2
+&body,x1 x2 x3,y1 y2
+&environment,x1 x2 x3,y1 y2
+&key,x1 x2 x3,y1 y2
+&optional,x1 x2 x3,y1 y2
+&rest,x1 x2 x3,y1 y2
+&whole,x1 x2 x3,y1 y2
+*,x1 x2 x3,y1 y2
+**,x1 x2 x3,y1 y2
+***,x1 x2 x3,y1 y2
+*break-on-signals*,x1 x2 x3,y1 y2
+*compile-file-pathname*,x1 x2 x3,y1 y2
+*compile-file-truename*,x1 x2 x3,y1 y2
+*compile-print*,x1 x2 x3,y1 y2
+*compile-verbose*,x1 x2 x3,y1 y2
+*debug-io*,x1 x2 x3,y1 y2
+*debugger-hook*,x1 x2 x3,y1 y2
+*default-pathname-defaults*,x1 x2 x3,y1 y2
+*error-output*,x1 x2 x3,y1 y2
+*features*,x1 x2 x3,y1 y2
+*gensym-counter*,x1 x2 x3,y1 y2
+*load-pathname*,x1 x2 x3,y1 y2
+*load-print*,x1 x2 x3,y1 y2
+*load-truename*,x1 x2 x3,y1 y2
+*load-verbose*,x1 x2 x3,y1 y2
+*macroexpand-hook*,x1 x2 x3,y1 y2
+*modules*,x1 x2 x3,y1 y2
+*package*,x1 x2 x3,y1 y2
+*print-array*,x1 x2 x3,y1 y2
+*print-base*,x1 x2 x3,y1 y2
+*print-case*,x1 x2 x3,y1 y2
+*print-circle*,x1 x2 x3,y1 y2
+*print-escape*,x1 x2 x3,y1 y2
+*print-gensym*,x1 x2 x3,y1 y2
+*print-length*,x1 x2 x3,y1 y2
+*print-level*,x1 x2 x3,y1 y2
+*print-lines*,x1 x2 x3,y1 y2
+*print-miser-width*,x1 x2 x3,y1 y2
+*print-pprint-dispatch*,x1 x2 x3,y1 y2
+*print-pretty*,x1 x2 x3,y1 y2
+*print-radix*,x1 x2 x3,y1 y2
+*print-readably*,x1 x2 x3,y1 y2
+*print-right-margin*,x1 x2 x3,y1 y2
+*query-io*,x1 x2 x3,y1 y2
+*random-state*,x1 x2 x3,y1 y2
+*read-base*,x1 x2 x3,y1 y2
+*read-default-float-format*,x1 x2 x3,y1 y2
+*read-eval*,x1 x2 x3,y1 y2
+*read-suppress*,x1 x2 x3,y1 y2
+*readtable*,x1 x2 x3,y1 y2
+*standard-input*,x1 x2 x3,y1 y2
+*standard-output*,x1 x2 x3,y1 y2
+*terminal-io*,x1 x2 x3,y1 y2
+*trace-output*,x1 x2 x3,y1 y2
++,x1 x2 x3,y1 y2
+++,x1 x2 x3,y1 y2
++++,x1 x2 x3,y1 y2
+-,x1 x2 x3,y1 y2
+/,x1 x2 x3,y1 y2
+//,x1 x2 x3,y1 y2
+///,x1 x2 x3,y1 y2
+/=,x1 x2 x3,y1 y2
+1+,x1 x2 x3,y1 y2
+1-,x1 x2 x3,y1 y2
+:append,x1 x2 x3,y1 y2
+:create,x1 x2 x3,y1 y2
+:direction,x1 x2 x3,y1 y2
+:error,x1 x2 x3,y1 y2
+:if-does-not-exist,x1 x2 x3,y1 y2
+:if-exists,x1 x2 x3,y1 y2
+:input,x1 x2 x3,y1 y2
+:output,x1 x2 x3,y1 y2
+:supersede,x1 x2 x3,y1 y2
+<,x1 x2 x3,y1 y2
+<=,x1 x2 x3,y1 y2
+=,x1 x2 x3,y1 y2
+>,x1 x2 x3,y1 y2
+>=,x1 x2 x3,y1 y2
+abort,x1 x2 x3,y1 y2
+abs,x1 x2 x3,y1 y2
+acons,x1 x2 x3,y1 y2
+acos,x1 x2 x3,y1 y2
+acosh,x1 x2 x3,y1 y2
+add-method,x1 x2 x3,y1 y2
+adjoin,x1 x2 x3,y1 y2
+adjust-array,x1 x2 x3,y1 y2
+adjustable-array-p,x1 x2 x3,y1 y2
+allocate-instance,x1 x2 x3,y1 y2
+alpha-char-p,x1 x2 x3,y1 y2
+alphanumericp,x1 x2 x3,y1 y2
+and,x1 x2 x3,y1 y2
+append,x1 x2 x3,y1 y2
+apply,x1 x2 x3,y1 y2
+apropos,x1 x2 x3,y1 y2
+apropos-list,x1 x2 x3,y1 y2
+aref,x1 x2 x3,y1 y2
+arithmetic-error,x1 x2 x3,y1 y2
+arithmetic-error-operands,x1 x2 x3,y1 y2
+arithmetic-error-operation,x1 x2 x3,y1 y2
+array,x1 x2 x3,y1 y2
+array-dimension,x1 x2 x3,y1 y2
+array-dimension-limit,x1 x2 x3,y1 y2
+array-dimensions,x1 x2 x3,y1 y2
+array-displacement,x1 x2 x3,y1 y2
+array-element-type,x1 x2 x3,y1 y2
+array-has-fill-pointer-p,x1 x2 x3,y1 y2
+array-in-bounds-p,x1 x2 x3,y1 y2
+array-rank,x1 x2 x3,y1 y2
+array-rank-limit,x1 x2 x3,y1 y2
+array-row-major-index,x1 x2 x3,y1 y2
+array-total-size,x1 x2 x3,y1 y2
+array-total-size-limit,x1 x2 x3,y1 y2
+arrayp,x1 x2 x3,y1 y2
+ash,x1 x2 x3,y1 y2
+asin,x1 x2 x3,y1 y2
+asinh,x1 x2 x3,y1 y2
+assert,x1 x2 x3,y1 y2
+assoc,x1 x2 x3,y1 y2
+assoc-if,x1 x2 x3,y1 y2
+assoc-if-not,x1 x2 x3,y1 y2
+atan,x1 x2 x3,y1 y2
+atanh,x1 x2 x3,y1 y2
+atom,x1 x2 x3,y1 y2
+base-char,x1 x2 x3,y1 y2
+base-string,x1 x2 x3,y1 y2
+bignum,x1 x2 x3,y1 y2
+bit,x1 x2 x3,y1 y2
+bit-and,x1 x2 x3,y1 y2
+bit-andc1,x1 x2 x3,y1 y2
+bit-andc2,x1 x2 x3,y1 y2
+bit-eqv,x1 x2 x3,y1 y2
+bit-ior,x1 x2 x3,y1 y2
+bit-nand,x1 x2 x3,y1 y2
+bit-nor,x1 x2 x3,y1 y2
+bit-not,x1 x2 x3,y1 y2
+bit-orc1,x1 x2 x3,y1 y2
+bit-orc2,x1 x2 x3,y1 y2
+bit-vector,x1 x2 x3,y1 y2
+bit-vector-p,x1 x2 x3,y1 y2
+bit-xor,x1 x2 x3,y1 y2
+block,x1 x2 x3,y1 y2
+boole,x1 x2 x3,y1 y2
+boole-1,x1 x2 x3,y1 y2
+boole-2,x1 x2 x3,y1 y2
+boole-and,x1 x2 x3,y1 y2
+boole-andc1,x1 x2 x3,y1 y2
+boole-andc2,x1 x2 x3,y1 y2
+boole-c1,x1 x2 x3,y1 y2
+boole-c2,x1 x2 x3,y1 y2
+boole-clr,x1 x2 x3,y1 y2
+boole-eqv,x1 x2 x3,y1 y2
+boole-ior,x1 x2 x3,y1 y2
+boole-nand,x1 x2 x3,y1 y2
+boole-nor,x1 x2 x3,y1 y2
+boole-orc1,x1 x2 x3,y1 y2
+boole-orc2,x1 x2 x3,y1 y2
+boole-set,x1 x2 x3,y1 y2
+boole-xor,x1 x2 x3,y1 y2
+boolean,x1 x2 x3,y1 y2
+both-case-p,x1 x2 x3,y1 y2
+boundp,x1 x2 x3,y1 y2
+break,x1 x2 x3,y1 y2
+broadcast-stream,x1 x2 x3,y1 y2
+broadcast-stream-streams,x1 x2 x3,y1 y2
+built-in-class,x1 x2 x3,y1 y2
+butlast,x1 x2 x3,y1 y2
+byte,x1 x2 x3,y1 y2
+byte-position,x1 x2 x3,y1 y2
+byte-size,x1 x2 x3,y1 y2
+caaaar,x1 x2 x3,y1 y2
+caaadr,x1 x2 x3,y1 y2
+caaar,x1 x2 x3,y1 y2
+caadar,x1 x2 x3,y1 y2
+caaddr,x1 x2 x3,y1 y2
+caadr,x1 x2 x3,y1 y2
+caar,x1 x2 x3,y1 y2
+cadaar,x1 x2 x3,y1 y2
+cadadr,x1 x2 x3,y1 y2
+cadar,x1 x2 x3,y1 y2
+caddar,x1 x2 x3,y1 y2
+cadddr,x1 x2 x3,y1 y2
+caddr,x1 x2 x3,y1 y2
+cadr,x1 x2 x3,y1 y2
+call-arguments-limit,x1 x2 x3,y1 y2
+call-method,x1 x2 x3,y1 y2
+call-next-method,x1 x2 x3,y1 y2
+car,x1 x2 x3,y1 y2
+case,x1 x2 x3,y1 y2
+catch,x1 x2 x3,y1 y2
+ccase,x1 x2 x3,y1 y2
+cdaaar,x1 x2 x3,y1 y2
+cdaadr,x1 x2 x3,y1 y2
+cdaar,x1 x2 x3,y1 y2
+cdadar,x1 x2 x3,y1 y2
+cdaddr,x1 x2 x3,y1 y2
+cdadr,x1 x2 x3,y1 y2
+cdar,x1 x2 x3,y1 y2
+cddaar,x1 x2 x3,y1 y2
+cddadr,x1 x2 x3,y1 y2
+cddar,x1 x2 x3,y1 y2
+cdddar,x1 x2 x3,y1 y2
+cddddr,x1 x2 x3,y1 y2
+cdddr,x1 x2 x3,y1 y2
+cddr,x1 x2 x3,y1 y2
+cdr,x1 x2 x3,y1 y2
+ceiling,x1 x2 x3,y1 y2
+cell-error,x1 x2 x3,y1 y2
+cell-error-name,x1 x2 x3,y1 y2
+cerror,x1 x2 x3,y1 y2
+change-class,x1 x2 x3,y1 y2
+char,x1 x2 x3,y1 y2
+char-code,x1 x2 x3,y1 y2
+char-code-limit,x1 x2 x3,y1 y2
+char-downcase,x1 x2 x3,y1 y2
+char-equal,x1 x2 x3,y1 y2
+char-greaterp,x1 x2 x3,y1 y2
+char-int,x1 x2 x3,y1 y2
+char-lessp,x1 x2 x3,y1 y2
+char-name,x1 x2 x3,y1 y2
+char-not-equal,x1 x2 x3,y1 y2
+char-not-greaterp,x1 x2 x3,y1 y2
+char-not-lessp,x1 x2 x3,y1 y2
+char-upcase,x1 x2 x3,y1 y2
+char/=,x1 x2 x3,y1 y2
+char<,x1 x2 x3,y1 y2
+char<=,x1 x2 x3,y1 y2
+char=,x1 x2 x3,y1 y2
+char>,x1 x2 x3,y1 y2
+char>=,x1 x2 x3,y1 y2
+character,x1 x2 x3,y1 y2
+characterp,x1 x2 x3,y1 y2
+check-type,x1 x2 x3,y1 y2
+cis,x1 x2 x3,y1 y2
+class,x1 x2 x3,y1 y2
+class-name,x1 x2 x3,y1 y2
+class-of,x1 x2 x3,y1 y2
+clear-input,x1 x2 x3,y1 y2
+clear-output,x1 x2 x3,y1 y2
+close,x1 x2 x3,y1 y2
+clrhash,x1 x2 x3,y1 y2
+code-char,x1 x2 x3,y1 y2
+coerce,x1 x2 x3,y1 y2
+compilation-speed,x1 x2 x3,y1 y2
+compile,x1 x2 x3,y1 y2
+compile-file,x1 x2 x3,y1 y2
+compile-file-pathname,x1 x2 x3,y1 y2
+compiled-function,x1 x2 x3,y1 y2
+compiled-function-p,x1 x2 x3,y1 y2
+compiler-macro,x1 x2 x3,y1 y2
+compiler-macro-function,x1 x2 x3,y1 y2
+complement,x1 x2 x3,y1 y2
+complex,x1 x2 x3,y1 y2
+complexp,x1 x2 x3,y1 y2
+compute-applicable-methods,x1 x2 x3,y1 y2
+compute-restarts,x1 x2 x3,y1 y2
+concatenate,x1 x2 x3,y1 y2
+concatenated-stream,x1 x2 x3,y1 y2
+concatenated-stream-streams,x1 x2 x3,y1 y2
+cond,x1 x2 x3,y1 y2
+condition,x1 x2 x3,y1 y2
+conjugate,x1 x2 x3,y1 y2
+cons,x1 x2 x3,y1 y2
+consp,x1 x2 x3,y1 y2
+constantly,x1 x2 x3,y1 y2
+constantp,x1 x2 x3,y1 y2
+continue,x1 x2 x3,y1 y2
+control-error,x1 x2 x3,y1 y2
+copy-alist,x1 x2 x3,y1 y2
+copy-list,x1 x2 x3,y1 y2
+copy-pprint-dispatch,x1 x2 x3,y1 y2
+copy-readtable,x1 x2 x3,y1 y2
+copy-seq,x1 x2 x3,y1 y2
+copy-structure,x1 x2 x3,y1 y2
+copy-symbol,x1 x2 x3,y1 y2
+copy-tree,x1 x2 x3,y1 y2
+cos,x1 x2 x3,y1 y2
+cosh,x1 x2 x3,y1 y2
+count,x1 x2 x3,y1 y2
+count-if,x1 x2 x3,y1 y2
+count-if-not,x1 x2 x3,y1 y2
+ctypecase,x1 x2 x3,y1 y2
+debug,x1 x2 x3,y1 y2
+decf,x1 x2 x3,y1 y2
+declaim,x1 x2 x3,y1 y2
+declaration,x1 x2 x3,y1 y2
+declare,x1 x2 x3,y1 y2
+decode-float,x1 x2 x3,y1 y2
+decode-universal-time,x1 x2 x3,y1 y2
+defclass,x1 x2 x3,y1 y2
+defconstant,x1 x2 x3,y1 y2
+defgeneric,x1 x2 x3,y1 y2
+define-compiler-macro,x1 x2 x3,y1 y2
+define-condition,x1 x2 x3,y1 y2
+define-method-combination,x1 x2 x3,y1 y2
+define-modify-macro,x1 x2 x3,y1 y2
+define-setf-expander,x1 x2 x3,y1 y2
+define-symbol-macro,x1 x2 x3,y1 y2
+defmacro,x1 x2 x3,y1 y2
+defmethod,x1 x2 x3,y1 y2
+defpackage,x1 x2 x3,y1 y2
+defparameter,x1 x2 x3,y1 y2
+defsetf,x1 x2 x3,y1 y2
+defstruct,x1 x2 x3,y1 y2
+deftype,x1 x2 x3,y1 y2
+defun,x1 x2 x3,y1 y2
+defvar,x1 x2 x3,y1 y2
+delete,x1 x2 x3,y1 y2
+delete-duplicates,x1 x2 x3,y1 y2
+delete-file,x1 x2 x3,y1 y2
+delete-if,x1 x2 x3,y1 y2
+delete-if-not,x1 x2 x3,y1 y2
+delete-package,x1 x2 x3,y1 y2
+denominator,x1 x2 x3,y1 y2
+deposit-field,x1 x2 x3,y1 y2
+describe,x1 x2 x3,y1 y2
+describe-object,x1 x2 x3,y1 y2
+destructuring-bind,x1 x2 x3,y1 y2
+digit-char,x1 x2 x3,y1 y2
+digit-char-p,x1 x2 x3,y1 y2
+directory,x1 x2 x3,y1 y2
+directory-namestring,x1 x2 x3,y1 y2
+disassemble,x1 x2 x3,y1 y2
+division-by-zero,x1 x2 x3,y1 y2
+do,x1 x2 x3,y1 y2
+do*,x1 x2 x3,y1 y2
+do-all-symbols,x1 x2 x3,y1 y2
+do-external-symbols,x1 x2 x3,y1 y2
+do-symbols,x1 x2 x3,y1 y2
+documentation,x1 x2 x3,y1 y2
+dolist,x1 x2 x3,y1 y2
+dotimes,x1 x2 x3,y1 y2
+double-float,x1 x2 x3,y1 y2
+double-float-epsilon,x1 x2 x3,y1 y2
+double-float-negative-epsilon,x1 x2 x3,y1 y2
+dpb,x1 x2 x3,y1 y2
+dribble,x1 x2 x3,y1 y2
+dynamic-extent,x1 x2 x3,y1 y2
+ecase,x1 x2 x3,y1 y2
+echo-stream,x1 x2 x3,y1 y2
+echo-stream-input-stream,x1 x2 x3,y1 y2
+echo-stream-output-stream,x1 x2 x3,y1 y2
+ed,x1 x2 x3,y1 y2
+eighth,x1 x2 x3,y1 y2
+elt,x1 x2 x3,y1 y2
+encode-universal-time,x1 x2 x3,y1 y2
+end-of-file,x1 x2 x3,y1 y2
+endp,x1 x2 x3,y1 y2
+enough-namestring,x1 x2 x3,y1 y2
+ensure-directories-exist,x1 x2 x3,y1 y2
+ensure-generic-function,x1 x2 x3,y1 y2
+eq,x1 x2 x3,y1 y2
+eql,x1 x2 x3,y1 y2
+equal,x1 x2 x3,y1 y2
+equalp,x1 x2 x3,y1 y2
+error,x1 x2 x3,y1 y2
+etypecase,x1 x2 x3,y1 y2
+eval,x1 x2 x3,y1 y2
+eval-when,x1 x2 x3,y1 y2
+evenp,x1 x2 x3,y1 y2
+every,x1 x2 x3,y1 y2
+exp,x1 x2 x3,y1 y2
+export,x1 x2 x3,y1 y2
+expt,x1 x2 x3,y1 y2
+extended-char,x1 x2 x3,y1 y2
+fboundp,x1 x2 x3,y1 y2
+fceiling,x1 x2 x3,y1 y2
+fdefinition,x1 x2 x3,y1 y2
+ffloor,x1 x2 x3,y1 y2
+fifth,x1 x2 x3,y1 y2
+file-author,x1 x2 x3,y1 y2
+file-error,x1 x2 x3,y1 y2
+file-error-pathname,x1 x2 x3,y1 y2
+file-length,x1 x2 x3,y1 y2
+file-namestring,x1 x2 x3,y1 y2
+file-position,x1 x2 x3,y1 y2
+file-stream,x1 x2 x3,y1 y2
+file-string-length,x1 x2 x3,y1 y2
+file-write-date,x1 x2 x3,y1 y2
+fill,x1 x2 x3,y1 y2
+fill-pointer,x1 x2 x3,y1 y2
+find,x1 x2 x3,y1 y2
+find-all-symbols,x1 x2 x3,y1 y2
+find-class,x1 x2 x3,y1 y2
+find-if,x1 x2 x3,y1 y2
+find-if-not,x1 x2 x3,y1 y2
+find-method,x1 x2 x3,y1 y2
+find-package,x1 x2 x3,y1 y2
+find-restart,x1 x2 x3,y1 y2
+find-symbol,x1 x2 x3,y1 y2
+finish-output,x1 x2 x3,y1 y2
+first,x1 x2 x3,y1 y2
+fixnum,x1 x2 x3,y1 y2
+flet,x1 x2 x3,y1 y2
+float,x1 x2 x3,y1 y2
+float-digits,x1 x2 x3,y1 y2
+float-precision,x1 x2 x3,y1 y2
+float-radix,x1 x2 x3,y1 y2
+float-sign,x1 x2 x3,y1 y2
+floating-point-inexact,x1 x2 x3,y1 y2
+floating-point-invalid-operation,x1 x2 x3,y1 y2
+floating-point-overflow,x1 x2 x3,y1 y2
+floating-point-underflow,x1 x2 x3,y1 y2
+floatp,x1 x2 x3,y1 y2
+floor,x1 x2 x3,y1 y2
+fmakunbound,x1 x2 x3,y1 y2
+force-output,x1 x2 x3,y1 y2
+format,x1 x2 x3,y1 y2
+formatter,x1 x2 x3,y1 y2
+fourth,x1 x2 x3,y1 y2
+fresh-line,x1 x2 x3,y1 y2
+fround,x1 x2 x3,y1 y2
+ftruncate,x1 x2 x3,y1 y2
+ftype,x1 x2 x3,y1 y2
+funcall,x1 x2 x3,y1 y2
+function,x1 x2 x3,y1 y2
+function-keywords,x1 x2 x3,y1 y2
+function-lambda-expression,x1 x2 x3,y1 y2
+functionp,x1 x2 x3,y1 y2
+gcd,x1 x2 x3,y1 y2
+generic-function,x1 x2 x3,y1 y2
+gensym,x1 x2 x3,y1 y2
+gentemp,x1 x2 x3,y1 y2
+get,x1 x2 x3,y1 y2
+get-decoded-time,x1 x2 x3,y1 y2
+get-dispatch-macro-character,x1 x2 x3,y1 y2
+get-internal-real-time,x1 x2 x3,y1 y2
+get-internal-run-time,x1 x2 x3,y1 y2
+get-macro-character,x1 x2 x3,y1 y2
+get-output-stream-string,x1 x2 x3,y1 y2
+get-properties,x1 x2 x3,y1 y2
+get-setf-expansion,x1 x2 x3,y1 y2
+get-universal-time,x1 x2 x3,y1 y2
+getf,x1 x2 x3,y1 y2
+gethash,x1 x2 x3,y1 y2
+go,x1 x2 x3,y1 y2
+graphic-char-p,x1 x2 x3,y1 y2
+handler-bind,x1 x2 x3,y1 y2
+handler-case,x1 x2 x3,y1 y2
+hash-table,x1 x2 x3,y1 y2
+hash-table-count,x1 x2 x3,y1 y2
+hash-table-p,x1 x2 x3,y1 y2
+hash-table-rehash-size,x1 x2 x3,y1 y2
+hash-table-rehash-threshold,x1 x2 x3,y1 y2
+hash-table-size,x1 x2 x3,y1 y2
+hash-table-test,x1 x2 x3,y1 y2
+host-namestring,x1 x2 x3,y1 y2
+identity,x1 x2 x3,y1 y2
+if,x1 x2 x3,y1 y2
+ignorable,x1 x2 x3,y1 y2
+ignore,x1 x2 x3,y1 y2
+ignore-errors,x1 x2 x3,y1 y2
+imagpart,x1 x2 x3,y1 y2
+import,x1 x2 x3,y1 y2
+in-package,x1 x2 x3,y1 y2
+incf,x1 x2 x3,y1 y2
+initialize-instance,x1 x2 x3,y1 y2
+inline,x1 x2 x3,y1 y2
+input-stream-p,x1 x2 x3,y1 y2
+inspect,x1 x2 x3,y1 y2
+integer,x1 x2 x3,y1 y2
+integer-decode-float,x1 x2 x3,y1 y2
+integer-length,x1 x2 x3,y1 y2
+integerp,x1 x2 x3,y1 y2
+interactive-stream-p,x1 x2 x3,y1 y2
+intern,x1 x2 x3,y1 y2
+internal-time-units-per-second,x1 x2 x3,y1 y2
+intersection,x1 x2 x3,y1 y2
+invalid-method-error,x1 x2 x3,y1 y2
+invoke-debugger,x1 x2 x3,y1 y2
+invoke-restart,x1 x2 x3,y1 y2
+invoke-restart-interactively,x1 x2 x3,y1 y2
+isqrt,x1 x2 x3,y1 y2
+keyword,x1 x2 x3,y1 y2
+keywordp,x1 x2 x3,y1 y2
+labels,x1 x2 x3,y1 y2
+lambda,x1 x2 x3,y1 y2
+lambda-list-keywords,x1 x2 x3,y1 y2
+lambda-parameters-limit,x1 x2 x3,y1 y2
+last,x1 x2 x3,y1 y2
+lcm,x1 x2 x3,y1 y2
+ldb,x1 x2 x3,y1 y2
+ldb-test,x1 x2 x3,y1 y2
+ldiff,x1 x2 x3,y1 y2
+least-negative-double-float,x1 x2 x3,y1 y2
+least-negative-long-float,x1 x2 x3,y1 y2
+least-negative-normalized-double-float,x1 x2 x3,y1 y2
+least-negative-normalized-long-float,x1 x2 x3,y1 y2
+least-negative-normalized-short-float,x1 x2 x3,y1 y2
+least-negative-normalized-single-float,x1 x2 x3,y1 y2
+least-negative-short-float,x1 x2 x3,y1 y2
+least-negative-single-float,x1 x2 x3,y1 y2
+least-positive-double-float,x1 x2 x3,y1 y2
+least-positive-long-float,x1 x2 x3,y1 y2
+least-positive-normalized-double-float,x1 x2 x3,y1 y2
+least-positive-normalized-long-float,x1 x2 x3,y1 y2
+least-positive-normalized-short-float,x1 x2 x3,y1 y2
+least-positive-normalized-single-float,x1 x2 x3,y1 y2
+least-positive-short-float,x1 x2 x3,y1 y2
+least-positive-single-float,x1 x2 x3,y1 y2
+length,x1 x2 x3,y1 y2
+let,x1 x2 x3,y1 y2
+let*,x1 x2 x3,y1 y2
+lisp-implementation-type,x1 x2 x3,y1 y2
+lisp-implementation-version,x1 x2 x3,y1 y2
+list,x1 x2 x3,y1 y2
+list*,x1 x2 x3,y1 y2
+list-all-packages,x1 x2 x3,y1 y2
+list-length,x1 x2 x3,y1 y2
+listen,x1 x2 x3,y1 y2
+listp,x1 x2 x3,y1 y2
+load,x1 x2 x3,y1 y2
+load-logical-pathname-translations,x1 x2 x3,y1 y2
+load-time-value,x1 x2 x3,y1 y2
+locally,x1 x2 x3,y1 y2
+log,x1 x2 x3,y1 y2
+logand,x1 x2 x3,y1 y2
+logandc1,x1 x2 x3,y1 y2
+logandc2,x1 x2 x3,y1 y2
+logbitp,x1 x2 x3,y1 y2
+logcount,x1 x2 x3,y1 y2
+logeqv,x1 x2 x3,y1 y2
+logical-pathname,x1 x2 x3,y1 y2
+logical-pathname-translations,x1 x2 x3,y1 y2
+logior,x1 x2 x3,y1 y2
+lognand,x1 x2 x3,y1 y2
+lognor,x1 x2 x3,y1 y2
+lognot,x1 x2 x3,y1 y2
+logorc1,x1 x2 x3,y1 y2
+logorc2,x1 x2 x3,y1 y2
+logtest,x1 x2 x3,y1 y2
+logxor,x1 x2 x3,y1 y2
+long-float,x1 x2 x3,y1 y2
+long-float-epsilon,x1 x2 x3,y1 y2
+long-float-negative-epsilon,x1 x2 x3,y1 y2
+long-site-name,x1 x2 x3,y1 y2
+loop,x1 x2 x3,y1 y2
+loop-finish,x1 x2 x3,y1 y2
+lower-case-p,x1 x2 x3,y1 y2
+machine-instance,x1 x2 x3,y1 y2
+machine-type,x1 x2 x3,y1 y2
+machine-version,x1 x2 x3,y1 y2
+macro-function,x1 x2 x3,y1 y2
+macroexpand,x1 x2 x3,y1 y2
+macroexpand-1,x1 x2 x3,y1 y2
+macrolet,x1 x2 x3,y1 y2
+make-array,x1 x2 x3,y1 y2
+make-broadcast-stream,x1 x2 x3,y1 y2
+make-concatenated-stream,x1 x2 x3,y1 y2
+make-condition,x1 x2 x3,y1 y2
+make-dispatch-macro-character,x1 x2 x3,y1 y2
+make-echo-stream,x1 x2 x3,y1 y2
+make-hash-table,x1 x2 x3,y1 y2
+make-instance,x1 x2 x3,y1 y2
+make-instances-obsolete,x1 x2 x3,y1 y2
+make-list,x1 x2 x3,y1 y2
+make-load-form,x1 x2 x3,y1 y2
+make-load-form-saving-slots,x1 x2 x3,y1 y2
+make-method,x1 x2 x3,y1 y2
+make-package,x1 x2 x3,y1 y2
+make-pathname,x1 x2 x3,y1 y2
+make-random-state,x1 x2 x3,y1 y2
+make-sequence,x1 x2 x3,y1 y2
+make-string,x1 x2 x3,y1 y2
+make-string-input-stream,x1 x2 x3,y1 y2
+make-string-output-stream,x1 x2 x3,y1 y2
+make-symbol,x1 x2 x3,y1 y2
+make-synonym-stream,x1 x2 x3,y1 y2
+make-two-way-stream,x1 x2 x3,y1 y2
+makunbound,x1 x2 x3,y1 y2
+map,x1 x2 x3,y1 y2
+map-into,x1 x2 x3,y1 y2
+mapc,x1 x2 x3,y1 y2
+mapcan,x1 x2 x3,y1 y2
+mapcar,x1 x2 x3,y1 y2
+mapcon,x1 x2 x3,y1 y2
+maphash,x1 x2 x3,y1 y2
+mapl,x1 x2 x3,y1 y2
+maplist,x1 x2 x3,y1 y2
+mask-field,x1 x2 x3,y1 y2
+max,x1 x2 x3,y1 y2
+member,x1 x2 x3,y1 y2
+member-if,x1 x2 x3,y1 y2
+member-if-not,x1 x2 x3,y1 y2
+merge,x1 x2 x3,y1 y2
+merge-pathnames,x1 x2 x3,y1 y2
+method,x1 x2 x3,y1 y2
+method-combination,x1 x2 x3,y1 y2
+method-combination-error,x1 x2 x3,y1 y2
+method-qualifiers,x1 x2 x3,y1 y2
+min,x1 x2 x3,y1 y2
+minusp,x1 x2 x3,y1 y2
+mismatch,x1 x2 x3,y1 y2
+mod,x1 x2 x3,y1 y2
+most-negative-double-float,x1 x2 x3,y1 y2
+most-negative-fixnum,x1 x2 x3,y1 y2
+most-negative-long-float,x1 x2 x3,y1 y2
+most-negative-short-float,x1 x2 x3,y1 y2
+most-negative-single-float,x1 x2 x3,y1 y2
+most-positive-double-float,x1 x2 x3,y1 y2
+most-positive-fixnum,x1 x2 x3,y1 y2
+most-positive-long-float,x1 x2 x3,y1 y2
+most-positive-short-float,x1 x2 x3,y1 y2
+most-positive-single-float,x1 x2 x3,y1 y2
+muffle-warning,x1 x2 x3,y1 y2
+multiple-value-bind,x1 x2 x3,y1 y2
+multiple-value-call,x1 x2 x3,y1 y2
+multiple-value-list,x1 x2 x3,y1 y2
+multiple-value-prog1,x1 x2 x3,y1 y2
+multiple-value-setq,x1 x2 x3,y1 y2
+multiple-values-limit,x1 x2 x3,y1 y2
+name-char,x1 x2 x3,y1 y2
+namestring,x1 x2 x3,y1 y2
+nbutlast,x1 x2 x3,y1 y2
+nconc,x1 x2 x3,y1 y2
+next-method-p,x1 x2 x3,y1 y2
+nil,x1 x2 x3,y1 y2
+nintersection,x1 x2 x3,y1 y2
+ninth,x1 x2 x3,y1 y2
+no-applicable-method,x1 x2 x3,y1 y2
+no-next-method,x1 x2 x3,y1 y2
+not,x1 x2 x3,y1 y2
+notany,x1 x2 x3,y1 y2
+notevery,x1 x2 x3,y1 y2
+notinline,x1 x2 x3,y1 y2
+nreconc,x1 x2 x3,y1 y2
+nreverse,x1 x2 x3,y1 y2
+nset-difference,x1 x2 x3,y1 y2
+nset-exclusive-or,x1 x2 x3,y1 y2
+nstring-capitalize,x1 x2 x3,y1 y2
+nstring-downcase,x1 x2 x3,y1 y2
+nstring-upcase,x1 x2 x3,y1 y2
+nsublis,x1 x2 x3,y1 y2
+nsubst,x1 x2 x3,y1 y2
+nsubst-if,x1 x2 x3,y1 y2
+nsubst-if-not,x1 x2 x3,y1 y2
+nsubstitute,x1 x2 x3,y1 y2
+nsubstitute-if,x1 x2 x3,y1 y2
+nsubstitute-if-not,x1 x2 x3,y1 y2
+nth,x1 x2 x3,y1 y2
+nth-value,x1 x2 x3,y1 y2
+nthcdr,x1 x2 x3,y1 y2
+null,x1 x2 x3,y1 y2
+number,x1 x2 x3,y1 y2
+numberp,x1 x2 x3,y1 y2
+numerator,x1 x2 x3,y1 y2
+nunion,x1 x2 x3,y1 y2
+oddp,x1 x2 x3,y1 y2
+open,x1 x2 x3,y1 y2
+open-stream-p,x1 x2 x3,y1 y2
+optimize,x1 x2 x3,y1 y2
+or,x1 x2 x3,y1 y2
+otherwise,x1 x2 x3,y1 y2
+output-stream-p,x1 x2 x3,y1 y2
+package,x1 x2 x3,y1 y2
+package-error,x1 x2 x3,y1 y2
+package-error-package,x1 x2 x3,y1 y2
+package-name,x1 x2 x3,y1 y2
+package-nicknames,x1 x2 x3,y1 y2
+package-shadowing-symbols,x1 x2 x3,y1 y2
+package-use-list,x1 x2 x3,y1 y2
+package-used-by-list,x1 x2 x3,y1 y2
+packagep,x1 x2 x3,y1 y2
+pairlis,x1 x2 x3,y1 y2
+parse-error,x1 x2 x3,y1 y2
+parse-integer,x1 x2 x3,y1 y2
+parse-namestring,x1 x2 x3,y1 y2
+pathname,x1 x2 x3,y1 y2
+pathname-device,x1 x2 x3,y1 y2
+pathname-directory,x1 x2 x3,y1 y2
+pathname-host,x1 x2 x3,y1 y2
+pathname-match-p,x1 x2 x3,y1 y2
+pathname-name,x1 x2 x3,y1 y2
+pathname-type,x1 x2 x3,y1 y2
+pathname-version,x1 x2 x3,y1 y2
+pathnamep,x1 x2 x3,y1 y2
+peek-char,x1 x2 x3,y1 y2
+phase,x1 x2 x3,y1 y2
+pi,x1 x2 x3,y1 y2
+plusp,x1 x2 x3,y1 y2
+pop,x1 x2 x3,y1 y2
+position,x1 x2 x3,y1 y2
+position-if,x1 x2 x3,y1 y2
+position-if-not,x1 x2 x3,y1 y2
+pprint,x1 x2 x3,y1 y2
+pprint-dispatch,x1 x2 x3,y1 y2
+pprint-exit-if-list-exhausted,x1 x2 x3,y1 y2
+pprint-fill,x1 x2 x3,y1 y2
+pprint-indent,x1 x2 x3,y1 y2
+pprint-linear,x1 x2 x3,y1 y2
+pprint-logical-block,x1 x2 x3,y1 y2
+pprint-newline,x1 x2 x3,y1 y2
+pprint-pop,x1 x2 x3,y1 y2
+pprint-tab,x1 x2 x3,y1 y2
+pprint-tabular,x1 x2 x3,y1 y2
+prin1,x1 x2 x3,y1 y2
+prin1-to-string,x1 x2 x3,y1 y2
+princ,x1 x2 x3,y1 y2
+princ-to-string,x1 x2 x3,y1 y2
+print,x1 x2 x3,y1 y2
+print-not-readable,x1 x2 x3,y1 y2
+print-not-readable-object,x1 x2 x3,y1 y2
+print-object,x1 x2 x3,y1 y2
+print-unreadable-object,x1 x2 x3,y1 y2
+probe-file,x1 x2 x3,y1 y2
+proclaim,x1 x2 x3,y1 y2
+prog,x1 x2 x3,y1 y2
+prog*,x1 x2 x3,y1 y2
+prog1,x1 x2 x3,y1 y2
+prog2,x1 x2 x3,y1 y2
+progn,x1 x2 x3,y1 y2
+program-error,x1 x2 x3,y1 y2
+progv,x1 x2 x3,y1 y2
+provide,x1 x2 x3,y1 y2
+psetf,x1 x2 x3,y1 y2
+psetq,x1 x2 x3,y1 y2
+push,x1 x2 x3,y1 y2
+pushnew,x1 x2 x3,y1 y2
+quote,x1 x2 x3,y1 y2
+random,x1 x2 x3,y1 y2
+random-state,x1 x2 x3,y1 y2
+random-state-p,x1 x2 x3,y1 y2
+rassoc,x1 x2 x3,y1 y2
+rassoc-if,x1 x2 x3,y1 y2
+rassoc-if-not,x1 x2 x3,y1 y2
+ratio,x1 x2 x3,y1 y2
+rational,x1 x2 x3,y1 y2
+rationalize,x1 x2 x3,y1 y2
+rationalp,x1 x2 x3,y1 y2
+read,x1 x2 x3,y1 y2
+read-byte,x1 x2 x3,y1 y2
+read-char,x1 x2 x3,y1 y2
+read-char-no-hang,x1 x2 x3,y1 y2
+read-delimited-list,x1 x2 x3,y1 y2
+read-from-string,x1 x2 x3,y1 y2
+read-line,x1 x2 x3,y1 y2
+read-preserving-whitespace,x1 x2 x3,y1 y2
+read-sequence,x1 x2 x3,y1 y2
+reader-error,x1 x2 x3,y1 y2
+readtable,x1 x2 x3,y1 y2
+readtable-case,x1 x2 x3,y1 y2
+readtablep,x1 x2 x3,y1 y2
+real,x1 x2 x3,y1 y2
+realp,x1 x2 x3,y1 y2
+realpart,x1 x2 x3,y1 y2
+reduce,x1 x2 x3,y1 y2
+reinitialize-instance,x1 x2 x3,y1 y2
+rem,x1 x2 x3,y1 y2
+remf,x1 x2 x3,y1 y2
+remhash,x1 x2 x3,y1 y2
+remove,x1 x2 x3,y1 y2
+remove-duplicates,x1 x2 x3,y1 y2
+remove-if,x1 x2 x3,y1 y2
+remove-if-not,x1 x2 x3,y1 y2
+remove-method,x1 x2 x3,y1 y2
+remprop,x1 x2 x3,y1 y2
+rename-file,x1 x2 x3,y1 y2
+rename-package,x1 x2 x3,y1 y2
+replace,x1 x2 x3,y1 y2
+require,x1 x2 x3,y1 y2
+rest,x1 x2 x3,y1 y2
+restart,x1 x2 x3,y1 y2
+restart-bind,x1 x2 x3,y1 y2
+restart-case,x1 x2 x3,y1 y2
+restart-name,x1 x2 x3,y1 y2
+return,x1 x2 x3,y1 y2
+return-from,x1 x2 x3,y1 y2
+revappend,x1 x2 x3,y1 y2
+reverse,x1 x2 x3,y1 y2
+room,x1 x2 x3,y1 y2
+rotatef,x1 x2 x3,y1 y2
+round,x1 x2 x3,y1 y2
+row-major-aref,x1 x2 x3,y1 y2
+rplaca,x1 x2 x3,y1 y2
+rplacd,x1 x2 x3,y1 y2
+safety,x1 x2 x3,y1 y2
+satisfies,x1 x2 x3,y1 y2
+sbit,x1 x2 x3,y1 y2
+scale-float,x1 x2 x3,y1 y2
+schar,x1 x2 x3,y1 y2
+search,x1 x2 x3,y1 y2
+second,x1 x2 x3,y1 y2
+sequence,x1 x2 x3,y1 y2
+serious-condition,x1 x2 x3,y1 y2
+set,x1 x2 x3,y1 y2
+set-difference,x1 x2 x3,y1 y2
+set-dispatch-macro-character,x1 x2 x3,y1 y2
+set-exclusive-or,x1 x2 x3,y1 y2
+set-macro-character,x1 x2 x3,y1 y2
+set-pprint-dispatch,x1 x2 x3,y1 y2
+set-syntax-from-char,x1 x2 x3,y1 y2
+setf,x1 x2 x3,y1 y2
+setq,x1 x2 x3,y1 y2
+seventh,x1 x2 x3,y1 y2
+shadow,x1 x2 x3,y1 y2
+shadowing-import,x1 x2 x3,y1 y2
+shared-initialize,x1 x2 x3,y1 y2
+shiftf,x1 x2 x3,y1 y2
+short-float,x1 x2 x3,y1 y2
+short-float-epsilon,x1 x2 x3,y1 y2
+short-float-negative-epsilon,x1 x2 x3,y1 y2
+short-site-name,x1 x2 x3,y1 y2
+signal,x1 x2 x3,y1 y2
+signed-byte,x1 x2 x3,y1 y2
+signum,x1 x2 x3,y1 y2
+simple-array,x1 x2 x3,y1 y2
+simple-base-string,x1 x2 x3,y1 y2
+simple-bit-vector,x1 x2 x3,y1 y2
+simple-bit-vector-p,x1 x2 x3,y1 y2
+simple-condition,x1 x2 x3,y1 y2
+simple-condition-format-arguments,x1 x2 x3,y1 y2
+simple-condition-format-control,x1 x2 x3,y1 y2
+simple-error,x1 x2 x3,y1 y2
+simple-string,x1 x2 x3,y1 y2
+simple-string-p,x1 x2 x3,y1 y2
+simple-type-error,x1 x2 x3,y1 y2
+simple-vector,x1 x2 x3,y1 y2
+simple-vector-p,x1 x2 x3,y1 y2
+simple-warning,x1 x2 x3,y1 y2
+sin,x1 x2 x3,y1 y2
+single-float,x1 x2 x3,y1 y2
+single-float-epsilon,x1 x2 x3,y1 y2
+single-float-negative-epsilon,x1 x2 x3,y1 y2
+sinh,x1 x2 x3,y1 y2
+sixth,x1 x2 x3,y1 y2
+sleep,x1 x2 x3,y1 y2
+slot-boundp,x1 x2 x3,y1 y2
+slot-exists-p,x1 x2 x3,y1 y2
+slot-makunbound,x1 x2 x3,y1 y2
+slot-missing,x1 x2 x3,y1 y2
+slot-unbound,x1 x2 x3,y1 y2
+slot-value,x1 x2 x3,y1 y2
+software-type,x1 x2 x3,y1 y2
+software-version,x1 x2 x3,y1 y2
+some,x1 x2 x3,y1 y2
+sort,x1 x2 x3,y1 y2
+space,x1 x2 x3,y1 y2
+special,x1 x2 x3,y1 y2
+special-operator-p,x1 x2 x3,y1 y2
+speed,x1 x2 x3,y1 y2
+sqrt,x1 x2 x3,y1 y2
+stable-sort,x1 x2 x3,y1 y2
+standard,x1 x2 x3,y1 y2
+standard-char,x1 x2 x3,y1 y2
+standard-char-p,x1 x2 x3,y1 y2
+standard-class,x1 x2 x3,y1 y2
+standard-generic-function,x1 x2 x3,y1 y2
+standard-method,x1 x2 x3,y1 y2
+standard-object,x1 x2 x3,y1 y2
+step,x1 x2 x3,y1 y2
+storage-condition,x1 x2 x3,y1 y2
+store-value,x1 x2 x3,y1 y2
+stream,x1 x2 x3,y1 y2
+stream-element-type,x1 x2 x3,y1 y2
+stream-error,x1 x2 x3,y1 y2
+stream-error-stream,x1 x2 x3,y1 y2
+stream-external-format,x1 x2 x3,y1 y2
+streamp,x1 x2 x3,y1 y2
+string,x1 x2 x3,y1 y2
+string-capitalize,x1 x2 x3,y1 y2
+string-downcase,x1 x2 x3,y1 y2
+string-equal,x1 x2 x3,y1 y2
+string-greaterp,x1 x2 x3,y1 y2
+string-left-trim,x1 x2 x3,y1 y2
+string-lessp,x1 x2 x3,y1 y2
+string-not-equal,x1 x2 x3,y1 y2
+string-not-greaterp,x1 x2 x3,y1 y2
+string-not-lessp,x1 x2 x3,y1 y2
+string-right-trim,x1 x2 x3,y1 y2
+string-stream,x1 x2 x3,y1 y2
+string-trim,x1 x2 x3,y1 y2
+string-upcase,x1 x2 x3,y1 y2
+string/=,x1 x2 x3,y1 y2
+string<,x1 x2 x3,y1 y2
+string<=,x1 x2 x3,y1 y2
+string=,x1 x2 x3,y1 y2
+string>,x1 x2 x3,y1 y2
+string>=,x1 x2 x3,y1 y2
+stringp,x1 x2 x3,y1 y2
+structure,x1 x2 x3,y1 y2
+structure-class,x1 x2 x3,y1 y2
+structure-object,x1 x2 x3,y1 y2
+style-warning,x1 x2 x3,y1 y2
+sublis,x1 x2 x3,y1 y2
+subseq,x1 x2 x3,y1 y2
+subsetp,x1 x2 x3,y1 y2
+subst,x1 x2 x3,y1 y2
+subst-if,x1 x2 x3,y1 y2
+subst-if-not,x1 x2 x3,y1 y2
+substitute,x1 x2 x3,y1 y2
+substitute-if,x1 x2 x3,y1 y2
+substitute-if-not,x1 x2 x3,y1 y2
+subtypep,x1 x2 x3,y1 y2
+svref,x1 x2 x3,y1 y2
+sxhash,x1 x2 x3,y1 y2
+symbol,x1 x2 x3,y1 y2
+symbol-function,x1 x2 x3,y1 y2
+symbol-macrolet,x1 x2 x3,y1 y2
+symbol-name,x1 x2 x3,y1 y2
+symbol-package,x1 x2 x3,y1 y2
+symbol-plist,x1 x2 x3,y1 y2
+symbol-value,x1 x2 x3,y1 y2
+symbolp,x1 x2 x3,y1 y2
+synonym-stream,x1 x2 x3,y1 y2
+synonym-stream-symbol,x1 x2 x3,y1 y2
+t,x1 x2 x3,y1 y2
+tagbody,x1 x2 x3,y1 y2
+tailp,x1 x2 x3,y1 y2
+tan,x1 x2 x3,y1 y2
+tanh,x1 x2 x3,y1 y2
+tenth,x1 x2 x3,y1 y2
+terpri,x1 x2 x3,y1 y2
+the,x1 x2 x3,y1 y2
+third,x1 x2 x3,y1 y2
+throw,x1 x2 x3,y1 y2
+time,x1 x2 x3,y1 y2
+trace,x1 x2 x3,y1 y2
+translate-logical-pathname,x1 x2 x3,y1 y2
+translate-pathname,x1 x2 x3,y1 y2
+tree-equal,x1 x2 x3,y1 y2
+truename,x1 x2 x3,y1 y2
+truncate,x1 x2 x3,y1 y2
+two-way-stream,x1 x2 x3,y1 y2
+two-way-stream-input-stream,x1 x2 x3,y1 y2
+two-way-stream-output-stream,x1 x2 x3,y1 y2
+type,x1 x2 x3,y1 y2
+type-error,x1 x2 x3,y1 y2
+type-error-datum,x1 x2 x3,y1 y2
+type-error-expected-type,x1 x2 x3,y1 y2
+type-of,x1 x2 x3,y1 y2
+typecase,x1 x2 x3,y1 y2
+typep,x1 x2 x3,y1 y2
+unbound-slot,x1 x2 x3,y1 y2
+unbound-slot-instance,x1 x2 x3,y1 y2
+unbound-variable,x1 x2 x3,y1 y2
+undefined-function,x1 x2 x3,y1 y2
+unexport,x1 x2 x3,y1 y2
+unintern,x1 x2 x3,y1 y2
+union,x1 x2 x3,y1 y2
+unless,x1 x2 x3,y1 y2
+unread-char,x1 x2 x3,y1 y2
+unsigned-byte,x1 x2 x3,y1 y2
+untrace,x1 x2 x3,y1 y2
+unuse-package,x1 x2 x3,y1 y2
+unwind-protect,x1 x2 x3,y1 y2
+update-instance-for-different-class,x1 x2 x3,y1 y2
+update-instance-for-redefined-class,x1 x2 x3,y1 y2
+upgraded-array-element-type,x1 x2 x3,y1 y2
+upgraded-complex-part-type,x1 x2 x3,y1 y2
+upper-case-p,x1 x2 x3,y1 y2
+use-package,x1 x2 x3,y1 y2
+use-value,x1 x2 x3,y1 y2
+user-homedir-pathname,x1 x2 x3,y1 y2
+values,x1 x2 x3,y1 y2
+values-list,x1 x2 x3,y1 y2
+variable,x1 x2 x3,y1 y2
+vector,x1 x2 x3,y1 y2
+vector-pop,x1 x2 x3,y1 y2
+vector-push,x1 x2 x3,y1 y2
+vector-push-extend,x1 x2 x3,y1 y2
+vectorp,x1 x2 x3,y1 y2
+warn,x1 x2 x3,y1 y2
+warning,x1 x2 x3,y1 y2
+when,x1 x2 x3,y1 y2
+wild-pathname-p,x1 x2 x3,y1 y2
+with-accessors,x1 x2 x3,y1 y2
+with-compilation-unit,x1 x2 x3,y1 y2
+with-condition-restarts,x1 x2 x3,y1 y2
+with-hash-table-iterator,x1 x2 x3,y1 y2
+with-input-from-string,x1 x2 x3,y1 y2
+with-open-file,x1 x2 x3,y1 y2
+with-open-stream,x1 x2 x3,y1 y2
+with-output-to-string,x1 x2 x3,y1 y2
+with-package-iterator,x1 x2 x3,y1 y2
+with-simple-restart,x1 x2 x3,y1 y2
+with-slots,x1 x2 x3,y1 y2
+with-standard-io-syntax,x1 x2 x3,y1 y2
+write,x1 x2 x3,y1 y2
+write-byte,x1 x2 x3,y1 y2
+write-char,x1 x2 x3,y1 y2
+write-line,x1 x2 x3,y1 y2
+write-sequence,x1 x2 x3,y1 y2
+write-string,x1 x2 x3,y1 y2
+write-to-string,x1 x2 x3,y1 y2
+y-or-n-p,x1 x2 x3,y1 y2
+yes-or-no-p,x1 x2 x3,y1 y2
+zerop,x1 x2 x3,y1 y2
