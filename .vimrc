@@ -151,13 +151,8 @@ nnoremap <C-d> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <C-u> <NOP>
 nnoremap <Space> <NOP>
-nnoremap <Home> <NOP>
-nnoremap <Home> <NOP>
-nnoremap <End> <NOP>
 nnoremap <Insert> <NOP>
 nnoremap <Del> <NOP>
-nnoremap <PageUp> <NOP>
-nnoremap <PageDown> <NOP>
 
 " visual mode
 vnoremap s <NOP>
