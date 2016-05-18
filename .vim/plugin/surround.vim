@@ -1,12 +1,12 @@
 
 " SurroundWith {{{
+
 function! SurroundWith(leftPart, rightPart, currentLine)
 
   " Move the first non-blank character of the line.
   execute ':normal ^'
   let s:targetString = getline(a:currentLine)[col('.') - 1 : ]    " Removed blanc of current line.
   let s:substIndex = stridx(s:targetString, a:leftPart)
-
 
   if s:substIndex == 0    " Is it surrounded already?
 
@@ -40,8 +40,11 @@ function! SurroundWith(leftPart, rightPart, currentLine)
   execute ':normal == '
 
 endfunction
+
+
 " }}}
 " PrintSurround {{{
+
 function! PrintSurround() range
 
   let s:filetype = &filetype
@@ -80,4 +83,6 @@ function! PrintSurround() range
 endfunction
 
 command! -range PrintSurround <line1>, <line2>call PrintSurround()
+
+
 " }}}
