@@ -10,7 +10,7 @@ function! MakeBackupFile()
     call mkdir(s:backupDir , 'p')
   endif
 
-  if filereadable(expand('%'))    " unless new file
+  if filereadable(expand('%')) && filewritable(expand('%'))   " unless new file
     if exists("*strftime")    " is executable function `strftime'
       let s:today = strftime("%y%m%d")
       if isdirectory(s:backupDir . '/' . s:today) == 0
