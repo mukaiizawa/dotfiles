@@ -10,20 +10,22 @@ function! MakeBackupFile()
     call mkdir(s:backupDir , 'p')
   endif
 
-  if exists("*strftime")    " if executable `strftime'
-    let s:today = strftime("%y%m%d")
-    if isdirectory(s:backupDir . '/' . s:today) == 0
-      call mkdir(s:backupDir . '/' . s:today , 'p')
+  if filereadable(expand('%'))    " unless new file
+    if exists("*strftime")    " is executable function `strftime'
+      let s:today = strftime("%y%m%d")
+      if isdirectory(s:backupDir . '/' . s:today) == 0
+        call mkdir(s:backupDir . '/' . s:today , 'p')
+      endif
+      return writefile(readfile(expand('%')),
+            \  s:backupDir .
+            \  '/' . s:today . 
+            \  '/' . expand('%:t') . '.' . localtime())
+    else    " not implemented `strftime'
+      return writefile(readfile(expand('%')),
+            \  s:backupDir .
+            \  '/' . expand('%:t') . '.' . localtime())
     endif
-    return writefile(readfile(expand('%')),
-          \  s:backupDir .
-          \  '/' . s:today . 
-          \  '/' . expand('%:t') . '.' . localtime())
-  else    " not implemented `strftime'
-    return writefile(readfile(expand('%')),
-          \  s:backupDir .
-          \  '/' . expand('%:t') . '.' . localtime())
-  endif
+  end if
 
 endfunction
 
