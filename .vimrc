@@ -177,8 +177,11 @@ nnoremap sq :<C-u>q<CR>
 "}}}
 " Mapping for Surround "{{{
 
+" Surround with print
 nnoremap sp :<C-u>PrintSurround<CR>
 vnoremap sp :PrintSurround<CR>
+
+" Delete surround
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
 nnoremap sd* f*x,x
@@ -228,8 +231,8 @@ inoremap jj <Esc>
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
+" Insert date.
 if exists("*strftime")
-  " insert date
   inoremap <C-d> <Esc>:InsertDate<CR>
 else
   echo "not exists strftime"
@@ -242,12 +245,12 @@ endif
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" Toggle option
+" Toggle option.
 nnoremap <Space>/ :set hlsearch!<CR>
 nnoremap <Space>n :set number!<CR>
 nnoremap <Space>w :set wrap!<CR>
 
-" Yank or Paste with clipboard
+" Yank or Paste to clipboard.
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
@@ -431,6 +434,7 @@ let g:unite_source_menu_menus.Format = {
 
 "}}}
 " Toggle Option "{{{
+
 let g:unite_source_menu_menus.Toggle_Option ={
       \  "command_candidates" : [
       \      ["Toggle number     : <Space>n", "set number!"],
@@ -439,106 +443,101 @@ let g:unite_source_menu_menus.Toggle_Option ={
       \      ["Toggle IndentLine : <Space>i", "IndentLinesToggle"],
       \  ]
       \ }
+
+
 "}}}
 " Trim "{{{
+
 let g:unite_source_menu_menus.Trim ={
       \  "command_candidates" : [
       \      ["Trim ", "%s///g"],
       \  ]
       \ }
+
+
 "}}}
 " Startup "{{{
-" ==============================================
-" Note: The font was block written using figlet.
-" ==============================================
 
 function! UniteStartup()
-      if argc()==0 && bufnr('$')==1 
-
-      \  Unite
-      \  output:echo:":":!
-      \  output:echo:"===:Edit:===":! menu:Edit
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:"===:Search:===":! menu:Search
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:"===:Neobundle:===":! menu:NeoBundle
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":::::::::::::::::::::.##.::::::::::::::::::":!
-      \  output:echo:"::::::::::::::::::::.####.:::::::::::::::::":!
-      \  output:echo:"::::::::::::::::::.########.:::::::::::::::":!
-      \  output:echo:"::::::::::::::::.############.:::::::::::::":!
-      \  output:echo:"::::::::::_____################________::::":!
-      \  output:echo:":::::::::///////////######/////////////':::":!
-      \  output:echo:"::::::::::.|/////|##########.////////':::::":!
-      \  output:echo:"::::::::.##|/////|########.////////'#.:::::":!
-      \  output:echo:"::::::.####|/////|######.////////'#####.:::":!
-      \  output:echo:"::::.######|/////|####.////////'#########.:":!
-      \  output:echo:":::########|/////|##.////////'#############":!
-      \  output:echo:"::::`######|/////|_////////'#############':":!
-      \  output:echo:"::::::`####|////////_/|//'#############':::":!
-      \  output:echo:"::::::::`##|///////|_|/'#############':::::":!
-      \  output:echo:"::::::::::`|////////_/|/_________/|':::::::":!
-      \  output:echo:":::::::::::|/////'#|:|||:,_,:,_,:||:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:":!
-      \  output:echo:":::::::::::|////'##|:|||:|||:|||:||::::_|:::::::_|::_|:::::_|_|_|::_|::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:":!
-      \  output:echo:":::::::::::|///':`#|:|||:|||:|||:||:::::_|:::::_|::::::::::::_|::::_|_|::_|_|::_|_|_|::::_|::_|_|::::_|_|::::_|:::::_|::::_|_|::::::_|_|_|:":!
-      \  output:echo:":::::::::::|/'::::`|_|/|_|/|_|/|_|/::::::_|:::_|::::_|:::::::_|::::_|::_|::_|::_|::::_|::_|_|::::::_|::::_|:::_|:::_|:::_|_____|::_|::::_|:":!
-      \  output:echo:"::::::::::::::::::::`####'::::::::::::::::_|:_|:::::_|:::::::_|::::_|::::::_|::_|::::_|::_|::::::::_|::::_|::::_|:_|::::_|::::::::_|::::_|:":!
-      \  output:echo:":::::::::::::::::::::`##'::::::::::::::::::_|:::::::_|:::::_|_|_|::_|::::::_|::_|_|_|::::_|::::::::::_|_|:::::::_|::::::::_|_|_|::::_|_|_|:":!
-      \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
-      \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  output:echo:":":!
-      \  neomru/directory
-      \  neomru/file
-      \  -hide-source-names
-      \  -no-split
-      \  -no-wrap
-
-       endif
+  if argc()==0 && bufnr('$')==1 
+        \  Unite
+        \  output:echo:":":!
+        \  output:echo:"===:Edit:===":! menu:Edit
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:"===:Search:===":! menu:Search
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:"===:Neobundle:===":! menu:NeoBundle
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":::::::::::::::::::::.##.::::::::::::::::::":!
+        \  output:echo:"::::::::::::::::::::.####.:::::::::::::::::":!
+        \  output:echo:"::::::::::::::::::.########.:::::::::::::::":!
+        \  output:echo:"::::::::::::::::.############.:::::::::::::":!
+        \  output:echo:"::::::::::_____################________::::":!
+        \  output:echo:":::::::::///////////######/////////////':::":!
+        \  output:echo:"::::::::::.|/////|##########.////////':::::":!
+        \  output:echo:"::::::::.##|/////|########.////////'#.:::::":!
+        \  output:echo:"::::::.####|/////|######.////////'#####.:::":!
+        \  output:echo:"::::.######|/////|####.////////'#########.:":!
+        \  output:echo:":::########|/////|##.////////'#############":!
+        \  output:echo:"::::`######|/////|_////////'#############':":!
+        \  output:echo:"::::::`####|////////_/|//'#############':::":!
+        \  output:echo:"::::::::`##|///////|_|/'#############':::::":!
+        \  output:echo:"::::::::::`|////////_/|/_________/|':::::::":!
+        \  output:echo:":::::::::::|/////'#|:|||:,_,:,_,:||:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:":!
+        \  output:echo:":::::::::::|////'##|:|||:|||:|||:||::::_|:::::::_|::_|:::::_|_|_|::_|::::::_|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|:":!
+        \  output:echo:":::::::::::|///':`#|:|||:|||:|||:||:::::_|:::::_|::::::::::::_|::::_|_|::_|_|::_|_|_|::::_|::_|_|::::_|_|::::_|:::::_|::::_|_|::::::_|_|_|:":!
+        \  output:echo:":::::::::::|/'::::`|_|/|_|/|_|/|_|/::::::_|:::_|::::_|:::::::_|::::_|::_|::_|::_|::::_|::_|_|::::::_|::::_|:::_|:::_|:::_|_____|::_|::::_|:":!
+        \  output:echo:"::::::::::::::::::::`####'::::::::::::::::_|:_|:::::_|:::::::_|::::_|::::::_|::_|::::_|::_|::::::::_|::::_|::::_|:_|::::_|::::::::_|::::_|:":!
+        \  output:echo:":::::::::::::::::::::`##'::::::::::::::::::_|:::::::_|:::::_|_|_|::_|::::::_|::_|_|_|::::_|::::::::::_|_|:::::::_|::::::::_|_|_|::::_|_|_|:":!
+        \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
+        \  output:echo:":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_|::":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  output:echo:":":!
+        \  neomru/directory
+        \  neomru/file
+        \  -hide-source-names
+        \  -no-split
+        \  -no-wrap
+  endif
 endfunction
 
-
-" ===========================================================
-" Note: If you want to start with 'quick match', append this.
-" ===========================================================
-" \  -quick-match
 
 "}}}
 
 command! UniteStartup call UniteStartup()
 augroup startupMenu
   autocmd!
-  " autocmd VimEnter * nested if argc() == 0 && bufnr('$') == 1 | :UniteStartup | endif
   autocmd VimEnter * nested :UniteStartup
-  " autocmd GUIEnter * nested bnext
 augroup END
 
 
 "}}}
 "  NeoMru "{{{
+
 let g:neomru#file_mru_limit = 2500
 let g:neomru#directory_mru_limit = 500
 let g:neomru#update_interval = 10       " 10 seconds 
+
 
 "}}}
 "  VimFiler "{{{
@@ -548,7 +547,6 @@ let g:neomru#update_interval = 10       " 10 seconds
 " =============================================================
 let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
-
 
 " ============================================================================
 " Note: This applies on the filenames of candidates.  It's not case sensitive.
@@ -585,10 +583,11 @@ let g:vimfiler_tree_indentation = 1
 " ================================================
 " Note:
 " Define key mapping to execute quickrun as 'mq'.
-" Therefore, repeal defaults key mappings.
+" Therefore, disable defaults key mappings.
 " Refer to " Mappnig for Plugin " of " Plefix m ".
 " ================================================
 let g:quickrun_no_default_key_mappings = 1
+
 
 " ==========================================================
 " Note:
@@ -601,7 +600,6 @@ let g:quickrun_no_default_key_mappings = 1
 " %s        Source (|quickrun-option-src|)
 " %a        Script's arguments (|quickrun-option-args|)
 " ==========================================================
-
 
 let g:quickrun_config = {
       \  '_' : {
@@ -653,24 +651,26 @@ let g:quickrun_config = {
 
 let g:indentLine_char = '|'
 
-
 " ============================================================
 " Note:
 " This variable specify a list of file types.
 " When opening these types of files, the plugin is enabled by
 " default.
 " ============================================================
+
 let g:indentLine_fileType = [
-      \ 'c',
-      \ 'jsp',
-      \ 'html',
-      \]
+      \   'c',
+      \   'jsp',
+      \   'html',
+      \ ]
 
 
 "}}}
 "  caw "{{{
 
+" Disable default mapping.
 let g:caw_no_default_keymappings = 1
+
 
 "}}}
 
@@ -693,8 +693,6 @@ nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
 
-" register
-nnoremap <silent>mre   :<C-u>Unite register<CR>
 
 "}}}
 " NeoMRU "{{{
@@ -702,10 +700,12 @@ nnoremap <silent>mre   :<C-u>Unite register<CR>
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
 nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 
+
 "}}}
 " VimFiler "{{{
 
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
+
 
 "}}}
 " VimShell "{{{
@@ -715,23 +715,28 @@ nnoremap <silent>mst   :<C-u>VimShellTab<CR>
 nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
 nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
 
+
 "}}}
 " Quick Run "{{{
 
 nnoremap <silent>mq    :<C-u>QuickRun<CR>
+
 
 "}}}
 " ContinuousNumber "{{{
 
 vnoremap <silent>gco    :ContinuousNumber <C-a><CR>
 
+
 "}}}
 " IndentLine "{{{
 
 nnoremap <Space>i      :<C-u>IndentLinesToggle<CR>
 
+
 "}}}
 " caw"{{{
+
 nmap gci <Plug>(caw:hatpos:toggle)
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
@@ -740,13 +745,16 @@ vmap gci <Plug>(caw:hatpos:toggle)
 vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
+
 "}}}
 " open-browser"{{{
+
 nmap gw  <Plug>(openbrowser-open)
 vmap gw  <Plug>(openbrowser-open)
 
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
+
 
 "}}}
 
