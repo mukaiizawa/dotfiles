@@ -262,7 +262,6 @@ nmap # #zz
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
-nmap g; g;zz
 
 " Cursor motion
 nnoremap <Space>h 0
