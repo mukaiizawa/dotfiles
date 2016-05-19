@@ -1,2 +1,0 @@
-
-nmap <buffer> q q
