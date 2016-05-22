@@ -334,8 +334,9 @@ endif
 "}}}
 "  NeoMru "{{{
 
-let g:neomru#file_mru_limit = 2500
-let g:neomru#directory_mru_limit = 500
+let g:neomru#file_mru_limit = 1500    " default value is 1000
+let g:neomru#directory_mru_limit = 500    " default value is 1000
+let g:neomru#directory_mru_ignore_pattern = ''
 let g:neomru#update_interval = 10       " 10 seconds 
 
 
