@@ -481,9 +481,6 @@ let g:caw_no_default_keymappings = 1
 " colorsheme
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 
-" file_rec
-nnoremap <silent>mrf   :<C-u>UniteWithBufferDir file_rec<CR>
-
 " grep
 nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
@@ -512,10 +509,6 @@ nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
 " VimShell "{{{
 
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
-nnoremap <silent>mst   :<C-u>VimShellTab<CR>
-nnoremap <silent>msi   :<C-u>VimShellInteractive<CR>
-nnoremap <silent>mss   :<C-u>%VimShellSendString<CR>
-
 
 "}}}
 " Quick Run "{{{
