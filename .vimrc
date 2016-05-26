@@ -337,7 +337,6 @@ endif
 let g:neomru#file_mru_limit = 1000    " default value
 let g:neomru#directory_mru_limit = 500    " default value is 1000
 let g:neomru#directory_mru_ignore_pattern = ''
-let g:neomru#update_interval = 10       " 10 seconds 
 
 
 "}}}
