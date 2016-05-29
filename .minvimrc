@@ -3,6 +3,7 @@ syntax enable
 
 " Setting "
 " Setting for System "{{{
+
 set encoding=utf-8            " Sets the character encoding used inside Vim.
 set wildmenu                  " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 set showcmd                   " Show (partial) command in the last line of the screen.
@@ -12,11 +13,14 @@ set helplang=en
 set history=2000
 set nrformats-=octal
 set fileencoding=utf-8
+set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
 
+
 "}}}
 " Setting for Display "{{{
+
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
 set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
@@ -26,42 +30,52 @@ set list
 set listchars=tab:->,eol:<,trail:>
 set backspace=start,eol,indent
 
+
 "}}}
 " Setting for Status line, Tab page "{{{
+
 set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
 set laststatus=2               " Always, window show status.
 set showtabline=2              " Always, tab page labels show status.
 set tabline=%t
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
 set tabpagemax=300
+
 
 "}}}
 " Setting for File "{{{
+
 set noundofile
 set viminfo=                   " Not use viminfo file.
 set nobackup
 set noswapfile
 
+
 "}}}
 " Setting for Search,Substitute "{{{
+
 set hlsearch                   " When search word, highlight all its matches.
 set wrapscan
 set ignorecase                 " The case of normal letters is ignored.
 set smartcase                  " Override the ignorecase option if the search pattern contains uppercase charachers.
 
+
 "}}}
 " Setting for Tab,Indent "{{{
+
 set autoindent
 set tabstop=2                  " Number of spaces that a <Tab> in the file counts for.
 set smartindent
 set expandtab
 set shiftwidth=2
 
+
 "}}}
 
 " Mapping "
 " Mapping to NOP "{{{
+
+" normal mode
 nnoremap Q <NOP>
 nnoremap } <NOP>
 nnoremap { <NOP>
@@ -70,34 +84,31 @@ nnoremap zd <NOP>
 nnoremap zD <NOP>
 nnoremap zE <NOP>
 nnoremap ZZ <NOP>
-nnoremap <C-e> <NOP>
-nnoremap <C-d> <NOP>
-nnoremap <C-f> <NOP>
-nnoremap <C-y> <NOP>
-nnoremap <C-u> <NOP>
-nnoremap <C-b> <NOP>
-nnoremap <Space> <NOP>
-nnoremap <Home> <NOP>
-nnoremap <Home> <NOP>
-nnoremap <End> <NOP>
-nnoremap <Insert> <NOP>
-nnoremap <PageUp> <NOP>
-nnoremap <PageDown> <NOP>
-
-vnoremap s <NOP>
-
 nnoremap dh <NOP>
 nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
-
 nnoremap ch <NOP>
 nnoremap cj <NOP>
 nnoremap ck <NOP>
 nnoremap cl <NOP>
+nnoremap <C-e> <NOP>
+nnoremap <C-d> <NOP>
+nnoremap <C-y> <NOP>
+nnoremap <C-u> <NOP>
+nnoremap <Space> <NOP>
+nnoremap <Insert> <NOP>
+nnoremap <Del> <NOP>
+
+" visual mode
+vnoremap s <NOP>
+vnoremap <BS> <NOP>
+vnoremap <CR> <NOP>
+
 
 "}}}
 " Mapping for Tab, Window "{{{
+
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
 nnoremap sh <C-w>h
@@ -108,42 +119,11 @@ nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
 
-" change current window height(width).
-nnoremap <Up>     4<C-w>-
-nnoremap <Down>  30<C-w>+
-nnoremap <Right>  4<C-w>>
-nnoremap <Left>   4<C-w><
 
 "}}}
 " Mapping for Surround "{{{
 
-" =========================================
-" Note: You can surround with these symble.
-" Symbol: '', "", **
-" Brackets: <>,(),{},[]
-" =========================================
-
-" Surround with symble. "{{{
-nnoremap s' wbi'<Esc>ea'<Esc>
-nnoremap s" wbi"<Esc>ea"<Esc>
-nnoremap s* wbi*<Esc>ea*<Esc>
-nnoremap s< wbi<<Esc>ea><Esc>
-nnoremap s> wbi<<Esc>ea><Esc>
-nnoremap s( wbi(<Esc>ea)<Esc>
-nnoremap s) wbi(<Esc>ea)<Esc>
-nnoremap s{ wbi{<Esc>ea}<Esc>
-nnoremap s} wbi{<Esc>ea}<Esc>
-nnoremap s[ wbi[<Esc>ea]<Esc>
-nnoremap s] wbi[<Esc>ea]<Esc>
-
-"}}}
-" Surround with print "{{{
-
-nnoremap sp :<C-u>PrintSurround<CR>
-vnoremap sp :PrintSurround<CR>
-
-"}}}
-" Delete surround. "{{{
+" Delete surround
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
 nnoremap sd* f*x,x
@@ -156,134 +136,7 @@ nnoremap sd} f}xF{x
 nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
-"}}}
-" Change surround from ' to something. "{{{
-nnoremap s'" f'r",r"
-nnoremap s'* f'r*,r*
-nnoremap s'< f'r>,r<
-nnoremap s'> f'r>,r<
-nnoremap s'( f'r),r(
-nnoremap s') f'r),r(
-nnoremap s'{ f'r},r{
-nnoremap s'} f'r},r{
-nnoremap s'[ f'r],r[
-nnoremap s'] f'r],r[
 
-"}}}
-" Change surround from " to something. "{{{
-nnoremap s"' f"r',r'
-nnoremap s"* f"r*,r*
-nnoremap s"< f"r>,r<
-nnoremap s"> f"r>,r<
-nnoremap s"( f"r),r(
-nnoremap s") f"r),r(
-nnoremap s"{ f"r},r{
-nnoremap s"} f"r},r{
-nnoremap s"[ f"r],r[
-nnoremap s"] f"r],r[
-
-"}}}
-" Change surround from * to something. "{{{
-nnoremap s*' f*r',r'
-nnoremap s*" f*r",r"
-nnoremap s*< f*r>,r<
-nnoremap s*> f*r>,r<
-nnoremap s*( f*r),r(
-nnoremap s*) f*r),r(
-nnoremap s*{ f*r},r{
-nnoremap s*} f*r},r{
-nnoremap s*[ f*r],r[
-nnoremap s*] f*r],r[
-
-"}}}
-" Change surround from < > to something. "{{{
-nnoremap s<' f>r'F<r'
-nnoremap s<" f>r"F<r"
-nnoremap s<* f>r*F<r*
-nnoremap s<( f>r)F<r(
-nnoremap s<) f>r)F<r(
-nnoremap s<{ f>r}F<r{
-nnoremap s<} f>r}F<r{
-nnoremap s<[ f>r]F<r[
-nnoremap s<] f>r]F<r[
-
-nnoremap s>' f>r'F<r'
-nnoremap s>" f>r"F<r"
-nnoremap s>* f>r*F<r*
-nnoremap s>( f>r)F<r(
-nnoremap s>) f>r)F<r(
-nnoremap s>{ f>r}F<r{
-nnoremap s>} f>r}F<r{
-nnoremap s>[ f>r]F<r[
-nnoremap s>] f>r]F<r[
-
-"}}}
-" Change surround from ( ) to something. "{{{
-nnoremap s(' f)r'F(r'
-nnoremap s(" f)r"F(r"
-nnoremap s(* f)r*F(r*
-nnoremap s(< f)r>F(r<
-nnoremap s(> f)r>F(r<
-nnoremap s({ f)r}F(r{
-nnoremap s(} f)r}F(r{
-nnoremap s([ f)r]F(r[
-nnoremap s(] f)r]F(r[
-
-nnoremap s)' f)r'F(r'
-nnoremap s)" f)r"F(r"
-nnoremap s)* f)r*F(r*
-nnoremap s)< f)r>F(r<
-nnoremap s)> f)r>F(r<
-nnoremap s){ f)r}F(r{
-nnoremap s)} f)r}F(r{
-nnoremap s)[ f)r]F(r[
-nnoremap s)] f)r]F(r[
-
-"}}}
-" Change surround from { } to something. "{{{
-nnoremap s{' f}r'F{r'
-nnoremap s{" f}r"F{r"
-nnoremap s{* f}r*F{r*
-nnoremap s{< f}r>F{r<
-nnoremap s{> f}r>F{r<
-nnoremap s{( f}r)F{r(
-nnoremap s{) f}r)F{r(
-nnoremap s{[ f}r]F{r[
-nnoremap s{] f}r]F{r[
-
-nnoremap s}' f}r'F{r'
-nnoremap s}" f}r"F{r"
-nnoremap s}* f}r*F{r*
-nnoremap s}< f}r>F{r<
-nnoremap s}> f}r>F{r<
-nnoremap s}( f}r)F{r(
-nnoremap s}) f}r)F{r(
-nnoremap s}[ f}r]F{r[
-nnoremap s}] f}r]F{r[
-
-"}}}
-" Change surround from [ ] to something. "{{{
-nnoremap s[' f]r'F[r'
-nnoremap s[" f]r"F[r"
-nnoremap s[* f]r*F[r*
-nnoremap s[< f]r>F[r<
-nnoremap s[> f]r>F[r<
-nnoremap s[( f]r)F[r(
-nnoremap s[) f]r)F[r(
-nnoremap s[{ f]r}F[r{
-nnoremap s[} f]r}F[r{
-
-nnoremap s]' f]r'F[r'
-nnoremap s]" f]r"F[r"
-nnoremap s]* f]r*F[r*
-nnoremap s]< f]r>F[r<
-nnoremap s]> f]r>F[r<
-nnoremap s]( f]r)F[r(
-nnoremap s]) f]r)F[r(
-nnoremap s]{ f]r}F[r{
-nnoremap s]} f]r}F[r{
-
-"}}}
 "}}}
 " Mapping for Calling External Program {{{
 
@@ -295,18 +148,21 @@ else
 endif
 
 " Execute current buffer with ccl.
-if executable('wx86cl')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl -l %<CR>
+if executable('wx86cl64')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+elseif executable('lx86cl64')
+  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
 else
-  nnoremap <silent>gcw  :<C-u>echo "wx86cl: command not found"<CR>
+  nnoremap <silent>gcw  :<C-u>echo "ccl: command not found"<CR>
 endif
 
-" Execute current buffer with ccl.
+" Execute current buffer with sbcl.
 if executable('sbcl')
   nnoremap <silent>gcs  :<C-u>lcd %:h<CR> :!sbcl --script %<CR>
 else
   nnoremap <silent>gcs  :<C-u>echo "sbcl: command not found"<CR>
 endif
+
 
 "}}}
 " Mapping for Insert Mode "{{{
@@ -317,37 +173,26 @@ inoremap jj <Esc>
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
-if exists("*strftime")
-  " insert date
-  inoremap <C-d> <Esc>:InsertDate<CR>
-else
-  echo "not exists strftime"
-endif
 
 "}}}
-" Mapping for etc "{{{
+" Mapping the others "{{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" toggle
-nnoremap <Space>/ :set hlsearch!<CR>
-nnoremap <Space>n :set number!<CR>
+" Toggle `wrap' option
 nnoremap <Space>w :set wrap!<CR>
 
-" Yank or Paste with clipboard
+" Yank or Paste to clipboard.
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
 vnoremap <C-Insert> "*y
 
 " Redraw at center of window.
-nmap * *zz
-nmap # #zz
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
-nmap g; g;zz
 
 " Cursor motion
 nnoremap <Space>h 0
@@ -359,6 +204,8 @@ vnoremap <Space>h 0
 vnoremap <Space>l $
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
+nnoremap ) }
+nnoremap ( {
 
 " Change directory to carrent buffer directory.
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
@@ -372,6 +219,7 @@ nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 
 " Reroad vimrc.
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
+
 
 "}}}
 
