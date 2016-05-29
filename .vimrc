@@ -255,8 +255,6 @@ vnoremap <S-Insert> "*p
 vnoremap <C-Insert> "*y
 
 " Redraw at center of window.
-nmap * *zz
-nmap # #zz
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
@@ -303,8 +301,6 @@ nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 100
 let g:unite_source_rec_max_cache_files = 200
-let g:unite_source_rec_async_command = 'files -A'
-
 
 call unite#custom#profile('default', 'context', {
       \   'start_insert' : 1,
@@ -318,15 +314,6 @@ call unite#custom#profile('default', 'context', {
       \ })
 
 call unite#custom_default_action('directory', 'vimfiler')
-
-" =============================================================
-" Note: if executable ag.exe, execute grep command with ag.exe
-" =============================================================
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
 
 
 "}}}
@@ -374,6 +361,7 @@ let g:vimfiler_file_icon = ' '
 let g:vimfiler_readonly_file_icon = 'X'
 let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
+
 
 "}}}
 "  QuickRun "{{{
@@ -478,10 +466,6 @@ let g:caw_no_default_keymappings = 1
 " colorsheme
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 
-" grep
-nnoremap <silent>mg    :<C-u>lcd %:h<CR> :Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent>mgg   :<C-u>UniteResume search-buffer<CR>
-
 " line
 nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 
@@ -506,6 +490,7 @@ nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
 " VimShell "{{{
 
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
+
 
 "}}}
 " Quick Run "{{{
