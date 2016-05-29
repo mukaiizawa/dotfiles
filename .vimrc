@@ -240,14 +240,12 @@ endif
 
 
 "}}}
-" Mapping for etc "{{{
+" Mapping the others "{{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
 
-" Toggle option.
-nnoremap <Space>/ :set hlsearch!<CR>
-nnoremap <Space>n :set number!<CR>
+" Toggle `wrap' option
 nnoremap <Space>w :set wrap!<CR>
 
 " Yank or Paste to clipboard.
