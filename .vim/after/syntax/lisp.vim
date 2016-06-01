@@ -107,7 +107,6 @@ syn keyword lispFunc dorange
 syn keyword lispFunc *=
 syn keyword lispFunc while
 syn keyword lispFunc for
-syn keyword lispFunc for-each
 syn keyword lispFunc s-expr?
 syn keyword lispFunc aif
 syn keyword lispFunc awhen
