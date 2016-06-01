@@ -103,6 +103,7 @@ syn keyword lispFunc olambda
 syn keyword lispFunc surround
 syn keyword lispFunc dostring
 syn keyword lispFunc dofile
+syn keyword lispFunc dorange
 syn keyword lispFunc *=
 syn keyword lispFunc while
 syn keyword lispFunc for

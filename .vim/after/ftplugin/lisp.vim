@@ -12,6 +12,7 @@ setlocal lispwords+=dlambda
 setlocal lispwords+=olambda
 setlocal lispwords+=dostring
 setlocal lispwords+=dofile
+setlocal lispwords+=dorange
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-encoding
 setlocal lispwords+=surround
