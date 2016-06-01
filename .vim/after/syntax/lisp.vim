@@ -1,5 +1,5 @@
 
-setlocal iskeyword=38,42,43,45,47-58,60-90,97-122,_
+setlocal iskeyword=33,38,42,43,45,47-58,60-90,97-122,_
 
 " abbrevs
 syn keyword lispFunc +=
@@ -190,6 +190,7 @@ syn keyword lispFunc run-on?
 syn keyword lispFunc parse-int
 syn keyword lispFunc parse-sym
 syn keyword lispFunc getopt
+syn keyword lispFunc expand-hyphen
 syn keyword lispFunc executable
 syn keyword lispFunc exit
 syn keyword lispFunc call
