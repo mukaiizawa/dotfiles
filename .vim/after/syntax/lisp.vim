@@ -171,7 +171,7 @@ syn keyword lispFunc echo
 syn keyword lispFunc input-int
 syn keyword lispFunc input-str
 syn keyword lispFunc input-char
-syn keyword lispFunc input-list
+syn keyword lispFunc read-as-list
 syn keyword lispFunc dir-pathname?
 syn keyword lispFunc pathname-as-directory
 syn keyword lispFunc directory-wildcard
