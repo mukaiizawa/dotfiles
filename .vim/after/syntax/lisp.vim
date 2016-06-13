@@ -118,6 +118,8 @@ syn keyword lispFunc acond
 syn keyword lispFunc dcond
 syn keyword lispFunc defexe
 
+syn keyword lispFunc with-ahead-reader
+
 
 " function
 syn keyword lispFunc canonical-letargs

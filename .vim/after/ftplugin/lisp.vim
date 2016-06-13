@@ -32,6 +32,9 @@ setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
 setlocal lispwords+=defexe
 
+setlocal lispwords+=with-ahead-reader
+
+
 " for html
 " {{{
 
