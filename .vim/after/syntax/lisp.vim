@@ -106,11 +106,13 @@ syn keyword lispFunc dofile
 syn keyword lispFunc dorange
 syn keyword lispFunc *=
 syn keyword lispFunc while
+syn keyword lispFunc dowhile
 syn keyword lispFunc for
 syn keyword lispFunc s-expr?
 syn keyword lispFunc aif
 syn keyword lispFunc awhen
 syn keyword lispFunc awhile
+syn keyword lispFunc doawhile
 syn keyword lispFunc aand
 syn keyword lispFunc acond
 syn keyword lispFunc dcond
