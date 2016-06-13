@@ -119,6 +119,7 @@ syn keyword lispFunc dcond
 syn keyword lispFunc defexe
 
 syn keyword lispFunc with-ahead-reader
+syn keyword lispFunc with-open-ahead-reader
 
 
 " function
