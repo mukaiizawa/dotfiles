@@ -432,6 +432,7 @@ let g:quickrun_config = {
 "  IndentLine "{{{
 
 let g:indentLine_char = '|'
+let g:indentLine_fileType = ['']
 
 " ============================================================
 " Note:
@@ -439,13 +440,6 @@ let g:indentLine_char = '|'
 " When opening these types of files, the plugin is enabled by
 " default.
 " ============================================================
-
-let g:indentLine_fileType = [
-      \   'c',
-      \   'jsp',
-      \   'html',
-      \ ]
-
 
 "}}}
 "  caw "{{{
