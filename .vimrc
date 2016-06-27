@@ -10,16 +10,15 @@ if !has('gui_running')
 endif
 syntax enable
 
-" Initialization "{{{
+" Initialization {{{
 
 if !1 | finish | endif
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-
-"}}}
-" NeoBundle "{{{
+" }}}
+" NeoBundle {{{
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -44,9 +43,7 @@ NeoBundle 'Yggdroot/indentLine'
 call neobundle#end()
 filetype plugin indent on
 
-
-"}}}
-
+" }}}
 
 " =======================================
 " Note:
@@ -54,8 +51,8 @@ filetype plugin indent on
 " It is applicable to .minvimrc.
 " =======================================
 
-" Setting "
-" Setting for System "{{{
+" Setting
+" Setting for System {{{
 
 set encoding=utf-8            " Sets the character encoding used inside Vim.
 set wildmenu                  " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
@@ -70,9 +67,8 @@ set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
 
-
-"}}}
-" Setting for Display "{{{
+" }}}
+" Setting for Display {{{
 
 set number
 set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
@@ -83,9 +79,8 @@ set list
 set listchars=tab:->,eol:<,trail:>
 set backspace=start,eol,indent
 
-
-"}}}
-" Setting for Status line, Tab page "{{{
+" }}}
+" Setting for Status line, Tab page {{{
 
 set title
 set cmdheight=2                " Number of screen lines to use for the command-line.
@@ -95,27 +90,24 @@ set tabline=%t
 set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
 set tabpagemax=300
 
-
-"}}}
-" Setting for File "{{{
+" }}}
+" Setting for File {{{
 
 set noundofile
 set viminfo=                   " Not use viminfo file.
 set nobackup
 set noswapfile
 
-
-"}}}
-" Setting for Search,Substitute "{{{
+" }}}
+" Setting for Search,Substitute {{{
 
 set hlsearch                   " When search word, highlight all its matches.
 set wrapscan
 set ignorecase                 " The case of normal letters is ignored.
 set smartcase                  " Override the ignorecase option if the search pattern contains uppercase charachers.
 
-
-"}}}
-" Setting for Tab,Indent "{{{
+" }}}
+" Setting for Tab,Indent {{{
 
 set autoindent
 set tabstop=2                  " Number of spaces that a <Tab> in the file counts for.
@@ -123,11 +115,10 @@ set smartindent
 set expandtab
 set shiftwidth=2
 
+" }}}
 
-"}}}
-
-" Mapping "
-" Mapping to NOP "{{{
+" Mapping
+" Mapping to NOP {{{
 
 " normal mode
 nnoremap Q <NOP>
@@ -155,9 +146,8 @@ vnoremap s <NOP>
 vnoremap <BS> <NOP>
 vnoremap <CR> <NOP>
 
-
-"}}}
-" Mapping for Tab, Window "{{{
+" }}}
+" Mapping for Tab, Window {{{
 
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
@@ -169,9 +159,8 @@ nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
 
-
-"}}}
-" Mapping for Surround "{{{
+" }}}
+" Mapping for Surround {{{
 
 " Surround with print
 nnoremap sp :<C-u>PrintSurround<CR>
@@ -190,8 +179,7 @@ nnoremap sd} f}xF{x
 nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
-
-"}}}
+" }}}
 " Mapping for Calling External Program {{{
 
 " Execute current buffer with clisp.
@@ -217,9 +205,8 @@ else
   nnoremap <silent>gcs  :<C-u>echo "sbcl: command not found"<CR>
 endif
 
-
-"}}}
-" Mapping for Insert Mode "{{{
+" }}}
+" Mapping for Insert Mode {{{
 
 " End insert mode with jj.
 inoremap jj <Esc>
@@ -234,9 +221,8 @@ else
   echo "not exists strftime"
 endif
 
-
-"}}}
-" Mapping the others "{{{
+" }}}
+" Mapping the others {{{
 
 " Redo changes which were undone with U key.
 nnoremap U  <C-r>
@@ -281,9 +267,7 @@ nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 " Reroad vimrc.
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 
-
-"}}}
-
+" }}}
 
 " ======================================
 " Note:
@@ -292,7 +276,7 @@ nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 " ======================================
 
 " Setting of Plugin.
-"  Unite "{{{
+"  Unite {{{
 
 let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 100
@@ -311,17 +295,15 @@ call unite#custom#profile('default', 'context', {
 
 call unite#custom_default_action('directory', 'vimfiler')
 
-
-"}}}
-"  NeoMru "{{{
+" }}}
+"  NeoMru {{{
 
 let g:neomru#file_mru_limit = 1000    " default value
 let g:neomru#directory_mru_limit = 500    " default value is 1000
 let g:neomru#directory_mru_ignore_pattern = ''
 
-
-"}}}
-"  VimFiler "{{{
+" }}}
+"  VimFiler {{{
 
 " =============================================================
 " Note: Disable netrw.vim and set vimfiler as default explorer.
@@ -358,9 +340,8 @@ let g:vimfiler_readonly_file_icon = 'X'
 let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
 
-
-"}}}
-"  QuickRun "{{{
+" }}}
+"  QuickRun {{{
 
 " ================================================
 " Note:
@@ -427,9 +408,8 @@ let g:quickrun_config = {
       \
       \}
 
-
 " }}}
-"  IndentLine "{{{
+"  IndentLine {{{
 
 let g:indentLine_char = '|'
 let g:indentLine_fileType = ['']
@@ -441,17 +421,16 @@ let g:indentLine_fileType = ['']
 " default.
 " ============================================================
 
-"}}}
-"  caw "{{{
+" }}}
+"  caw {{{
 
 " Disable default mapping.
 let g:caw_no_default_keymappings = 1
 
-
-"}}}
+" }}}
 
 " Mapping of Plugin.
-" Unite "{{{
+" Unite {{{
 
 " colorsheme
 nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
@@ -462,46 +441,39 @@ nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
 
-
-"}}}
-" NeoMRU "{{{
+" }}}
+" NeoMRU {{{
 
 nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
 nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 
-
-"}}}
-" VimFiler "{{{
+" }}}
+" VimFiler {{{
 
 nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
 
-
-"}}}
-" VimShell "{{{
+" }}}
+" VimShell {{{
 
 nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
 
-
-"}}}
-" Quick Run "{{{
+" }}}
+" Quick Run {{{
 
 nnoremap <silent>mq    :<C-u>QuickRun<CR>
 
-
-"}}}
-" ContinuousNumber "{{{
+" }}}
+" ContinuousNumber {{{
 
 vnoremap <silent>gco    :ContinuousNumber <C-a><CR>
 
-
-"}}}
-" IndentLine "{{{
+" }}}
+" IndentLine {{{
 
 nnoremap <Space>i      :<C-u>IndentLinesToggle<CR>
 
-
-"}}}
-" caw"{{{
+" }}}
+" caw{{{
 
 nmap gci <Plug>(caw:hatpos:toggle)
 nmap gca <Plug>(caw:dollarpos:toggle)
@@ -511,9 +483,8 @@ vmap gci <Plug>(caw:hatpos:toggle)
 vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
-
-"}}}
-" open-browser"{{{
+" }}}
+" open-browser{{{
 
 nmap gw  <Plug>(openbrowser-open)
 vmap gw  <Plug>(openbrowser-open)
@@ -521,8 +492,7 @@ vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
-
-"}}}
+" }}}
 
 
 " vim: foldmethod=marker
