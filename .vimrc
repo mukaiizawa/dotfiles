@@ -460,7 +460,7 @@ nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
 " }}}
 " Quick Run {{{
 
-nnoremap <silent>mq    :<C-u>QuickRun<CR>
+nnoremap <silent>mq    :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
 
 " }}}
 " ContinuousNumber {{{
