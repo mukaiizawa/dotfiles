@@ -211,6 +211,9 @@ endif
 " End insert mode with jj.
 inoremap jj <Esc>
 
+" Toggle ime mode with <C-Space>.
+inoremap <C-Space> <C-^>
+
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
