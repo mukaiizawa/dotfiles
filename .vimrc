@@ -215,6 +215,7 @@ inoremap jj <Esc>
 inoremap <C-Space> <C-^>
 
 " IM turn off automatically when leaving Insert mode.
+nnoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 " Insert date.
