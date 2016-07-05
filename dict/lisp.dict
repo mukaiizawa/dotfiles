@@ -1,58 +1,58 @@
 &allow-other-keys
-&aux,x1 x2 x3,y1 y2
-&body,x1 x2 x3,y1 y2
-&environment,x1 x2 x3,y1 y2
-&key,x1 x2 x3,y1 y2
-&optional,x1 x2 x3,y1 y2
-&rest,x1 x2 x3,y1 y2
-&whole,x1 x2 x3,y1 y2
-*,x1 x2 x3,y1 y2
-**,x1 x2 x3,y1 y2
-***,x1 x2 x3,y1 y2
-*break-on-signals*,x1 x2 x3,y1 y2
-*compile-file-pathname*,x1 x2 x3,y1 y2
-*compile-file-truename*,x1 x2 x3,y1 y2
-*compile-print*,x1 x2 x3,y1 y2
-*compile-verbose*,x1 x2 x3,y1 y2
-*debug-io*,x1 x2 x3,y1 y2
-*debugger-hook*,x1 x2 x3,y1 y2
-*default-pathname-defaults*,x1 x2 x3,y1 y2
-*error-output*,x1 x2 x3,y1 y2
-*features*,x1 x2 x3,y1 y2
-*gensym-counter*,x1 x2 x3,y1 y2
-*load-pathname*,x1 x2 x3,y1 y2
-*load-print*,x1 x2 x3,y1 y2
-*load-truename*,x1 x2 x3,y1 y2
-*load-verbose*,x1 x2 x3,y1 y2
-*macroexpand-hook*,x1 x2 x3,y1 y2
-*modules*,x1 x2 x3,y1 y2
-*package*,x1 x2 x3,y1 y2
-*print-array*,x1 x2 x3,y1 y2
-*print-base*,x1 x2 x3,y1 y2
-*print-case*,x1 x2 x3,y1 y2
-*print-circle*,x1 x2 x3,y1 y2
-*print-escape*,x1 x2 x3,y1 y2
-*print-gensym*,x1 x2 x3,y1 y2
-*print-length*,x1 x2 x3,y1 y2
-*print-level*,x1 x2 x3,y1 y2
-*print-lines*,x1 x2 x3,y1 y2
-*print-miser-width*,x1 x2 x3,y1 y2
-*print-pprint-dispatch*,x1 x2 x3,y1 y2
-*print-pretty*,x1 x2 x3,y1 y2
-*print-radix*,x1 x2 x3,y1 y2
-*print-readably*,x1 x2 x3,y1 y2
-*print-right-margin*,x1 x2 x3,y1 y2
-*query-io*,x1 x2 x3,y1 y2
-*random-state*,x1 x2 x3,y1 y2
-*read-base*,x1 x2 x3,y1 y2
-*read-default-float-format*,x1 x2 x3,y1 y2
-*read-eval*,x1 x2 x3,y1 y2
-*read-suppress*,x1 x2 x3,y1 y2
-*readtable*,x1 x2 x3,y1 y2
-*standard-input*,x1 x2 x3,y1 y2
-*standard-output*,x1 x2 x3,y1 y2
-*terminal-io*,x1 x2 x3,y1 y2
-*trace-output*,x1 x2 x3,y1 y2
+&aux
+&body
+&environment
+&key
+&optional
+&rest
+&whole
+*
+**
+***
+*break-on-signals*
+*compile-file-pathname*
+*compile-file-truename*
+*compile-print*
+*compile-verbose*
+*debug-io*
+*debugger-hook*
+*default-pathname-defaults*
+*error-output*
+*features*
+*gensym-counter*
+*load-pathname*
+*load-print*
+*load-truename*
+*load-verbose*
+*macroexpand-hook*
+*modules*
+*package*
+*print-array*
+*print-base*
+*print-case*
+*print-circle*
+*print-escape*
+*print-gensym*
+*print-length*
+*print-level*
+*print-lines*
+*print-miser-width*
+*print-pprint-dispatch*
+*print-pretty*
+*print-radix*
+*print-readably*
+*print-right-margin*
+*query-io*
+*random-state*
+*read-base*
+*read-default-float-format*
+*read-eval*
+*read-suppress*
+*readtable*
+*standard-input*
+*standard-output*
+*terminal-io*
+*trace-output*
 +,x1 x2 x3,y1 y2
 ++,x1 x2 x3,y1 y2
 +++,x1 x2 x3,y1 y2
