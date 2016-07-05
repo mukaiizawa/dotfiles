@@ -22,11 +22,12 @@ function! CompleteLispWords(findstart, base)
       if s:splitedLine[1] =~ '^' . a:base
         call add(s:result, {
               \   'word' : s:splitedLine[1],
-              \   'abbr' : printf('%s: %s %s %s',
+              \   'abbr' : printf('%s: %s %s',
               \                    s:splitedLine[0],
               \                    s:splitedLine[1],
-              \                    (len(s:splitedLine)>1)? s:splitedLine[1] : '',
-              \                    (len(s:splitedLine)>2)? '=> ' . s:splitedLine[2] : '')
+              \                    (len(s:splitedLine)>3)?
+              \                        s:splitedLine[2] . ' => ' . s:splitedLine[3]:
+              \                        '')
               \ })
       endif
     endfor
