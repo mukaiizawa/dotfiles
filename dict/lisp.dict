@@ -53,30 +53,30 @@
 *standard-output*
 *terminal-io*
 *trace-output*
-+,x1 x2 x3,y1 y2
-++,x1 x2 x3,y1 y2
-+++,x1 x2 x3,y1 y2
--,x1 x2 x3,y1 y2
-/,x1 x2 x3,y1 y2
-//,x1 x2 x3,y1 y2
-///,x1 x2 x3,y1 y2
-/=,x1 x2 x3,y1 y2
-1+,x1 x2 x3,y1 y2
-1-,x1 x2 x3,y1 y2
-:append,x1 x2 x3,y1 y2
-:create,x1 x2 x3,y1 y2
-:direction,x1 x2 x3,y1 y2
-:error,x1 x2 x3,y1 y2
-:if-does-not-exist,x1 x2 x3,y1 y2
-:if-exists,x1 x2 x3,y1 y2
-:input,x1 x2 x3,y1 y2
-:output,x1 x2 x3,y1 y2
-:supersede,x1 x2 x3,y1 y2
-<,x1 x2 x3,y1 y2
-<=,x1 x2 x3,y1 y2
-=,x1 x2 x3,y1 y2
->,x1 x2 x3,y1 y2
->=,x1 x2 x3,y1 y2
++,&rest numbers,sum
+++
++++
+-,minuend &rest subtrahends,difference
+/,numerator &rest denominators,quotient
+//
+///
+/=,&rest numbers,generalized-boolean
+1+,number,successor
+1-,number,predecessor
+:append
+:create
+:direction
+:error
+:if-does-not-exist
+:if-exists
+:input
+:output
+:supersede
+<,&rest numbers,generalized-boolean
+<=,&rest numbers,generalized-boolean
+=,&rest numbers,generalized-boolean
+>,&rest numbers,generalized-boolean
+>=,&rest numbers,generalized-boolean
 abort,x1 x2 x3,y1 y2
 abs,x1 x2 x3,y1 y2
 acons,x1 x2 x3,y1 y2
