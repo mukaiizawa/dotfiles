@@ -77,23 +77,23 @@
 =,&rest numbers,generalized-boolean
 >,&rest numbers,generalized-boolean
 >=,&rest numbers,generalized-boolean
-abort,x1 x2 x3,y1 y2
-abs,x1 x2 x3,y1 y2
-acons,x1 x2 x3,y1 y2
-acos,x1 x2 x3,y1 y2
-acosh,x1 x2 x3,y1 y2
-add-method,x1 x2 x3,y1 y2
-adjoin,x1 x2 x3,y1 y2
-adjust-array,x1 x2 x3,y1 y2
-adjustable-array-p,x1 x2 x3,y1 y2
-allocate-instance,x1 x2 x3,y1 y2
-alpha-char-p,x1 x2 x3,y1 y2
-alphanumericp,x1 x2 x3,y1 y2
-and,x1 x2 x3,y1 y2
-append,x1 x2 x3,y1 y2
-apply,x1 x2 x3,y1 y2
-apropos,x1 x2 x3,y1 y2
-apropos-list,x1 x2 x3,y1 y2
+abort,&optional condition,|
+abs,number,absolute-value
+acons,key detum alist,new-alist
+acos,number,radians
+acosh,number,result
+add-method,generic-function method,generic-function
+adjoin,item list &key key test test-not,new-list
+adjust-array,array new-dimensions &key element-type initial-element initial-contents fill-pointer displaced-to displaced-index-offset,adjusted-array
+adjustable-array-p,array,generalized-boolean
+allocate-instance,class &rest initargs &key &allow-other-keys,new-instance
+alpha-char-p,character,generalized-boolean
+alphanumericp,character,generalized-boolean
+and,form*,result*
+append,&rest lists,result
+apply,function &rest args,result*
+apropos,string &optional package,<no values>
+apropos-list,string &optional package,symbols
 aref,x1 x2 x3,y1 y2
 arithmetic-error,x1 x2 x3,y1 y2
 arithmetic-error-operands,x1 x2 x3,y1 y2
@@ -114,13 +114,13 @@ array-total-size-limit,x1 x2 x3,y1 y2
 arrayp,x1 x2 x3,y1 y2
 ash,x1 x2 x3,y1 y2
 asin,x1 x2 x3,y1 y2
-asinh,x1 x2 x3,y1 y2
+asinh,number,result
 assert,x1 x2 x3,y1 y2
 assoc,x1 x2 x3,y1 y2
 assoc-if,x1 x2 x3,y1 y2
 assoc-if-not,x1 x2 x3,y1 y2
 atan,x1 x2 x3,y1 y2
-atanh,x1 x2 x3,y1 y2
+atanh,number,result
 atom,x1 x2 x3,y1 y2
 base-char,x1 x2 x3,y1 y2
 base-string,x1 x2 x3,y1 y2
@@ -275,7 +275,7 @@ copy-structure,x1 x2 x3,y1 y2
 copy-symbol,x1 x2 x3,y1 y2
 copy-tree,x1 x2 x3,y1 y2
 cos,x1 x2 x3,y1 y2
-cosh,x1 x2 x3,y1 y2
+cosh,number,result
 count,x1 x2 x3,y1 y2
 count-if,x1 x2 x3,y1 y2
 count-if-not,x1 x2 x3,y1 y2
@@ -821,7 +821,7 @@ sin,x1 x2 x3,y1 y2
 single-float,x1 x2 x3,y1 y2
 single-float-epsilon,x1 x2 x3,y1 y2
 single-float-negative-epsilon,x1 x2 x3,y1 y2
-sinh,x1 x2 x3,y1 y2
+sinh,number,result
 sixth,x1 x2 x3,y1 y2
 sleep,x1 x2 x3,y1 y2
 slot-boundp,x1 x2 x3,y1 y2
@@ -907,7 +907,7 @@ t,x1 x2 x3,y1 y2
 tagbody,x1 x2 x3,y1 y2
 tailp,x1 x2 x3,y1 y2
 tan,x1 x2 x3,y1 y2
-tanh,x1 x2 x3,y1 y2
+tanh,number,result
 tenth,x1 x2 x3,y1 y2
 terpri,x1 x2 x3,y1 y2
 the,x1 x2 x3,y1 y2
