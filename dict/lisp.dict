@@ -94,34 +94,34 @@ append,&rest lists,result
 apply,function &rest args,result*
 apropos,string &optional package,<no values>
 apropos-list,string &optional package,symbols
-aref,x1 x2 x3,y1 y2
-arithmetic-error,x1 x2 x3,y1 y2
-arithmetic-error-operands,x1 x2 x3,y1 y2
-arithmetic-error-operation,x1 x2 x3,y1 y2
-array,x1 x2 x3,y1 y2
-array-dimension,x1 x2 x3,y1 y2
-array-dimension-limit,x1 x2 x3,y1 y2
-array-dimensions,x1 x2 x3,y1 y2
-array-displacement,x1 x2 x3,y1 y2
-array-element-type,x1 x2 x3,y1 y2
-array-has-fill-pointer-p,x1 x2 x3,y1 y2
-array-in-bounds-p,x1 x2 x3,y1 y2
-array-rank,x1 x2 x3,y1 y2
-array-rank-limit,x1 x2 x3,y1 y2
-array-row-major-index,x1 x2 x3,y1 y2
-array-total-size,x1 x2 x3,y1 y2
-array-total-size-limit,x1 x2 x3,y1 y2
-arrayp,x1 x2 x3,y1 y2
-ash,x1 x2 x3,y1 y2
-asin,x1 x2 x3,y1 y2
+aref,array &rest subscripts,element
+arithmetic-error
+arithmetic-error-operands,condition,operands
+arithmetic-error-operation,condition,operands
+array
+array-dimension,array axis-number,dimension
+array-dimension-limit
+array-dimensions,array,dimensions
+array-displacement,array,displaced-to,displaced-index-offset
+array-element-type,array,typespec
+array-has-fill-pointer-p,array,generalized-boolean
+array-in-bounds-p,array &rest subscripts,generalized-boolean
+array-rank,array,rank
+array-rank-limit
+array-row-major-index,array &rest subscripts,index
+array-total-size,array,size
+array-total-size-limit
+arrayp,object,generalized-boolean
+ash,integer count,shifted-integer
+asin,number,radians
 asinh,number,result
-assert,x1 x2 x3,y1 y2
-assoc,x1 x2 x3,y1 y2
-assoc-if,x1 x2 x3,y1 y2
-assoc-if-not,x1 x2 x3,y1 y2
-atan,x1 x2 x3,y1 y2
+assert,test-form [(place*) [datum-form argument-form*]],nil
+assoc,item alist &key key test test-not,entry
+assoc-if,predicate alist &key key,entry
+assoc-if-not,predicate alist &key key,entry
+atan,number1 &optional number2,radians
 atanh,number,result
-atom,x1 x2 x3,y1 y2
+atom,object,generalized-boolean
 base-char,x1 x2 x3,y1 y2
 base-string,x1 x2 x3,y1 y2
 bignum,x1 x2 x3,y1 y2
