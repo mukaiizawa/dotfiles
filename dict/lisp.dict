@@ -299,51 +299,51 @@ Function,atanh,number,result
 Function,atom,object,generalized-boolean
 Type,base-char
 Type,base-string
-
 Type,bignum,x1 x2 x3,y1 y2
-Function,bit,x1 x2 x3,y1 y2
-Function,bit-and,x1 x2 x3,y1 y2
-Function,bit-andc1,x1 x2 x3,y1 y2
-Function,bit-andc2,x1 x2 x3,y1 y2
-Function,bit-eqv,x1 x2 x3,y1 y2
-Function,bit-ior,x1 x2 x3,y1 y2
-Function,bit-nand,x1 x2 x3,y1 y2
-Function,bit-nor,x1 x2 x3,y1 y2
-Function,bit-not,x1 x2 x3,y1 y2
-Function,bit-orc1,x1 x2 x3,y1 y2
-Function,bit-orc2,x1 x2 x3,y1 y2
-Function,bit-vector,x1 x2 x3,y1 y2
-Function,bit-vector-p,x1 x2 x3,y1 y2
-Function,bit-xor,x1 x2 x3,y1 y2
-Function,block,x1 x2 x3,y1 y2
-Function,boole,x1 x2 x3,y1 y2
-Function,boole-1,x1 x2 x3,y1 y2
-Function,boole-2,x1 x2 x3,y1 y2
-Function,boole-and,x1 x2 x3,y1 y2
-Function,boole-andc1,x1 x2 x3,y1 y2
-Function,boole-andc2,x1 x2 x3,y1 y2
-Function,boole-c1,x1 x2 x3,y1 y2
-Function,boole-c2,x1 x2 x3,y1 y2
-Function,boole-clr,x1 x2 x3,y1 y2
-Function,boole-eqv,x1 x2 x3,y1 y2
-Function,boole-ior,x1 x2 x3,y1 y2
-Function,boole-nand,x1 x2 x3,y1 y2
-Function,boole-nor,x1 x2 x3,y1 y2
-Function,boole-orc1,x1 x2 x3,y1 y2
-Function,boole-orc2,x1 x2 x3,y1 y2
-Function,boole-set,x1 x2 x3,y1 y2
-Function,boole-xor,x1 x2 x3,y1 y2
-Function,boolean,x1 x2 x3,y1 y2
-Function,both-case-p,x1 x2 x3,y1 y2
-Function,boundp,x1 x2 x3,y1 y2
-Function,break,x1 x2 x3,y1 y2
-Function,broadcast-stream,x1 x2 x3,y1 y2
-Function,broadcast-stream-streams,x1 x2 x3,y1 y2
-Function,built-in-class,x1 x2 x3,y1 y2
-Function,butlast,x1 x2 x3,y1 y2
-Function,byte,x1 x2 x3,y1 y2
-Function,byte-position,x1 x2 x3,y1 y2
-Function,byte-size,x1 x2 x3,y1 y2
+Type,bit,x1 x2 x3,y1 y2
+Function,bit-and,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-andc1,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-andc2,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-eqv,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-ior,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-nand,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-nor,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-not,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-orc1,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Function,bit-orc2,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Class,bit-vector
+Function,bit-vector-p,object,generalized-boolean
+Function,bit-xor,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
+Special Operator,block,name form*,result*
+Function,boole,op integer1 integer2,result-integer
+Constant,boole-1
+Constant,boole-2
+Constant,boole-and
+Constant,boole-andc1
+Constant,boole-andc2
+Constant,boole-c1
+Constant,boole-c2
+Constant,boole-clr
+Constant,boole-eqv
+Constant,boole-ior
+Constant,boole-nand
+Constant,boole-nor
+Constant,boole-orc1
+Constant,boole-orc2
+Constant,boole-set
+Constant,boole-xor
+Type,boolean
+Function,both-case-p,character,generalized-boolean
+Function,boundp,symbol,generalized-boolean
+Function,break,&optional format-control &rest format-arguments,nil
+Class,broadcast-stream,x1 x2 x3,y1 y2
+Function,broadcast-stream-streams,broadcast-stream,streams
+Class,built-in-class,x1 x2 x3,y1 y2
+Function,butlast,list &optional n,result-list
+Function,byte,size position,bytespec
+Function,byte-position,bytespec,position
+Function,byte-size,bytespec,size
+
 Function,caaaar,x1 x2 x3,y1 y2
 Function,caaadr,x1 x2 x3,y1 y2
 Function,caaar,x1 x2 x3,y1 y2
@@ -712,7 +712,7 @@ Function,long-float-negative-epsilon,x1 x2 x3,y1 y2
 Function,long-site-name,x1 x2 x3,y1 y2
 Function,loop,x1 x2 x3,y1 y2
 Function,loop-finish,x1 x2 x3,y1 y2
-Function,lower-case-p,x1 x2 x3,y1 y2
+Function,lower-case-p,character,generalized-boolean
 Function,machine-instance,x1 x2 x3,y1 y2
 Function,machine-type,x1 x2 x3,y1 y2
 Function,machine-version,x1 x2 x3,y1 y2
@@ -787,7 +787,7 @@ Function,multiple-value-setq,x1 x2 x3,y1 y2
 Function,multiple-values-limit,x1 x2 x3,y1 y2
 Function,name-char,x1 x2 x3,y1 y2
 Function,namestring,x1 x2 x3,y1 y2
-Function,nbutlast,x1 x2 x3,y1 y2
+Function,nbutlast,list &optional n,result-list
 Function,nconc,x1 x2 x3,y1 y2
 Function,next-method-p,x1 x2 x3,y1 y2
 Function,nil,x1 x2 x3,y1 y2
@@ -1123,7 +1123,7 @@ Function,update-instance-for-different-class,x1 x2 x3,y1 y2
 Function,update-instance-for-redefined-class,x1 x2 x3,y1 y2
 Function,upgraded-array-element-type,x1 x2 x3,y1 y2
 Function,upgraded-complex-part-type,x1 x2 x3,y1 y2
-Function,upper-case-p,x1 x2 x3,y1 y2
+Function,upper-case-p,character,generalized-boolean
 Function,use-package,x1 x2 x3,y1 y2
 Function,use-value,x1 x2 x3,y1 y2
 Function,user-homedir-pathname,x1 x2 x3,y1 y2
