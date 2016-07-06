@@ -35,4 +35,3 @@ function! CompleteLispWords(findstart, base)
   endif
 endfunction
 
-
