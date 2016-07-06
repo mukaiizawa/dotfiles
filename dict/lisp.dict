@@ -270,7 +270,7 @@ Function,apply,function &rest args,result*
 Function,apropos,string &optional package,<no values>
 Function,apropos-list,string &optional package,symbols
 Function,aref,array &rest subscripts,element
-Condition,arithmetic-error
+Condition Type,arithmetic-error
 Function,arithmetic-error-operands,condition,operands
 Function,arithmetic-error-operation,condition,operands
 Class,array
@@ -379,11 +379,11 @@ Function,cddddr,list,object
 Function,cdddr,list,object
 Function,cddr,list,object
 Function,cdr,list,object
-Function,ceiling,x1 x2 x3,y1 y2
-Function,cell-error,x1 x2 x3,y1 y2
-Function,cell-error-name,x1 x2 x3,y1 y2
-Function,cerror,x1 x2 x3,y1 y2
-Function,change-class,x1 x2 x3,y1 y2
+Function,ceiling,number &optional divisor,quotient remainder
+Condition Type,cell-error
+Function,cell-error-name,condition,name
+Function,cerror,continue-format-control detum &rest arguments,nil
+Standard Generic Function,change-class,instance new-class &key &allow-other-keys,instance
 Function,char,x1 x2 x3,y1 y2
 Function,char-code,x1 x2 x3,y1 y2
 Function,char-code-limit,x1 x2 x3,y1 y2
@@ -539,9 +539,9 @@ Function,export,x1 x2 x3,y1 y2
 Function,expt,x1 x2 x3,y1 y2
 Function,extended-char,x1 x2 x3,y1 y2
 Function,fboundp,x1 x2 x3,y1 y2
-Function,fceiling,x1 x2 x3,y1 y2
+Function,fceiling,number &optional divisor,quotient remainder
 Function,fdefinition,x1 x2 x3,y1 y2
-Function,ffloor,x1 x2 x3,y1 y2
+Function,ffloor,number &optional divisor,quotient remainder
 Function,fifth,x1 x2 x3,y1 y2
 Function,file-author,x1 x2 x3,y1 y2
 Function,file-error,x1 x2 x3,y1 y2
@@ -577,15 +577,15 @@ Function,floating-point-invalid-operation,x1 x2 x3,y1 y2
 Function,floating-point-overflow,x1 x2 x3,y1 y2
 Function,floating-point-underflow,x1 x2 x3,y1 y2
 Function,floatp,x1 x2 x3,y1 y2
-Function,floor,x1 x2 x3,y1 y2
+Function,floor,number &optional divisor,quotient remainder
 Function,fmakunbound,x1 x2 x3,y1 y2
 Function,force-output,x1 x2 x3,y1 y2
 Function,format,x1 x2 x3,y1 y2
 Function,formatter,x1 x2 x3,y1 y2
 Function,fourth,x1 x2 x3,y1 y2
 Function,fresh-line,x1 x2 x3,y1 y2
-Function,fround,x1 x2 x3,y1 y2
-Function,ftruncate,x1 x2 x3,y1 y2
+Function,fround,number &optional divisor,quotient remainder
+Function,ftruncate,number &optional divisor,quotient remainder
 Function,ftype,x1 x2 x3,y1 y2
 Function,funcall,x1 x2 x3,y1 y2
 Function,function,x1 x2 x3,y1 y2
@@ -944,7 +944,7 @@ Function,revappend,x1 x2 x3,y1 y2
 Function,reverse,x1 x2 x3,y1 y2
 Function,room,x1 x2 x3,y1 y2
 Function,rotatef,x1 x2 x3,y1 y2
-Function,round,x1 x2 x3,y1 y2
+Function,round,number &optional divisor,quotient remainder
 Function,row-major-aref,x1 x2 x3,y1 y2
 Function,rplaca,x1 x2 x3,y1 y2
 Function,rplacd,x1 x2 x3,y1 y2
@@ -1094,7 +1094,7 @@ Function,translate-logical-pathname,x1 x2 x3,y1 y2
 Function,translate-pathname,x1 x2 x3,y1 y2
 Function,tree-equal,x1 x2 x3,y1 y2
 Function,truename,x1 x2 x3,y1 y2
-Function,truncate,x1 x2 x3,y1 y2
+Function,truncate,number &optional divisor,quotient remainder
 Function,two-way-stream,x1 x2 x3,y1 y2
 Function,two-way-stream-input-stream,x1 x2 x3,y1 y2
 Function,two-way-stream-output-stream,x1 x2 x3,y1 y2
