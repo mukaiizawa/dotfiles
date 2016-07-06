@@ -299,8 +299,8 @@ Function,atanh,number,result
 Function,atom,object,generalized-boolean
 Type,base-char
 Type,base-string
-Type,bignum,x1 x2 x3,y1 y2
-Type,bit,x1 x2 x3,y1 y2
+Type,bignum
+Type,bit
 Function,bit-and,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
 Function,bit-andc1,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
 Function,bit-andc2,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
@@ -336,50 +336,49 @@ Type,boolean
 Function,both-case-p,character,generalized-boolean
 Function,boundp,symbol,generalized-boolean
 Function,break,&optional format-control &rest format-arguments,nil
-Class,broadcast-stream,x1 x2 x3,y1 y2
+Class,broadcast-stream
 Function,broadcast-stream-streams,broadcast-stream,streams
-Class,built-in-class,x1 x2 x3,y1 y2
+Class,built-in-class
 Function,butlast,list &optional n,result-list
 Function,byte,size position,bytespec
 Function,byte-position,bytespec,position
 Function,byte-size,bytespec,size
-
-Function,caaaar,x1 x2 x3,y1 y2
-Function,caaadr,x1 x2 x3,y1 y2
-Function,caaar,x1 x2 x3,y1 y2
-Function,caadar,x1 x2 x3,y1 y2
-Function,caaddr,x1 x2 x3,y1 y2
-Function,caadr,x1 x2 x3,y1 y2
-Function,caar,x1 x2 x3,y1 y2
-Function,cadaar,x1 x2 x3,y1 y2
-Function,cadadr,x1 x2 x3,y1 y2
-Function,cadar,x1 x2 x3,y1 y2
-Function,caddar,x1 x2 x3,y1 y2
-Function,cadddr,x1 x2 x3,y1 y2
-Function,caddr,x1 x2 x3,y1 y2
-Function,cadr,x1 x2 x3,y1 y2
-Function,call-arguments-limit,x1 x2 x3,y1 y2
-Function,call-method,x1 x2 x3,y1 y2
-Function,call-next-method,x1 x2 x3,y1 y2
-Function,car,x1 x2 x3,y1 y2
-Function,case,x1 x2 x3,y1 y2
-Function,catch,x1 x2 x3,y1 y2
-Function,ccase,x1 x2 x3,y1 y2
-Function,cdaaar,x1 x2 x3,y1 y2
-Function,cdaadr,x1 x2 x3,y1 y2
-Function,cdaar,x1 x2 x3,y1 y2
-Function,cdadar,x1 x2 x3,y1 y2
-Function,cdaddr,x1 x2 x3,y1 y2
-Function,cdadr,x1 x2 x3,y1 y2
-Function,cdar,x1 x2 x3,y1 y2
-Function,cddaar,x1 x2 x3,y1 y2
-Function,cddadr,x1 x2 x3,y1 y2
-Function,cddar,x1 x2 x3,y1 y2
-Function,cdddar,x1 x2 x3,y1 y2
-Function,cddddr,x1 x2 x3,y1 y2
-Function,cdddr,x1 x2 x3,y1 y2
-Function,cddr,x1 x2 x3,y1 y2
-Function,cdr,x1 x2 x3,y1 y2
+Function,caaaar,list,object
+Function,caaadr,list,object
+Function,caaar,list,object
+Function,caadar,list,object
+Function,caaddr,list,object
+Function,caadr,list,object
+Function,caar,list,object
+Function,cadaar,list,object
+Function,cadadr,list,object
+Function,cadar,list,object
+Function,caddar,list,object
+Function,cadddr,list,object
+Function,caddr,list,object
+Function,cadr,list,object
+Constant,call-arguments-limit
+Macro,call-method,method &optional next-method-list,result*
+Function,call-next-method,&rest args,result*
+Function,car,list,object
+Function,case,list,object
+Function,catch,list,object
+Function,ccase,list,object
+Function,cdaaar,list,object
+Function,cdaadr,list,object
+Function,cdaar,list,object
+Function,cdadar,list,object
+Function,cdaddr,list,object
+Function,cdadr,list,object
+Function,cdar,list,object
+Function,cddaar,list,object
+Function,cddadr,list,object
+Function,cddar,list,object
+Function,cdddar,list,object
+Function,cddddr,list,object
+Function,cdddr,list,object
+Function,cddr,list,object
+Function,cdr,list,object
 Function,ceiling,x1 x2 x3,y1 y2
 Function,cell-error,x1 x2 x3,y1 y2
 Function,cell-error-name,x1 x2 x3,y1 y2
