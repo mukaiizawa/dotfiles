@@ -270,19 +270,19 @@ Function,apply,function &rest args,result*
 Function,apropos,string &optional package,<no values>
 Function,apropos-list,string &optional package,symbols
 Function,aref,array &rest subscripts,element
-Function,arithmetic-error
+Condition,arithmetic-error
 Function,arithmetic-error-operands,condition,operands
 Function,arithmetic-error-operation,condition,operands
-Function,array
+Class,array
 Function,array-dimension,array axis-number,dimension
-Function,array-dimension-limit
+Constant,array-dimension-limit
 Function,array-dimensions,array,dimensions
 Function,array-displacement,array,displaced-to,displaced-index-offset
 Function,array-element-type,array,typespec
 Function,array-has-fill-pointer-p,array,generalized-boolean
 Function,array-in-bounds-p,array &rest subscripts,generalized-boolean
 Function,array-rank,array,rank
-Function,array-rank-limit
+Constant,array-rank-limit
 Function,array-row-major-index,array &rest subscripts,index
 Function,array-total-size,array,size
 Function,array-total-size-limit
@@ -297,9 +297,10 @@ Function,assoc-if-not,predicate alist &key key,entry
 Function,atan,number1 &optional number2,radians
 Function,atanh,number,result
 Function,atom,object,generalized-boolean
-Function,base-char
-Function,base-string
-Function,bignum,x1 x2 x3,y1 y2
+Type,base-char
+Type,base-string
+
+Type,bignum,x1 x2 x3,y1 y2
 Function,bit,x1 x2 x3,y1 y2
 Function,bit-and,x1 x2 x3,y1 y2
 Function,bit-andc1,x1 x2 x3,y1 y2
