@@ -417,7 +417,7 @@ Function,close,stream &key abort,result
 Function,clrhash,hash-table,hash-table
 Function,code-char,code,char-p
 Function,coerce,object result-type,result
-Option,compilation-speed,x1 x2 x3,y1 y2
+Option,compilation-speed
 Function,compile,name &optional definition,function warnings-p,failure-p
 Function,compile-file,input-file &key output-file verbose print external-format,output-truename warnings-p failure-p
 Function,compile-file-pathname,input-file &output-file &allow-other-keys,pathname
@@ -425,36 +425,38 @@ Type,compiled-function
 Function,compiled-function-p,object,generalized-boolean
 Accessor,compiler-macro-function,name &optional environment,function
 Function,complement,function,complement-function
-Function,complex,x1 x2 x3,y1 y2
-Function,complexp,x1 x2 x3,y1 y2
-Function,compute-applicable-methods,x1 x2 x3,y1 y2
-Function,compute-restarts,x1 x2 x3,y1 y2
-Function,concatenate,x1 x2 x3,y1 y2
-Function,concatenated-stream,x1 x2 x3,y1 y2
-Function,concatenated-stream-streams,x1 x2 x3,y1 y2
-Function,cond,x1 x2 x3,y1 y2
-Function,condition,x1 x2 x3,y1 y2
-Function,conjugate,x1 x2 x3,y1 y2
-Function,cons,x1 x2 x3,y1 y2
-Function,consp,x1 x2 x3,y1 y2
-Function,constantly,x1 x2 x3,y1 y2
-Function,constantp,x1 x2 x3,y1 y2
-Function,continue,x1 x2 x3,y1 y2
-Function,control-error,x1 x2 x3,y1 y2
-Function,copy-alist,x1 x2 x3,y1 y2
-Function,copy-list,x1 x2 x3,y1 y2
-Function,copy-pprint-dispatch,x1 x2 x3,y1 y2
-Function,copy-readtable,x1 x2 x3,y1 y2
-Function,copy-seq,x1 x2 x3,y1 y2
-Function,copy-structure,x1 x2 x3,y1 y2
-Function,copy-symbol,x1 x2 x3,y1 y2
-Function,copy-tree,x1 x2 x3,y1 y2
-Function,cos,x1 x2 x3,y1 y2
+Class,complex
+Function,complex,realpart &optional imagpart,complex
+Function,complexp,object,generalized-boolean
+Function,compute-applicable-methods,generic-function function-arguments,methods
+Function,compute-restarts,&optional condition,restarts
+Function,concatenate,result-type &rest sequences,result-sequence
+Class,concatenated-stream
+Function,concatenated-stream-streams,concatenated-stream,streams
+Macro,cond,{clause}*,result*
+Condition Type,condition
+Function,conjugate,number,conjugate
+Class,cons
+Function,cons,object-1 object-2,cons
+Function,consp,object,generalized-boolean
+Function,constantly,value,function
+Function,constantp,form &optional environment,generalized-boolean
+Function,continue,&optional condition,nil
+Condition Type,control-error
+Function,copy-alist,alist,new-alist
+Function,copy-list,list,new-list
+Function,copy-pprint-dispatch,&optional table,new-table
+Function,copy-readtable,&optional from-readable to-readable,readtable
+Function,copy-seq,sequence,new-sequence
+Function,copy-structure,structure,new-structure
+Function,copy-symbol,symbol &optional copy-properties,new-symbol
+Function,copy-tree,tree,new-tree
+Function,cos,radians,number
 Function,cosh,number,result
-Function,count,x1 x2 x3,y1 y2
-Function,count-if,x1 x2 x3,y1 y2
-Function,count-if-not,x1 x2 x3,y1 y2
-Function,ctypecase,x1 x2 x3,y1 y2
+Function,count,item sequence &key from-end start end key test test-not,n
+Function,count-if,predicate sequence &key from-end start end key,n
+Function,count-if-not,predicate sequence &key from-end start end key,n
+Macro,ctypecase,keyplace {normal-clause}*,result*
 Function,debug,x1 x2 x3,y1 y2
 Function,decf,x1 x2 x3,y1 y2
 Function,declaim,x1 x2 x3,y1 y2
@@ -529,7 +531,7 @@ Function,eql,x1 x2 x3,y1 y2
 Function,equal,x1 x2 x3,y1 y2
 Function,equalp,x1 x2 x3,y1 y2
 Function,error,x1 x2 x3,y1 y2
-Function,etypecase,x1 x2 x3,y1 y2
+Macro,etypecase,keyform {normal-clause}*,result*
 Function,eval,x1 x2 x3,y1 y2
 Function,eval-when,x1 x2 x3,y1 y2
 Function,evenp,x1 x2 x3,y1 y2
@@ -1103,7 +1105,7 @@ Function,type-error,x1 x2 x3,y1 y2
 Function,type-error-datum,x1 x2 x3,y1 y2
 Function,type-error-expected-type,x1 x2 x3,y1 y2
 Function,type-of,x1 x2 x3,y1 y2
-Function,typecase,x1 x2 x3,y1 y2
+Macro,typecase,keyform {normal-clause}* [otherwise-clause],result*
 Function,typep,x1 x2 x3,y1 y2
 Function,unbound-slot,x1 x2 x3,y1 y2
 Function,unbound-slot-instance,x1 x2 x3,y1 y2
