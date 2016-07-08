@@ -414,18 +414,17 @@ Function,class-of,object,class
 Function,clear-input,&optional input-stream,nil
 Function,clear-output,&optional output-stream,nil
 Function,close,stream &key abort,result
-Function,clrhash,x1 x2 x3,y1 y2
-Function,code-char,x1 x2 x3,y1 y2
-Function,coerce,x1 x2 x3,y1 y2
-Function,compilation-speed,x1 x2 x3,y1 y2
-Function,compile,x1 x2 x3,y1 y2
-Function,compile-file,x1 x2 x3,y1 y2
-Function,compile-file-pathname,x1 x2 x3,y1 y2
-Function,compiled-function,x1 x2 x3,y1 y2
-Function,compiled-function-p,x1 x2 x3,y1 y2
-Function,compiler-macro,x1 x2 x3,y1 y2
-Function,compiler-macro-function,x1 x2 x3,y1 y2
-Function,complement,x1 x2 x3,y1 y2
+Function,clrhash,hash-table,hash-table
+Function,code-char,code,char-p
+Function,coerce,object result-type,result
+Option,compilation-speed,x1 x2 x3,y1 y2
+Function,compile,name &optional definition,function warnings-p,failure-p
+Function,compile-file,input-file &key output-file verbose print external-format,output-truename warnings-p failure-p
+Function,compile-file-pathname,input-file &output-file &allow-other-keys,pathname
+Type,compiled-function
+Function,compiled-function-p,object,generalized-boolean
+Accessor,compiler-macro-function,name &optional environment,function
+Function,complement,function,complement-function
 Function,complex,x1 x2 x3,y1 y2
 Function,complexp,x1 x2 x3,y1 y2
 Function,compute-applicable-methods,x1 x2 x3,y1 y2
