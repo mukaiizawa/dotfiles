@@ -384,35 +384,36 @@ Condition Type,cell-error
 Function,cell-error-name,condition,name
 Function,cerror,continue-format-control detum &rest arguments,nil
 Standard Generic Function,change-class,instance new-class &key &allow-other-keys,instance
-Function,char,x1 x2 x3,y1 y2
-Function,char-code,x1 x2 x3,y1 y2
-Function,char-code-limit,x1 x2 x3,y1 y2
-Function,char-downcase,x1 x2 x3,y1 y2
-Function,char-equal,x1 x2 x3,y1 y2
-Function,char-greaterp,x1 x2 x3,y1 y2
-Function,char-int,x1 x2 x3,y1 y2
-Function,char-lessp,x1 x2 x3,y1 y2
-Function,char-name,x1 x2 x3,y1 y2
-Function,char-not-equal,x1 x2 x3,y1 y2
-Function,char-not-greaterp,x1 x2 x3,y1 y2
-Function,char-not-lessp,x1 x2 x3,y1 y2
-Function,char-upcase,x1 x2 x3,y1 y2
-Function,char/=,x1 x2 x3,y1 y2
-Function,char<,x1 x2 x3,y1 y2
-Function,char<=,x1 x2 x3,y1 y2
-Function,char=,x1 x2 x3,y1 y2
-Function,char>,x1 x2 x3,y1 y2
-Function,char>=,x1 x2 x3,y1 y2
-Function,character,x1 x2 x3,y1 y2
-Function,characterp,x1 x2 x3,y1 y2
-Function,check-type,x1 x2 x3,y1 y2
-Function,cis,x1 x2 x3,y1 y2
-Function,class,x1 x2 x3,y1 y2
-Function,class-name,x1 x2 x3,y1 y2
-Function,class-of,x1 x2 x3,y1 y2
-Function,clear-input,x1 x2 x3,y1 y2
-Function,clear-output,x1 x2 x3,y1 y2
-Function,close,x1 x2 x3,y1 y2
+Accessor,char,string index,character
+Function,char-code,character,code
+Constant,char-code-limit
+Function,char-downcase,character,corresponding-character
+Function,char-equal,&rest characters,generalized-boolean
+Function,char-greaterp,&rest characters,generalized-boolean
+Function,char-int,character,integer
+Function,char-lessp,character,corresponding-character
+Function,char-name,character-name
+Function,char-not-equal,character,corresponding-character
+Function,char-not-greaterp,character,corresponding-character
+Function,char-not-lessp,character,corresponding-character
+Function,char-upcase,character,corresponding-character
+Function,char/=,&rest characters,generalized-boolean
+Function,char<,&rest characters,generalized-boolean
+Function,char<=,&rest characters,generalized-boolean
+Function,char=,&rest characters,generalized-boolean
+Function,char>,&rest characters,generalized-boolean
+Function,char>=,&rest characters,generalized-boolean
+Class,character
+Function,character,character,denoted-character
+Function,characterp,object,generalized-boolean
+Macro,check-type,place typespec [string],nil
+Function,cis,radians,number
+Class,class
+Standard Generic Function,class-name,class,name
+Function,class-of,object,class
+Function,clear-input,&optional input-stream,nil
+Function,clear-output,&optional output-stream,nil
+Function,close,stream &key abort,result
 Function,clrhash,x1 x2 x3,y1 y2
 Function,code-char,x1 x2 x3,y1 y2
 Function,coerce,x1 x2 x3,y1 y2
@@ -563,7 +564,7 @@ Function,find-method,x1 x2 x3,y1 y2
 Function,find-package,x1 x2 x3,y1 y2
 Function,find-restart,x1 x2 x3,y1 y2
 Function,find-symbol,x1 x2 x3,y1 y2
-Function,finish-output,x1 x2 x3,y1 y2
+Function,finish-output,&optional output-stream,nil
 Function,first,x1 x2 x3,y1 y2
 Function,fixnum,x1 x2 x3,y1 y2
 Function,flet,x1 x2 x3,y1 y2
@@ -579,7 +580,7 @@ Function,floating-point-underflow,x1 x2 x3,y1 y2
 Function,floatp,x1 x2 x3,y1 y2
 Function,floor,number &optional divisor,quotient remainder
 Function,fmakunbound,x1 x2 x3,y1 y2
-Function,force-output,x1 x2 x3,y1 y2
+Function,force-output,&optional output-stream,nil
 Function,format,x1 x2 x3,y1 y2
 Function,formatter,x1 x2 x3,y1 y2
 Function,fourth,x1 x2 x3,y1 y2
@@ -952,7 +953,7 @@ Function,safety,x1 x2 x3,y1 y2
 Function,satisfies,x1 x2 x3,y1 y2
 Function,sbit,x1 x2 x3,y1 y2
 Function,scale-float,x1 x2 x3,y1 y2
-Function,schar,x1 x2 x3,y1 y2
+Accessor,schar,string index,character
 Function,search,x1 x2 x3,y1 y2
 Function,second,x1 x2 x3,y1 y2
 Function,sequence,x1 x2 x3,y1 y2
