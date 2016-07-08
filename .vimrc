@@ -66,6 +66,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
+set printoptions=wrap:y,number:y
 
 " }}}
 " Setting for Display {{{
