@@ -457,31 +457,30 @@ Function,count,item sequence &key from-end start end key test test-not,n
 Function,count-if,predicate sequence &key from-end start end key,n
 Function,count-if-not,predicate sequence &key from-end start end key,n
 Macro,ctypecase,keyplace {normal-clause}*,result*
-Function,debug,x1 x2 x3,y1 y2
-Function,decf,x1 x2 x3,y1 y2
-Function,declaim,x1 x2 x3,y1 y2
-Function,declaration,x1 x2 x3,y1 y2
-Function,declare,x1 x2 x3,y1 y2
-Function,decode-float,x1 x2 x3,y1 y2
-Function,decode-universal-time,x1 x2 x3,y1 y2
-Function,defclass,x1 x2 x3,y1 y2
-Function,defconstant,x1 x2 x3,y1 y2
-Function,defgeneric,x1 x2 x3,y1 y2
-Function,define-compiler-macro,x1 x2 x3,y1 y2
-Function,define-condition,x1 x2 x3,y1 y2
-Function,define-method-combination,x1 x2 x3,y1 y2
-Function,define-modify-macro,x1 x2 x3,y1 y2
-Function,define-setf-expander,x1 x2 x3,y1 y2
-Function,define-symbol-macro,x1 x2 x3,y1 y2
-Function,defmacro,x1 x2 x3,y1 y2
-Function,defmethod,x1 x2 x3,y1 y2
-Function,defpackage,x1 x2 x3,y1 y2
-Function,defparameter,x1 x2 x3,y1 y2
-Function,defsetf,x1 x2 x3,y1 y2
-Function,defstruct,x1 x2 x3,y1 y2
-Function,deftype,x1 x2 x3,y1 y2
-Function,defun,x1 x2 x3,y1 y2
-Function,defvar,x1 x2 x3,y1 y2
+Macro,decf,place [delta-form],new-value
+Macro,declaim,declaration-specifier*,implementation-dependent
+Declaration,declaration,declaration name*
+Symbol,declare,declaration-specifier*
+Function,decode-float,float,significand exponent sign
+Function,decode-universal-time,&optional time-zone,second minute hour date month year day daylight-p zone
+Macro,defclass,class-name ({superclass-name}*) ({slot-specifier}*) [[class-option]],new-class
+Macro,defconstant,name initial-value [documentation],name
+Macro,defgeneric,function-name gf-lambda-list [[option | {method-description}*]],new-generic
+Macro,define-compiler-macro,name lambda-list [[declaration* | documentation]] form*,name
+Macro,define-condition,name (parent-type*) ({slot-spec}*) option*,name
+Macro,define-method-combination,name [[short-form-option]],name
+Macro,define-modify-macro,name lambda-list function [documentation],name
+Macro,define-setf-expander,access-fn lambda-list [[declaration* | documentation]] form*,access-fn
+Macro,define-symbol-macro,symbol expansion,symbol
+Macro,defmacro,access-fn lambda-list [[declaration* | documentation]] form*,access-fn
+Macro,defmethod,function-name {method-qualifier}* specialized-lambda-list [[declaration* | documentation]] form*,new-method
+Macro,defpackage,x1 x2 x3,y1 y2
+Macro,defparameter,x1 x2 x3,y1 y2
+Macro,defsetf,x1 x2 x3,y1 y2
+Macro,defstruct,x1 x2 x3,y1 y2
+Macro,deftype,x1 x2 x3,y1 y2
+Macro,defun,x1 x2 x3,y1 y2
+Macro,defvar,x1 x2 x3,y1 y2
 Function,delete,x1 x2 x3,y1 y2
 Function,delete-duplicates,x1 x2 x3,y1 y2
 Function,delete-file,x1 x2 x3,y1 y2
@@ -630,7 +629,7 @@ Function,ignore-errors,x1 x2 x3,y1 y2
 Function,imagpart,x1 x2 x3,y1 y2
 Function,import,x1 x2 x3,y1 y2
 Function,in-package,x1 x2 x3,y1 y2
-Function,incf,x1 x2 x3,y1 y2
+Macro,incf,place [delta-form],new-value
 Function,initialize-instance,x1 x2 x3,y1 y2
 Function,inline,x1 x2 x3,y1 y2
 Function,input-stream-p,x1 x2 x3,y1 y2
