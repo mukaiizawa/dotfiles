@@ -86,8 +86,6 @@ syn keyword lispFunc null?
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-encoding
 syn keyword lispFunc alambda
-syn keyword lispFunc dlambda
-syn keyword lispFunc olambda
 syn keyword lispFunc surround
 syn keyword lispFunc dostring
 syn keyword lispFunc dofile
