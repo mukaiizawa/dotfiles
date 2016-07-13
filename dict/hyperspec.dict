@@ -1,685 +1,685 @@
-Accessor AREF	~/dotfiles/dict/HyperSpec/function/f_aref.htm
-Accessor BIT, SBIT	~/dotfiles/dict/HyperSpec/function/f_bt_sb.htm
-Accessor CAR, CDR, CAAR, CADR, CDAR...	~/dotfiles/dict/HyperSpec/function/f_car_c.htm
-Accessor CHAR, SCHAR	~/dotfiles/dict/HyperSpec/function/f_char_.htm
-Accessor COMPILER-MACRO-FUNCTION	~/dotfiles/dict/HyperSpec/function/f_cmp_ma.htm
-Accessor ELT	~/dotfiles/dict/HyperSpec/function/f_elt.htm
-Accessor FDEFINITION	~/dotfiles/dict/HyperSpec/function/f_fdefin.htm
-Accessor FILL-POINTER	~/dotfiles/dict/HyperSpec/function/f_fill_p.htm
-Accessor FIND-CLASS	~/dotfiles/dict/HyperSpec/function/f_find_c.htm
-Accessor FIRST, SECOND, THIRD, FOURTH...	~/dotfiles/dict/HyperSpec/function/f_firstc.htm
-Accessor GET	~/dotfiles/dict/HyperSpec/function/f_get.htm
-Accessor GETF	~/dotfiles/dict/HyperSpec/function/f_getf.htm
-Accessor GETHASH	~/dotfiles/dict/HyperSpec/function/f_gethas.htm
-Accessor LDB	~/dotfiles/dict/HyperSpec/function/f_ldb.htm
-Accessor LOGICAL-PATHNAME-TRANSLATIONS	~/dotfiles/dict/HyperSpec/function/f_logica.htm
-Accessor MACRO-FUNCTION	~/dotfiles/dict/HyperSpec/function/f_macro_.htm
-Accessor MASK-FIELD	~/dotfiles/dict/HyperSpec/function/f_mask_f.htm
-Accessor NTH	~/dotfiles/dict/HyperSpec/function/f_nth.htm
-Accessor READTABLE-CASE	~/dotfiles/dict/HyperSpec/function/f_rdtabl.htm
-Accessor REST	~/dotfiles/dict/HyperSpec/function/f_rest.htm
-Accessor ROW-MAJOR-AREF	~/dotfiles/dict/HyperSpec/function/f_row_ma.htm
-Accessor SUBSEQ	~/dotfiles/dict/HyperSpec/function/f_subseq.htm
-Accessor SVREF	~/dotfiles/dict/HyperSpec/function/f_svref.htm
-Accessor SYMBOL-FUNCTION	~/dotfiles/dict/HyperSpec/function/f_symb_1.htm
-Accessor SYMBOL-PLIST	~/dotfiles/dict/HyperSpec/function/f_symb_4.htm
-Accessor SYMBOL-VALUE	~/dotfiles/dict/HyperSpec/function/f_symb_5.htm
-Accessor VALUES	~/dotfiles/dict/HyperSpec/function/f_values.htm
-Condition Type ARITHMETIC-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_arithm.htm
-Condition Type CELL-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_cell_e.htm
-Condition Type CONDITION	~/dotfiles/dict/HyperSpec/condition-type/e_cnd.htm
-Condition Type CONTROL-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_contro.htm
-Condition Type DIVISION-BY-ZERO	~/dotfiles/dict/HyperSpec/condition-type/e_divisi.htm
-Condition Type END-OF-FILE	~/dotfiles/dict/HyperSpec/condition-type/e_end_of.htm
-Condition Type ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_error.htm
-Condition Type FILE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_file_e.htm
-Condition Type FLOATING-POINT-INEXACT	~/dotfiles/dict/HyperSpec/condition-type/e_floa_1.htm
-Condition Type FLOATING-POINT-INVALID-OPERATION	~/dotfiles/dict/HyperSpec/condition-type/e_floati.htm
-Condition Type FLOATING-POINT-OVERFLOW	~/dotfiles/dict/HyperSpec/condition-type/e_floa_2.htm
-Condition Type FLOATING-POINT-UNDERFLOW	~/dotfiles/dict/HyperSpec/condition-type/e_floa_3.htm
-Condition Type PACKAGE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_pkg_er.htm
-Condition Type PARSE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_parse_.htm
-Condition Type PRINT-NOT-READABLE	~/dotfiles/dict/HyperSpec/condition-type/e_pr_not.htm
-Condition Type PROGRAM-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_progra.htm
-Condition Type READER-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_rder_e.htm
-Condition Type SERIOUS-CONDITION	~/dotfiles/dict/HyperSpec/condition-type/e_seriou.htm
-Condition Type SIMPLE-CONDITION	~/dotfiles/dict/HyperSpec/condition-type/e_smp_cn.htm
-Condition Type SIMPLE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_smp_er.htm
-Condition Type SIMPLE-TYPE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_smp_tp.htm
-Condition Type SIMPLE-WARNING	~/dotfiles/dict/HyperSpec/condition-type/e_smp_wa.htm
-Condition Type STORAGE-CONDITION	~/dotfiles/dict/HyperSpec/condition-type/e_storag.htm
-Condition Type STREAM-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_stm_er.htm
-Condition Type STYLE-WARNING	~/dotfiles/dict/HyperSpec/condition-type/e_style_.htm
-Condition Type TYPE-ERROR	~/dotfiles/dict/HyperSpec/condition-type/e_tp_err.htm
-Condition Type UNBOUND-SLOT	~/dotfiles/dict/HyperSpec/condition-type/e_unboun.htm
-Condition Type UNBOUND-VARIABLE	~/dotfiles/dict/HyperSpec/condition-type/e_unbo_1.htm
-Condition Type UNDEFINED-FUNCTION	~/dotfiles/dict/HyperSpec/condition-type/e_undefi.htm
-Condition Type WARNING	~/dotfiles/dict/HyperSpec/condition-type/e_warnin.htm
-Constant Variable ARRAY-DIMENSION-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_ar_dim.htm
-Constant Variable ARRAY-RANK-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_ar_ran.htm
-Constant Variable ARRAY-TOTAL-SIZE-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_ar_tot.htm
-Constant Variable BOOLE-1, BOOLE-2...	~/dotfiles/dict/HyperSpec/variable/v_b_1_b.htm
-Constant Variable CALL-ARGUMENTS-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_call_a.htm
-Constant Variable CHAR-CODE-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_char_c.htm
-Constant Variable INTERNAL-TIME-UNITS-PER-SECOND	~/dotfiles/dict/HyperSpec/variable/v_intern.htm
-Constant Variable LAMBDA-LIST-KEYWORDS	~/dotfiles/dict/HyperSpec/variable/v_lambda.htm
-Constant Variable LAMBDA-PARAMETERS-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_lamb_1.htm
-Constant Variable MOST-POSITIVE-FIXNUM...	~/dotfiles/dict/HyperSpec/variable/v_most_p.htm
-Constant Variable MOST-POSITIVE-SHORT-FLOAT...	~/dotfiles/dict/HyperSpec/variable/v_most_1.htm
-Constant Variable MULTIPLE-VALUES-LIMIT	~/dotfiles/dict/HyperSpec/variable/v_multip.htm
-Constant Variable NIL	~/dotfiles/dict/HyperSpec/variable/v_nil.htm
-Constant Variable PI	~/dotfiles/dict/HyperSpec/variable/v_pi.htm
-Constant Variable SHORT-FLOAT-EPSILON...	~/dotfiles/dict/HyperSpec/variable/v_short_.htm
-Constant Variable T	~/dotfiles/dict/HyperSpec/variable/v_t.htm
-Declaration DECLARATION	~/dotfiles/dict/HyperSpec/declaration/d_declar.htm
-Declaration DYNAMIC-EXTENT	~/dotfiles/dict/HyperSpec/declaration/d_dynami.htm
-Declaration FTYPE	~/dotfiles/dict/HyperSpec/declaration/d_ftype.htm
-Declaration IGNORE, IGNORABLE	~/dotfiles/dict/HyperSpec/declaration/d_ignore.htm
-Declaration INLINE, NOTINLINE	~/dotfiles/dict/HyperSpec/declaration/d_inline.htm
-Declaration OPTIMIZE	~/dotfiles/dict/HyperSpec/declaration/d_optimi.htm
-Declaration SPECIAL	~/dotfiles/dict/HyperSpec/declaration/d_specia.htm
-Declaration TYPE	~/dotfiles/dict/HyperSpec/declaration/d_type.htm
+Accessor aref	~/dotfiles/dict/hyperspec/function/f_aref.htm
+Accessor bit, sbit	~/dotfiles/dict/hyperspec/function/f_bt_sb.htm
+Accessor car, cdr, caar, cadr, cdar...	~/dotfiles/dict/HyperSpec/function/f_car_c.htm
+Accessor char, schar	~/dotfiles/dict/hyperspec/function/f_char_.htm
+Accessor compiler-macro-function	~/dotfiles/dict/HyperSpec/function/f_cmp_ma.htm
+Accessor elt	~/dotfiles/dict/hyperspec/function/f_elt.htm
+Accessor fdefinition	~/dotfiles/dict/hyperspec/function/f_fdefin.htm
+Accessor fill-pointer	~/dotfiles/dict/hyperspec/function/f_fill_p.htm
+Accessor find-class	~/dotfiles/dict/hyperspec/function/f_find_c.htm
+Accessor first, second, third, fourth...	~/dotfiles/dict/HyperSpec/function/f_firstc.htm
+Accessor get	~/dotfiles/dict/hyperspec/function/f_get.htm
+Accessor getf	~/dotfiles/dict/hyperspec/function/f_getf.htm
+Accessor gethash	~/dotfiles/dict/hyperspec/function/f_gethas.htm
+Accessor ldb	~/dotfiles/dict/hyperspec/function/f_ldb.htm
+Accessor logical-pathname-translations	~/dotfiles/dict/HyperSpec/function/f_logica.htm
+Accessor macro-function	~/dotfiles/dict/hyperspec/function/f_macro_.htm
+Accessor mask-field	~/dotfiles/dict/hyperspec/function/f_mask_f.htm
+Accessor nth	~/dotfiles/dict/hyperspec/function/f_nth.htm
+Accessor readtable-case	~/dotfiles/dict/hyperspec/function/f_rdtabl.htm
+Accessor rest	~/dotfiles/dict/hyperspec/function/f_rest.htm
+Accessor row-major-aref	~/dotfiles/dict/hyperspec/function/f_row_ma.htm
+Accessor subseq	~/dotfiles/dict/hyperspec/function/f_subseq.htm
+Accessor svref	~/dotfiles/dict/hyperspec/function/f_svref.htm
+Accessor symbol-function	~/dotfiles/dict/hyperSpec/function/f_symb_1.htm
+Accessor symbol-plist	~/dotfiles/dict/hyperspec/function/f_symb_4.htm
+Accessor symbol-value	~/dotfiles/dict/hyperspec/function/f_symb_5.htm
+Accessor values	~/dotfiles/dict/hyperspec/function/f_values.htm
+Condition Type arithmetic-error	~/dotfiles/dict/hyperspec/condition-type/e_arithm.htm
+Condition Type cell-error	~/dotfiles/dict/hyperspec/condition-type/e_cell_e.htm
+Condition Type condition	~/dotfiles/dict/hyperspec/condition-type/e_cnd.htm
+Condition Type control-error	~/dotfiles/dict/hyperspec/condition-type/e_contro.htm
+Condition Type division-by-zero	~/dotfiles/dict/hyperspec/condition-type/e_divisi.htm
+Condition Type end-of-file	~/dotfiles/dict/hyperspec/condition-type/e_end_of.htm
+Condition Type error	~/dotfiles/dict/hyperspec/condition-type/e_error.htm
+Condition Type file-error	~/dotfiles/dict/hyperspec/condition-type/e_file_e.htm
+Condition Type floating-point-inexact	~/dotfiles/dict/hyperspec/condition-type/e_floa_1.htm
+Condition Type floating-point-invalid-operation	~/dotfiles/dict/hyperspec/condition-type/e_floati.htm
+Condition Type floating-point-overflow	~/dotfiles/dict/hyperspec/condition-type/e_floa_2.htm
+Condition Type floating-point-underflow	~/dotfiles/dict/hyperspec/condition-type/e_floa_3.htm
+Condition Type package-error	~/dotfiles/dict/hyperspec/condition-type/e_pkg_er.htm
+Condition Type parse-error	~/dotfiles/dict/hyperspec/condition-type/e_parse_.htm
+Condition Type print-not-readable	~/dotfiles/dict/hyperspec/condition-type/e_pr_not.htm
+Condition Type program-error	~/dotfiles/dict/hyperspec/condition-type/e_progra.htm
+Condition Type reader-error	~/dotfiles/dict/hyperspec/condition-type/e_rder_e.htm
+Condition Type serious-condition	~/dotfiles/dict/hyperspec/condition-type/e_seriou.htm
+Condition Type simple-condition	~/dotfiles/dict/hyperspec/condition-type/e_smp_cn.htm
+Condition Type simple-error	~/dotfiles/dict/hyperspec/condition-type/e_smp_er.htm
+Condition Type simple-type-error	~/dotfiles/dict/hyperspec/condition-type/e_smp_tp.htm
+Condition Type simple-warning	~/dotfiles/dict/hyperspec/condition-type/e_smp_wa.htm
+Condition Type storage-condition	~/dotfiles/dict/hyperspec/condition-type/e_storag.htm
+Condition Type stream-error	~/dotfiles/dict/hyperspec/condition-type/e_stm_er.htm
+Condition Type style-warning	~/dotfiles/dict/hyperspec/condition-type/e_style_.htm
+Condition Type type-error	~/dotfiles/dict/hyperspec/condition-type/e_tp_err.htm
+Condition Type unbound-slot	~/dotfiles/dict/hyperspec/condition-type/e_unboun.htm
+Condition Type unbound-variable	~/dotfiles/dict/hyperspec/condition-type/e_unbo_1.htm
+Condition Type undefined-function	~/dotfiles/dict/hyperspec/condition-type/e_undefi.htm
+Condition Type warning	~/dotfiles/dict/hyperspec/condition-type/e_warnin.htm
+Constant Variable array-dimension-limit	~/dotfiles/dict/hyperspec/variable/v_ar_dim.htm
+Constant Variable array-rank-limit	~/dotfiles/dict/hyperspec/variable/v_ar_ran.htm
+Constant Variable array-total-size-limit	~/dotfiles/dict/hyperspec/variable/v_ar_tot.htm
+Constant Variable boole-1, boole-2...	~/dotfiles/dict/hyperspec/variable/v_b_1_b.htm
+Constant Variable call-arguments-limit	~/dotfiles/dict/hyperspec/variable/v_call_a.htm
+Constant Variable char-code-limit	~/dotfiles/dict/hyperspec/variable/v_char_c.htm
+Constant Variable internal-time-units-per-second	~/dotfiles/dict/hyperspec/variable/v_intern.htm
+Constant Variable lambda-list-keywords	~/dotfiles/dict/hyperspec/variable/v_lambda.htm
+Constant Variable lambda-parameters-limit	~/dotfiles/dict/hyperspec/variable/v_lamb_1.htm
+Constant Variable most-positive-fixnum...	~/dotfiles/dict/hyperspec/variable/v_most_p.htm
+Constant Variable most-positive-short-float...	~/dotfiles/dict/hyperspec/variable/v_most_1.htm
+Constant Variable multiple-values-limit	~/dotfiles/dict/hyperspec/variable/v_multip.htm
+Constant Variable nil	~/dotfiles/dict/hyperspec/variable/v_nil.htm
+Constant Variable pi	~/dotfiles/dict/hyperspec/variable/v_pi.htm
+Constant Variable short-float-epsilon...	~/dotfiles/dict/hyperspec/variable/v_short_.htm
+Constant Variable t	~/dotfiles/dict/hyperspec/variable/v_t.htm
+Declaration declaration	~/dotfiles/dict/hyperspec/declaration/d_declar.htm
+Declaration dynamic-extent	~/dotfiles/dict/hyperspec/declaration/d_dynami.htm
+Declaration ftype	~/dotfiles/dict/hyperspec/declaration/d_ftype.htm
+Declaration ignore, ignorable	~/dotfiles/dict/hyperspec/declaration/d_ignore.htm
+Declaration inline, notinline	~/dotfiles/dict/hyperspec/declaration/d_inline.htm
+Declaration optimize	~/dotfiles/dict/hyperspec/declaration/d_optimi.htm
+Declaration special	~/dotfiles/dict/hyperspec/declaration/d_specia.htm
+Declaration type	~/dotfiles/dict/hyperspec/declaration/d_type.htm
 Function *	~/dotfiles/dict/HyperSpec/function/f_st.htm
 Function +	~/dotfiles/dict/HyperSpec/function/f_pl.htm
 Function -	~/dotfiles/dict/HyperSpec/function/f__.htm
 Function /	~/dotfiles/dict/HyperSpec/function/f_sl.htm
 Function 1+, 1-	~/dotfiles/dict/HyperSpec/function/f_1pl_1_.htm
 Function =, /=, <, >, <=, >=	~/dotfiles/dict/HyperSpec/function/f_eq_sle.htm
-Function ABORT, CONTINUE, MUFFLE-WARNING...	~/dotfiles/dict/HyperSpec/function/f_abortc.htm
-Function ABS	~/dotfiles/dict/HyperSpec/function/f_abs.htm
-Function ACONS	~/dotfiles/dict/HyperSpec/function/f_acons.htm
-Function ADJOIN	~/dotfiles/dict/HyperSpec/function/f_adjoin.htm
-Function ADJUST-ARRAY	~/dotfiles/dict/HyperSpec/function/f_adjust.htm
-Function ADJUSTABLE-ARRAY-P	~/dotfiles/dict/HyperSpec/function/f_adju_1.htm
-Function ALPHA-CHAR-P	~/dotfiles/dict/HyperSpec/function/f_alpha_.htm
-Function ALPHANUMERICP	~/dotfiles/dict/HyperSpec/function/f_alphan.htm
-Function APPEND	~/dotfiles/dict/HyperSpec/function/f_append.htm
-Function APPLY	~/dotfiles/dict/HyperSpec/function/f_apply.htm
-Function APROPOS, APROPOS-LIST	~/dotfiles/dict/HyperSpec/function/f_apropo.htm
-Function ARITHMETIC-ERROR-OPERANDS...	~/dotfiles/dict/HyperSpec/function/f_arithm.htm
-Function ARRAY-DIMENSION	~/dotfiles/dict/HyperSpec/function/f_ar_dim.htm
-Function ARRAY-DIMENSIONS	~/dotfiles/dict/HyperSpec/function/f_ar_d_1.htm
-Function ARRAY-DISPLACEMENT	~/dotfiles/dict/HyperSpec/function/f_ar_dis.htm
-Function ARRAY-ELEMENT-TYPE	~/dotfiles/dict/HyperSpec/function/f_ar_ele.htm
-Function ARRAY-HAS-FILL-POINTER-P	~/dotfiles/dict/HyperSpec/function/f_ar_has.htm
-Function ARRAY-IN-BOUNDS-P	~/dotfiles/dict/HyperSpec/function/f_ar_in_.htm
-Function ARRAY-RANK	~/dotfiles/dict/HyperSpec/function/f_ar_ran.htm
-Function ARRAY-ROW-MAJOR-INDEX	~/dotfiles/dict/HyperSpec/function/f_ar_row.htm
-Function ARRAY-TOTAL-SIZE	~/dotfiles/dict/HyperSpec/function/f_ar_tot.htm
-Function ARRAYP	~/dotfiles/dict/HyperSpec/function/f_arrayp.htm
-Function ASH	~/dotfiles/dict/HyperSpec/function/f_ash.htm
-Function ASIN, ACOS, ATAN	~/dotfiles/dict/HyperSpec/function/f_asin_.htm
-Function ASSOC, ASSOC-IF, ASSOC-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_assocc.htm
-Function ATOM	~/dotfiles/dict/HyperSpec/function/f_atom.htm
-Function BIT-AND, BIT-ANDC1, BIT-ANDC2...	~/dotfiles/dict/HyperSpec/function/f_bt_and.htm
-Function BIT-VECTOR-P	~/dotfiles/dict/HyperSpec/function/f_bt_vec.htm
-Function BOOLE	~/dotfiles/dict/HyperSpec/function/f_boole.htm
-Function BOUNDP	~/dotfiles/dict/HyperSpec/function/f_boundp.htm
-Function BREAK	~/dotfiles/dict/HyperSpec/function/f_break.htm
-Function BROADCAST-STREAM-STREAMS	~/dotfiles/dict/HyperSpec/function/f_broadc.htm
-Function BUTLAST, NBUTLAST	~/dotfiles/dict/HyperSpec/function/f_butlas.htm
-Function BYTE, BYTE-SIZE, BYTE-POSITION	~/dotfiles/dict/HyperSpec/function/f_by_by.htm
-Function CELL-ERROR-NAME	~/dotfiles/dict/HyperSpec/function/f_cell_e.htm
-Function CERROR	~/dotfiles/dict/HyperSpec/function/f_cerror.htm
-Function CHAR-CODE	~/dotfiles/dict/HyperSpec/function/f_char_c.htm
-Function CHAR-INT	~/dotfiles/dict/HyperSpec/function/f_char_i.htm
-Function CHAR-NAME	~/dotfiles/dict/HyperSpec/function/f_char_n.htm
-Function CHAR-UPCASE, CHAR-DOWNCASE	~/dotfiles/dict/HyperSpec/function/f_char_u.htm
-Function CHAR=, CHAR/=, CHAR<, CHAR>...	~/dotfiles/dict/HyperSpec/function/f_chareq.htm
-Function CHARACTER	~/dotfiles/dict/HyperSpec/function/f_ch.htm
-Function CHARACTERP	~/dotfiles/dict/HyperSpec/function/f_chp.htm
-Function CIS	~/dotfiles/dict/HyperSpec/function/f_cis.htm
-Function CLASS-OF	~/dotfiles/dict/HyperSpec/function/f_clas_1.htm
-Function CLEAR-INPUT	~/dotfiles/dict/HyperSpec/function/f_clear_.htm
-Function CLOSE	~/dotfiles/dict/HyperSpec/function/f_close.htm
-Function CLRHASH	~/dotfiles/dict/HyperSpec/function/f_clrhas.htm
-Function CODE-CHAR	~/dotfiles/dict/HyperSpec/function/f_code_c.htm
-Function COERCE	~/dotfiles/dict/HyperSpec/function/f_coerce.htm
-Function COMPILE	~/dotfiles/dict/HyperSpec/function/f_cmp.htm
-Function COMPILE-FILE	~/dotfiles/dict/HyperSpec/function/f_cmp_fi.htm
-Function COMPILE-FILE-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_cmp__1.htm
-Function COMPILED-FUNCTION-P	~/dotfiles/dict/HyperSpec/function/f_cmpd_f.htm
-Function COMPLEMENT	~/dotfiles/dict/HyperSpec/function/f_comple.htm
-Function COMPLEX	~/dotfiles/dict/HyperSpec/function/f_comp_2.htm
-Function COMPLEXP	~/dotfiles/dict/HyperSpec/function/f_comp_3.htm
-Function COMPUTE-RESTARTS	~/dotfiles/dict/HyperSpec/function/f_comp_1.htm
-Function CONCATENATE	~/dotfiles/dict/HyperSpec/function/f_concat.htm
-Function CONCATENATED-STREAM-STREAMS	~/dotfiles/dict/HyperSpec/function/f_conc_1.htm
-Function CONJUGATE	~/dotfiles/dict/HyperSpec/function/f_conjug.htm
-Function CONS	~/dotfiles/dict/HyperSpec/function/f_cons.htm
-Function CONSP	~/dotfiles/dict/HyperSpec/function/f_consp.htm
-Function CONSTANTLY	~/dotfiles/dict/HyperSpec/function/f_cons_1.htm
-Function CONSTANTP	~/dotfiles/dict/HyperSpec/function/f_consta.htm
-Function COPY-ALIST	~/dotfiles/dict/HyperSpec/function/f_cp_ali.htm
-Function COPY-LIST	~/dotfiles/dict/HyperSpec/function/f_cp_lis.htm
-Function COPY-PPRINT-DISPATCH	~/dotfiles/dict/HyperSpec/function/f_cp_ppr.htm
-Function COPY-READTABLE	~/dotfiles/dict/HyperSpec/function/f_cp_rdt.htm
-Function COPY-SEQ	~/dotfiles/dict/HyperSpec/function/f_cp_seq.htm
-Function COPY-STRUCTURE	~/dotfiles/dict/HyperSpec/function/f_cp_stu.htm
-Function COPY-SYMBOL	~/dotfiles/dict/HyperSpec/function/f_cp_sym.htm
-Function COPY-TREE	~/dotfiles/dict/HyperSpec/function/f_cp_tre.htm
-Function COUNT, COUNT-IF, COUNT-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_countc.htm
-Function DECODE-FLOAT, SCALE-FLOAT...	~/dotfiles/dict/HyperSpec/function/f_dec_fl.htm
-Function DECODE-UNIVERSAL-TIME	~/dotfiles/dict/HyperSpec/function/f_dec_un.htm
-Function DELETE-FILE	~/dotfiles/dict/HyperSpec/function/f_del_fi.htm
-Function DELETE-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_del_pk.htm
-Function DEPOSIT-FIELD	~/dotfiles/dict/HyperSpec/function/f_deposi.htm
-Function DESCRIBE	~/dotfiles/dict/HyperSpec/function/f_descri.htm
-Function DIGIT-CHAR	~/dotfiles/dict/HyperSpec/function/f_digit_.htm
-Function DIGIT-CHAR-P	~/dotfiles/dict/HyperSpec/function/f_digi_1.htm
-Function DIRECTORY	~/dotfiles/dict/HyperSpec/function/f_dir.htm
-Function DISASSEMBLE	~/dotfiles/dict/HyperSpec/function/f_disass.htm
-Function DPB	~/dotfiles/dict/HyperSpec/function/f_dpb.htm
-Function DRIBBLE	~/dotfiles/dict/HyperSpec/function/f_dribbl.htm
-Function ECHO-STREAM-INPUT-STREAM...	~/dotfiles/dict/HyperSpec/function/f_echo_s.htm
-Function ED	~/dotfiles/dict/HyperSpec/function/f_ed.htm
-Function ENDP	~/dotfiles/dict/HyperSpec/function/f_endp.htm
-Function ENSURE-DIRECTORIES-EXIST	~/dotfiles/dict/HyperSpec/function/f_ensu_1.htm
-Function ENSURE-GENERIC-FUNCTION	~/dotfiles/dict/HyperSpec/function/f_ensure.htm
-Function EQ	~/dotfiles/dict/HyperSpec/function/f_eq.htm
-Function EQL	~/dotfiles/dict/HyperSpec/function/f_eql.htm
-Function EQUAL	~/dotfiles/dict/HyperSpec/function/f_equal.htm
-Function EQUALP	~/dotfiles/dict/HyperSpec/function/f_equalp.htm
-Function ERROR	~/dotfiles/dict/HyperSpec/function/f_error.htm
-Function EVAL	~/dotfiles/dict/HyperSpec/function/f_eval.htm
-Function EVENP, ODDP	~/dotfiles/dict/HyperSpec/function/f_evenpc.htm
-Function EVERY, SOME, NOTEVERY, NOTANY	~/dotfiles/dict/HyperSpec/function/f_everyc.htm
-Function EXP, EXPT	~/dotfiles/dict/HyperSpec/function/f_exp_e.htm
-Function EXPORT	~/dotfiles/dict/HyperSpec/function/f_export.htm
-Function FBOUNDP	~/dotfiles/dict/HyperSpec/function/f_fbound.htm
-Function FILE-AUTHOR	~/dotfiles/dict/HyperSpec/function/f_file_a.htm
-Function FILE-ERROR-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_file_e.htm
-Function FILE-LENGTH	~/dotfiles/dict/HyperSpec/function/f_file_l.htm
-Function FILE-POSITION	~/dotfiles/dict/HyperSpec/function/f_file_p.htm
-Function FILE-STRING-LENGTH	~/dotfiles/dict/HyperSpec/function/f_file_s.htm
-Function FILE-WRITE-DATE	~/dotfiles/dict/HyperSpec/function/f_file_w.htm
-Function FILL	~/dotfiles/dict/HyperSpec/function/f_fill.htm
-Function FIND, FIND-IF, FIND-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_find_.htm
-Function FIND-ALL-SYMBOLS	~/dotfiles/dict/HyperSpec/function/f_find_a.htm
-Function FIND-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_find_p.htm
-Function FIND-RESTART	~/dotfiles/dict/HyperSpec/function/f_find_r.htm
-Function FIND-SYMBOL	~/dotfiles/dict/HyperSpec/function/f_find_s.htm
-Function FINISH-OUTPUT, FORCE-OUTPUT...	~/dotfiles/dict/HyperSpec/function/f_finish.htm
-Function FLOAT	~/dotfiles/dict/HyperSpec/function/f_float.htm
-Function FLOATP	~/dotfiles/dict/HyperSpec/function/f_floatp.htm
-Function FLOOR, FFLOOR, CEILING, FCEILING...	~/dotfiles/dict/HyperSpec/function/f_floorc.htm
-Function FMAKUNBOUND	~/dotfiles/dict/HyperSpec/function/f_fmakun.htm
-Function FORMAT	~/dotfiles/dict/HyperSpec/function/f_format.htm
-Function FUNCALL	~/dotfiles/dict/HyperSpec/function/f_funcal.htm
-Function FUNCTION-LAMBDA-EXPRESSION	~/dotfiles/dict/HyperSpec/function/f_fn_lam.htm
-Function FUNCTIONP	~/dotfiles/dict/HyperSpec/function/f_fnp.htm
-Function GCD	~/dotfiles/dict/HyperSpec/function/f_gcd.htm
-Function GENSYM	~/dotfiles/dict/HyperSpec/function/f_gensym.htm
-Function GENTEMP	~/dotfiles/dict/HyperSpec/function/f_gentem.htm
-Function GET-INTERNAL-REAL-TIME	~/dotfiles/dict/HyperSpec/function/f_get_in.htm
-Function GET-INTERNAL-RUN-TIME	~/dotfiles/dict/HyperSpec/function/f_get__1.htm
-Function GET-OUTPUT-STREAM-STRING	~/dotfiles/dict/HyperSpec/function/f_get_ou.htm
-Function GET-PROPERTIES	~/dotfiles/dict/HyperSpec/function/f_get_pr.htm
-Function GET-SETF-EXPANSION	~/dotfiles/dict/HyperSpec/function/f_get_se.htm
-Function GET-UNIVERSAL-TIME, GET-DECODED-TIME	~/dotfiles/dict/HyperSpec/function/f_get_un.htm
-Function GRAPHIC-CHAR-P	~/dotfiles/dict/HyperSpec/function/f_graphi.htm
-Function HASH-TABLE-COUNT	~/dotfiles/dict/HyperSpec/function/f_hash_1.htm
-Function HASH-TABLE-P	~/dotfiles/dict/HyperSpec/function/f_hash_t.htm
-Function HASH-TABLE-REHASH-SIZE	~/dotfiles/dict/HyperSpec/function/f_hash_2.htm
-Function HASH-TABLE-REHASH-THRESHOLD	~/dotfiles/dict/HyperSpec/function/f_hash_3.htm
-Function HASH-TABLE-SIZE	~/dotfiles/dict/HyperSpec/function/f_hash_4.htm
-Function HASH-TABLE-TEST	~/dotfiles/dict/HyperSpec/function/f_hash_5.htm
-Function IDENTITY	~/dotfiles/dict/HyperSpec/function/f_identi.htm
-Function IMPORT	~/dotfiles/dict/HyperSpec/function/f_import.htm
-Function INPUT-STREAM-P, OUTPUT-STREAM-P	~/dotfiles/dict/HyperSpec/function/f_in_stm.htm
-Function INSPECT	~/dotfiles/dict/HyperSpec/function/f_inspec.htm
-Function INTEGER-LENGTH	~/dotfiles/dict/HyperSpec/function/f_intege.htm
-Function INTEGERP	~/dotfiles/dict/HyperSpec/function/f_inte_1.htm
-Function INTERACTIVE-STREAM-P	~/dotfiles/dict/HyperSpec/function/f_intera.htm
-Function INTERN	~/dotfiles/dict/HyperSpec/function/f_intern.htm
-Function INTERSECTION, NINTERSECTION	~/dotfiles/dict/HyperSpec/function/f_isec_.htm
-Function INVALID-METHOD-ERROR	~/dotfiles/dict/HyperSpec/function/f_invali.htm
-Function INVOKE-DEBUGGER	~/dotfiles/dict/HyperSpec/function/f_invoke.htm
-Function INVOKE-RESTART	~/dotfiles/dict/HyperSpec/function/f_invo_1.htm
-Function INVOKE-RESTART-INTERACTIVELY	~/dotfiles/dict/HyperSpec/function/f_invo_2.htm
-Function KEYWORDP	~/dotfiles/dict/HyperSpec/function/f_kwdp.htm
-Function LAST	~/dotfiles/dict/HyperSpec/function/f_last.htm
-Function LCM	~/dotfiles/dict/HyperSpec/function/f_lcm.htm
-Function LDB-TEST	~/dotfiles/dict/HyperSpec/function/f_ldb_te.htm
-Function LDIFF, TAILP	~/dotfiles/dict/HyperSpec/function/f_ldiffc.htm
-Function LENGTH	~/dotfiles/dict/HyperSpec/function/f_length.htm
-Function LISP-IMPLEMENTATION-TYPE...	~/dotfiles/dict/HyperSpec/function/f_lisp_i.htm
-Function LIST, LIST*	~/dotfiles/dict/HyperSpec/function/f_list_.htm
-Function LIST-ALL-PACKAGES	~/dotfiles/dict/HyperSpec/function/f_list_a.htm
-Function LIST-LENGTH	~/dotfiles/dict/HyperSpec/function/f_list_l.htm
-Function LISTEN	~/dotfiles/dict/HyperSpec/function/f_listen.htm
-Function LISTP	~/dotfiles/dict/HyperSpec/function/f_listp.htm
-Function LOAD	~/dotfiles/dict/HyperSpec/function/f_load.htm
-Function LOAD-LOGICAL-PATHNAME-TRANSLATIONS	~/dotfiles/dict/HyperSpec/function/f_ld_log.htm
-Function LOG	~/dotfiles/dict/HyperSpec/function/f_log.htm
-Function LOGAND, LOGANDC1, LOGANDC2...	~/dotfiles/dict/HyperSpec/function/f_logand.htm
-Function LOGBITP	~/dotfiles/dict/HyperSpec/function/f_logbtp.htm
-Function LOGCOUNT	~/dotfiles/dict/HyperSpec/function/f_logcou.htm
-Function LOGICAL-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_logi_1.htm
-Function LOGTEST	~/dotfiles/dict/HyperSpec/function/f_logtes.htm
-Function MACHINE-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_mach_i.htm
-Function MACHINE-TYPE	~/dotfiles/dict/HyperSpec/function/f_mach_t.htm
-Function MACHINE-VERSION	~/dotfiles/dict/HyperSpec/function/f_mach_v.htm
-Function MACROEXPAND, MACROEXPAND-1	~/dotfiles/dict/HyperSpec/function/f_mexp_.htm
-Function MAKE-ARRAY	~/dotfiles/dict/HyperSpec/function/f_mk_ar.htm
-Function MAKE-BROADCAST-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_bro.htm
-Function MAKE-CONCATENATED-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_con.htm
-Function MAKE-CONDITION	~/dotfiles/dict/HyperSpec/function/f_mk_cnd.htm
-Function MAKE-DISPATCH-MACRO-CHARACTER	~/dotfiles/dict/HyperSpec/function/f_mk_dis.htm
-Function MAKE-ECHO-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_ech.htm
-Function MAKE-HASH-TABLE	~/dotfiles/dict/HyperSpec/function/f_mk_has.htm
-Function MAKE-LIST	~/dotfiles/dict/HyperSpec/function/f_mk_lis.htm
-Function MAKE-LOAD-FORM-SAVING-SLOTS	~/dotfiles/dict/HyperSpec/function/f_mk_l_1.htm
-Function MAKE-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_mk_pkg.htm
-Function MAKE-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_mk_pn.htm
-Function MAKE-RANDOM-STATE	~/dotfiles/dict/HyperSpec/function/f_mk_rnd.htm
-Function MAKE-SEQUENCE	~/dotfiles/dict/HyperSpec/function/f_mk_seq.htm
-Function MAKE-STRING	~/dotfiles/dict/HyperSpec/function/f_mk_stg.htm
-Function MAKE-STRING-INPUT-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_s_1.htm
-Function MAKE-STRING-OUTPUT-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_s_2.htm
-Function MAKE-SYMBOL	~/dotfiles/dict/HyperSpec/function/f_mk_sym.htm
-Function MAKE-SYNONYM-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_syn.htm
-Function MAKE-TWO-WAY-STREAM	~/dotfiles/dict/HyperSpec/function/f_mk_two.htm
-Function MAKUNBOUND	~/dotfiles/dict/HyperSpec/function/f_makunb.htm
-Function MAP	~/dotfiles/dict/HyperSpec/function/f_map.htm
-Function MAP-INTO	~/dotfiles/dict/HyperSpec/function/f_map_in.htm
-Function MAPC, MAPCAR, MAPCAN, MAPL...	~/dotfiles/dict/HyperSpec/function/f_mapc_.htm
-Function MAPHASH	~/dotfiles/dict/HyperSpec/function/f_maphas.htm
-Function MAX, MIN	~/dotfiles/dict/HyperSpec/function/f_max_m.htm
-Function MEMBER, MEMBER-IF, MEMBER-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_mem_m.htm
-Function MERGE	~/dotfiles/dict/HyperSpec/function/f_merge.htm
-Function MERGE-PATHNAMES	~/dotfiles/dict/HyperSpec/function/f_merge_.htm
-Function METHOD-COMBINATION-ERROR	~/dotfiles/dict/HyperSpec/function/f_meth_1.htm
-Function MINUSP, PLUSP	~/dotfiles/dict/HyperSpec/function/f_minusp.htm
-Function MISMATCH	~/dotfiles/dict/HyperSpec/function/f_mismat.htm
-Function MOD, REM	~/dotfiles/dict/HyperSpec/function/f_mod_r.htm
-Function NAME-CHAR	~/dotfiles/dict/HyperSpec/function/f_name_c.htm
-Function NAMESTRING, FILE-NAMESTRING...	~/dotfiles/dict/HyperSpec/function/f_namest.htm
-Function NCONC	~/dotfiles/dict/HyperSpec/function/f_nconc.htm
-Function NOT	~/dotfiles/dict/HyperSpec/function/f_not.htm
-Function NTHCDR	~/dotfiles/dict/HyperSpec/function/f_nthcdr.htm
-Function NULL	~/dotfiles/dict/HyperSpec/function/f_null.htm
-Function NUMBERP	~/dotfiles/dict/HyperSpec/function/f_nump.htm
-Function NUMERATOR, DENOMINATOR	~/dotfiles/dict/HyperSpec/function/f_numera.htm
-Function OPEN	~/dotfiles/dict/HyperSpec/function/f_open.htm
-Function OPEN-STREAM-P	~/dotfiles/dict/HyperSpec/function/f_open_s.htm
-Function PACKAGE-ERROR-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_pkg_er.htm
-Function PACKAGE-NAME	~/dotfiles/dict/HyperSpec/function/f_pkg_na.htm
-Function PACKAGE-NICKNAMES	~/dotfiles/dict/HyperSpec/function/f_pkg_ni.htm
-Function PACKAGE-SHADOWING-SYMBOLS	~/dotfiles/dict/HyperSpec/function/f_pkg_sh.htm
-Function PACKAGE-USE-LIST	~/dotfiles/dict/HyperSpec/function/f_pkg_us.htm
-Function PACKAGE-USED-BY-LIST	~/dotfiles/dict/HyperSpec/function/f_pkg__1.htm
-Function PACKAGEP	~/dotfiles/dict/HyperSpec/function/f_pkgp.htm
-Function PAIRLIS	~/dotfiles/dict/HyperSpec/function/f_pairli.htm
-Function PARSE-INTEGER	~/dotfiles/dict/HyperSpec/function/f_parse_.htm
-Function PARSE-NAMESTRING	~/dotfiles/dict/HyperSpec/function/f_pars_1.htm
-Function PATHNAME	~/dotfiles/dict/HyperSpec/function/f_pn.htm
-Function PATHNAME-HOST, PATHNAME-DEVICE...	~/dotfiles/dict/HyperSpec/function/f_pn_hos.htm
-Function PATHNAME-MATCH-P	~/dotfiles/dict/HyperSpec/function/f_pn_mat.htm
-Function PATHNAMEP	~/dotfiles/dict/HyperSpec/function/f_pnp.htm
-Function PEEK-CHAR	~/dotfiles/dict/HyperSpec/function/f_peek_c.htm
-Function PHASE	~/dotfiles/dict/HyperSpec/function/f_phase.htm
-Function POSITION, POSITION-IF, POSITION-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_pos_p.htm
-Function PPRINT-DISPATCH	~/dotfiles/dict/HyperSpec/function/f_ppr_di.htm
-Function PPRINT-FILL, PPRINT-LINEAR...	~/dotfiles/dict/HyperSpec/function/f_ppr_fi.htm
-Function PPRINT-INDENT	~/dotfiles/dict/HyperSpec/function/f_ppr_in.htm
-Function PPRINT-NEWLINE	~/dotfiles/dict/HyperSpec/function/f_ppr_nl.htm
-Function PPRINT-TAB	~/dotfiles/dict/HyperSpec/function/f_ppr_ta.htm
-Function PRINT-NOT-READABLE-OBJECT	~/dotfiles/dict/HyperSpec/function/f_pr_not.htm
-Function PROBE-FILE	~/dotfiles/dict/HyperSpec/function/f_probe_.htm
-Function PROCLAIM	~/dotfiles/dict/HyperSpec/function/f_procla.htm
-Function PROVIDE, REQUIRE	~/dotfiles/dict/HyperSpec/function/f_provid.htm
-Function RANDOM	~/dotfiles/dict/HyperSpec/function/f_random.htm
-Function RANDOM-STATE-P	~/dotfiles/dict/HyperSpec/function/f_rnd_st.htm
-Function RASSOC, RASSOC-IF, RASSOC-IF-NOT	~/dotfiles/dict/HyperSpec/function/f_rassoc.htm
-Function RATIONAL, RATIONALIZE	~/dotfiles/dict/HyperSpec/function/f_ration.htm
-Function RATIONALP	~/dotfiles/dict/HyperSpec/function/f_rati_1.htm
-Function READ, READ-PRESERVING-WHITESPACE	~/dotfiles/dict/HyperSpec/function/f_rd_rd.htm
-Function READ-BYTE	~/dotfiles/dict/HyperSpec/function/f_rd_by.htm
-Function READ-CHAR	~/dotfiles/dict/HyperSpec/function/f_rd_cha.htm
-Function READ-CHAR-NO-HANG	~/dotfiles/dict/HyperSpec/function/f_rd_c_1.htm
-Function READ-DELIMITED-LIST	~/dotfiles/dict/HyperSpec/function/f_rd_del.htm
-Function READ-FROM-STRING	~/dotfiles/dict/HyperSpec/function/f_rd_fro.htm
-Function READ-LINE	~/dotfiles/dict/HyperSpec/function/f_rd_lin.htm
-Function READ-SEQUENCE	~/dotfiles/dict/HyperSpec/function/f_rd_seq.htm
-Function READTABLEP	~/dotfiles/dict/HyperSpec/function/f_rdta_1.htm
-Function REALP	~/dotfiles/dict/HyperSpec/function/f_realp.htm
-Function REALPART, IMAGPART	~/dotfiles/dict/HyperSpec/function/f_realpa.htm
-Function REDUCE	~/dotfiles/dict/HyperSpec/function/f_reduce.htm
-Function REMHASH	~/dotfiles/dict/HyperSpec/function/f_remhas.htm
-Function REMOVE, REMOVE-IF, REMOVE-IF-NOT...	~/dotfiles/dict/HyperSpec/function/f_rm_rm.htm
-Function REMOVE-DUPLICATES, DELETE-DUPLICATES	~/dotfiles/dict/HyperSpec/function/f_rm_dup.htm
-Function REMPROP	~/dotfiles/dict/HyperSpec/function/f_rempro.htm
-Function RENAME-FILE	~/dotfiles/dict/HyperSpec/function/f_rn_fil.htm
-Function RENAME-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_rn_pkg.htm
-Function REPLACE	~/dotfiles/dict/HyperSpec/function/f_replac.htm
-Function RESTART-NAME	~/dotfiles/dict/HyperSpec/function/f_rst_na.htm
-Function REVAPPEND, NRECONC	~/dotfiles/dict/HyperSpec/function/f_revapp.htm
-Function REVERSE, NREVERSE	~/dotfiles/dict/HyperSpec/function/f_revers.htm
-Function ROOM	~/dotfiles/dict/HyperSpec/function/f_room.htm
-Function RPLACA, RPLACD	~/dotfiles/dict/HyperSpec/function/f_rplaca.htm
-Function SEARCH	~/dotfiles/dict/HyperSpec/function/f_search.htm
-Function SET	~/dotfiles/dict/HyperSpec/function/f_set.htm
-Function SET-DIFFERENCE, NSET-DIFFERENCE	~/dotfiles/dict/HyperSpec/function/f_set_di.htm
-Function SET-DISPATCH-MACRO-CHARACTER...	~/dotfiles/dict/HyperSpec/function/f_set__1.htm
-Function SET-EXCLUSIVE-OR, NSET-EXCLUSIVE-OR	~/dotfiles/dict/HyperSpec/function/f_set_ex.htm
-Function SET-MACRO-CHARACTER, GET-MACRO-CHARACTER	~/dotfiles/dict/HyperSpec/function/f_set_ma.htm
-Function SET-PPRINT-DISPATCH	~/dotfiles/dict/HyperSpec/function/f_set_pp.htm
-Function SET-SYNTAX-FROM-CHAR	~/dotfiles/dict/HyperSpec/function/f_set_sy.htm
-Function SHADOW	~/dotfiles/dict/HyperSpec/function/f_shadow.htm
-Function SHADOWING-IMPORT	~/dotfiles/dict/HyperSpec/function/f_shdw_i.htm
-Function SHORT-SITE-NAME, LONG-SITE-NAME	~/dotfiles/dict/HyperSpec/function/f_short_.htm
-Function SIGNAL	~/dotfiles/dict/HyperSpec/function/f_signal.htm
-Function SIGNUM	~/dotfiles/dict/HyperSpec/function/f_signum.htm
-Function SIMPLE-BIT-VECTOR-P	~/dotfiles/dict/HyperSpec/function/f_smp_bt.htm
-Function SIMPLE-CONDITION-FORMAT-CONTROL...	~/dotfiles/dict/HyperSpec/function/f_smp_cn.htm
-Function SIMPLE-STRING-P	~/dotfiles/dict/HyperSpec/function/f_smp_st.htm
-Function SIMPLE-VECTOR-P	~/dotfiles/dict/HyperSpec/function/f_smp_ve.htm
-Function SIN, COS, TAN	~/dotfiles/dict/HyperSpec/function/f_sin_c.htm
-Function SINH, COSH, TANH, ASINH...	~/dotfiles/dict/HyperSpec/function/f_sinh_.htm
-Function SLEEP	~/dotfiles/dict/HyperSpec/function/f_sleep.htm
-Function SLOT-BOUNDP	~/dotfiles/dict/HyperSpec/function/f_slt_bo.htm
-Function SLOT-EXISTS-P	~/dotfiles/dict/HyperSpec/function/f_slt_ex.htm
-Function SLOT-MAKUNBOUND	~/dotfiles/dict/HyperSpec/function/f_slt_ma.htm
-Function SLOT-VALUE	~/dotfiles/dict/HyperSpec/function/f_slt_va.htm
-Function SOFTWARE-TYPE, SOFTWARE-VERSION	~/dotfiles/dict/HyperSpec/function/f_sw_tpc.htm
-Function SORT, STABLE-SORT	~/dotfiles/dict/HyperSpec/function/f_sort_.htm
-Function SPECIAL-OPERATOR-P	~/dotfiles/dict/HyperSpec/function/f_specia.htm
-Function SQRT, ISQRT	~/dotfiles/dict/HyperSpec/function/f_sqrt_.htm
-Function STANDARD-CHAR-P	~/dotfiles/dict/HyperSpec/function/f_std_ch.htm
-Function STREAM-ELEMENT-TYPE	~/dotfiles/dict/HyperSpec/function/f_stm_el.htm
-Function STREAM-ERROR-STREAM	~/dotfiles/dict/HyperSpec/function/f_stm_er.htm
-Function STREAM-EXTERNAL-FORMAT	~/dotfiles/dict/HyperSpec/function/f_stm_ex.htm
-Function STREAMP	~/dotfiles/dict/HyperSpec/function/f_stmp.htm
-Function STRING	~/dotfiles/dict/HyperSpec/function/f_string.htm
-Function STRING-TRIM, STRING-LEFT-TRIM...	~/dotfiles/dict/HyperSpec/function/f_stg_tr.htm
-Function STRING-UPCASE, STRING-DOWNCASE...	~/dotfiles/dict/HyperSpec/function/f_stg_up.htm
-Function STRING=, STRING/=, STRING>...	~/dotfiles/dict/HyperSpec/function/f_stgeq_.htm
-Function STRINGP	~/dotfiles/dict/HyperSpec/function/f_stgp.htm
-Function SUBLIS, NSUBLIS	~/dotfiles/dict/HyperSpec/function/f_sublis.htm
-Function SUBSETP	~/dotfiles/dict/HyperSpec/function/f_subset.htm
-Function SUBST, SUBST-IF, SUBST-IF-NOT...	~/dotfiles/dict/HyperSpec/function/f_substc.htm
-Function SUBSTITUTE, SUBSTITUTE-IF...	~/dotfiles/dict/HyperSpec/function/f_sbs_s.htm
-Function SUBTYPEP	~/dotfiles/dict/HyperSpec/function/f_subtpp.htm
-Function SXHASH	~/dotfiles/dict/HyperSpec/function/f_sxhash.htm
-Function SYMBOL-NAME	~/dotfiles/dict/HyperSpec/function/f_symb_2.htm
-Function SYMBOL-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_symb_3.htm
-Function SYMBOLP	~/dotfiles/dict/HyperSpec/function/f_symbol.htm
-Function SYNONYM-STREAM-SYMBOL	~/dotfiles/dict/HyperSpec/function/f_syn_st.htm
-Function TERPRI, FRESH-LINE	~/dotfiles/dict/HyperSpec/function/f_terpri.htm
-Function TRANSLATE-LOGICAL-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_tr_log.htm
-Function TRANSLATE-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_tr_pn.htm
-Function TREE-EQUAL	~/dotfiles/dict/HyperSpec/function/f_tree_e.htm
-Function TRUENAME	~/dotfiles/dict/HyperSpec/function/f_tn.htm
-Function TWO-WAY-STREAM-INPUT-STREAM...	~/dotfiles/dict/HyperSpec/function/f_two_wa.htm
-Function TYPE-ERROR-DATUM, TYPE-ERROR-EXPECTED-TYPE	~/dotfiles/dict/HyperSpec/function/f_tp_err.htm
-Function TYPE-OF	~/dotfiles/dict/HyperSpec/function/f_tp_of.htm
-Function TYPEP	~/dotfiles/dict/HyperSpec/function/f_typep.htm
-Function UNBOUND-SLOT-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_unboun.htm
-Function UNEXPORT	~/dotfiles/dict/HyperSpec/function/f_unexpo.htm
-Function UNINTERN	~/dotfiles/dict/HyperSpec/function/f_uninte.htm
-Function UNION, NUNION	~/dotfiles/dict/HyperSpec/function/f_unionc.htm
-Function UNREAD-CHAR	~/dotfiles/dict/HyperSpec/function/f_unrd_c.htm
-Function UNUSE-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_unuse_.htm
-Function UPGRADED-ARRAY-ELEMENT-TYPE	~/dotfiles/dict/HyperSpec/function/f_upgr_1.htm
-Function UPGRADED-COMPLEX-PART-TYPE	~/dotfiles/dict/HyperSpec/function/f_upgrad.htm
-Function UPPER-CASE-P, LOWER-CASE-P...	~/dotfiles/dict/HyperSpec/function/f_upper_.htm
-Function USE-PACKAGE	~/dotfiles/dict/HyperSpec/function/f_use_pk.htm
-Function USER-HOMEDIR-PATHNAME	~/dotfiles/dict/HyperSpec/function/f_user_h.htm
-Function VALUES-LIST	~/dotfiles/dict/HyperSpec/function/f_vals_l.htm
-Function VECTOR	~/dotfiles/dict/HyperSpec/function/f_vector.htm
-Function VECTOR-POP	~/dotfiles/dict/HyperSpec/function/f_vec_po.htm
-Function VECTOR-PUSH, VECTOR-PUSH-EXTEND	~/dotfiles/dict/HyperSpec/function/f_vec_ps.htm
-Function VECTORP	~/dotfiles/dict/HyperSpec/function/f_vecp.htm
-Function WARN	~/dotfiles/dict/HyperSpec/function/f_warn.htm
-Function WILD-PATHNAME-P	~/dotfiles/dict/HyperSpec/function/f_wild_p.htm
-Function WRITE, PRIN1, PRINT, PPRINT...	~/dotfiles/dict/HyperSpec/function/f_wr_pr.htm
-Function WRITE-BYTE	~/dotfiles/dict/HyperSpec/function/f_wr_by.htm
-Function WRITE-CHAR	~/dotfiles/dict/HyperSpec/function/f_wr_cha.htm
-Function WRITE-SEQUENCE	~/dotfiles/dict/HyperSpec/function/f_wr_seq.htm
-Function WRITE-STRING, WRITE-LINE	~/dotfiles/dict/HyperSpec/function/f_wr_stg.htm
-Function WRITE-TO-STRING, PRIN1-TO-STRING...	~/dotfiles/dict/HyperSpec/function/f_wr_to_.htm
-Function Y-OR-N-P, YES-OR-NO-P	~/dotfiles/dict/HyperSpec/function/f_y_or_n.htm
-Function ZEROP	~/dotfiles/dict/HyperSpec/function/f_zerop.htm
-Local Function CALL-NEXT-METHOD	~/dotfiles/dict/HyperSpec/function/f_call_n.htm
-Local Function NEXT-METHOD-P	~/dotfiles/dict/HyperSpec/function/f_next_m.htm
-Local Macro CALL-METHOD, MAKE-METHOD	~/dotfiles/dict/HyperSpec/macro/m_call_m.htm
-Local Macro LOOP-FINISH	~/dotfiles/dict/HyperSpec/macro/m_loop_f.htm
-Local Macro PPRINT-EXIT-IF-LIST-EXHAUSTED	~/dotfiles/dict/HyperSpec/macro/m_ppr_ex.htm
-Local Macro PPRINT-POP	~/dotfiles/dict/HyperSpec/macro/m_ppr_po.htm
-Macro AND	~/dotfiles/dict/HyperSpec/macro/m_and.htm
-Macro ASSERT	~/dotfiles/dict/HyperSpec/macro/m_assert.htm
-Macro CASE, CCASE, ECASE	~/dotfiles/dict/HyperSpec/macro/m_case_.htm
-Macro CHECK-TYPE	~/dotfiles/dict/HyperSpec/macro/m_check_.htm
-Macro COND	~/dotfiles/dict/HyperSpec/macro/m_cond.htm
-Macro DECLAIM	~/dotfiles/dict/HyperSpec/macro/m_declai.htm
-Macro DEFCLASS	~/dotfiles/dict/HyperSpec/macro/m_defcla.htm
-Macro DEFCONSTANT	~/dotfiles/dict/HyperSpec/macro/m_defcon.htm
-Macro DEFGENERIC	~/dotfiles/dict/HyperSpec/macro/m_defgen.htm
-Macro DEFINE-COMPILER-MACRO	~/dotfiles/dict/HyperSpec/macro/m_define.htm
-Macro DEFINE-CONDITION	~/dotfiles/dict/HyperSpec/macro/m_defi_5.htm
-Macro DEFINE-METHOD-COMBINATION	~/dotfiles/dict/HyperSpec/macro/m_defi_4.htm
-Macro DEFINE-MODIFY-MACRO	~/dotfiles/dict/HyperSpec/macro/m_defi_2.htm
-Macro DEFINE-SETF-EXPANDER	~/dotfiles/dict/HyperSpec/macro/m_defi_3.htm
-Macro DEFINE-SYMBOL-MACRO	~/dotfiles/dict/HyperSpec/macro/m_defi_1.htm
-Macro DEFMACRO	~/dotfiles/dict/HyperSpec/macro/m_defmac.htm
-Macro DEFMETHOD	~/dotfiles/dict/HyperSpec/macro/m_defmet.htm
-Macro DEFPACKAGE	~/dotfiles/dict/HyperSpec/macro/m_defpkg.htm
-Macro DEFPARAMETER, DEFVAR	~/dotfiles/dict/HyperSpec/macro/m_defpar.htm
-Macro DEFSETF	~/dotfiles/dict/HyperSpec/macro/m_defset.htm
-Macro DEFSTRUCT	~/dotfiles/dict/HyperSpec/macro/m_defstr.htm
-Macro DEFTYPE	~/dotfiles/dict/HyperSpec/macro/m_deftp.htm
-Macro DEFUN	~/dotfiles/dict/HyperSpec/macro/m_defun.htm
-Macro DESTRUCTURING-BIND	~/dotfiles/dict/HyperSpec/macro/m_destru.htm
-Macro DO, DO*	~/dotfiles/dict/HyperSpec/macro/m_do_do.htm
-Macro DO-SYMBOLS, DO-EXTERNAL-SYMBOLS...	~/dotfiles/dict/HyperSpec/macro/m_do_sym.htm
-Macro DOLIST	~/dotfiles/dict/HyperSpec/macro/m_dolist.htm
-Macro DOTIMES	~/dotfiles/dict/HyperSpec/macro/m_dotime.htm
-Macro FORMATTER	~/dotfiles/dict/HyperSpec/macro/m_format.htm
-Macro HANDLER-BIND	~/dotfiles/dict/HyperSpec/macro/m_handle.htm
-Macro HANDLER-CASE	~/dotfiles/dict/HyperSpec/macro/m_hand_1.htm
-Macro IGNORE-ERRORS	~/dotfiles/dict/HyperSpec/macro/m_ignore.htm
-Macro IN-PACKAGE	~/dotfiles/dict/HyperSpec/macro/m_in_pkg.htm
-Macro INCF, DECF	~/dotfiles/dict/HyperSpec/macro/m_incf_.htm
-Macro LAMBDA	~/dotfiles/dict/HyperSpec/macro/m_lambda.htm
-Macro LOOP	~/dotfiles/dict/HyperSpec/macro/m_loop.htm
-Macro MULTIPLE-VALUE-BIND	~/dotfiles/dict/HyperSpec/macro/m_multip.htm
-Macro MULTIPLE-VALUE-LIST	~/dotfiles/dict/HyperSpec/macro/m_mult_1.htm
-Macro MULTIPLE-VALUE-SETQ	~/dotfiles/dict/HyperSpec/macro/m_mult_2.htm
-Macro NTH-VALUE	~/dotfiles/dict/HyperSpec/macro/m_nth_va.htm
-Macro OR	~/dotfiles/dict/HyperSpec/macro/m_or.htm
-Macro POP	~/dotfiles/dict/HyperSpec/macro/m_pop.htm
-Macro PPRINT-LOGICAL-BLOCK	~/dotfiles/dict/HyperSpec/macro/m_ppr_lo.htm
-Macro PRINT-UNREADABLE-OBJECT	~/dotfiles/dict/HyperSpec/macro/m_pr_unr.htm
-Macro PROG, PROG*	~/dotfiles/dict/HyperSpec/macro/m_prog_.htm
-Macro PROG1, PROG2	~/dotfiles/dict/HyperSpec/macro/m_prog1c.htm
-Macro PSETQ	~/dotfiles/dict/HyperSpec/macro/m_psetq.htm
-Macro PUSH	~/dotfiles/dict/HyperSpec/macro/m_push.htm
-Macro PUSHNEW	~/dotfiles/dict/HyperSpec/macro/m_pshnew.htm
-Macro REMF	~/dotfiles/dict/HyperSpec/macro/m_remf.htm
-Macro RESTART-BIND	~/dotfiles/dict/HyperSpec/macro/m_rst_bi.htm
-Macro RESTART-CASE	~/dotfiles/dict/HyperSpec/macro/m_rst_ca.htm
-Macro RETURN	~/dotfiles/dict/HyperSpec/macro/m_return.htm
-Macro ROTATEF	~/dotfiles/dict/HyperSpec/macro/m_rotate.htm
-Macro SETF, PSETF	~/dotfiles/dict/HyperSpec/macro/m_setf_.htm
-Macro SHIFTF	~/dotfiles/dict/HyperSpec/macro/m_shiftf.htm
-Macro STEP	~/dotfiles/dict/HyperSpec/macro/m_step.htm
-Macro TIME	~/dotfiles/dict/HyperSpec/macro/m_time.htm
-Macro TRACE, UNTRACE	~/dotfiles/dict/HyperSpec/macro/m_tracec.htm
-Macro TYPECASE, CTYPECASE, ETYPECASE	~/dotfiles/dict/HyperSpec/macro/m_tpcase.htm
-Macro WHEN, UNLESS	~/dotfiles/dict/HyperSpec/macro/m_when_.htm
-Macro WITH-ACCESSORS	~/dotfiles/dict/HyperSpec/macro/m_w_acce.htm
-Macro WITH-COMPILATION-UNIT	~/dotfiles/dict/HyperSpec/macro/m_w_comp.htm
-Macro WITH-CONDITION-RESTARTS	~/dotfiles/dict/HyperSpec/macro/m_w_cnd_.htm
-Macro WITH-HASH-TABLE-ITERATOR	~/dotfiles/dict/HyperSpec/macro/m_w_hash.htm
-Macro WITH-INPUT-FROM-STRING	~/dotfiles/dict/HyperSpec/macro/m_w_in_f.htm
-Macro WITH-OPEN-FILE	~/dotfiles/dict/HyperSpec/macro/m_w_open.htm
-Macro WITH-OPEN-STREAM	~/dotfiles/dict/HyperSpec/macro/m_w_op_1.htm
-Macro WITH-OUTPUT-TO-STRING	~/dotfiles/dict/HyperSpec/macro/m_w_out_.htm
-Macro WITH-PACKAGE-ITERATOR	~/dotfiles/dict/HyperSpec/macro/m_w_pkg_.htm
-Macro WITH-SIMPLE-RESTART	~/dotfiles/dict/HyperSpec/macro/m_w_smp_.htm
-Macro WITH-SLOTS	~/dotfiles/dict/HyperSpec/macro/m_w_slts.htm
-Macro WITH-STANDARD-IO-SYNTAX	~/dotfiles/dict/HyperSpec/macro/m_w_std_.htm
-Restart ABORT	~/dotfiles/dict/HyperSpec/restart/r_abort.htm
-Restart CONTINUE	~/dotfiles/dict/HyperSpec/restart/r_contin.htm
-Restart MUFFLE-WARNING	~/dotfiles/dict/HyperSpec/restart/r_muffle.htm
-Restart STORE-VALUE	~/dotfiles/dict/HyperSpec/restart/r_store_.htm
-Restart USE-VALUE	~/dotfiles/dict/HyperSpec/restart/r_use_va.htm
-Special Form SETQ	~/dotfiles/dict/HyperSpec/special-operator/s_setq.htm
-Special Operator BLOCK	~/dotfiles/dict/HyperSpec/special-operator/s_block.htm
-Special Operator CATCH	~/dotfiles/dict/HyperSpec/special-operator/s_catch.htm
-Special Operator EVAL-WHEN	~/dotfiles/dict/HyperSpec/special-operator/s_eval_w.htm
-Special Operator FLET, LABELS, MACROLET	~/dotfiles/dict/HyperSpec/special-operator/s_flet_.htm
-Special Operator FUNCTION	~/dotfiles/dict/HyperSpec/special-operator/s_fn.htm
-Special Operator GO	~/dotfiles/dict/HyperSpec/special-operator/s_go.htm
-Special Operator IF	~/dotfiles/dict/HyperSpec/special-operator/s_if.htm
-Special Operator LET, LET*	~/dotfiles/dict/HyperSpec/special-operator/s_let_l.htm
-Special Operator LOAD-TIME-VALUE	~/dotfiles/dict/HyperSpec/special-operator/s_ld_tim.htm
-Special Operator LOCALLY	~/dotfiles/dict/HyperSpec/special-operator/s_locall.htm
-Special Operator MULTIPLE-VALUE-CALL	~/dotfiles/dict/HyperSpec/special-operator/s_multip.htm
-Special Operator MULTIPLE-VALUE-PROG1	~/dotfiles/dict/HyperSpec/special-operator/s_mult_1.htm
-Special Operator PROGN	~/dotfiles/dict/HyperSpec/special-operator/s_progn.htm
-Special Operator PROGV	~/dotfiles/dict/HyperSpec/special-operator/s_progv.htm
-Special Operator QUOTE	~/dotfiles/dict/HyperSpec/special-operator/s_quote.htm
-Special Operator RETURN-FROM	~/dotfiles/dict/HyperSpec/special-operator/s_ret_fr.htm
-Special Operator SYMBOL-MACROLET	~/dotfiles/dict/HyperSpec/special-operator/s_symbol.htm
-Special Operator TAGBODY	~/dotfiles/dict/HyperSpec/special-operator/s_tagbod.htm
-Special Operator THE	~/dotfiles/dict/HyperSpec/special-operator/s_the.htm
-Special Operator THROW	~/dotfiles/dict/HyperSpec/special-operator/s_throw.htm
-Special Operator UNWIND-PROTECT	~/dotfiles/dict/HyperSpec/special-operator/s_unwind.htm
-Standard Generic Function (SETF CLASS-NAME)	~/dotfiles/dict/HyperSpec/function/f_opsetf.htm
-Standard Generic Function ADD-METHOD	~/dotfiles/dict/HyperSpec/function/f_add_me.htm
-Standard Generic Function ALLOCATE-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_alloca.htm
-Standard Generic Function CHANGE-CLASS	~/dotfiles/dict/HyperSpec/function/f_chg_cl.htm
-Standard Generic Function CLASS-NAME	~/dotfiles/dict/HyperSpec/function/f_class_.htm
-Standard Generic Function COMPUTE-APPLICABLE-METHODS	~/dotfiles/dict/HyperSpec/function/f_comput.htm
-Standard Generic Function DESCRIBE-OBJECT	~/dotfiles/dict/HyperSpec/function/f_desc_1.htm
-Standard Generic Function DOCUMENTATION...	~/dotfiles/dict/HyperSpec/function/f_docume.htm
-Standard Generic Function FIND-METHOD	~/dotfiles/dict/HyperSpec/function/f_find_m.htm
-Standard Generic Function FUNCTION-KEYWORDS	~/dotfiles/dict/HyperSpec/function/f_fn_kwd.htm
-Standard Generic Function INITIALIZE-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_init_i.htm
-Standard Generic Function MAKE-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_mk_ins.htm
-Standard Generic Function MAKE-INSTANCES-OBSOLETE	~/dotfiles/dict/HyperSpec/function/f_mk_i_1.htm
-Standard Generic Function MAKE-LOAD-FORM	~/dotfiles/dict/HyperSpec/function/f_mk_ld_.htm
-Standard Generic Function METHOD-QUALIFIERS	~/dotfiles/dict/HyperSpec/function/f_method.htm
-Standard Generic Function NO-APPLICABLE-METHOD	~/dotfiles/dict/HyperSpec/function/f_no_app.htm
-Standard Generic Function NO-NEXT-METHOD	~/dotfiles/dict/HyperSpec/function/f_no_nex.htm
-Standard Generic Function PRINT-OBJECT	~/dotfiles/dict/HyperSpec/function/f_pr_obj.htm
-Standard Generic Function REINITIALIZE-INSTANCE	~/dotfiles/dict/HyperSpec/function/f_reinit.htm
-Standard Generic Function REMOVE-METHOD	~/dotfiles/dict/HyperSpec/function/f_rm_met.htm
-Standard Generic Function SHARED-INITIALIZE	~/dotfiles/dict/HyperSpec/function/f_shared.htm
-Standard Generic Function SLOT-MISSING	~/dotfiles/dict/HyperSpec/function/f_slt_mi.htm
-Standard Generic Function SLOT-UNBOUND	~/dotfiles/dict/HyperSpec/function/f_slt_un.htm
-Standard Generic Function UPDATE-INSTANCE-FOR-DIFFERENT-CLASS	~/dotfiles/dict/HyperSpec/function/f_update.htm
-Standard Generic Function UPDATE-INSTANCE-FOR-REDEFINED-CLASS	~/dotfiles/dict/HyperSpec/function/f_upda_1.htm
-Symbol DECLARE	~/dotfiles/dict/HyperSpec/special-operator/s_declar.htm
-Symbol LAMBDA	~/dotfiles/dict/HyperSpec/special-operator/s_lambda.htm
-System Class ARRAY	~/dotfiles/dict/HyperSpec/type/t_array.htm
-System Class BIT-VECTOR	~/dotfiles/dict/HyperSpec/type/t_bt_vec.htm
-System Class BROADCAST-STREAM	~/dotfiles/dict/HyperSpec/type/t_broadc.htm
-System Class BUILT-IN-CLASS	~/dotfiles/dict/HyperSpec/type/t_built_.htm
-System Class CHARACTER	~/dotfiles/dict/HyperSpec/type/t_ch.htm
-System Class CLASS	~/dotfiles/dict/HyperSpec/type/t_class.htm
-System Class COMPLEX	~/dotfiles/dict/HyperSpec/type/t_comple.htm
-System Class CONCATENATED-STREAM	~/dotfiles/dict/HyperSpec/type/t_concat.htm
-System Class CONS	~/dotfiles/dict/HyperSpec/type/t_cons.htm
-System Class ECHO-STREAM	~/dotfiles/dict/HyperSpec/type/t_echo_s.htm
-System Class FILE-STREAM	~/dotfiles/dict/HyperSpec/type/t_file_s.htm
-System Class FLOAT	~/dotfiles/dict/HyperSpec/type/t_float.htm
-System Class FUNCTION	~/dotfiles/dict/HyperSpec/type/t_fn.htm
-System Class GENERIC-FUNCTION	~/dotfiles/dict/HyperSpec/type/t_generi.htm
-System Class HASH-TABLE	~/dotfiles/dict/HyperSpec/type/t_hash_t.htm
-System Class INTEGER	~/dotfiles/dict/HyperSpec/type/t_intege.htm
-System Class LIST	~/dotfiles/dict/HyperSpec/type/t_list.htm
-System Class LOGICAL-PATHNAME	~/dotfiles/dict/HyperSpec/type/t_logica.htm
-System Class METHOD	~/dotfiles/dict/HyperSpec/type/t_method.htm
-System Class METHOD-COMBINATION	~/dotfiles/dict/HyperSpec/type/t_meth_1.htm
-System Class NULL	~/dotfiles/dict/HyperSpec/type/t_null.htm
-System Class NUMBER	~/dotfiles/dict/HyperSpec/type/t_number.htm
-System Class PACKAGE	~/dotfiles/dict/HyperSpec/type/t_pkg.htm
-System Class PATHNAME	~/dotfiles/dict/HyperSpec/type/t_pn.htm
-System Class RANDOM-STATE	~/dotfiles/dict/HyperSpec/type/t_rnd_st.htm
-System Class RATIO	~/dotfiles/dict/HyperSpec/type/t_ratio.htm
-System Class RATIONAL	~/dotfiles/dict/HyperSpec/type/t_ration.htm
-System Class READTABLE	~/dotfiles/dict/HyperSpec/type/t_rdtabl.htm
-System Class REAL	~/dotfiles/dict/HyperSpec/type/t_real.htm
-System Class RESTART	~/dotfiles/dict/HyperSpec/type/t_rst.htm
-System Class SEQUENCE	~/dotfiles/dict/HyperSpec/type/t_seq.htm
-System Class STANDARD-CLASS	~/dotfiles/dict/HyperSpec/type/t_std_cl.htm
-System Class STANDARD-GENERIC-FUNCTION	~/dotfiles/dict/HyperSpec/type/t_std_ge.htm
-System Class STANDARD-METHOD	~/dotfiles/dict/HyperSpec/type/t_std_me.htm
-System Class STREAM	~/dotfiles/dict/HyperSpec/type/t_stream.htm
-System Class STRING	~/dotfiles/dict/HyperSpec/type/t_string.htm
-System Class STRING-STREAM	~/dotfiles/dict/HyperSpec/type/t_stg_st.htm
-System Class STRUCTURE-CLASS	~/dotfiles/dict/HyperSpec/type/t_stu_cl.htm
-System Class SYMBOL	~/dotfiles/dict/HyperSpec/type/t_symbol.htm
-System Class SYNONYM-STREAM	~/dotfiles/dict/HyperSpec/type/t_syn_st.htm
-System Class T	~/dotfiles/dict/HyperSpec/type/t_t.htm
+Function abort, continue, muffle-warning...	~/dotfiles/dict/hyperspec/function/f_abortc.htm
+Function abs	~/dotfiles/dict/hyperspec/function/f_abs.htm
+Function acons	~/dotfiles/dict/hyperspec/function/f_acons.htm
+Function adjoin	~/dotfiles/dict/hyperspec/function/f_adjoin.htm
+Function adjust-array	~/dotfiles/dict/hyperspec/function/f_adjust.htm
+Function adjustable-array-p	~/dotfiles/dict/hyperspec/function/f_adju_1.htm
+Function alpha-char-p	~/dotfiles/dict/hyperspec/function/f_alpha_.htm
+Function alphanumericp	~/dotfiles/dict/hyperspec/function/f_alphan.htm
+Function append	~/dotfiles/dict/hyperspec/function/f_append.htm
+Function apply	~/dotfiles/dict/hyperspec/function/f_apply.htm
+Function apropos, apropos-list	~/dotfiles/dict/hyperspec/function/f_apropo.htm
+Function arithmetic-error-operands...	~/dotfiles/dict/hyperspec/function/f_arithm.htm
+Function array-dimension	~/dotfiles/dict/hyperspec/function/f_ar_dim.htm
+Function array-dimensions	~/dotfiles/dict/hyperspec/function/f_ar_d_1.htm
+Function array-displacement	~/dotfiles/dict/hyperspec/function/f_ar_dis.htm
+Function array-element-type	~/dotfiles/dict/hyperspec/function/f_ar_ele.htm
+Function array-has-fill-pointer-p	~/dotfiles/dict/hyperspec/function/f_ar_has.htm
+Function array-in-bounds-p	~/dotfiles/dict/hyperspec/function/f_ar_in_.htm
+Function array-rank	~/dotfiles/dict/hyperspec/function/f_ar_ran.htm
+Function array-row-major-index	~/dotfiles/dict/hyperspec/function/f_ar_row.htm
+Function array-total-size	~/dotfiles/dict/hyperspec/function/f_ar_tot.htm
+Function arrayp	~/dotfiles/dict/hyperspec/function/f_arrayp.htm
+Function ash	~/dotfiles/dict/hyperspec/function/f_ash.htm
+Function asin, acos, atan	~/dotfiles/dict/hyperspec/function/f_asin_.htm
+Function assoc, assoc-if, assoc-if-not	~/dotfiles/dict/hyperspec/function/f_assocc.htm
+Function atom	~/dotfiles/dict/hyperspec/function/f_atom.htm
+Function bit-and, bit-andc1, bit-andc2...	~/dotfiles/dict/hyperspec/function/f_bt_and.htm
+Function bit-vector-p	~/dotfiles/dict/hyperspec/function/f_bt_vec.htm
+Function boole	~/dotfiles/dict/hyperspec/function/f_boole.htm
+Function boundp	~/dotfiles/dict/hyperspec/function/f_boundp.htm
+Function break	~/dotfiles/dict/hyperspec/function/f_break.htm
+Function broadcast-stream-streams	~/dotfiles/dict/hyperspec/function/f_broadc.htm
+Function butlast, nbutlast	~/dotfiles/dict/hyperspec/function/f_butlas.htm
+Function byte, byte-size, byte-position	~/dotfiles/dict/hyperspec/function/f_by_by.htm
+Function cell-error-name	~/dotfiles/dict/hyperspec/function/f_cell_e.htm
+Function cerror	~/dotfiles/dict/hyperspec/function/f_cerror.htm
+Function char-code	~/dotfiles/dict/hyperspec/function/f_char_c.htm
+Function char-int	~/dotfiles/dict/hyperspec/function/f_char_i.htm
+Function char-name	~/dotfiles/dict/hyperspec/function/f_char_n.htm
+Function char-upcase, char-downcase	~/dotfiles/dict/hyperspec/function/f_char_u.htm
+Function char=, char/=, char<, char>...	~/dotfiles/dict/hyperspec/function/f_chareq.htm
+Function character	~/dotfiles/dict/hyperspec/function/f_ch.htm
+Function characterp	~/dotfiles/dict/hyperspec/function/f_chp.htm
+Function cis	~/dotfiles/dict/hyperspec/function/f_cis.htm
+Function class-of	~/dotfiles/dict/hyperspec/function/f_clas_1.htm
+Function clear-input	~/dotfiles/dict/hyperspec/function/f_clear_.htm
+Function close	~/dotfiles/dict/hyperspec/function/f_close.htm
+Function clrhash	~/dotfiles/dict/hyperspec/function/f_clrhas.htm
+Function code-char	~/dotfiles/dict/hyperspec/function/f_code_c.htm
+Function coerce	~/dotfiles/dict/hyperspec/function/f_coerce.htm
+Function compile	~/dotfiles/dict/hyperspec/function/f_cmp.htm
+Function compile-file	~/dotfiles/dict/hyperspec/function/f_cmp_fi.htm
+Function compile-file-pathname	~/dotfiles/dict/hyperspec/function/f_cmp__1.htm
+Function compiled-function-p	~/dotfiles/dict/hyperspec/function/f_cmpd_f.htm
+Function complement	~/dotfiles/dict/hyperspec/function/f_comple.htm
+Function complex	~/dotfiles/dict/hyperspec/function/f_comp_2.htm
+Function complexp	~/dotfiles/dict/hyperspec/function/f_comp_3.htm
+Function compute-restarts	~/dotfiles/dict/hyperspec/function/f_comp_1.htm
+Function concatenate	~/dotfiles/dict/hyperspec/function/f_concat.htm
+Function concatenated-stream-streams	~/dotfiles/dict/hyperspec/function/f_conc_1.htm
+Function conjugate	~/dotfiles/dict/hyperspec/function/f_conjug.htm
+Function cons	~/dotfiles/dict/hyperspec/function/f_cons.htm
+Function consp	~/dotfiles/dict/hyperspec/function/f_consp.htm
+Function constantly	~/dotfiles/dict/hyperspec/function/f_cons_1.htm
+Function constantp	~/dotfiles/dict/hyperspec/function/f_consta.htm
+Function copy-alist	~/dotfiles/dict/hyperspec/function/f_cp_ali.htm
+Function copy-list	~/dotfiles/dict/hyperspec/function/f_cp_lis.htm
+Function copy-pprint-dispatch	~/dotfiles/dict/hyperspec/function/f_cp_ppr.htm
+Function copy-readtable	~/dotfiles/dict/hyperspec/function/f_cp_rdt.htm
+Function copy-seq	~/dotfiles/dict/hyperspec/function/f_cp_seq.htm
+Function copy-structure	~/dotfiles/dict/hyperspec/function/f_cp_stu.htm
+Function copy-symbol	~/dotfiles/dict/hyperspec/function/f_cp_sym.htm
+Function copy-tree	~/dotfiles/dict/hyperspec/function/f_cp_tre.htm
+Function count, count-if, count-if-not	~/dotfiles/dict/hyperspec/function/f_countc.htm
+Function decode-float, scale-float...	~/dotfiles/dict/hyperspec/function/f_dec_fl.htm
+Function decode-universal-time	~/dotfiles/dict/hyperspec/function/f_dec_un.htm
+Function delete-file	~/dotfiles/dict/hyperspec/function/f_del_fi.htm
+Function delete-package	~/dotfiles/dict/hyperspec/function/f_del_pk.htm
+Function deposit-field	~/dotfiles/dict/hyperspec/function/f_deposi.htm
+Function describe	~/dotfiles/dict/hyperspec/function/f_descri.htm
+Function digit-char	~/dotfiles/dict/hyperspec/function/f_digit_.htm
+Function digit-char-p	~/dotfiles/dict/hyperspec/function/f_digi_1.htm
+Function directory	~/dotfiles/dict/hyperspec/function/f_dir.htm
+Function disassemble	~/dotfiles/dict/hyperspec/function/f_disass.htm
+Function dpb	~/dotfiles/dict/hyperspec/function/f_dpb.htm
+Function dribble	~/dotfiles/dict/hyperspec/function/f_dribbl.htm
+Function echo-stream-input-stream...	~/dotfiles/dict/hyperspec/function/f_echo_s.htm
+Function ed	~/dotfiles/dict/hyperspec/function/f_ed.htm
+Function encode-universal-time	~/dotfiles/dict/hyperspec/function/f_encode.htm
+Function endp	~/dotfiles/dict/hyperspec/function/f_endp.htm
+Function ensure-directories-exist	~/dotfiles/dict/hyperspec/function/f_ensu_1.htm
+Function ensure-generic-function	~/dotfiles/dict/hyperspec/function/f_ensure.htm
+Function eq	~/dotfiles/dict/hyperspec/function/f_eq.htm
+Function eql	~/dotfiles/dict/hyperspec/function/f_eql.htm
+Function equal	~/dotfiles/dict/hyperspec/function/f_equal.htm
+Function equalp	~/dotfiles/dict/hyperspec/function/f_equalp.htm
+Function error	~/dotfiles/dict/hyperspec/function/f_error.htm
+Function eval	~/dotfiles/dict/hyperspec/function/f_eval.htm
+Function evenp, oddp	~/dotfiles/dict/hyperspec/function/f_evenpc.htm
+Function every, some, notevery, notany	~/dotfiles/dict/hyperspec/function/f_everyc.htm
+Function exp, expt	~/dotfiles/dict/hyperspec/function/f_exp_e.htm
+Function export	~/dotfiles/dict/hyperspec/function/f_export.htm
+Function fboundp	~/dotfiles/dict/hyperspec/function/f_fbound.htm
+Function file-author	~/dotfiles/dict/hyperspec/function/f_file_a.htm
+Function file-error-pathname	~/dotfiles/dict/hyperspec/function/f_file_e.htm
+Function file-length	~/dotfiles/dict/hyperspec/function/f_file_l.htm
+Function file-position	~/dotfiles/dict/hyperspec/function/f_file_p.htm
+Function file-string-length	~/dotfiles/dict/hyperspec/function/f_file_s.htm
+Function file-write-date	~/dotfiles/dict/hyperspec/function/f_file_w.htm
+Function fill	~/dotfiles/dict/hyperspec/function/f_fill.htm
+Function find, find-if, find-if-not	~/dotfiles/dict/hyperspec/function/f_find_.htm
+Function find-all-symbols	~/dotfiles/dict/hyperspec/function/f_find_a.htm
+Function find-package	~/dotfiles/dict/hyperspec/function/f_find_p.htm
+Function find-restart	~/dotfiles/dict/hyperspec/function/f_find_r.htm
+Function find-symbol	~/dotfiles/dict/hyperspec/function/f_find_s.htm
+Function finish-output, force-output...	~/dotfiles/dict/hyperspec/function/f_finish.htm
+Function float	~/dotfiles/dict/hyperspec/function/f_float.htm
+Function floatp	~/dotfiles/dict/hyperspec/function/f_floatp.htm
+Function floor, ffloor, ceiling, fceiling...	~/dotfiles/dict/hyperspec/function/f_floorc.htm
+Function fmakunbound	~/dotfiles/dict/hyperspec/function/f_fmakun.htm
+Function format	~/dotfiles/dict/hyperspec/function/f_format.htm
+Function funcall	~/dotfiles/dict/hyperspec/function/f_funcal.htm
+Function function-lambda-expression	~/dotfiles/dict/hyperspec/function/f_fn_lam.htm
+Function functionp	~/dotfiles/dict/hyperspec/function/f_fnp.htm
+Function gcd	~/dotfiles/dict/hyperspec/function/f_gcd.htm
+Function gensym	~/dotfiles/dict/hyperspec/function/f_gensym.htm
+Function gentemp	~/dotfiles/dict/hyperspec/function/f_gentem.htm
+Function get-internal-real-time	~/dotfiles/dict/hyperspec/function/f_get_in.htm
+Function get-internal-run-time	~/dotfiles/dict/hyperspec/function/f_get__1.htm
+Function get-output-stream-string	~/dotfiles/dict/hyperspec/function/f_get_ou.htm
+Function get-properties	~/dotfiles/dict/hyperspec/function/f_get_pr.htm
+Function get-setf-expansion	~/dotfiles/dict/hyperspec/function/f_get_se.htm
+Function get-universal-time, get-decoded-time	~/dotfiles/dict/hyperspec/function/f_get_un.htm
+Function graphic-char-p	~/dotfiles/dict/hyperspec/function/f_graphi.htm
+Function hash-table-count	~/dotfiles/dict/hyperspec/function/f_hash_1.htm
+Function hash-table-p	~/dotfiles/dict/hyperspec/function/f_hash_t.htm
+Function hash-table-rehash-size	~/dotfiles/dict/hyperspec/function/f_hash_2.htm
+Function hash-table-rehash-threshold	~/dotfiles/dict/hyperspec/function/f_hash_3.htm
+Function hash-table-size	~/dotfiles/dict/hyperspec/function/f_hash_4.htm
+Function hash-table-test	~/dotfiles/dict/hyperspec/function/f_hash_5.htm
+Function identity	~/dotfiles/dict/hyperspec/function/f_identi.htm
+Function import	~/dotfiles/dict/hyperspec/function/f_import.htm
+Function input-stream-p, output-stream-p	~/dotfiles/dict/hyperspec/function/f_in_stm.htm
+Function inspect	~/dotfiles/dict/hyperspec/function/f_inspec.htm
+Function integer-length	~/dotfiles/dict/hyperspec/function/f_intege.htm
+Function integerp	~/dotfiles/dict/hyperspec/function/f_inte_1.htm
+Function interactive-stream-p	~/dotfiles/dict/hyperspec/function/f_intera.htm
+Function intern	~/dotfiles/dict/hyperspec/function/f_intern.htm
+Function intersection, nintersection	~/dotfiles/dict/hyperspec/function/f_isec_.htm
+Function invalid-method-error	~/dotfiles/dict/hyperspec/function/f_invali.htm
+Function invoke-debugger	~/dotfiles/dict/hyperspec/function/f_invoke.htm
+Function invoke-restart	~/dotfiles/dict/hyperspec/function/f_invo_1.htm
+Function invoke-restart-interactively	~/dotfiles/dict/hyperspec/function/f_invo_2.htm
+Function keywordp	~/dotfiles/dict/hyperspec/function/f_kwdp.htm
+Function last	~/dotfiles/dict/hyperspec/function/f_last.htm
+Function lcm	~/dotfiles/dict/hyperspec/function/f_lcm.htm
+Function ldb-test	~/dotfiles/dict/hyperspec/function/f_ldb_te.htm
+Function ldiff, tailp	~/dotfiles/dict/hyperspec/function/f_ldiffc.htm
+Function length	~/dotfiles/dict/hyperspec/function/f_length.htm
+Function lisp-implementation-type...	~/dotfiles/dict/hyperspec/function/f_lisp_i.htm
+Function list, list*	~/dotfiles/dict/hyperspec/function/f_list_.htm
+Function list-all-packages	~/dotfiles/dict/hyperspec/function/f_list_a.htm
+Function list-length	~/dotfiles/dict/hyperspec/function/f_list_l.htm
+Function listen	~/dotfiles/dict/hyperspec/function/f_listen.htm
+Function listp	~/dotfiles/dict/hyperspec/function/f_listp.htm
+Function load	~/dotfiles/dict/hyperspec/function/f_load.htm
+Function load-logical-pathname-translations	~/dotfiles/dict/hyperspec/function/f_ld_log.htm
+Function log	~/dotfiles/dict/hyperspec/function/f_log.htm
+Function logand, logandc1, logandc2...	~/dotfiles/dict/hyperspec/function/f_logand.htm
+Function logbitp	~/dotfiles/dict/hyperspec/function/f_logbtp.htm
+Function logcount	~/dotfiles/dict/hyperspec/function/f_logcou.htm
+Function logical-pathname	~/dotfiles/dict/hyperspec/function/f_logi_1.htm
+Function logtest	~/dotfiles/dict/hyperspec/function/f_logtes.htm
+Function machine-instance	~/dotfiles/dict/hyperspec/function/f_mach_i.htm
+Function machine-type	~/dotfiles/dict/hyperspec/function/f_mach_t.htm
+Function machine-version	~/dotfiles/dict/hyperspec/function/f_mach_v.htm
+Function macroexpand, macroexpand-1	~/dotfiles/dict/hyperspec/function/f_mexp_.htm
+Function make-array	~/dotfiles/dict/hyperspec/function/f_mk_ar.htm
+Function make-broadcast-stream	~/dotfiles/dict/hyperspec/function/f_mk_bro.htm
+Function make-concatenated-stream	~/dotfiles/dict/hyperspec/function/f_mk_con.htm
+Function make-condition	~/dotfiles/dict/hyperspec/function/f_mk_cnd.htm
+Function make-dispatch-macro-character	~/dotfiles/dict/hyperspec/function/f_mk_dis.htm
+Function make-echo-stream	~/dotfiles/dict/hyperspec/function/f_mk_ech.htm
+Function make-hash-table	~/dotfiles/dict/hyperspec/function/f_mk_has.htm
+Function make-list	~/dotfiles/dict/hyperspec/function/f_mk_lis.htm
+Function make-load-form-saving-slots	~/dotfiles/dict/hyperspec/function/f_mk_l_1.htm
+Function make-package	~/dotfiles/dict/hyperspec/function/f_mk_pkg.htm
+Function make-pathname	~/dotfiles/dict/hyperspec/function/f_mk_pn.htm
+Function make-random-state	~/dotfiles/dict/hyperspec/function/f_mk_rnd.htm
+Function make-sequence	~/dotfiles/dict/hyperspec/function/f_mk_seq.htm
+Function make-string	~/dotfiles/dict/hyperspec/function/f_mk_stg.htm
+Function make-string-input-stream	~/dotfiles/dict/hyperspec/function/f_mk_s_1.htm
+Function make-string-output-stream	~/dotfiles/dict/hyperspec/function/f_mk_s_2.htm
+Function make-symbol	~/dotfiles/dict/hyperspec/function/f_mk_sym.htm
+Function make-synonym-stream	~/dotfiles/dict/hyperspec/function/f_mk_syn.htm
+Function make-two-way-stream	~/dotfiles/dict/hyperspec/function/f_mk_two.htm
+Function makunbound	~/dotfiles/dict/hyperspec/function/f_makunb.htm
+Function map	~/dotfiles/dict/hyperspec/function/f_map.htm
+Function map-into	~/dotfiles/dict/hyperspec/function/f_map_in.htm
+Function mapc, mapcar, mapcan, mapl...	~/dotfiles/dict/hyperspec/function/f_mapc_.htm
+Function maphash	~/dotfiles/dict/hyperspec/function/f_maphas.htm
+Function max, min	~/dotfiles/dict/hyperspec/function/f_max_m.htm
+Function member, member-if, member-if-not	~/dotfiles/dict/hyperspec/function/f_mem_m.htm
+Function merge	~/dotfiles/dict/hyperspec/function/f_merge.htm
+Function merge-pathnames	~/dotfiles/dict/hyperspec/function/f_merge_.htm
+Function method-combination-error	~/dotfiles/dict/hyperspec/function/f_meth_1.htm
+Function minusp, plusp	~/dotfiles/dict/hyperspec/function/f_minusp.htm
+Function mismatch	~/dotfiles/dict/hyperspec/function/f_mismat.htm
+Function mod, rem	~/dotfiles/dict/hyperspec/function/f_mod_r.htm
+Function name-char	~/dotfiles/dict/hyperspec/function/f_name_c.htm
+Function namestring, file-namestring...	~/dotfiles/dict/hyperspec/function/f_namest.htm
+Function nconc	~/dotfiles/dict/hyperspec/function/f_nconc.htm
+Function not	~/dotfiles/dict/hyperspec/function/f_not.htm
+Function nthcdr	~/dotfiles/dict/hyperspec/function/f_nthcdr.htm
+Function null	~/dotfiles/dict/hyperspec/function/f_null.htm
+Function numberp	~/dotfiles/dict/hyperspec/function/f_nump.htm
+Function numerator, denominator	~/dotfiles/dict/hyperspec/function/f_numera.htm
+Function open	~/dotfiles/dict/hyperspec/function/f_open.htm
+Function open-stream-p	~/dotfiles/dict/hyperspec/function/f_open_s.htm
+Function package-error-package	~/dotfiles/dict/hyperspec/function/f_pkg_er.htm
+Function package-name	~/dotfiles/dict/hyperspec/function/f_pkg_na.htm
+Function package-nicknames	~/dotfiles/dict/hyperspec/function/f_pkg_ni.htm
+Function package-shadowing-symbols	~/dotfiles/dict/hyperspec/function/f_pkg_sh.htm
+Function package-use-list	~/dotfiles/dict/hyperspec/function/f_pkg_us.htm
+Function package-used-by-list	~/dotfiles/dict/hyperspec/function/f_pkg__1.htm
+Function packagep	~/dotfiles/dict/hyperspec/function/f_pkgp.htm
+Function pairlis	~/dotfiles/dict/hyperspec/function/f_pairli.htm
+Function parse-integer	~/dotfiles/dict/hyperspec/function/f_parse_.htm
+Function parse-namestring	~/dotfiles/dict/hyperspec/function/f_pars_1.htm
+Function pathname	~/dotfiles/dict/hyperspec/function/f_pn.htm
+Function pathname-host, pathname-device...	~/dotfiles/dict/hyperspec/function/f_pn_hos.htm
+Function pathname-match-p	~/dotfiles/dict/hyperspec/function/f_pn_mat.htm
+Function pathnamep	~/dotfiles/dict/hyperspec/function/f_pnp.htm
+Function peek-char	~/dotfiles/dict/hyperspec/function/f_peek_c.htm
+Function phase	~/dotfiles/dict/hyperspec/function/f_phase.htm
+Function position, position-if, position-if-not	~/dotfiles/dict/hyperspec/function/f_pos_p.htm
+Function pprint-dispatch	~/dotfiles/dict/hyperspec/function/f_ppr_di.htm
+Function pprint-fill, pprint-linear...	~/dotfiles/dict/hyperspec/function/f_ppr_fi.htm
+Function pprint-indent	~/dotfiles/dict/hyperspec/function/f_ppr_in.htm
+Function pprint-newline	~/dotfiles/dict/hyperspec/function/f_ppr_nl.htm
+Function pprint-tab	~/dotfiles/dict/hyperspec/function/f_ppr_ta.htm
+Function print-not-readable-object	~/dotfiles/dict/hyperspec/function/f_pr_not.htm
+Function probe-file	~/dotfiles/dict/hyperspec/function/f_probe_.htm
+Function proclaim	~/dotfiles/dict/hyperspec/function/f_procla.htm
+Function provide, require	~/dotfiles/dict/hyperspec/function/f_provid.htm
+Function random	~/dotfiles/dict/hyperspec/function/f_random.htm
+Function random-state-p	~/dotfiles/dict/hyperspec/function/f_rnd_st.htm
+Function rassoc, rassoc-if, rassoc-if-not	~/dotfiles/dict/hyperspec/function/f_rassoc.htm
+Function rational, rationalize	~/dotfiles/dict/hyperspec/function/f_ration.htm
+Function rationalp	~/dotfiles/dict/hyperspec/function/f_rati_1.htm
+Function read, read-preserving-whitespace	~/dotfiles/dict/hyperspec/function/f_rd_rd.htm
+Function read-byte	~/dotfiles/dict/hyperspec/function/f_rd_by.htm
+Function read-char	~/dotfiles/dict/hyperspec/function/f_rd_cha.htm
+Function read-char-no-hang	~/dotfiles/dict/hyperspec/function/f_rd_c_1.htm
+Function read-delimited-list	~/dotfiles/dict/hyperspec/function/f_rd_del.htm
+Function read-from-string	~/dotfiles/dict/hyperspec/function/f_rd_fro.htm
+Function read-line	~/dotfiles/dict/hyperspec/function/f_rd_lin.htm
+Function read-sequence	~/dotfiles/dict/hyperspec/function/f_rd_seq.htm
+Function readtablep	~/dotfiles/dict/hyperspec/function/f_rdta_1.htm
+Function realp	~/dotfiles/dict/hyperspec/function/f_realp.htm
+Function realpart, imagpart	~/dotfiles/dict/hyperspec/function/f_realpa.htm
+Function reduce	~/dotfiles/dict/hyperspec/function/f_reduce.htm
+Function remhash	~/dotfiles/dict/hyperspec/function/f_remhas.htm
+Function remove, remove-if, remove-if-not...	~/dotfiles/dict/hyperspec/function/f_rm_rm.htm
+Function remove-duplicates, delete-duplicates	~/dotfiles/dict/hyperspec/function/f_rm_dup.htm
+Function remprop	~/dotfiles/dict/hyperspec/function/f_rempro.htm
+Function rename-file	~/dotfiles/dict/hyperspec/function/f_rn_fil.htm
+Function rename-package	~/dotfiles/dict/hyperspec/function/f_rn_pkg.htm
+Function replace	~/dotfiles/dict/hyperspec/function/f_replac.htm
+Function restart-name	~/dotfiles/dict/hyperspec/function/f_rst_na.htm
+Function revappend, nreconc	~/dotfiles/dict/hyperspec/function/f_revapp.htm
+Function reverse, nreverse	~/dotfiles/dict/hyperspec/function/f_revers.htm
+Function room	~/dotfiles/dict/hyperspec/function/f_room.htm
+Function rplaca, rplacd	~/dotfiles/dict/hyperspec/function/f_rplaca.htm
+Function search	~/dotfiles/dict/hyperspec/function/f_search.htm
+Function set	~/dotfiles/dict/hyperspec/function/f_set.htm
+Function set-difference, nset-difference	~/dotfiles/dict/hyperspec/function/f_set_di.htm
+Function set-dispatch-macro-character...	~/dotfiles/dict/hyperspec/function/f_set__1.htm
+Function set-exclusive-or, nset-exclusive-or	~/dotfiles/dict/hyperspec/function/f_set_ex.htm
+Function set-macro-character, get-macro-character	~/dotfiles/dict/hyperspec/function/f_set_ma.htm
+Function set-pprint-dispatch	~/dotfiles/dict/hyperspec/function/f_set_pp.htm
+Function set-syntax-from-char	~/dotfiles/dict/hyperspec/function/f_set_sy.htm
+Function shadow	~/dotfiles/dict/hyperspec/function/f_shadow.htm
+Function shadowing-import	~/dotfiles/dict/hyperspec/function/f_shdw_i.htm
+Function short-site-name, long-site-name	~/dotfiles/dict/hyperspec/function/f_short_.htm
+Function signal	~/dotfiles/dict/hyperspec/function/f_signal.htm
+Function signum	~/dotfiles/dict/hyperspec/function/f_signum.htm
+Function simple-bit-vector-p	~/dotfiles/dict/hyperspec/function/f_smp_bt.htm
+Function simple-condition-format-control...	~/dotfiles/dict/hyperspec/function/f_smp_cn.htm
+Function simple-string-p	~/dotfiles/dict/hyperspec/function/f_smp_st.htm
+Function simple-vector-p	~/dotfiles/dict/hyperspec/function/f_smp_ve.htm
+Function sin, cos, tan	~/dotfiles/dict/hyperspec/function/f_sin_c.htm
+Function sinh, cosh, tanh, asinh...	~/dotfiles/dict/hyperspec/function/f_sinh_.htm
+Function sleep	~/dotfiles/dict/hyperspec/function/f_sleep.htm
+Function slot-boundp	~/dotfiles/dict/hyperspec/function/f_slt_bo.htm
+Function slot-exists-p	~/dotfiles/dict/hyperspec/function/f_slt_ex.htm
+Function slot-makunbound	~/dotfiles/dict/hyperspec/function/f_slt_ma.htm
+Function slot-value	~/dotfiles/dict/hyperspec/function/f_slt_va.htm
+Function software-type, software-version	~/dotfiles/dict/hyperspec/function/f_sw_tpc.htm
+Function sort, stable-sort	~/dotfiles/dict/hyperspec/function/f_sort_.htm
+Function special-operator-p	~/dotfiles/dict/hyperspec/function/f_specia.htm
+Function sqrt, isqrt	~/dotfiles/dict/hyperspec/function/f_sqrt_.htm
+Function standard-char-p	~/dotfiles/dict/hyperspec/function/f_std_ch.htm
+Function stream-element-type	~/dotfiles/dict/hyperspec/function/f_stm_el.htm
+Function stream-error-stream	~/dotfiles/dict/hyperspec/function/f_stm_er.htm
+Function stream-external-format	~/dotfiles/dict/hyperspec/function/f_stm_ex.htm
+Function streamp	~/dotfiles/dict/hyperspec/function/f_stmp.htm
+Function string	~/dotfiles/dict/hyperspec/function/f_string.htm
+Function string-trim, string-left-trim...	~/dotfiles/dict/hyperspec/function/f_stg_tr.htm
+Function string-upcase, string-downcase...	~/dotfiles/dict/hyperspec/function/f_stg_up.htm
+Function string=, string/=, string>...	~/dotfiles/dict/hyperspec/function/f_stgeq_.htm
+Function stringp	~/dotfiles/dict/hyperspec/function/f_stgp.htm
+Function sublis, nsublis	~/dotfiles/dict/hyperspec/function/f_sublis.htm
+Function subsetp	~/dotfiles/dict/hyperspec/function/f_subset.htm
+Function subst, subst-if, subst-if-not...	~/dotfiles/dict/hyperspec/function/f_substc.htm
+Function substitute, substitute-if...	~/dotfiles/dict/hyperspec/function/f_sbs_s.htm
+Function subtypep	~/dotfiles/dict/hyperspec/function/f_subtpp.htm
+Function sxhash	~/dotfiles/dict/hyperspec/function/f_sxhash.htm
+Function symbol-name	~/dotfiles/dict/hyperspec/function/f_symb_2.htm
+Function symbol-package	~/dotfiles/dict/hyperspec/function/f_symb_3.htm
+Function symbolp	~/dotfiles/dict/hyperspec/function/f_symbol.htm
+Function synonym-stream-symbol	~/dotfiles/dict/hyperspec/function/f_syn_st.htm
+Function terpri, fresh-line	~/dotfiles/dict/hyperspec/function/f_terpri.htm
+Function translate-logical-pathname	~/dotfiles/dict/hyperspec/function/f_tr_log.htm
+Function translate-pathname	~/dotfiles/dict/hyperspec/function/f_tr_pn.htm
+Function tree-equal	~/dotfiles/dict/hyperspec/function/f_tree_e.htm
+Function truename	~/dotfiles/dict/hyperspec/function/f_tn.htm
+Function two-way-stream-input-stream...	~/dotfiles/dict/hyperspec/function/f_two_wa.htm
+Function type-error-datum, type-error-expected-type	~/dotfiles/dict/hyperspec/function/f_tp_err.htm
+Function type-of	~/dotfiles/dict/hyperspec/function/f_tp_of.htm
+Function typep	~/dotfiles/dict/hyperspec/function/f_typep.htm
+Function unbound-slot-instance	~/dotfiles/dict/hyperspec/function/f_unboun.htm
+Function unexport	~/dotfiles/dict/hyperspec/function/f_unexpo.htm
+Function unintern	~/dotfiles/dict/hyperspec/function/f_uninte.htm
+Function union, nunion	~/dotfiles/dict/hyperspec/function/f_unionc.htm
+Function unread-char	~/dotfiles/dict/hyperspec/function/f_unrd_c.htm
+Function unuse-package	~/dotfiles/dict/hyperspec/function/f_unuse_.htm
+Function upgraded-array-element-type	~/dotfiles/dict/hyperspec/function/f_upgr_1.htm
+Function upgraded-complex-part-type	~/dotfiles/dict/hyperspec/function/f_upgrad.htm
+Function upper-case-p, lower-case-p...	~/dotfiles/dict/hyperspec/function/f_upper_.htm
+Function use-package	~/dotfiles/dict/hyperspec/function/f_use_pk.htm
+Function user-homedir-pathname	~/dotfiles/dict/hyperspec/function/f_user_h.htm
+Function values-list	~/dotfiles/dict/hyperspec/function/f_vals_l.htm
+Function vector	~/dotfiles/dict/hyperspec/function/f_vector.htm
+Function vector-pop	~/dotfiles/dict/hyperspec/function/f_vec_po.htm
+Function vector-push, vector-push-extend	~/dotfiles/dict/hyperspec/function/f_vec_ps.htm
+Function vectorp	~/dotfiles/dict/hyperspec/function/f_vecp.htm
+Function warn	~/dotfiles/dict/hyperspec/function/f_warn.htm
+Function wild-pathname-p	~/dotfiles/dict/hyperspec/function/f_wild_p.htm
+Function write, prin1, print, pprint...	~/dotfiles/dict/hyperspec/function/f_wr_pr.htm
+Function write-byte	~/dotfiles/dict/hyperspec/function/f_wr_by.htm
+Function write-char	~/dotfiles/dict/hyperspec/function/f_wr_cha.htm
+Function write-sequence	~/dotfiles/dict/hyperspec/function/f_wr_seq.htm
+Function write-string, write-line	~/dotfiles/dict/hyperspec/function/f_wr_stg.htm
+Function write-to-string, prin1-to-string...	~/dotfiles/dict/hyperspec/function/f_wr_to_.htm
+Function y-or-n-p, yes-or-no-p	~/dotfiles/dict/hyperspec/function/f_y_or_n.htm
+Function zerop	~/dotfiles/dict/hyperspec/function/f_zerop.htm
+Local function call-next-method	~/dotfiles/dict/hyperspec/function/f_call_n.htm
+Local function next-method-p	~/dotfiles/dict/hyperspec/function/f_next_m.htm
+Local macro call-method, make-method	~/dotfiles/dict/hyperspec/macro/m_call_m.htm
+Local macro loop-finish	~/dotfiles/dict/hyperspec/macro/m_loop_f.htm
+Local macro pprint-exit-if-list-exhausted	~/dotfiles/dict/hyperspec/macro/m_ppr_ex.htm
+Local macro pprint-pop	~/dotfiles/dict/hyperspec/macro/m_ppr_po.htm
+Macro and	~/dotfiles/dict/hyperspec/macro/m_and.htm
+Macro assert	~/dotfiles/dict/hyperspec/macro/m_assert.htm
+Macro case, ccase, ecase	~/dotfiles/dict/hyperspec/macro/m_case_.htm
+Macro check-type	~/dotfiles/dict/hyperspec/macro/m_check_.htm
+Macro cond	~/dotfiles/dict/hyperspec/macro/m_cond.htm
+Macro declaim	~/dotfiles/dict/hyperspec/macro/m_declai.htm
+Macro defclass	~/dotfiles/dict/hyperspec/macro/m_defcla.htm
+Macro defconstant	~/dotfiles/dict/hyperspec/macro/m_defcon.htm
+Macro defgeneric	~/dotfiles/dict/hyperspec/macro/m_defgen.htm
+Macro define-compiler-macro	~/dotfiles/dict/hyperspec/macro/m_define.htm
+Macro define-condition	~/dotfiles/dict/hyperspec/macro/m_defi_5.htm
+Macro define-method-combination	~/dotfiles/dict/hyperspec/macro/m_defi_4.htm
+Macro define-modify-macro	~/dotfiles/dict/hyperspec/macro/m_defi_2.htm
+Macro define-setf-expander	~/dotfiles/dict/hyperspec/macro/m_defi_3.htm
+Macro define-symbol-macro	~/dotfiles/dict/hyperspec/macro/m_defi_1.htm
+Macro defmacro	~/dotfiles/dict/hyperspec/macro/m_defmac.htm
+Macro defmethod	~/dotfiles/dict/hyperspec/macro/m_defmet.htm
+Macro defpackage	~/dotfiles/dict/hyperspec/macro/m_defpkg.htm
+Macro defparameter, defvar	~/dotfiles/dict/hyperspec/macro/m_defpar.htm
+Macro defsetf	~/dotfiles/dict/hyperspec/macro/m_defset.htm
+Macro defstruct	~/dotfiles/dict/hyperspec/macro/m_defstr.htm
+Macro deftype	~/dotfiles/dict/hyperspec/macro/m_deftp.htm
+Macro defun	~/dotfiles/dict/hyperspec/macro/m_defun.htm
+Macro destructuring-bind	~/dotfiles/dict/hyperspec/macro/m_destru.htm
+Macro do, do*	~/dotfiles/dict/hyperspec/macro/m_do_do.htm
+Macro do-symbols, do-external-symbols...	~/dotfiles/dict/hyperspec/macro/m_do_sym.htm
+Macro dolist	~/dotfiles/dict/hyperspec/macro/m_dolist.htm
+Macro dotimes	~/dotfiles/dict/hyperspec/macro/m_dotime.htm
+Macro formatter	~/dotfiles/dict/hyperspec/macro/m_format.htm
+Macro handler-bind	~/dotfiles/dict/hyperspec/macro/m_handle.htm
+Macro handler-case	~/dotfiles/dict/hyperspec/macro/m_hand_1.htm
+Macro ignore-errors	~/dotfiles/dict/hyperspec/macro/m_ignore.htm
+Macro in-package	~/dotfiles/dict/hyperspec/macro/m_in_pkg.htm
+Macro incf, decf	~/dotfiles/dict/hyperspec/macro/m_incf_.htm
+Macro lambda	~/dotfiles/dict/hyperspec/macro/m_lambda.htm
+Macro loop	~/dotfiles/dict/hyperspec/macro/m_loop.htm
+Macro multiple-value-bind	~/dotfiles/dict/hyperspec/macro/m_multip.htm
+Macro multiple-value-list	~/dotfiles/dict/hyperspec/macro/m_mult_1.htm
+Macro multiple-value-setq	~/dotfiles/dict/hyperspec/macro/m_mult_2.htm
+Macro nth-value	~/dotfiles/dict/hyperspec/macro/m_nth_va.htm
+Macro or	~/dotfiles/dict/hyperspec/macro/m_or.htm
+Macro pop	~/dotfiles/dict/hyperspec/macro/m_pop.htm
+Macro pprint-logical-block	~/dotfiles/dict/hyperspec/macro/m_ppr_lo.htm
+Macro print-unreadable-object	~/dotfiles/dict/hyperspec/macro/m_pr_unr.htm
+Macro prog, prog*	~/dotfiles/dict/hyperspec/macro/m_prog_.htm
+Macro prog1, prog2	~/dotfiles/dict/hyperspec/macro/m_prog1c.htm
+Macro psetq	~/dotfiles/dict/hyperspec/macro/m_psetq.htm
+Macro push	~/dotfiles/dict/hyperspec/macro/m_push.htm
+Macro pushnew	~/dotfiles/dict/hyperspec/macro/m_pshnew.htm
+Macro remf	~/dotfiles/dict/hyperspec/macro/m_remf.htm
+Macro restart-bind	~/dotfiles/dict/hyperspec/macro/m_rst_bi.htm
+Macro restart-case	~/dotfiles/dict/hyperspec/macro/m_rst_ca.htm
+Macro return	~/dotfiles/dict/hyperspec/macro/m_return.htm
+Macro rotatef	~/dotfiles/dict/hyperspec/macro/m_rotate.htm
+Macro setf, psetf	~/dotfiles/dict/hyperspec/macro/m_setf_.htm
+Macro shiftf	~/dotfiles/dict/hyperspec/macro/m_shiftf.htm
+Macro step	~/dotfiles/dict/hyperspec/macro/m_step.htm
+Macro time	~/dotfiles/dict/hyperspec/macro/m_time.htm
+Macro trace, untrace	~/dotfiles/dict/hyperspec/macro/m_tracec.htm
+Macro typecase, ctypecase, etypecase	~/dotfiles/dict/hyperspec/macro/m_tpcase.htm
+Macro when, unless	~/dotfiles/dict/hyperspec/macro/m_when_.htm
+Macro with-accessors	~/dotfiles/dict/hyperspec/macro/m_w_acce.htm
+Macro with-compilation-unit	~/dotfiles/dict/hyperspec/macro/m_w_comp.htm
+Macro with-condition-restarts	~/dotfiles/dict/hyperspec/macro/m_w_cnd_.htm
+Macro with-hash-table-iterator	~/dotfiles/dict/hyperspec/macro/m_w_hash.htm
+Macro with-input-from-string	~/dotfiles/dict/hyperspec/macro/m_w_in_f.htm
+Macro with-open-file	~/dotfiles/dict/hyperspec/macro/m_w_open.htm
+Macro with-open-stream	~/dotfiles/dict/hyperspec/macro/m_w_op_1.htm
+Macro with-output-to-string	~/dotfiles/dict/hyperspec/macro/m_w_out_.htm
+Macro with-package-iterator	~/dotfiles/dict/hyperspec/macro/m_w_pkg_.htm
+Macro with-simple-restart	~/dotfiles/dict/hyperspec/macro/m_w_smp_.htm
+Macro with-slots	~/dotfiles/dict/hyperspec/macro/m_w_slts.htm
+Macro with-standard-io-syntax	~/dotfiles/dict/hyperspec/macro/m_w_std_.htm
+Restart abort	~/dotfiles/dict/hyperspec/restart/r_abort.htm
+Restart continue	~/dotfiles/dict/hyperspec/restart/r_contin.htm
+Restart muffle-warning	~/dotfiles/dict/hyperspec/restart/r_muffle.htm
+Restart store-value	~/dotfiles/dict/hyperspec/restart/r_store_.htm
+Restart use-value	~/dotfiles/dict/hyperspec/restart/r_use_va.htm
+Special Form setq	~/dotfiles/dict/HyperSpec/special-operator/s_setq.htm
+Special Operator block	~/dotfiles/dict/hyperspec/special-operator/s_block.htm
+Special Operator catch	~/dotfiles/dict/hyperspec/special-operator/s_catch.htm
+Special Operator eval-when	~/dotfiles/dict/hyperspec/special-operator/s_eval_w.htm
+Special Operator flet, labels, macrolet	~/dotfiles/dict/hyperspec/special-operator/s_flet_.htm
+Special Operator function	~/dotfiles/dict/hyperspec/special-operator/s_fn.htm
+Special Operator go	~/dotfiles/dict/hyperspec/special-operator/s_go.htm
+Special Operator if	~/dotfiles/dict/hyperspec/special-operator/s_if.htm
+Special Operator let, let*	~/dotfiles/dict/hyperspec/special-operator/s_let_l.htm
+Special Operator load-time-value	~/dotfiles/dict/hyperspec/special-operator/s_ld_tim.htm
+Special Operator locally	~/dotfiles/dict/hyperspec/special-operator/s_locall.htm
+Special Operator multiple-value-call	~/dotfiles/dict/hyperspec/special-operator/s_multip.htm
+Special Operator multiple-value-prog1	~/dotfiles/dict/hyperspec/special-operator/s_mult_1.htm
+Special Operator progn	~/dotfiles/dict/hyperspec/special-operator/s_progn.htm
+Special Operator progv	~/dotfiles/dict/hyperspec/special-operator/s_progv.htm
+Special Operator quote	~/dotfiles/dict/hyperspec/special-operator/s_quote.htm
+Special Operator return-from	~/dotfiles/dict/hyperspec/special-operator/s_ret_fr.htm
+Special Operator symbol-macrolet	~/dotfiles/dict/hyperspec/special-operator/s_symbol.htm
+Special Operator tagbody	~/dotfiles/dict/hyperspec/special-operator/s_tagbod.htm
+Special Operator the	~/dotfiles/dict/hyperspec/special-operator/s_the.htm
+Special Operator throw	~/dotfiles/dict/hyperspec/special-operator/s_throw.htm
+Special Operator unwind-protect	~/dotfiles/dict/hyperspec/special-operator/s_unwind.htm
+Standard Generic Function (setf class-name)	~/dotfiles/dict/hyperspec/function/f_opsetf.htm
+Standard Generic Function add-method	~/dotfiles/dict/hyperspec/function/f_add_me.htm
+Standard Generic Function allocate-instance	~/dotfiles/dict/hyperspec/function/f_alloca.htm
+Standard Generic Function change-class	~/dotfiles/dict/hyperspec/function/f_chg_cl.htm
+Standard Generic Function class-name	~/dotfiles/dict/hyperspec/function/f_class_.htm
+Standard Generic Function compute-applicable-methods	~/dotfiles/dict/hyperspec/function/f_comput.htm
+Standard Generic Function describe-object	~/dotfiles/dict/hyperspec/function/f_desc_1.htm
+Standard Generic Function documentation...	~/dotfiles/dict/hyperspec/function/f_docume.htm
+Standard Generic Function find-method	~/dotfiles/dict/hyperspec/function/f_find_m.htm
+Standard Generic Function function-keywords	~/dotfiles/dict/hyperspec/function/f_fn_kwd.htm
+Standard Generic Function initialize-instance	~/dotfiles/dict/hyperspec/function/f_init_i.htm
+Standard Generic Function make-instance	~/dotfiles/dict/hyperspec/function/f_mk_ins.htm
+Standard Generic Function make-instances-obsolete	~/dotfiles/dict/hyperspec/function/f_mk_i_1.htm
+Standard Generic Function make-load-form	~/dotfiles/dict/hyperspec/function/f_mk_ld_.htm
+Standard Generic Function method-qualifiers	~/dotfiles/dict/hyperspec/function/f_method.htm
+Standard Generic Function no-applicable-method	~/dotfiles/dict/hyperspec/function/f_no_app.htm
+Standard Generic Function no-next-method	~/dotfiles/dict/hyperspec/function/f_no_nex.htm
+Standard Generic Function print-object	~/dotfiles/dict/hyperspec/function/f_pr_obj.htm
+Standard Generic Function reinitialize-instance	~/dotfiles/dict/hyperspec/function/f_reinit.htm
+Standard Generic Function remove-method	~/dotfiles/dict/hyperspec/function/f_rm_met.htm
+Standard Generic Function shared-initialize	~/dotfiles/dict/hyperspec/function/f_shared.htm
+Standard Generic Function slot-missing	~/dotfiles/dict/hyperspec/function/f_slt_mi.htm
+Standard Generic Function slot-unbound	~/dotfiles/dict/hyperspec/function/f_slt_un.htm
+Standard Generic Function update-instance-for-different-class	~/dotfiles/dict/hyperspec/function/f_update.htm
+Standard Generic Function update-instance-for-redefined-class	~/dotfiles/dict/hyperspec/function/f_upda_1.htm
+Symbol declare	~/dotfiles/dict/hyperspec/special-operator/s_declar.htm
+Symbol lambda	~/dotfiles/dict/hyperspec/special-operator/s_lambda.htm
 System Class TWO-WAY-STREAM	~/dotfiles/dict/HyperSpec/type/t_two_wa.htm
 System Class VECTOR	~/dotfiles/dict/HyperSpec/type/t_vector.htm
-Type ATOM	~/dotfiles/dict/HyperSpec/type/t_atom.htm
-Type BASE-CHAR	~/dotfiles/dict/HyperSpec/type/t_base_c.htm
-Type BASE-STRING	~/dotfiles/dict/HyperSpec/type/t_base_s.htm
-Type BIGNUM	~/dotfiles/dict/HyperSpec/type/t_bignum.htm
-Type BIT	~/dotfiles/dict/HyperSpec/type/t_bit.htm
-Type BOOLEAN	~/dotfiles/dict/HyperSpec/type/t_ban.htm
-Type COMPILED-FUNCTION	~/dotfiles/dict/HyperSpec/type/t_cmpd_f.htm
-Type EXTENDED-CHAR	~/dotfiles/dict/HyperSpec/type/t_extend.htm
-Type FIXNUM	~/dotfiles/dict/HyperSpec/type/t_fixnum.htm
-Type KEYWORD	~/dotfiles/dict/HyperSpec/type/t_kwd.htm
-Type NIL	~/dotfiles/dict/HyperSpec/type/t_nil.htm
-Type SHORT-FLOAT, SINGLE-FLOAT, DOUBLE-FLOAT...	~/dotfiles/dict/HyperSpec/type/t_short_.htm
-Type SIGNED-BYTE	~/dotfiles/dict/HyperSpec/type/t_sgn_by.htm
-Type SIMPLE-ARRAY	~/dotfiles/dict/HyperSpec/type/t_smp_ar.htm
-Type SIMPLE-BASE-STRING	~/dotfiles/dict/HyperSpec/type/t_smp_ba.htm
-Type SIMPLE-BIT-VECTOR	~/dotfiles/dict/HyperSpec/type/t_smp_bt.htm
-Type SIMPLE-STRING	~/dotfiles/dict/HyperSpec/type/t_smp_st.htm
-Type SIMPLE-VECTOR	~/dotfiles/dict/HyperSpec/type/t_smp_ve.htm
-Type STANDARD-CHAR	~/dotfiles/dict/HyperSpec/type/t_std_ch.htm
-Type Specifier AND	~/dotfiles/dict/HyperSpec/type/t_and.htm
-Type Specifier EQL	~/dotfiles/dict/HyperSpec/type/t_eql.htm
-Type Specifier MEMBER	~/dotfiles/dict/HyperSpec/type/t_member.htm
-Type Specifier MOD	~/dotfiles/dict/HyperSpec/type/t_mod.htm
-Type Specifier NOT	~/dotfiles/dict/HyperSpec/type/t_not.htm
-Type Specifier OR	~/dotfiles/dict/HyperSpec/type/t_or.htm
-Type Specifier SATISFIES	~/dotfiles/dict/HyperSpec/type/t_satisf.htm
-Type Specifier VALUES	~/dotfiles/dict/HyperSpec/type/t_values.htm
-Type UNSIGNED-BYTE	~/dotfiles/dict/HyperSpec/type/t_unsgn_.htm
-Variable *, **, ***	~/dotfiles/dict/HyperSpec/variable/v__stst_.htm
-Variable *BREAK-ON-SIGNALS*	~/dotfiles/dict/HyperSpec/variable/v_break_.htm
-Variable *COMPILE-FILE-PATHNAME*...	~/dotfiles/dict/HyperSpec/variable/v_cmp_fi.htm
-Variable *COMPILE-PRINT*, *COMPILE-VERBOSE*	~/dotfiles/dict/HyperSpec/variable/v_cmp_pr.htm
-Variable *DEBUG-IO*, *ERROR-OUTPUT*...	~/dotfiles/dict/HyperSpec/variable/v_debug_.htm
-Variable *DEBUGGER-HOOK*	~/dotfiles/dict/HyperSpec/variable/v_debugg.htm
-Variable *DEFAULT-PATHNAME-DEFAULTS*	~/dotfiles/dict/HyperSpec/variable/v_defaul.htm
-Variable *FEATURES*	~/dotfiles/dict/HyperSpec/variable/v_featur.htm
-Variable *GENSYM-COUNTER*	~/dotfiles/dict/HyperSpec/variable/v_gensym.htm
-Variable *LOAD-PATHNAME*, *LOAD-TRUENAME*	~/dotfiles/dict/HyperSpec/variable/v_ld_pns.htm
-Variable *LOAD-PRINT*, *LOAD-VERBOSE*	~/dotfiles/dict/HyperSpec/variable/v_ld_prs.htm
-Variable *MACROEXPAND-HOOK*	~/dotfiles/dict/HyperSpec/variable/v_mexp_h.htm
-Variable *MODULES*	~/dotfiles/dict/HyperSpec/variable/v_module.htm
-Variable *PACKAGE*	~/dotfiles/dict/HyperSpec/variable/v_pkg.htm
-Variable *PRINT-ARRAY*	~/dotfiles/dict/HyperSpec/variable/v_pr_ar.htm
-Variable *PRINT-BASE*, *PRINT-RADIX*	~/dotfiles/dict/HyperSpec/variable/v_pr_bas.htm
-Variable *PRINT-CASE*	~/dotfiles/dict/HyperSpec/variable/v_pr_cas.htm
-Variable *PRINT-CIRCLE*	~/dotfiles/dict/HyperSpec/variable/v_pr_cir.htm
-Variable *PRINT-ESCAPE*	~/dotfiles/dict/HyperSpec/variable/v_pr_esc.htm
-Variable *PRINT-GENSYM*	~/dotfiles/dict/HyperSpec/variable/v_pr_gen.htm
-Variable *PRINT-LEVEL*, *PRINT-LENGTH*	~/dotfiles/dict/HyperSpec/variable/v_pr_lev.htm
-Variable *PRINT-LINES*	~/dotfiles/dict/HyperSpec/variable/v_pr_lin.htm
-Variable *PRINT-MISER-WIDTH*	~/dotfiles/dict/HyperSpec/variable/v_pr_mis.htm
-Variable *PRINT-PPRINT-DISPATCH*	~/dotfiles/dict/HyperSpec/variable/v_pr_ppr.htm
-Variable *PRINT-PRETTY*	~/dotfiles/dict/HyperSpec/variable/v_pr_pre.htm
-Variable *PRINT-READABLY*	~/dotfiles/dict/HyperSpec/variable/v_pr_rda.htm
-Variable *PRINT-RIGHT-MARGIN*	~/dotfiles/dict/HyperSpec/variable/v_pr_rig.htm
-Variable *RANDOM-STATE*	~/dotfiles/dict/HyperSpec/variable/v_rnd_st.htm
-Variable *READ-BASE*	~/dotfiles/dict/HyperSpec/variable/v_rd_bas.htm
-Variable *READ-DEFAULT-FLOAT-FORMAT*	~/dotfiles/dict/HyperSpec/variable/v_rd_def.htm
-Variable *READ-EVAL*	~/dotfiles/dict/HyperSpec/variable/v_rd_eva.htm
-Variable *READ-SUPPRESS*	~/dotfiles/dict/HyperSpec/variable/v_rd_sup.htm
-Variable *READTABLE*	~/dotfiles/dict/HyperSpec/variable/v_rdtabl.htm
-Variable *TERMINAL-IO*	~/dotfiles/dict/HyperSpec/variable/v_termin.htm
-Variable +, ++, +++	~/dotfiles/dict/HyperSpec/variable/v_pl_plp.htm
-Variable -	~/dotfiles/dict/HyperSpec/variable/v__.htm
-Variable /, //, ///	~/dotfiles/dict/HyperSpec/variable/v_sl_sls.htm
-function ENCODE-UNIVERSAL-TIME	~/dotfiles/dict/HyperSpec/function/f_encode.htm
+System Class array	~/dotfiles/dict/hyperspec/type/t_array.htm
+System Class bit-vector	~/dotfiles/dict/hyperspec/type/t_bt_vec.htm
+System Class broadcast-stream	~/dotfiles/dict/hyperspec/type/t_broadc.htm
+System Class built-in-class	~/dotfiles/dict/hyperspec/type/t_built_.htm
+System Class character	~/dotfiles/dict/hyperspec/type/t_ch.htm
+System Class class	~/dotfiles/dict/hyperspec/type/t_class.htm
+System Class complex	~/dotfiles/dict/hyperspec/type/t_comple.htm
+System Class concatenated-stream	~/dotfiles/dict/hyperspec/type/t_concat.htm
+System Class cons	~/dotfiles/dict/hyperspec/type/t_cons.htm
+System Class echo-stream	~/dotfiles/dict/hyperspec/type/t_echo_s.htm
+System Class file-stream	~/dotfiles/dict/hyperspec/type/t_file_s.htm
+System Class float	~/dotfiles/dict/hyperspec/type/t_float.htm
+System Class function	~/dotfiles/dict/hyperspec/type/t_fn.htm
+System Class generic-function	~/dotfiles/dict/hyperspec/type/t_generi.htm
+System Class hash-table	~/dotfiles/dict/hyperspec/type/t_hash_t.htm
+System Class integer	~/dotfiles/dict/hyperspec/type/t_intege.htm
+System Class list	~/dotfiles/dict/hyperspec/type/t_list.htm
+System Class logical-pathname	~/dotfiles/dict/hyperspec/type/t_logica.htm
+System Class method	~/dotfiles/dict/hyperspec/type/t_method.htm
+System Class method-combination	~/dotfiles/dict/hyperspec/type/t_meth_1.htm
+System Class null	~/dotfiles/dict/hyperspec/type/t_null.htm
+System Class number	~/dotfiles/dict/hyperspec/type/t_number.htm
+System Class package	~/dotfiles/dict/hyperspec/type/t_pkg.htm
+System Class pathname	~/dotfiles/dict/hyperspec/type/t_pn.htm
+System Class random-state	~/dotfiles/dict/hyperspec/type/t_rnd_st.htm
+System Class ratio	~/dotfiles/dict/hyperspec/type/t_ratio.htm
+System Class rational	~/dotfiles/dict/hyperspec/type/t_ration.htm
+System Class readtable	~/dotfiles/dict/hyperspec/type/t_rdtabl.htm
+System Class real	~/dotfiles/dict/hyperspec/type/t_real.htm
+System Class restart	~/dotfiles/dict/hyperspec/type/t_rst.htm
+System Class sequence	~/dotfiles/dict/hyperspec/type/t_seq.htm
+System Class standard-class	~/dotfiles/dict/hyperspec/type/t_std_cl.htm
+System Class standard-generic-function	~/dotfiles/dict/hyperspec/type/t_std_ge.htm
+System Class standard-method	~/dotfiles/dict/hyperspec/type/t_std_me.htm
+System Class stream	~/dotfiles/dict/hyperspec/type/t_stream.htm
+System Class string	~/dotfiles/dict/hyperspec/type/t_string.htm
+System Class string-stream	~/dotfiles/dict/hyperspec/type/t_stg_st.htm
+System Class structure-class	~/dotfiles/dict/hyperspec/type/t_stu_cl.htm
+System Class symbol	~/dotfiles/dict/hyperspec/type/t_symbol.htm
+System Class synonym-stream	~/dotfiles/dict/hyperspec/type/t_syn_st.htm
+System Class t	~/dotfiles/dict/hyperspec/type/t_t.htm
+Type Specifier and	~/dotfiles/dict/hyperspec/type/t_and.htm
+Type Specifier eql	~/dotfiles/dict/hyperspec/type/t_eql.htm
+Type Specifier member	~/dotfiles/dict/hyperspec/type/t_member.htm
+Type Specifier mod	~/dotfiles/dict/hyperspec/type/t_mod.htm
+Type Specifier not	~/dotfiles/dict/hyperspec/type/t_not.htm
+Type Specifier or	~/dotfiles/dict/hyperspec/type/t_or.htm
+Type Specifier satisfies	~/dotfiles/dict/hyperspec/type/t_satisf.htm
+Type Specifier values	~/dotfiles/dict/hyperspec/type/t_values.htm
+Type atom	~/dotfiles/dict/hyperspec/type/t_atom.htm
+Type base-char	~/dotfiles/dict/hyperspec/type/t_base_c.htm
+Type base-string	~/dotfiles/dict/hyperspec/type/t_base_s.htm
+Type bignum	~/dotfiles/dict/hyperspec/type/t_bignum.htm
+Type bit	~/dotfiles/dict/hyperspec/type/t_bit.htm
+Type boolean	~/dotfiles/dict/hyperspec/type/t_ban.htm
+Type compiled-function	~/dotfiles/dict/hyperspec/type/t_cmpd_f.htm
+Type extended-char	~/dotfiles/dict/hyperspec/type/t_extend.htm
+Type fixnum	~/dotfiles/dict/hyperspec/type/t_fixnum.htm
+Type keyword	~/dotfiles/dict/hyperspec/type/t_kwd.htm
+Type nil	~/dotfiles/dict/hyperspec/type/t_nil.htm
+Type short-float, single-float, double-float...	~/dotfiles/dict/hyperspec/type/t_short_.htm
+Type signed-byte	~/dotfiles/dict/hyperspec/type/t_sgn_by.htm
+Type simple-array	~/dotfiles/dict/hyperspec/type/t_smp_ar.htm
+Type simple-base-string	~/dotfiles/dict/hyperspec/type/t_smp_ba.htm
+Type simple-bit-vector	~/dotfiles/dict/hyperspec/type/t_smp_bt.htm
+Type simple-string	~/dotfiles/dict/hyperspec/type/t_smp_st.htm
+Type simple-vector	~/dotfiles/dict/hyperspec/type/t_smp_ve.htm
+Type standard-char	~/dotfiles/dict/hyperspec/type/t_std_ch.htm
+Type unsigned-byte	~/dotfiles/dict/HyperSpec/type/t_unsgn_.htm
+Variable *, **, ***	~/dotfiles/dict/hyperspec/variable/v__stst_.htm
+Variable *break-on-signals*	~/dotfiles/dict/hyperspec/variable/v_break_.htm
+Variable *compile-file-pathname*...	~/dotfiles/dict/hyperspec/variable/v_cmp_fi.htm
+Variable *compile-print*, *compile-verbose*	~/dotfiles/dict/hyperspec/variable/v_cmp_pr.htm
+Variable *debug-io*, *error-output*...	~/dotfiles/dict/hyperspec/variable/v_debug_.htm
+Variable *debugger-hook*	~/dotfiles/dict/hyperspec/variable/v_debugg.htm
+Variable *default-pathname-defaults*	~/dotfiles/dict/hyperspec/variable/v_defaul.htm
+Variable *features*	~/dotfiles/dict/hyperspec/variable/v_featur.htm
+Variable *gensym-counter*	~/dotfiles/dict/hyperspec/variable/v_gensym.htm
+Variable *load-pathname*, *load-truename*	~/dotfiles/dict/hyperspec/variable/v_ld_pns.htm
+Variable *load-print*, *load-verbose*	~/dotfiles/dict/hyperspec/variable/v_ld_prs.htm
+Variable *macroexpand-hook*	~/dotfiles/dict/hyperspec/variable/v_mexp_h.htm
+Variable *modules*	~/dotfiles/dict/hyperspec/variable/v_module.htm
+Variable *package*	~/dotfiles/dict/hyperspec/variable/v_pkg.htm
+Variable *print-array*	~/dotfiles/dict/hyperspec/variable/v_pr_ar.htm
+Variable *print-base*, *print-radix*	~/dotfiles/dict/hyperspec/variable/v_pr_bas.htm
+Variable *print-case*	~/dotfiles/dict/hyperspec/variable/v_pr_cas.htm
+Variable *print-circle*	~/dotfiles/dict/hyperspec/variable/v_pr_cir.htm
+Variable *print-escape*	~/dotfiles/dict/hyperspec/variable/v_pr_esc.htm
+Variable *print-gensym*	~/dotfiles/dict/hyperspec/variable/v_pr_gen.htm
+Variable *print-level*, *print-length*	~/dotfiles/dict/hyperspec/variable/v_pr_lev.htm
+Variable *print-lines*	~/dotfiles/dict/hyperspec/variable/v_pr_lin.htm
+Variable *print-miser-width*	~/dotfiles/dict/hyperspec/variable/v_pr_mis.htm
+Variable *print-pprint-dispatch*	~/dotfiles/dict/hyperspec/variable/v_pr_ppr.htm
+Variable *print-pretty*	~/dotfiles/dict/hyperspec/variable/v_pr_pre.htm
+Variable *print-readably*	~/dotfiles/dict/hyperspec/variable/v_pr_rda.htm
+Variable *print-right-margin*	~/dotfiles/dict/hyperspec/variable/v_pr_rig.htm
+Variable *random-state*	~/dotfiles/dict/hyperspec/variable/v_rnd_st.htm
+Variable *read-base*	~/dotfiles/dict/hyperspec/variable/v_rd_bas.htm
+Variable *read-default-float-format*	~/dotfiles/dict/hyperspec/variable/v_rd_def.htm
+Variable *read-eval*	~/dotfiles/dict/hyperspec/variable/v_rd_eva.htm
+Variable *read-suppress*	~/dotfiles/dict/hyperspec/variable/v_rd_sup.htm
+Variable *readtable*	~/dotfiles/dict/hyperspec/variable/v_rdtabl.htm
+Variable *terminal-io*	~/dotfiles/dict/hyperspec/variable/v_termin.htm
+Variable +, ++, +++	~/dotfiles/dict/hyperspec/variable/v_pl_plp.htm
+Variable -	~/dotfiles/dict/hyperspec/variable/v__.htm
+Variable /, //, ///	~/dotfiles/dict/hyperspec/variable/v_sl_sls.htm
