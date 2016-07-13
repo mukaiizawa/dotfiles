@@ -147,9 +147,6 @@ syn keyword lispFunc before?
 syn keyword lispFunc after?
 syn keyword lispFunc last-member
 syn keyword lispFunc most
-syn keyword lispFunc map0-n
-syn keyword lispFunc map1-n
-syn keyword lispFunc mapa-b
 syn keyword lispFunc maprec
 syn keyword lispFunc memoize
 syn keyword lispFunc compose
