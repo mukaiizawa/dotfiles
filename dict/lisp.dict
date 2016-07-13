@@ -474,44 +474,44 @@ Macro,define-setf-expander,access-fn lambda-list [[declaration* | documentation]
 Macro,define-symbol-macro,symbol expansion,symbol
 Macro,defmacro,access-fn lambda-list [[declaration* | documentation]] form*,access-fn
 Macro,defmethod,function-name {method-qualifier}* specialized-lambda-list [[declaration* | documentation]] form*,new-method
-Macro,defpackage,x1 x2 x3,y1 y2
-Macro,defparameter,x1 x2 x3,y1 y2
-Macro,defsetf,x1 x2 x3,y1 y2
-Macro,defstruct,x1 x2 x3,y1 y2
-Macro,deftype,x1 x2 x3,y1 y2
-Macro,defun,x1 x2 x3,y1 y2
-Macro,defvar,x1 x2 x3,y1 y2
-Function,delete,x1 x2 x3,y1 y2
-Function,delete-duplicates,x1 x2 x3,y1 y2
-Function,delete-file,x1 x2 x3,y1 y2
-Function,delete-if,x1 x2 x3,y1 y2
-Function,delete-if-not,x1 x2 x3,y1 y2
-Function,delete-package,x1 x2 x3,y1 y2
-Function,denominator,x1 x2 x3,y1 y2
-Function,deposit-field,x1 x2 x3,y1 y2
-Function,describe,x1 x2 x3,y1 y2
-Function,describe-object,x1 x2 x3,y1 y2
-Function,destructuring-bind,x1 x2 x3,y1 y2
-Function,digit-char,x1 x2 x3,y1 y2
-Function,digit-char-p,x1 x2 x3,y1 y2
-Function,directory,x1 x2 x3,y1 y2
-Function,directory-namestring,x1 x2 x3,y1 y2
-Function,disassemble,x1 x2 x3,y1 y2
-Function,division-by-zero,x1 x2 x3,y1 y2
-Function,do,x1 x2 x3,y1 y2
-Function,do*,x1 x2 x3,y1 y2
-Function,do-all-symbols,x1 x2 x3,y1 y2
-Function,do-external-symbols,x1 x2 x3,y1 y2
-Function,do-symbols,x1 x2 x3,y1 y2
-Function,documentation,x1 x2 x3,y1 y2
-Function,dolist,x1 x2 x3,y1 y2
-Function,dotimes,x1 x2 x3,y1 y2
-Function,double-float,x1 x2 x3,y1 y2
-Function,double-float-epsilon,x1 x2 x3,y1 y2
-Function,double-float-negative-epsilon,x1 x2 x3,y1 y2
-Function,dpb,x1 x2 x3,y1 y2
-Function,dribble,x1 x2 x3,y1 y2
-Function,dynamic-extent,x1 x2 x3,y1 y2
+Macro,defpackage,defined-package-name [[option]],package
+Macro,defparameter,name initial-value [documentation],name
+Macro,defsetf,access-fn update-fn [documentation],access-fn
+Macro,defstruct,name-and-options [documentation] {slot-description}*,structure-name
+Macro,deftype,name lambda-list [[declaration* | documentation]] form*,name
+Macro,defun,function-name lambda-list [[declaration* | documentation]] form*,function-name
+Macro,defvar,name [initial-value [documentation]],name
+Function,delete,item sequence &key from-end test test-not start end count key,result-sequence
+Function,delete-duplicates,equence &key from-end test test-not start end key,result-sequence
+Function,delete-file,filespec,t
+Function,delete-if,test sequence &key from-end start end count key,result-sequence
+Function,delete-if-not,test sequence &key from-end start end count key,result-sequence
+Function,delete-package,package,generalized-boolean
+Function,denominator,rational,denominator
+Function,deposit-field,newbyte bytespec integer,result-integer
+Function,describe,object &optional stream,<no values>
+Standard Generic Function,describe-object,object stream,implementation-dependent
+Macro,destructuring-bind,lambda-list expression declaration* form*,result*
+Function,digit-char,weight &optional radix,char
+Function,digit-char-p,char &optional radix,weight
+Function,directory,pathspec &key,pathnames
+Function,directory-namestring,pathname,namestring
+Function,disassemble,fn,nil
+Condition Type,division-by-zero
+Macro,do,({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}*,result*
+Macro,do*, ({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}*,result*
+Macro,do-all-symbols,(var [result-form]) declaration* {tag | statement}*,result*
+Macro,do-external-symbols, (var [package [result-form]]) declaration* {tag | statement}*,result*
+Macro,do-symbols,(var [package [result-form]]) declaration* {tag | statement}*,result*
+Standard Generic Function,documentation,x doc-type,documentation
+Macro,dolist,var list-form [result-form]) declaration* {tag | statement}*,result*
+Macro,dotimes,(var count-form [result-form]) declaration* {tag | statement}*,result*
+Type,double-float
+Constant Variable,double-float-epsilon
+Constant Variable,double-float-negative-epsilon
+Function,dpb,newbyte bytespec integer,result-integer
+Function,dribble,&optional pathname,implementation-dependent
+Declaration,dynamic-extent,(dynamic-extent [[var* | (function fn)*]])
 Function,ecase,x1 x2 x3,y1 y2
 Function,echo-stream,x1 x2 x3,y1 y2
 Function,echo-stream-input-stream,x1 x2 x3,y1 y2
@@ -522,7 +522,7 @@ Function,elt,x1 x2 x3,y1 y2
 Function,encode-universal-time,x1 x2 x3,y1 y2
 Function,end-of-file,x1 x2 x3,y1 y2
 Function,endp,x1 x2 x3,y1 y2
-Function,enough-namestring,x1 x2 x3,y1 y2
+Function,enough-namestring,pathname &optional defaults,namestring
 Function,ensure-directories-exist,x1 x2 x3,y1 y2
 Function,ensure-generic-function,x1 x2 x3,y1 y2
 Function,eq,x1 x2 x3,y1 y2
@@ -548,7 +548,7 @@ Function,file-author,x1 x2 x3,y1 y2
 Function,file-error,x1 x2 x3,y1 y2
 Function,file-error-pathname,x1 x2 x3,y1 y2
 Function,file-length,x1 x2 x3,y1 y2
-Function,file-namestring,x1 x2 x3,y1 y2
+Function,file-namestring,pathname,namestring
 Function,file-position,x1 x2 x3,y1 y2
 Function,file-stream,x1 x2 x3,y1 y2
 Function,file-string-length,x1 x2 x3,y1 y2
@@ -620,7 +620,7 @@ Function,hash-table-rehash-size,x1 x2 x3,y1 y2
 Function,hash-table-rehash-threshold,x1 x2 x3,y1 y2
 Function,hash-table-size,x1 x2 x3,y1 y2
 Function,hash-table-test,x1 x2 x3,y1 y2
-Function,host-namestring,x1 x2 x3,y1 y2
+Function,host-namestring,pathname,namestring
 Function,identity,x1 x2 x3,y1 y2
 Function,if,x1 x2 x3,y1 y2
 Function,ignorable,x1 x2 x3,y1 y2
@@ -786,7 +786,7 @@ Function,multiple-value-prog1,x1 x2 x3,y1 y2
 Function,multiple-value-setq,x1 x2 x3,y1 y2
 Function,multiple-values-limit,x1 x2 x3,y1 y2
 Function,name-char,x1 x2 x3,y1 y2
-Function,namestring,x1 x2 x3,y1 y2
+Function,namestring,pathname => namestring
 Function,nbutlast,list &optional n,result-list
 Function,nconc,x1 x2 x3,y1 y2
 Function,next-method-p,x1 x2 x3,y1 y2
