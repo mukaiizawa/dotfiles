@@ -142,7 +142,7 @@ syn keyword lispFunc filter
 syn keyword lispFunc group
 syn keyword lispFunc flatten
 syn keyword lispFunc prune
-syn keyword lispFunc find2
+syn keyword lispFunc multiple-value-find-if
 syn keyword lispFunc before?
 syn keyword lispFunc after?
 syn keyword lispFunc last-member
