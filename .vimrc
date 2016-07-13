@@ -439,6 +439,9 @@ nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 " line
 nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 
+" lispwords
+nnoremap <silent>mrl    :<C-u>Unite lispwords -no-wrap -horizontal<CR>
+
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
 
@@ -495,5 +498,5 @@ vmap gww <Plug>(openbrowser-search)
 
 " }}}
 
-
 " vim: foldmethod=marker
+
