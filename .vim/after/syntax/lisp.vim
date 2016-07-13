@@ -1,16 +1,6 @@
 
 setlocal iskeyword=33,38,42,43,45,47-58,60-90,97-122,_
 
-" abbrevs
-syn keyword lispFunc +=
-syn keyword lispFunc -=
-syn keyword lispFunc dbind
-syn keyword lispFunc mbind
-syn keyword lispFunc mlist
-syn keyword lispFunc hash-size
-syn keyword lispFunc mkhash
-
-
 " predicates
 syn keyword lispFunc adjustable-array?
 syn keyword lispFunc alpha-char?
@@ -93,8 +83,6 @@ syn keyword lispFunc null?
 
 
 " macro
-syn keyword lispFunc abbrev
-syn keyword lispFunc abbrevs
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-encoding
 syn keyword lispFunc alambda

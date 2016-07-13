@@ -8,8 +8,6 @@ inoremap <C-k> <C-x><C-u>
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
 setlocal lispwords+=alambda
-setlocal lispwords+=dlambda
-setlocal lispwords+=olambda
 setlocal lispwords+=dostring
 setlocal lispwords+=dofile
 setlocal lispwords+=dorange
@@ -35,7 +33,6 @@ setlocal lispwords+=defexe
 setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-string-ahead-reader
 setlocal lispwords+=with-open-ahead-reader
-
 
 " for html
 " {{{
@@ -160,6 +157,7 @@ setlocal lispwords+=:ul
 setlocal lispwords+=:var
 setlocal lispwords+=:video
 setlocal lispwords+=:wbr
+
 " }}}
 
 
