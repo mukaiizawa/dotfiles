@@ -1,7 +1,9 @@
-CLHS: Function ADJUST-ARRAY
+
 Function ADJUST-ARRAY
+
 Syntax:
 adjust-array array new-dimensions &key element-type initial-element initial-contents fill-pointer displaced-to displaced-index-offset => adjusted-array
+
 Arguments and Values:
 array---an array.
 new-dimensions---a valid array dimension or a list of valid array dimensions.
@@ -12,6 +14,7 @@ fill-pointer---a valid fill pointer for the array to be created, or t, or nil. T
 displaced-to---an array or nil. initial-elements and initial-contents must not be supplied if displaced-to is supplied.
  displaced-index-offset---an object of type (fixnum 0 n) where n is (array-total-size displaced-to). displaced-index-offset may be supplied only if displaced-to is supplied. 
 adjusted-array---an array.
+
 Description:
 adjust-array changes the dimensions or elements of array. The result is an array of the same type and rank as array, that is either the modified array, or a newly created array to which array can be displaced, and that has the given new-dimensions.
 New-dimensions specify the size of each dimension of array.
@@ -40,6 +43,7 @@ If initial-contents or displaced-to is supplied, then none of the original conte
 If A is displaced to B, the consequences are unspecified if B is adjusted in such a way that it no longer has enough elements to satisfy A.
 If adjust-array is applied to an array that is actually adjustable, the array returned is identical to array. If the array returned by adjust-array is distinct from array, then the argument array is unchanged. 
 Note that if an array A is displaced to another array B, and B is displaced to another array C, and B is altered by adjust-array, A must now refer to the adjust contents of B. This means that an implementation cannot collapse the chain to make A refer to C directly and forget that the chain of reference passes through B. However, caching techniques are permitted as long as they preserve the semantics specified here.
+
 Examples:
  (adjustable-array-p
   (setq ada (adjust-array
@@ -69,11 +73,13 @@ Suppose that the 4-by-4 array in m looks like this:
 #2A(( alpha     beta      gamma     delta     baz )
     ( epsilon   zeta      eta       theta     baz )
     ( iota      kappa     lambda    mu        baz ))
+
 Affected By: None.
 Exceptional Situations:
 An error of type error is signaled if fill-pointer is supplied and non-nil but array has no fill pointer.
+
 See Also:
 adjustable-array-p, make-array, array-dimension-limit, array-total-size-limit, array
+
 Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: ADJUST-ARRAY-NOT-ADJUSTABLE:IMPLICIT-COPY UNINITIALIZED-ELEMENTS:CONSEQUENCES-UNDEFINED ADJUST-ARRAY-DISPLACEMENT ADJUST-ARRAY-FILL-POINTER ARRAY-DIMENSION-LIMIT-IMPLICATIONS:ALL-FIXNUM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
