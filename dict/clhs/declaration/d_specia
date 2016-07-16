@@ -1,13 +1,16 @@
-CLHS: Declaration SPECIAL
+
 Declaration SPECIAL
+
 Syntax:
 (special var*)
+
 Arguments:
 var---a symbol.
 Valid Context:
 declaration or proclamation
 Binding Types Affected:
 variable
+
 Description:
 Specifies that all of the vars named are dynamic. This specifier affects variable bindings and affects references. All variable bindings affected are made to be dynamic bindings, and affected variable references refer to the current dynamic binding. For example:
  (defun hack (thing *mod*)    ;The binding of the parameter
@@ -25,6 +28,7 @@ When used in a proclamation, a special declaration specifier applies to all bind
 then in a function definition such as
  (defun example (x) ...)
 the parameter x is bound as a dynamic variable rather than as a lexical variable.
+
 Examples:
 (defun declare-eg (y)                 ;this y is special
  (declare (special y))
@@ -73,6 +77,7 @@ Examples:
      (print (+ y (locally (declare (special y)) y)))
      (let ((y 4)) (declare (special y)) (foo x)))) =>  EXAMPLE
  In the contorted code above, the outermost and innermost bindings of y are dynamic, but the middle binding is lexical. The two arguments to + are different, one being the value, which is 3, of the lexical variable y, and the other being the value of the dynamic variable named y (a binding of which happens, coincidentally, to lexically surround it at an outer level). All the bindings of x and references to x are dynamic, however, because of the proclamation that x is always special.
+
 See Also:
 defparameter, defvar
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

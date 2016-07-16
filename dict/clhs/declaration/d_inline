@@ -1,14 +1,17 @@
-CLHS: Declaration INLINE, NOTINLINE
+
 Declaration INLINE, NOTINLINE
+
 Syntax:
 (inline function-name*)
 (notinline function-name*)
+
 Arguments:
 function-name---a function name.
 Valid Context:
 declaration or proclamation
 Binding Types Affected:
 function
+
 Description:
  inline specifies that it is desirable for the compiler to produce inline calls to the functions named by function-names; that is, the code for a specified function-name  should be integrated into the calling routine, appearing ``in line'' in place of a procedure call. A compiler is free to ignore this declaration. inline declarations never apply to variable bindings.
 If one of the functions mentioned has a lexically apparent local definition (as made by flet or labels), then the declaration applies to that local definition and not to the global function definition.
@@ -22,6 +25,7 @@ The inline proclamation preceding the defun form ensures that the compiler has t
 If one of the functions mentioned has a lexically apparent local definition (as made by flet or labels), then the declaration applies to that local definition and not to the global function definition.
  In the presence of a compiler macro definition for function-name, a notinline declaration prevents that  compiler macro from being used.  An inline declaration may be used to encourage use of compiler macro definitions. inline and notinline declarations otherwise have no effect when the lexically visible definition of function-name is a macro definition. 
 inline and notinline declarations can be free declarations or bound declarations. inline and notinline declarations of functions that appear before the body of a flet or labels     form that defines that function are bound declarations. Such declarations in other contexts are free declarations.
+
 Examples:
  ;; The globally defined function DISPATCH should be open-coded,
  ;; if the implementation supports inlining, unless a NOTINLINE
@@ -41,7 +45,7 @@ Examples:
  (defun top-level-4 ()
    (declare (inline dispatch))
    (dispatch (read-command)))
+
 See Also:
 declare, declaim, proclaim
-The following X3J13 cleanup issues, not part of the specification, apply to this section: GENERIC-FLET-POORLY-DESIGNED:DELETE WITH-ADDED-METHODS:DELETE MACRO-DECLARATIONS:MAKE-EXPLICIT ALLOW-LOCAL-INLINE:INLINE-NOTINLINE FUNCTION-NAME:LARGE
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
