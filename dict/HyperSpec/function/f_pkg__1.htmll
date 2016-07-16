@@ -1,0 +1,22 @@
+CLHS: Function PACKAGE-USED-BY-LIST
+Function PACKAGE-USED-BY-LIST 
+Syntax:
+package-used-by-list package => used-by-list
+Arguments and Values:
+ package---a package designator.  
+used-by-list---a list of package objects. 
+Description:
+package-used-by-list returns a list of other packages that use package. 
+Examples:
+ (package-used-by-list (make-package 'temp)) =>  ()
+ (make-package 'trash :use '(temp)) =>  #<PACKAGE 'TRASH'>
+ (package-used-by-list 'temp) =>  (#<PACKAGE 'TRASH'>)
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal an error of type type-error if package is not a package. 
+See Also:
+use-package, unuse-package 
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

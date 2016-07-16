@@ -1,0 +1,27 @@
+CLHS: Function FUNCTIONP
+Function FUNCTIONP 
+Syntax:
+functionp object => generalized-boolean
+Arguments and Values:
+object---an object. 
+generalized-boolean---a generalized boolean. 
+Description:
+Returns true if object is of type function; otherwise, returns false. 
+Examples:
+ (functionp 'append) =>  false
+ (functionp #'append) =>  true
+ (functionp (symbol-function 'append)) =>  true
+ (flet ((f () 1)) (functionp #'f)) =>  true
+ (functionp (compile nil '(lambda () 259))) =>  true
+ (functionp nil) =>  false
+ (functionp 12) =>  false
+ (functionp '(lambda (x) (* x x))) =>  false
+ (functionp #'(lambda (x) (* x x))) =>  true
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also: None.
+Notes:
+ (functionp object) ==  (typep object 'function)
+The following X3J13 cleanup issue, not part of the specification, applies to this section: FUNCTION-TYPE:X3J13-MARCH-88
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

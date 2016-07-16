@@ -1,0 +1,8 @@
+CLHS: System Class STRUCTURE-CLASS
+System Class STRUCTURE-CLASS 
+Class Precedence List:
+structure-class, class,  standard-object,  t 
+Description:
+All classes defined by means of defstruct are instances of the class structure-class. 
+The following X3J13 cleanup issue, not part of the specification, applies to this section: TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

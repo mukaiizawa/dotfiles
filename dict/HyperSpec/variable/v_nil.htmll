@@ -1,0 +1,12 @@
+CLHS: Constant Variable NIL
+Constant Variable NIL 
+Constant Value:
+nil. 
+Description:
+nil represents both boolean (and generalized boolean) false and the empty list. 
+Examples:
+ nil =>  NIL 
+See Also:
+t 
+Notes: None.
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

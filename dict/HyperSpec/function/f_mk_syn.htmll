@@ -1,0 +1,30 @@
+CLHS: Function MAKE-SYNONYM-STREAM
+Function MAKE-SYNONYM-STREAM 
+Syntax:
+make-synonym-stream symbol => synonym-stream
+Arguments and Values:
+symbol---a symbol that names a dynamic variable. 
+ synonym-stream---a synonym stream.  
+Description:
+Returns a synonym stream whose synonym stream symbol is symbol. 
+Examples:
+ (setq a-stream (make-string-input-stream 'a-stream')
+        b-stream (make-string-input-stream 'b-stream'))
+=>  #<String Input Stream> 
+ (setq s-stream (make-synonym-stream 'c-stream))
+=>  #<SYNONYM-STREAM for C-STREAM> 
+ (setq c-stream a-stream)
+=>  #<String Input Stream> 
+ (read s-stream) =>  A-STREAM
+ (setq c-stream b-stream)
+=>  #<String Input Stream> 
+ (read s-stream) =>  B-STREAM
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal type-error if its argument is not a symbol. 
+See Also:
+Section 21.1 (Stream Concepts) 
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

@@ -1,0 +1,27 @@
+CLHS: Function KEYWORDP
+Function KEYWORDP 
+Syntax:
+keywordp object => generalized-boolean
+Arguments and Values:
+object---an object. 
+generalized-boolean---a generalized boolean. 
+Description:
+Returns true if object is a keyword[1]; otherwise, returns false. 
+Examples:
+ (keywordp 'elephant) =>  false
+ (keywordp 12) =>  false
+ (keywordp :test) =>  true
+ (keywordp ':test) =>  true
+ (keywordp nil) =>  false
+ (keywordp :nil) =>  true
+ (keywordp '(:test)) =>  false
+ (keywordp 'hello') =>  false
+ (keywordp ':hello') =>  false
+ (keywordp '&optional) =>  false
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also:
+constantp, keyword, symbolp, symbol-package 
+Notes: None.
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

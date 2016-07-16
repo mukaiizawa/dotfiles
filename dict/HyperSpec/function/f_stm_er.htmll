@@ -1,0 +1,22 @@
+CLHS: Function STREAM-ERROR-STREAM
+Function STREAM-ERROR-STREAM 
+Syntax:
+stream-error-stream condition => stream
+Arguments and Values:
+condition---a condition of type stream-error. 
+stream---a stream. 
+Description:
+Returns the offending stream of a condition of type stream-error. 
+Examples:
+ (with-input-from-string (s '(FOO')
+   (handler-case (read s)
+     (end-of-file (c)
+       (format nil '~&End of file on ~S.' (stream-error-stream c)))))
+'End of file on #<String Stream>.'
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also:
+stream-error, Section 9 (Conditions) 
+Notes: None.
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

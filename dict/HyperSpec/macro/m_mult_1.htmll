@@ -1,0 +1,20 @@
+CLHS: Macro MULTIPLE-VALUE-LIST
+Macro MULTIPLE-VALUE-LIST 
+Syntax:
+multiple-value-list form => list
+Arguments and Values:
+form---a form; evaluated as described below. 
+list---a list of the values returned by form. 
+Description:
+multiple-value-list evaluates form and creates a list of the multiple values[2] it returns. 
+Examples:
+ (multiple-value-list (floor -3 4)) =>  (-1 1)
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also:
+values-list, multiple-value-call 
+Notes:
+multiple-value-list and values-list are inverses of each other. 
+ (multiple-value-list form) ==  (multiple-value-call #'list form)
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

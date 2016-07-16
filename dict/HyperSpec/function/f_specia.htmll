@@ -1,0 +1,22 @@
+CLHS: Function SPECIAL-OPERATOR-P
+Function SPECIAL-OPERATOR-P 
+Syntax:
+special-operator-p symbol => generalized-boolean
+Arguments and Values:
+symbol---a symbol. 
+generalized-boolean---a generalized boolean. 
+Description:
+Returns true if symbol is a special operator; otherwise, returns false. 
+Examples:
+ (special-operator-p 'if) =>  true
+ (special-operator-p 'car) =>  false
+ (special-operator-p 'one) =>  false
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal type-error if its argument is not a symbol. 
+See Also: None.
+Notes:
+Historically, this function was called special-form-p. The name was finally declared a misnomer and changed, since it returned true for special operators, not special forms. 
+The following X3J13 cleanup issue, not part of the specification, applies to this section: SPECIAL-FORM-P-MISNOMER:RENAME
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

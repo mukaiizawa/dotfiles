@@ -1,0 +1,22 @@
+CLHS: Function MAKE-CONCATENATED-STREAM
+Function MAKE-CONCATENATED-STREAM 
+Syntax:
+make-concatenated-stream &rest input-streams => concatenated-stream
+Arguments and Values:
+input-stream---an input stream. 
+concatenated-stream---a concatenated stream. 
+Description:
+Returns a concatenated stream that has the indicated input-streams initially associated with it. 
+Examples:
+ (read (make-concatenated-stream
+         (make-string-input-stream '1')
+         (make-string-input-stream '2'))) =>  12
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal type-error if any argument is not an input stream. 
+See Also:
+concatenated-stream-streams 
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

@@ -1,0 +1,7 @@
+CLHS: Type ATOM
+Type ATOM 
+Supertypes:
+atom, t 
+Description:
+It is equivalent to (not cons). 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

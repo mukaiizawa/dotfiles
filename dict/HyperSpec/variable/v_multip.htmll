@@ -1,0 +1,13 @@
+CLHS: Constant Variable MULTIPLE-VALUES-LIMIT
+Constant Variable MULTIPLE-VALUES-LIMIT 
+Constant Value:
+An integer not smaller than 20, the exact magnitude of which is implementation-dependent. 
+Description:
+The upper exclusive bound on the number of values that may be returned from a function,  bound or assigned by multiple-value-bind or multiple-value-setq, or passed as a first argument to nth-value. (If these individual limits might differ, the minimum value is used.)  
+Examples: None.
+See Also:
+lambda-parameters-limit, call-arguments-limit 
+Notes:
+Implementors are encouraged to make this limit as large as possible. 
+The following X3J13 cleanup issue, not part of the specification, applies to this section: MULTIPLE-VALUES-LIMIT-ON-VARIABLES:UNDEFINED
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

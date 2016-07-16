@@ -1,0 +1,14 @@
+CLHS: Type Specifier NOT
+Type Specifier NOT 
+Compound Type Specifier Kind:
+Combining. 
+Compound Type Specifier Syntax:
+not typespec
+Compound Type Specifier Arguments:
+typespec---a type specifier. 
+Compound Type Specifier Description:
+This denotes the set of all objects that are not of the type typespec. 
+ The argument is required, and cannot be *. 
+The symbol not is not valid as a type specifier.  
+The following X3J13 cleanup issue, not part of the specification, applies to this section: TYPE-SPECIFIER-ABBREVIATION:X3J13-JUN90-GUESS
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

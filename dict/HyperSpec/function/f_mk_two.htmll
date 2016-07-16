@@ -1,0 +1,25 @@
+CLHS: Function MAKE-TWO-WAY-STREAM
+Function MAKE-TWO-WAY-STREAM 
+Syntax:
+make-two-way-stream input-stream output-stream => two-way-stream
+Arguments and Values:
+input-stream---a stream. 
+output-stream---a stream. 
+ two-way-stream---a two-way stream.  
+Description:
+Returns a two-way stream that gets its input from input-stream and sends its output to output-stream. 
+Examples:
+ (with-output-to-string (out)
+    (with-input-from-string (in 'input...')
+      (let ((two (make-two-way-stream in out)))
+        (format two 'output...')
+        (setq what-is-read (read two))))) =>  'output...'
+ what-is-read =>  INPUT... 
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal an error of type type-error if input-stream is not an input stream. Should signal an error of type type-error if output-stream is not an output stream. 
+See Also: None.
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

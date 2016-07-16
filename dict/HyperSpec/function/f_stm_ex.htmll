@@ -1,0 +1,25 @@
+CLHS: Function STREAM-EXTERNAL-FORMAT
+Function STREAM-EXTERNAL-FORMAT 
+Syntax:
+stream-external-format stream => format
+Arguments and Values:
+stream---a file stream. 
+format---an external file format. 
+Description:
+Returns an external file format designator for the stream. 
+Examples:
+ (with-open-file (stream 'test' :direction :output)
+   (stream-external-format stream))
+=>  :DEFAULT
+OR=>  :ISO8859/1-1987
+OR=>  (:ASCII :SAIL)
+OR=>  ACME::PROPRIETARY-FILE-FORMAT-17
+OR=>  #<FILE-FORMAT :ISO646-1983 2343673>
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also:
+the :external-format argument to the function open and the with-open-file macro. 
+Notes:
+The format returned is not necessarily meaningful to other implementations. 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

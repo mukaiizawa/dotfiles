@@ -1,0 +1,27 @@
+CLHS: Function RESTART-NAME
+Function RESTART-NAME 
+Syntax:
+restart-name restart => name
+Arguments and Values:
+restart---a restart. 
+name---a symbol. 
+Description:
+Returns the name of the restart, or nil if the restart is not named. 
+Examples:
+ (restart-case 
+     (loop for restart in (compute-restarts)
+               collect (restart-name restart))
+   (case1 () :report 'Return 1.' 1)
+   (nil   () :report 'Return 2.' 2)
+   (case3 () :report 'Return 3.' 3)
+   (case1 () :report 'Return 4.' 4))
+=>  (CASE1 NIL CASE3 CASE1 ABORT)
+ ;; In the example above the restart named ABORT was not created
+ ;; explicitly, but was implicitly supplied by the system.
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also:
+compute-restarts find-restart 
+Notes: None.
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

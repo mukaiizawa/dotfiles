@@ -1,0 +1,9 @@
+CLHS: Condition Type WARNING
+Condition Type WARNING 
+Class Precedence List:
+ warning, condition, t 
+Description:
+The type warning consists of all types of warnings. 
+See Also:
+style-warning 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

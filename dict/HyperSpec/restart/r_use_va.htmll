@@ -1,0 +1,9 @@
+CLHS: Restart USE-VALUE
+Restart USE-VALUE 
+Data Arguments Required:
+a value to use instead (once). 
+Description:
+The use-value restart is generally used by handlers trying to recover from errors of types such as cell-error, where the handler may wish to supply a replacement datum for one-time use. 
+See Also:
+Section 9.1.4.2 (Restarts), Section 9.1.4.2.2 (Interfaces to Restarts), invoke-restart, use-value (function), store-value (function and restart) 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

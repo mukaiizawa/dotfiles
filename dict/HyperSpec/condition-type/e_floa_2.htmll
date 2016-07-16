@@ -1,0 +1,7 @@
+CLHS: Condition Type FLOATING-POINT-OVERFLOW
+Condition Type FLOATING-POINT-OVERFLOW 
+Class Precedence List:
+ floating-point-overflow, arithmetic-error, error, serious-condition, condition, t 
+Description:
+The type floating-point-overflow consists of error conditions that occur because of floating-point overflow. 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

@@ -1,0 +1,18 @@
+CLHS: Function CONCATENATED-STREAM-STREAMS
+Function CONCATENATED-STREAM-STREAMS 
+Syntax:
+concatenated-stream-streams concatenated-stream => streams
+Arguments and Values:
+concatenated-stream -- a concatenated stream. 
+streams---a list of input streams. 
+Description:
+Returns a list of input streams that constitute the ordered set of streams the concatenated-stream still has to read from, starting with the current one it is reading from. The list may be empty if no more streams remain to be read. 
+The consequences are undefined if the list structure of the streams is ever modified. 
+Examples: None.
+Side Effects: None.
+Affected By: None.
+Exceptional Situations: None.
+See Also: None.
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

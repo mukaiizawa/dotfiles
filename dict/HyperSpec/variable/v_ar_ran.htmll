@@ -1,0 +1,12 @@
+CLHS: Constant Variable ARRAY-RANK-LIMIT
+Constant Variable ARRAY-RANK-LIMIT 
+Constant Value:
+A positive  fixnum,  the exact magnitude of which is implementation-dependent, but which is not less than 8. 
+Description:
+The upper exclusive bound on the rank of an array. 
+Examples: None.
+See Also:
+make-array 
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: ARRAY-DIMENSION-LIMIT-IMPLICATIONS:ALL-FIXNUM
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

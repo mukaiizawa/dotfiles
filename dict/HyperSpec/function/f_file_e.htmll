@@ -1,0 +1,17 @@
+CLHS: Function FILE-ERROR-PATHNAME
+Function FILE-ERROR-PATHNAME 
+Syntax:
+file-error-pathname condition => pathspec
+Arguments and Values:
+condition---a condition of type file-error. 
+pathspec---a pathname designator. 
+Description:
+Returns the ``offending pathname'' of a condition of type file-error. 
+Examples: None.
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+See Also:
+file-error, Section 9 (Conditions) 
+Notes: None.
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

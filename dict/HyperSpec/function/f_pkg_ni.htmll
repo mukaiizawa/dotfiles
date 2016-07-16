@@ -1,0 +1,21 @@
+CLHS: Function PACKAGE-NICKNAMES
+Function PACKAGE-NICKNAMES 
+Syntax:
+package-nicknames package => nicknames
+Arguments and Values:
+ package---a package designator.  
+nicknames---a list of strings. 
+Description:
+Returns the list of nickname strings for package, not including the name of package. 
+Examples:
+ (package-nicknames (make-package 'temporary
+                                   :nicknames '('TEMP' 'temp')))
+=>  ('temp' 'TEMP') 
+Side Effects: None.
+Affected By: None.
+Exceptional Situations:
+Should signal an error of type type-error if package is not a package designator. 
+See Also: None.
+Notes: None.
+The following X3J13 cleanup issue, not part of the specification, applies to this section: PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

@@ -1,0 +1,9 @@
+CLHS: Condition Type STREAM-ERROR
+Condition Type STREAM-ERROR 
+Class Precedence List:
+ stream-error, error, serious-condition, condition, t 
+Description:
+The type stream-error consists of error conditions that are related to receiving input from or sending output to a stream. The ``offending stream'' is initialized by the :streaminitialization argument to make-condition, and is accessed by the function stream-error-stream. 
+See Also:
+stream-error-stream 
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

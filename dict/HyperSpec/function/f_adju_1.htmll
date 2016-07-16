@@ -1,0 +1,24 @@
+CLHS: Function ADJUSTABLE-ARRAY-P
+Function ADJUSTABLE-ARRAY-P 
+Syntax:
+adjustable-array-p array => generalized-boolean
+Arguments and Values:
+array---an array. 
+generalized-boolean---a generalized boolean. 
+Description:
+Returns true if and only if adjust-array could return a value which is identical to array when given that array as its first argument.  
+Examples:
+ (adjustable-array-p 
+   (make-array 5
+               :element-type 'character 
+               :adjustable t 
+               :fill-pointer 3)) =>  true
+ (adjustable-array-p (make-array 4)) =>  implementation-dependent
+Affected By: None.
+Exceptional Situations:
+Should signal an error of type type-error if its argument is not an array. 
+See Also:
+adjust-array, make-array 
+Notes: None.
+ The following X3J13 cleanup issue, not part of the specification, applies to this section: ADJUST-ARRAY-NOT-ADJUSTABLE:IMPLICIT-COPY
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
