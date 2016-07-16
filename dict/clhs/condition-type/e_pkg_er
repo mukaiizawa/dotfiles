@@ -1,9 +1,12 @@
-CLHS: Condition Type PACKAGE-ERROR
+
 Condition Type PACKAGE-ERROR
+
 Class Precedence List:
  package-error, error, serious-condition, condition, t
+
 Description:
 The type package-error consists of error conditions related to operations on packages. The offending package (or package name) is initialized by the :packageinitialization argument to make-condition, and is accessed by the function package-error-package.
+
 See Also:
 package-error-package, Section 9 (Conditions)
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
