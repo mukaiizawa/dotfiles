@@ -1,8 +1,0 @@
-CLHS: Condition Type SIMPLE-ERROR
-Condition Type SIMPLE-ERROR 
-Class Precedence List:
- simple-error, simple-condition, error, serious-condition, condition, t  
-Description:
-The type simple-error consists of conditions that are signaled by error or cerror when a format control is supplied as the function's first argument. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: FORMAT-STRING-ARGUMENTS:SPECIFY TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

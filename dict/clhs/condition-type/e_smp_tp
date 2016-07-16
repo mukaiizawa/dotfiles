@@ -1,0 +1,10 @@
+CLHS: Condition Type SIMPLE-TYPE-ERROR
+Condition Type SIMPLE-TYPE-ERROR
+Class Precedence List:
+ simple-type-error, simple-condition, type-error, error, serious-condition, condition, t 
+Description:
+Conditions of type simple-type-error are like conditions of type type-error, except that they provide an alternate mechanism for specifying how the condition is to be reported; see the type simple-condition.
+See Also:
+simple-condition,  simple-condition-format-control,  simple-condition-format-arguments, type-error-datum, type-error-expected-type
+The following X3J13 cleanup issues, not part of the specification, apply to this section: FORMAT-STRING-ARGUMENTS:SPECIFY TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.

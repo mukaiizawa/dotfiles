@@ -41,7 +41,7 @@ let s:unite_source = {
 \ }
 
 function! s:unite_source.gather_candidates(args, context)
-  let s:path = $HOME . '/dotfiles/dict/hyperspec.dict'
+  let s:path = $HOME . '/dotfiles/dict/clhs.dict'
   let s:lines = readfile(s:path)
   if !filereadable(s:path)
     call PrintError(printf('CompleteLispWords: "%s" is not found.', s:path))

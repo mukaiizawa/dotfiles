@@ -1,0 +1,11 @@
+CLHS: Condition Type UNBOUND-SLOT
+Condition Type UNBOUND-SLOT
+Class Precedence List:
+ unbound-slot, cell-error, error, serious-condition, condition, t
+Description:
+The object having the unbound slot is initialized by the :instanceinitialization argument to make-condition, and is accessed by the function unbound-slot-instance. 
+The name of the cell (see cell-error) is the name of the slot.
+See Also:
+cell-error-name, unbound-slot-object, Section 9.1 (Condition System Concepts)
+The following X3J13 cleanup issue, not part of the specification, applies to this section: UNDEFINED-VARIABLES-AND-FUNCTIONS:COMPROMISE
+Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
