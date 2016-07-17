@@ -1,13 +1,13 @@
-CLHS: Constant Variable ARRAY-TOTAL-SIZE-LIMIT
-Constant Variable ARRAY-TOTAL-SIZE-LIMIT 
+
+Constant Variable ARRAY-TOTAL-SIZE-LIMIT
+
 Constant Value:
-A positive  fixnum,  the exact magnitude of which is implementation-dependent, but which is not less than 1024. 
+A positive  fixnum,  the exact magnitude of which is implementation-dependent, but which is not less than 1024.
+
 Description:
-The upper exclusive bound on the array total size of an array. 
-The actual limit on the array total size imposed by the implementation might vary according the element type of the array; in this case, the value of array-total-size-limit will be the smallest of these possible limits. 
-Examples: None.
+The upper exclusive bound on the array total size of an array.
+The actual limit on the array total size imposed by the implementation might vary according the element type of the array; in this case, the value of array-total-size-limit will be the smallest of these possible limits.
+
 See Also:
 make-array, array-element-type 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: ARRAY-DIMENSION-LIMIT-IMPLICATIONS:ALL-FIXNUM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

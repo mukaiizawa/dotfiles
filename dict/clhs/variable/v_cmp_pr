@@ -1,15 +1,15 @@
-CLHS: Variable *COMPILE-PRINT*, *COMPILE-VERBOSE*
-Variable *COMPILE-PRINT*, *COMPILE-VERBOSE* 
+
+Variable *COMPILE-PRINT*, *COMPILE-VERBOSE*
+
 Value Type:
-a generalized boolean. 
+a generalized boolean.
+
 Initial Value:
-implementation-dependent. 
+implementation-dependent.
+
 Description:
-The value of *compile-print* is the default value of the :print argument to compile-file. The value of *compile-verbose* is the default value of the :verbose argument to compile-file. 
-Examples: None.
-Affected By: None.
+The value of *compile-print* is the default value of the :print argument to compile-file. The value of *compile-verbose* is the default value of the :verbose argument to compile-file.
+
 See Also:
-compile-file 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: COMPILER-VERBOSITY:LIKE-LOAD
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+compile-file
+
