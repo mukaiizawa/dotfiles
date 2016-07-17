@@ -1,14 +1,18 @@
-CLHS: Function DECODE-UNIVERSAL-TIME
+
 Function DECODE-UNIVERSAL-TIME
+
 Syntax:
 decode-universal-time universal-time &optional time-zone => second, minute, hour, date, month, year, day, daylight-p, zone
+
 Arguments and Values:
 universal-time---a universal time.
- time-zone---a time zone. 
+time-zone---a time zone.
 second, minute, hour, date, month, year, day, daylight-p, zone---a decoded time.
+
 Description:
 Returns the decoded time represented by the given universal time.
 If time-zone is not supplied, it defaults to the current time zone adjusted for daylight saving time.  If time-zone is supplied, daylight saving time information is ignored. The daylight saving time flag is nil if time-zone is supplied. 
+
 Examples:
  (decode-universal-time 0 0) =>  0, 0, 0, 1, 1, 1900, 0, false, 0
 ;; The next two examples assume Eastern Daylight Time.
@@ -21,12 +25,10 @@ Examples:
         (a (nthcdr 7 (multiple-value-list (decode-universal-time recently))))
         (b (nthcdr 7 (multiple-value-list (decode-universal-time recently here)))))
    (list a b (equal a b))) =>  ((T 5) (NIL 5) NIL)
- 
+
 Affected By:
 Implementation-dependent mechanisms for calculating when or if daylight savings time is in effect for any given session.
-Exceptional Situations: None.
+
 See Also:
-encode-universal-time, get-universal-time, Section 25.1.4 (Time)
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: DECODE-UNIVERSAL-TIME-DAYLIGHT:LIKE-ENCODE TIME-ZONE-NON-INTEGER:ALLOW
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+encode-universal-time, get-universal-time
+
