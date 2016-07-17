@@ -1,18 +1,23 @@
-CLHS: Variable -
-Variable - 
+
+Variable -
+
 Value Type:
-a form. 
+a form.
+
 Initial Value:
-implementation-dependent. 
+implementation-dependent.
+
 Description:
 The value of - is the form that is currently being evaluated by the Lisp read-eval-print loop. 
+
 Examples:
 (format t '~&Evaluating ~S~%' -)
 >>  Evaluating (FORMAT T '~&Evaluating ~S~%' -)
 =>  NIL
+
 Affected By:
 Lisp read-eval-print loop. 
+
 See Also:
-+ (variable), * (variable), / (variable), Section 25.1.1 (Top level loop) 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
++ (variable), * (variable), / (variable)
+
