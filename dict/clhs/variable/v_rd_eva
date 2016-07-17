@@ -1,16 +1,18 @@
-CLHS: Variable *READ-EVAL*
-Variable *READ-EVAL* 
+
+Variable *READ-EVAL*
+
 Value Type:
-a generalized boolean. 
+a generalized boolean.
+
 Initial Value:
-true. 
+true.
+
 Description:
-If it is true, the #. reader macro has its normal effect. Otherwise, that reader macro signals an error of type reader-error. 
-Examples: None.
-Affected By: None.
+If it is true, the #. reader macro has its normal effect. Otherwise, that reader macro signals an error of type reader-error.
+
 See Also:
-*print-readably* 
+*print-readably*
+
 Notes:
-If *read-eval* is false and *print-readably* is true, any method for print-object that would output a reference to the #. reader macro either outputs something different or signals an error of type print-not-readable. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DATA-IO:ADD-SUPPORT
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+If *read-eval* is false and *print-readably* is true, any method for print-object that would output a reference to the #. reader macro either outputs something different or signals an error of type print-not-readable.
+

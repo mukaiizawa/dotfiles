@@ -1,13 +1,17 @@
-CLHS: Variable *PRINT-BASE*, *PRINT-RADIX*
-Variable *PRINT-BASE*, *PRINT-RADIX* 
+
+Variable *PRINT-BASE*, *PRINT-RADIX*
+
 Value Type:
-*print-base*---a radix. *print-radix*---a generalized boolean. 
+*print-base*---a radix. *print-radix*---a generalized boolean.
+
 Initial Value:
-The initial value of *print-base* is 10. The initial value of *print-radix* is false. 
+The initial value of *print-base* is 10. The initial value of *print-radix* is false.
+
 Description:
-*print-base* and *print-radix* control the printing of rationals. The value of *print-base* is called the current output base. 
-The value of *print-base* is the radix in which the printer will print rationals. For radices above 10, letters of the alphabet are used to represent digits above 9. 
-If the value of *print-radix* is true, the printer will print a radix specifier to indicate the radix in which it is printing a rational number. The radix specifier is always printed using lowercase letters. If *print-base* is 2, 8, or 16, then the radix specifier used is #b, #o, or #x, respectively. For integers, base ten is indicated by a trailing decimal point instead of a leading radix specifier; for ratios, #10r is used. 
+*print-base* and *print-radix* control the printing of rationals. The value of *print-base* is called the current output base.
+The value of *print-base* is the radix in which the printer will print rationals. For radices above 10, letters of the alphabet are used to represent digits above 9.
+If the value of *print-radix* is true, the printer will print a radix specifier to indicate the radix in which it is printing a rational number. The radix specifier is always printed using lowercase letters. If *print-base* is 2, 8, or 16, then the radix specifier used is #b, #o, or #x, respectively. For integers, base ten is indicated by a trailing decimal point instead of a leading radix specifier; for ratios, #10r is used.
+
 Examples:
  (let ((*print-base* 24.) (*print-radix* t)) 
    (print 23.))
@@ -35,9 +39,10 @@ Examples:
 >>  10.  #10r1/10
 >>  #xA  #x1/A
 =>  NIL
+
 Affected By:
-Might be bound by format, and write, write-to-string. 
+Might be bound by format, and write, write-to-string.
+
 See Also:
 format, write, write-to-string 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

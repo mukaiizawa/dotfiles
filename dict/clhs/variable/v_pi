@@ -1,9 +1,12 @@
-CLHS: Constant Variable PI
-Constant Variable PI 
+
+Constant Variable PI
+
 Value:
-an implementation-dependent long float. 
+an implementation-dependent long float.
+
 Description:
-The best long float approximation to the mathematical constant <PI>. 
+The best long float approximation to the mathematical constant <PI>.
+
 Examples:
  ;; In each of the following computations, the precision depends 
  ;; on the implementation.  Also, if `long float' is treated by 
@@ -15,7 +18,7 @@ Examples:
  (defun sin-of-degrees (degrees)
    (let ((x (if (floatp degrees) degrees (float degrees pi))))
      (sin (* x (/ (float pi x) 180)))))
-See Also: None.
+
 Notes:
-An approximation to <PI> in some other precision can be obtained by writing (float pi x), where x is a float of the desired precision, or by writing (coerce pi type), where type is the desired type, such as short-float. 
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+An approximation to <PI> in some other precision can be obtained by writing (float pi x), where x is a float of the desired precision, or by writing (coerce pi type), where type is the desired type, such as short-float.
+

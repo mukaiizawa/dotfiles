@@ -1,12 +1,15 @@
-CLHS: Constant Variable INTERNAL-TIME-UNITS-PER-SECOND
-Constant Variable INTERNAL-TIME-UNITS-PER-SECOND 
+
+Constant Variable INTERNAL-TIME-UNITS-PER-SECOND
+
 Constant Value:
-A positive integer, the magnitude of which is implementation-dependent. 
+A positive integer, the magnitude of which is implementation-dependent.
+
 Description:
-The number of internal time units in one second. 
-Examples: None.
+The number of internal time units in one second.
+
 See Also:
-get-internal-run-time, get-internal-real-time 
+get-internal-run-time, get-internal-real-time
+
 Notes:
-These units form the basis of the Internal Time format representation. 
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+These units form the basis of the Internal Time format representation.
+

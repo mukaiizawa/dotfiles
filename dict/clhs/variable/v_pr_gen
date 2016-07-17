@@ -1,18 +1,21 @@
-CLHS: Variable *PRINT-GENSYM*
-Variable *PRINT-GENSYM* 
+
+Variable *PRINT-GENSYM*
+
 Value Type:
-a generalized boolean. 
+a generalized boolean.
+
 Initial Value:
-true. 
+true.
+
 Description:
-Controls whether the prefix ``#:'' is printed before apparently uninterned symbols. The prefix is printed before such symbols if and only if the value of *print-gensym* is true. 
+Controls whether the prefix ``#:'' is printed before apparently uninterned symbols. The prefix is printed before such symbols if and only if the value of *print-gensym* is true.
+
 Examples:
  (let ((*print-gensym* nil))
    (print (gensym)))
 >>  G6040 
 =>  #:G6040
-Affected By: None.
+
 See Also:
-write, *print-escape* 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+write, *print-escape*
+

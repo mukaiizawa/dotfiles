@@ -1,11 +1,15 @@
-CLHS: Variable *PACKAGE*
-Variable *PACKAGE* 
+
+Variable *PACKAGE*
+
 Value Type:
-a package object. 
+a package object.
+
 Initial Value:
-the COMMON-LISP-USER package. 
+the COMMON-LISP-USER package.
+
 Description:
-Whatever package object is currently the value of *package* is referred to as the current package. 
+Whatever package object is currently the value of *package* is referred to as the current package.
+
 Examples:
  (in-package 'COMMON-LISP-USER') =>  #<PACKAGE 'COMMON-LISP-USER'>
  *package* =>  #<PACKAGE 'COMMON-LISP-USER'>
@@ -24,9 +28,10 @@ Examples:
  (eq 'foo (let ((*package* (find-package 'sample-package)))
             (intern 'FOO')))
 =>  false
+
 Affected By:
-load, compile-file, in-package 
+load, compile-file, in-package
+
 See Also:
-compile-file, in-package, load, package 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+compile-file, in-package, load, package
+

@@ -1,12 +1,15 @@
-CLHS: Constant Variable LAMBDA-PARAMETERS-LIMIT
-Constant Variable LAMBDA-PARAMETERS-LIMIT 
+
+Constant Variable LAMBDA-PARAMETERS-LIMIT
+
 Constant Value:
-implementation-dependent, but not smaller than 50. 
+implementation-dependent, but not smaller than 50.
+
 Description:
-A positive integer that is the upper exclusive bound on the number of parameter names that can appear in a single lambda list. 
-Examples: None.
+A positive integer that is the upper exclusive bound on the number of parameter names that can appear in a single lambda list.
+
 See Also:
-call-arguments-limit 
+call-arguments-limit
+
 Notes:
-Implementors are encouraged to make the value of lambda-parameters-limit as large as possible. 
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+Implementors are encouraged to make the value of lambda-parameters-limit as large as possible.
+

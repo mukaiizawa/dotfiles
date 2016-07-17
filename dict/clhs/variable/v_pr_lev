@@ -1,13 +1,17 @@
-CLHS: Variable *PRINT-LEVEL*, *PRINT-LENGTH*
-Variable *PRINT-LEVEL*, *PRINT-LENGTH* 
+
+Variable *PRINT-LEVEL*, *PRINT-LENGTH*
+
 Value Type:
-a non-negative integer, or nil. 
+a non-negative integer, or nil.
+
 Initial Value:
-nil. 
+nil.
+
 Description:
-*print-level* controls how many levels deep a nested object will print. If it is false, then no control is exercised. Otherwise, it is an integer indicating the maximum level to be printed. An object to be printed is at level 0; its components (as of a list or vector) are at level 1; and so on. If an object to be recursively printed has components and is at a level equal to or greater than the value of *print-level*, then the object is printed as ``#''. 
-*print-length* controls how many elements at a given level are printed. If it is false, there is no limit to the number of components printed. Otherwise, it is an integer indicating the maximum number of elements of an object to be printed. If exceeded, the printer will print ``...'' in place of the other elements. In the case of a dotted list, if the list contains exactly as many elements as the value of *print-length*, the terminating atom is printed rather than printing ``...'' 
-*print-level* and *print-length* affect the printing of an any object printed with a list-like syntax. They do not affect the printing of symbols, strings, and bit vectors. 
+*print-level* controls how many levels deep a nested object will print. If it is false, then no control is exercised. Otherwise, it is an integer indicating the maximum level to be printed. An object to be printed is at level 0; its components (as of a list or vector) are at level 1; and so on. If an object to be recursively printed has components and is at a level equal to or greater than the value of *print-level*, then the object is printed as ``#''.
+*print-length* controls how many elements at a given level are printed. If it is false, there is no limit to the number of components printed. Otherwise, it is an integer indicating the maximum number of elements of an object to be printed. If exceeded, the printer will print ``...'' in place of the other elements. In the case of a dotted list, if the list contains exactly as many elements as the value of *print-length*, the terminating atom is printed rather than printing ``...''
+*print-level* and *print-length* affect the printing of an any object printed with a list-like syntax. They do not affect the printing of symbols, strings, and bit vectors.
+
 Examples:
  (setq a '(1 (2 (3 (4 (5 (6))))))) =>  (1 (2 (3 (4 (5 (6))))))
  (dotimes (i 8) 
@@ -53,8 +57,7 @@ Examples:
 >>  3 3 -- (IF (MEMBER X Y) (+ (CAR X) 3) ...)
 >>  3 4 -- (IF (MEMBER X Y) (+ (CAR X) 3) '(FOO . #(A B C D ...)))
 =>  NIL
-Affected By: None.
+
 See Also:
 write 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

@@ -1,15 +1,15 @@
-CLHS: Variable *LOAD-PRINT*, *LOAD-VERBOSE*
-Variable *LOAD-PRINT*, *LOAD-VERBOSE*  
+
+Variable *LOAD-PRINT*, *LOAD-VERBOSE*
+
 Value Type:
-a generalized boolean. 
+a generalized boolean.
+
 Initial Value:
-The initial value of *load-print* is false. The initial value of *load-verbose* is implementation-dependent. 
+The initial value of *load-print* is false. The initial value of *load-verbose* is implementation-dependent.
+
 Description:
-The value of *load-print* is the default value of the :print argument to load. The value of *load-verbose* is the default value of the :verbose argument to load. 
-Examples: None.
-Affected By: None.
+The value of *load-print* is the default value of the :print argument to load. The value of *load-verbose* is the default value of the :verbose argument to load.
+
 See Also:
-load 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: COMPILER-VERBOSITY:LIKE-LOAD
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+load
+

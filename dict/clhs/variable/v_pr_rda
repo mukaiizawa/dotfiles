@@ -1,15 +1,19 @@
-CLHS: Variable *PRINT-READABLY*
-Variable *PRINT-READABLY*  
+
+Variable *PRINT-READABLY*
+
 Value Type:
-a generalized boolean. 
+a generalized boolean.
+
 Initial Value:
-false. 
+false.
+
 Description:
-If *print-readably* is true, some special rules for printing objects go into effect. Specifically, printing any object O1 produces a printed representation that, when seen by the Lisp reader while the standard readtable is in effect, will produce an object O2 that is similar to O1. The printed representation produced might or might not be the same as the printed representation produced when *print-readably* is false. If printing an object readably is not possible, an error of type print-not-readable is signaled rather than using a syntax (e.g., the ``#<'' syntax) that would not be readable by the same implementation. If the value of some other printer control variable is such that these requirements would be violated, the value of that other variable is ignored. 
- Specifically, if *print-readably* is true, printing proceeds as if *print-escape*, *print-array*, and *print-gensym* were also true, and as if *print-length*, *print-level*, and *print-lines* were false.  
-If *print-readably* is false, the normal rules for printing and the normal interpretations of other printer control variables are in effect. 
-Individual methods for print-object, including user-defined methods, are responsible for implementing these requirements. 
-If *read-eval* is false and *print-readably* is true, any such method that would output a reference to the ``#.'' reader macro will either output something else or will signal an error (as described above). 
+If *print-readably* is true, some special rules for printing objects go into effect. Specifically, printing any object O1 produces a printed representation that, when seen by the Lisp reader while the standard readtable is in effect, will produce an object O2 that is similar to O1. The printed representation produced might or might not be the same as the printed representation produced when *print-readably* is false. If printing an object readably is not possible, an error of type print-not-readable is signaled rather than using a syntax (e.g., the ``#<'' syntax) that would not be readable by the same implementation. If the value of some other printer control variable is such that these requirements would be violated, the value of that other variable is ignored.
+Specifically, if *print-readably* is true, printing proceeds as if *print-escape*, *print-array*, and *print-gensym* were also true, and as if *print-length*, *print-level*, and *print-lines* were false.
+If *print-readably* is false, the normal rules for printing and the normal interpretations of other printer control variables are in effect.
+Individual methods for print-object, including user-defined methods, are responsible for implementing these requirements.
+If *read-eval* is false and *print-readably* is true, any such method that would output a reference to the ``#.'' reader macro will either output something else or will signal an error (as described above).
+
 Examples:
  (let ((x (list 'a' 'a (gensym) '((a (b (c))) d e f g)))
        (*print-escape* nil)
@@ -49,11 +53,10 @@ Examples:
 >>      (SETF (GETHASH 2 HASH-TABLE) TWO)
 >>      HASH-TABLE)
 =>  #<HASH-TABLE EQL 0/120 32005763>
-Affected By: None.
+
 See Also:
-write, print-unreadable-object 
+write, print-unreadable-object
+
 Notes:
-The rules for ``similarity'' imply that #A or #( syntax cannot be used for arrays of element type other than t. An implementation will have to use another syntax or signal an error of type print-not-readable. 
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: PRINT-READABLY-BEHAVIOR:CLARIFY DATA-IO:ADD-SUPPORT
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+The rules for ``similarity'' imply that #A or #( syntax cannot be used for arrays of element type other than t. An implementation will have to use another syntax or signal an error of type print-not-readable.
+

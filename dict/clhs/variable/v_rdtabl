@@ -1,11 +1,15 @@
-CLHS: Variable *READTABLE*
-Variable *READTABLE* 
+
+Variable *READTABLE*
+
 Value Type:
-a readtable. 
+a readtable.
+
 Initial Value:
-A readtable that conforms to the description of Common Lisp syntax in Section 2 (Syntax). 
+A readtable that conforms to the description of Common Lisp syntax in Section 2 (Syntax).
+
 Description:
-The value of *readtable* is called the current readtable. It controls the parsing behavior of the Lisp reader, and can also influence the Lisp printer (e.g., see the function readtable-case). 
+The value of *readtable* is called the current readtable. It controls the parsing behavior of the Lisp reader, and can also influence the Lisp printer (e.g., see the function readtable-case).
+
 Examples:
  (readtablep *readtable*) =>  true
  (setq zvar 123) =>  123
@@ -15,9 +19,10 @@ Examples:
  zvar =>  VAR
  (setq *readtable* (copy-readtable nil)) =>  #<READTABLE>
  zvar =>  123
+
 Affected By:
-compile-file, load 
+compile-file, load
+
 See Also:
-compile-file, load, readtable, Section 2.1.1.1 (The Current Readtable) 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+compile-file, load, readtable
+

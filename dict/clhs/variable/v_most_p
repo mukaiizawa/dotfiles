@@ -1,12 +1,10 @@
-CLHS: Constant Variable MOST-POSITIVE-FIXNUM...
-Constant Variable MOST-POSITIVE-FIXNUM, MOST-NEGATIVE-FIXNUM 
+
+Constant Variable MOST-POSITIVE-FIXNUM, MOST-NEGATIVE-FIXNUM
+
 Constant Value:
-implementation-dependent. 
+implementation-dependent.
+
 Description:
-most-positive-fixnum is that fixnum closest in value to positive infinity provided by the implementation,  and greater than or equal to both 2^15 - 1 and array-dimension-limit.  
-most-negative-fixnum is that fixnum closest in value to negative infinity provided by the implementation,  and less than or equal to -2^15.  
-Examples: None.
-See Also: None.
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: FIXNUM-NON-PORTABLE:TIGHTEN-DEFINITION
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+most-positive-fixnum is that fixnum closest in value to positive infinity provided by the implementation,  and greater than or equal to both 2^15 - 1 and array-dimension-limit.
+most-negative-fixnum is that fixnum closest in value to negative infinity provided by the implementation,  and less than or equal to -2^15.
+
