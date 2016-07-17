@@ -1,13 +1,17 @@
-CLHS: Function CERROR
+
 Function CERROR
+
 Syntax:
 cerror continue-format-control datum &rest arguments => nil
+
 Arguments and Values:
- Continue-format-control---a format control. 
+Continue-format-control---a format control.
 datum, arguments---designators for a condition of default type simple-error.
+
 Description:
 cerror effectively invokes error on the condition named by datum. As with any function that implicitly calls error, if the condition is not handled, (invoke-debugger condition) is executed. While signaling is going on, and while in the debugger if it is reached, it is possible to continue code execution (i.e., to return from cerror) using the continue restart.
 If datum is a condition, arguments can be supplied, but are used only in conjunction with the continue-format-control.
+
 Examples:
  (defun real-sqrt (n)
    (when (minusp n)
@@ -101,16 +105,17 @@ Examples:
 >>  Debug> :continue 1
 >>  Type a large number: 259
 =>  259
+
 Affected By:
 *break-on-signals*.
 Existing handler bindings.
-Exceptional Situations: None.
+
 See Also:
 error, format, handler-bind, *break-on-signals*, simple-type-error
+
 Notes:
 If datum is a condition type rather than a string, the format directive ~* may be especially useful in the continue-format-control in order to ignore the keywords in the initialization argument list. For example:
 (cerror 'enter a new value to replace ~*~s'
         'not-a-number
         :argument a)
-The following X3J13 cleanup issue, not part of the specification, applies to this section: FORMAT-STRING-ARGUMENTS:SPECIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
