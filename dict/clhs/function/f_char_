@@ -1,17 +1,21 @@
-CLHS: Accessor CHAR, SCHAR
+
 Accessor CHAR, SCHAR
+
 Syntax:
 char string index => character
 schar string index => character
 (setf (char string index) new-character)
 (setf (schar string index) new-character)
+
 Arguments and Values:
 string---for char, a string; for schar, a simple string.
 index---a valid array index for the string.
 character, new-character---a character.
+
 Description:
 char and schar access the element of string specified by index.
 char ignores fill pointers when accessing elements.
+
 Examples:
  (setq my-simple-string (make-string 6 :initial-element #A)) =>  'AAAAAA'
  (schar my-simple-string 4) =>  #A
@@ -28,11 +32,10 @@ Examples:
  (setf (char my-filled-string 5) #D) =>  #D
  (setf (fill-pointer my-filled-string) 6) =>  6
  my-filled-string =>  'AAACBD'
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-aref, elt,  Section 3.2.1 (Compiler Terminology) 
+aref, elt
+
 Notes:
  (char s j) ==  (aref (the string s) j)
-The following X3J13 cleanup issue, not part of the specification, applies to this section: CONSTANT-MODIFICATION:DISALLOW
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

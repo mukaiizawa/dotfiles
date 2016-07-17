@@ -1,12 +1,16 @@
-CLHS: Function BOUNDP
+
 Function BOUNDP
+
 Syntax:
 boundp symbol => generalized-boolean
+
 Arguments and Values:
 symbol---a symbol.
 generalized-boolean---a generalized boolean.
+
 Description:
 Returns true if symbol is bound; otherwise, returns false.
+
 Examples:
  (setq x 1) =>  1
  (boundp 'x) =>  true
@@ -15,10 +19,13 @@ Examples:
  (let ((x 2)) (boundp 'x)) =>  false
  (let ((x 2)) (declare (special x)) (boundp 'x)) =>  true
 Affected By: None.
+
 Exceptional Situations:
 Should signal an error of type type-error if symbol is not a symbol.
+
 See Also:
 set, setq, symbol-value, makunbound
+
 Notes:
 The function bound determines only whether a symbol has a value in the global environment; any lexical bindings are ignored.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
