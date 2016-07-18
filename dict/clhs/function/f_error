@@ -1,12 +1,16 @@
-CLHS: Function ERROR
+
 Function ERROR
+
 Syntax:
 error datum &rest arguments =>|
+
 Arguments and Values:
 datum, arguments---designators for a condition of default type simple-error.
+
 Description:
 error effectively invokes signal on the denoted condition.
 If the condition is not handled, (invoke-debugger condition) is done. As a consequence of calling invoke-debugger, error cannot directly return; the only exit from error can come by non-local transfer of control in a handler or by use of an interactive debugging command.
+
 Examples:
  (defun factorial (x)
    (cond ((or (not (typep x 'integer)) (minusp x))
@@ -18,6 +22,7 @@ Examples:
 =>  2432902008176640000
 (factorial -1)
 >>  Error: -1 is not a valid argument to FACTORIAL.
+
 >>  To continue, type :CONTINUE followed by an option number:
 >>   1: Return to Lisp Toplevel.
 >>  Debug>
@@ -41,15 +46,19 @@ Examples:
 >>   1: Return to Lisp Toplevel.
 >>  Debug> :Continue 1
 >>  Return to Lisp Toplevel.
+
 Side Effects:
 Handlers for the specified condition, if any, are invoked and might have side effects. Program execution might stop, and the debugger might be entered.
+
 Affected By:
 Existing handler bindings.
 *break-on-signals*
 Exceptional Situations: None.
 Signals an error of type type-error if datum and arguments are not designators for a condition.
+
 See Also:
 cerror, signal, format, ignore-errors, *break-on-signals*, handler-bind, Section 9.1 (Condition System Concepts)
+
 Notes:
 Some implementations may provide debugger commands for interactively returning from individual stack frames. However, it should be possible for the programmer to feel confident about writing code like:
  (defun wargames:no-win-scenario ()
@@ -57,4 +66,4 @@ Some implementations may provide debugger commands for interactively returning f
    (push-the-button))
  In this scenario, there should be no chance that error will return and the button will get pushed.
 While the meaning of this program is clear and it might be proven `safe' by a formal theorem prover, such a proof is no guarantee that the program is safe to execute. Compilers have been known to have bugs, computers to have signal glitches, and human beings to manually intervene in ways that are not always possible to predict. Those kinds of errors, while beyond the scope of the condition system to formally model, are not beyond the scope of things that should seriously be considered when writing code that could have the kinds of sweeping effects hinted at by this example.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
