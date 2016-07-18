@@ -1,16 +1,21 @@
-CLHS: Standard Generic Function FUNCTION-KEYWORDS
+
 Standard Generic Function FUNCTION-KEYWORDS
+
 Syntax:
 function-keywords method => keys, allow-other-keys-p
+
 Method Signatures:
 function-keywords (method standard-method)
+
 Arguments and Values:
 method---a method.
 keys---a list.
 allow-other-keys-p---a generalized boolean.
+
 Description:
 Returns the keyword parameter specifiers for a method.
 Two values are returned: a list of the explicitly named keywords and a generalized boolean that states whether &allow-other-keys had been specified in the method definition.
+
 Examples:
  (defmethod gf1 ((a integer) &optional (b 2)
                  &key (c 3) ((:dee d) 4) e ((eff f)))
@@ -29,10 +34,10 @@ Examples:
    (list a b c d e f))
  (function-keywords *)
 =>  (:B :C :D), true
+
 Affected By:
 defmethod
-Exceptional Situations: None.
+
 See Also:
 defmethod
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

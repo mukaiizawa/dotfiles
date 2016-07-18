@@ -1,24 +1,26 @@
-CLHS: Function FIND-PACKAGE
+
 Function FIND-PACKAGE
+
 Syntax:
 find-package name => package
+
 Arguments and Values:
- name---a string designator or a package object. 
+name---a string designator or a package object.
 package---a package object or nil.
+
 Description:
 If name is a string designator, find-package locates and returns the package whose name or nickname is name. This search is case sensitive. If there is no such package, find-package returns nil.
- If name is a package object, that package object is returned. 
+If name is a package object, that package object is returned.
+
 Examples:
  (find-package 'common-lisp) =>  #<PACKAGE 'COMMON-LISP'>
  (find-package 'COMMON-LISP-USER') =>  #<PACKAGE 'COMMON-LISP-USER'>
  (find-package 'not-there) =>  NIL
-Side Effects: None.
+
 Affected By:
 The set of packages created by the implementation.
 defpackage, delete-package, make-package, rename-package
-Exceptional Situations: None.
+
 See Also:
 make-package
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
