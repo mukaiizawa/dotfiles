@@ -2,7 +2,7 @@
 Condition Type FLOATING-POINT-INVALID-OPERATION
 
 Class Precedence List:
- floating-point-invalid-operation, arithmetic-error, error, serious-condition, condition, t
+floating-point-invalid-operation, arithmetic-error, error, serious-condition, condition, t
 
 Description:
 The type floating-point-invalid-operation consists of error conditions that occur because of certain floating point traps.

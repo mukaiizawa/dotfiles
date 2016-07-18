@@ -2,7 +2,7 @@
 Condition Type WARNING
 
 Class Precedence List:
- warning, condition, t
+warning, condition, t
 
 Description:
 The type warning consists of all types of warnings.

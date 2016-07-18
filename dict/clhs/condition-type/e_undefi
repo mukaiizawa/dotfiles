@@ -2,7 +2,7 @@
 Condition Type UNDEFINED-FUNCTION
 
 Class Precedence List:
- undefined-function, cell-error, error, serious-condition, condition, t
+undefined-function, cell-error, error, serious-condition, condition, t
 
 Description:
 The type undefined-function consists of error conditions that represent attempts to read the definition of an undefined function.

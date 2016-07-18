@@ -2,7 +2,7 @@
 Condition Type STORAGE-CONDITION
 
 Class Precedence List:
- storage-condition, serious-condition, condition, t
+storage-condition, serious-condition, condition, t
 
 Description:
 The type storage-condition consists of serious conditions that relate to problems with memory management that are potentially due to implementation-dependent limits rather than semantic errors in conforming programs, and that typically warrant entry to the debugger if not handled. Depending on the details of the implementation, these might include such problems as stack overflow, memory region overflow, and storage exhausted.

@@ -2,7 +2,7 @@
 Condition Type FLOATING-POINT-INEXACT
 
 Class Precedence List:
- floating-point-inexact, arithmetic-error, error, serious-condition, condition, t
+floating-point-inexact, arithmetic-error, error, serious-condition, condition, t
 
 Description:
 The type floating-point-inexact consists of error conditions that occur because of certain floating point traps.

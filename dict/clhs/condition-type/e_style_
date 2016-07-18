@@ -2,7 +2,7 @@
 Condition Type STYLE-WARNING
 
 Class Precedence List:
- style-warning, warning, condition, t
+style-warning, warning, condition, t
 
 Description:
 The type style-warning includes those conditions that represent situations involving code that is conforming code but that is nevertheless considered to be faulty or substandard.
