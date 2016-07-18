@@ -1,12 +1,16 @@
-CLHS: Function INTEGER-LENGTH
+
 Function INTEGER-LENGTH 
+
 Syntax:
 integer-length integer => number-of-bits
+
 Arguments and Values:
-integer---an integer. 
-number-of-bits---a non-negative integer. 
+integer---an integer.
+number-of-bits---a non-negative integer.
+
 Description:
-Returns the number of bits needed to represent integer in binary two's-complement format. 
+Returns the number of bits needed to represent integer in binary two's-complement format.
+
 Examples:
  (integer-length 0) =>  0
  (integer-length 1) =>  1
@@ -21,17 +25,16 @@ Examples:
  (integer-length (1- (expt 2 9))) =>  9
  (integer-length (- (expt 2 9))) =>  9
  (integer-length (- (1+ (expt 2 9)))) =>  10
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if integer is not an integer. 
-See Also: None.
+Should signal an error of type type-error if integer is not an integer.
+
 Notes:
-This function could have been defined by: 
+This function could have been defined by:
 (defun integer-length (integer)
   (ceiling (log (if (minusp integer)
                     (- integer)
                     (1+ integer))
                 2)))
 If integer is non-negative, then its value can be represented in unsigned binary form in a field whose width in bits is no smaller than (integer-length integer). Regardless of the sign of integer, its value can be represented in signed binary two's-complement form in a field whose width in bits is no smaller than (+ (integer-length integer) 1). 
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

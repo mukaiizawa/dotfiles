@@ -1,14 +1,18 @@
-CLHS: Function LOGBITP
-Function LOGBITP 
+
+Function LOGBITP
+
 Syntax:
 logbitp index integer => generalized-boolean
+
 Arguments and Values:
- index---a non-negative integer.  
-integer---an integer. 
-generalized-boolean---a generalized boolean. 
+ index---a non-negative integer.
+integer---an integer.
+generalized-boolean---a generalized boolean.
+
 Description:
-logbitp is used to test the value of a particular bit in integer, that is treated as if it were binary. The value of logbitp is true if the bit in integer whose index is index (that is, its weight is 2^index) is a one-bit; otherwise it is false. 
-Negative integers are treated as if they were in two's-complement notation. 
+logbitp is used to test the value of a particular bit in integer, that is treated as if it were binary. The value of logbitp is true if the bit in integer whose index is index (that is, its weight is 2^index) is a one-bit; otherwise it is false.
+Negative integers are treated as if they were in two's-complement notation.
+
 Examples:
  (logbitp 1 1) =>  false
  (logbitp 0 1) =>  true
@@ -16,12 +20,10 @@ Examples:
  (logbitp 1000000 -1) =>  true
  (logbitp 2 6) =>  true
  (logbitp 0 6) =>  false
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if index is not a non-negative integer. Should signal an error of type type-error if integer is not an integer. 
-See Also: None.
+Should signal an error of type type-error if index is not a non-negative integer. Should signal an error of type type-error if integer is not an integer.
+
 Notes:
  (logbitp k n) ==  (ldb-test (byte 1 k) n)
-The following X3J13 cleanup issue, not part of the specification, applies to this section: ARGUMENTS-UNDERSPECIFIED:SPECIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

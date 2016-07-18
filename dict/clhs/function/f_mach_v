@@ -1,18 +1,22 @@
-CLHS: Function MACHINE-VERSION
-Function MACHINE-VERSION 
+
+Function MACHINE-VERSION
+
 Syntax:
 machine-version <no arguments> => description
+
 Arguments and Values:
-description---a string or nil. 
+description---a string or nil.
+
 Description:
-Returns a string that identifies the version of the computer hardware on which Common Lisp is running, or nil if no such value can be computed. 
+Returns a string that identifies the version of the computer hardware on which Common Lisp is running, or nil if no such value can be computed.
+
 Examples:
  (machine-version) =>  'KL-10, microcode 9'
 Side Effects: None.
+
 Affected By:
-The machine version, and the implementation. 
-Exceptional Situations: None.
+The machine version, and the implementation.
+
 See Also:
-machine-type, machine-instance 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+machine-type, machine-instance
+

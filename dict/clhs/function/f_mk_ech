@@ -1,16 +1,20 @@
-CLHS: Function MAKE-ECHO-STREAM
-Function MAKE-ECHO-STREAM 
+
+Function MAKE-ECHO-STREAM
+
 Syntax:
 make-echo-stream input-stream output-stream => echo-stream
+
 Arguments and Values:
-input-stream---an input stream. 
-output-stream---an output stream. 
-echo-stream---an echo stream. 
+input-stream---an input stream.
+output-stream---an output stream.
+echo-stream---an echo stream.
+
 Description:
-Creates and returns an echo stream that takes input from input-stream and sends output to output-stream. 
+Creates and returns an echo stream that takes input from input-stream and sends output to output-stream.
+
 Examples:
  (let ((out (make-string-output-stream)))
-    (with-open-stream 
+    (with-open-stream
         (s (make-echo-stream
             (make-string-input-stream 'this-is-read-and-echoed')
             out))
@@ -18,11 +22,7 @@ Examples:
       (format s ' * this-is-direct-output')
       (get-output-stream-string out)))
 =>  'this-is-read-and-echoed * this-is-direct-output'
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-echo-stream-input-stream, echo-stream-output-stream, make-two-way-stream 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+echo-stream-input-stream, echo-stream-output-stream, make-two-way-stream
+

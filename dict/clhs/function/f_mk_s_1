@@ -1,13 +1,17 @@
-CLHS: Function MAKE-STRING-INPUT-STREAM
-Function MAKE-STRING-INPUT-STREAM 
+
+Function MAKE-STRING-INPUT-STREAM
+
 Syntax:
 make-string-input-stream string &optional start end => string-stream
+
 Arguments and Values:
-string---a string. 
- start, end---bounding index designators of string. The defaults for start and end are 0 and nil, respectively.  
- string-stream---an input string stream.  
+string---a string.
+start, end---bounding index designators of string. The defaults for start and end are 0 and nil, respectively.
+string-stream---an input string stream.
+
 Description:
-Returns an input string stream. This stream will supply, in order, the characters in the substring of string bounded by start and end. After the last character has been supplied, the string stream will then be at end of file. 
+Returns an input string stream. This stream will supply, in order, the characters in the substring of string bounded by start and end. After the last character has been supplied, the string stream will then be at end of file.
+
 Examples:
  (let ((string-stream (make-string-input-stream '1 one ')))
    (list (read string-stream nil nil)
@@ -15,11 +19,7 @@ Examples:
          (read string-stream nil nil)))
 =>  (1 ONE NIL)
  (read (make-string-input-stream 'prefixtargetsuffix' 6 12)) =>  TARGET
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-with-input-from-string 
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS RANGE-OF-START-AND-END-PARAMETERS:INTEGER-AND-INTEGER-NIL
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+with-input-from-string
+

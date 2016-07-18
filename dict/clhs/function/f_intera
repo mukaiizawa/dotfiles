@@ -1,12 +1,16 @@
-CLHS: Function INTERACTIVE-STREAM-P
-Function INTERACTIVE-STREAM-P 
+
+Function INTERACTIVE-STREAM-P
+
 Syntax:
 interactive-stream-p stream => generalized-boolean
+
 Arguments and Values:
-stream---a stream. 
-generalized-boolean---a generalized boolean. 
+stream---a stream.
+generalized-boolean---a generalized boolean.
+
 Description:
-Returns true if stream is an interactive stream; otherwise, returns false. 
+Returns true if stream is an interactive stream; otherwise, returns false.
+
 Examples:
  (when (> measured limit)
    (let ((error (round (* (- measured limit) 100)
@@ -16,11 +20,7 @@ Examples:
                                Is it safe to proceed? ' error)
                  (< error 15))  ;15% is acceptable
        (error 'The frammis is out of tolerance by ~D%.' error))))
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if stream is not a stream. 
-See Also:
-Section 21.1 (Stream Concepts) 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-CAPABILITIES:INTERACTIVE-STREAM-P
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+Should signal an error of type type-error if stream is not a stream.
+

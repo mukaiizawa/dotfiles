@@ -1,14 +1,18 @@
-CLHS: Function LAST
-Function LAST 
+
+Function LAST
+
 Syntax:
 last list &optional n => tail
+
 Arguments and Values:
-list---a list,  which might be a dotted list but must not be a circular list.  
- n---a non-negative integer. The default is 1.  
-tail---an object. 
+list---a list,  which might be a dotted list but must not be a circular list.
+ n---a non-negative integer. The default is 1.
+tail---an object.
+
 Description:
- last returns the last n conses (not the last n elements) of list). If list is (), last returns (). 
-If n is zero, the atom that terminates list is returned. If n is greater than or equal to the number of cons cells in list, the result is list.  
+last returns the last n conses (not the last n elements) of list). If list is (), last returns ().
+If n is zero, the atom that terminates list is returned. If n is greater than or equal to the number of cons cells in list, the result is list.
+
 Examples:
  (last nil) =>  NIL
  (last '(1 2 3)) =>  (3)
@@ -26,15 +30,15 @@ Examples:
  (last '(a . b) 0) =>  B
  (last '(a . b) 1) =>  (A . B)
  (last '(a . b) 2) =>  (A . B)
-  
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
- The consequences are undefined if list is a circular list.  Should signal an error of type type-error if n is not a non-negative integer. 
+The consequences are undefined if list is a circular list.  Should signal an error of type type-error if n is not a non-negative integer.
+
 See Also:
-butlast, nth 
+butlast, nth
+
 Notes:
- The following code could be used to define last. 
+ The following code could be used to define last.
  (defun last (list &optional (n 1))
    (check-type n (integer 0))
    (do ((l list (cdr l))
@@ -42,5 +46,4 @@ Notes:
         (i 0 (+ i 1)))
        ((atom l) r)
      (if (>= i n) (pop r))))
-  The following X3J13 cleanup issues, not part of the specification, apply to this section: LAST-N DOTTED-LIST-ARGUMENTS:CLARIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

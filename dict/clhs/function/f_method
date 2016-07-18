@@ -1,21 +1,24 @@
-CLHS: Standard Generic Function METHOD-QUALIFIERS
-Standard Generic Function METHOD-QUALIFIERS 
+
+Standard Generic Function METHOD-QUALIFIERS
+
 Syntax:
 method-qualifiers method => qualifiers
+
 Method Signatures:
 method-qualifiers (method standard-method)
+
 Arguments and Values:
-method---a method. 
-qualifiers---a proper list. 
+method---a method.
+qualifiers---a proper list.
+
 Description:
-Returns a list of the qualifiers of the method. 
+Returns a list of the qualifiers of the method.
+
 Examples:
  (defmethod some-gf :before ((a integer)) a)
 =>  #<STANDARD-METHOD SOME-GF (:BEFORE) (INTEGER) 42736540>
  (method-qualifiers *) =>  (:BEFORE)
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-define-method-combination 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+define-method-combination
+

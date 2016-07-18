@@ -1,16 +1,20 @@
-CLHS: Function LDIFF, TAILP
-Function LDIFF, TAILP 
+
+Function LDIFF, TAILP
+
 Syntax:
 ldiff list object => result-list
 tailp object list => generalized-boolean
+
 Arguments and Values:
-list---a list,  which might be a dotted list. 
-object---an object.  
-result-list---a list. 
-generalized-boolean---a generalized boolean. 
+list---a list,  which might be a dotted list.
+object---an object.
+result-list---a list.
+generalized-boolean---a generalized boolean.
+
 Description:
- If object is the same as some tail of list, tailp returns true; otherwise, it returns false.  
-If object is the same as some tail of list, ldiff returns a fresh list of the elements of list that precede object in the list structure of list; otherwise, it returns a copy[2] of list. 
+If object is the same as some tail of list, tailp returns true; otherwise, it returns false.
+If object is the same as some tail of list, ldiff returns a fresh list of the elements of list that precede object in the list structure of list; otherwise, it returns a copy[2] of list.
+
 Examples:
  (let ((lists '#((a b c) (a b c . d))))
    (dotimes (i (length lists)) ()
@@ -23,7 +27,7 @@ Examples:
              (let ((object (aref objects j)))
                (format t '~& object=~S ~21T~S ~44T~S'
                        object (tailp object list) (ldiff list object))))))))
->>  
+>>
 >>  list=(A B C)         (tailp object list)    (ldiff list object)
 >>   object=(A B C)      T                      NIL
 >>   object=(C)          T                      (A B)
@@ -32,7 +36,7 @@ Examples:
 >>   object=NIL          T                      (A B C)
 >>   object=D            NIL                    (A B C)
 >>   object=X            NIL                    (A B C)
->>  
+>>
 >>  list=(A B C . D)     (tailp object list)    (ldiff list object)
 >>   object=(A B C . D)  T                      NIL
 >>   object=(C . D)      T                      (A B)
@@ -42,23 +46,25 @@ Examples:
 >>   object=D            T                      (A B C)
 >>   object=X            NIL                    (A B C . D)
 =>  NIL
-  
+
 Side Effects:
-Neither ldiff nor tailp modifies either of its arguments. 
-Affected By: None.
+Neither ldiff nor tailp modifies either of its arguments.
+
 Exceptional Situations:
- Should be prepared to signal an error of type type-error if list is not a proper list or a dotted list.  
+Should be prepared to signal an error of type type-error if list is not a proper list or a dotted list.
+
 See Also:
-set-difference 
+set-difference
+
 Notes:
-If the list is a circular list, tailp will reliably yield a value only if the given object is in fact a tail of list. Otherwise, the consequences are unspecified: a given implementation which detects the circularity must return false, but since an implementation is not obliged to detect such a situation, tailp might just loop indefinitely without returning in that case. 
-tailp could be defined as follows: 
+If the list is a circular list, tailp will reliably yield a value only if the given object is in fact a tail of list. Otherwise, the consequences are unspecified: a given implementation which detects the circularity must return false, but since an implementation is not obliged to detect such a situation, tailp might just loop indefinitely without returning in that case.
+tailp could be defined as follows:
  (defun tailp (object list)
    (do ((list list (cdr list)))
        ((atom list) (eql list object))
       (if (eql object list)
           (return t))))
-and ldiff could be defined by: 
+and ldiff could be defined by:
 (defun ldiff (list object)
   (do ((list list (cdr list))
        (r '() (cons (car list) r)))
@@ -66,6 +72,4 @@ and ldiff could be defined by:
        (if (eql list object) (nreverse r) (nreconc r list)))
     (when (eql object list)
       (return (nreverse r)))))
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: TAILP-NIL:T DOTTED-LIST-ARGUMENTS:CLARIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

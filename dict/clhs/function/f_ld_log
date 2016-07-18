@@ -1,13 +1,17 @@
-CLHS: Function LOAD-LOGICAL-PATHNAME-TRANSLATIONS
-Function LOAD-LOGICAL-PATHNAME-TRANSLATIONS 
+
+Function LOAD-LOGICAL-PATHNAME-TRANSLATIONS
+
 Syntax:
 load-logical-pathname-translations host => just-loaded
+
 Arguments and Values:
-host---a string. 
-just-loaded---a generalized boolean. 
+host---a string.
+just-loaded---a generalized boolean.
+
 Description:
-Searches for and loads the definition of a logical host named host, if it is not already defined. The specific nature of the search is implementation-defined. 
-If the host is already defined, no attempt to find or load a definition is attempted, and false is returned. If the host is not already defined, but a definition is successfully found and loaded, true is returned. Otherwise, an error is signaled. 
+Searches for and loads the definition of a logical host named host, if it is not already defined. The specific nature of the search is implementation-defined.
+If the host is already defined, no attempt to find or load a definition is attempted, and false is returned. If the host is not already defined, but a definition is successfully found and loaded, true is returned. Otherwise, an error is signaled.
+
 Examples:
  (translate-logical-pathname 'hacks:weather;barometer.lisp.newest')
 >>  Error: The logical host HACKS is not defined.
@@ -19,12 +23,13 @@ Examples:
 =>  #P'HELIUM:[SHARED.HACKS.WEATHER]BAROMETER.LSP;0'
  (load-logical-pathname-translations 'HACKS')
 =>  false
-Affected By: None.
+
 Exceptional Situations:
-If no definition is found, an error of type error is signaled. 
+If no definition is found, an error of type error is signaled.
+
 See Also:
-logical-pathname 
+logical-pathname
+
 Notes:
 Logical pathname definitions will be created not just by implementors but also by programmers. As such, it is important that the search strategy be documented. For example, an implementation might define that the definition of a host is to be found in a file called ``host.translations'' in some specifically named directory. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: PATHNAME-LOGICAL:ADD
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

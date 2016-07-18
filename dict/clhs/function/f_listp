@@ -1,23 +1,26 @@
-CLHS: Function LISTP
-Function LISTP 
+
+Function LISTP
+
 Syntax:
 listp object => generalized-boolean
+
 Arguments and Values:
-object---an object. 
-generalized-boolean---a generalized boolean. 
+object---an object.
+generalized-boolean---a generalized boolean.
+
 Description:
-Returns true if object is of type list; otherwise, returns false. 
+Returns true if object is of type list; otherwise, returns false.
+
 Examples:
  (listp nil) =>  true
  (listp (cons 1 2)) =>  true
  (listp (make-array 6)) =>  false
  (listp t) =>  false
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-consp 
+consp
+
 Notes:
-If object is a cons, listp does not check whether object is a proper list; it returns true for any kind of list. 
+If object is a cons, listp does not check whether object is a proper list; it returns true for any kind of list.
  (listp object) ==  (typep object 'list) ==  (typep object '(or cons null))
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

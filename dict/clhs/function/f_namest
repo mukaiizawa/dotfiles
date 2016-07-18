@@ -1,39 +1,42 @@
-CLHS: Function NAMESTRING, FILE-NAMESTRING...
-Function NAMESTRING, FILE-NAMESTRING, DIRECTORY-NAMESTRING, HOST-NAMESTRING, ENOUGH-NAMESTRING 
+
+Function NAMESTRING, FILE-NAMESTRING, DIRECTORY-NAMESTRING, HOST-NAMESTRING, ENOUGH-NAMESTRING
+
 Syntax:
 namestring pathname => namestring
 file-namestring pathname => namestring
 directory-namestring pathname => namestring
 host-namestring pathname => namestring
 enough-namestring pathname &optional defaults => namestring
+
 Arguments and Values:
- pathname---a pathname designator.  
- defaults---a pathname designator.  The default is the value of *default-pathname-defaults*. 
-namestring---a string or nil.  Description:
-  
-These functions convert pathname into a namestring. The name represented by pathname is returned as a namestring in an implementation-dependent canonical form. 
-namestring returns the full form of pathname. 
-file-namestring returns just the name, type, and version components of pathname. 
-directory-namestring returns the directory name portion. 
-host-namestring returns the host name. 
-enough-namestring returns an abbreviated namestring that is just sufficient to identify the file named by pathname when considered relative to the defaults. It is required that 
+pathname---a pathname designator.
+defaults---a pathname designator.  The default is the value of *default-pathname-defaults*.
+namestring---a string or nil.
+
+Description:
+These functions convert pathname into a namestring. The name represented by pathname is returned as a namestring in an implementation-dependent canonical form.
+namestring returns the full form of pathname.
+file-namestring returns just the name, type, and version components of pathname.
+directory-namestring returns the directory name portion.
+host-namestring returns the host name.
+enough-namestring returns an abbreviated namestring that is just sufficient to identify the file named by pathname when considered relative to the defaults. It is required that
  (merge-pathnames (enough-namestring pathname defaults) defaults)
-==  (merge-pathnames (parse-namestring pathname nil defaults) defaults)
- in all cases, and the result of enough-namestring is the shortest reasonable string that will satisfy this criterion. 
-It is not necessarily possible to construct a valid namestring by concatenating some of the three shorter namestrings in some order. 
+  ==  (merge-pathnames (parse-namestring pathname nil defaults) defaults)
+in all cases, and the result of enough-namestring is the shortest reasonable string that will satisfy this criterion.
+It is not necessarily possible to construct a valid namestring by concatenating some of the three shorter namestrings in some order.
+
 Examples:
- (namestring 'getty')            
+ (namestring 'getty')
 =>  'getty'
- (setq q (make-pathname :host 'kathy' 
-                         :directory 
+ (setq q (make-pathname :host 'kathy'
+                         :directory
                            (pathname-directory *default-pathname-defaults*)
-                         :name 'getty')) 
-=>  #S(PATHNAME :HOST 'kathy' :DEVICE NIL :DIRECTORY directory-name 
+                         :name 'getty'))
+=>  #S(PATHNAME :HOST 'kathy' :DEVICE NIL :DIRECTORY directory-name
        :NAME 'getty' :TYPE NIL :VERSION NIL)
  (file-namestring q) =>  'getty'
  (directory-namestring q) =>  directory-name
- (host-namestring q) =>  'kathy' 
-  
+ (host-namestring q) =>  'kathy'
  ;;;Using Unix syntax and the wildcard conventions used by the
  ;;;particular version of Unix on which this example was created:
  (namestring
@@ -59,11 +62,7 @@ Examples:
                        'U:/usr/d*/hacks/fr*.l'
                        'V:SYS$DISK:[D*.BACKUP.HACKS]BACKUP-*.*'))
 =>  'V:SYS$DISK:[DMR.BACKUP.HACKS]BACKUP-OB.LSP'
-  
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
- truename, merge-pathnames, pathname, logical-pathname, Section 20.1 (File System Concepts),   Section 19.1.2 (Pathnames as Filenames)  
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: FILE-OPEN-ERROR:SIGNAL-FILE-ERROR PATHNAME-LOGICAL:ADD PATHNAME-WILD:NEW-FUNCTIONS PATHNAME-SYMBOL PATHNAME-STREAM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+truename, merge-pathnames, pathname, logical-pathname
+

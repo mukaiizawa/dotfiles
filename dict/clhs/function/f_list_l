@@ -1,32 +1,37 @@
-CLHS: Function LIST-LENGTH
-Function LIST-LENGTH 
+
+Function LIST-LENGTH
+
 Syntax:
 list-length list => length
+
 Arguments and Values:
-list---a proper list or a circular list. 
-length---a non-negative integer, or nil. 
+list---a proper list or a circular list.
+length---a non-negative integer, or nil.
+
 Description:
-Returns the length of list if list is a proper list. Returns nil if list is a circular list. 
+Returns the length of list if list is a proper list. Returns nil if list is a circular list.
+
 Examples:
  (list-length '(a b c d)) =>  4
  (list-length '(a (b c) d)) =>  3
  (list-length '()) =>  0
  (list-length nil) =>  0
  (defun circular-list (&rest elements)
-   (let ((cycle (copy-list elements))) 
+   (let ((cycle (copy-list elements)))
      (nconc cycle cycle)))
  (list-length (circular-list 'a 'b)) =>  NIL
  (list-length (circular-list 'a)) =>  NIL
  (list-length (circular-list)) =>  0
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if list is not a proper list or a circular list. 
+Should signal an error of type type-error if list is not a proper list or a circular list.
+
 See Also:
-length 
+length
+
 Notes:
-list-length could be implemented as follows: 
- (defun list-length (x)  
+list-length could be implemented as follows:
+ (defun list-length (x)
    (do ((n 0 (+ n 2))           ;Counter.
         (fast x (cddr fast))    ;Fast pointer: leaps by 2.
         (slow x (cdr slow)))    ;Slow pointer: leaps by 1.
@@ -41,4 +46,4 @@ list-length could be implemented as follows:
      ;;  fast pointer will equal the slow pointer.
      ;;  That fact justifies this implementation.)
      (when (and (eq fast slow) (> n 0)) (return nil))))
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

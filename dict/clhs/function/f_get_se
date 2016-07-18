@@ -1,15 +1,18 @@
-CLHS: Function GET-SETF-EXPANSION
+
 Function GET-SETF-EXPANSION
+
 Syntax:
 get-setf-expansion place &optional environment => vars, vals, store-vars, writer-form, reader-form
- 
+
 Arguments and Values:
 place---a place.
- environment---an environment object. 
+environment---an environment object.
 vars, vals, store-vars, writer-form, reader-form---a setf expansion.
+
 Description:
-Determines five values constituting the setf expansion for place in environment; see Section 5.1.1.2 (Setf Expansions).
-  If environment is not supplied or nil, the environment is the null lexical environment. 
+Determines five values constituting the setf expansion for place in environment.
+If environment is not supplied or nil, the environment is the null lexical environment.
+
 Examples:
  (get-setf-expansion 'x)
 =>  NIL, NIL, (#:G0001), (SETQ X #:G0001), X
@@ -27,12 +30,10 @@ Examples:
 ;;; The following is an error; an error might be signaled at macro expansion time
  (flet ((frob (x) (cdr x)))  ;Invalid
    (xpop (frob z)))
- 
- Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 defsetf, define-setf-expander, setf
+
 Notes:
 Any compound form is a valid place, since any compound form whose operator f has no setf expander are expanded into a call to (setf f).
-The following X3J13 cleanup issues, not part of the specification, apply to this section: GET-SETF-METHOD-ENVIRONMENT:ADD-ARG SETF-METHOD-VS-SETF-METHOD:RENAME-OLD-TERMS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
