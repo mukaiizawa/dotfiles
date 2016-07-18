@@ -1,5 +1,6 @@
-CLHS: Accessor FIRST, SECOND, THIRD, FOURTH...
+
 Accessor FIRST, SECOND, THIRD, FOURTH, FIFTH, SIXTH, SEVENTH, EIGHTH, NINTH, TENTH
+
 Syntax:
 first list => object
 second list => object
@@ -21,9 +22,11 @@ tenth list => object
 (setf (eighth list) new-object)
 (setf (ninth list) new-object)
 (setf (tenth list) new-object)
+
 Arguments and Values:
-list---a list,  which might be a dotted list or a circular list. 
+list---a list,  which might be a dotted list or a circular list.
 object, new-object---an object.
+
 Description:
 The functions first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, and tenth access the first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, and tenth elements of list, respectively. Specifically,
  (first list)    ==   (car list)
@@ -36,8 +39,10 @@ The functions first, second, third, fourth, fifth, sixth, seventh, eighth, ninth
  (eighth list)   ==   (car (cdddr (cddddr list)))
  (ninth list)    ==   (car (cddddr (cddddr list)))
  (tenth list)    ==   (car (cdr (cddddr (cddddr list))))
+
 setf can also be used with any of these functions to change an existing component. The same equivalences apply. For example:
  (setf (fifth list) new-object) ==  (setf (car (cddddr list)) new-object)
+
 Examples:
  (setq lst '(1 2 3 (4 5 6) ((V)) vi 7 8 9 10))
 =>  (1 2 3 (4 5 6) ((V)) VI 7 8 9 10)
@@ -48,14 +53,12 @@ Examples:
  (sixth '(1 2 3)) =>  NIL
  (setf (fourth lst) 'four') =>  'four'
  lst =>  (1 2 3 'four' ((V)) VI 7 8 9 10)
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 car, nth
+
 Notes:
 first is functionally equivalent to car, second is functionally equivalent to cadr, third is functionally equivalent to caddr, and fourth is functionally equivalent to cadddr.
 The ordinal numbering used here is one-origin, as opposed to the zero-origin numbering used by nth:
  (fifth x) ==  (nth 4 x)
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DOTTED-LIST-ARGUMENTS:CLARIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

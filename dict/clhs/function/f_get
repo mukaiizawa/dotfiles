@@ -1,17 +1,21 @@
-CLHS: Accessor GET
+
 Accessor GET
+
 Syntax:
 get symbol indicator &optional default => value
 (setf (get symbol indicator &optional default) new-value)
+
 Arguments and Values:
 symbol---a symbol.
 indicator---an object.
 default---an object. The default is nil.
 value---if the indicated property exists, the object that is its value; otherwise, the specified default.
 new-value---an object.
+
 Description:
 get finds a property on the property list[2] of symbol whose property indicator is identical to indicator, and returns its corresponding property value.  If there are multiple properties[1] with that property indicator, get uses the first such property.  If there is no property with that property indicator, default is returned.
 setf of get may be used to associate a new object with an existing indicator already on the symbol's property list, or to create a new assocation if none exists.  If there are multiple properties[1] with that property indicator, setf of get associates the new-value with the first such property.   When a get form is used as a setf place, any default which is supplied is evaluated according to normal left-to-right evaluation rules, but its value is ignored. 
+
 Examples:
  (defun make-person (first-name last-name)
    (let ((person (gensym 'PERSON')))
@@ -41,15 +45,15 @@ Examples:
  (setf (age *john*) 25) =>  25
  (age *john*) =>  25
  (age *john* 20) =>  25
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
 Should signal an error of type type-error if symbol is not a symbol.
+
 See Also:
 getf, symbol-plist, remprop
+
 Notes:
  (get x y) ==  (getf (symbol-plist x) y)
 Numbers and characters are not recommended for use as indicators in portable code since get tests with eq rather than eql, and consequently the effect of using such indicators is implementation-dependent.
 There is no way using get to distinguish an absent property from one whose value is default. However, see get-properties.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: SETF-GET-DEFAULT:EVALUATED-BUT-IGNORED PLIST-DUPLICATES:ALLOW
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

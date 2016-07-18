@@ -1,13 +1,17 @@
-CLHS: Function DIGIT-CHAR-P
+
 Function DIGIT-CHAR-P
+
 Syntax:
 digit-char-p char &optional radix => weight
+
 Arguments and Values:
 char---a character.
 radix---a radix. The default is 10.
 weight---either a non-negative integer less than radix, or false.
+
 Description:
 Tests whether char is a digit in the specified radix (i.e., with a weight less than radix). If it is a digit in that radix, its weight is returned as an integer; otherwise nil is returned.
+
 Examples:
  (digit-char-p #5)    =>  5
  (digit-char-p #5 2)  =>  false
@@ -24,11 +28,13 @@ Examples:
      (0 5 9 NIL NIL NIL NIL NIL)
      (0 5 9 10 10 15 NIL NIL)
      (0 5 9 10 10 15 16 35))
+
 Affected By:
 None. (In particular, the results of this predicate are independent of any special syntax which might have been enabled in the current readtable.)
-Exceptional Situations: None.
+
 See Also:
 alphanumericp
+
 Notes:
 Digits are graphic characters.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
