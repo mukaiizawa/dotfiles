@@ -1,14 +1,17 @@
-CLHS: Type Specifier AND
-Type Specifier AND 
+
+Type Specifier AND
+
 Compound Type Specifier Kind:
-Combining. 
+Combining.
+
 Compound Type Specifier Syntax:
 and typespec*
+
 Compound Type Specifier Arguments:
-typespec---a type specifier. 
+typespec---a type specifier.
+
 Compound Type Specifier Description:
-This denotes the set of all objects of the type determined by the intersection of the typespecs. 
- * is not permitted as an argument. 
-The type specifiers (and) and t are equivalent. The symbol and is not valid as a type specifier, and, specifically, it is not an abbreviation for (and).  
-The following X3J13 cleanup issue, not part of the specification, applies to this section: TYPE-SPECIFIER-ABBREVIATION:X3J13-JUN90-GUESS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+This denotes the set of all objects of the type determined by the intersection of the typespecs.
+ * is not permitted as an argument.
+The type specifiers (and) and t are equivalent. The symbol and is not valid as a type specifier, and, specifically, it is not an abbreviation for (and).
+
