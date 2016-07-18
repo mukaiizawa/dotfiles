@@ -9,14 +9,15 @@ var---a variable name.
 fn---a function name.
 Valid Context:
 declaration
+
 Binding Types Affected:
 variable, function
 
 Description:
-In some containing form, F, this declaration asserts for each vari (which need not be bound by F), and for each value vij that vari takes on, and for each object xijk that is an otherwise inaccessible part of vij at any time when vij becomes the value of vari, that just after the execution of F terminates, xijk is either inaccessible (if F established a binding for vari) or still an otherwise inaccessible part of the current value of vari (if F did not establish a binding for vari).  The same relation holds for each fni, except that the bindings are in the function namespace. 
+In some containing form, F, this declaration asserts for each vari (which need not be bound by F), and for each value vij that vari takes on, and for each object xijk that is an otherwise inaccessible part of vij at any time when vij becomes the value of vari, that just after the execution of F terminates, xijk is either inaccessible (if F established a binding for vari) or still an otherwise inaccessible part of the current value of vari (if F did not establish a binding for vari).  The same relation holds for each fni, except that the bindings are in the function namespace.
 The compiler is permitted to use this information in any way that is appropriate to the implementation and that does not conflict with the semantics of Common Lisp.
 dynamic-extent declarations can be free declarations or bound declarations.
- The vars and fns named in a dynamic-extent declaration must not refer to symbol macro or macro bindings. 
+The vars and fns named in a dynamic-extent declaration must not refer to symbol macro or macro bindings.
 
 Examples:
 Since stack allocation of the initial value entails knowing at the object's creation time that the object can be stack-allocated, it is not generally useful to make a dynamic-extent declaration for variables which have no lexically apparent initial value. For example, it is probably useful to write:
@@ -35,7 +36,7 @@ Here is another example:
  (defun f ()
    (flet ((g (x) (declare (dynamic-extent x)) ...))
      (g (list 1 2 3))))
- In the previous example, some compilers might determine that optimization was possible and others might not.
+In the previous example, some compilers might determine that optimization was possible and others might not.
 A variant of this is the so-called ``stack allocated rest list'' that can be achieved (in implementations supporting the optimization) by:
  (defun f (&rest x)
    (declare (dynamic-extent x))
@@ -46,7 +47,7 @@ In the following example,
        (y (cons 'a2 (cons 'b2 (cons 'c2 nil)))))
    (declare (dynamic-extent x y))
    ...)
- The otherwise inaccessible parts of x are three conses, and the otherwise inaccessible parts of y are three other conses. None of the symbols a1, b1, c1, a2, b2, c2, or nil is an otherwise inaccessible part of x or y because each is interned and hence accessible by the package (or packages) in which it is interned. However, if a freshly allocated uninterned symbol had been used, it would have been an otherwise inaccessible part of the list which contained it.
+The otherwise inaccessible parts of x are three conses, and the otherwise inaccessible parts of y are three other conses. None of the symbols a1, b1, c1, a2, b2, c2, or nil is an otherwise inaccessible part of x or y because each is interned and hence accessible by the package (or packages) in which it is interned. However, if a freshly allocated uninterned symbol had been used, it would have been an otherwise inaccessible part of the list which contained it.
 ;; In this example, the implementation is permitted to stack allocate
 ;; the list that is bound to X.
  (let ((x (list 1 2 3)))

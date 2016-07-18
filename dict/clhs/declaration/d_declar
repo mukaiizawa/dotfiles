@@ -6,7 +6,7 @@ Syntax:
 
 Arguments:
 name---a symbol.
-Binding Types Affected: None.
+
 Valid Context:
 proclamation only
 

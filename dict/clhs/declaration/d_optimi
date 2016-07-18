@@ -7,19 +7,23 @@ Syntax:
 Arguments:
 quality---an optimize quality.
 value---one of the integers 0, 1, 2, or 3.
+
 Valid Context:
 declaration or proclamation
-Binding Types Affected: None.
 
 Description:
 Advises the compiler that each quality should be given attention according to the specified corresponding value. Each quality must be a symbol naming an optimize quality; the names and meanings of the standard optimize qualities are shown in the next figure.
+
 Name               Meaning
+-----------------------------------------------------
 compilation-speed  speed of the compilation process
 debug              ease of debugging
 safety             run-time error checking
 space              both code size and run-time space
 speed              speed of the object code
+
 Figure 3-25.  Optimize qualities
+
 There may be other, implementation-defined optimize qualities.
 A value 0 means that the corresponding quality is totally unimportant, and 3 that the quality is extremely important; 1 and 2 are intermediate values, with 1 the neutral value. (quality 3) can be abbreviated to quality.
 Note that code which has the optimization (safety 3), or just safety, is called safe code.
@@ -37,6 +41,7 @@ Examples:
      (declare (optimize speed))
      (declare (fixnum i))
      ))
+
 See Also:
 declare, declaim, proclaim, Section 3.3.4 (Declaration Scope)
 
