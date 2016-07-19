@@ -1,14 +1,18 @@
-CLHS: Special Operator RETURN-FROM
+
 Special Operator RETURN-FROM 
+
 Syntax:
 return-from name [result] =>| 
+
 Arguments and Values:
 name---a block tag; not evaluated. 
 result---a form; evaluated. The default is nil. 
+
 Description:
 Returns control and multiple values[2] from a lexically enclosing block. 
 A block form named name must lexically enclose the occurrence of return-from; any values yielded by the evaluation of result are immediately returned from the innermost such lexically enclosing block. 
 The transfer of control initiated by return-from is performed as described in Section 5.2 (Transfer of Control to an Exit Point). 
+
 Examples:
  (block alpha (return-from alpha) 1) =>  NIL
  (block alpha (return-from alpha 1) 2) =>  1
@@ -56,10 +60,7 @@ Examples:
 =>  NIL
 The following has undefined consequences because the block form exits normally before the return-from form is attempted. 
  (funcall (block nil #'(lambda () (return-from nil)))) is an error.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 block, return, Section 3.1 (Evaluation) 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: EXIT-EXTENT:MINIMAL
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

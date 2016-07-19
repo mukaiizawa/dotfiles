@@ -1,11 +1,14 @@
-CLHS: Special Operator LOAD-TIME-VALUE
+
 Special Operator LOAD-TIME-VALUE  
+
 Syntax:
 load-time-value form &optional read-only-p => object
+
 Arguments and Values:
 form---a form; evaluated as described below. 
 read-only-p---a boolean; not evaluated. 
 object---the primary value resulting from evaluating form. 
+
 Description:
 load-time-value provides a mechanism for delaying evaluation of form until the expression is in the run-time environment; see Section 3.2 (Compilation). 
 Read-only-p designates whether the result can be considered a constant object. If t, the result is a read-only quantity that can, if appropriate to the implementation, be copied into read-only space and/or coalesced with similar constant objects from other programs. If nil (the default), the result must be neither copied nor coalesced; it must be considered to be potentially modifiable data. 
@@ -14,6 +17,7 @@ If a load-time-value expression appears within a function compiled with compile,
 If a load-time-value expression is processed by eval, form is evaluated in a null lexical environment, and one value is returned. Implementations that implicitly compile (or partially compile) expressions processed by eval might evaluate form only once, at the time this compilation is performed. 
 If the same list (load-time-value form) is evaluated or compiled more than once, it is implementation-dependent whether form is evaluated only once or is evaluated more than once. This can happen both when an expression being evaluated or compiled shares substructure, and when the same form is processed by eval or compile multiple times. Since a load-time-value expression can be referenced in more than one place and can be evaluated multiple times by eval, it is implementation-dependent whether each execution returns a fresh object or returns the same object as some other execution. Users must use caution when destructively modifying the resulting object. 
 If two lists (load-time-value form) that are the same under equal but are not identical are evaluated or compiled, their values always come from distinct evaluations of form. Their values may not be coalesced unless read-only-p is t. 
+
 Examples:
 ;;; The function INCR1 always returns the same value, even in different images.
 ;;; The function INCR2 always returns the same value in a given image, 
@@ -47,12 +51,11 @@ Examples:
 (defun baz-ref (n)
   (let ((v (load-time-value (load-time-value (vector 1 2 3) t) nil)))
     (values (svref v n) v)))
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-compile-file, compile, eval, Section 3.2.2.2 (Minimal Compilation), Section 3.2 (Compilation) 
+compile-file, compile, eval
+
 Notes:
 load-time-value must appear outside of quoted structure in a ``for evaluation'' position. In situations which would appear to call for use of load-time-value within a quoted structure, the backquote reader macro is probably called for; see Section 2.4.6 (Backquote). 
 Specifying nil for read-only-p is not a way to force an object to become modifiable if it has already been made read-only. It is only a way to say that, for an object that is modifiable, this operation is not intended to make that object read-only. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: LOAD-TIME-EVAL:R**3-NEW-SPECIAL-FORM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

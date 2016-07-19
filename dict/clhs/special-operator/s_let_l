@@ -1,15 +1,17 @@
-CLHS: Special Operator LET, LET*
+
 Special Operator LET, LET* 
+
 Syntax:
 let ({var | (var [init-form])}*) declaration* form* => result*
 let* ({var | (var [init-form])}*) declaration* form* => result*
-  
+
 Arguments and Values:
 var---a symbol. 
 init-form---a form. 
 declaration---a declare expression; not evaluated. 
 form---a form. 
 results---the values returned by the forms. 
+
 Description:
 let and let* create new variable bindings and execute a series of forms that use these bindings. let performs the bindings in parallel and let* does them sequentially. 
 The form 
@@ -43,6 +45,7 @@ The form
  first evaluates the expression init-form-1, then binds the variable var1 to that value; then it evaluates init-form-2 and binds  var2, and so on. The expressions formj are then evaluated in order; the values of all but the last are discarded (that is, the body of let* is an implicit progn). 
 For both let and let*, if there is not an init-form associated with a var, var is initialized to nil. 
 The special form let has the property that the scope of the name binding does not include any initial value form. For let*, a variable's scope also includes the remaining initial value forms for subsequent variable bindings. 
+
 Examples:
  (setq a 'top) =>  TOP
  (defun dummy-function () a) =>  DUMMY-FUNCTION
@@ -59,10 +62,7 @@ The code
    (setq x (gcd y z))
    ...)
  is incorrect; although x is indeed set before it is used, and is set to a value of the declared type integer, nevertheless x initially takes on the value nil in violation of the type declaration. 
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 progv 
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: VARIABLE-LIST-ASYMMETRY:SYMMETRIZE DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
