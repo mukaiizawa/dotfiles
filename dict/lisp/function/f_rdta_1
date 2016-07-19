@@ -1,0 +1,21 @@
+
+Function READTABLEP
+
+Syntax:
+readtablep object => generalized-boolean
+
+Arguments and Values:
+object---an object.
+generalized-boolean---a generalized boolean.
+
+Description:
+Returns true if object is of type readtable; otherwise, returns false.
+
+Examples:
+ (readtablep *readtable*) =>  true
+ (readtablep (copy-readtable)) =>  true
+ (readtablep '*readtable*) =>  false
+
+Notes:
+ (readtablep object) ==  (typep object 'readtable)
+

@@ -1,1156 +1,685 @@
-&allow-other-keys
-&aux
-&body
-&environment
-&key
-&optional
-&rest
-&whole
-*
-**
-***
-*break-on-signals*
-*compile-file-pathname*
-*compile-file-truename*
-*compile-print*
-*compile-verbose*
-*debug-io*
-*debugger-hook*
-*default-pathname-defaults*
-*error-output*
-*features*
-*gensym-counter*
-*load-pathname*
-*load-print*
-*load-truename*
-*load-verbose*
-*macroexpand-hook*
-*modules*
-*package*
-*print-array*
-*print-base*
-*print-case*
-*print-circle*
-*print-escape*
-*print-gensym*
-*print-length*
-*print-level*
-*print-lines*
-*print-miser-width*
-*print-pprint-dispatch*
-*print-pretty*
-*print-radix*
-*print-readably*
-*print-right-margin*
-*query-io*
-*random-state*
-*read-base*
-*read-default-float-format*
-*read-eval*
-*read-suppress*
-*readtable*
-*standard-input*
-*standard-output*
-*terminal-io*
-*trace-output*
-+
-++
-+++
--
-/
-//
-///
-/=
-1+
-1-
-:abort
-:absolute
-:accessor
-:adjustable
-:after
-:allocation
-:allow-other-keys
-:ansi-cl
-:append
-:argument-precedence-order
-:arguments
-:around
-:array
-:back
-:base
-:before
-:block
-:capitalize
-:case
-:class
-:cltl1
-:cltl2
-:common
-:common-lisp
-:compile-toplevel
-:conc-name
-:constructor
-:copier
-:count
-:create
-:current
-:declare
-:default
-:default-initargs
-:defaults
-:description
-:device
-:direction
-:directory
-:displaced-index-offset
-:displaced-to
-:documentation
-:downcase
-:draft-ansi-cl
-:draft-ansi-cl-2
-:element-type
-:end
-:end1
-:end2
-:environment
-:error
-:escape
-:execute
-:expected-type
-:export
-:external
-:external-format
-:fill
-:fill-pointer
-:format-arguments
-:from-end
-:generic-function
-:generic-function-class
-:gensym
-:host
-:identity
-:identity-with-one-argument
-:ieee-floating-point
-:if-does-not-exist
-:if-exists
-:import-from
-:include
-:index
-:inherited
-:init-form
-:initarg
-:initform
-:initial-contents
-:initial-element
-:initial-offset
-:initial-value
-:input
-:installed
-:instance
-:interactive
-:interactive-function
-:intern
-:internal
-:invert
-:io
-:junk-allowed
-:key
-:lambda-list
-:length
-:level
-:line
-:line-relative
-:linear
-:lines
-:load-toplevel
-:local
-:mandatory
-:metaclass
-:method
-:method-class
-:method-combination
-:miser
-:miser-width
-:most-specific-first
-:most-specific-last
-:name
-:named
-:new-version
-:newest
-:nicknames
-:no-error
-:off
-:oldest
-:on
-:operands
-:operator
-:order
-:output
-:output-file
-:override
-:overwrite
-:per-line-prefix
-:pixel-size
-:pprint-dispatch
-:pre-line-prefix
-:predicate
-:prefix
-:preserve
-:preserve-whitespace
-:pretty
-:previous
-:print
-:print-function
-:print-object
-:probe
-:radix
-:read-only
-:readably
-:reader
-:rehash-size
-:rehash-threshold
-:relative
-:rename
-:rename-and-delete
-:report
-:report-function
-:required
-:right-margin
-:section
-:section-relative
-:shadow
-:shadowing-import-from
-:size
-:slot-names
-:start
-:start1
-:start2
-:stream
-:suffix
-:supersede
-:test
-:test-function
-:test-not
-:type
-:unspecific
-:up
-:upcase
-:use
-:verbose
-:version
-:wild
-:wild-inferiors
-:wild-inferors
-:writer
-:x3j13
-<
-<=
-=
->
->=
-abort
-abs
-acons
-acos
-acosh
-add-method
-adjoin
-adjust-array
-adjustable-array-p
-allocate-instance
-alpha-char-p
-alphanumericp
-and
-append
-apply
-apropos
-apropos-list
-aref
-arithmetic-error
-arithmetic-error-operands
-arithmetic-error-operation
-array
-array-dimension
-array-dimension-limit
-array-dimensions
-array-displacement
-array-element-type
-array-has-fill-pointer-p
-array-in-bounds-p
-array-rank
-array-rank-limit
-array-row-major-index
-array-total-size
-array-total-size-limit
-arrayp
-ash
-asin
-asinh
-assert
-assoc
-assoc-if
-assoc-if-not
-atan
-atanh
-atom
-base-char
-base-string
-bignum
-bit
-bit-and
-bit-andc1
-bit-andc2
-bit-eqv
-bit-ior
-bit-nand
-bit-nor
-bit-not
-bit-orc1
-bit-orc2
-bit-vector
-bit-vector-p
-bit-xor
-block
-boole
-boole-1
-boole-2
-boole-and
-boole-andc1
-boole-andc2
-boole-c1
-boole-c2
-boole-clr
-boole-eqv
-boole-ior
-boole-nand
-boole-nor
-boole-orc1
-boole-orc2
-boole-set
-boole-xor
-boolean
-both-case-p
-boundp
-break
-broadcast-stream
-broadcast-stream-streams
-built-in-class
-butlast
-byte
-byte-position
-byte-size
-caaaar
-caaadr
-caaar
-caadar
-caaddr
-caadr
-caar
-cadaar
-cadadr
-cadar
-caddar
-cadddr
-caddr
-cadr
-call-arguments-limit
-call-method
-call-next-method
-car
-case
-catch
-ccase
-cdaaar
-cdaadr
-cdaar
-cdadar
-cdaddr
-cdadr
-cdar
-cddaar
-cddadr
-cddar
-cdddar
-cddddr
-cdddr
-cddr
-cdr
-ceiling
-cell-error
-cell-error-name
-cerror
-change-class
-char
-char-code
-char-code-limit
-char-downcase
-char-equal
-char-greaterp
-char-int
-char-lessp
-char-name
-char-not-equal
-char-not-greaterp
-char-not-lessp
-char-upcase
-char/=
-char<
-char<=
-char=
-char>
-char>=
-character
-characterp
-check-type
-cis
-class
-class-name
-class-of
-clear-input
-clear-output
-close
-clrhash
-code-char
-coerce
-compilation-speed
-compile
-compile-file
-compile-file-pathname
-compiled-function
-compiled-function-p
-compiler-macro-function
-complement
-complex
-complexp
-compute-applicable-methods
-compute-restarts
-concatenate
-concatenated-stream
-concatenated-stream-streams
-cond
-condition
-conjugate
-cons
-consp
-constantly
-constantp
-continue
-control-error
-copy-alist
-copy-list
-copy-pprint-dispatch
-copy-readtable
-copy-seq
-copy-structure
-copy-symbol
-copy-tree
-cos
-cosh
-count
-count-if
-count-if-not
-ctypecase
-decf
-declaim
-declaration
-declare
-decode-float
-decode-universal-time
-defclass
-defconstant
-defgeneric
-define-compiler-macro
-define-condition
-define-method-combination
-define-modify-macro
-define-setf-expander
-define-symbol-macro
-defmacro
-defmethod
-defpackage
-defparameter
-defsetf
-defstruct
-deftype
-defun
-defvar
-delete
-delete-duplicates
-delete-file
-delete-if
-delete-if-not
-delete-package
-denominator
-deposit-field
-describe
-describe-object
-destructuring-bind
-digit-char
-digit-char-p
-directory
-directory-namestring
-disassemble
-division-by-zero
-do
-do*
-do-all-symbols
-do-external-symbols
-do-symbols
-documentation
-dolist
-dotimes
-double-float
-double-float-epsilon
-double-float-negative-epsilon
-dpb
-dribble
-dynamic-extent
-ecase
-echo-stream
-echo-stream-input-stream
-echo-stream-output-stream
-ed
-eighth
-elt
-encode-universal-time
-end-of-file
-endp
-enough-namestring
-ensure-directories-exist
-ensure-generic-function
-eq
-eql
-equal
-equalp
-error
-etypecase
-eval
-eval-when
-evenp
-every
-exp
-export
-expt
-extended-char
-fboundp
-fceiling
-fdefinition
-ffloor
-fifth
-file-author
-file-error
-file-error-pathname
-file-length
-file-namestring
-file-position
-file-stream
-file-string-length
-file-write-date
-fill
-fill-pointer
-find
-find-all-symbols
-find-class
-find-if
-find-if-not
-find-method
-find-package
-find-restart
-find-symbol
-finish-output
-first
-fixnum
-flet
-float
-float-digits
-float-precision
-float-radix
-float-sign
-floating-point-inexact
-floating-point-invalid-operation
-floating-point-overflow
-floating-point-underflow
-floatp
-floor
-fmakunbound
-force-output
-format
-formatter
-fourth
-fresh-line
-fround
-ftruncate
-ftype
-funcall
-function
-function-keywords
-function-lambda-expression
-functionp
-gcd
-generic-function
-gensym
-gentemp
-get
-get-decoded-time
-get-dispatch-macro-character
-get-internal-real-time
-get-internal-run-time
-get-macro-character
-get-output-stream-string
-get-properties
-get-setf-expansion
-get-universal-time
-getf
-gethash
-go
-graphic-char-p
-handler-bind
-handler-case
-hash-table
-hash-table-count
-hash-table-p
-hash-table-rehash-size
-hash-table-rehash-threshold
-hash-table-size
-hash-table-test
-host-namestring
-identity
-if
-ignorable
-ignore
-ignore-errors
-imagpart
-import
-in-package
-incf
-initialize-instance
-inline
-input-stream-p
-inspect
-integer
-integer-decode-float
-integer-length
-integerp
-interactive-stream-p
-intern
-internal-time-units-per-second
-intersection
-invalid-method-error
-invoke-debugger
-invoke-restart
-invoke-restart-interactively
-isqrt
-keyword
-keywordp
-labels
-lambda
-lambda-list-keywords
-lambda-parameters-limit
-last
-lcm
-ldb
-ldb-test
-ldiff
-least-negative-double-float
-least-negative-long-float
-least-negative-normalized-double-float
-least-negative-normalized-long-float
-least-negative-normalized-short-float
-least-negative-normalized-single-float
-least-negative-short-float
-least-negative-single-float
-least-positive-double-float
-least-positive-long-float
-least-positive-normalized-double-float
-least-positive-normalized-long-float
-least-positive-normalized-short-float
-least-positive-normalized-single-float
-least-positive-short-float
-least-positive-single-float
-length
-let
-let*
-lisp-implementation-type
-lisp-implementation-version
-list
-list*
-list-all-packages
-list-length
-listen
-listp
-load
-load-logical-pathname-translations
-load-time-value
-locally
-log
-logand
-logandc1
-logandc2
-logbitp
-logcount
-logeqv
-logical-pathname
-logical-pathname-translations
-logior
-lognand
-lognor
-lognot
-logorc1
-logorc2
-logtest
-logxor
-long-float
-long-float-epsilon
-long-float-negative-epsilon
-long-site-name
-loop
-loop-finish
-lower-case-p
-machine-instance
-machine-type
-machine-version
-macro-function
-macroexpand
-macroexpand-1
-macrolet
-make-array
-make-broadcast-stream
-make-concatenated-stream
-make-condition
-make-dispatch-macro-character
-make-echo-stream
-make-hash-table
-make-instance
-make-instances-obsolete
-make-list
-make-load-form
-make-load-form-saving-slots
-make-method
-make-package
-make-pathname
-make-random-state
-make-sequence
-make-string
-make-string-input-stream
-make-string-output-stream
-make-symbol
-make-synonym-stream
-make-two-way-stream
-makunbound
-map
-map-into
-mapc
-mapcan
-mapcar
-mapcon
-maphash
-mapl
-maplist
-mask-field
-max
-member
-member-if
-member-if-not
-merge
-merge-pathnames
-method
-method-combination
-method-combination-error
-method-qualifiers
-min
-minusp
-mismatch
-mod
-most-negative-double-float
-most-negative-fixnum
-most-negative-long-float
-most-negative-short-float
-most-negative-single-float
-most-positive-double-float
-most-positive-fixnum
-most-positive-long-float
-most-positive-short-float
-most-positive-single-float
-muffle-warning
-multiple-value-bind
-multiple-value-call
-multiple-value-list
-multiple-value-prog1
-multiple-value-setq
-multiple-values-limit
-name-char
-namestring
-nbutlast
-nconc
-next-method-p
-nil
-nintersection
-ninth
-no-applicable-method
-no-next-method
-not
-notany
-notevery
-notinline
-nreconc
-nreverse
-nset-difference
-nset-exclusive-or
-nstring-capitalize
-nstring-downcase
-nstring-upcase
-nsublis
-nsubst
-nsubst-if
-nsubst-if-not
-nsubstitute
-nsubstitute-if
-nsubstitute-if-not
-nth
-nth-value
-nthcdr
-null
-number
-numberp
-numerator
-nunion
-oddp
-open
-open-stream-p
-optimize
-or
-otherwise
-output-stream-p
-package
-package-error
-package-error-package
-package-name
-package-nicknames
-package-shadowing-symbols
-package-use-list
-package-used-by-list
-packagep
-pairlis
-parse-error
-parse-integer
-parse-namestring
-pathname
-pathname-device
-pathname-directory
-pathname-host
-pathname-match-p
-pathname-name
-pathname-type
-pathname-version
-pathnamep
-peek-char
-phase
-pi
-plusp
-pop
-position
-position-if
-position-if-not
-pprint
-pprint-dispatch
-pprint-exit-if-list-exhausted
-pprint-fill
-pprint-indent
-pprint-linear
-pprint-logical-block
-pprint-newline
-pprint-pop
-pprint-tab
-pprint-tabular
-prin1
-prin1-to-string
-princ
-princ-to-string
-print
-print-not-readable
-print-not-readable-object
-print-object
-print-unreadable-object
-probe-file
-proclaim
-prog
-prog*
-prog1
-prog2
-progn
-program-error
-progv
-provide
-psetf
-psetq
-push
-pushnew
-quote
-random
-random-state
-random-state-p
-rassoc
-rassoc-if
-rassoc-if-not
-ratio
-rational
-rationalize
-rationalp
-read
-read-byte
-read-char
-read-char-no-hang
-read-delimited-list
-read-from-string
-read-line
-read-preserving-whitespace
-read-sequence
-reader-error
-readtable
-readtable-case
-readtablep
-real
-realp
-realpart
-reduce
-reinitialize-instance
-rem
-remf
-remhash
-remove
-remove-duplicates
-remove-if
-remove-if-not
-remove-method
-remprop
-rename-file
-rename-package
-replace
-require
-rest
-restart
-restart-bind
-restart-case
-restart-name
-return
-return-from
-revappend
-reverse
-room
-rotatef
-round
-row-major-aref
-rplaca
-rplacd
-safety
-satisfies
-sbit
-scale-float
-schar
-search
-second
-sequence
-serious-condition
-set
-set-difference
-set-dispatch-macro-character
-set-exclusive-or
-set-macro-character
-set-pprint-dispatch
-set-syntax-from-char
-setf
-setq
-seventh
-shadow
-shadowing-import
-shared-initialize
-shiftf
-short-float
-short-float-epsilon
-short-float-negative-epsilon
-short-site-name
-signal
-signed-byte
-signum
-simple-array
-simple-base-string
-simple-bit-vector
-simple-bit-vector-p
-simple-condition
-simple-condition-format-arguments
-simple-condition-format-control
-simple-error
-simple-string
-simple-string-p
-simple-type-error
-simple-vector
-simple-vector-p
-simple-warning
-sin
-single-float
-single-float-epsilon
-single-float-negative-epsilon
-sinh
-sixth
-sleep
-slot-boundp
-slot-exists-p
-slot-makunbound
-slot-missing
-slot-unbound
-slot-value
-software-type
-software-version
-some
-sort
-space
-special
-special-operator-p
-speed
-sqrt
-stable-sort
-standard
-standard-char
-standard-char-p
-standard-class
-standard-generic-function
-standard-method
-standard-object
-step
-storage-condition
-store-value
-stream
-stream-element-type
-stream-error
-stream-error-stream
-stream-external-format
-streamp
-string
-string-capitalize
-string-downcase
-string-equal
-string-greaterp
-string-left-trim
-string-lessp
-string-not-equal
-string-not-greaterp
-string-not-lessp
-string-right-trim
-string-stream
-string-trim
-string-upcase
-string/=
-string<
-string<=
-string=
-string>
-string>=
-stringp
-structure
-structure-class
-structure-object
-style-warning
-sublis
-subseq
-subsetp
-subst
-subst-if
-subst-if-not
-substitute
-substitute-if
-substitute-if-not
-subtypep
-svref
-sxhash
-symbol
-symbol-function
-symbol-macrolet
-symbol-name
-symbol-package
-symbol-plist
-symbol-value
-symbolp
-synonym-stream
-synonym-stream-symbol
-t
-tagbody
-tailp
-tan
-tanh
-tenth
-terpri
-the
-third
-throw
-time
-trace
-translate-logical-pathname
-translate-pathname
-tree-equal
-truename
-truncate
-two-way-stream
-two-way-stream-input-stream
-two-way-stream-output-stream
-type
-type-error
-type-error-datum
-type-error-expected-type
-type-of
-typecase
-typep
-unbound-slot
-unbound-slot-instance
-unbound-variable
-undefined-function
-unexport
-unintern
-union
-unless
-unread-char
-unsigned-byte
-untrace
-unuse-package
-unwind-protect
-update-instance-for-different-class
-update-instance-for-redefined-class
-upgraded-array-element-type
-upgraded-complex-part-type
-upper-case-p
-use-package
-use-value
-user-homedir-pathname
-values
-values-list
-variable
-vector
-vector-pop
-vector-push
-vector-push-extend
-vectorp
-warn
-warning
-when
-wild-pathname-p
-with-accessors
-with-compilation-unit
-with-condition-restarts
-with-hash-table-iterator
-with-input-from-string
-with-open-file
-with-open-stream
-with-output-to-string
-with-package-iterator
-with-simple-restart
-with-slots
-with-standard-io-syntax
-write
-write-byte
-write-char
-write-line
-write-sequence
-write-string
-write-to-string
-y-or-n-p
-yes-or-no-p
-zerop
+Accessor aref	~/dotfiles/dict/lisp/function/f_aref
+Accessor bit, sbit	~/dotfiles/dict/lisp/function/f_bt_sb
+Accessor car, cdr, caar, cadr, cdar...	~/dotfiles/dict/lisp/function/f_car_c
+Accessor char, schar	~/dotfiles/dict/lisp/function/f_char_
+Accessor compiler-macro-function	~/dotfiles/dict/lisp/function/f_cmp_ma
+Accessor elt	~/dotfiles/dict/lisp/function/f_elt
+Accessor fdefinition	~/dotfiles/dict/lisp/function/f_fdefin
+Accessor fill-pointer	~/dotfiles/dict/lisp/function/f_fill_p
+Accessor find-class	~/dotfiles/dict/lisp/function/f_find_c
+Accessor first, second, third, fourth...	~/dotfiles/dict/lisp/function/f_firstc
+Accessor get	~/dotfiles/dict/lisp/function/f_get
+Accessor getf	~/dotfiles/dict/lisp/function/f_getf
+Accessor gethash	~/dotfiles/dict/lisp/function/f_gethas
+Accessor ldb	~/dotfiles/dict/lisp/function/f_ldb
+Accessor logical-pathname-translations	~/dotfiles/dict/lisp/function/f_logica
+Accessor macro-function	~/dotfiles/dict/lisp/function/f_macro_
+Accessor mask-field	~/dotfiles/dict/lisp/function/f_mask_f
+Accessor nth	~/dotfiles/dict/lisp/function/f_nth
+Accessor readtable-case	~/dotfiles/dict/lisp/function/f_rdtabl
+Accessor rest	~/dotfiles/dict/lisp/function/f_rest
+Accessor row-major-aref	~/dotfiles/dict/lisp/function/f_row_ma
+Accessor subseq	~/dotfiles/dict/lisp/function/f_subseq
+Accessor svref	~/dotfiles/dict/lisp/function/f_svref
+Accessor symbol-function	~/dotfiles/dict/lisp/function/f_symb_1
+Accessor symbol-plist	~/dotfiles/dict/lisp/function/f_symb_4
+Accessor symbol-value	~/dotfiles/dict/lisp/function/f_symb_5
+Accessor values	~/dotfiles/dict/lisp/function/f_values
+Condition Type arithmetic-error	~/dotfiles/dict/lisp/condition-type/e_arithm
+Condition Type cell-error	~/dotfiles/dict/lisp/condition-type/e_cell_e
+Condition Type condition	~/dotfiles/dict/lisp/condition-type/e_cnd
+Condition Type control-error	~/dotfiles/dict/lisp/condition-type/e_contro
+Condition Type division-by-zero	~/dotfiles/dict/lisp/condition-type/e_divisi
+Condition Type end-of-file	~/dotfiles/dict/lisp/condition-type/e_end_of
+Condition Type error	~/dotfiles/dict/lisp/condition-type/e_error
+Condition Type file-error	~/dotfiles/dict/lisp/condition-type/e_file_e
+Condition Type floating-point-inexact	~/dotfiles/dict/lisp/condition-type/e_floa_1
+Condition Type floating-point-invalid-operation	~/dotfiles/dict/lisp/condition-type/e_floati
+Condition Type floating-point-overflow	~/dotfiles/dict/lisp/condition-type/e_floa_2
+Condition Type floating-point-underflow	~/dotfiles/dict/lisp/condition-type/e_floa_3
+Condition Type package-error	~/dotfiles/dict/lisp/condition-type/e_pkg_er
+Condition Type parse-error	~/dotfiles/dict/lisp/condition-type/e_parse_
+Condition Type print-not-readable	~/dotfiles/dict/lisp/condition-type/e_pr_not
+Condition Type program-error	~/dotfiles/dict/lisp/condition-type/e_progra
+Condition Type reader-error	~/dotfiles/dict/lisp/condition-type/e_rder_e
+Condition Type serious-condition	~/dotfiles/dict/lisp/condition-type/e_seriou
+Condition Type simple-condition	~/dotfiles/dict/lisp/condition-type/e_smp_cn
+Condition Type simple-error	~/dotfiles/dict/lisp/condition-type/e_smp_er
+Condition Type simple-type-error	~/dotfiles/dict/lisp/condition-type/e_smp_tp
+Condition Type simple-warning	~/dotfiles/dict/lisp/condition-type/e_smp_wa
+Condition Type storage-condition	~/dotfiles/dict/lisp/condition-type/e_storag
+Condition Type stream-error	~/dotfiles/dict/lisp/condition-type/e_stm_er
+Condition Type style-warning	~/dotfiles/dict/lisp/condition-type/e_style_
+Condition Type type-error	~/dotfiles/dict/lisp/condition-type/e_tp_err
+Condition Type unbound-slot	~/dotfiles/dict/lisp/condition-type/e_unboun
+Condition Type unbound-variable	~/dotfiles/dict/lisp/condition-type/e_unbo_1
+Condition Type undefined-function	~/dotfiles/dict/lisp/condition-type/e_undefi
+Condition Type warning	~/dotfiles/dict/lisp/condition-type/e_warnin
+Constant Variable array-dimension-limit	~/dotfiles/dict/lisp/variable/v_ar_dim
+Constant Variable array-rank-limit	~/dotfiles/dict/lisp/variable/v_ar_ran
+Constant Variable array-total-size-limit	~/dotfiles/dict/lisp/variable/v_ar_tot
+Constant Variable boole-1, boole-2...	~/dotfiles/dict/lisp/variable/v_b_1_b
+Constant Variable call-arguments-limit	~/dotfiles/dict/lisp/variable/v_call_a
+Constant Variable char-code-limit	~/dotfiles/dict/lisp/variable/v_char_c
+Constant Variable internal-time-units-per-second	~/dotfiles/dict/lisp/variable/v_intern
+Constant Variable lambda-list-keywords	~/dotfiles/dict/lisp/variable/v_lambda
+Constant Variable lambda-parameters-limit	~/dotfiles/dict/lisp/variable/v_lamb_1
+Constant Variable most-positive-fixnum...	~/dotfiles/dict/lisp/variable/v_most_p
+Constant Variable most-positive-short-float...	~/dotfiles/dict/lisp/variable/v_most_1
+Constant Variable multiple-values-limit	~/dotfiles/dict/lisp/variable/v_multip
+Constant Variable nil	~/dotfiles/dict/lisp/variable/v_nil
+Constant Variable pi	~/dotfiles/dict/lisp/variable/v_pi
+Constant Variable short-float-epsilon...	~/dotfiles/dict/lisp/variable/v_short_
+Constant Variable t	~/dotfiles/dict/lisp/variable/v_t
+Declaration declaration	~/dotfiles/dict/lisp/declaration/d_declar
+Declaration dynamic-extent	~/dotfiles/dict/lisp/declaration/d_dynami
+Declaration ftype	~/dotfiles/dict/lisp/declaration/d_ftype
+Declaration ignore, ignorable	~/dotfiles/dict/lisp/declaration/d_ignore
+Declaration inline, notinline	~/dotfiles/dict/lisp/declaration/d_inline
+Declaration optimize	~/dotfiles/dict/lisp/declaration/d_optimi
+Declaration special	~/dotfiles/dict/lisp/declaration/d_specia
+Declaration type	~/dotfiles/dict/lisp/declaration/d_type
+Function *	~/dotfiles/dict/lisp/function/f_st
+Function +	~/dotfiles/dict/lisp/function/f_pl
+Function -	~/dotfiles/dict/lisp/function/f__
+Function /	~/dotfiles/dict/lisp/function/f_sl
+Function 1+, 1-	~/dotfiles/dict/lisp/function/f_1pl_1_
+Function =, /=, <, >, <=, >=	~/dotfiles/dict/lisp/function/f_eq_sle
+Function abort, continue, muffle-warning...	~/dotfiles/dict/lisp/function/f_abortc
+Function abs	~/dotfiles/dict/lisp/function/f_abs
+Function acons	~/dotfiles/dict/lisp/function/f_acons
+Function adjoin	~/dotfiles/dict/lisp/function/f_adjoin
+Function adjust-array	~/dotfiles/dict/lisp/function/f_adjust
+Function adjustable-array-p	~/dotfiles/dict/lisp/function/f_adju_1
+Function alpha-char-p	~/dotfiles/dict/lisp/function/f_alpha_
+Function alphanumericp	~/dotfiles/dict/lisp/function/f_alphan
+Function append	~/dotfiles/dict/lisp/function/f_append
+Function apply	~/dotfiles/dict/lisp/function/f_apply
+Function apropos, apropos-list	~/dotfiles/dict/lisp/function/f_apropo
+Function arithmetic-error-operands...	~/dotfiles/dict/lisp/function/f_arithm
+Function array-dimension	~/dotfiles/dict/lisp/function/f_ar_dim
+Function array-dimensions	~/dotfiles/dict/lisp/function/f_ar_d_1
+Function array-displacement	~/dotfiles/dict/lisp/function/f_ar_dis
+Function array-element-type	~/dotfiles/dict/lisp/function/f_ar_ele
+Function array-has-fill-pointer-p	~/dotfiles/dict/lisp/function/f_ar_has
+Function array-in-bounds-p	~/dotfiles/dict/lisp/function/f_ar_in_
+Function array-rank	~/dotfiles/dict/lisp/function/f_ar_ran
+Function array-row-major-index	~/dotfiles/dict/lisp/function/f_ar_row
+Function array-total-size	~/dotfiles/dict/lisp/function/f_ar_tot
+Function arrayp	~/dotfiles/dict/lisp/function/f_arrayp
+Function ash	~/dotfiles/dict/lisp/function/f_ash
+Function asin, acos, atan	~/dotfiles/dict/lisp/function/f_asin_
+Function assoc, assoc-if, assoc-if-not	~/dotfiles/dict/lisp/function/f_assocc
+Function atom	~/dotfiles/dict/lisp/function/f_atom
+Function bit-and, bit-andc1, bit-andc2...	~/dotfiles/dict/lisp/function/f_bt_and
+Function bit-vector-p	~/dotfiles/dict/lisp/function/f_bt_vec
+Function boole	~/dotfiles/dict/lisp/function/f_boole
+Function boundp	~/dotfiles/dict/lisp/function/f_boundp
+Function break	~/dotfiles/dict/lisp/function/f_break
+Function broadcast-stream-streams	~/dotfiles/dict/lisp/function/f_broadc
+Function butlast, nbutlast	~/dotfiles/dict/lisp/function/f_butlas
+Function byte, byte-size, byte-position	~/dotfiles/dict/lisp/function/f_by_by
+Function cell-error-name	~/dotfiles/dict/lisp/function/f_cell_e
+Function cerror	~/dotfiles/dict/lisp/function/f_cerror
+Function char-code	~/dotfiles/dict/lisp/function/f_char_c
+Function char-int	~/dotfiles/dict/lisp/function/f_char_i
+Function char-name	~/dotfiles/dict/lisp/function/f_char_n
+Function char-upcase, char-downcase	~/dotfiles/dict/lisp/function/f_char_u
+Function char=, char/=, char<, char>...	~/dotfiles/dict/lisp/function/f_chareq
+Function character	~/dotfiles/dict/lisp/function/f_ch
+Function characterp	~/dotfiles/dict/lisp/function/f_chp
+Function cis	~/dotfiles/dict/lisp/function/f_cis
+Function class-of	~/dotfiles/dict/lisp/function/f_clas_1
+Function clear-input	~/dotfiles/dict/lisp/function/f_clear_
+Function close	~/dotfiles/dict/lisp/function/f_close
+Function clrhash	~/dotfiles/dict/lisp/function/f_clrhas
+Function code-char	~/dotfiles/dict/lisp/function/f_code_c
+Function coerce	~/dotfiles/dict/lisp/function/f_coerce
+Function compile	~/dotfiles/dict/lisp/function/f_cmp
+Function compile-file	~/dotfiles/dict/lisp/function/f_cmp_fi
+Function compile-file-pathname	~/dotfiles/dict/lisp/function/f_cmp__1
+Function compiled-function-p	~/dotfiles/dict/lisp/function/f_cmpd_f
+Function complement	~/dotfiles/dict/lisp/function/f_comple
+Function complex	~/dotfiles/dict/lisp/function/f_comp_2
+Function complexp	~/dotfiles/dict/lisp/function/f_comp_3
+Function compute-restarts	~/dotfiles/dict/lisp/function/f_comp_1
+Function concatenate	~/dotfiles/dict/lisp/function/f_concat
+Function concatenated-stream-streams	~/dotfiles/dict/lisp/function/f_conc_1
+Function conjugate	~/dotfiles/dict/lisp/function/f_conjug
+Function cons	~/dotfiles/dict/lisp/function/f_cons
+Function consp	~/dotfiles/dict/lisp/function/f_consp
+Function constantly	~/dotfiles/dict/lisp/function/f_cons_1
+Function constantp	~/dotfiles/dict/lisp/function/f_consta
+Function copy-alist	~/dotfiles/dict/lisp/function/f_cp_ali
+Function copy-list	~/dotfiles/dict/lisp/function/f_cp_lis
+Function copy-pprint-dispatch	~/dotfiles/dict/lisp/function/f_cp_ppr
+Function copy-readtable	~/dotfiles/dict/lisp/function/f_cp_rdt
+Function copy-seq	~/dotfiles/dict/lisp/function/f_cp_seq
+Function copy-structure	~/dotfiles/dict/lisp/function/f_cp_stu
+Function copy-symbol	~/dotfiles/dict/lisp/function/f_cp_sym
+Function copy-tree	~/dotfiles/dict/lisp/function/f_cp_tre
+Function count, count-if, count-if-not	~/dotfiles/dict/lisp/function/f_countc
+Function decode-float, scale-float...	~/dotfiles/dict/lisp/function/f_dec_fl
+Function decode-universal-time	~/dotfiles/dict/lisp/function/f_dec_un
+Function delete-file	~/dotfiles/dict/lisp/function/f_del_fi
+Function delete-package	~/dotfiles/dict/lisp/function/f_del_pk
+Function deposit-field	~/dotfiles/dict/lisp/function/f_deposi
+Function describe	~/dotfiles/dict/lisp/function/f_descri
+Function digit-char	~/dotfiles/dict/lisp/function/f_digit_
+Function digit-char-p	~/dotfiles/dict/lisp/function/f_digi_1
+Function directory	~/dotfiles/dict/lisp/function/f_dir
+Function disassemble	~/dotfiles/dict/lisp/function/f_disass
+Function dpb	~/dotfiles/dict/lisp/function/f_dpb
+Function dribble	~/dotfiles/dict/lisp/function/f_dribbl
+Function echo-stream-input-stream...	~/dotfiles/dict/lisp/function/f_echo_s
+Function ed	~/dotfiles/dict/lisp/function/f_ed
+Function encode-universal-time	~/dotfiles/dict/lisp/function/f_encode
+Function endp	~/dotfiles/dict/lisp/function/f_endp
+Function ensure-directories-exist	~/dotfiles/dict/lisp/function/f_ensu_1
+Function ensure-generic-function	~/dotfiles/dict/lisp/function/f_ensure
+Function eq	~/dotfiles/dict/lisp/function/f_eq
+Function eql	~/dotfiles/dict/lisp/function/f_eql
+Function equal	~/dotfiles/dict/lisp/function/f_equal
+Function equalp	~/dotfiles/dict/lisp/function/f_equalp
+Function error	~/dotfiles/dict/lisp/function/f_error
+Function eval	~/dotfiles/dict/lisp/function/f_eval
+Function evenp, oddp	~/dotfiles/dict/lisp/function/f_evenpc
+Function every, some, notevery, notany	~/dotfiles/dict/lisp/function/f_everyc
+Function exp, expt	~/dotfiles/dict/lisp/function/f_exp_e
+Function export	~/dotfiles/dict/lisp/function/f_export
+Function fboundp	~/dotfiles/dict/lisp/function/f_fbound
+Function file-author	~/dotfiles/dict/lisp/function/f_file_a
+Function file-error-pathname	~/dotfiles/dict/lisp/function/f_file_e
+Function file-length	~/dotfiles/dict/lisp/function/f_file_l
+Function file-position	~/dotfiles/dict/lisp/function/f_file_p
+Function file-string-length	~/dotfiles/dict/lisp/function/f_file_s
+Function file-write-date	~/dotfiles/dict/lisp/function/f_file_w
+Function fill	~/dotfiles/dict/lisp/function/f_fill
+Function find, find-if, find-if-not	~/dotfiles/dict/lisp/function/f_find_
+Function find-all-symbols	~/dotfiles/dict/lisp/function/f_find_a
+Function find-package	~/dotfiles/dict/lisp/function/f_find_p
+Function find-restart	~/dotfiles/dict/lisp/function/f_find_r
+Function find-symbol	~/dotfiles/dict/lisp/function/f_find_s
+Function finish-output, force-output...	~/dotfiles/dict/lisp/function/f_finish
+Function float	~/dotfiles/dict/lisp/function/f_float
+Function floatp	~/dotfiles/dict/lisp/function/f_floatp
+Function floor, ffloor, ceiling, fceiling...	~/dotfiles/dict/lisp/function/f_floorc
+Function fmakunbound	~/dotfiles/dict/lisp/function/f_fmakun
+Function format	~/dotfiles/dict/lisp/function/f_format
+Function funcall	~/dotfiles/dict/lisp/function/f_funcal
+Function function-lambda-expression	~/dotfiles/dict/lisp/function/f_fn_lam
+Function functionp	~/dotfiles/dict/lisp/function/f_fnp
+Function gcd	~/dotfiles/dict/lisp/function/f_gcd
+Function gensym	~/dotfiles/dict/lisp/function/f_gensym
+Function gentemp	~/dotfiles/dict/lisp/function/f_gentem
+Function get-internal-real-time	~/dotfiles/dict/lisp/function/f_get_in
+Function get-internal-run-time	~/dotfiles/dict/lisp/function/f_get__1
+Function get-output-stream-string	~/dotfiles/dict/lisp/function/f_get_ou
+Function get-properties	~/dotfiles/dict/lisp/function/f_get_pr
+Function get-setf-expansion	~/dotfiles/dict/lisp/function/f_get_se
+Function get-universal-time, get-decoded-time	~/dotfiles/dict/lisp/function/f_get_un
+Function graphic-char-p	~/dotfiles/dict/lisp/function/f_graphi
+Function hash-table-count	~/dotfiles/dict/lisp/function/f_hash_1
+Function hash-table-p	~/dotfiles/dict/lisp/function/f_hash_t
+Function hash-table-rehash-size	~/dotfiles/dict/lisp/function/f_hash_2
+Function hash-table-rehash-threshold	~/dotfiles/dict/lisp/function/f_hash_3
+Function hash-table-size	~/dotfiles/dict/lisp/function/f_hash_4
+Function hash-table-test	~/dotfiles/dict/lisp/function/f_hash_5
+Function identity	~/dotfiles/dict/lisp/function/f_identi
+Function import	~/dotfiles/dict/lisp/function/f_import
+Function input-stream-p, output-stream-p	~/dotfiles/dict/lisp/function/f_in_stm
+Function inspect	~/dotfiles/dict/lisp/function/f_inspec
+Function integer-length	~/dotfiles/dict/lisp/function/f_intege
+Function integerp	~/dotfiles/dict/lisp/function/f_inte_1
+Function interactive-stream-p	~/dotfiles/dict/lisp/function/f_intera
+Function intern	~/dotfiles/dict/lisp/function/f_intern
+Function intersection, nintersection	~/dotfiles/dict/lisp/function/f_isec_
+Function invalid-method-error	~/dotfiles/dict/lisp/function/f_invali
+Function invoke-debugger	~/dotfiles/dict/lisp/function/f_invoke
+Function invoke-restart	~/dotfiles/dict/lisp/function/f_invo_1
+Function invoke-restart-interactively	~/dotfiles/dict/lisp/function/f_invo_2
+Function keywordp	~/dotfiles/dict/lisp/function/f_kwdp
+Function last	~/dotfiles/dict/lisp/function/f_last
+Function lcm	~/dotfiles/dict/lisp/function/f_lcm
+Function ldb-test	~/dotfiles/dict/lisp/function/f_ldb_te
+Function ldiff, tailp	~/dotfiles/dict/lisp/function/f_ldiffc
+Function length	~/dotfiles/dict/lisp/function/f_length
+Function lisp-implementation-type...	~/dotfiles/dict/lisp/function/f_lisp_i
+Function list, list*	~/dotfiles/dict/lisp/function/f_list_
+Function list-all-packages	~/dotfiles/dict/lisp/function/f_list_a
+Function list-length	~/dotfiles/dict/lisp/function/f_list_l
+Function listen	~/dotfiles/dict/lisp/function/f_listen
+Function listp	~/dotfiles/dict/lisp/function/f_listp
+Function load	~/dotfiles/dict/lisp/function/f_load
+Function load-logical-pathname-translations	~/dotfiles/dict/lisp/function/f_ld_log
+Function log	~/dotfiles/dict/lisp/function/f_log
+Function logand, logandc1, logandc2...	~/dotfiles/dict/lisp/function/f_logand
+Function logbitp	~/dotfiles/dict/lisp/function/f_logbtp
+Function logcount	~/dotfiles/dict/lisp/function/f_logcou
+Function logical-pathname	~/dotfiles/dict/lisp/function/f_logi_1
+Function logtest	~/dotfiles/dict/lisp/function/f_logtes
+Function machine-instance	~/dotfiles/dict/lisp/function/f_mach_i
+Function machine-type	~/dotfiles/dict/lisp/function/f_mach_t
+Function machine-version	~/dotfiles/dict/lisp/function/f_mach_v
+Function macroexpand, macroexpand-1	~/dotfiles/dict/lisp/function/f_mexp_
+Function make-array	~/dotfiles/dict/lisp/function/f_mk_ar
+Function make-broadcast-stream	~/dotfiles/dict/lisp/function/f_mk_bro
+Function make-concatenated-stream	~/dotfiles/dict/lisp/function/f_mk_con
+Function make-condition	~/dotfiles/dict/lisp/function/f_mk_cnd
+Function make-dispatch-macro-character	~/dotfiles/dict/lisp/function/f_mk_dis
+Function make-echo-stream	~/dotfiles/dict/lisp/function/f_mk_ech
+Function make-hash-table	~/dotfiles/dict/lisp/function/f_mk_has
+Function make-list	~/dotfiles/dict/lisp/function/f_mk_lis
+Function make-load-form-saving-slots	~/dotfiles/dict/lisp/function/f_mk_l_1
+Function make-package	~/dotfiles/dict/lisp/function/f_mk_pkg
+Function make-pathname	~/dotfiles/dict/lisp/function/f_mk_pn
+Function make-random-state	~/dotfiles/dict/lisp/function/f_mk_rnd
+Function make-sequence	~/dotfiles/dict/lisp/function/f_mk_seq
+Function make-string	~/dotfiles/dict/lisp/function/f_mk_stg
+Function make-string-input-stream	~/dotfiles/dict/lisp/function/f_mk_s_1
+Function make-string-output-stream	~/dotfiles/dict/lisp/function/f_mk_s_2
+Function make-symbol	~/dotfiles/dict/lisp/function/f_mk_sym
+Function make-synonym-stream	~/dotfiles/dict/lisp/function/f_mk_syn
+Function make-two-way-stream	~/dotfiles/dict/lisp/function/f_mk_two
+Function makunbound	~/dotfiles/dict/lisp/function/f_makunb
+Function map	~/dotfiles/dict/lisp/function/f_map
+Function map-into	~/dotfiles/dict/lisp/function/f_map_in
+Function mapc, mapcar, mapcan, mapl...	~/dotfiles/dict/lisp/function/f_mapc_
+Function maphash	~/dotfiles/dict/lisp/function/f_maphas
+Function max, min	~/dotfiles/dict/lisp/function/f_max_m
+Function member, member-if, member-if-not	~/dotfiles/dict/lisp/function/f_mem_m
+Function merge	~/dotfiles/dict/lisp/function/f_merge
+Function merge-pathnames	~/dotfiles/dict/lisp/function/f_merge_
+Function method-combination-error	~/dotfiles/dict/lisp/function/f_meth_1
+Function minusp, plusp	~/dotfiles/dict/lisp/function/f_minusp
+Function mismatch	~/dotfiles/dict/lisp/function/f_mismat
+Function mod, rem	~/dotfiles/dict/lisp/function/f_mod_r
+Function name-char	~/dotfiles/dict/lisp/function/f_name_c
+Function namestring, file-namestring...	~/dotfiles/dict/lisp/function/f_namest
+Function nconc	~/dotfiles/dict/lisp/function/f_nconc
+Function not	~/dotfiles/dict/lisp/function/f_not
+Function nthcdr	~/dotfiles/dict/lisp/function/f_nthcdr
+Function null	~/dotfiles/dict/lisp/function/f_null
+Function numberp	~/dotfiles/dict/lisp/function/f_nump
+Function numerator, denominator	~/dotfiles/dict/lisp/function/f_numera
+Function open	~/dotfiles/dict/lisp/function/f_open
+Function open-stream-p	~/dotfiles/dict/lisp/function/f_open_s
+Function package-error-package	~/dotfiles/dict/lisp/function/f_pkg_er
+Function package-name	~/dotfiles/dict/lisp/function/f_pkg_na
+Function package-nicknames	~/dotfiles/dict/lisp/function/f_pkg_ni
+Function package-shadowing-symbols	~/dotfiles/dict/lisp/function/f_pkg_sh
+Function package-use-list	~/dotfiles/dict/lisp/function/f_pkg_us
+Function package-used-by-list	~/dotfiles/dict/lisp/function/f_pkg__1
+Function packagep	~/dotfiles/dict/lisp/function/f_pkgp
+Function pairlis	~/dotfiles/dict/lisp/function/f_pairli
+Function parse-integer	~/dotfiles/dict/lisp/function/f_parse_
+Function parse-namestring	~/dotfiles/dict/lisp/function/f_pars_1
+Function pathname	~/dotfiles/dict/lisp/function/f_pn
+Function pathname-host, pathname-device...	~/dotfiles/dict/lisp/function/f_pn_hos
+Function pathname-match-p	~/dotfiles/dict/lisp/function/f_pn_mat
+Function pathnamep	~/dotfiles/dict/lisp/function/f_pnp
+Function peek-char	~/dotfiles/dict/lisp/function/f_peek_c
+Function phase	~/dotfiles/dict/lisp/function/f_phase
+Function position, position-if, position-if-not	~/dotfiles/dict/lisp/function/f_pos_p
+Function pprint-dispatch	~/dotfiles/dict/lisp/function/f_ppr_di
+Function pprint-fill, pprint-linear...	~/dotfiles/dict/lisp/function/f_ppr_fi
+Function pprint-indent	~/dotfiles/dict/lisp/function/f_ppr_in
+Function pprint-newline	~/dotfiles/dict/lisp/function/f_ppr_nl
+Function pprint-tab	~/dotfiles/dict/lisp/function/f_ppr_ta
+Function print-not-readable-object	~/dotfiles/dict/lisp/function/f_pr_not
+Function probe-file	~/dotfiles/dict/lisp/function/f_probe_
+Function proclaim	~/dotfiles/dict/lisp/function/f_procla
+Function provide, require	~/dotfiles/dict/lisp/function/f_provid
+Function random	~/dotfiles/dict/lisp/function/f_random
+Function random-state-p	~/dotfiles/dict/lisp/function/f_rnd_st
+Function rassoc, rassoc-if, rassoc-if-not	~/dotfiles/dict/lisp/function/f_rassoc
+Function rational, rationalize	~/dotfiles/dict/lisp/function/f_ration
+Function rationalp	~/dotfiles/dict/lisp/function/f_rati_1
+Function read, read-preserving-whitespace	~/dotfiles/dict/lisp/function/f_rd_rd
+Function read-byte	~/dotfiles/dict/lisp/function/f_rd_by
+Function read-char	~/dotfiles/dict/lisp/function/f_rd_cha
+Function read-char-no-hang	~/dotfiles/dict/lisp/function/f_rd_c_1
+Function read-delimited-list	~/dotfiles/dict/lisp/function/f_rd_del
+Function read-from-string	~/dotfiles/dict/lisp/function/f_rd_fro
+Function read-line	~/dotfiles/dict/lisp/function/f_rd_lin
+Function read-sequence	~/dotfiles/dict/lisp/function/f_rd_seq
+Function readtablep	~/dotfiles/dict/lisp/function/f_rdta_1
+Function realp	~/dotfiles/dict/lisp/function/f_realp
+Function realpart, imagpart	~/dotfiles/dict/lisp/function/f_realpa
+Function reduce	~/dotfiles/dict/lisp/function/f_reduce
+Function remhash	~/dotfiles/dict/lisp/function/f_remhas
+Function remove, remove-if, remove-if-not...	~/dotfiles/dict/lisp/function/f_rm_rm
+Function remove-duplicates, delete-duplicates	~/dotfiles/dict/lisp/function/f_rm_dup
+Function remprop	~/dotfiles/dict/lisp/function/f_rempro
+Function rename-file	~/dotfiles/dict/lisp/function/f_rn_fil
+Function rename-package	~/dotfiles/dict/lisp/function/f_rn_pkg
+Function replace	~/dotfiles/dict/lisp/function/f_replac
+Function restart-name	~/dotfiles/dict/lisp/function/f_rst_na
+Function revappend, nreconc	~/dotfiles/dict/lisp/function/f_revapp
+Function reverse, nreverse	~/dotfiles/dict/lisp/function/f_revers
+Function room	~/dotfiles/dict/lisp/function/f_room
+Function rplaca, rplacd	~/dotfiles/dict/lisp/function/f_rplaca
+Function search	~/dotfiles/dict/lisp/function/f_search
+Function set	~/dotfiles/dict/lisp/function/f_set
+Function set-difference, nset-difference	~/dotfiles/dict/lisp/function/f_set_di
+Function set-dispatch-macro-character...	~/dotfiles/dict/lisp/function/f_set__1
+Function set-exclusive-or, nset-exclusive-or	~/dotfiles/dict/lisp/function/f_set_ex
+Function set-macro-character, get-macro-character	~/dotfiles/dict/lisp/function/f_set_ma
+Function set-pprint-dispatch	~/dotfiles/dict/lisp/function/f_set_pp
+Function set-syntax-from-char	~/dotfiles/dict/lisp/function/f_set_sy
+Function shadow	~/dotfiles/dict/lisp/function/f_shadow
+Function shadowing-import	~/dotfiles/dict/lisp/function/f_shdw_i
+Function short-site-name, long-site-name	~/dotfiles/dict/lisp/function/f_short_
+Function signal	~/dotfiles/dict/lisp/function/f_signal
+Function signum	~/dotfiles/dict/lisp/function/f_signum
+Function simple-bit-vector-p	~/dotfiles/dict/lisp/function/f_smp_bt
+Function simple-condition-format-control...	~/dotfiles/dict/lisp/function/f_smp_cn
+Function simple-string-p	~/dotfiles/dict/lisp/function/f_smp_st
+Function simple-vector-p	~/dotfiles/dict/lisp/function/f_smp_ve
+Function sin, cos, tan	~/dotfiles/dict/lisp/function/f_sin_c
+Function sinh, cosh, tanh, asinh...	~/dotfiles/dict/lisp/function/f_sinh_
+Function sleep	~/dotfiles/dict/lisp/function/f_sleep
+Function slot-boundp	~/dotfiles/dict/lisp/function/f_slt_bo
+Function slot-exists-p	~/dotfiles/dict/lisp/function/f_slt_ex
+Function slot-makunbound	~/dotfiles/dict/lisp/function/f_slt_ma
+Function slot-value	~/dotfiles/dict/lisp/function/f_slt_va
+Function software-type, software-version	~/dotfiles/dict/lisp/function/f_sw_tpc
+Function sort, stable-sort	~/dotfiles/dict/lisp/function/f_sort_
+Function special-operator-p	~/dotfiles/dict/lisp/function/f_specia
+Function sqrt, isqrt	~/dotfiles/dict/lisp/function/f_sqrt_
+Function standard-char-p	~/dotfiles/dict/lisp/function/f_std_ch
+Function stream-element-type	~/dotfiles/dict/lisp/function/f_stm_el
+Function stream-error-stream	~/dotfiles/dict/lisp/function/f_stm_er
+Function stream-external-format	~/dotfiles/dict/lisp/function/f_stm_ex
+Function streamp	~/dotfiles/dict/lisp/function/f_stmp
+Function string	~/dotfiles/dict/lisp/function/f_string
+Function string-trim, string-left-trim...	~/dotfiles/dict/lisp/function/f_stg_tr
+Function string-upcase, string-downcase...	~/dotfiles/dict/lisp/function/f_stg_up
+Function string=, string/=, string>...	~/dotfiles/dict/lisp/function/f_stgeq_
+Function stringp	~/dotfiles/dict/lisp/function/f_stgp
+Function sublis, nsublis	~/dotfiles/dict/lisp/function/f_sublis
+Function subsetp	~/dotfiles/dict/lisp/function/f_subset
+Function subst, subst-if, subst-if-not...	~/dotfiles/dict/lisp/function/f_substc
+Function substitute, substitute-if...	~/dotfiles/dict/lisp/function/f_sbs_s
+Function subtypep	~/dotfiles/dict/lisp/function/f_subtpp
+Function sxhash	~/dotfiles/dict/lisp/function/f_sxhash
+Function symbol-name	~/dotfiles/dict/lisp/function/f_symb_2
+Function symbol-package	~/dotfiles/dict/lisp/function/f_symb_3
+Function symbolp	~/dotfiles/dict/lisp/function/f_symbol
+Function synonym-stream-symbol	~/dotfiles/dict/lisp/function/f_syn_st
+Function terpri, fresh-line	~/dotfiles/dict/lisp/function/f_terpri
+Function translate-logical-pathname	~/dotfiles/dict/lisp/function/f_tr_log
+Function translate-pathname	~/dotfiles/dict/lisp/function/f_tr_pn
+Function tree-equal	~/dotfiles/dict/lisp/function/f_tree_e
+Function truename	~/dotfiles/dict/lisp/function/f_tn
+Function two-way-stream-input-stream...	~/dotfiles/dict/lisp/function/f_two_wa
+Function type-error-datum, type-error-expected-type	~/dotfiles/dict/lisp/function/f_tp_err
+Function type-of	~/dotfiles/dict/lisp/function/f_tp_of
+Function typep	~/dotfiles/dict/lisp/function/f_typep
+Function unbound-slot-instance	~/dotfiles/dict/lisp/function/f_unboun
+Function unexport	~/dotfiles/dict/lisp/function/f_unexpo
+Function unintern	~/dotfiles/dict/lisp/function/f_uninte
+Function union, nunion	~/dotfiles/dict/lisp/function/f_unionc
+Function unread-char	~/dotfiles/dict/lisp/function/f_unrd_c
+Function unuse-package	~/dotfiles/dict/lisp/function/f_unuse_
+Function upgraded-array-element-type	~/dotfiles/dict/lisp/function/f_upgr_1
+Function upgraded-complex-part-type	~/dotfiles/dict/lisp/function/f_upgrad
+Function upper-case-p, lower-case-p...	~/dotfiles/dict/lisp/function/f_upper_
+Function use-package	~/dotfiles/dict/lisp/function/f_use_pk
+Function user-homedir-pathname	~/dotfiles/dict/lisp/function/f_user_h
+Function values-list	~/dotfiles/dict/lisp/function/f_vals_l
+Function vector	~/dotfiles/dict/lisp/function/f_vector
+Function vector-pop	~/dotfiles/dict/lisp/function/f_vec_po
+Function vector-push, vector-push-extend	~/dotfiles/dict/lisp/function/f_vec_ps
+Function vectorp	~/dotfiles/dict/lisp/function/f_vecp
+Function warn	~/dotfiles/dict/lisp/function/f_warn
+Function wild-pathname-p	~/dotfiles/dict/lisp/function/f_wild_p
+Function write, prin1, print, pprint...	~/dotfiles/dict/lisp/function/f_wr_pr
+Function write-byte	~/dotfiles/dict/lisp/function/f_wr_by
+Function write-char	~/dotfiles/dict/lisp/function/f_wr_cha
+Function write-sequence	~/dotfiles/dict/lisp/function/f_wr_seq
+Function write-string, write-line	~/dotfiles/dict/lisp/function/f_wr_stg
+Function write-to-string, prin1-to-string...	~/dotfiles/dict/lisp/function/f_wr_to_
+Function y-or-n-p, yes-or-no-p	~/dotfiles/dict/lisp/function/f_y_or_n
+Function zerop	~/dotfiles/dict/lisp/function/f_zerop
+Local function call-next-method	~/dotfiles/dict/lisp/function/f_call_n
+Local function next-method-p	~/dotfiles/dict/lisp/function/f_next_m
+Local macro call-method, make-method	~/dotfiles/dict/lisp/macro/m_call_m
+Local macro loop-finish	~/dotfiles/dict/lisp/macro/m_loop_f
+Local macro pprint-exit-if-list-exhausted	~/dotfiles/dict/lisp/macro/m_ppr_ex
+Local macro pprint-pop	~/dotfiles/dict/lisp/macro/m_ppr_po
+Macro and	~/dotfiles/dict/lisp/macro/m_and
+Macro assert	~/dotfiles/dict/lisp/macro/m_assert
+Macro case, ccase, ecase	~/dotfiles/dict/lisp/macro/m_case_
+Macro check-type	~/dotfiles/dict/lisp/macro/m_check_
+Macro cond	~/dotfiles/dict/lisp/macro/m_cond
+Macro declaim	~/dotfiles/dict/lisp/macro/m_declai
+Macro defclass	~/dotfiles/dict/lisp/macro/m_defcla
+Macro defconstant	~/dotfiles/dict/lisp/macro/m_defcon
+Macro defgeneric	~/dotfiles/dict/lisp/macro/m_defgen
+Macro define-compiler-macro	~/dotfiles/dict/lisp/macro/m_define
+Macro define-condition	~/dotfiles/dict/lisp/macro/m_defi_5
+Macro define-method-combination	~/dotfiles/dict/lisp/macro/m_defi_4
+Macro define-modify-macro	~/dotfiles/dict/lisp/macro/m_defi_2
+Macro define-setf-expander	~/dotfiles/dict/lisp/macro/m_defi_3
+Macro define-symbol-macro	~/dotfiles/dict/lisp/macro/m_defi_1
+Macro defmacro	~/dotfiles/dict/lisp/macro/m_defmac
+Macro defmethod	~/dotfiles/dict/lisp/macro/m_defmet
+Macro defpackage	~/dotfiles/dict/lisp/macro/m_defpkg
+Macro defparameter, defvar	~/dotfiles/dict/lisp/macro/m_defpar
+Macro defsetf	~/dotfiles/dict/lisp/macro/m_defset
+Macro defstruct	~/dotfiles/dict/lisp/macro/m_defstr
+Macro deftype	~/dotfiles/dict/lisp/macro/m_deftp
+Macro defun	~/dotfiles/dict/lisp/macro/m_defun
+Macro destructuring-bind	~/dotfiles/dict/lisp/macro/m_destru
+Macro do, do*	~/dotfiles/dict/lisp/macro/m_do_do
+Macro do-symbols, do-external-symbols...	~/dotfiles/dict/lisp/macro/m_do_sym
+Macro dolist	~/dotfiles/dict/lisp/macro/m_dolist
+Macro dotimes	~/dotfiles/dict/lisp/macro/m_dotime
+Macro formatter	~/dotfiles/dict/lisp/macro/m_format
+Macro handler-bind	~/dotfiles/dict/lisp/macro/m_handle
+Macro handler-case	~/dotfiles/dict/lisp/macro/m_hand_1
+Macro ignore-errors	~/dotfiles/dict/lisp/macro/m_ignore
+Macro in-package	~/dotfiles/dict/lisp/macro/m_in_pkg
+Macro incf, decf	~/dotfiles/dict/lisp/macro/m_incf_
+Macro lambda	~/dotfiles/dict/lisp/macro/m_lambda
+Macro loop	~/dotfiles/dict/lisp/macro/m_loop
+Macro multiple-value-bind	~/dotfiles/dict/lisp/macro/m_multip
+Macro multiple-value-list	~/dotfiles/dict/lisp/macro/m_mult_1
+Macro multiple-value-setq	~/dotfiles/dict/lisp/macro/m_mult_2
+Macro nth-value	~/dotfiles/dict/lisp/macro/m_nth_va
+Macro or	~/dotfiles/dict/lisp/macro/m_or
+Macro pop	~/dotfiles/dict/lisp/macro/m_pop
+Macro pprint-logical-block	~/dotfiles/dict/lisp/macro/m_ppr_lo
+Macro print-unreadable-object	~/dotfiles/dict/lisp/macro/m_pr_unr
+Macro prog, prog*	~/dotfiles/dict/lisp/macro/m_prog_
+Macro prog1, prog2	~/dotfiles/dict/lisp/macro/m_prog1c
+Macro psetq	~/dotfiles/dict/lisp/macro/m_psetq
+Macro push	~/dotfiles/dict/lisp/macro/m_push
+Macro pushnew	~/dotfiles/dict/lisp/macro/m_pshnew
+Macro remf	~/dotfiles/dict/lisp/macro/m_remf
+Macro restart-bind	~/dotfiles/dict/lisp/macro/m_rst_bi
+Macro restart-case	~/dotfiles/dict/lisp/macro/m_rst_ca
+Macro return	~/dotfiles/dict/lisp/macro/m_return
+Macro rotatef	~/dotfiles/dict/lisp/macro/m_rotate
+Macro setf, psetf	~/dotfiles/dict/lisp/macro/m_setf_
+Macro shiftf	~/dotfiles/dict/lisp/macro/m_shiftf
+Macro step	~/dotfiles/dict/lisp/macro/m_step
+Macro time	~/dotfiles/dict/lisp/macro/m_time
+Macro trace, untrace	~/dotfiles/dict/lisp/macro/m_tracec
+Macro typecase, ctypecase, etypecase	~/dotfiles/dict/lisp/macro/m_tpcase
+Macro when, unless	~/dotfiles/dict/lisp/macro/m_when_
+Macro with-accessors	~/dotfiles/dict/lisp/macro/m_w_acce
+Macro with-compilation-unit	~/dotfiles/dict/lisp/macro/m_w_comp
+Macro with-condition-restarts	~/dotfiles/dict/lisp/macro/m_w_cnd_
+Macro with-hash-table-iterator	~/dotfiles/dict/lisp/macro/m_w_hash
+Macro with-input-from-string	~/dotfiles/dict/lisp/macro/m_w_in_f
+Macro with-open-file	~/dotfiles/dict/lisp/macro/m_w_open
+Macro with-open-stream	~/dotfiles/dict/lisp/macro/m_w_op_1
+Macro with-output-to-string	~/dotfiles/dict/lisp/macro/m_w_out_
+Macro with-package-iterator	~/dotfiles/dict/lisp/macro/m_w_pkg_
+Macro with-simple-restart	~/dotfiles/dict/lisp/macro/m_w_smp_
+Macro with-slots	~/dotfiles/dict/lisp/macro/m_w_slts
+Macro with-standard-io-syntax	~/dotfiles/dict/lisp/macro/m_w_std_
+Restart abort	~/dotfiles/dict/lisp/restart/r_abort
+Restart continue	~/dotfiles/dict/lisp/restart/r_contin
+Restart muffle-warning	~/dotfiles/dict/lisp/restart/r_muffle
+Restart store-value	~/dotfiles/dict/lisp/restart/r_store_
+Restart use-value	~/dotfiles/dict/lisp/restart/r_use_va
+Special Form setq	~/dotfiles/dict/lisp/special-operator/s_setq
+Special Operator block	~/dotfiles/dict/lisp/special-operator/s_block
+Special Operator catch	~/dotfiles/dict/lisp/special-operator/s_catch
+Special Operator eval-when	~/dotfiles/dict/lisp/special-operator/s_eval_w
+Special Operator flet, labels, macrolet	~/dotfiles/dict/lisp/special-operator/s_flet_
+Special Operator function	~/dotfiles/dict/lisp/special-operator/s_fn
+Special Operator go	~/dotfiles/dict/lisp/special-operator/s_go
+Special Operator if	~/dotfiles/dict/lisp/special-operator/s_if
+Special Operator let, let*	~/dotfiles/dict/lisp/special-operator/s_let_l
+Special Operator load-time-value	~/dotfiles/dict/lisp/special-operator/s_ld_tim
+Special Operator locally	~/dotfiles/dict/lisp/special-operator/s_locall
+Special Operator multiple-value-call	~/dotfiles/dict/lisp/special-operator/s_multip
+Special Operator multiple-value-prog1	~/dotfiles/dict/lisp/special-operator/s_mult_1
+Special Operator progn	~/dotfiles/dict/lisp/special-operator/s_progn
+Special Operator progv	~/dotfiles/dict/lisp/special-operator/s_progv
+Special Operator quote	~/dotfiles/dict/lisp/special-operator/s_quote
+Special Operator return-from	~/dotfiles/dict/lisp/special-operator/s_ret_fr
+Special Operator symbol-macrolet	~/dotfiles/dict/lisp/special-operator/s_symbol
+Special Operator tagbody	~/dotfiles/dict/lisp/special-operator/s_tagbod
+Special Operator the	~/dotfiles/dict/lisp/special-operator/s_the
+Special Operator throw	~/dotfiles/dict/lisp/special-operator/s_throw
+Special Operator unwind-protect	~/dotfiles/dict/lisp/special-operator/s_unwind
+Standard Generic Function (setf class-name)	~/dotfiles/dict/lisp/function/f_opsetf
+Standard Generic Function add-method	~/dotfiles/dict/lisp/function/f_add_me
+Standard Generic Function allocate-instance	~/dotfiles/dict/lisp/function/f_alloca
+Standard Generic Function change-class	~/dotfiles/dict/lisp/function/f_chg_cl
+Standard Generic Function class-name	~/dotfiles/dict/lisp/function/f_class_
+Standard Generic Function compute-applicable-methods	~/dotfiles/dict/lisp/function/f_comput
+Standard Generic Function describe-object	~/dotfiles/dict/lisp/function/f_desc_1
+Standard Generic Function documentation...	~/dotfiles/dict/lisp/function/f_docume
+Standard Generic Function find-method	~/dotfiles/dict/lisp/function/f_find_m
+Standard Generic Function function-keywords	~/dotfiles/dict/lisp/function/f_fn_kwd
+Standard Generic Function initialize-instance	~/dotfiles/dict/lisp/function/f_init_i
+Standard Generic Function make-instance	~/dotfiles/dict/lisp/function/f_mk_ins
+Standard Generic Function make-instances-obsolete	~/dotfiles/dict/lisp/function/f_mk_i_1
+Standard Generic Function make-load-form	~/dotfiles/dict/lisp/function/f_mk_ld_
+Standard Generic Function method-qualifiers	~/dotfiles/dict/lisp/function/f_method
+Standard Generic Function no-applicable-method	~/dotfiles/dict/lisp/function/f_no_app
+Standard Generic Function no-next-method	~/dotfiles/dict/lisp/function/f_no_nex
+Standard Generic Function print-object	~/dotfiles/dict/lisp/function/f_pr_obj
+Standard Generic Function reinitialize-instance	~/dotfiles/dict/lisp/function/f_reinit
+Standard Generic Function remove-method	~/dotfiles/dict/lisp/function/f_rm_met
+Standard Generic Function shared-initialize	~/dotfiles/dict/lisp/function/f_shared
+Standard Generic Function slot-missing	~/dotfiles/dict/lisp/function/f_slt_mi
+Standard Generic Function slot-unbound	~/dotfiles/dict/lisp/function/f_slt_un
+Standard Generic Function update-instance-for-different-class	~/dotfiles/dict/lisp/function/f_update
+Standard Generic Function update-instance-for-redefined-class	~/dotfiles/dict/lisp/function/f_upda_1
+Symbol declare	~/dotfiles/dict/lisp/special-operator/s_declar
+Symbol lambda	~/dotfiles/dict/lisp/special-operator/s_lambda
+System Class TWO-WAY-STREAM	~/dotfiles/dict/lisp/type/t_two_wa
+System Class VECTOR	~/dotfiles/dict/lisp/type/t_vector
+System Class array	~/dotfiles/dict/lisp/type/t_array
+System Class bit-vector	~/dotfiles/dict/lisp/type/t_bt_vec
+System Class broadcast-stream	~/dotfiles/dict/lisp/type/t_broadc
+System Class built-in-class	~/dotfiles/dict/lisp/type/t_built_
+System Class character	~/dotfiles/dict/lisp/type/t_ch
+System Class class	~/dotfiles/dict/lisp/type/t_class
+System Class complex	~/dotfiles/dict/lisp/type/t_comple
+System Class concatenated-stream	~/dotfiles/dict/lisp/type/t_concat
+System Class cons	~/dotfiles/dict/lisp/type/t_cons
+System Class echo-stream	~/dotfiles/dict/lisp/type/t_echo_s
+System Class file-stream	~/dotfiles/dict/lisp/type/t_file_s
+System Class float	~/dotfiles/dict/lisp/type/t_float
+System Class function	~/dotfiles/dict/lisp/type/t_fn
+System Class generic-function	~/dotfiles/dict/lisp/type/t_generi
+System Class hash-table	~/dotfiles/dict/lisp/type/t_hash_t
+System Class integer	~/dotfiles/dict/lisp/type/t_intege
+System Class list	~/dotfiles/dict/lisp/type/t_list
+System Class logical-pathname	~/dotfiles/dict/lisp/type/t_logica
+System Class method	~/dotfiles/dict/lisp/type/t_method
+System Class method-combination	~/dotfiles/dict/lisp/type/t_meth_1
+System Class null	~/dotfiles/dict/lisp/type/t_null
+System Class number	~/dotfiles/dict/lisp/type/t_number
+System Class package	~/dotfiles/dict/lisp/type/t_pkg
+System Class pathname	~/dotfiles/dict/lisp/type/t_pn
+System Class random-state	~/dotfiles/dict/lisp/type/t_rnd_st
+System Class ratio	~/dotfiles/dict/lisp/type/t_ratio
+System Class rational	~/dotfiles/dict/lisp/type/t_ration
+System Class readtable	~/dotfiles/dict/lisp/type/t_rdtabl
+System Class real	~/dotfiles/dict/lisp/type/t_real
+System Class restart	~/dotfiles/dict/lisp/type/t_rst
+System Class sequence	~/dotfiles/dict/lisp/type/t_seq
+System Class standard-class	~/dotfiles/dict/lisp/type/t_std_cl
+System Class standard-generic-function	~/dotfiles/dict/lisp/type/t_std_ge
+System Class standard-method	~/dotfiles/dict/lisp/type/t_std_me
+System Class stream	~/dotfiles/dict/lisp/type/t_stream
+System Class string	~/dotfiles/dict/lisp/type/t_string
+System Class string-stream	~/dotfiles/dict/lisp/type/t_stg_st
+System Class structure-class	~/dotfiles/dict/lisp/type/t_stu_cl
+System Class symbol	~/dotfiles/dict/lisp/type/t_symbol
+System Class synonym-stream	~/dotfiles/dict/lisp/type/t_syn_st
+System Class t	~/dotfiles/dict/lisp/type/t_t
+Type Specifier and	~/dotfiles/dict/lisp/type/t_and
+Type Specifier eql	~/dotfiles/dict/lisp/type/t_eql
+Type Specifier member	~/dotfiles/dict/lisp/type/t_member
+Type Specifier mod	~/dotfiles/dict/lisp/type/t_mod
+Type Specifier not	~/dotfiles/dict/lisp/type/t_not
+Type Specifier or	~/dotfiles/dict/lisp/type/t_or
+Type Specifier satisfies	~/dotfiles/dict/lisp/type/t_satisf
+Type Specifier values	~/dotfiles/dict/lisp/type/t_values
+Type atom	~/dotfiles/dict/lisp/type/t_atom
+Type base-char	~/dotfiles/dict/lisp/type/t_base_c
+Type base-string	~/dotfiles/dict/lisp/type/t_base_s
+Type bignum	~/dotfiles/dict/lisp/type/t_bignum
+Type bit	~/dotfiles/dict/lisp/type/t_bit
+Type boolean	~/dotfiles/dict/lisp/type/t_ban
+Type compiled-function	~/dotfiles/dict/lisp/type/t_cmpd_f
+Type extended-char	~/dotfiles/dict/lisp/type/t_extend
+Type fixnum	~/dotfiles/dict/lisp/type/t_fixnum
+Type keyword	~/dotfiles/dict/lisp/type/t_kwd
+Type nil	~/dotfiles/dict/lisp/type/t_nil
+Type short-float, single-float, double-float...	~/dotfiles/dict/lisp/type/t_short_
+Type signed-byte	~/dotfiles/dict/lisp/type/t_sgn_by
+Type simple-array	~/dotfiles/dict/lisp/type/t_smp_ar
+Type simple-base-string	~/dotfiles/dict/lisp/type/t_smp_ba
+Type simple-bit-vector	~/dotfiles/dict/lisp/type/t_smp_bt
+Type simple-string	~/dotfiles/dict/lisp/type/t_smp_st
+Type simple-vector	~/dotfiles/dict/lisp/type/t_smp_ve
+Type standard-char	~/dotfiles/dict/lisp/type/t_std_ch
+Type unsigned-byte	~/dotfiles/dict/lisp/type/t_unsgn_
+Variable *, **, ***	~/dotfiles/dict/lisp/variable/v__stst_
+Variable *break-on-signals*	~/dotfiles/dict/lisp/variable/v_break_
+Variable *compile-file-pathname*...	~/dotfiles/dict/lisp/variable/v_cmp_fi
+Variable *compile-print*, *compile-verbose*	~/dotfiles/dict/lisp/variable/v_cmp_pr
+Variable *debug-io*, *error-output*...	~/dotfiles/dict/lisp/variable/v_debug_
+Variable *debugger-hook*	~/dotfiles/dict/lisp/variable/v_debugg
+Variable *default-pathname-defaults*	~/dotfiles/dict/lisp/variable/v_defaul
+Variable *features*	~/dotfiles/dict/lisp/variable/v_featur
+Variable *gensym-counter*	~/dotfiles/dict/lisp/variable/v_gensym
+Variable *load-pathname*, *load-truename*	~/dotfiles/dict/lisp/variable/v_ld_pns
+Variable *load-print*, *load-verbose*	~/dotfiles/dict/lisp/variable/v_ld_prs
+Variable *macroexpand-hook*	~/dotfiles/dict/lisp/variable/v_mexp_h
+Variable *modules*	~/dotfiles/dict/lisp/variable/v_module
+Variable *package*	~/dotfiles/dict/lisp/variable/v_pkg
+Variable *print-array*	~/dotfiles/dict/lisp/variable/v_pr_ar
+Variable *print-base*, *print-radix*	~/dotfiles/dict/lisp/variable/v_pr_bas
+Variable *print-case*	~/dotfiles/dict/lisp/variable/v_pr_cas
+Variable *print-circle*	~/dotfiles/dict/lisp/variable/v_pr_cir
+Variable *print-escape*	~/dotfiles/dict/lisp/variable/v_pr_esc
+Variable *print-gensym*	~/dotfiles/dict/lisp/variable/v_pr_gen
+Variable *print-level*, *print-length*	~/dotfiles/dict/lisp/variable/v_pr_lev
+Variable *print-lines*	~/dotfiles/dict/lisp/variable/v_pr_lin
+Variable *print-miser-width*	~/dotfiles/dict/lisp/variable/v_pr_mis
+Variable *print-pprint-dispatch*	~/dotfiles/dict/lisp/variable/v_pr_ppr
+Variable *print-pretty*	~/dotfiles/dict/lisp/variable/v_pr_pre
+Variable *print-readably*	~/dotfiles/dict/lisp/variable/v_pr_rda
+Variable *print-right-margin*	~/dotfiles/dict/lisp/variable/v_pr_rig
+Variable *random-state*	~/dotfiles/dict/lisp/variable/v_rnd_st
+Variable *read-base*	~/dotfiles/dict/lisp/variable/v_rd_bas
+Variable *read-default-float-format*	~/dotfiles/dict/lisp/variable/v_rd_def
+Variable *read-eval*	~/dotfiles/dict/lisp/variable/v_rd_eva
+Variable *read-suppress*	~/dotfiles/dict/lisp/variable/v_rd_sup
+Variable *readtable*	~/dotfiles/dict/lisp/variable/v_rdtabl
+Variable *terminal-io*	~/dotfiles/dict/lisp/variable/v_termin
+Variable +, ++, +++	~/dotfiles/dict/lisp/variable/v_pl_plp
+Variable -	~/dotfiles/dict/lisp/variable/v__
+Variable /, //, ///	~/dotfiles/dict/lisp/variable/v_sl_sls

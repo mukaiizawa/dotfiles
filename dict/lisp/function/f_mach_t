@@ -1,0 +1,23 @@
+
+Function MACHINE-TYPE
+
+Syntax:
+machine-type <no arguments> => description
+
+Arguments and Values:
+description---a string or nil.
+
+Description:
+Returns a string that identifies the generic name of the computer hardware on which Common Lisp is running.
+
+Examples:
+ (machine-type)
+=>  'DEC PDP-10'
+OR=>  'Symbolics LM-2'
+
+Affected By:
+The machine type. The implementation.
+
+See Also:
+machine-version
+

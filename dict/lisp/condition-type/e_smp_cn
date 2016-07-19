@@ -1,0 +1,12 @@
+
+Condition Type SIMPLE-CONDITION
+
+Class Precedence List:
+simple-condition, condition, t
+
+Description:
+The type simple-condition represents conditions that are signaled by signal whenever a format-control is supplied as the function's first argument.  The format control and format arguments are initialized with the initialization arguments named :format-control  and :format-arguments to make-condition, and are accessed by the functions  simple-condition-format-control  and simple-condition-format-arguments. If format arguments are not supplied to make-condition, nil is used as a default.
+
+See Also:
+simple-condition-format-control,  simple-condition-format-arguments
+
