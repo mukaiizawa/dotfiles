@@ -63,7 +63,7 @@ Examples:
 
 Notes:
 When only number is given, the two results are exact; the mathematical sum of the two results is always equal to the mathematical value of number.
-(function number divisor) and (function (/ number divisor)) (where function is any of one of floor, ceiling, ffloor, fceiling, truncate, round, ftruncate, and fround) return the same first value, but they return different remainders as the second value. For example:
+ (function number divisor) and (function (/ number divisor)) (where function is any of one of floor, ceiling, ffloor, fceiling, truncate, round, ftruncate, and fround) return the same first value, but they return different remainders as the second value. For example:
  (floor 5 2) =>  2, 1
  (floor (/ 5 2)) =>  2, 1/2
 If an effect is desired that is similar to round, but that always rounds up or down (rather than toward the nearest even integer) if the mathematical quotient is exactly halfway between two integers, the programmer should consider a construction such as (floor (+ x 1/2)) or (ceiling (- x 1/2)).

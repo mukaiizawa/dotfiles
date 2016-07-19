@@ -55,6 +55,7 @@ The uses of these functions are illustrated in the next figure.
 (<= 0 x 9) is true if x is between 0 and 9, inclusive
 (< 0.0 x 1.0) is true if x is between 0.0 and 1.0, exclusive
 (< -1 j (length v)) is true if j is a valid array index for a vector v
+
 Figure 12-13.  Uses of /=, =, <, >, <=, and >=
 
 Exceptional Situations:

@@ -25,7 +25,6 @@ Examples:
 =>  NIL
  (find-restart 'my-restart)
 =>  NIL
-Side Effects: None.
 
 Affected By:
 Existing restarts.

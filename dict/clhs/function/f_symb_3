@@ -1,12 +1,16 @@
-CLHS: Function SYMBOL-PACKAGE
-Function SYMBOL-PACKAGE 
+
+Function SYMBOL-PACKAGE
+
 Syntax:
 symbol-package symbol => contents
+
 Arguments and Values:
-symbol---a symbol. 
-contents---a package object or nil. 
+symbol---a symbol.
+contents---a package object or nil.
+
 Description:
-Returns the home package of symbol. 
+Returns the home package of symbol.
+
 Examples:
  (in-package 'CL-USER') =>  #<PACKAGE 'COMMON-LISP-USER'>
  (symbol-package 'car) =>  #<PACKAGE 'COMMON-LISP'>
@@ -31,12 +35,13 @@ Examples:
  (unintern s3 'pk1) =>  T
  (symbol-package s3) =>  NIL
  (eq s3 'pk2::sample3) =>  T
-Side Effects: None.
+
 Affected By:
-import, intern, unintern 
+import, intern, unintern
+
 Exceptional Situations:
-Should signal an error of type type-error if symbol is not a symbol. 
+Should signal an error of type type-error if symbol is not a symbol.
+
 See Also:
-intern 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+intern
+

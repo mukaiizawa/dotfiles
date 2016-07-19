@@ -1,5 +1,5 @@
 
-Function LOGAND, LOGANDC1, LOGANDC2, LOGEQV, LOGIOR, LOGNAND, LOGNOR, LOGNOT, LOGORC1, LOGORC2, LOGXOR 
+Function LOGAND, LOGANDC1, LOGANDC2, LOGEQV, LOGIOR, LOGNAND, LOGNOR, LOGNOT, LOGORC1, LOGORC2, LOGXOR
 
 Syntax:
 logand &rest integers => result-integer
@@ -76,11 +76,11 @@ Exceptional Situations:
 Should signal type-error if any argument is not an integer.
 
 See Also:
-boole 
+boole
 
 Notes:
-(logbitp k -1) returns true for all values of k. 
-Because the following functions are not associative, they take exactly two arguments rather than any number of arguments. 
+(logbitp k -1) returns true for all values of k.
+Because the following functions are not associative, they take exactly two arguments rather than any number of arguments.
  (lognand n1 n2) ==  (lognot (logand n1 n2))
  (lognor n1 n2) ==  (lognot (logior n1 n2))
  (logandc1 n1 n2) ==  (logand (lognot n1) n2)

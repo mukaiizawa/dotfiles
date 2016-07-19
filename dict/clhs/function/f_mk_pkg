@@ -32,6 +32,6 @@ See Also:
 defpackage, use-package
 
 Notes:
-In situations where the packages to be used contain symbols which would conflict, it is necessary to first create the package with :use '(), then to use shadow or shadowing-import to address the conflicts, and then after that to use use-package once the conflicts have been addressed. 
-When packages are being created as part of the static definition of a program rather than dynamically by the program, it is generally considered more stylistically appropriate to use defpackage rather than make-package. 
+In situations where the packages to be used contain symbols which would conflict, it is necessary to first create the package with :use '(), then to use shadow or shadowing-import to address the conflicts, and then after that to use use-package once the conflicts have been addressed.
+When packages are being created as part of the static definition of a program rather than dynamically by the program, it is generally considered more stylistically appropriate to use defpackage rather than make-package.
 

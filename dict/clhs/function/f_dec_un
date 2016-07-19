@@ -11,7 +11,7 @@ second, minute, hour, date, month, year, day, daylight-p, zone---a decoded time.
 
 Description:
 Returns the decoded time represented by the given universal time.
-If time-zone is not supplied, it defaults to the current time zone adjusted for daylight saving time.  If time-zone is supplied, daylight saving time information is ignored. The daylight saving time flag is nil if time-zone is supplied. 
+If time-zone is not supplied, it defaults to the current time zone adjusted for daylight saving time.  If time-zone is supplied, daylight saving time information is ignored. The daylight saving time flag is nil if time-zone is supplied.
 
 Examples:
  (decode-universal-time 0 0) =>  0, 0, 0, 1, 1, 1900, 0, false, 0

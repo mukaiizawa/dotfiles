@@ -48,13 +48,15 @@ OR=>  false
 OR=>  false
 
 See Also:
-eql, equal, equalp, =, Section 3.2 (Compilation)
+eql, equal, equalp, =
 
 Notes:
 Objects that appear the same when printed are not necessarily eq to each other. Symbols that print the same usually are eq to each other because of the use of the intern function. However, numbers with the same value need not be eq, and two similar lists are usually not identical.
 An implementation is permitted to make ``copies'' of characters and numbers at any time. The effect is that Common Lisp makes no guarantee that eq is true even when both its arguments are ``the same thing'' if that thing is a character or number.
 Most Common Lisp operators use eql rather than eq to compare objects, or else they default to eql and only use eq if specifically requested to do so. However, the following operators are defined to use eq rather than eql in a way that cannot be overridden by the code which employs them:
+
 catch           getf     throw
+------------------------------
 get             remf
 get-properties  remprop
 

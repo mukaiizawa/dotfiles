@@ -4,9 +4,6 @@ Function DPB
 Syntax:
 dpb newbyte bytespec integer => result-integer
 
-Pronunciation:
- [,duh'pib] or [,duh'puhb] or ['dee'pee'bee]
-
 Arguments and Values:
 newbyte---an integer.
 bytespec---a byte specifier.

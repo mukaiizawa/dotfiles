@@ -1,5 +1,5 @@
 
-Function LOGTEST 
+Function LOGTEST
 
 Syntax:
 logtest integer-1 integer-2 => generalized-boolean

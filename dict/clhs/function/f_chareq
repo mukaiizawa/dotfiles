@@ -1,6 +1,6 @@
 
 Function CHAR=, CHAR/=, CHAR<, CHAR>, CHAR<=, CHAR>=, CHAR-EQUAL, CHAR-NOT-EQUAL, CHAR-LESSP, CHAR-GREATERP, CHAR-NOT-GREATERP, CHAR-NOT-LESSP
-clhs char=
+
 Syntax:
 char= &rest characters+ => generalized-boolean
 char/= &rest characters+ => generalized-boolean
@@ -8,7 +8,6 @@ char< &rest characters+ => generalized-boolean
 char> &rest characters+ => generalized-boolean
 char<= &rest characters+ => generalized-boolean
 char>= &rest characters+ => generalized-boolean
-
 char-equal &rest characters+ => generalized-boolean
 char-not-equal &rest characters+ => generalized-boolean
 char-lessp &rest characters+ => generalized-boolean

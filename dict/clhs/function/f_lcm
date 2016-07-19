@@ -31,5 +31,5 @@ Exceptional Situations:
 Should signal type-error if any argument is not an integer.
 
 See Also:
-gcd 
+gcd
 

@@ -1,5 +1,5 @@
 
-Function LISP-IMPLEMENTATION-TYPE, LISP-IMPLEMENTATION-VERSION 
+Function LISP-IMPLEMENTATION-TYPE, LISP-IMPLEMENTATION-VERSION
 
 Syntax:
 lisp-implementation-type <no arguments> => description

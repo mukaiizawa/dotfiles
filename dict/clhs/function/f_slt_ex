@@ -1,20 +1,23 @@
-CLHS: Function SLOT-EXISTS-P
-Function SLOT-EXISTS-P 
+
+Function SLOT-EXISTS-P
+
 Syntax:
 slot-exists-p object slot-name => generalized-boolean
+
 Arguments and Values:
- object---an object.  
-slot-name---a symbol. 
-generalized-boolean---a generalized boolean. 
+object---an object.
+slot-name---a symbol.
+generalized-boolean---a generalized boolean.
+
 Description:
- Returns true if the object has a slot named slot-name. 
-Examples: None.
+Returns true if the object has a slot named slot-name.
+
 Affected By:
-defclass, defstruct 
-Exceptional Situations: None.
+defclass, defstruct
+
 See Also:
-defclass, slot-missing 
+defclass, slot-missing
+
 Notes:
- Although no implementation is required to do so, implementors are strongly encouraged to implement the function slot-exists-p using the function slot-exists-p-using-class described in the Metaobject Protocol.  
-The following X3J13 cleanup issue, not part of the specification, applies to this section: SLOT-VALUE-METACLASSES:LESS-MINIMAL
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+Although no implementation is required to do so, implementors are strongly encouraged to implement the function slot-exists-p using the function slot-exists-p-using-class described in the Metaobject Protocol.
+

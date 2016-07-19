@@ -7,7 +7,7 @@ map result-type function &rest sequences+ => result
 Arguments and Values:
 result-type -- a sequence type specifier, or nil.
 function---a function designator. function must take as many arguments as there are sequences.
-sequence---a proper sequence. 
+sequence---a proper sequence.
 result---if result-type is a type specifier other than nil, then a sequence of the type it denotes; otherwise (if the result-type is nil), nil.
 
 Description:

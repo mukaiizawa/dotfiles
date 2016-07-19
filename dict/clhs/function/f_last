@@ -6,7 +6,7 @@ last list &optional n => tail
 
 Arguments and Values:
 list---a list,  which might be a dotted list but must not be a circular list.
- n---a non-negative integer. The default is 1.
+n---a non-negative integer. The default is 1.
 tail---an object.
 
 Description:

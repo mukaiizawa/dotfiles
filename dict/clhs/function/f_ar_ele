@@ -2,14 +2,14 @@
 Function ARRAY-ELEMENT-TYPE
 
 Syntax:
- array-element-type array => typespec
+array-element-type array => typespec
 
 Arguments and Values:
- array---an array.
- typespec---a type specifier.
+array---an array.
+typespec---a type specifier.
 
 Description:
- Returns a type specifier which represents the actual array element type of the array, which is the set of objects that such an array can hold. (Because of array upgrading, this type specifier can in some cases denote a supertype of the expressed array element type of the array.) 
+Returns a type specifier which represents the actual array element type of the array, which is the set of objects that such an array can hold. (Because of array upgrading, this type specifier can in some cases denote a supertype of the expressed array element type of the array.)
 
 Examples:
  (array-element-type (make-array 4)) =>  T
@@ -21,13 +21,11 @@ Examples:
  could be (mod 5), (mod 8), fixnum, t, or any other type of which (mod 5) is a subtype.
 
 Affected By:
- The implementation.
+The implementation.
 
 Exceptional Situations:
- Should signal an error of type type-error if its argument is not an array.
+Should signal an error of type type-error if its argument is not an array.
 
 See Also:
- array, make-array, subtypep, upgraded-array-element-type
-
-Notes: None.
+array, make-array, subtypep, upgraded-array-element-type
 

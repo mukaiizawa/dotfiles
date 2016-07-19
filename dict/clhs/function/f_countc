@@ -30,6 +30,6 @@ Exceptional Situations:
 Should be prepared to signal an error of type type-error if sequence is not a proper sequence.
 
 Notes:
-The :test-not argument is deprecated. 
-The function count-if-not is deprecated. 
+The :test-not argument is deprecated.
+The function count-if-not is deprecated.
 

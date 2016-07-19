@@ -1,22 +1,24 @@
-CLHS: Function PACKAGE-USE-LIST
-Function PACKAGE-USE-LIST 
+
+Function PACKAGE-USE-LIST
+
 Syntax:
 package-use-list package => use-list
+
 Arguments and Values:
- package---a package designator.  
-use-list---a list of package objects. 
+package---a package designator.
+use-list---a list of package objects.
+
 Description:
-Returns a list of other packages used by package. 
+Returns a list of other packages used by package.
+
 Examples:
  (package-use-list (make-package 'temp)) =>  (#<PACKAGE 'COMMON-LISP'>)
  (use-package 'common-lisp-user 'temp) =>  T
  (package-use-list 'temp) =>  (#<PACKAGE 'COMMON-LISP'> #<PACKAGE 'COMMON-LISP-USER'>)
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if package is not a package designator. 
+Should signal an error of type type-error if package is not a package designator.
+
 See Also:
-use-package, unuse-package 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+use-package, unuse-package
+

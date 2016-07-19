@@ -21,10 +21,11 @@ If two arrays have the same number of dimensions, the dimensions match, and the 
 Structures
 If two structures S1 and S2 have the same class and the value of each slot in S1 is the same under equalp as the value of the corresponding slot in S2.
 Hash Tables
-equalp descends hash-tables by first comparing the count of entries and the :test function; if those are the same, it compares the keys of the tables using the :test function and then the values of the matching keys using equalp recursively. 
- equalp does not descend any objects other than the ones explicitly specified above. The next figure summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of equalp, with upper entries taking priority over lower ones.
+equalp descends hash-tables by first comparing the count of entries and the :test function; if those are the same, it compares the keys of the tables using the :test function and then the values of the matching keys using equalp recursively.
+equalp does not descend any objects other than the ones explicitly specified above. The next figure summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of equalp, with upper entries taking priority over lower ones.
 
 Type          Behavior
+------------------------------------------
 number        uses =
 character     uses char-equal
 cons          descends
@@ -35,6 +36,7 @@ structure     descends, as described above
 Other array   descends
 hash table    descends, as described above
 Other object  uses eq
+
 Figure 5-13.  Summary and priorities of behavior of equalp
 
 Examples:
@@ -62,13 +64,10 @@ Examples:
  (equalp array1 array2) =>  true
  (setq vector1 (vector 1 1 1 3 5 7)) =>  #(1 1 1 3 5 7)
  (equalp array1 vector1) =>  true
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 eq, eql, equal, =, string=, string-equal, char=, char-equal
 
 Notes:
-Object equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, equal and equalp are not appropriate for every application. 
+Object equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, equal and equalp are not appropriate for every application.
 

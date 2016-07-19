@@ -1,5 +1,5 @@
 
-Function INTEGER-LENGTH 
+Function INTEGER-LENGTH
 
 Syntax:
 integer-length integer => number-of-bits
@@ -36,5 +36,5 @@ This function could have been defined by:
                     (- integer)
                     (1+ integer))
                 2)))
-If integer is non-negative, then its value can be represented in unsigned binary form in a field whose width in bits is no smaller than (integer-length integer). Regardless of the sign of integer, its value can be represented in signed binary two's-complement form in a field whose width in bits is no smaller than (+ (integer-length integer) 1). 
+If integer is non-negative, then its value can be represented in unsigned binary form in a field whose width in bits is no smaller than (integer-length integer). Regardless of the sign of integer, its value can be represented in signed binary two's-complement form in a field whose width in bits is no smaller than (+ (integer-length integer) 1).
 

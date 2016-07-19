@@ -12,8 +12,8 @@ result---an object, of type result-type except in situations described in Sectio
 Description:
 Coerces the object to type result-type.
 If object is already of type result-type, the object itself is returned, regardless of whether it would have been possible in general to coerce an object of some other type to result-type.
-
 Otherwise, the object is coerced to type result-type according to the following rules:
+
 sequence
 If the result-type is a recognizable subtype of list, and the object is a sequence, then the result is a list that has the same elements as object.
 If the result-type is a recognizable subtype of vector, and the object is a sequence, then the result is a vector that has the same elements as object. If result-type is a specialized type, the result has an actual array element type that is the result of upgrading the element type part of that specialized type. If no element type is specified, the element type defaults to t. If the implementation cannot determine the element type, an error is signaled.

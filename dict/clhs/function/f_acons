@@ -22,12 +22,6 @@ Examples:
  (setq alist (acons 1 'uno' alist)) =>  ((1 . 'uno') (1 . 'one') (2 . 'two'))
  (assoc 1 alist) =>  (1 . 'uno')
 
-Side Effects: None.
-
-Affected By: None.
-
-Exceptional Situations: None.
-
 See Also:
 assoc, pairlis
 

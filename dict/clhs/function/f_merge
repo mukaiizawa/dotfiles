@@ -5,7 +5,7 @@ Syntax:
 merge result-type sequence-1 sequence-2 predicate &key key => result-sequence
 
 Arguments and Values:
- result-type---a sequence type specifier.
+result-type---a sequence type specifier.
 sequence-1---a sequence.
 sequence-2---a sequence.
 predicate---a designator for a function of two arguments that returns a generalized boolean.
@@ -20,7 +20,7 @@ If key and predicate return, then the merging operation will terminate. The resu
 If x and y were correctly sorted according to the predicate, then z will also be correctly sorted. If x or y is not so sorted, then z will not be sorted, but will nevertheless be an interleaving of x and y.
 The merging operation is guaranteed stable; if two or more elements are considered equal by the predicate, then the elements from sequence-1 will precede those from sequence-2 in the result.
 sequence-1 and/or sequence-2 may be destroyed.
- If the result-type is a subtype of list, the result will be a list.
+If the result-type is a subtype of list, the result will be a list.
 If the result-type is a subtype of vector, then if the implementation can determine the element type specified for the result-type, the element type of the resulting array is the result of upgrading that element type; or, if the implementation can determine that the element type is unspecified (or *), the element type of the resulting array is t; otherwise, an error is signaled.
 
 Examples:
@@ -32,8 +32,8 @@ Examples:
  (merge 'string test1 test2 #'char-lessp) =>  'BnOosYy'
  (setq test1 (vector ((red . 1) (blue . 4))))
  (setq test2 (vector ((yellow . 2) (green . 7))))
- (merge 'vector test1 test2 #'< :key #'cdr) 
-=>  #((RED . 1) (YELLOW . 2) (BLUE . 4) (GREEN . 7)) 
+ (merge 'vector test1 test2 #'< :key #'cdr)
+=>  #((RED . 1) (YELLOW . 2) (BLUE . 4) (GREEN . 7))
  (merge '(vector * 4) '(1 5) '(2 4 6) #'<) should signal an error
 
 Exceptional Situations:

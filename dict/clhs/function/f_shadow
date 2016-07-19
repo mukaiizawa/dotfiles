@@ -1,13 +1,17 @@
-CLHS: Function SHADOW
-Function SHADOW 
+
+Function SHADOW
+
 Syntax:
 shadow symbol-names &optional package => t
+
 Arguments and Values:
- symbol-names---a designator for a list of string designators.  
- package---a package designator.  The default is the current package. 
+symbol-names---a designator for a list of string designators.
+package---a package designator.  The default is the current package.
+
 Description:
-shadow assures that symbols with names given by symbol-names are present in the package. 
-Specifically, package is searched for symbols with the names supplied by symbol-names.  For each such name, if a corresponding symbol is not present in package (directly, not by inheritance), then a corresponding symbol is created with that name, and inserted into package as an internal symbol. The corresponding symbol, whether pre-existing or newly created, is then added, if not already present, to the shadowing symbols list of package.  
+shadow assures that symbols with names given by symbol-names are present in the package.
+Specifically, package is searched for symbols with the names supplied by symbol-names.  For each such name, if a corresponding symbol is not present in package (directly, not by inheritance), then a corresponding symbol is created with that name, and inserted into package as an internal symbol. The corresponding symbol, whether pre-existing or newly created, is then added, if not already present, to the shadowing symbols list of package.
+
 Examples:
  (package-shadowing-symbols (make-package 'temp)) =>  NIL
  (find-symbol 'car 'temp) =>  CAR, :INHERITED
@@ -24,15 +28,16 @@ Examples:
  (intern 'TEST' (find-package 'test-2)) =>  TEST-2::TEST, NIL
  (export 'test-2::test (find-package 'test-2)) =>  T
  (use-package 'test-2 (find-package 'test-1))    ;should not error
-  
+
 Side Effects:
-shadow changes the state of the package system in such a way that the package consistency rules do not hold across the change. 
+shadow changes the state of the package system in such a way that the package consistency rules do not hold across the change.
+
 Affected By:
-Current state of the package system. 
-Exceptional Situations: None.
+Current state of the package system.
+
 See Also:
-package-shadowing-symbols, Section 11.1 (Package Concepts) 
+package-shadowing-symbols
+
 Notes:
-If a symbol with a name in symbol-names already exists in package, but by inheritance, the inherited symbol becomes shadowed[3] by a newly created internal symbol. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: SHADOW-ALREADY-PRESENT PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE SHADOW-ALREADY-PRESENT:WORKS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+If a symbol with a name in symbol-names already exists in package, but by inheritance, the inherited symbol becomes shadowed[3] by a newly created internal symbol.
+

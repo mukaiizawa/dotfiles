@@ -16,6 +16,7 @@ The operation to be performed and the return value are determined by op.
 boole returns the values specified for any op in the next figure.
 
 Op           Result
+-------------------------------------------------------
 boole-1      integer-1
 boole-2      integer-2
 boole-andc1  and complement of integer-1 with integer-2
@@ -32,6 +33,7 @@ boole-orc1   or complement of integer-1 with integer-2
 boole-orc2   or integer-1 with complement of integer-2
 boole-set    always -1 (all one bits)
 boole-xor    exclusive or
+
 Figure 12-17.  Bit-Wise Logical Operations
 
 Examples:
@@ -69,9 +71,6 @@ Examples:
 >>   BOOLE-SET    -1          -1    ...1111
 >>   BOOLE-XOR     6         110    ...0110
 =>  NIL
-
-Affected By:
-None.
 
 Exceptional Situations:
 Should signal type-error if its first argument is not a bit-wise logical operation specifier or if any subsequent argument is not an integer.

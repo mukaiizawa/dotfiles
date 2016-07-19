@@ -1,5 +1,5 @@
 
-Function INVALID-METHOD-ERROR 
+Function INVALID-METHOD-ERROR
 
 Syntax:
 invalid-method-error method format-control &rest args => implementation-dependent

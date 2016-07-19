@@ -1,13 +1,18 @@
-CLHS: Function STREAM-ELEMENT-TYPE
-Function STREAM-ELEMENT-TYPE 
+
+Function STREAM-ELEMENT-TYPE
+
+
 Syntax:
 stream-element-type stream => typespec
+
 Arguments and Values:
-stream---a stream. 
-typespec---a type specifier. 
+stream---a stream.
+typespec---a type specifier.
+
 Description:
-stream-element-type returns a type specifier that indicates the types of objects that may be read from or written to stream. 
-Streams created by open have an element type restricted to integer or a subtype of type character. 
+stream-element-type returns a type specifier that indicates the types of objects that may be read from or written to stream.
+Streams created by open have an element type restricted to integer or a subtype of type character.
+
 Examples:
 ;; Note that the stream must accomodate at least the specified type,
 ;; but might accomodate other types.  Further note that even if it does
@@ -24,10 +29,7 @@ OR=>  BIT
 OR=>  (UNSIGNED-BYTE 1)
 OR=>  (INTEGER 0 1)
 OR=>  (INTEGER 0 (2))
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if stream is not a stream. 
-See Also: None.
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+Should signal an error of type type-error if stream is not a stream.
+

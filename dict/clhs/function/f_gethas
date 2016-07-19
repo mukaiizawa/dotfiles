@@ -15,7 +15,7 @@ present-p---a generalized boolean.
 Description:
 Value is the object in hash-table whose key is the same as key under the hash-table's equivalence test. If there is no such entry, value is the default.
 Present-p is true if an entry is found; otherwise, it is false.
-setf may be used with gethash to modify the value associated with a given key, or to add a new entry.  When a gethash form is used as a setf place, any default which is supplied is evaluated according to normal left-to-right evaluation rules, but its value is ignored. 
+setf may be used with gethash to modify the value associated with a given key, or to add a new entry.  When a gethash form is used as a setf place, any default which is supplied is evaluated according to normal left-to-right evaluation rules, but its value is ignored.
 
 Examples:
  (setq table (make-hash-table)) =>  #<HASH-TABLE EQL 0/120 32206334>

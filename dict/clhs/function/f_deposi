@@ -26,5 +26,5 @@ Notes:
  ==  (if (and (>= j p) (< j (+ p s)))
         (logbitp j m)
         (logbitp j n))
- deposit-field is to mask-field as dpb is to ldb.
+deposit-field is to mask-field as dpb is to ldb.
 

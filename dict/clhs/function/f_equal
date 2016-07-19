@@ -24,6 +24,7 @@ Two other objects are equal only if they are eq.
 equal does not descend any objects other than the ones explicitly specified above. The next figure summarizes the information given in the previous list. In addition, the figure specifies the priority of the behavior of equal, with upper entries taking priority over lower ones.
 
 Type          Behavior
+-----------------------------------------
 number        uses eql
 character     uses eql
 cons          descends
@@ -62,6 +63,6 @@ See Also:
 eq, eql, equalp, =, string=, string-equal, char=, char-equal, tree-equal
 
 Notes:
-Object equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, equal and equalp are not appropriate for every application. 
+Object equality is not a concept for which there is a uniquely determined correct algorithm. The appropriateness of an equality predicate can be judged only in the context of the needs of some particular program. Although these functions take any type of argument and their names sound very generic, equal and equalp are not appropriate for every application.
 A rough rule of thumb is that two objects are equal if and only if their printed representations are the same.
 

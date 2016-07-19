@@ -1,5 +1,5 @@
 
-Function INTERSECTION, NINTERSECTION 
+Function INTERSECTION, NINTERSECTION
 
 Syntax:
 intersection list-1 list-2 &key key test test-not => result-list
@@ -14,7 +14,7 @@ key---a designator for a function of one argument, or nil.
 result-list---a list.
 
 Description:
-intersection and nintersection return a list that contains every element that occurs in both list-1 and list-2. 
+intersection and nintersection return a list that contains every element that occurs in both list-1 and list-2.
 nintersection is the destructive version of intersection. It performs the same operation, but may destroy list-1 using its cells to construct the result.   list-2 is not destroyed.
 The intersection operation is described as follows. For all possible ordered pairs consisting of one element from list-1 and one element from list-2, :test or :test-not are used to determine whether they satisfy the test. The first argument to the :test or :test-not function is an element of list-1; the second argument is an element of list-2. If :test or :test-not is not supplied, eql is used. It is an error if :test and :test-not are supplied in the same function call.
 If :key is supplied (and not nil), it is used to extract the part to be tested from the list element. The argument to the :key function is an element of either list-1 or list-2; the :key function typically returns part of the supplied element. If :key is not supplied or nil, the list-1 and list-2 elements are used.

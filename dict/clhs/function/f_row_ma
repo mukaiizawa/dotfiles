@@ -1,28 +1,28 @@
-CLHS: Accessor ROW-MAJOR-AREF
-Accessor ROW-MAJOR-AREF  
+
+Accessor ROW-MAJOR-AREF
+
 Syntax:
 row-major-aref array index => element
 (setf (row-major-aref array index) new-element)
+
 Arguments and Values:
-array---an array. 
- index---a valid array row-major index for the array.  
-element, new-element---an object. 
+array---an array.
+index---a valid array row-major index for the array.
+element, new-element---an object.
+
 Description:
-Considers array as a vector by viewing its elements in row-major order, and returns the element of that vector which is referred to by the given index. 
-row-major-aref is valid for use with setf. 
-Examples: None.
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+Considers array as a vector by viewing its elements in row-major order, and returns the element of that vector which is referred to by the given index.
+row-major-aref is valid for use with setf.
+
 See Also:
-aref, array-row-major-index 
+aref, array-row-major-index
+
 Notes:
- (row-major-aref array index) == 
+ (row-major-aref array index) ==
    (aref (make-array (array-total-size array)
                      :displaced-to array
                      :element-type (array-element-type array))
          index)
- (aref array i1 i2 ...) == 
+ (aref array i1 i2 ...) ==
      (row-major-aref array (array-row-major-index array i1 i2))
-The following X3J13 cleanup issues, not part of the specification, apply to this section: ARRAY-DIMENSION-LIMIT-IMPLICATIONS:ALL-FIXNUM AREF-1D
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

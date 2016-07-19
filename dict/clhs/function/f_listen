@@ -22,5 +22,5 @@ Affected By:
 *standard-input*
 
 See Also:
-interactive-stream-p, read-char-no-hang 
+interactive-stream-p, read-char-no-hang
 

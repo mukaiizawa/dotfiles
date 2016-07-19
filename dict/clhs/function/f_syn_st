@@ -1,18 +1,16 @@
-CLHS: Function SYNONYM-STREAM-SYMBOL
-Function SYNONYM-STREAM-SYMBOL 
+
+Function SYNONYM-STREAM-SYMBOL
+
 Syntax:
 synonym-stream-symbol synonym-stream => symbol
+
 Arguments and Values:
-synonym-stream---a synonym stream. 
-symbol---a symbol. 
+synonym-stream---a synonym stream.
+symbol---a symbol.
+
 Description:
-Returns the symbol whose symbol-value the synonym-stream is using. 
-Examples: None.
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+Returns the symbol whose symbol-value the synonym-stream is using.
+
 See Also:
-make-synonym-stream 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+make-synonym-stream
+

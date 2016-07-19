@@ -1,13 +1,17 @@
-CLHS: Function SET
-Function SET 
+
+Function SET
+
 Syntax:
 set symbol value => value
+
 Arguments and Values:
-symbol---a symbol. 
- value---an object.  
+symbol---a symbol.
+value---an object.
+
 Description:
-set changes the contents of the value cell of symbol to the given value. 
+set changes the contents of the value cell of symbol to the given value.
 (set symbol value) ==  (setf (symbol-value symbol) value)
+
 Examples:
  (setf (symbol-value 'n) 1) =>  1
  (set 'n 2) =>  2
@@ -41,14 +45,14 @@ Examples:
  (tally-list '(1 9 4 3 2 7)) =>  NIL
  *even-count* =>  6
  *odd-count* =>  20
+
 Side Effects:
-The value of symbol is changed. 
-Affected By: None.
-Exceptional Situations: None.
+The value of symbol is changed.
+
 See Also:
-setq, progv, symbol-value 
+setq, progv, symbol-value
+
 Notes:
-The function set is deprecated. 
-set cannot change the value of a lexical variable. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: ARGUMENTS-UNDERSPECIFIED:SPECIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+The function set is deprecated.
+set cannot change the value of a lexical variable.
+

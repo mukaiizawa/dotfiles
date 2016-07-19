@@ -17,7 +17,7 @@ Each implementation is required to provide a method on the class standard-object
 Methods on describe-object can recursively call describe. Indentation, depth limits, and circularity detection are all taken care of automatically, provided that each method handles exactly one level of structure and calls describe recursively if there are more structural levels. The consequences are undefined if this rule is not obeyed.
 In some implementations the stream argument passed to a describe-object method is not the original stream, but is an intermediate stream that implements parts of describe. Methods should therefore not depend on the identity of this stream.
 
- Examples:
+Examples:
  (defclass spaceship ()
    ((captain :initarg :captain :accessor spaceship-captain)
     (serial# :initarg :serial-number :accessor spaceship-serial-number)))

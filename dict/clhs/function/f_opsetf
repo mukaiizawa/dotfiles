@@ -1,18 +1,19 @@
-CLHS: Standard Generic Function (SETF CLASS-NAME)
-Standard Generic Function (SETF CLASS-NAME) 
+
+Standard Generic Function (SETF CLASS-NAME)
+
 Syntax:
 (setf class-name) new-value class => new-value
+
 Method Signatures:
 (setf class-name) new-value (class class)
+
 Arguments and Values:
-new-value---a symbol. 
-class---a class. 
+new-value---a symbol.
+class---a class.
+
 Description:
-The generic function (setf class-name) sets the name of a class object. 
-  Examples: None.
-Affected By: None.
-Exceptional Situations: None.
+The generic function (setf class-name) sets the name of a class object.
+
 See Also:
-find-class, proper name, Section 4.3 (Classes) 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+find-class, proper name, Section 4.3 (Classes)
+

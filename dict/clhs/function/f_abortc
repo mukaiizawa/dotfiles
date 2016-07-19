@@ -10,12 +10,12 @@ use-value value &optional condition => nil
 
 Arguments and Values:
 value---an object.
-  condition---a condition object, or nil.
+condition---a condition object, or nil.
 
 Description:
 Transfers control to the most recently established applicable restart having the same name as the function. That is, the function abort searches for an applicable abort restart, the function continue searches for an applicable continue restart, and so on.
 If no such restart exists, the functions continue, store-value, and use-value return nil, and the functions abort and muffle-warning signal an error of type control-error.
- When condition is non-nil, only those restarts are considered that are either explicitly associated with that condition, or not associated with any condition; that is, the excluded restarts are those that are associated with a non-empty set of conditions of which the given condition is not an element. If condition is nil, all restarts are considered. 
+When condition is non-nil, only those restarts are considered that are either explicitly associated with that condition, or not associated with any condition; that is, the excluded restarts are those that are associated with a non-empty set of conditions of which the given condition is not an element. If condition is nil, all restarts are considered.
 
 Examples:
 ;;; Example of the ABORT retart

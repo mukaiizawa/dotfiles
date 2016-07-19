@@ -1,5 +1,5 @@
 
-Function INVOKE-DEBUGGER 
+Function INVOKE-DEBUGGER
 
 Syntax:
 invoke-debugger condition =>|

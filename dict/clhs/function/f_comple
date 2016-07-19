@@ -23,7 +23,7 @@ not
 Notes:
  (complement x) ==  #'(lambda (&rest arguments) (not (apply x arguments)))
 In Common Lisp, functions with names like ``xxx-if-not'' are related to functions with names like ``xxx-if'' in that
-(xxx-if-not f . arguments) ==  (xxx-if (complement f) . arguments)
+ (xxx-if-not f . arguments) ==  (xxx-if (complement f) . arguments)
 For example,
  (find-if-not #'zerop '(0 0 3)) ==
  (find-if (complement #'zerop) '(0 0 3)) =>  3

@@ -5,7 +5,7 @@ Syntax:
 delete-package package => generalized-boolean
 
 Arguments and Values:
- package---a package designator. 
+package---a package designator.
 generalized-boolean---a generalized boolean.
 
 Description:

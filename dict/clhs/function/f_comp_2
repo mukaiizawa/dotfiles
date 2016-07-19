@@ -23,5 +23,5 @@ Examples:
  (complex 3/2 0.0) =>  #C(1.5 0.0)
 
 See Also:
-realpart, imagpart, Section 2.4.8.11 (Sharpsign C)
+realpart, imagpart
 

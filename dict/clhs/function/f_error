@@ -22,7 +22,6 @@ Examples:
 =>  2432902008176640000
 (factorial -1)
 >>  Error: -1 is not a valid argument to FACTORIAL.
-
 >>  To continue, type :CONTINUE followed by an option number:
 >>   1: Return to Lisp Toplevel.
 >>  Debug>
@@ -53,7 +52,8 @@ Handlers for the specified condition, if any, are invoked and might have side ef
 Affected By:
 Existing handler bindings.
 *break-on-signals*
-Exceptional Situations: None.
+
+Exceptional Situations:
 Signals an error of type type-error if datum and arguments are not designators for a condition.
 
 See Also:
@@ -64,6 +64,6 @@ Some implementations may provide debugger commands for interactively returning f
  (defun wargames:no-win-scenario ()
    (if (error 'pushing the button would be stupid.'))
    (push-the-button))
- In this scenario, there should be no chance that error will return and the button will get pushed.
+In this scenario, there should be no chance that error will return and the button will get pushed.
 While the meaning of this program is clear and it might be proven `safe' by a formal theorem prover, such a proof is no guarantee that the program is safe to execute. Compilers have been known to have bugs, computers to have signal glitches, and human beings to manually intervene in ways that are not always possible to predict. Those kinds of errors, while beyond the scope of the condition system to formally model, are not beyond the scope of things that should seriously be considered when writing code that could have the kinds of sweeping effects hinted at by this example.
 

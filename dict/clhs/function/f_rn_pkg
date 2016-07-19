@@ -1,15 +1,19 @@
-CLHS: Function RENAME-PACKAGE
-Function RENAME-PACKAGE 
+
+Function RENAME-PACKAGE
+
 Syntax:
 rename-package package new-name &optional new-nicknames => package-object
+
 Arguments and Values:
- package---a package designator.  
-new-name---a package designator. 
-new-nicknames---a list of string designators. The default is the empty list. 
- package-object---the renamed package object.  
+package---a package designator.
+new-name---a package designator.
+new-nicknames---a list of string designators. The default is the empty list.
+package-object---the renamed package object.
+
 Description:
-Replaces the name and nicknames of package. The old name and all of the old nicknames of package are eliminated and are replaced by new-name and new-nicknames. 
-The consequences are undefined if new-name or any new-nickname conflicts with any existing package names. 
+Replaces the name and nicknames of package. The old name and all of the old nicknames of package are eliminated and are replaced by new-name and new-nicknames.
+The consequences are undefined if new-name or any new-nickname conflicts with any existing package names.
+
 Examples:
  (make-package 'temporary :nicknames '('TEMP')) =>  #<PACKAGE 'TEMPORARY'>
  (rename-package 'temp 'ephemeral) =>  #<PACKAGE 'EPHEMERAL'>
@@ -18,11 +22,7 @@ Examples:
  (rename-package 'ephemeral 'temporary '(temp fleeting))
 =>  #<PACKAGE 'TEMPORARY'>
  (package-nicknames (find-package 'temp)) =>  ('TEMP' 'FLEETING')
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-make-package 
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: RETURN-VALUES-UNSPECIFIED:SPECIFY PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+make-package
+

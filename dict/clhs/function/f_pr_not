@@ -1,16 +1,16 @@
-CLHS: Function PRINT-NOT-READABLE-OBJECT
-Function PRINT-NOT-READABLE-OBJECT  Syntax:
+
+Function PRINT-NOT-READABLE-OBJECT
+
+Syntax:
 print-not-readable-object condition => object
+
 Arguments and Values:
-condition---a condition of type print-not-readable. 
-object---an object. 
+condition---a condition of type print-not-readable.
+object---an object.
+
 Description:
-Returns the object that could not be printed readably in the situation represented by condition. 
-Examples: None.
-Affected By: None.
-Exceptional Situations: None.
+Returns the object that could not be printed readably in the situation represented by condition.
+
 See Also:
-print-not-readable, Section 9 (Conditions) 
-Notes: None.
- The following X3J13 cleanup issue, not part of the specification, applies to this section: DATA-IO:ADD-SUPPORT
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+print-not-readable
+

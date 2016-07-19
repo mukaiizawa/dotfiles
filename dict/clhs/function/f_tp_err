@@ -1,15 +1,19 @@
-CLHS: Function TYPE-ERROR-DATUM, TYPE-ERROR-EXPECTED-TYPE
-Function TYPE-ERROR-DATUM, TYPE-ERROR-EXPECTED-TYPE 
+
+Function TYPE-ERROR-DATUM, TYPE-ERROR-EXPECTED-TYPE
+
 Syntax:
 type-error-datum condition => datum
 type-error-expected-type condition => expected-type
+
 Arguments and Values:
-condition---a condition of type type-error. 
-datum---an object. 
-expected-type---a type specifier. 
+condition---a condition of type type-error.
+datum---an object.
+expected-type---a type specifier.
+
 Description:
-type-error-datum returns the offending datum in the situation represented by the condition. 
-type-error-expected-type returns the expected type of the offending datum in the situation represented by the condition. 
+type-error-datum returns the offending datum in the situation represented by the condition.
+type-error-expected-type returns the expected type of the offending datum in the situation represented by the condition.
+
 Examples:
  (defun fix-digits (condition)
    (check-type condition type-error)
@@ -24,10 +28,7 @@ Examples:
      (+ x 3)))
  (foo 'seven)
 =>  10
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-type-error, Section 9 (Conditions) 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+type-error
+

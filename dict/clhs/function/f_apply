@@ -5,13 +5,13 @@ Syntax:
 apply function &rest args+ => result*
 
 Arguments and Values:
- function---a function designator.
- args---a spreadable argument list designator.
- results---the values returned by function.
+function---a function designator.
+args---a spreadable argument list designator.
+results---the values returned by function.
 
 Description:
 Applies the function to the args.
- When the function receives its arguments via &rest, it is permissible (but not required) for the implementation to bind the rest parameter to an object that shares structure with the last argument to apply. Because a function can neither detect whether it was called via apply nor whether (if so) the last argument to apply was a constant, conforming programs must neither rely on the list structure of a rest list to be freshly consed, nor modify that list structure. 
+When the function receives its arguments via &rest, it is permissible (but not required) for the implementation to bind the rest parameter to an object that shares structure with the last argument to apply. Because a function can neither detect whether it was called via apply nor whether (if so) the last argument to apply was a constant, conforming programs must neither rely on the list structure of a rest list to be freshly consed, nor modify that list structure. 
 setf can be used with apply in certain circumstances; see Section 5.1.2.5 (APPLY Forms as Places).
 
 Examples:
@@ -35,12 +35,6 @@ Examples:
  (foo 4 :initial-contents '(a b c d) :double t)
     =>  #(A B C D A B C D)
 
-Affected By: None.
-
-Exceptional Situations: None.
-
 See Also:
 funcall, fdefinition, function
-
-Notes: None.
 

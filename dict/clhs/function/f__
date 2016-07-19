@@ -23,12 +23,6 @@ Examples:
  (- #c(100 45) #c(0 45)) =>  100
  (- 10 1 2 3 4) =>  0
 
-Affected By: None.
-
 Exceptional Situations:
 Might signal type-error if some argument is not a number. Might signal arithmetic-error.
-
-See Also: None.
-
-Notes: None.
 

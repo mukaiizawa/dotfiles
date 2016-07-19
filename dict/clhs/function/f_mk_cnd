@@ -1,5 +1,5 @@
 
-Function MAKE-CONDITION 
+Function MAKE-CONDITION
 
 Syntax:
 make-condition type &rest slot-initializations => condition

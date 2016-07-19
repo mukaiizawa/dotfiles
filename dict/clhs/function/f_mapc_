@@ -1,5 +1,5 @@
 
-Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON 
+Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON
 
 Syntax:
 mapc function &rest lists+ => list-1

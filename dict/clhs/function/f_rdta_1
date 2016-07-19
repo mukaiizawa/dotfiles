@@ -1,20 +1,21 @@
-CLHS: Function READTABLEP
-Function READTABLEP 
+
+Function READTABLEP
+
 Syntax:
 readtablep object => generalized-boolean
+
 Arguments and Values:
-object---an object. 
-generalized-boolean---a generalized boolean. 
+object---an object.
+generalized-boolean---a generalized boolean.
+
 Description:
-Returns true if object is of type readtable; otherwise, returns false. 
+Returns true if object is of type readtable; otherwise, returns false.
+
 Examples:
  (readtablep *readtable*) =>  true
  (readtablep (copy-readtable)) =>  true
  (readtablep '*readtable*) =>  false
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
-See Also: None.
+
 Notes:
- (readtablep object) ==  (typep object 'readtable) 
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+ (readtablep object) ==  (typep object 'readtable)
+

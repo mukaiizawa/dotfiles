@@ -18,9 +18,6 @@ The generic function allocate-instance creates and returns a new instance of the
 The caller of allocate-instance is expected to have already checked the initialization arguments.
 The generic function allocate-instance is called by make-instance, as described in Section 7.1 (Object Creation and Initialization).
 
-Affected By: None.
- Exceptional Situations: None.
-
 See Also:
 defclass, make-instance, class-of
 

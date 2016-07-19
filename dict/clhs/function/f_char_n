@@ -35,8 +35,8 @@ Exceptional Situations:
 Should signal an error of type type-error if character is not a character.
 
 See Also:
-name-char, Section 22.1.3.2 (Printing Characters)
+name-char
 
 Notes:
-Non-graphic characters having names are written by the Lisp printer as ``#</TT>'' followed by the their name; see Section 22.1.3.2 (Printing Characters).
+Non-graphic characters having names are written by the Lisp printer as ``#</TT>'' followed by the their name
 

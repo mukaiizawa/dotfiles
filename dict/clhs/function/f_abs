@@ -22,11 +22,6 @@ Examples:
  (abs #c(3/5 4/5)) =>  1 or approximately 1.0
  (eql (abs -0.0) -0.0) =>  true
 
-Affected By: None.
-Exceptional Situations: None.
-
-See Also: None.
-
 Notes:
 If number is a complex, the result is equivalent to the following:
 (sqrt (+ (expt (realpart number) 2) (expt (imagpart number) 2)))

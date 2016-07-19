@@ -8,7 +8,7 @@ find-class symbol &optional errorp environment => class
 Arguments and Values:
 symbol---a symbol.
 errorp---a generalized boolean. The default is true.
-environment -- same as the &environment argument to macro expansion functions and is used to distinguish between compile-time and run-time environments.  The &environment argument has dynamic extent; the consequences are undefined if the &environment argument is referred to outside the dynamic extent of the macro expansion function. 
+environment -- same as the &environment argument to macro expansion functions and is used to distinguish between compile-time and run-time environments.  The &environment argument has dynamic extent; the consequences are undefined if the &environment argument is referred to outside the dynamic extent of the macro expansion function.
 class---a class object, or nil.
 
 Description:

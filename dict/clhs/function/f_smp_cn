@@ -1,15 +1,19 @@
-CLHS: Function SIMPLE-CONDITION-FORMAT-CONTROL...
-Function SIMPLE-CONDITION-FORMAT-CONTROL, SIMPLE-CONDITION-FORMAT-ARGUMENTS 
+
+Function SIMPLE-CONDITION-FORMAT-CONTROL, SIMPLE-CONDITION-FORMAT-ARGUMENTS
+
 Syntax:
 simple-condition-format-control condition => format-control
 simple-condition-format-arguments condition => format-arguments
+
 Arguments and Values:
-condition---a condition of type simple-condition. 
-format-control---a format control. 
-format-arguments---a list. 
+condition---a condition of type simple-condition.
+format-control---a format control.
+format-arguments---a list.
+
 Description:
-simple-condition-format-control returns the format control needed to process the condition's format arguments. 
-simple-condition-format-arguments returns a list of format arguments needed to process the condition's format control. 
+simple-condition-format-control returns the format control needed to process the condition's format arguments.
+simple-condition-format-arguments returns a list of format arguments needed to process the condition's format control.
+
 Examples:
  (setq foo (make-condition 'simple-condition
                           :format-control 'Hi ~S'
@@ -18,11 +22,7 @@ Examples:
  (apply #'format nil (simple-condition-format-control foo)
                      (simple-condition-format-arguments foo))
 =>  'Hi HO'
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-simple-condition, Section 9.1 (Condition System Concepts) 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: FORMAT-STRING-ARGUMENTS:SPECIFY
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+simple-condition, Section 9.1 (Condition System Concepts)
+

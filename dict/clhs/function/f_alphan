@@ -19,6 +19,7 @@ Examples:
 
 Affected By:
 None. (In particular, the results of this predicate are independent of any special syntax which might have been enabled in the current readtable.)
+
 Exceptional Situations:
 Should signal an error of type type-error if character is not a character.
 

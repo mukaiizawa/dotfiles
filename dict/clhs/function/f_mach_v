@@ -12,7 +12,6 @@ Returns a string that identifies the version of the computer hardware on which C
 
 Examples:
  (machine-version) =>  'KL-10, microcode 9'
-Side Effects: None.
 
 Affected By:
 The machine version, and the implementation.

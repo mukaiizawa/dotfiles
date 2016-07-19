@@ -1,21 +1,22 @@
-CLHS: Function PACKAGE-ERROR-PACKAGE
-Function PACKAGE-ERROR-PACKAGE 
+
+Function PACKAGE-ERROR-PACKAGE
+
 Syntax:
 package-error-package condition => package
+
 Arguments and Values:
-condition---a condition of type package-error. 
-package---a package designator. 
+condition---a condition of type package-error.
+package---a package designator.
+
 Description:
-Returns a designator for the offending package in the situation represented by the condition. 
+Returns a designator for the offending package in the situation represented by the condition.
+
 Examples:
- (package-error-package 
+ (package-error-package
    (make-condition 'package-error
      :package (find-package 'COMMON-LISP')))
 =>  #<Package 'COMMON-LISP'>
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-package-error 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+package-error
+

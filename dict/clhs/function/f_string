@@ -1,24 +1,30 @@
-CLHS: Function STRING
-Function STRING 
+
+Function STRING
+
 Syntax:
 string x => string
+
 Arguments and Values:
- x---a string, a symbol, or a character.  
-string---a string. 
+x---a string, a symbol, or a character.
+string---a string.
+
 Description:
-Returns a string described by x; specifically: 
-  If x is a string, it is returned.   If x is a symbol, its name is returned.   If x is a character,  then a string containing that one character is returned.   string might perform additional, implementation-defined conversions.  
+Returns a string described by x; specifically:
+If x is a string, it is returned.   If x is a symbol, its name is returned.   If x is a character,  then a string containing that one character is returned.   string might perform additional, implementation-defined conversions.
+
 Examples:
  (string 'already a string') =>  'already a string'
  (string 'elm) =>  'ELM'
  (string #c) =>  'c'
 Affected By: None.
+
 Exceptional Situations:
- In the case where a conversion is defined neither by this specification nor by the implementation, an error of type type-error is signaled.  
+In the case where a conversion is defined neither by this specification nor by the implementation, an error of type type-error is signaled.
+
 See Also:
-coerce, string (type). 
+coerce, string (type).
+
 Notes:
-coerce can be used to convert a sequence of characters to a string. 
-prin1-to-string, princ-to-string, write-to-string, or format (with a first argument of nil) can be used to get a string representation of a number or any other object. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: STRING-COERCION:MAKE-CONSISTENT CHARACTER-PROPOSAL:2-1-1
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+coerce can be used to convert a sequence of characters to a string.
+prin1-to-string, princ-to-string, write-to-string, or format (with a first argument of nil) can be used to get a string representation of a number or any other object.
+

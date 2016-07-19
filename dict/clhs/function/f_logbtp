@@ -5,7 +5,7 @@ Syntax:
 logbitp index integer => generalized-boolean
 
 Arguments and Values:
- index---a non-negative integer.
+index---a non-negative integer.
 integer---an integer.
 generalized-boolean---a generalized boolean.
 

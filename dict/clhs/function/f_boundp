@@ -18,7 +18,6 @@ Examples:
  (boundp 'x) =>  false
  (let ((x 2)) (boundp 'x)) =>  false
  (let ((x 2)) (declare (special x)) (boundp 'x)) =>  true
-Affected By: None.
 
 Exceptional Situations:
 Should signal an error of type type-error if symbol is not a symbol.

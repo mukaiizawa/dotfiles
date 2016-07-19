@@ -1,24 +1,26 @@
-CLHS: Function NULL
-Function NULL 
+
+Function NULL
+
 Syntax:
 null object => boolean
+
 Arguments and Values:
-object---an object. 
-boolean---a boolean. 
+object---an object.
+boolean---a boolean.
+
 Description:
-Returns t if object is the empty list; otherwise, returns nil. 
+Returns t if object is the empty list; otherwise, returns nil.
+
 Examples:
  (null '()) =>  T
  (null nil) =>  T
  (null t) =>  NIL
  (null 1) =>  NIL
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-not 
+not
+
 Notes:
-null is intended to be used to test for the empty list whereas not is intended to be used to invert a boolean (or generalized boolean). Operationally, null and not compute the same result; which to use is a matter of style. 
+null is intended to be used to test for the empty list whereas not is intended to be used to invert a boolean (or generalized boolean). Operationally, null and not compute the same result; which to use is a matter of style.
  (null object) ==  (typep object 'null) ==  (eq object '())
-The following X3J13 cleanup issue, not part of the specification, applies to this section: NOT-AND-NULL-RETURN-VALUE:X3J13-MAR-93
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

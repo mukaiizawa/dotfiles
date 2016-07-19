@@ -17,7 +17,6 @@ If an implementation supports additional keyword arguments to compile-file, comp
 
 Examples:
 See logical-pathname-translations.
-Affected By: None.
 
 Exceptional Situations:
 An error of type file-error might be signaled if either input-file or output-file is wild.

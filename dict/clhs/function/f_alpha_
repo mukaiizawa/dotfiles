@@ -26,7 +26,5 @@ Exceptional Situations:
 Should signal an error of type type-error if character is not a character.
 
 See Also:
-alphanumericp, Section 13.1.10 (Documentation of Implementation-Defined Scripts)
-
-Notes: None.
+alphanumericp
 

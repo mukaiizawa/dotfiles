@@ -23,21 +23,18 @@ The following examples illustrate some possible return values, but are not inten
 OR=>  NIL, true, NIL
 OR=>  (LAMBDA (X) X), true, NIL
 OR=>  (LAMBDA (X) X), false, NIL
-
  (function-lambda-expression
     (funcall #'(lambda () #'(lambda (x) x))))
 =>  NIL, false, NIL
 OR=>  NIL, true, NIL
 OR=>  (LAMBDA (X) X), true, NIL
 OR=>  (LAMBDA (X) X), false, NIL
-
  (function-lambda-expression
     (funcall #'(lambda (x) #'(lambda () x)) nil))
 =>  NIL, true, NIL
 OR=>  (LAMBDA () X), true, NIL
 NOT=>  NIL, false, NIL
 NOT=>  (LAMBDA () X), false, NIL
-
  (flet ((foo (x) x))
    (setf (symbol-function 'bar) #'foo)
    (function-lambda-expression #'bar))
@@ -46,7 +43,6 @@ OR=>  NIL, true, NIL
 OR=>  (LAMBDA (X) (BLOCK FOO X)), true, NIL
 OR=>  (LAMBDA (X) (BLOCK FOO X)), false, FOO
 OR=>  (SI::BLOCK-LAMBDA FOO (X) X), false, FOO
-
  (defun foo ()
    (flet ((bar (x) x))
      #'bar))

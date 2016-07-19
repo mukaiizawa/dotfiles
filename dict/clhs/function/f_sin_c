@@ -1,23 +1,26 @@
-CLHS: Function SIN, COS, TAN
-Function SIN, COS, TAN 
+
+Function SIN, COS, TAN
+
 Syntax:
 sin radians => number
 cos radians => number
 tan radians => number
+
 Arguments and Values:
-radians---a number given in radians. 
-number---a number. 
+radians---a number given in radians.
+number---a number.
+
 Description:
-sin, cos, and tan return the sine, cosine, and tangent, respectively, of radians. 
+sin, cos, and tan return the sine, cosine, and tangent, respectively, of radians.
+
 Examples:
  (sin 0) =>  0.0
  (cos 0.7853982) =>  0.707107
  (tan #c(0 1)) =>  #C(0.0 0.761594)
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
-Should signal an error of type type-error if radians is not a number. Might signal arithmetic-error. 
+Should signal an error of type type-error if radians is not a number. Might signal arithmetic-error.
+
 See Also:
-asin, acos, atan, Section 12.1.3.3 (Rule of Float Substitutability) 
-Notes: None.
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+asin, acos, atan, Section 12.1.3.3 (Rule of Float Substitutability)
+

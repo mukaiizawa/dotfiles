@@ -4,9 +4,6 @@ Function FBOUNDP
 Syntax:
 fboundp name => generalized-boolean
 
-Pronunciation:
-[,ef'bandpee]
-
 Arguments and Values:
 name---a function name.
 generalized-boolean---a generalized boolean.

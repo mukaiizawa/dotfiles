@@ -23,8 +23,8 @@ Pathname merging treats a relative directory specially. If (pathname-directory p
  (append (pathname-directory default-pathname)
          (cdr  ;remove :relative from the front
            (pathname-directory pathname)))
- except that if the resulting list contains a string or :wild immediately followed by :back, both of them are removed. This removal of redundant :back keywords is repeated as many times as possible. If (pathname-directory default-pathname) is not a list or (pathname-directory pathname) is not a list whose car is :relative, the merged directory is (or (pathname-directory pathname) (pathname-directory default-pathname))
- merge-pathnames maps customary case in pathname into customary case in the output pathname.
+except that if the resulting list contains a string or :wild immediately followed by :back, both of them are removed. This removal of redundant :back keywords is repeated as many times as possible. If (pathname-directory default-pathname) is not a list or (pathname-directory pathname) is not a list whose car is :relative, the merged directory is (or (pathname-directory pathname) (pathname-directory default-pathname))
+merge-pathnames maps customary case in pathname into customary case in the output pathname.
 
 Examples:
  (merge-pathnames 'CMUC::FORMAT'
@@ -35,5 +35,5 @@ See Also:
 *default-pathname-defaults*, pathname, logical-pathname
 
 Notes:
-The net effect is that if just a name is supplied, the host, device, directory, and type will come from default-pathname, but the version will come from default-version. If nothing or just a directory is supplied, the name, type, and version will come from default-pathname together. 
+The net effect is that if just a name is supplied, the host, device, directory, and type will come from default-pathname, but the version will come from default-version. If nothing or just a directory is supplied, the name, type, and version will come from default-pathname together.
 

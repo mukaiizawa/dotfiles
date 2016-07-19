@@ -22,5 +22,5 @@ make-load-form, make-instance, setf, slot-value, slot-makunbound
 
 Notes:
 make-load-form-saving-slots can be useful in user-written make-load-form methods.
-When the object is an instance of standard-object, make-load-form-saving-slots could return a creation form that calls allocate-instance and an initialization form that contains calls to setf of slot-value and slot-makunbound, though other functions of similar effect might actually be used.  
+When the object is an instance of standard-object, make-load-form-saving-slots could return a creation form that calls allocate-instance and an initialization form that contains calls to setf of slot-value and slot-makunbound, though other functions of similar effect might actually be used.
 

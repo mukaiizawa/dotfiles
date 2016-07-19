@@ -10,7 +10,7 @@ args---arguments to the function.
 results---the values returned by the function.
 
 Description:
-funcall applies function to args.  If function is a symbol, it is coerced to a function as if by finding its functional value in the global environment. 
+funcall applies function to args.  If function is a symbol, it is coerced to a function as if by finding its functional value in the global environment.
 
 Examples:
  (funcall #'+ 1 2 3) =>  6

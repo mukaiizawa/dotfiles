@@ -28,7 +28,7 @@ Examples:
  (sbit ba 5) =>  1
 
 See Also:
-aref,  Section 3.2.1 (Compiler Terminology) 
+aref
 
 Notes:
 bit and sbit are like aref except that they require arrays to be a bit array and a simple bit array, respectively.

@@ -31,5 +31,5 @@ See Also:
 replace, nsubstitute
 
 Notes:
-(fill sequence item) == (nsubstitute-if item (constantly t) sequence)
+ (fill sequence item) == (nsubstitute-if item (constantly t) sequence)
 

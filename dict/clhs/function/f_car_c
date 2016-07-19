@@ -78,7 +78,9 @@ Description:
 If x is a cons, car returns the car of that cons. If x is nil, car returns nil.
 If x is a cons, cdr returns the cdr of that cons. If x is nil, cdr returns nil.
 Functions are provided which perform compositions of up to four car and cdr operations. Their names consist of a C, followed by two, three, or four occurrences of A or D, and finally an R. The series of A's and D's in each function's name is chosen to identify the series of car and cdr operations that is performed by the function. The order in which the A's and D's appear is the inverse of the order in which the corresponding operations are performed. The next figure defines the relationships precisely.
+
 This place ...  Is equivalent to this place ...
+-----------------------------------------------
 (caar x)        (car (car x))
 (cadr x)        (car (cdr x))
 (cdar x)        (cdr (car x))
@@ -111,7 +113,7 @@ This place ...  Is equivalent to this place ...
 Figure 14-6.  CAR and CDR variants
 
 setf can also be used with any of these functions to change an existing component of x, but setf will not make new components. So, for example, the car of a cons can be assigned with setf of car, but the car of nil cannot be assigned with setf of car. Similarly, the car of the car of a cons whose car is a cons can be assigned with setf of caar, but neither nilnor a cons whose car is nil can be assigned with setf of caar.
- The argument x is permitted to be a dotted list or a circular list.
+The argument x is permitted to be a dotted list or a circular list.
 
 Examples:
  (car nil) =>  NIL

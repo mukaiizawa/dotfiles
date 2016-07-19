@@ -19,13 +19,9 @@ Examples:
                :fill-pointer 3)) =>  true
  (adjustable-array-p (make-array 4)) =>  implementation-dependent
 
-Affected By: None.
-
 Exceptional Situations:
 Should signal an error of type type-error if its argument is not an array.
 
 See Also:
 adjust-array, make-array
-
-Notes: None.
 

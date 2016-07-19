@@ -31,5 +31,5 @@ See Also:
 logical-pathname
 
 Notes:
-Logical pathname definitions will be created not just by implementors but also by programmers. As such, it is important that the search strategy be documented. For example, an implementation might define that the definition of a host is to be found in a file called ``host.translations'' in some specifically named directory. 
+Logical pathname definitions will be created not just by implementors but also by programmers. As such, it is important that the search strategy be documented. For example, an implementation might define that the definition of a host is to be found in a file called ``host.translations'' in some specifically named directory.
 
