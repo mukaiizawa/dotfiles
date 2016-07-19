@@ -7,7 +7,7 @@ nth n list => object
 
 Arguments and Values:
 n---a non-negative integer.
-list---a list,  which might be a dotted list or a circular list. 
+list---a list,  which might be a dotted list or a circular list.
 object---an object.
 new-object---an object.
 

@@ -27,5 +27,5 @@ In Common Lisp, functions with names like ``xxx-if-not'' are related to function
 For example,
  (find-if-not #'zerop '(0 0 3)) ==
  (find-if (complement #'zerop) '(0 0 3)) =>  3
-Note that since the ``xxx-if-not'' functions and the :test-not arguments have been deprecated, uses of ``xxx-if'' functions or :test arguments with complement are preferred. 
+Note that since the ``xxx-if-not'' functions and the :test-not arguments have been deprecated, uses of ``xxx-if'' functions or :test arguments with complement are preferred.
 

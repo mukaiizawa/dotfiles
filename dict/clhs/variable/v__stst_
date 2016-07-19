@@ -1,10 +1,10 @@
 
-Variable *, **, *** 
+Variable *, **, ***
 Value Type:
 an object.
 
 Initial Value:
-implementation-dependent. 
+implementation-dependent.
 
 Description:
 The variables *, **, and *** are maintained by the Lisp read-eval-print loop to save the values of results that are printed each time through the loop.

@@ -1,16 +1,16 @@
 
-Macro NTH-VALUE 
+Macro NTH-VALUE
 
 Syntax:
 nth-value n form => object
 
 Arguments and Values:
-n---a non-negative integer; evaluated. 
-form---a form; evaluated as described below. 
-object---an object. 
+n---a non-negative integer; evaluated.
+form---a form; evaluated as described below.
+object---an object.
 
 Description:
-Evaluates n and then form, returning as its only value the nth value yielded by form, or nil if n is greater than or equal to the number of values returned by form. (The first returned value is numbered 0.) 
+Evaluates n and then form, returning as its only value the nth value yielded by form, or nil if n is greater than or equal to the number of values returned by form. (The first returned value is numbered 0.)
 
 Examples:
  (nth-value 0 (values 'a 'b)) =>  A
@@ -24,9 +24,9 @@ Examples:
 =>  3332987528, 3332987528, true
 
 See Also:
-multiple-value-list, nth 
+multiple-value-list, nth
 
 Notes:
-Operationally, the following relationship is true, although nth-value might be more efficient in some implementations because, for example, some consing might be avoided. 
+Operationally, the following relationship is true, although nth-value might be more efficient in some implementations because, for example, some consing might be avoided.
  (nth-value n form) ==  (nth n (multiple-value-list form))
 

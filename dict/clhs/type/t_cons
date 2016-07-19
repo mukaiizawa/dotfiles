@@ -1,22 +1,22 @@
 
-System Class CONS 
+System Class CONS
 
 Class Precedence List:
-cons, list, sequence, t 
+cons, list, sequence, t
 
 Description:
-A cons is a compound object having two components, called the car and cdr. These form a dotted pair. Each component can be any object. 
+A cons is a compound object having two components, called the car and cdr. These form a dotted pair. Each component can be any object.
 
 Compound Type Specifier Kind:
-Specializing. 
+Specializing.
 
 Compound Type Specifier Syntax:
 cons [car-typespec [cdr-typespec]]
 
 Compound Type Specifier Arguments:
-car-typespec---a type specifier, or the symbol *. The default is the symbol *. 
-cdr-typespec---a type specifier, or the symbol *. The default is the symbol *. 
+car-typespec---a type specifier, or the symbol *. The default is the symbol *.
+cdr-typespec---a type specifier, or the symbol *. The default is the symbol *.
 
 Compound Type Specifier Description:
-This denotes the set of conses whose car is constrained to be of type car-typespec and whose cdr is constrained to be of type cdr-typespec. (If either car-typespec or cdr-typespec is *, it is as if the type t had been denoted.) 
+This denotes the set of conses whose car is constrained to be of type car-typespec and whose cdr is constrained to be of type cdr-typespec. (If either car-typespec or cdr-typespec is *, it is as if the type t had been denoted.)
 

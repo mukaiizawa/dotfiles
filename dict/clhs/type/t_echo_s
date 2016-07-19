@@ -1,13 +1,13 @@
 
-System Class ECHO-STREAM 
+System Class ECHO-STREAM
 
 Class Precedence List:
-echo-stream, stream, t 
+echo-stream, stream, t
 
 Description:
-An echo stream is a bidirectional stream that gets its input from an associated input stream and sends its output to an associated output stream. 
-All input taken from the input stream is echoed to the output stream. Whether the input is echoed immediately after it is encountered, or after it has been read from the input stream is implementation-dependent. 
+An echo stream is a bidirectional stream that gets its input from an associated input stream and sends its output to an associated output stream.
+All input taken from the input stream is echoed to the output stream. Whether the input is echoed immediately after it is encountered, or after it has been read from the input stream is implementation-dependent.
 
 See Also:
-echo-stream-input-stream, echo-stream-output-stream, make-echo-stream 
+echo-stream-input-stream, echo-stream-output-stream, make-echo-stream
 

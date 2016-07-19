@@ -12,5 +12,5 @@ No additional subtype relationships among the specified subtypes of type conditi
 *  define-condition, not defclass, must be used to define new condition types.
 *  make-condition, not make-instance, must be used to create condition objects explicitly.
 *  The :report option of define-condition, not defmethod for print-object, must be used to define a condition reporter.
-*  slot-value, slot-boundp, slot-makunbound, and with-slots must not be used on condition objects. Instead, the appropriate accessor functions (defined by define-condition) should be used. 
+*  slot-value, slot-boundp, slot-makunbound, and with-slots must not be used on condition objects. Instead, the appropriate accessor functions (defined by define-condition) should be used.
 

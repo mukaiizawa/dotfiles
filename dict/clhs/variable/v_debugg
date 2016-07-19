@@ -46,5 +46,5 @@ Affected By:
 invoke-debugger
 
 Notes:
-When evaluating code typed in by the user interactively, it is sometimes useful to have the hook function bind *debugger-hook* to the function that was its second argument so that recursive errors can be handled using the same interactive facility. 
+When evaluating code typed in by the user interactively, it is sometimes useful to have the hook function bind *debugger-hook* to the function that was its second argument so that recursive errors can be handled using the same interactive facility.
 

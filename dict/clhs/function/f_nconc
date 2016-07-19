@@ -33,7 +33,7 @@ Examples:
  (setq foo (list 'a 'b 'c 'd 'e)
        bar (list 'f 'g 'h 'i 'j)
        baz (list 'k 'l 'm)) =>  (K L M)
- (setq foo (nconc nil foo bar nil baz)) =>  (A B C D E F G H I J K L M) 
+ (setq foo (nconc nil foo bar nil baz)) =>  (A B C D E F G H I J K L M)
  foo =>  (A B C D E F G H I J K L M)
  bar =>  (F G H I J K L M)
  baz =>  (K L M)

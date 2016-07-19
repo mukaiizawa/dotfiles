@@ -21,13 +21,13 @@ generalized-boolean---a generalized boolean.
 
 Description:
 These predicates compare characters.
-char= returns true if all characters are the same; otherwise, it returns false.  If two characters differ in any implementation-defined attributes, then they are not char=. 
+char= returns true if all characters are the same; otherwise, it returns false.  If two characters differ in any implementation-defined attributes, then they are not char=.
 char/= returns true if all characters are different; otherwise, it returns false.
-char< returns true if the characters are monotonically increasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char< is consistent with the numerical ordering by the predicate < on their codes. 
-char> returns true if the characters are monotonically decreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char> is consistent with the numerical ordering by the predicate > on their codes. 
-char<= returns true if the characters are monotonically nondecreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char<= is consistent with the numerical ordering by the predicate <= on their codes. 
-char>= returns true if the characters are monotonically nonincreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char>= is consistent with the numerical ordering by the predicate >= on their codes. 
-char-equal, char-not-equal, char-lessp, char-greaterp, char-not-greaterp, and char-not-lessp are similar to char=, char/=, char<, char>, char<=, char>=, respectively, except that they ignore differences in case and  might have an implementation-defined behavior for non-simple characters. For example, an implementation might define that char-equal, etc. ignore certain implementation-defined attributes. The effect, if any, of each implementation-defined attribute upon these functions must be specified as part of the definition of that attribute. 
+char< returns true if the characters are monotonically increasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char< is consistent with the numerical ordering by the predicate < on their codes.
+char> returns true if the characters are monotonically decreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char> is consistent with the numerical ordering by the predicate > on their codes.
+char<= returns true if the characters are monotonically nondecreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char<= is consistent with the numerical ordering by the predicate <= on their codes.
+char>= returns true if the characters are monotonically nonincreasing; otherwise, it returns false.  If two characters have identical implementation-defined attributes, then their ordering by char>= is consistent with the numerical ordering by the predicate >= on their codes.
+char-equal, char-not-equal, char-lessp, char-greaterp, char-not-greaterp, and char-not-lessp are similar to char=, char/=, char<, char>, char<=, char>=, respectively, except that they ignore differences in case and  might have an implementation-defined behavior for non-simple characters. For example, an implementation might define that char-equal, etc. ignore certain implementation-defined attributes. The effect, if any, of each implementation-defined attribute upon these functions must be specified as part of the definition of that attribute.
 
 Examples:
  (char= #d #d) =>  true

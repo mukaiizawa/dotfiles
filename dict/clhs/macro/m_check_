@@ -1,18 +1,18 @@
 
-Macro CHECK-TYPE 
+Macro CHECK-TYPE
 
 Syntax:
 check-type place typespec [string] => nil
 
 Arguments and Values:
-place---a place. 
-typespec---a type specifier. 
+place---a place.
+typespec---a type specifier.
 
 string---a string; evaluated. Description:
-check-type signals a correctable error of type type-error if the contents of place are not of the type typespec. 
-check-type can return only if the store-value restart is invoked, either explicitly from a handler or implicitly as one of the options offered by the debugger. If the store-value restart is invoked, check-type stores the new value that is the argument to the restart invocation (or that is prompted for interactively by the debugger) in place and starts over, checking the type of the new value and signaling another error if it is still not of the desired type. 
-The first time place is evaluated, it is evaluated by normal evaluation rules. It is later evaluated as a place if the type check fails and the store-value restart is used; see Section 5.1.1.1 (Evaluation of Subforms to Places). 
-string should be an English description of the type, starting with an indefinite article (``a'' or ``an''). If string is not supplied, it is computed automatically from typespec. The automatically generated message mentions place, its contents, and the desired type. An implementation may choose to generate a somewhat differently worded error message if it recognizes that place is of a particular form, such as one of the arguments to the function that called check-type. string is allowed because some applications of check-type may require a more specific description of what is wanted than can be generated automatically from typespec. 
+check-type signals a correctable error of type type-error if the contents of place are not of the type typespec.
+check-type can return only if the store-value restart is invoked, either explicitly from a handler or implicitly as one of the options offered by the debugger. If the store-value restart is invoked, check-type stores the new value that is the argument to the restart invocation (or that is prompted for interactively by the debugger) in place and starts over, checking the type of the new value and signaling another error if it is still not of the desired type.
+The first time place is evaluated, it is evaluated by normal evaluation rules. It is later evaluated as a place if the type check fails and the store-value restart is used; see Section 5.1.1.1 (Evaluation of Subforms to Places).
+string should be an English description of the type, starting with an indefinite article (``a'' or ``an''). If string is not supplied, it is computed automatically from typespec. The automatically generated message mentions place, its contents, and the desired type. An implementation may choose to generate a somewhat differently worded error message if it recognizes that place is of a particular form, such as one of the arguments to the function that called check-type. string is allowed because some applications of check-type may require a more specific description of what is wanted than can be generated automatically from typespec.
 
 Examples:
  (setq aardvarks '(sam harry fred))
@@ -61,14 +61,14 @@ Examples:
 >>  Debug> :Continue 1
 >>  Type a form to be evaluated and used instead: 5
 =>  (defun add5 (x) (+ x 5))
-Control is transferred to a handler. 
+Control is transferred to a handler.
 
 Side Effects:
-The debugger might be entered. 
+The debugger might be entered.
 
 Affected By:
-*break-on-signals* 
-The implementation. 
+*break-on-signals*
+The implementation.
 
 Notes:
  (check-type place typespec)

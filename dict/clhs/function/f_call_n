@@ -17,7 +17,7 @@ When call-next-method is called with arguments, the next method is called with t
 If call-next-method is called with arguments but omits optional arguments, the next method called defaults those arguments.
 The function call-next-method returns any values that are returned by the next method.
 The function call-next-method has lexical scope and indefinite extent and can only be used within the body of a method defined by a method-defining form.
-Whether or not call-next-method is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of call-next-method are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use call-next-method outside of a method-defining form are undefined. 
+Whether or not call-next-method is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of call-next-method are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use call-next-method outside of a method-defining form are undefined.
 
 Affected By:
 defmethod, call-method, define-method-combination

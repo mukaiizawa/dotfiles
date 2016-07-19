@@ -13,11 +13,11 @@ Used as the expansion interface hook by macroexpand-1 to control the macro expan
 Examples:
  (defun hook (expander form env)
     (format t 'Now expanding: ~S~%' form)
-    (funcall expander form env)) =>  HOOK 
- (defmacro machook (x y) `(/ (+ ,x ,y) 2)) =>  MACHOOK 
- (macroexpand '(machook 1 2)) =>  (/ (+ 1 2) 2), true 
+    (funcall expander form env)) =>  HOOK
+ (defmacro machook (x y) `(/ (+ ,x ,y) 2)) =>  MACHOOK
+ (macroexpand '(machook 1 2)) =>  (/ (+ 1 2) 2), true
  (let ((*macroexpand-hook* #'hook)) (macroexpand '(machook 1 2)))
->>  Now expanding (MACHOOK 1 2) 
+>>  Now expanding (MACHOOK 1 2)
 =>  (/ (+ 1 2) 2), true
 
 See Also:

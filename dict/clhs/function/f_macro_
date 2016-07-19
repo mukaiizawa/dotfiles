@@ -1,5 +1,5 @@
 
-Accessor MACRO-FUNCTION 
+Accessor MACRO-FUNCTION
 
 Syntax:
 macro-function symbol &optional environment => function
@@ -40,5 +40,5 @@ defmacro
 Notes:
 setf can be used with macro-function to install a macro as a symbol's global function definition:
  (setf (macro-function symbol) fn)
-The value installed must be a function that accepts two arguments, the entire macro call and an environment, and computes the expansion for that call. Performing this operation causes symbol to have only that macro definition as its global function definition; any previous definition, whether as a macro or as a function, is lost. 
+The value installed must be a function that accepts two arguments, the entire macro call and an environment, and computes the expansion for that call. Performing this operation causes symbol to have only that macro definition as its global function definition; any previous definition, whether as a macro or as a function, is lost.
 

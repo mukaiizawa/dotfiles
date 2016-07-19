@@ -1,14 +1,14 @@
 
-Macro RETURN 
+Macro RETURN
 
 Syntax:
-return [result] =>| 
+return [result] =>|
 
 Arguments and Values:
-result---a form; evaluated. The default is nil. 
+result---a form; evaluated. The default is nil.
 
 Description:
-Returns, as if by return-from, from the block named nil. 
+Returns, as if by return-from, from the block named nil.
 
 Examples:
  (block nil (return) 1) =>  NIL
@@ -24,5 +24,5 @@ block, return-from
 Notes:
  (return) ==  (return-from nil)
  (return form) ==  (return-from nil form)
-The implicit blocks established by macros such as do are often named nil, so that return can be used to exit from such forms. 
+The implicit blocks established by macros such as do are often named nil, so that return can be used to exit from such forms.
 

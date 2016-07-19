@@ -1,11 +1,11 @@
 
-Restart STORE-VALUE 
+Restart STORE-VALUE
 
 Data Arguments Required:
-a value to use instead (on an ongoing basis). 
+a value to use instead (on an ongoing basis).
 
 Description:
-The store-value restart is generally used by handlers trying to recover from errors of types such as cell-error or type-error, which may wish to supply a replacement datum to be stored permanently. 
+The store-value restart is generally used by handlers trying to recover from errors of types such as cell-error or type-error, which may wish to supply a replacement datum to be stored permanently.
 
 Examples:
  (defun type-error-auto-coerce (c)
@@ -21,5 +21,5 @@ Examples:
      x)) =>  3.0
 
 See Also:
-invoke-restart, store-value (function), ccase, check-type, ctypecase, use-value (function and restart) 
+invoke-restart, store-value (function), ccase, check-type, ctypecase, use-value (function and restart)
 

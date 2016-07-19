@@ -16,7 +16,7 @@ Examples:
 >>  FOOBAR
 =>  BAR
  (with-output-to-string (*standard-output*)
-   (prin1 'foo) 
+   (prin1 'foo)
    (prin1 'bar *terminal-io*))
 >>  BAR
 =>  'FOO'

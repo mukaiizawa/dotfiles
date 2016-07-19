@@ -1,9 +1,9 @@
 
-Type ATOM 
+Type ATOM
 
 Supertypes:
-atom, t 
+atom, t
 
 Description:
-It is equivalent to (not cons). 
+It is equivalent to (not cons).
 

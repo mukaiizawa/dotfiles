@@ -1,9 +1,9 @@
 
-System Class RATIO 
+System Class RATIO
 
 Class Precedence List:
-ratio, rational,  real,  number, t 
+ratio, rational,  real,  number, t
 
 Description:
-A ratio is a number representing the mathematical ratio of two non-zero integers, the numerator and denominator, whose greatest common divisor is one, and of which the denominator is positive and greater than one. 
+A ratio is a number representing the mathematical ratio of two non-zero integers, the numerator and denominator, whose greatest common divisor is one, and of which the denominator is positive and greater than one.
 

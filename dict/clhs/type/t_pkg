@@ -1,8 +1,8 @@
 
-System Class PACKAGE 
+System Class PACKAGE
 
 Class Precedence List:
-package, t 
+package, t
 
 Description:
 A package is a namespace that maps symbol names to symbols.

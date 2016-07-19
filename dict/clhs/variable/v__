@@ -8,7 +8,7 @@ Initial Value:
 implementation-dependent.
 
 Description:
-The value of - is the form that is currently being evaluated by the Lisp read-eval-print loop. 
+The value of - is the form that is currently being evaluated by the Lisp read-eval-print loop.
 
 Examples:
 (format t '~&Evaluating ~S~%' -)
@@ -16,7 +16,7 @@ Examples:
 =>  NIL
 
 Affected By:
-Lisp read-eval-print loop. 
+Lisp read-eval-print loop.
 
 See Also:
 + (variable), * (variable), / (variable)

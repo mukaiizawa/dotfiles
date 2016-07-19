@@ -1,19 +1,19 @@
 
-Special Form SETQ 
+Special Form SETQ
 
 Syntax:
 setq {pair}* => result
-pair::= var form 
+pair::= var form
 
 Arguments and Values:
-var---a symbol naming a variable other than a constant variable. 
-form---a form. 
-result---the primary value of the last form, or nil if no pairs were supplied. 
+var---a symbol naming a variable other than a constant variable.
+form---a form.
+result---the primary value of the last form, or nil if no pairs were supplied.
 
 Description:
-Assigns values to variables. 
-(setq var1 form1 var2 form2 ...) is the simple variable assignment statement of Lisp. First form1 is evaluated and the result is stored in the variable var1, then form2 is evaluated and the result stored in var2, and so forth. setq may be used for assignment of both lexical and dynamic variables. 
-If any var refers to a binding made by symbol-macrolet, then that var is treated as if setf (not setq) had been used.  
+Assigns values to variables.
+(setq var1 form1 var2 form2 ...) is the simple variable assignment statement of Lisp. First form1 is evaluated and the result is stored in the variable var1, then form2 is evaluated and the result stored in var2, and so forth. setq may be used for assignment of both lexical and dynamic variables.
+If any var refers to a binding made by symbol-macrolet, then that var is treated as if setf (not setq) had been used. 
 
 Examples:
  ;; A simple use of SETQ to establish values for variables.
@@ -34,8 +34,8 @@ Examples:
 =>  ((21 22 30) 21 22)
 
 Side Effects:
-The primary value of each form is assigned to the corresponding var. 
+The primary value of each form is assigned to the corresponding var.
 
 See Also:
-psetq, set, setf 
+psetq, set, setf
 

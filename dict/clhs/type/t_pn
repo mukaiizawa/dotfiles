@@ -1,10 +1,10 @@
 
-System Class PATHNAME 
+System Class PATHNAME
 
 Class Precedence List:
-pathname, t 
+pathname, t
 
 Description:
-A pathname is a structured object which represents a filename. 
-There are two kinds of pathnames---physical pathnames and logical pathnames. 
+A pathname is a structured object which represents a filename.
+There are two kinds of pathnames---physical pathnames and logical pathnames.
 

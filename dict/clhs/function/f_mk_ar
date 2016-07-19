@@ -94,5 +94,5 @@ See Also:
 adjustable-array-p, aref, arrayp, array-element-type, array-rank-limit, array-dimension-limit, fill-pointer, upgraded-array-element-type
 
 Notes:
-There is no specified way to create an array for which adjustable-array-p definitely returns false. There is no specified way to create an array that is not a simple array. 
+There is no specified way to create an array for which adjustable-array-p definitely returns false. There is no specified way to create an array that is not a simple array.
 

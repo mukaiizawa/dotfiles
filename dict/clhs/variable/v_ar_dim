@@ -8,5 +8,5 @@ Description:
 The upper exclusive bound on each individual dimension of an array.
 
 See Also:
-make-array 
+make-array
 

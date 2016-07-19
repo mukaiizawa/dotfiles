@@ -15,7 +15,7 @@ Examples:
  *package* =>  #<PACKAGE 'COMMON-LISP-USER'>
  (make-package 'SAMPLE-PACKAGE' :use '('COMMON-LISP'))
 =>  #<PACKAGE 'SAMPLE-PACKAGE'>
- (list 
+ (list
    (symbol-package
      (let ((*package* (find-package 'sample-package)))
        (setq *some-symbol* (read-from-string 'just-testing'))))

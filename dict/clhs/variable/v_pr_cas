@@ -17,7 +17,7 @@ Examples:
      (format t '~&~S ~S~%' 'this-and-that '|And-something-elSE|)))
 =>  TEST-PC
 ;; Although the choice of which characters to escape is specified by
-;; *PRINT-CASE*, the choice of how to escape those characters 
+;; *PRINT-CASE*, the choice of how to escape those characters
 ;; (i.e., whether single escapes or multiple escapes are used)
 ;; is implementation-dependent.  The examples here show two of the
 ;; many valid ways in which escaping might appear.
@@ -37,7 +37,7 @@ g-else
 =>  NIL
 
 See Also:
-write 
+write
 
 Notes:
 read normally converts lowercase characters appearing in symbols to corresponding uppercase characters, so that internally print names normally contain only uppercase characters.

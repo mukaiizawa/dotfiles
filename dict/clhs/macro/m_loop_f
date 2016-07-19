@@ -1,11 +1,11 @@
 
-Local Macro LOOP-FINISH 
+Local Macro LOOP-FINISH
 
 Syntax:
-loop-finish <no arguments> =>| 
+loop-finish <no arguments> =>|
 
 Description:
-The loop-finish macro can be used lexically within an extended loop form to terminate that form ``normally.'' That is, it transfers control to the loop epilogue of the lexically innermost extended loop form. This permits execution of any finally clause (for effect) and the return of any accumulated result. 
+The loop-finish macro can be used lexically within an extended loop form to terminate that form ``normally.'' That is, it transfers control to the loop epilogue of the lexically innermost extended loop form. This permits execution of any finally clause (for effect) and the return of any accumulated result.
 
 Examples:
 ;; Terminate the loop, but return the accumulated count.
@@ -18,10 +18,10 @@ Examples:
        until (symbolp i)
        count i)
 =>  3
-;; While LOOP-FINISH can be used can be used in a variety of 
+;; While LOOP-FINISH can be used can be used in a variety of
 ;; situations it is really most needed in a situation where a need
 ;; to exit is detected at other than the loop's `top level'
-;; (where UNTIL or WHEN often work just as well), or where some 
+;; (where UNTIL or WHEN often work just as well), or where some
 ;; computation must occur between the point where a need to exit is
 ;; detected and the point where the exit actually occurs.  For example:
  (defun tokenize-sentence (string)
@@ -45,8 +45,8 @@ Examples:
 =>  ('this' 'is' 'a' 'sentence'), NIL
 
 Side Effects:
-Transfers control. 
+Transfers control.
 
 Exceptional Situations:
-Whether or not loop-finish is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of loop-finish are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use loop-finish outside of loop are undefined.  
+Whether or not loop-finish is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of loop-finish are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use loop-finish outside of loop are undefined. 
 

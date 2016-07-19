@@ -40,7 +40,7 @@ Examples:
 >>  #'(LAMBDA ()
 >>      (LIST 'a' #'C #'D))
 >>  #'(LAMBDA ()
->>      (LIST a b 'C #'D)) 
+>>      (LIST a b 'C #'D))
 >>  #'(LAMBDA ()
 >>      (LIST a b 'C #'D))
 =>  NIL

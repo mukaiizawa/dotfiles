@@ -1,5 +1,5 @@
 
-Accessor LDB 
+Accessor LDB
 
 Syntax:
 ldb bytespec integer => byte

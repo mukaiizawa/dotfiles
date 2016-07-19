@@ -18,7 +18,7 @@ The generic function no-next-method is called by call-next-method when there is 
 The generic function no-next-method is not intended to be called by programmers. Programmers may write methods for it.
 
 Exceptional Situations:
-The system-supplied method on no-next-method signals an error of type error. 
+The system-supplied method on no-next-method signals an error of type error.
 
 See Also:
 call-next-method

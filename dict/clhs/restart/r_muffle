@@ -1,8 +1,8 @@
 
-Restart MUFFLE-WARNING 
+Restart MUFFLE-WARNING
 
 Description:
-This restart is established by warn so that handlers of warning conditions have a way to tell warn that a warning has already been dealt with and that no further action is warranted. 
+This restart is established by warn so that handlers of warning conditions have a way to tell warn that a warning has already been dealt with and that no further action is warranted.
 
 Examples:
  (defvar *all-quiet* nil) =>  *ALL-QUIET*
@@ -10,7 +10,7 @@ Examples:
  (defun quiet-warning-handler (c)
    (when *all-quiet*
      (let ((r (find-restart 'muffle-warning c)))
-       (when r 
+       (when r
          (push c *saved-warnings*)
          (invoke-restart r)))))
 =>  CUSTOM-WARNING-HANDLER
@@ -35,5 +35,5 @@ Examples:
 =>  NIL
 
 See Also:
-invoke-restart, muffle-warning (function), warn 
+invoke-restart, muffle-warning (function), warn
 

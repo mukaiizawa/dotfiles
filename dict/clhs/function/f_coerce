@@ -29,7 +29,7 @@ If the result-type is any of float, short-float, single-float, double-float, lon
 
 function
 If the result-type is function, and object is any  function name  that is fbound but that is globally defined neither as a macro name nor as a special operator, then the result is the functional value of object.
-If the result-type is function, and object is a lambda expression, then the result is a closure of object in the null lexical environment. 
+If the result-type is function, and object is a lambda expression, then the result is a closure of object in the null lexical environment.
 
 t
 Any object can be coerced to an object of type t. In this case, the object is simply returned.
@@ -57,7 +57,7 @@ Exceptional Situations:
 If a coercion is not possible, an error of type type-error is signaled.
 (coerce x 'nil) always signals an error of type type-error.
 An error of type error is signaled if the result-type is function but object is a symbol that is not fbound or if the symbol names a macro or a special operator.
-An error of type type-error should be signaled if result-type specifies the number of elements and object is of a different length. 
+An error of type type-error should be signaled if result-type specifies the number of elements and object is of a different length.
 
 See Also:
 rational, floor, char-code, char-int
