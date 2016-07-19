@@ -683,3 +683,5 @@ Variable *terminal-io*	~/dotfiles/dict/lisp/variable/v_termin
 Variable +, ++, +++	~/dotfiles/dict/lisp/variable/v_pl_plp
 Variable -	~/dotfiles/dict/lisp/variable/v__
 Variable /, //, ///	~/dotfiles/dict/lisp/variable/v_sl_sls
+Function mkstr	~/dotfiles/dict/lisp/user-defined/mkstr
+Function mksym	~/dotfiles/dict/lisp/user-defined/mksym

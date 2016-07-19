@@ -1,0 +1,24 @@
+
+Function MKSYM
+
+Syntax:
+mksym &rest objects => symbol
+
+Arguments and Values:
+object---an object.
+symbol---a symbol.
+
+Description:
+The mksym function takes one or more arguments and returns the symbol.
+(creating one if necessary)
+Whose print-name is their concatenation.
+It can take as an argument any object which has a
+printable representation: symbols, strings, numbers, even lists.
+
+Examples:
+(mksym 'ar "Madi" #\L #\L 0)
+=> |ARMadiLL0|
+
+See Also:
+mkstr
+
