@@ -14,9 +14,6 @@ Returns true if object is of type simple-bit-vector; otherwise, returns false.
 Examples:
  (simple-bit-vector-p (make-array 6)) =>  false
  (simple-bit-vector-p #*) =>  true
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 simple-vector-p

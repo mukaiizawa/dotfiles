@@ -104,8 +104,6 @@ The following code is not correct:
      (declare (special x))
      (unwind-protect (return)
        (print x))))
- Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 catch, go, handler-case, restart-case, return, return-from, throw

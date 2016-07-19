@@ -18,7 +18,6 @@ Examples:
  (hash-table-count table) =>  1
  (dotimes (i 100) (setf (gethash i table) i)) =>  NIL
  (hash-table-count table) =>  100
-Side Effects: None.
 
 Affected By:
 clrhash, remhash, setf of gethash

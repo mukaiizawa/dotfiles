@@ -19,9 +19,6 @@ Examples:
  (arrayp 'hi) =>  false
  (arrayp 12) =>  false
 
-Affected By: None.
- Exceptional Situations: None.
-
 See Also:
  typep
 

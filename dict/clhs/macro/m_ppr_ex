@@ -3,7 +3,6 @@ Local Macro PPRINT-EXIT-IF-LIST-EXHAUSTED
 
 Syntax:
 pprint-exit-if-list-exhausted <no arguments> => nil
-Arguments and Values: None.
 
 Description:
 Tests whether or not the list passed to the lexically current logical block has been exhausted; see Section 22.2.1.1 (Dynamic Control of the Arrangement of Output). If this list has been reduced to nil, pprint-exit-if-list-exhausted terminates the execution of the lexically current logical block except for the printing of the suffix. Otherwise pprint-exit-if-list-exhausted returns nil.

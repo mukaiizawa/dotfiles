@@ -30,9 +30,6 @@ Examples:
  (deftype square-matrix (&optional type size)
    `(and (array ,type (,size ,size))
          (satisfies equidimensional))) =>  SQUARE-MATRIX
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 declare, defmacro, documentation

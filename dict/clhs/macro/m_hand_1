@@ -49,8 +49,6 @@ Examples:
 =>  RANDOM-CONDITION
  (assess-condition (make-condition 'random-condition))
 =>  'Hardly worth mentioning.'
-Affected By: None.
-Exceptional Situations: None.
 
 Notes:
  (handler-case form

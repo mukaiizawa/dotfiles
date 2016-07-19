@@ -5,10 +5,6 @@ Syntax:
 rplaca cons object => cons
 rplacd cons object => cons
 
-Pronunciation:
-rplaca: [,ree'plakuh] or [,ruh'plakuh]
-rplacd: [,ree'plakduh] or [,ruh'plakduh] or [,ree'plakdee] or [,ruh'plakdee]
-
 Arguments and Values:
 cons---a cons.
 object---an object.

@@ -18,9 +18,6 @@ Examples:
     (values-list temp)
     (setq temp nil)
     (values-list temp)) =>  1, 2, 3
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 prog1

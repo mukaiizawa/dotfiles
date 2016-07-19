@@ -23,6 +23,3 @@ Examples:
 See Also:
 nconc, concatenate
 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DOTTED-LIST-ARGUMENTS:CLARIFY
-

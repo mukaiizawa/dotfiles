@@ -26,7 +26,7 @@ Side Effects:
 The use list of package is modified.
 
 Affected By:
- urrent state of the package system. Exceptional Situations: None.
+urrent state of the package system.
 
 See Also:
 use-package, package-use-list

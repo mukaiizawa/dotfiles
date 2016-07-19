@@ -18,7 +18,6 @@ If function-name is a list, it must be of the form (setf symbol). If function-na
 If function-name specifies a generic function that has a different value for the :lambda-list argument, and the new value is congruent with the lambda lists of all existing methods or there are no methods, the value is changed; otherwise an error is signaled.
 If function-name specifies a generic function that has a different value for the :generic-function-class argument and if the new generic function class is compatible with the old, change-class is called to change the class of the generic function; otherwise an error is signaled.
 If function-name specifies a generic function that has a different value for the :method-class argument, the value is changed, but any existing methods are not changed.
-Examples: None.
 
 Affected By:
 Existing function binding of function-name.

@@ -40,7 +40,6 @@ Giving } the same definition as the standard definition of the character ) has t
 
 Affected By:
 *standard-input*, *readtable*, *terminal-io*.
-Exceptional Situations: None.
 
 See Also:
 read, peek-char, read-char, unread-char.

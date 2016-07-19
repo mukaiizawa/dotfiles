@@ -78,5 +78,4 @@ log, sqrt
 
 Notes:
 The result of either asin or acos can be a complex even if number is not a complex; this occurs when the absolute value of number is greater than one.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: IEEE-ATAN-BRANCH-CUT:SPLIT REAL-NUMBER-TYPE:X3J13-MAR-89 COMPLEX-ATAN-BRANCH-CUT:TWEAK COMPLEX-ATANH-BOGUS-FORMULA:TWEAK-MORE
 

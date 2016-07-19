@@ -50,5 +50,5 @@ union
 
 Notes:
 The :test-not parameter is deprecated.
-Since the nintersection side effect is not required, it should not be used in for-effect-only positions in portable code.  The following X3J13 cleanup issues, not part of the specification, apply to this section: TEST-NOT-IF-NOT:FLUSH-ALL MAPPING-DESTRUCTIVE-INTERACTION:EXPLICITLY-VAGUE CONSTANT-MODIFICATION:DISALLOW NINTERSECTION-DESTRUCTION REMF-DESTRUCTION-UNSPECIFIED:X3J13-MAR-89 NINTERSECTION-DESTRUCTION:REVERT
+Since the nintersection side effect is not required, it should not be used in for-effect-only positions in portable code.
 

@@ -24,7 +24,6 @@ Examples:
  (wild-pathname-p (make-pathname :name :wild) :type) =>  false
  (wild-pathname-p (pathname 's:>foo>**>')) =>  true ;Lispm
  (wild-pathname-p (pathname :name 'F*O')) =>  true ;Most places
-Affected By: None.
 
 Exceptional Situations:
 If pathname is not a pathname, a string, or a stream associated with a file an error of type type-error is signaled.

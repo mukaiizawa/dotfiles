@@ -21,7 +21,6 @@ The arguments to update-instance-for-different-class are computed by change-clas
 
 Examples:
 See the example for the function change-class.
-Affected By: None.
 
 Exceptional Situations:
 The system-supplied primary method on update-instance-for-different-class signals an error if an initialization argument is supplied that is not declared as valid.

@@ -16,7 +16,6 @@ Examples:
  (graphic-char-p ##) =>  true
  (graphic-char-p #Space) =>  true
  (graphic-char-p #Newline) =>  false
-Affected By: None.
 
 Exceptional Situations:
 Should signal an error of type type-error if character is not a character.

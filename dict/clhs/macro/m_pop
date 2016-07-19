@@ -22,8 +22,6 @@ Examples:
 
 Side Effects:
 The contents of place are modified.
-Affected By: None.
-Exceptional Situations: None.
 
 See Also:
 push, pushnew, Section 5.1 (Generalized Reference)
@@ -31,5 +29,4 @@ Notes:
 The effect of (pop place) is roughly equivalent to
  (prog1 (car place) (setf place (cdr place)))
 except that the latter would evaluate any subforms of place three times, while pop evaluates them only once.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: PUSH-EVALUATION-ORDER:FIRST-ITEM DOTTED-LIST-ARGUMENTS:CLARIFY
 

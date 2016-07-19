@@ -42,7 +42,6 @@ Examples:
  (assoc-if-not #'alpha-char-p alist
                :key #'(lambda (x) (char x 0))) =>  ('2' . 2)
 
-Affected By: None.
 Exceptional Situations:
 Should be prepared to signal an error of type type-error if alist is not an association list.
 

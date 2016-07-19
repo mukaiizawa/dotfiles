@@ -63,12 +63,6 @@ cddddr x => object
 (setf (cdddar x) new-object)
 (setf (cddddr x) new-object)
 
-Pronunciation:
-cadr: ['ka,duhr]
-caddr: ['kaduh,duhr] or ['ka,dduhr]
-cdr: ['k,duhr]
-cddr: ['kduh,duhr] or ['kuh,dduhr]
-
 Arguments and Values:
 x---a list.
 object---an object.

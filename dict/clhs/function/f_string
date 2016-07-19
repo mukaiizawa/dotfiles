@@ -16,7 +16,6 @@ Examples:
  (string 'already a string') =>  'already a string'
  (string 'elm) =>  'ELM'
  (string #c) =>  'c'
-Affected By: None.
 
 Exceptional Situations:
 In the case where a conversion is defined neither by this specification nor by the implementation, an error of type type-error is signaled.

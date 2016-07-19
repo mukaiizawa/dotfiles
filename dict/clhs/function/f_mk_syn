@@ -23,8 +23,6 @@ Examples:
  (setq c-stream b-stream)
 =>  #<String Input Stream>
  (read s-stream) =>  B-STREAM
-Side Effects: None.
-Affected By: None.
 
 Exceptional Situations:
 Should signal type-error if its argument is not a symbol.

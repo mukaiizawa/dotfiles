@@ -26,7 +26,6 @@ The output-stream is modified.
 
 Affected By:
 *standard-output*, *terminal-io*.
-Exceptional Situations: None.
 
 See Also:
 read-char, write-byte,  write-sequence

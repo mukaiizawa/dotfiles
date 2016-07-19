@@ -27,8 +27,6 @@ Side Effects:
 Affected By:
 *debug-io* and *debugger-hook*.
 
-Exceptional Situations: None.
-
 See Also:
 error, break
 
