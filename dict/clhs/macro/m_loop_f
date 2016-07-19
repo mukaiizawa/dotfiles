@@ -1,9 +1,12 @@
-CLHS: Local Macro LOOP-FINISH
+
 Local Macro LOOP-FINISH 
+
 Syntax:
 loop-finish <no arguments> =>| 
+
 Description:
 The loop-finish macro can be used lexically within an extended loop form to terminate that form ``normally.'' That is, it transfers control to the loop epilogue of the lexically innermost extended loop form. This permits execution of any finally clause (for effect) and the return of any accumulated result. 
+
 Examples:
 ;; Terminate the loop, but return the accumulated count.
  (loop for i in '(1 2 3 stop-here 4 5 6)
@@ -40,13 +43,10 @@ Examples:
 =>  ('this' 'is' 'a' 'sentence'), 19
  (tokenize-sentence 'this is a sentence')
 =>  ('this' 'is' 'a' 'sentence'), NIL
+
 Side Effects:
 Transfers control. 
-Affected By: None.
+
 Exceptional Situations:
- Whether or not loop-finish is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of loop-finish are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use loop-finish outside of loop are undefined.  
-See Also:
-loop, Section 6.1 (The LOOP Facility) 
-Notes:
-The following X3J13 cleanup issue, not part of the specification, applies to this section: LEXICAL-CONSTRUCT-GLOBAL-DEFINITION:UNDEFINED
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+Whether or not loop-finish is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of loop-finish are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use loop-finish outside of loop are undefined.  
+

@@ -1,22 +1,26 @@
-CLHS: Macro DEFMACRO
+
 Macro DEFMACRO 
+
 Syntax:
 defmacro name lambda-list [[declaration* | documentation]] form* => name
+
 Arguments and Values:
 name---a symbol. lambda-list---a macro lambda list. 
 declaration---a declare expression; not evaluated. 
 documentation---a string; not evaluated. 
 form---a form. 
+
 Description:
 Defines name as a macro by associating a macro function with that name in the global environment.  The macro function is defined in the same lexical environment in which the defmacro form appears.  
- The parameter variables in lambda-list are bound to destructured portions of the macro call. 
+The parameter variables in lambda-list are bound to destructured portions of the macro call. 
 The expansion function accepts two arguments, a form and an environment. The expansion function returns a form. The body of the expansion function is specified by forms. Forms are executed in order. The value of the last form executed is returned as the expansion of the macro.   The body forms of the expansion function (but not the lambda-list)  are implicitly enclosed in a block whose name is name.  
 The lambda-list conforms to the requirements described in Section 3.4.4 (Macro Lambda Lists). 
- Documentation is attached as a documentation string to name (as kind function) and to the macro function.  
+Documentation is attached as a documentation string to name (as kind function) and to the macro function.  
 defmacro can be used to redefine a macro or to replace a function definition with a macro definition. 
-  Recursive expansion of the form returned must terminate, including the expansion of other macros which are subforms of other forms returned. 
+Recursive expansion of the form returned must terminate, including the expansion of other macros which are subforms of other forms returned. 
 The consequences are undefined if the result of fully macroexpanding a form contains any circular list structure except in literal objects.  
- If a defmacro form appears as a top level form, the compiler must store the macro definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the macro can be evaluated at compile time if it is referenced within the file being compiled.  
+If a defmacro form appears as a top level form, the compiler must store the macro definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the macro can be evaluated at compile time if it is referenced within the file being compiled.  
+
 Examples:
  (defmacro mac1 (a b) 'Mac1 multiplies and adds' 
             `(+ ,a (* ,b 3))) =>  MAC1 
@@ -70,10 +74,7 @@ Examples:
      (dm2b x1 (((segundo x2) x3 x4)) x5 x6)))
  =>  ((DM2B X1 (((SEGUNDO X2) X3 X4)) X5 X6)
       5 (((SEGUNDO X2) X3 X4)) (CADR X2) (X3 X4) 5 (X5 X6))
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
- define-compiler-macro,  destructuring-bind, documentation, macroexpand, *macroexpand-hook*, macrolet, macro-function, Section 3.1 (Evaluation), Section 3.2 (Compilation), Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: DEFINE-COMPILER-MACRO:X3J13-NOV89 DEFMACRO-LAMBDA-LIST:TIGHTEN-DESCRIPTION COMPILE-FILE-HANDLING-OF-TOP-LEVEL-FORMS:CLARIFY RECURSIVE-DEFTYPE:EXPLICITLY-VAGUE DOCUMENTATION-FUNCTION-BUGS:FIX DEFMACRO-BLOCK-SCOPE:EXCLUDES-BINDINGS FLET-IMPLICIT-BLOCK:YES DEFINING-MACROS-NON-TOP-LEVEL:ALLOW DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+define-compiler-macro,  destructuring-bind, documentation, macroexpand, *macroexpand-hook*, macrolet, macro-function
+

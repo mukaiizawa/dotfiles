@@ -1,7 +1,9 @@
-CLHS: Macro DOTIMES
+
 Macro DOTIMES 
+
 Syntax:
 dotimes (var count-form [result-form]) declaration* {tag | statement}* => result*
+
 Arguments and Values:
 var---a symbol. 
 count-form---a form. 
@@ -10,6 +12,7 @@ declaration---a declare expression; not evaluated.
 tag---a go tag; not evaluated. 
 statement---a compound form; evaluated as described below. 
 results---if a return or return-from form is executed, the values passed from that form; otherwise, the values returned by the result-form or nil if there is no result-form. 
+
 Description:
 dotimes iterates over a series of integers. 
 dotimes evaluates count-form, which should produce an integer. If count-form is zero or negative, the body is not executed. dotimes then executes the body once for each integer from 0 up to but not including the value of count-form, in the order in which the tags and statements occur, with var bound to each integer. Then result-form is evaluated. At the time result-form is processed, var is bound to the number of times the body was executed. Tags label statements. 
@@ -17,6 +20,7 @@ An implicit block named nil surrounds dotimes. return may be used to terminate t
 The body of the loop is an implicit tagbody; it may contain tags to serve as the targets of go statements. Declarations may appear before the body of the loop. 
 The scope of the binding of var does not include the count-form, but the result-form is included. 
 It is implementation-dependent whether dotimes establishes a new binding of var on each iteration or whether it establishes a binding for var once at the beginning and then assigns it on any subsequent iterations. 
+
 Examples:
  (dotimes (temp-one 10 temp-one)) =>  10
  (setq temp-two 0) =>  0
@@ -49,12 +53,10 @@ Here is an example of the use of dotimes in processing strings:
    #'alpha-char-p
    'A man, a plan, a cat, a ham, a yak,
                   a yam, a hat, a canal--Panama!')) =>  T
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 do, dolist, tagbody 
+
 Notes:
 go may be used within the body of dotimes to transfer control to a statement labeled by a tag. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

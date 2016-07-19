@@ -1,13 +1,17 @@
-CLHS: Macro NTH-VALUE
+
 Macro NTH-VALUE 
+
 Syntax:
 nth-value n form => object
+
 Arguments and Values:
 n---a non-negative integer; evaluated. 
 form---a form; evaluated as described below. 
 object---an object. 
+
 Description:
 Evaluates n and then form, returning as its only value the nth value yielded by form, or nil if n is greater than or equal to the number of values returned by form. (The first returned value is numbered 0.) 
+
 Examples:
  (nth-value 0 (values 'a 'b)) =>  A
  (nth-value 1 (values 'a 'b)) =>  B
@@ -18,13 +22,11 @@ Examples:
         (b (mod x y)))
    (values a b (= a b)))
 =>  3332987528, 3332987528, true
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 multiple-value-list, nth 
+
 Notes:
 Operationally, the following relationship is true, although nth-value might be more efficient in some implementations because, for example, some consing might be avoided. 
  (nth-value n form) ==  (nth n (multiple-value-list form))
- The following X3J13 cleanup issue, not part of the specification, applies to this section: NTH-VALUE:ADD
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

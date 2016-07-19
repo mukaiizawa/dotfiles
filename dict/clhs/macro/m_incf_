@@ -1,18 +1,22 @@
-CLHS: Macro INCF, DECF
+
 Macro INCF, DECF 
+
 Syntax:
 incf place [delta-form] => new-value
 decf place [delta-form] => new-value
+
 Arguments and Values:
 place---a place. 
 delta-form---a form; evaluated to produce a delta. The default is 1. 
 delta---a number. 
 new-value---a number. 
+
 Description:
 incf and decf are used for incrementing and decrementing the value of place, respectively. 
 The delta is added to (in the case of incf) or subtracted from (in the case of decf) the number in place and the result is stored in place. 
 Any necessary type conversions are performed automatically. 
- For information about the evaluation of subforms of places, see Section 5.1.1.1 (Evaluation of Subforms to Places).  
+For information about the evaluation of subforms of places, see Section 5.1.1.1 (Evaluation of Subforms to Places).  
+
 Examples:
  (setq n 0)
  (incf n) =>  1      
@@ -24,12 +28,10 @@ Examples:
  (incf n 0.5) =>  2.5
  (decf n) =>  1.5
  n =>  1.5
+
 Side Effects:
 Place is modified. 
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 +, -, 1+, 1-, setf 
-Notes: None.
- The following X3J13 cleanup issue, not part of the specification, applies to this section: PUSH-EVALUATION-ORDER:FIRST-ITEM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

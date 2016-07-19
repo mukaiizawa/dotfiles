@@ -1,5 +1,6 @@
-CLHS: Macro DEFPACKAGE
+
 Macro DEFPACKAGE 
+
 Syntax:
 defpackage defined-package-name [[option]] => package
 option::= (:nicknames nickname*)* |  
@@ -11,13 +12,14 @@ option::= (:nicknames nickname*)* |
           (:export {symbol-name}*)* |  
           (:intern {symbol-name}*)* |  
           (:size integer) 
-  
+
 Arguments and Values:
 defined-package-name---a string designator. 
- package-name---a package designator.  
+package-name---a package designator.  
 nickname---a string designator. 
 symbol-name---a string designator. 
 package---the package named package-name. 
+
 Description:
 defpackage creates a package as specified and returns the package. 
 If defined-package-name already refers to an existing package, the name-to-package mapping for that name is not changed. If the new definition is at variance with the current state of that package, the consequences are undefined; an implementation might choose to modify the existing package to reflect the new definition. If defined-package-name is a symbol, its name is used. 
@@ -41,7 +43,8 @@ The symbols named by the argument symbol-names are found or created in the packa
 :size  
 The argument to the :size option declares the approximate number of symbols expected in the package. This is an efficiency hint only and might be ignored by an implementation. 
 The order in which the options appear in a defpackage form is irrelevant. The order in which they are executed is as follows: 1.  :shadow and :shadowing-import-from. 2.  :use. 3.  :import-from and :intern. 4.  :export. Shadows are established first, since they might be necessary to block spurious name conflicts when the :use option is processed. The :use option is executed next so that :intern and :export options can refer to normally inherited symbols. The :export option is executed last so that it can refer to symbols created by any of the other options; in particular, shadowing symbols and imported symbols can be made external. 
- If a defpackage form appears as a top level form, all of the actions normally performed by this macro at load time must also be performed at compile time.  
+If a defpackage form appears as a top level form, all of the actions normally performed by this macro at load time must also be performed at compile time.  
+
 Examples:
  (defpackage 'MY-PACKAGE'
    (:nicknames 'MYPKG' 'MY-PKG')
@@ -49,16 +52,16 @@ Examples:
    (:shadow 'CAR' 'CDR')
    (:shadowing-import-from 'VENDOR-COMMON-LISP'  'CONS')
    (:import-from 'VENDOR-COMMON-LISP'  'GC')
-   (:export 'EQ' 'CONS' 'FROBOLA')
-   )
+   (:export 'EQ' 'CONS' 'FROBOLA'))
  (defpackage my-package
    (:nicknames mypkg :MY-PKG)  ; remember Common Lisp conventions for case
    (:use common-lisp)          ; conversion on symbols
-   (:shadow CAR :cdr #:cons)                              
-   (:export 'CONS')            ; this is the shadowed one.
-   )
+   (:shadow CAR :cdr #:cons)
+   (:export 'CONS'))           ; this is the shadowed one.
+
 Affected By:
 Existing packages. 
+
 Exceptional Situations:
 If one of the supplied :nicknames already refers to an existing package, an error of type package-error is signaled. 
 An error of type program-error should be signaled if :size or :documentation appears more than once. 
@@ -66,8 +69,10 @@ Since implementations might allow extended options an error of type program-erro
 The collection of symbol-name arguments given to the options :shadow, :intern, :import-from, and :shadowing-import-from must all be disjoint; additionally, the symbol-name arguments given to :export and :intern must be disjoint. Disjoint in this context is defined as no two of the symbol-names being string= with each other. If either condition is violated, an error of type program-error should be signaled. 
 For the :shadowing-import-from and :import-from options, a correctable error of type package-error is signaled if no symbol is accessible in the package named by package-name for one of the argument symbol-names. 
 Name conflict errors are handled by the underlying calls to make-package, use-package, import, and export. See Section 11.1 (Package Concepts). 
+
 See Also:
-documentation, Section 11.1 (Package Concepts), Section 3.2 (Compilation) 
+documentation
+
 Notes:
 The :intern option is useful if an :import-from or a :shadowing-import-from option in a subsequent call to defpackage (for some other package) expects to find these symbols accessible but not necessarily external. 
 It is recommended that the entire package definition is put in a single place, and that all the package definitions of a program are in a single file. This file can be loaded before loading or compiling anything else that depends on those packages. Such a file can be read in the COMMON-LISP-USER package, avoiding any initial state issues. 
@@ -82,5 +87,4 @@ defpackage cannot be used to create two ``mutually recursive'' packages, such as
 However, nothing prevents the user from using the package-affecting functions such as use-package, import, and export to establish such links after a more standard use of defpackage. 
 The macroexpansion of defpackage could usefully canonicalize the names into strings, so that even if a source file has random symbols in the defpackage form, the compiled file would only contain strings. 
 Frequently additional implementation-dependent options take the form of a keyword standing by itself as an abbreviation for a list (keyword T); this syntax should be properly reported as an unrecognized option in implementations that do not support it. 
- The following X3J13 cleanup issues, not part of the specification, apply to this section: COMPILE-FILE-HANDLING-OF-TOP-LEVEL-FORMS:CLARIFY MAKE-PACKAGE-USE-DEFAULT:IMPLEMENTATION-DEPENDENT PACKAGE-FUNCTION-CONSISTENCY:MORE-PERMISSIVE DOCUMENTATION-FUNCTION-BUGS:FIX DEFPACKAGE:ADDITION
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

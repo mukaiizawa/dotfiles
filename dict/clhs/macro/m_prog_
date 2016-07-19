@@ -1,8 +1,10 @@
-CLHS: Macro PROG, PROG*
+
 Macro PROG, PROG* 
+
 Syntax:
 prog ({var | (var [init-form])}*) declaration* {tag | statement}* => result*
 prog* ({var | (var [init-form])}*) declaration* {tag | statement}* => result*
+
 Arguments and Values:
 var---variable name. 
 init-form---a form. 
@@ -10,6 +12,7 @@ declaration---a declare expression; not evaluated.
 tag---a go tag; not evaluated. 
 statement---a compound form; evaluated as described below. 
 results---nil if a normal return occurs, or else, if an explicit return occurs, the values that were transferred. 
+
 Description:
 Three distinct operations are performed by prog and prog*: they bind local variables, they permit use of the return statement, and they permit use of the go statement. A typical prog looks like this: 
  (prog (var1 var2 (var3 init-form-3) var4 (var5 init-form-5))
@@ -27,6 +30,7 @@ For prog, init-forms are evaluated first, in the order in which they are supplie
 The body of prog is executed as if it were a tagbody form; the go statement can be used to transfer control to a tag. Tags label statements. 
 prog implicitly establishes a block named nil around the entire prog form, so that return can be used at any time to exit from the prog form. 
 The difference between prog* and prog is that in prog* the binding and initialization of the vars is done sequentially, so that the init-form for each one can use the values of previous ones. 
+
 Examples:
 (prog* ((y z) (x (car y)))
        (return x))
@@ -64,13 +68,12 @@ Examples:
        (cerror 'Will self-pair extraneous items'
               'Mismatch - gleep!  ~S' y)
        (setq z y)))) =>  PRINCE-OF-CLARITY 
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-block, let, tagbody, go, return, Section 3.1 (Evaluation) 
+block, let, tagbody, go, return
+
 Notes:
  prog can be explained in terms of block, let, and tagbody as follows: 
  (prog variable-list declaration . body)
     ==  (block nil (let variable-list declaration (tagbody . body)))
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

@@ -1,19 +1,23 @@
-CLHS: Macro DEFPARAMETER, DEFVAR
+
 Macro DEFPARAMETER, DEFVAR 
+
 Syntax:
 defparameter name initial-value [documentation]  => name
 defvar name [initial-value [documentation]] => name
+
 Arguments and Values:
 name---a symbol; not evaluated. 
   
 initial-value---a form; for defparameter, it is always evaluated, but for defvar it is evaluated only if name is not already bound. 
- documentation---a string; not evaluated.  
+documentation---a string; not evaluated.  
+
 Description:
 defparameter and defvar establish name as a dynamic variable. 
 defparameter unconditionally assigns the initial-value to the dynamic variable named name. defvar, by contrast, assigns initial-value (if supplied) to the dynamic variable named name only if name is not already bound. 
  If no initial-value is supplied, defvar leaves the value cell of the dynamic variable named name undisturbed; if name was previously bound, its old value persists, and if it was previously unbound, it remains unbound.  
 If documentation is supplied, it is attached to name as a documentation string of kind variable. 
  defparameter and defvar normally appear as a top level form, but it is meaningful for them to appear as non-top-level forms. However, the compile-time side effects described below only take place when they appear as top level forms.  
+
 Examples:
  (defparameter *p* 1) =>  *P*
  *p* =>  1
@@ -47,14 +51,17 @@ Here the initial value, (), for the variable *the-interesting-numbers* is just a
 Here we could easily imagine editing the code to change the initial value of *default-beep-count*, and then reloading the file to pick up the new value. In order to make value updating easy, we have used defparameter. 
 On the other hand, there is potential value to using defvar in this situation. For example, suppose that someone had predefined an alternate value for *default-beep-count*, or had loaded the file and then manually changed the value. In both cases, if we had used defvar instead of defparameter, those user preferences would not be overridden by (re)loading the file. 
 The choice of whether to use defparameter or defvar has visible consequences to programs, but is nevertheless often made for subjective reasons. 
+
 Side Effects:
- If a defvar or defparameter form appears as a top level form, the compiler must recognize that the name has been proclaimed special. However, it must neither evaluate the initial-value form nor assign the dynamic variable named name at compile time.  
+If a defvar or defparameter form appears as a top level form, the compiler must recognize that the name has been proclaimed special. However, it must neither evaluate the initial-value form nor assign the dynamic variable named name at compile time.  
 There may be additional (implementation-defined) compile-time or run-time side effects, as long as such effects do not interfere with the correct operation of conforming programs. 
+
 Affected By:
 defvar is affected by whether name is already bound. 
-Exceptional Situations: None.
+
 See Also:
 declaim, defconstant, documentation, Section 3.2 (Compilation) 
+
 Notes:
 It is customary to name dynamic variables with an asterisk at the beginning and end of the name. e.g., *foo* is a good name for a dynamic variable, but not for a lexical variable; foo is a good name for a lexical variable, but not for a dynamic variable. This naming convention is observed for all defined names in Common Lisp; however, neither conforming programs nor conforming implementations are obliged to adhere to this convention. 
 The intent of the permission for additional side effects is to allow implementations to do normal ``bookkeeping'' that accompanies definitions. For example, the macro expansion of a defvar or defparameter form might include code that arranges to record the name of the source file in which the definition occurs. 
@@ -76,5 +83,4 @@ defparameter and defvar might be defined as follows:
            ,(when documentation-p
               `(setf (documentation ',name 'variable) ',documentation))
            ',name))
-The following X3J13 cleanup issues, not part of the specification, apply to this section: COMPILE-FILE-HANDLING-OF-TOP-LEVEL-FORMS:CLARIFY DEFINING-MACROS-NON-TOP-LEVEL:ALLOW DEFVAR-INITIALIZATION:CONSERVATIVE DEFVAR-DOCUMENTATION:UNEVALUATED DEFVAR-INIT-TIME:NOT-DELAYED
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

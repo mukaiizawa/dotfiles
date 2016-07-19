@@ -1,17 +1,19 @@
-CLHS: Macro PSETQ
+
 Macro PSETQ 
+
 Syntax:
 psetq {pair}* => nil
 pair::= var form 
-Pronunciation:
-psetq: [;pee'set,kyoo] 
+
 Arguments and Values:
 var---a symbol naming a variable other than a constant variable. 
 form---a form. 
+
 Description:
 Assigns values to variables. 
 This is just like setq, except that the assignments happen ``in parallel.'' That is, first all of the forms are evaluated, and only then are the variables set to the resulting values. In this way, the assignment to one variable does not affect the value computation of another in the way that would occur with setq's sequential assignment. 
- If any var refers to a binding made by symbol-macrolet, then that var is treated as if psetf (not psetq) had been used.  
+If any var refers to a binding made by symbol-macrolet, then that var is treated as if psetf (not psetq) had been used.  
+
 Examples:
  ;; A simple use of PSETQ to establish values for variables.
  ;; As a matter of style, many programmers would prefer SETQ 
@@ -38,12 +40,10 @@ Examples:
    (psetq a b  b a)
    (values a b))
 =>  2, 1
+
 Side Effects:
 The values of forms are assigned to vars. 
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 psetf, setq 
-Notes: None.
-The following X3J13 cleanup issue, not part of the specification, applies to this section: SYMBOL-MACROLET-SEMANTICS:SPECIAL-FORM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

@@ -1,9 +1,10 @@
-CLHS: Macro DO, DO*
+
 Macro DO, DO* 
+
 Syntax:
 do ({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}* => result*
 do* ({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}* => result*
-  
+
 Arguments and Values:
 var---a symbol. 
 init-form---a form. 
@@ -14,6 +15,7 @@ declaration---a declare expression; not evaluated.
 tag---a go tag; not evaluated. 
 statement---a compound form; evaluated as described below. 
 results---if a return or return-from form is executed, the values passed from that form; otherwise, the values returned by the result-forms. 
+
 Description:
 do iterates over a group of statements while a test condition holds. do accepts an arbitrary number of iteration vars which are bound within the iteration and stepped in parallel. An initial value may be supplied for each iteration variable by use of an init-form. Step-forms may be used to specify how the vars should be updated on succeeding iterations through the loop. Step-forms may be used both to generate successive values or to accumulate results. If the end-test-form condition is met prior to an execution of the body, the iteration terminates. Tags label statements. 
 do* is exactly like do except that the bindings and steppings of the vars are performed sequentially rather than in parallel. 
@@ -24,6 +26,7 @@ The remainder of the do (or do*) form constitutes an implicit tagbody. Tags may 
 An implicit block named nil surrounds the entire do (or do*) form. A return statement may be used at any point to exit the loop immediately. 
 Init-form is an initial value for the var with which it is associated. If init-form is omitted, the initial value of var is nil. If a declaration is supplied for a var, init-form must be consistent with the declaration. 
 Declarations can appear at the beginning of a do (or do*) body. They apply to code in the do (or do*) body, to the bindings of the do (or do*) vars, to the step-forms, to the end-test-form, and to the result-forms. 
+
 Examples:
  (do ((temp-one 1 (1+ temp-one))
        (temp-two 0 (1- temp-two)))
@@ -77,12 +80,12 @@ As an example of nested iterations, consider a data structure that is a list of 
               ((null s))
             (when (eq (car s) sym)
               (return-from ribcage-lookup (car v)))))) =>  RIBCAGE-LOOKUP
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 other iteration functions (dolist, dotimes, and loop) and more primitive functionality (tagbody, go, block, return, let, and setq) 
+
 Notes:
- If end-test-form is nil, the test will never succeed. This provides an idiom for ``do forever'': the body of the do or do* is executed repeatedly. The infinite loop can be terminated by the use of return, return-from, go to an outer level, or throw. 
+If end-test-form is nil, the test will never succeed. This provides an idiom for ``do forever'': the body of the do or do* is executed repeatedly. The infinite loop can be terminated by the use of return, return-from, go to an outer level, or throw. 
 A do form may be explained in terms of the more primitive forms block, return, let, loop, tagbody, and psetq as follows: 
  (block nil        
    (let ((var1 init1)
@@ -97,5 +100,4 @@ A do form may be explained in terms of the more primitive forms block, return, l
                   ...
                   varn stepn))))
 do* is similar, except that let* and setq replace the let and psetq, respectively. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: VARIABLE-LIST-ASYMMETRY:SYMMETRIZE DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

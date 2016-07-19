@@ -1,8 +1,10 @@
-CLHS: Macro WITH-ACCESSORS
+
 Macro WITH-ACCESSORS 
+
 Syntax:
 with-accessors (slot-entry*) instance-form declaration* form* => result*
 slot-entry::= (variable-name accessor-name) 
+
 Arguments and Values:
 variable-name---a variable name; not evaluated. 
 accessor-name---a function name; not evaluated. 
@@ -10,8 +12,10 @@ instance-form---a form; evaluated.
 declaration---a declare expression; not evaluated. 
 forms---an implicit progn. 
 results---the values returned by the forms. 
+
 Description:
 Creates a lexical environment in which the slots specified by slot-entry are lexically available through their accessors as if they were variables. The macro with-accessors invokes the appropriate accessors to access the slots specified by slot-entry. Both setf and setq can be used to set the value of the slot. 
+
 Examples:
  (defclass thing ()
            ((x :initarg :x :accessor thing-x)
@@ -41,12 +45,16 @@ Examples:
      (9 9 2 2 7 7 8 8) 
      (9)
      (9 9 2 2 (9) (9) 8 8))
+
 Affected By:
 defclass 
+
 Exceptional Situations:
 The consequences are undefined if any accessor-name is not the name of an accessor for the instance. 
+
 See Also:
 with-slots, symbol-macrolet 
+
 Notes:
 A with-accessors expression of the form: 
 (with-accessors (slot-entry1 ... slot-entryn) instance-form form1 ... formk)
@@ -55,5 +63,4 @@ expands into the equivalent of
   (symbol-macrolet (Q1 ... Qn) form1 ... formk))
 where Qi is 
  (variable-namei () (accessor-namei in))
-The following X3J13 cleanup issue, not part of the specification, applies to this section: DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

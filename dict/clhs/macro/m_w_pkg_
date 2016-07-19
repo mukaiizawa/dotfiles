@@ -1,7 +1,9 @@
-CLHS: Macro WITH-PACKAGE-ITERATOR
+
 Macro WITH-PACKAGE-ITERATOR 
+
 Syntax:
 with-package-iterator (name package-list-form &rest symbol-types) declaration* form* => result*
+
 Arguments and Values:
 name---a symbol. 
 package-list-form---a form; evaluated once to produce a package-list. 
@@ -10,6 +12,7 @@ symbol-type---one of the symbols :internal, :external, or :inherited.
 declaration---a declare expression; not evaluated. 
 forms---an implicit progn. 
 results---the values of the forms. 
+
 Description:
 Within the lexical scope of the body forms, the name is defined via macrolet such that successive invocations of (name) will return the symbols, one by one, from the packages in package-list. 
 It is unspecified whether symbols inherited from multiple packages are returned more than once. The order of symbols returned does not necessarily reflect the order of packages in package-list. When package-list has more than one element, it is unspecified whether duplicate symbols are returned once or more than once. 
@@ -33,6 +36,7 @@ Means present and exported.
 Means not present (thus not shadowed) but inherited from some used package. 
 It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the with-package-iterator form such as by returning some closure over the invocation form. 
 Any number of invocations of with-package-iterator can be nested, and the body of the innermost one can invoke all of the locally established macros, provided all those macros have distinct names. 
+
 Examples:
 The following function should return t on any package, and signal an error if the usage of with-package-iterator does not agree with the corresponding usage of do-symbols. 
  (defun test-package-iterator (package)
@@ -69,14 +73,8 @@ The following function prints out every present symbol (possibly more than once)
          (if more? 
             (print symbol)
             (return))))))
-Side Effects: None.
-Affected By: None.
+
 Exceptional Situations:
 with-package-iterator signals an error of type program-error if no symbol-types are supplied or if a symbol-type is not recognized by the implementation is supplied. 
 The consequences are undefined if the local function named name established by with-package-iterator is called after it has returned false as its primary value. 
-See Also:
- Section 3.6 (Traversal Rules and Side Effects)  
-Notes: None.
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: MAPPING-DESTRUCTIVE-INTERACTION:EXPLICITLY-VAGUE HASH-TABLE-PACKAGE-GENERATORS:ADD-WITH-WRAPPER DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

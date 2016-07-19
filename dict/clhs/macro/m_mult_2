@@ -1,20 +1,24 @@
-CLHS: Macro MULTIPLE-VALUE-SETQ
+
 Macro MULTIPLE-VALUE-SETQ 
+
 Syntax:
 multiple-value-setq vars form => result
+
 Arguments and Values:
 vars---a list of symbols that are either variable names or names of symbol macros. 
 form---a form. 
 result---The primary value returned by the form. 
+
 Description:
 multiple-value-setq assigns values to vars. 
 The form is evaluated, and each var is assigned to the corresponding value returned by that form. If there are more vars than values returned, nil is assigned to the extra vars. If there are more values than vars, the extra values are discarded. 
- If any var is the name of a symbol macro, then it is assigned as if by setf. Specifically, 
+If any var is the name of a symbol macro, then it is assigned as if by setf. Specifically, 
    
  (multiple-value-setq (symbol1 ... symboln) value-producing-form)
- is defined to always behave in the same way as 
+is defined to always behave in the same way as 
  (values (setf (values symbol1 ... symboln) value-producing-form))
- in order that the rules for order of evaluation and side-effects be consistent with those used by setf. See Section 5.1.2.3 (VALUES Forms as Places).   
+in order that the rules for order of evaluation and side-effects be consistent with those used by setf. See Section 5.1.2.3 (VALUES Forms as Places).   
+
 Examples:
  (multiple-value-setq (quotient remainder) (truncate 3.2 2)) =>  1
  quotient =>  1
@@ -26,11 +30,7 @@ Examples:
  (multiple-value-setq (a b) (values 4 5 6)) =>  4
  a =>  4
  b =>  5
-Side Effects: None.
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
 setq, symbol-macrolet 
-Notes: None.
-The following X3J13 cleanup issues, not part of the specification, apply to this section: MULTIPLE-VALUE-SETQ-ORDER:LIKE-SETF-OF-VALUES SYMBOL-MACROLET-SEMANTICS:SPECIAL-FORM
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

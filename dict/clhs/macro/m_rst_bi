@@ -1,10 +1,12 @@
-CLHS: Macro RESTART-BIND
+
 Macro RESTART-BIND 
+
 Syntax:
 restart-bind ({(name function {key-val-pair}*)}) form* => result*
 key-val-pair::= :interactive-function interactive-function |  
                 :report-function report-function |  
                 :test-function test-function 
+
 Arguments and Values:
 name---a symbol; not evaluated. 
 function---a form; evaluated. 
@@ -13,6 +15,7 @@ interactive-function---a form; evaluated.
 report-function---a form; evaluated. 
 test-function---a form; evaluated. 
 results---the values returned by the forms. 
+
 Description:
 restart-bind executes the body of forms in a dynamic environment where restarts with the given names are in effect. 
 If a name is nil, it indicates an anonymous restart; if a name is a non-nil symbol, it indicates a named restart. 
@@ -28,13 +31,13 @@ In the case of interactive invocation, the result is dependent on the value of :
  Value is evaluated in the current lexical environment and should return a function of one argument, a stream, which prints on the stream a summary of the action that this restart takes. This function is called whenever the restart is reported (printed while *print-escape* is nil). If no :report-function option is provided, the manner in which the restart is reported is implementation-dependent. 
  :test-function  
  Value is evaluated in the current lexical environment and should return a function of one argument, a condition, which returns true if the restart is to be considered visible.  
-Side Effects: None.
+
 Affected By:
 *query-io*. 
-Exceptional Situations: None.
+
 See Also:
 restart-case, with-simple-restart 
+
 Notes:
 restart-bind is primarily intended to be used to implement restart-case and might be useful in implementing other macros. Programmers who are uncertain about whether to use restart-case or restart-bind should prefer restart-case for the cases where it is powerful enough, using restart-bind only in cases where its full generality is really needed. 
-The following X3J13 cleanup issue, not part of the specification, applies to this section: CONDITION-RESTARTS:PERMIT-ASSOCIATION
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

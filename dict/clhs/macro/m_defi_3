@@ -1,22 +1,25 @@
-CLHS: Macro DEFINE-SETF-EXPANDER
+
 Macro DEFINE-SETF-EXPANDER 
-  
+
 Syntax:
 define-setf-expander access-fn lambda-list [[declaration* | documentation]] form* => access-fn
+
 Arguments and Values:
 access-fn---a symbol that names a function or macro. 
 lambda-list -- macro lambda list. 
 declaration---a declare expression; not evaluated. 
 documentation---a string; not evaluated. 
 forms---an implicit progn. 
+
 Description:
 define-setf-expander specifies the means by which setf updates a place that is referenced by access-fn. 
 When setf is given a place that is specified in terms of access-fn and a new value for the place, it is expanded into a form that performs the appropriate update. 
 The lambda-list supports destructuring. See Section 3.4.4 (Macro Lambda Lists). 
- Documentation is attached to access-fn as a documentation string of kind setf.  
+Documentation is attached to access-fn as a documentation string of kind setf.  
 Forms constitute the body of the  setf expander  definition and must compute the setf expansion for a call on setf that references the place by means of the given access-fn.  The setf expander function is defined in the same lexical environment in which the define-setf-expander form appears.  While forms are being executed, the variables in lambda-list are bound to parts of the place form.   The body forms (but not the lambda-list)  in a define-setf-expander form are implicitly enclosed in a block whose name is access-fn.  
 The evaluation of forms must result in the five values described in Section 5.1.1.2 (Setf Expansions). 
- If a define-setf-expander form appears as a top level form, the compiler must make the setf expander available so that it may be used to expand calls to setf later on in the file. Programmers must ensure that the forms can be evaluated at compile time if the access-fn is used in a place later in the same file. The compiler must make these setf expanders available to compile-time calls to get-setf-expansion when its environment argument is a value received as the environment parameter of a macro.  
+If a define-setf-expander form appears as a top level form, the compiler must make the setf expander available so that it may be used to expand calls to setf later on in the file. Programmers must ensure that the forms can be evaluated at compile time if the access-fn is used in a place later in the same file. The compiler must make these setf expanders available to compile-time calls to get-setf-expansion when its environment argument is a value received as the environment parameter of a macro.  
+
 Examples:
  (defun lastguy (x) (car (last x))) =>  LASTGUY
  (define-setf-expander lastguy (x &environment env)
@@ -57,13 +60,10 @@ Examples:
                   ,store)               ;Storing form.
                `(ldb ,btemp ,access-form) ;Accessing form.
               ))))
-  
-Affected By: None.
-Exceptional Situations: None.
+
 See Also:
-setf, defsetf, documentation, get-setf-expansion, Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations) 
+setf, defsetf, documentation, get-setf-expansion
+
 Notes:
 define-setf-expander differs from the long form of defsetf in that while the body is being executed the variables in lambda-list are bound to parts of the place form, not to temporary variables that will be bound to the values of such parts. In addition, define-setf-expander does not have defsetf's restriction that access-fn must be a function or a function-like macro; an arbitrary defmacro destructuring pattern is permitted in lambda-list. 
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: COMPILE-FILE-HANDLING-OF-TOP-LEVEL-FORMS:CLARIFY DEFMACRO-BLOCK-SCOPE:EXCLUDES-BINDINGS FLET-IMPLICIT-BLOCK:YES DEFINING-MACROS-NON-TOP-LEVEL:ALLOW DOCUMENTATION-FUNCTION-BUGS:FIX SETF-METHOD-VS-SETF-METHOD:RENAME-OLD-TERMS DECLS-AND-DOC
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
