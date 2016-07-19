@@ -1,9 +1,0 @@
-
-System Class NULL
-
-Class Precedence List:
-null, symbol, list, sequence, t
-
-Description:
-The only object of type null is nil, which represents the empty list and can also be notated ().
-
