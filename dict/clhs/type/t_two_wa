@@ -1,11 +1,12 @@
-CLHS: System Class TWO-WAY-STREAM
+
 System Class TWO-WAY-STREAM 
-  
+
 Class Precedence List:
 two-way-stream, stream, t 
+
 Description:
 A bidirectional composite stream that receives its input from an associated input stream and sends its output to an associated output stream. 
+
 See Also:
 make-two-way-stream, two-way-stream-input-stream, two-way-stream-output-stream 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

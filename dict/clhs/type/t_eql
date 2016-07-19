@@ -1,13 +1,16 @@
-CLHS: Type Specifier EQL
+
 Type Specifier EQL 
+
 Compound Type Specifier Kind:
 Combining. 
+
 Compound Type Specifier Syntax:
 eql object
+
 Compound Type Specifier Arguments:
 object---an object. 
+
 Compound Type Specifier Description:
 Represents the type of all x for which (eql object x) is true. 
- The argument object is required. The object can be *, but if so it denotes itself (the symbol *) and does not represent an unspecified value. The symbol eql is not valid as an atomic type specifier.  
-The following X3J13 cleanup issue, not part of the specification, applies to this section: TYPE-SPECIFIER-ABBREVIATION:X3J13-JUN90-GUESS
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+The argument object is required. The object can be *, but if so it denotes itself (the symbol *) and does not represent an unspecified value. The symbol eql is not valid as an atomic type specifier.  
+

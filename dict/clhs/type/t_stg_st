@@ -1,13 +1,13 @@
-CLHS: System Class STRING-STREAM
+
 System Class STRING-STREAM 
-  
+
 Class Precedence List:
 string-stream, stream, t 
+
 Description:
 A string stream is a stream which reads input from or writes output to an associated string. 
 The stream element type of a string stream is always a subtype of type character. 
+
 See Also:
 make-string-input-stream, make-string-output-stream, with-input-from-string, with-output-to-string 
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: STREAM-ACCESS:ADD-TYPES-ACCESSORS TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

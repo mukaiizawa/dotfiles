@@ -1,9 +1,9 @@
-CLHS: System Class T
+
 System Class T 
+
 Class Precedence List:
- t 
+t 
+
 Description:
- The set of all objects. The type t is a supertype of every type, including itself. Every object is of type t. 
-  
-The following X3J13 cleanup issue, not part of the specification, applies to this section: COMMON-TYPE:REMOVE
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+The set of all objects. The type t is a supertype of every type, including itself. Every object is of type t. 
+

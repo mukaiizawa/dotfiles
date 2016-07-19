@@ -1,12 +1,12 @@
-CLHS: Type EXTENDED-CHAR
+
 Type EXTENDED-CHAR 
-  
+
 Supertypes:
 extended-char, character, t 
+
 Description:
 The type extended-char is equivalent to the type (and character (not base-char)). 
+
 Notes:
 The type extended-char might have no elements[4] in implementations in which all characters are of type base-char. 
-  
-The following X3J13 cleanup issues, not part of the specification, apply to this section: CHARACTER-VS-CHAR:LESS-INCONSISTENT-SHORT CHARACTER-PROPOSAL:2-3-1
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

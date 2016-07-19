@@ -1,8 +1,9 @@
-CLHS: System Class CLASS
+
 System Class CLASS 
- Class Precedence List:
- class,  standard-object,  t  
+
+Class Precedence List:
+class,  standard-object,  t  
+
 Description:
 The type class represents objects that determine the structure and behavior of their instances. Associated with an object of type class is information describing its place in the directed acyclic graph of classes, its slots, and its options. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: TYPE-OF-AND-PREDEFINED-CLASSES:UNIFY-AND-EXTEND JUN90-TRIVIAL-ISSUES:9
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+

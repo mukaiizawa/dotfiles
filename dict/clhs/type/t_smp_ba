@@ -1,17 +1,21 @@
-CLHS: Type SIMPLE-BASE-STRING
+
 Type SIMPLE-BASE-STRING 
+
 Supertypes:
 simple-base-string, base-string, simple-string, string, vector, simple-array, array, sequence, t 
+
 Description:
 The type simple-base-string is equivalent to  (simple-array base-char (*)).   
+
 Compound Type Specifier Kind:
 Abbreviating. 
+
 Compound Type Specifier Syntax:
 simple-base-string [size]
-  
+
 Compound Type Specifier Arguments:
  size---a non-negative fixnum, or the symbol *.  
+
 Compound Type Specifier Description:
 This is equivalent to the type (simple-array base-char (size)); that is, the set of simple base strings of size size. 
-The following X3J13 cleanup issues, not part of the specification, apply to this section: ARRAY-DIMENSION-LIMIT-IMPLICATIONS:ALL-FIXNUM JUN90-TRIVIAL-ISSUES:24 CHARACTER-VS-CHAR:LESS-INCONSISTENT-SHORT
-Copyright 1996-2005, LispWorks Ltd.  All rights reserved.
+
