@@ -1,1163 +1,1156 @@
-Lambda List,&allow-other-keys
-Lambda List,&aux
-Lambda List,&body
-Lambda List,&environment
-Lambda List,&key
-Lambda List,&optional
-Lambda List,&rest
-Lambda List,&whole
-Function,*,function,&rest numbers,product
-Variable,*
-Variable,**
-Variable,***
-Variable,*break-on-signals*
-Variable,*compile-file-pathname*
-Variable,*compile-file-truename*
-Variable,*compile-print*
-Variable,*compile-verbose*
-Variable,*debug-io*
-Variable,*debugger-hook*
-Variable,*default-pathname-defaults*
-Variable,*error-output*
-Variable,*features*
-Variable,*gensym-counter*
-Variable,*load-pathname*
-Variable,*load-print*
-Variable,*load-truename*
-Variable,*load-verbose*
-Variable,*macroexpand-hook*
-Variable,*modules*
-Variable,*package*
-Variable,*print-array*
-Variable,*print-base*
-Variable,*print-case*
-Variable,*print-circle*
-Variable,*print-escape*
-Variable,*print-gensym*
-Variable,*print-length*
-Variable,*print-level*
-Variable,*print-lines*
-Variable,*print-miser-width*
-Variable,*print-pprint-dispatch*
-Variable,*print-pretty*
-Variable,*print-radix*
-Variable,*print-readably*
-Variable,*print-right-margin*
-Variable,*query-io*
-Variable,*random-state*
-Variable,*read-base*
-Variable,*read-default-float-format*
-Variable,*read-eval*
-Variable,*read-suppress*
-Variable,*readtable*
-Variable,*standard-input*
-Variable,*standard-output*
-Variable,*terminal-io*
-Variable,*trace-output*
-Function,+,&rest numbers,sum
-Variable,+
-Variable,++
-Variable,+++
-Function,-,minuend &rest subtrahends,difference
-Variable,-
-Function,/,numerator &rest denominators,quotient
-Variable,/
-Variable,//
-Variable,///
-Function,/=,&rest numbers,generalized-boolean
-Function,1+,number,successor
-Function,1-,number,predecessor
-Keyword,:after
-Keyword,:adjustable
-Keyword,:accessor
-Keyword,:absolute
-Keyword,:abort
-Keyword,:allocation
-Keyword,:allow-other-keys
-Keyword,:ansi-cl
-Keyword,:append
-Keyword,:argument-precedence-order
-Keyword,:arguments
-Keyword,:around
-Keyword,:array
-Keyword,:back
-Keyword,:base
-Keyword,:before
-Keyword,:block
-Keyword,:capitalize
-Keyword,:case
-Keyword,:class
-Keyword,:cltl1
-Keyword,:cltl2
-Keyword,:common
-Keyword,:common-lisp
-Keyword,:compile-toplevel
-Keyword,:conc-name
-Keyword,:constructor
-Keyword,:copier
-Keyword,:count
-Keyword,:create
-Keyword,:current
-Keyword,:declare
-Keyword,:default
-Keyword,:default-initargs
-Keyword,:defaults
-Keyword,:description
-Keyword,:device
-Keyword,:direction
-Keyword,:directory
-Keyword,:displaced-index-offset
-Keyword,:displaced-to
-Keyword,:documentation
-Keyword,:downcase
-Keyword,:draft-ansi-cl
-Keyword,:draft-ansi-cl-2
-Keyword,:element-type
-Keyword,:end
-Keyword,:end1
-Keyword,:end2
-Keyword,:environment
-Keyword,:error
-Keyword,:escape
-Keyword,:execute
-Keyword,:expected-type
-Keyword,:export
-Keyword,:external
-Keyword,:external-format
-Keyword,:fill
-Keyword,:fill-pointer
-Keyword,:format-arguments
-Keyword,:from-end
-Keyword,:generic-function
-Keyword,:generic-function-class
-Keyword,:gensym
-Keyword,:host
-Keyword,:identity
-Keyword,:identity-with-one-argument
-Keyword,:ieee-floating-point
-Keyword,:if-does-not-exist
-Keyword,:if-exists
-Keyword,:import-from
-Keyword,:include
-Keyword,:index
-Keyword,:inherited
-Keyword,:init-form
-Keyword,:initarg
-Keyword,:initform
-Keyword,:initial-contents
-Keyword,:initial-element
-Keyword,:initial-offset
-Keyword,:initial-value
-Keyword,:input
-Keyword,:installed
-Keyword,:instance
-Keyword,:interactive
-Keyword,:interactive-function
-Keyword,:intern
-Keyword,:internal
-Keyword,:invert
-Keyword,:io
-Keyword,:junk-allowed
-Keyword,:key
-Keyword,:lambda-list
-Keyword,:length
-Keyword,:level
-Keyword,:line
-Keyword,:line-relative
-Keyword,:linear
-Keyword,:lines
-Keyword,:load-toplevel
-Keyword,:local
-Keyword,:mandatory
-Keyword,:metaclass
-Keyword,:method
-Keyword,:method-class
-Keyword,:method-combination
-Keyword,:miser
-Keyword,:miser-width
-Keyword,:most-specific-first
-Keyword,:most-specific-last
-Keyword,:name
-Keyword,:named
-Keyword,:new-version
-Keyword,:newest
-Keyword,:nicknames
-Keyword,:no-error
-Keyword,:off
-Keyword,:oldest
-Keyword,:on
-Keyword,:operands
-Keyword,:operator
-Keyword,:order
-Keyword,:output
-Keyword,:output-file
-Keyword,:override
-Keyword,:overwrite
-Keyword,:per-line-prefix
-Keyword,:pixel-size
-Keyword,:pprint-dispatch
-Keyword,:pre-line-prefix
-Keyword,:predicate
-Keyword,:prefix
-Keyword,:preserve
-Keyword,:preserve-whitespace
-Keyword,:pretty
-Keyword,:previous
-Keyword,:print
-Keyword,:print-function
-Keyword,:print-object
-Keyword,:probe
-Keyword,:radix
-Keyword,:read-only
-Keyword,:readably
-Keyword,:reader
-Keyword,:rehash-size
-Keyword,:rehash-threshold
-Keyword,:relative
-Keyword,:rename
-Keyword,:rename-and-delete
-Keyword,:report
-Keyword,:report-function
-Keyword,:required
-Keyword,:right-margin
-Keyword,:section
-Keyword,:section-relative
-Keyword,:shadow
-Keyword,:shadowing-import-from
-Keyword,:size
-Keyword,:slot-names
-Keyword,:start
-Keyword,:start1
-Keyword,:start2
-Keyword,:stream
-Keyword,:suffix
-Keyword,:supersede
-Keyword,:test
-Keyword,:test-function
-Keyword,:test-not
-Keyword,:type
-Keyword,:unspecific
-Keyword,:up
-Keyword,:upcase
-Keyword,:use
-Keyword,:verbose
-Keyword,:version
-Keyword,:wild
-Keyword,:wild-inferiors
-Keyword,:wild-inferors
-Keyword,:writer
-Keyword,:x3j13
-Function,<,&rest numbers,generalized-boolean
-Function,<=,&rest numbers,generalized-boolean
-Function,=,&rest numbers,generalized-boolean
-Function,>,&rest numbers,generalized-boolean
-Function,>=,&rest numbers,generalized-boolean
-Function,abort,&optional condition,|
-Function,abs,number,absolute-value
-Function,acons,key detum alist,new-alist
-Function,acos,number,radians
-Function,acosh,number,result
-Function,add-method,generic-function method,generic-function
-Function,adjoin,item list &key key test test-not,new-list
-Function,adjust-array,array new-dimensions &key element-type initial-element initial-contents fill-pointer displaced-to displaced-index-offset,adjusted-array
-Function,adjustable-array-p,array,generalized-boolean
-Function,allocate-instance,class &rest initargs &key &allow-other-keys,new-instance
-Function,alpha-char-p,character,generalized-boolean
-Function,alphanumericp,character,generalized-boolean
-Function,and,form*,result*
-Function,append,&rest lists,result
-Function,apply,function &rest args,result*
-Function,apropos,string &optional package,<no values>
-Function,apropos-list,string &optional package,symbols
-Function,aref,array &rest subscripts,element
-Condition Type,arithmetic-error
-Function,arithmetic-error-operands,condition,operands
-Function,arithmetic-error-operation,condition,operands
-Class,array
-Function,array-dimension,array axis-number,dimension
-Constant,array-dimension-limit
-Function,array-dimensions,array,dimensions
-Function,array-displacement,array,displaced-to,displaced-index-offset
-Function,array-element-type,array,typespec
-Function,array-has-fill-pointer-p,array,generalized-boolean
-Function,array-in-bounds-p,array &rest subscripts,generalized-boolean
-Function,array-rank,array,rank
-Constant,array-rank-limit
-Function,array-row-major-index,array &rest subscripts,index
-Function,array-total-size,array,size
-Function,array-total-size-limit
-Function,arrayp,object,generalized-boolean
-Function,ash,integer count,shifted-integer
-Function,asin,number,radians
-Function,asinh,number,result
-Function,assert,test-form [(place*) [datum-form argument-form*]],nil
-Function,assoc,item alist &key key test test-not,entry
-Function,assoc-if,predicate alist &key key,entry
-Function,assoc-if-not,predicate alist &key key,entry
-Function,atan,number1 &optional number2,radians
-Function,atanh,number,result
-Function,atom,object,generalized-boolean
-Type,base-char
-Type,base-string
-Type,bignum
-Type,bit
-Function,bit-and,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-andc1,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-andc2,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-eqv,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-ior,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-nand,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-nor,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-not,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-orc1,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Function,bit-orc2,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Class,bit-vector
-Function,bit-vector-p,object,generalized-boolean
-Function,bit-xor,bit-array1 bit-array2 &optional opt-arg,resulting-bit-array
-Special Operator,block,name form*,result*
-Function,boole,op integer1 integer2,result-integer
-Constant,boole-1
-Constant,boole-2
-Constant,boole-and
-Constant,boole-andc1
-Constant,boole-andc2
-Constant,boole-c1
-Constant,boole-c2
-Constant,boole-clr
-Constant,boole-eqv
-Constant,boole-ior
-Constant,boole-nand
-Constant,boole-nor
-Constant,boole-orc1
-Constant,boole-orc2
-Constant,boole-set
-Constant,boole-xor
-Type,boolean
-Function,both-case-p,character,generalized-boolean
-Function,boundp,symbol,generalized-boolean
-Function,break,&optional format-control &rest format-arguments,nil
-Class,broadcast-stream
-Function,broadcast-stream-streams,broadcast-stream,streams
-Class,built-in-class
-Function,butlast,list &optional n,result-list
-Function,byte,size position,bytespec
-Function,byte-position,bytespec,position
-Function,byte-size,bytespec,size
-Function,caaaar,list,object
-Function,caaadr,list,object
-Function,caaar,list,object
-Function,caadar,list,object
-Function,caaddr,list,object
-Function,caadr,list,object
-Function,caar,list,object
-Function,cadaar,list,object
-Function,cadadr,list,object
-Function,cadar,list,object
-Function,caddar,list,object
-Function,cadddr,list,object
-Function,caddr,list,object
-Function,cadr,list,object
-Constant,call-arguments-limit
-Macro,call-method,method &optional next-method-list,result*
-Function,call-next-method,&rest args,result*
-Function,car,list,object
-Function,case,list,object
-Function,catch,list,object
-Function,ccase,list,object
-Function,cdaaar,list,object
-Function,cdaadr,list,object
-Function,cdaar,list,object
-Function,cdadar,list,object
-Function,cdaddr,list,object
-Function,cdadr,list,object
-Function,cdar,list,object
-Function,cddaar,list,object
-Function,cddadr,list,object
-Function,cddar,list,object
-Function,cdddar,list,object
-Function,cddddr,list,object
-Function,cdddr,list,object
-Function,cddr,list,object
-Function,cdr,list,object
-Function,ceiling,number &optional divisor,quotient remainder
-Condition Type,cell-error
-Function,cell-error-name,condition,name
-Function,cerror,continue-format-control detum &rest arguments,nil
-Standard Generic Function,change-class,instance new-class &key &allow-other-keys,instance
-Accessor,char,string index,character
-Function,char-code,character,code
-Constant,char-code-limit
-Function,char-downcase,character,corresponding-character
-Function,char-equal,&rest characters,generalized-boolean
-Function,char-greaterp,&rest characters,generalized-boolean
-Function,char-int,character,integer
-Function,char-lessp,character,corresponding-character
-Function,char-name,character-name
-Function,char-not-equal,character,corresponding-character
-Function,char-not-greaterp,character,corresponding-character
-Function,char-not-lessp,character,corresponding-character
-Function,char-upcase,character,corresponding-character
-Function,char/=,&rest characters,generalized-boolean
-Function,char<,&rest characters,generalized-boolean
-Function,char<=,&rest characters,generalized-boolean
-Function,char=,&rest characters,generalized-boolean
-Function,char>,&rest characters,generalized-boolean
-Function,char>=,&rest characters,generalized-boolean
-Class,character
-Function,character,character,denoted-character
-Function,characterp,object,generalized-boolean
-Macro,check-type,place typespec [string],nil
-Function,cis,radians,number
-Class,class
-Standard Generic Function,class-name,class,name
-Function,class-of,object,class
-Function,clear-input,&optional input-stream,nil
-Function,clear-output,&optional output-stream,nil
-Function,close,stream &key abort,result
-Function,clrhash,hash-table,hash-table
-Function,code-char,code,char-p
-Function,coerce,object result-type,result
-Option,compilation-speed
-Function,compile,name &optional definition,function warnings-p,failure-p
-Function,compile-file,input-file &key output-file verbose print external-format,output-truename warnings-p failure-p
-Function,compile-file-pathname,input-file &output-file &allow-other-keys,pathname
-Type,compiled-function
-Function,compiled-function-p,object,generalized-boolean
-Accessor,compiler-macro-function,name &optional environment,function
-Function,complement,function,complement-function
-Class,complex
-Function,complex,realpart &optional imagpart,complex
-Function,complexp,object,generalized-boolean
-Function,compute-applicable-methods,generic-function function-arguments,methods
-Function,compute-restarts,&optional condition,restarts
-Function,concatenate,result-type &rest sequences,result-sequence
-Class,concatenated-stream
-Function,concatenated-stream-streams,concatenated-stream,streams
-Macro,cond,{clause}*,result*
-Condition Type,condition
-Function,conjugate,number,conjugate
-Class,cons
-Function,cons,object-1 object-2,cons
-Function,consp,object,generalized-boolean
-Function,constantly,value,function
-Function,constantp,form &optional environment,generalized-boolean
-Function,continue,&optional condition,nil
-Condition Type,control-error
-Function,copy-alist,alist,new-alist
-Function,copy-list,list,new-list
-Function,copy-pprint-dispatch,&optional table,new-table
-Function,copy-readtable,&optional from-readable to-readable,readtable
-Function,copy-seq,sequence,new-sequence
-Function,copy-structure,structure,new-structure
-Function,copy-symbol,symbol &optional copy-properties,new-symbol
-Function,copy-tree,tree,new-tree
-Function,cos,radians,number
-Function,cosh,number,result
-Function,count,item sequence &key from-end start end key test test-not,n
-Function,count-if,predicate sequence &key from-end start end key,n
-Function,count-if-not,predicate sequence &key from-end start end key,n
-Macro,ctypecase,keyplace {normal-clause}*,result*
-Macro,decf,place [delta-form],new-value
-Macro,declaim,declaration-specifier*,implementation-dependent
-Declaration,declaration,declaration name*
-Symbol,declare,declaration-specifier*
-Function,decode-float,float,significand exponent sign
-Function,decode-universal-time,&optional time-zone,second minute hour date month year day daylight-p zone
-Macro,defclass,class-name ({superclass-name}*) ({slot-specifier}*) [[class-option]],new-class
-Macro,defconstant,name initial-value [documentation],name
-Macro,defgeneric,function-name gf-lambda-list [[option | {method-description}*]],new-generic
-Macro,define-compiler-macro,name lambda-list [[declaration* | documentation]] form*,name
-Macro,define-condition,name (parent-type*) ({slot-spec}*) option*,name
-Macro,define-method-combination,name [[short-form-option]],name
-Macro,define-modify-macro,name lambda-list function [documentation],name
-Macro,define-setf-expander,access-fn lambda-list [[declaration* | documentation]] form*,access-fn
-Macro,define-symbol-macro,symbol expansion,symbol
-Macro,defmacro,access-fn lambda-list [[declaration* | documentation]] form*,access-fn
-Macro,defmethod,function-name {method-qualifier}* specialized-lambda-list [[declaration* | documentation]] form*,new-method
-Macro,defpackage,defined-package-name [[option]],package
-Macro,defparameter,name initial-value [documentation],name
-Macro,defsetf,access-fn update-fn [documentation],access-fn
-Macro,defstruct,name-and-options [documentation] {slot-description}*,structure-name
-Macro,deftype,name lambda-list [[declaration* | documentation]] form*,name
-Macro,defun,function-name lambda-list [[declaration* | documentation]] form*,function-name
-Macro,defvar,name [initial-value [documentation]],name
-Function,delete,item sequence &key from-end test test-not start end count key,result-sequence
-Function,delete-duplicates,equence &key from-end test test-not start end key,result-sequence
-Function,delete-file,filespec,t
-Function,delete-if,test sequence &key from-end start end count key,result-sequence
-Function,delete-if-not,test sequence &key from-end start end count key,result-sequence
-Function,delete-package,package,generalized-boolean
-Function,denominator,rational,denominator
-Function,deposit-field,newbyte bytespec integer,result-integer
-Function,describe,object &optional stream,<no values>
-Standard Generic Function,describe-object,object stream,implementation-dependent
-Macro,destructuring-bind,lambda-list expression declaration* form*,result*
-Function,digit-char,weight &optional radix,char
-Function,digit-char-p,char &optional radix,weight
-Function,directory,pathspec &key,pathnames
-Function,directory-namestring,pathname,namestring
-Function,disassemble,fn,nil
-Condition Type,division-by-zero
-Macro,do,({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}*,result*
-Macro,do*, ({var | (var [init-form [step-form]])}*) (end-test-form result-form*) declaration* {tag | statement}*,result*
-Macro,do-all-symbols,(var [result-form]) declaration* {tag | statement}*,result*
-Macro,do-external-symbols, (var [package [result-form]]) declaration* {tag | statement}*,result*
-Macro,do-symbols,(var [package [result-form]]) declaration* {tag | statement}*,result*
-Standard Generic Function,documentation,x doc-type,documentation
-Macro,dolist,var list-form [result-form]) declaration* {tag | statement}*,result*
-Macro,dotimes,(var count-form [result-form]) declaration* {tag | statement}*,result*
-Type,double-float
-Constant Variable,double-float-epsilon
-Constant Variable,double-float-negative-epsilon
-Function,dpb,newbyte bytespec integer,result-integer
-Function,dribble,&optional pathname,implementation-dependent
-Declaration,dynamic-extent,(dynamic-extent [[var* | (function fn)*]])
-Function,ecase,x1 x2 x3,y1 y2
-Function,echo-stream,x1 x2 x3,y1 y2
-Function,echo-stream-input-stream,x1 x2 x3,y1 y2
-Function,echo-stream-output-stream,x1 x2 x3,y1 y2
-Function,ed,x1 x2 x3,y1 y2
-Function,eighth,x1 x2 x3,y1 y2
-Function,elt,x1 x2 x3,y1 y2
-Function,encode-universal-time,x1 x2 x3,y1 y2
-Function,end-of-file,x1 x2 x3,y1 y2
-Function,endp,x1 x2 x3,y1 y2
-Function,enough-namestring,pathname &optional defaults,namestring
-Function,ensure-directories-exist,x1 x2 x3,y1 y2
-Function,ensure-generic-function,x1 x2 x3,y1 y2
-Function,eq,x1 x2 x3,y1 y2
-Function,eql,x1 x2 x3,y1 y2
-Function,equal,x1 x2 x3,y1 y2
-Function,equalp,x1 x2 x3,y1 y2
-Function,error,x1 x2 x3,y1 y2
-Macro,etypecase,keyform {normal-clause}*,result*
-Function,eval,x1 x2 x3,y1 y2
-Function,eval-when,x1 x2 x3,y1 y2
-Function,evenp,x1 x2 x3,y1 y2
-Function,every,x1 x2 x3,y1 y2
-Function,exp,x1 x2 x3,y1 y2
-Function,export,x1 x2 x3,y1 y2
-Function,expt,x1 x2 x3,y1 y2
-Function,extended-char,x1 x2 x3,y1 y2
-Function,fboundp,x1 x2 x3,y1 y2
-Function,fceiling,number &optional divisor,quotient remainder
-Function,fdefinition,x1 x2 x3,y1 y2
-Function,ffloor,number &optional divisor,quotient remainder
-Function,fifth,x1 x2 x3,y1 y2
-Function,file-author,x1 x2 x3,y1 y2
-Function,file-error,x1 x2 x3,y1 y2
-Function,file-error-pathname,x1 x2 x3,y1 y2
-Function,file-length,x1 x2 x3,y1 y2
-Function,file-namestring,pathname,namestring
-Function,file-position,x1 x2 x3,y1 y2
-Function,file-stream,x1 x2 x3,y1 y2
-Function,file-string-length,x1 x2 x3,y1 y2
-Function,file-write-date,x1 x2 x3,y1 y2
-Function,fill,x1 x2 x3,y1 y2
-Function,fill-pointer,x1 x2 x3,y1 y2
-Function,find,x1 x2 x3,y1 y2
-Function,find-all-symbols,x1 x2 x3,y1 y2
-Function,find-class,x1 x2 x3,y1 y2
-Function,find-if,x1 x2 x3,y1 y2
-Function,find-if-not,x1 x2 x3,y1 y2
-Function,find-method,x1 x2 x3,y1 y2
-Function,find-package,x1 x2 x3,y1 y2
-Function,find-restart,x1 x2 x3,y1 y2
-Function,find-symbol,x1 x2 x3,y1 y2
-Function,finish-output,&optional output-stream,nil
-Function,first,x1 x2 x3,y1 y2
-Function,fixnum,x1 x2 x3,y1 y2
-Function,flet,x1 x2 x3,y1 y2
-Function,float,x1 x2 x3,y1 y2
-Function,float-digits,x1 x2 x3,y1 y2
-Function,float-precision,x1 x2 x3,y1 y2
-Function,float-radix,x1 x2 x3,y1 y2
-Function,float-sign,x1 x2 x3,y1 y2
-Function,floating-point-inexact,x1 x2 x3,y1 y2
-Function,floating-point-invalid-operation,x1 x2 x3,y1 y2
-Function,floating-point-overflow,x1 x2 x3,y1 y2
-Function,floating-point-underflow,x1 x2 x3,y1 y2
-Function,floatp,x1 x2 x3,y1 y2
-Function,floor,number &optional divisor,quotient remainder
-Function,fmakunbound,x1 x2 x3,y1 y2
-Function,force-output,&optional output-stream,nil
-Function,format,x1 x2 x3,y1 y2
-Function,formatter,x1 x2 x3,y1 y2
-Function,fourth,x1 x2 x3,y1 y2
-Function,fresh-line,x1 x2 x3,y1 y2
-Function,fround,number &optional divisor,quotient remainder
-Function,ftruncate,number &optional divisor,quotient remainder
-Function,ftype,x1 x2 x3,y1 y2
-Function,funcall,x1 x2 x3,y1 y2
-Function,function,x1 x2 x3,y1 y2
-Function,function-keywords,x1 x2 x3,y1 y2
-Function,function-lambda-expression,x1 x2 x3,y1 y2
-Function,functionp,x1 x2 x3,y1 y2
-Function,gcd,x1 x2 x3,y1 y2
-Function,generic-function,x1 x2 x3,y1 y2
-Function,gensym,x1 x2 x3,y1 y2
-Function,gentemp,x1 x2 x3,y1 y2
-Function,get,x1 x2 x3,y1 y2
-Function,get-decoded-time,x1 x2 x3,y1 y2
-Function,get-dispatch-macro-character,x1 x2 x3,y1 y2
-Function,get-internal-real-time,x1 x2 x3,y1 y2
-Function,get-internal-run-time,x1 x2 x3,y1 y2
-Function,get-macro-character,x1 x2 x3,y1 y2
-Function,get-output-stream-string,x1 x2 x3,y1 y2
-Function,get-properties,x1 x2 x3,y1 y2
-Function,get-setf-expansion,x1 x2 x3,y1 y2
-Function,get-universal-time,x1 x2 x3,y1 y2
-Function,getf,x1 x2 x3,y1 y2
-Function,gethash,x1 x2 x3,y1 y2
-Function,go,x1 x2 x3,y1 y2
-Function,graphic-char-p,x1 x2 x3,y1 y2
-Function,handler-bind,x1 x2 x3,y1 y2
-Function,handler-case,x1 x2 x3,y1 y2
-Function,hash-table,x1 x2 x3,y1 y2
-Function,hash-table-count,x1 x2 x3,y1 y2
-Function,hash-table-p,x1 x2 x3,y1 y2
-Function,hash-table-rehash-size,x1 x2 x3,y1 y2
-Function,hash-table-rehash-threshold,x1 x2 x3,y1 y2
-Function,hash-table-size,x1 x2 x3,y1 y2
-Function,hash-table-test,x1 x2 x3,y1 y2
-Function,host-namestring,pathname,namestring
-Function,identity,x1 x2 x3,y1 y2
-Function,if,x1 x2 x3,y1 y2
-Function,ignorable,x1 x2 x3,y1 y2
-Function,ignore,x1 x2 x3,y1 y2
-Function,ignore-errors,x1 x2 x3,y1 y2
-Function,imagpart,x1 x2 x3,y1 y2
-Function,import,x1 x2 x3,y1 y2
-Function,in-package,x1 x2 x3,y1 y2
-Macro,incf,place [delta-form],new-value
-Function,initialize-instance,x1 x2 x3,y1 y2
-Function,inline,x1 x2 x3,y1 y2
-Function,input-stream-p,x1 x2 x3,y1 y2
-Function,inspect,x1 x2 x3,y1 y2
-Function,integer,x1 x2 x3,y1 y2
-Function,integer-decode-float,x1 x2 x3,y1 y2
-Function,integer-length,x1 x2 x3,y1 y2
-Function,integerp,x1 x2 x3,y1 y2
-Function,interactive-stream-p,x1 x2 x3,y1 y2
-Function,intern,x1 x2 x3,y1 y2
-Function,internal-time-units-per-second,x1 x2 x3,y1 y2
-Function,intersection,x1 x2 x3,y1 y2
-Function,invalid-method-error,x1 x2 x3,y1 y2
-Function,invoke-debugger,x1 x2 x3,y1 y2
-Function,invoke-restart,x1 x2 x3,y1 y2
-Function,invoke-restart-interactively,x1 x2 x3,y1 y2
-Function,isqrt,x1 x2 x3,y1 y2
-Function,keyword,x1 x2 x3,y1 y2
-Function,keywordp,x1 x2 x3,y1 y2
-Function,labels,x1 x2 x3,y1 y2
-Function,lambda,x1 x2 x3,y1 y2
-Function,lambda-list-keywords,x1 x2 x3,y1 y2
-Function,lambda-parameters-limit,x1 x2 x3,y1 y2
-Function,last,x1 x2 x3,y1 y2
-Function,lcm,x1 x2 x3,y1 y2
-Function,ldb,x1 x2 x3,y1 y2
-Function,ldb-test,x1 x2 x3,y1 y2
-Function,ldiff,x1 x2 x3,y1 y2
-Function,least-negative-double-float,x1 x2 x3,y1 y2
-Function,least-negative-long-float,x1 x2 x3,y1 y2
-Function,least-negative-normalized-double-float,x1 x2 x3,y1 y2
-Function,least-negative-normalized-long-float,x1 x2 x3,y1 y2
-Function,least-negative-normalized-short-float,x1 x2 x3,y1 y2
-Function,least-negative-normalized-single-float,x1 x2 x3,y1 y2
-Function,least-negative-short-float,x1 x2 x3,y1 y2
-Function,least-negative-single-float,x1 x2 x3,y1 y2
-Function,least-positive-double-float,x1 x2 x3,y1 y2
-Function,least-positive-long-float,x1 x2 x3,y1 y2
-Function,least-positive-normalized-double-float,x1 x2 x3,y1 y2
-Function,least-positive-normalized-long-float,x1 x2 x3,y1 y2
-Function,least-positive-normalized-short-float,x1 x2 x3,y1 y2
-Function,least-positive-normalized-single-float,x1 x2 x3,y1 y2
-Function,least-positive-short-float,x1 x2 x3,y1 y2
-Function,least-positive-single-float,x1 x2 x3,y1 y2
-Function,length,x1 x2 x3,y1 y2
-Function,let,x1 x2 x3,y1 y2
-Function,let*,x1 x2 x3,y1 y2
-Function,lisp-implementation-type,x1 x2 x3,y1 y2
-Function,lisp-implementation-version,x1 x2 x3,y1 y2
-Function,list,x1 x2 x3,y1 y2
-Function,list*,x1 x2 x3,y1 y2
-Function,list-all-packages,x1 x2 x3,y1 y2
-Function,list-length,x1 x2 x3,y1 y2
-Function,listen,x1 x2 x3,y1 y2
-Function,listp,x1 x2 x3,y1 y2
-Function,load,x1 x2 x3,y1 y2
-Function,load-logical-pathname-translations,x1 x2 x3,y1 y2
-Function,load-time-value,x1 x2 x3,y1 y2
-Function,locally,x1 x2 x3,y1 y2
-Function,log,x1 x2 x3,y1 y2
-Function,logand,x1 x2 x3,y1 y2
-Function,logandc1,x1 x2 x3,y1 y2
-Function,logandc2,x1 x2 x3,y1 y2
-Function,logbitp,x1 x2 x3,y1 y2
-Function,logcount,x1 x2 x3,y1 y2
-Function,logeqv,x1 x2 x3,y1 y2
-Function,logical-pathname,x1 x2 x3,y1 y2
-Function,logical-pathname-translations,x1 x2 x3,y1 y2
-Function,logior,x1 x2 x3,y1 y2
-Function,lognand,x1 x2 x3,y1 y2
-Function,lognor,x1 x2 x3,y1 y2
-Function,lognot,x1 x2 x3,y1 y2
-Function,logorc1,x1 x2 x3,y1 y2
-Function,logorc2,x1 x2 x3,y1 y2
-Function,logtest,x1 x2 x3,y1 y2
-Function,logxor,x1 x2 x3,y1 y2
-Function,long-float,x1 x2 x3,y1 y2
-Function,long-float-epsilon,x1 x2 x3,y1 y2
-Function,long-float-negative-epsilon,x1 x2 x3,y1 y2
-Function,long-site-name,x1 x2 x3,y1 y2
-Function,loop,x1 x2 x3,y1 y2
-Function,loop-finish,x1 x2 x3,y1 y2
-Function,lower-case-p,character,generalized-boolean
-Function,machine-instance,x1 x2 x3,y1 y2
-Function,machine-type,x1 x2 x3,y1 y2
-Function,machine-version,x1 x2 x3,y1 y2
-Function,macro-function,x1 x2 x3,y1 y2
-Function,macroexpand,x1 x2 x3,y1 y2
-Function,macroexpand-1,x1 x2 x3,y1 y2
-Function,macrolet,x1 x2 x3,y1 y2
-Function,make-array,x1 x2 x3,y1 y2
-Function,make-broadcast-stream,x1 x2 x3,y1 y2
-Function,make-concatenated-stream,x1 x2 x3,y1 y2
-Function,make-condition,x1 x2 x3,y1 y2
-Function,make-dispatch-macro-character,x1 x2 x3,y1 y2
-Function,make-echo-stream,x1 x2 x3,y1 y2
-Function,make-hash-table,x1 x2 x3,y1 y2
-Function,make-instance,x1 x2 x3,y1 y2
-Function,make-instances-obsolete,x1 x2 x3,y1 y2
-Function,make-list,x1 x2 x3,y1 y2
-Function,make-load-form,x1 x2 x3,y1 y2
-Function,make-load-form-saving-slots,x1 x2 x3,y1 y2
-Function,make-method,x1 x2 x3,y1 y2
-Function,make-package,x1 x2 x3,y1 y2
-Function,make-pathname,x1 x2 x3,y1 y2
-Function,make-random-state,x1 x2 x3,y1 y2
-Function,make-sequence,x1 x2 x3,y1 y2
-Function,make-string,x1 x2 x3,y1 y2
-Function,make-string-input-stream,x1 x2 x3,y1 y2
-Function,make-string-output-stream,x1 x2 x3,y1 y2
-Function,make-symbol,x1 x2 x3,y1 y2
-Function,make-synonym-stream,x1 x2 x3,y1 y2
-Function,make-two-way-stream,x1 x2 x3,y1 y2
-Function,makunbound,x1 x2 x3,y1 y2
-Function,map,x1 x2 x3,y1 y2
-Function,map-into,x1 x2 x3,y1 y2
-Function,mapc,x1 x2 x3,y1 y2
-Function,mapcan,x1 x2 x3,y1 y2
-Function,mapcar,x1 x2 x3,y1 y2
-Function,mapcon,x1 x2 x3,y1 y2
-Function,maphash,x1 x2 x3,y1 y2
-Function,mapl,x1 x2 x3,y1 y2
-Function,maplist,x1 x2 x3,y1 y2
-Function,mask-field,x1 x2 x3,y1 y2
-Function,max,x1 x2 x3,y1 y2
-Function,member,x1 x2 x3,y1 y2
-Function,member-if,x1 x2 x3,y1 y2
-Function,member-if-not,x1 x2 x3,y1 y2
-Function,merge,x1 x2 x3,y1 y2
-Function,merge-pathnames,x1 x2 x3,y1 y2
-Function,method,x1 x2 x3,y1 y2
-Function,method-combination,x1 x2 x3,y1 y2
-Function,method-combination-error,x1 x2 x3,y1 y2
-Function,method-qualifiers,x1 x2 x3,y1 y2
-Function,min,x1 x2 x3,y1 y2
-Function,minusp,x1 x2 x3,y1 y2
-Function,mismatch,x1 x2 x3,y1 y2
-Function,mod,x1 x2 x3,y1 y2
-Function,most-negative-double-float,x1 x2 x3,y1 y2
-Function,most-negative-fixnum,x1 x2 x3,y1 y2
-Function,most-negative-long-float,x1 x2 x3,y1 y2
-Function,most-negative-short-float,x1 x2 x3,y1 y2
-Function,most-negative-single-float,x1 x2 x3,y1 y2
-Function,most-positive-double-float,x1 x2 x3,y1 y2
-Function,most-positive-fixnum,x1 x2 x3,y1 y2
-Function,most-positive-long-float,x1 x2 x3,y1 y2
-Function,most-positive-short-float,x1 x2 x3,y1 y2
-Function,most-positive-single-float,x1 x2 x3,y1 y2
-Function,muffle-warning,x1 x2 x3,y1 y2
-Function,multiple-value-bind,x1 x2 x3,y1 y2
-Function,multiple-value-call,x1 x2 x3,y1 y2
-Function,multiple-value-list,x1 x2 x3,y1 y2
-Function,multiple-value-prog1,x1 x2 x3,y1 y2
-Function,multiple-value-setq,x1 x2 x3,y1 y2
-Function,multiple-values-limit,x1 x2 x3,y1 y2
-Function,name-char,x1 x2 x3,y1 y2
-Function,namestring,pathname => namestring
-Function,nbutlast,list &optional n,result-list
-Function,nconc,x1 x2 x3,y1 y2
-Function,next-method-p,x1 x2 x3,y1 y2
-Function,nil,x1 x2 x3,y1 y2
-Function,nintersection,x1 x2 x3,y1 y2
-Function,ninth,x1 x2 x3,y1 y2
-Function,no-applicable-method,x1 x2 x3,y1 y2
-Function,no-next-method,x1 x2 x3,y1 y2
-Function,not,x1 x2 x3,y1 y2
-Function,notany,x1 x2 x3,y1 y2
-Function,notevery,x1 x2 x3,y1 y2
-Function,notinline,x1 x2 x3,y1 y2
-Function,nreconc,x1 x2 x3,y1 y2
-Function,nreverse,x1 x2 x3,y1 y2
-Function,nset-difference,x1 x2 x3,y1 y2
-Function,nset-exclusive-or,x1 x2 x3,y1 y2
-Function,nstring-capitalize,x1 x2 x3,y1 y2
-Function,nstring-downcase,x1 x2 x3,y1 y2
-Function,nstring-upcase,x1 x2 x3,y1 y2
-Function,nsublis,x1 x2 x3,y1 y2
-Function,nsubst,x1 x2 x3,y1 y2
-Function,nsubst-if,x1 x2 x3,y1 y2
-Function,nsubst-if-not,x1 x2 x3,y1 y2
-Function,nsubstitute,x1 x2 x3,y1 y2
-Function,nsubstitute-if,x1 x2 x3,y1 y2
-Function,nsubstitute-if-not,x1 x2 x3,y1 y2
-Function,nth,x1 x2 x3,y1 y2
-Function,nth-value,x1 x2 x3,y1 y2
-Function,nthcdr,x1 x2 x3,y1 y2
-Function,null,x1 x2 x3,y1 y2
-Function,number,x1 x2 x3,y1 y2
-Function,numberp,x1 x2 x3,y1 y2
-Function,numerator,x1 x2 x3,y1 y2
-Function,nunion,x1 x2 x3,y1 y2
-Function,oddp,x1 x2 x3,y1 y2
-Function,open,x1 x2 x3,y1 y2
-Function,open-stream-p,x1 x2 x3,y1 y2
-Function,optimize,x1 x2 x3,y1 y2
-Function,or,x1 x2 x3,y1 y2
-Function,otherwise,x1 x2 x3,y1 y2
-Function,output-stream-p,x1 x2 x3,y1 y2
-Function,package,x1 x2 x3,y1 y2
-Function,package-error,x1 x2 x3,y1 y2
-Function,package-error-package,x1 x2 x3,y1 y2
-Function,package-name,x1 x2 x3,y1 y2
-Function,package-nicknames,x1 x2 x3,y1 y2
-Function,package-shadowing-symbols,x1 x2 x3,y1 y2
-Function,package-use-list,x1 x2 x3,y1 y2
-Function,package-used-by-list,x1 x2 x3,y1 y2
-Function,packagep,x1 x2 x3,y1 y2
-Function,pairlis,x1 x2 x3,y1 y2
-Function,parse-error,x1 x2 x3,y1 y2
-Function,parse-integer,x1 x2 x3,y1 y2
-Function,parse-namestring,x1 x2 x3,y1 y2
-Function,pathname,x1 x2 x3,y1 y2
-Function,pathname-device,x1 x2 x3,y1 y2
-Function,pathname-directory,x1 x2 x3,y1 y2
-Function,pathname-host,x1 x2 x3,y1 y2
-Function,pathname-match-p,x1 x2 x3,y1 y2
-Function,pathname-name,x1 x2 x3,y1 y2
-Function,pathname-type,x1 x2 x3,y1 y2
-Function,pathname-version,x1 x2 x3,y1 y2
-Function,pathnamep,x1 x2 x3,y1 y2
-Function,peek-char,x1 x2 x3,y1 y2
-Function,phase,x1 x2 x3,y1 y2
-Function,pi,x1 x2 x3,y1 y2
-Function,plusp,x1 x2 x3,y1 y2
-Function,pop,x1 x2 x3,y1 y2
-Function,position,x1 x2 x3,y1 y2
-Function,position-if,x1 x2 x3,y1 y2
-Function,position-if-not,x1 x2 x3,y1 y2
-Function,pprint,x1 x2 x3,y1 y2
-Function,pprint-dispatch,x1 x2 x3,y1 y2
-Function,pprint-exit-if-list-exhausted,x1 x2 x3,y1 y2
-Function,pprint-fill,x1 x2 x3,y1 y2
-Function,pprint-indent,x1 x2 x3,y1 y2
-Function,pprint-linear,x1 x2 x3,y1 y2
-Function,pprint-logical-block,x1 x2 x3,y1 y2
-Function,pprint-newline,x1 x2 x3,y1 y2
-Function,pprint-pop,x1 x2 x3,y1 y2
-Function,pprint-tab,x1 x2 x3,y1 y2
-Function,pprint-tabular,x1 x2 x3,y1 y2
-Function,prin1,x1 x2 x3,y1 y2
-Function,prin1-to-string,x1 x2 x3,y1 y2
-Function,princ,x1 x2 x3,y1 y2
-Function,princ-to-string,x1 x2 x3,y1 y2
-Function,print,x1 x2 x3,y1 y2
-Function,print-not-readable,x1 x2 x3,y1 y2
-Function,print-not-readable-object,x1 x2 x3,y1 y2
-Function,print-object,x1 x2 x3,y1 y2
-Function,print-unreadable-object,x1 x2 x3,y1 y2
-Function,probe-file,x1 x2 x3,y1 y2
-Function,proclaim,x1 x2 x3,y1 y2
-Function,prog,x1 x2 x3,y1 y2
-Function,prog*,x1 x2 x3,y1 y2
-Function,prog1,x1 x2 x3,y1 y2
-Function,prog2,x1 x2 x3,y1 y2
-Function,progn,x1 x2 x3,y1 y2
-Function,program-error,x1 x2 x3,y1 y2
-Function,progv,x1 x2 x3,y1 y2
-Function,provide,x1 x2 x3,y1 y2
-Function,psetf,x1 x2 x3,y1 y2
-Function,psetq,x1 x2 x3,y1 y2
-Function,push,x1 x2 x3,y1 y2
-Function,pushnew,x1 x2 x3,y1 y2
-Function,quote,x1 x2 x3,y1 y2
-Function,random,x1 x2 x3,y1 y2
-Function,random-state,x1 x2 x3,y1 y2
-Function,random-state-p,x1 x2 x3,y1 y2
-Function,rassoc,x1 x2 x3,y1 y2
-Function,rassoc-if,x1 x2 x3,y1 y2
-Function,rassoc-if-not,x1 x2 x3,y1 y2
-Function,ratio,x1 x2 x3,y1 y2
-Function,rational,x1 x2 x3,y1 y2
-Function,rationalize,x1 x2 x3,y1 y2
-Function,rationalp,x1 x2 x3,y1 y2
-Function,read,x1 x2 x3,y1 y2
-Function,read-byte,x1 x2 x3,y1 y2
-Function,read-char,x1 x2 x3,y1 y2
-Function,read-char-no-hang,x1 x2 x3,y1 y2
-Function,read-delimited-list,x1 x2 x3,y1 y2
-Function,read-from-string,x1 x2 x3,y1 y2
-Function,read-line,x1 x2 x3,y1 y2
-Function,read-preserving-whitespace,x1 x2 x3,y1 y2
-Function,read-sequence,x1 x2 x3,y1 y2
-Function,reader-error,x1 x2 x3,y1 y2
-Function,readtable,x1 x2 x3,y1 y2
-Function,readtable-case,x1 x2 x3,y1 y2
-Function,readtablep,x1 x2 x3,y1 y2
-Function,real,x1 x2 x3,y1 y2
-Function,realp,x1 x2 x3,y1 y2
-Function,realpart,x1 x2 x3,y1 y2
-Function,reduce,x1 x2 x3,y1 y2
-Function,reinitialize-instance,x1 x2 x3,y1 y2
-Function,rem,x1 x2 x3,y1 y2
-Function,remf,x1 x2 x3,y1 y2
-Function,remhash,x1 x2 x3,y1 y2
-Function,remove,x1 x2 x3,y1 y2
-Function,remove-duplicates,x1 x2 x3,y1 y2
-Function,remove-if,x1 x2 x3,y1 y2
-Function,remove-if-not,x1 x2 x3,y1 y2
-Function,remove-method,x1 x2 x3,y1 y2
-Function,remprop,x1 x2 x3,y1 y2
-Function,rename-file,x1 x2 x3,y1 y2
-Function,rename-package,x1 x2 x3,y1 y2
-Function,replace,x1 x2 x3,y1 y2
-Function,require,x1 x2 x3,y1 y2
-Function,rest,x1 x2 x3,y1 y2
-Function,restart,x1 x2 x3,y1 y2
-Function,restart-bind,x1 x2 x3,y1 y2
-Function,restart-case,x1 x2 x3,y1 y2
-Function,restart-name,x1 x2 x3,y1 y2
-Function,return,x1 x2 x3,y1 y2
-Function,return-from,x1 x2 x3,y1 y2
-Function,revappend,x1 x2 x3,y1 y2
-Function,reverse,x1 x2 x3,y1 y2
-Function,room,x1 x2 x3,y1 y2
-Function,rotatef,x1 x2 x3,y1 y2
-Function,round,number &optional divisor,quotient remainder
-Function,row-major-aref,x1 x2 x3,y1 y2
-Function,rplaca,x1 x2 x3,y1 y2
-Function,rplacd,x1 x2 x3,y1 y2
-Function,safety,x1 x2 x3,y1 y2
-Function,satisfies,x1 x2 x3,y1 y2
-Function,sbit,x1 x2 x3,y1 y2
-Function,scale-float,x1 x2 x3,y1 y2
-Accessor,schar,string index,character
-Function,search,x1 x2 x3,y1 y2
-Function,second,x1 x2 x3,y1 y2
-Function,sequence,x1 x2 x3,y1 y2
-Function,serious-condition,x1 x2 x3,y1 y2
-Function,set,x1 x2 x3,y1 y2
-Function,set-difference,x1 x2 x3,y1 y2
-Function,set-dispatch-macro-character,x1 x2 x3,y1 y2
-Function,set-exclusive-or,x1 x2 x3,y1 y2
-Function,set-macro-character,x1 x2 x3,y1 y2
-Function,set-pprint-dispatch,x1 x2 x3,y1 y2
-Function,set-syntax-from-char,x1 x2 x3,y1 y2
-Function,setf,x1 x2 x3,y1 y2
-Function,setq,x1 x2 x3,y1 y2
-Function,seventh,x1 x2 x3,y1 y2
-Function,shadow,x1 x2 x3,y1 y2
-Function,shadowing-import,x1 x2 x3,y1 y2
-Function,shared-initialize,x1 x2 x3,y1 y2
-Function,shiftf,x1 x2 x3,y1 y2
-Function,short-float,x1 x2 x3,y1 y2
-Function,short-float-epsilon,x1 x2 x3,y1 y2
-Function,short-float-negative-epsilon,x1 x2 x3,y1 y2
-Function,short-site-name,x1 x2 x3,y1 y2
-Function,signal,x1 x2 x3,y1 y2
-Function,signed-byte,x1 x2 x3,y1 y2
-Function,signum,x1 x2 x3,y1 y2
-Function,simple-array,x1 x2 x3,y1 y2
-Function,simple-base-string,x1 x2 x3,y1 y2
-Function,simple-bit-vector,x1 x2 x3,y1 y2
-Function,simple-bit-vector-p,x1 x2 x3,y1 y2
-Function,simple-condition,x1 x2 x3,y1 y2
-Function,simple-condition-format-arguments,x1 x2 x3,y1 y2
-Function,simple-condition-format-control,x1 x2 x3,y1 y2
-Function,simple-error,x1 x2 x3,y1 y2
-Function,simple-string,x1 x2 x3,y1 y2
-Function,simple-string-p,x1 x2 x3,y1 y2
-Function,simple-type-error,x1 x2 x3,y1 y2
-Function,simple-vector,x1 x2 x3,y1 y2
-Function,simple-vector-p,x1 x2 x3,y1 y2
-Function,simple-warning,x1 x2 x3,y1 y2
-Function,sin,x1 x2 x3,y1 y2
-Function,single-float,x1 x2 x3,y1 y2
-Function,single-float-epsilon,x1 x2 x3,y1 y2
-Function,single-float-negative-epsilon,x1 x2 x3,y1 y2
-Function,sinh,number,result
-Function,sixth,x1 x2 x3,y1 y2
-Function,sleep,x1 x2 x3,y1 y2
-Function,slot-boundp,x1 x2 x3,y1 y2
-Function,slot-exists-p,x1 x2 x3,y1 y2
-Function,slot-makunbound,x1 x2 x3,y1 y2
-Function,slot-missing,x1 x2 x3,y1 y2
-Function,slot-unbound,x1 x2 x3,y1 y2
-Function,slot-value,x1 x2 x3,y1 y2
-Function,software-type,x1 x2 x3,y1 y2
-Function,software-version,x1 x2 x3,y1 y2
-Function,some,x1 x2 x3,y1 y2
-Function,sort,x1 x2 x3,y1 y2
-Function,space,x1 x2 x3,y1 y2
-Function,special,x1 x2 x3,y1 y2
-Function,special-operator-p,x1 x2 x3,y1 y2
-Function,speed,x1 x2 x3,y1 y2
-Function,sqrt,x1 x2 x3,y1 y2
-Function,stable-sort,x1 x2 x3,y1 y2
-Function,standard,x1 x2 x3,y1 y2
-Function,standard-char,x1 x2 x3,y1 y2
-Function,standard-char-p,x1 x2 x3,y1 y2
-Function,standard-class,x1 x2 x3,y1 y2
-Function,standard-generic-function,x1 x2 x3,y1 y2
-Function,standard-method,x1 x2 x3,y1 y2
-Function,standard-object,x1 x2 x3,y1 y2
-Function,step,x1 x2 x3,y1 y2
-Function,storage-condition,x1 x2 x3,y1 y2
-Function,store-value,x1 x2 x3,y1 y2
-Function,stream,x1 x2 x3,y1 y2
-Function,stream-element-type,x1 x2 x3,y1 y2
-Function,stream-error,x1 x2 x3,y1 y2
-Function,stream-error-stream,x1 x2 x3,y1 y2
-Function,stream-external-format,x1 x2 x3,y1 y2
-Function,streamp,x1 x2 x3,y1 y2
-Function,string,x1 x2 x3,y1 y2
-Function,string-capitalize,x1 x2 x3,y1 y2
-Function,string-downcase,x1 x2 x3,y1 y2
-Function,string-equal,x1 x2 x3,y1 y2
-Function,string-greaterp,x1 x2 x3,y1 y2
-Function,string-left-trim,x1 x2 x3,y1 y2
-Function,string-lessp,x1 x2 x3,y1 y2
-Function,string-not-equal,x1 x2 x3,y1 y2
-Function,string-not-greaterp,x1 x2 x3,y1 y2
-Function,string-not-lessp,x1 x2 x3,y1 y2
-Function,string-right-trim,x1 x2 x3,y1 y2
-Function,string-stream,x1 x2 x3,y1 y2
-Function,string-trim,x1 x2 x3,y1 y2
-Function,string-upcase,x1 x2 x3,y1 y2
-Function,string/=,x1 x2 x3,y1 y2
-Function,string<,x1 x2 x3,y1 y2
-Function,string<=,x1 x2 x3,y1 y2
-Function,string=,x1 x2 x3,y1 y2
-Function,string>,x1 x2 x3,y1 y2
-Function,string>=,x1 x2 x3,y1 y2
-Function,stringp,x1 x2 x3,y1 y2
-Function,structure,x1 x2 x3,y1 y2
-Function,structure-class,x1 x2 x3,y1 y2
-Function,structure-object,x1 x2 x3,y1 y2
-Function,style-warning,x1 x2 x3,y1 y2
-Function,sublis,x1 x2 x3,y1 y2
-Function,subseq,x1 x2 x3,y1 y2
-Function,subsetp,x1 x2 x3,y1 y2
-Function,subst,x1 x2 x3,y1 y2
-Function,subst-if,x1 x2 x3,y1 y2
-Function,subst-if-not,x1 x2 x3,y1 y2
-Function,substitute,x1 x2 x3,y1 y2
-Function,substitute-if,x1 x2 x3,y1 y2
-Function,substitute-if-not,x1 x2 x3,y1 y2
-Function,subtypep,x1 x2 x3,y1 y2
-Function,svref,x1 x2 x3,y1 y2
-Function,sxhash,x1 x2 x3,y1 y2
-Function,symbol,x1 x2 x3,y1 y2
-Function,symbol-function,x1 x2 x3,y1 y2
-Function,symbol-macrolet,x1 x2 x3,y1 y2
-Function,symbol-name,x1 x2 x3,y1 y2
-Function,symbol-package,x1 x2 x3,y1 y2
-Function,symbol-plist,x1 x2 x3,y1 y2
-Function,symbol-value,x1 x2 x3,y1 y2
-Function,symbolp,x1 x2 x3,y1 y2
-Function,synonym-stream,x1 x2 x3,y1 y2
-Function,synonym-stream-symbol,x1 x2 x3,y1 y2
-Function,t,x1 x2 x3,y1 y2
-Function,tagbody,x1 x2 x3,y1 y2
-Function,tailp,x1 x2 x3,y1 y2
-Function,tan,x1 x2 x3,y1 y2
-Function,tanh,number,result
-Function,tenth,x1 x2 x3,y1 y2
-Function,terpri,x1 x2 x3,y1 y2
-Function,the,x1 x2 x3,y1 y2
-Function,third,x1 x2 x3,y1 y2
-Function,throw,x1 x2 x3,y1 y2
-Function,time,x1 x2 x3,y1 y2
-Function,trace,x1 x2 x3,y1 y2
-Function,translate-logical-pathname,x1 x2 x3,y1 y2
-Function,translate-pathname,x1 x2 x3,y1 y2
-Function,tree-equal,x1 x2 x3,y1 y2
-Function,truename,x1 x2 x3,y1 y2
-Function,truncate,number &optional divisor,quotient remainder
-Function,two-way-stream,x1 x2 x3,y1 y2
-Function,two-way-stream-input-stream,x1 x2 x3,y1 y2
-Function,two-way-stream-output-stream,x1 x2 x3,y1 y2
-Function,type,x1 x2 x3,y1 y2
-Function,type-error,x1 x2 x3,y1 y2
-Function,type-error-datum,x1 x2 x3,y1 y2
-Function,type-error-expected-type,x1 x2 x3,y1 y2
-Function,type-of,x1 x2 x3,y1 y2
-Macro,typecase,keyform {normal-clause}* [otherwise-clause],result*
-Function,typep,x1 x2 x3,y1 y2
-Function,unbound-slot,x1 x2 x3,y1 y2
-Function,unbound-slot-instance,x1 x2 x3,y1 y2
-Function,unbound-variable,x1 x2 x3,y1 y2
-Function,undefined-function,x1 x2 x3,y1 y2
-Function,unexport,x1 x2 x3,y1 y2
-Function,unintern,x1 x2 x3,y1 y2
-Function,union,x1 x2 x3,y1 y2
-Function,unless,x1 x2 x3,y1 y2
-Function,unread-char,x1 x2 x3,y1 y2
-Function,unsigned-byte,x1 x2 x3,y1 y2
-Function,untrace,x1 x2 x3,y1 y2
-Function,unuse-package,x1 x2 x3,y1 y2
-Function,unwind-protect,x1 x2 x3,y1 y2
-Function,update-instance-for-different-class,x1 x2 x3,y1 y2
-Function,update-instance-for-redefined-class,x1 x2 x3,y1 y2
-Function,upgraded-array-element-type,x1 x2 x3,y1 y2
-Function,upgraded-complex-part-type,x1 x2 x3,y1 y2
-Function,upper-case-p,character,generalized-boolean
-Function,use-package,x1 x2 x3,y1 y2
-Function,use-value,x1 x2 x3,y1 y2
-Function,user-homedir-pathname,x1 x2 x3,y1 y2
-Function,values,x1 x2 x3,y1 y2
-Function,values-list,x1 x2 x3,y1 y2
-Function,variable,x1 x2 x3,y1 y2
-Function,vector,x1 x2 x3,y1 y2
-Function,vector-pop,x1 x2 x3,y1 y2
-Function,vector-push,x1 x2 x3,y1 y2
-Function,vector-push-extend,x1 x2 x3,y1 y2
-Function,vectorp,x1 x2 x3,y1 y2
-Function,warn,x1 x2 x3,y1 y2
-Function,warning,x1 x2 x3,y1 y2
-Function,when,x1 x2 x3,y1 y2
-Function,wild-pathname-p,x1 x2 x3,y1 y2
-Function,with-accessors,x1 x2 x3,y1 y2
-Function,with-compilation-unit,x1 x2 x3,y1 y2
-Function,with-condition-restarts,x1 x2 x3,y1 y2
-Function,with-hash-table-iterator,x1 x2 x3,y1 y2
-Function,with-input-from-string,x1 x2 x3,y1 y2
-Function,with-open-file,x1 x2 x3,y1 y2
-Function,with-open-stream,x1 x2 x3,y1 y2
-Function,with-output-to-string,x1 x2 x3,y1 y2
-Function,with-package-iterator,x1 x2 x3,y1 y2
-Function,with-simple-restart,x1 x2 x3,y1 y2
-Function,with-slots,x1 x2 x3,y1 y2
-Function,with-standard-io-syntax,x1 x2 x3,y1 y2
-Function,write,x1 x2 x3,y1 y2
-Function,write-byte,x1 x2 x3,y1 y2
-Function,write-char,x1 x2 x3,y1 y2
-Function,write-line,x1 x2 x3,y1 y2
-Function,write-sequence,x1 x2 x3,y1 y2
-Function,write-string,x1 x2 x3,y1 y2
-Function,write-to-string,x1 x2 x3,y1 y2
-Function,y-or-n-p,x1 x2 x3,y1 y2
-Function,yes-or-no-p,x1 x2 x3,y1 y2
-Function,zerop,x1 x2 x3,y1 y2
+&allow-other-keys
+&aux
+&body
+&environment
+&key
+&optional
+&rest
+&whole
+*
+**
+***
+*break-on-signals*
+*compile-file-pathname*
+*compile-file-truename*
+*compile-print*
+*compile-verbose*
+*debug-io*
+*debugger-hook*
+*default-pathname-defaults*
+*error-output*
+*features*
+*gensym-counter*
+*load-pathname*
+*load-print*
+*load-truename*
+*load-verbose*
+*macroexpand-hook*
+*modules*
+*package*
+*print-array*
+*print-base*
+*print-case*
+*print-circle*
+*print-escape*
+*print-gensym*
+*print-length*
+*print-level*
+*print-lines*
+*print-miser-width*
+*print-pprint-dispatch*
+*print-pretty*
+*print-radix*
+*print-readably*
+*print-right-margin*
+*query-io*
+*random-state*
+*read-base*
+*read-default-float-format*
+*read-eval*
+*read-suppress*
+*readtable*
+*standard-input*
+*standard-output*
+*terminal-io*
+*trace-output*
++
+++
++++
+-
+/
+//
+///
+/=
+1+
+1-
+:abort
+:absolute
+:accessor
+:adjustable
+:after
+:allocation
+:allow-other-keys
+:ansi-cl
+:append
+:argument-precedence-order
+:arguments
+:around
+:array
+:back
+:base
+:before
+:block
+:capitalize
+:case
+:class
+:cltl1
+:cltl2
+:common
+:common-lisp
+:compile-toplevel
+:conc-name
+:constructor
+:copier
+:count
+:create
+:current
+:declare
+:default
+:default-initargs
+:defaults
+:description
+:device
+:direction
+:directory
+:displaced-index-offset
+:displaced-to
+:documentation
+:downcase
+:draft-ansi-cl
+:draft-ansi-cl-2
+:element-type
+:end
+:end1
+:end2
+:environment
+:error
+:escape
+:execute
+:expected-type
+:export
+:external
+:external-format
+:fill
+:fill-pointer
+:format-arguments
+:from-end
+:generic-function
+:generic-function-class
+:gensym
+:host
+:identity
+:identity-with-one-argument
+:ieee-floating-point
+:if-does-not-exist
+:if-exists
+:import-from
+:include
+:index
+:inherited
+:init-form
+:initarg
+:initform
+:initial-contents
+:initial-element
+:initial-offset
+:initial-value
+:input
+:installed
+:instance
+:interactive
+:interactive-function
+:intern
+:internal
+:invert
+:io
+:junk-allowed
+:key
+:lambda-list
+:length
+:level
+:line
+:line-relative
+:linear
+:lines
+:load-toplevel
+:local
+:mandatory
+:metaclass
+:method
+:method-class
+:method-combination
+:miser
+:miser-width
+:most-specific-first
+:most-specific-last
+:name
+:named
+:new-version
+:newest
+:nicknames
+:no-error
+:off
+:oldest
+:on
+:operands
+:operator
+:order
+:output
+:output-file
+:override
+:overwrite
+:per-line-prefix
+:pixel-size
+:pprint-dispatch
+:pre-line-prefix
+:predicate
+:prefix
+:preserve
+:preserve-whitespace
+:pretty
+:previous
+:print
+:print-function
+:print-object
+:probe
+:radix
+:read-only
+:readably
+:reader
+:rehash-size
+:rehash-threshold
+:relative
+:rename
+:rename-and-delete
+:report
+:report-function
+:required
+:right-margin
+:section
+:section-relative
+:shadow
+:shadowing-import-from
+:size
+:slot-names
+:start
+:start1
+:start2
+:stream
+:suffix
+:supersede
+:test
+:test-function
+:test-not
+:type
+:unspecific
+:up
+:upcase
+:use
+:verbose
+:version
+:wild
+:wild-inferiors
+:wild-inferors
+:writer
+:x3j13
+<
+<=
+=
+>
+>=
+abort
+abs
+acons
+acos
+acosh
+add-method
+adjoin
+adjust-array
+adjustable-array-p
+allocate-instance
+alpha-char-p
+alphanumericp
+and
+append
+apply
+apropos
+apropos-list
+aref
+arithmetic-error
+arithmetic-error-operands
+arithmetic-error-operation
+array
+array-dimension
+array-dimension-limit
+array-dimensions
+array-displacement
+array-element-type
+array-has-fill-pointer-p
+array-in-bounds-p
+array-rank
+array-rank-limit
+array-row-major-index
+array-total-size
+array-total-size-limit
+arrayp
+ash
+asin
+asinh
+assert
+assoc
+assoc-if
+assoc-if-not
+atan
+atanh
+atom
+base-char
+base-string
+bignum
+bit
+bit-and
+bit-andc1
+bit-andc2
+bit-eqv
+bit-ior
+bit-nand
+bit-nor
+bit-not
+bit-orc1
+bit-orc2
+bit-vector
+bit-vector-p
+bit-xor
+block
+boole
+boole-1
+boole-2
+boole-and
+boole-andc1
+boole-andc2
+boole-c1
+boole-c2
+boole-clr
+boole-eqv
+boole-ior
+boole-nand
+boole-nor
+boole-orc1
+boole-orc2
+boole-set
+boole-xor
+boolean
+both-case-p
+boundp
+break
+broadcast-stream
+broadcast-stream-streams
+built-in-class
+butlast
+byte
+byte-position
+byte-size
+caaaar
+caaadr
+caaar
+caadar
+caaddr
+caadr
+caar
+cadaar
+cadadr
+cadar
+caddar
+cadddr
+caddr
+cadr
+call-arguments-limit
+call-method
+call-next-method
+car
+case
+catch
+ccase
+cdaaar
+cdaadr
+cdaar
+cdadar
+cdaddr
+cdadr
+cdar
+cddaar
+cddadr
+cddar
+cdddar
+cddddr
+cdddr
+cddr
+cdr
+ceiling
+cell-error
+cell-error-name
+cerror
+change-class
+char
+char-code
+char-code-limit
+char-downcase
+char-equal
+char-greaterp
+char-int
+char-lessp
+char-name
+char-not-equal
+char-not-greaterp
+char-not-lessp
+char-upcase
+char/=
+char<
+char<=
+char=
+char>
+char>=
+character
+characterp
+check-type
+cis
+class
+class-name
+class-of
+clear-input
+clear-output
+close
+clrhash
+code-char
+coerce
+compilation-speed
+compile
+compile-file
+compile-file-pathname
+compiled-function
+compiled-function-p
+compiler-macro-function
+complement
+complex
+complexp
+compute-applicable-methods
+compute-restarts
+concatenate
+concatenated-stream
+concatenated-stream-streams
+cond
+condition
+conjugate
+cons
+consp
+constantly
+constantp
+continue
+control-error
+copy-alist
+copy-list
+copy-pprint-dispatch
+copy-readtable
+copy-seq
+copy-structure
+copy-symbol
+copy-tree
+cos
+cosh
+count
+count-if
+count-if-not
+ctypecase
+decf
+declaim
+declaration
+declare
+decode-float
+decode-universal-time
+defclass
+defconstant
+defgeneric
+define-compiler-macro
+define-condition
+define-method-combination
+define-modify-macro
+define-setf-expander
+define-symbol-macro
+defmacro
+defmethod
+defpackage
+defparameter
+defsetf
+defstruct
+deftype
+defun
+defvar
+delete
+delete-duplicates
+delete-file
+delete-if
+delete-if-not
+delete-package
+denominator
+deposit-field
+describe
+describe-object
+destructuring-bind
+digit-char
+digit-char-p
+directory
+directory-namestring
+disassemble
+division-by-zero
+do
+do*
+do-all-symbols
+do-external-symbols
+do-symbols
+documentation
+dolist
+dotimes
+double-float
+double-float-epsilon
+double-float-negative-epsilon
+dpb
+dribble
+dynamic-extent
+ecase
+echo-stream
+echo-stream-input-stream
+echo-stream-output-stream
+ed
+eighth
+elt
+encode-universal-time
+end-of-file
+endp
+enough-namestring
+ensure-directories-exist
+ensure-generic-function
+eq
+eql
+equal
+equalp
+error
+etypecase
+eval
+eval-when
+evenp
+every
+exp
+export
+expt
+extended-char
+fboundp
+fceiling
+fdefinition
+ffloor
+fifth
+file-author
+file-error
+file-error-pathname
+file-length
+file-namestring
+file-position
+file-stream
+file-string-length
+file-write-date
+fill
+fill-pointer
+find
+find-all-symbols
+find-class
+find-if
+find-if-not
+find-method
+find-package
+find-restart
+find-symbol
+finish-output
+first
+fixnum
+flet
+float
+float-digits
+float-precision
+float-radix
+float-sign
+floating-point-inexact
+floating-point-invalid-operation
+floating-point-overflow
+floating-point-underflow
+floatp
+floor
+fmakunbound
+force-output
+format
+formatter
+fourth
+fresh-line
+fround
+ftruncate
+ftype
+funcall
+function
+function-keywords
+function-lambda-expression
+functionp
+gcd
+generic-function
+gensym
+gentemp
+get
+get-decoded-time
+get-dispatch-macro-character
+get-internal-real-time
+get-internal-run-time
+get-macro-character
+get-output-stream-string
+get-properties
+get-setf-expansion
+get-universal-time
+getf
+gethash
+go
+graphic-char-p
+handler-bind
+handler-case
+hash-table
+hash-table-count
+hash-table-p
+hash-table-rehash-size
+hash-table-rehash-threshold
+hash-table-size
+hash-table-test
+host-namestring
+identity
+if
+ignorable
+ignore
+ignore-errors
+imagpart
+import
+in-package
+incf
+initialize-instance
+inline
+input-stream-p
+inspect
+integer
+integer-decode-float
+integer-length
+integerp
+interactive-stream-p
+intern
+internal-time-units-per-second
+intersection
+invalid-method-error
+invoke-debugger
+invoke-restart
+invoke-restart-interactively
+isqrt
+keyword
+keywordp
+labels
+lambda
+lambda-list-keywords
+lambda-parameters-limit
+last
+lcm
+ldb
+ldb-test
+ldiff
+least-negative-double-float
+least-negative-long-float
+least-negative-normalized-double-float
+least-negative-normalized-long-float
+least-negative-normalized-short-float
+least-negative-normalized-single-float
+least-negative-short-float
+least-negative-single-float
+least-positive-double-float
+least-positive-long-float
+least-positive-normalized-double-float
+least-positive-normalized-long-float
+least-positive-normalized-short-float
+least-positive-normalized-single-float
+least-positive-short-float
+least-positive-single-float
+length
+let
+let*
+lisp-implementation-type
+lisp-implementation-version
+list
+list*
+list-all-packages
+list-length
+listen
+listp
+load
+load-logical-pathname-translations
+load-time-value
+locally
+log
+logand
+logandc1
+logandc2
+logbitp
+logcount
+logeqv
+logical-pathname
+logical-pathname-translations
+logior
+lognand
+lognor
+lognot
+logorc1
+logorc2
+logtest
+logxor
+long-float
+long-float-epsilon
+long-float-negative-epsilon
+long-site-name
+loop
+loop-finish
+lower-case-p
+machine-instance
+machine-type
+machine-version
+macro-function
+macroexpand
+macroexpand-1
+macrolet
+make-array
+make-broadcast-stream
+make-concatenated-stream
+make-condition
+make-dispatch-macro-character
+make-echo-stream
+make-hash-table
+make-instance
+make-instances-obsolete
+make-list
+make-load-form
+make-load-form-saving-slots
+make-method
+make-package
+make-pathname
+make-random-state
+make-sequence
+make-string
+make-string-input-stream
+make-string-output-stream
+make-symbol
+make-synonym-stream
+make-two-way-stream
+makunbound
+map
+map-into
+mapc
+mapcan
+mapcar
+mapcon
+maphash
+mapl
+maplist
+mask-field
+max
+member
+member-if
+member-if-not
+merge
+merge-pathnames
+method
+method-combination
+method-combination-error
+method-qualifiers
+min
+minusp
+mismatch
+mod
+most-negative-double-float
+most-negative-fixnum
+most-negative-long-float
+most-negative-short-float
+most-negative-single-float
+most-positive-double-float
+most-positive-fixnum
+most-positive-long-float
+most-positive-short-float
+most-positive-single-float
+muffle-warning
+multiple-value-bind
+multiple-value-call
+multiple-value-list
+multiple-value-prog1
+multiple-value-setq
+multiple-values-limit
+name-char
+namestring
+nbutlast
+nconc
+next-method-p
+nil
+nintersection
+ninth
+no-applicable-method
+no-next-method
+not
+notany
+notevery
+notinline
+nreconc
+nreverse
+nset-difference
+nset-exclusive-or
+nstring-capitalize
+nstring-downcase
+nstring-upcase
+nsublis
+nsubst
+nsubst-if
+nsubst-if-not
+nsubstitute
+nsubstitute-if
+nsubstitute-if-not
+nth
+nth-value
+nthcdr
+null
+number
+numberp
+numerator
+nunion
+oddp
+open
+open-stream-p
+optimize
+or
+otherwise
+output-stream-p
+package
+package-error
+package-error-package
+package-name
+package-nicknames
+package-shadowing-symbols
+package-use-list
+package-used-by-list
+packagep
+pairlis
+parse-error
+parse-integer
+parse-namestring
+pathname
+pathname-device
+pathname-directory
+pathname-host
+pathname-match-p
+pathname-name
+pathname-type
+pathname-version
+pathnamep
+peek-char
+phase
+pi
+plusp
+pop
+position
+position-if
+position-if-not
+pprint
+pprint-dispatch
+pprint-exit-if-list-exhausted
+pprint-fill
+pprint-indent
+pprint-linear
+pprint-logical-block
+pprint-newline
+pprint-pop
+pprint-tab
+pprint-tabular
+prin1
+prin1-to-string
+princ
+princ-to-string
+print
+print-not-readable
+print-not-readable-object
+print-object
+print-unreadable-object
+probe-file
+proclaim
+prog
+prog*
+prog1
+prog2
+progn
+program-error
+progv
+provide
+psetf
+psetq
+push
+pushnew
+quote
+random
+random-state
+random-state-p
+rassoc
+rassoc-if
+rassoc-if-not
+ratio
+rational
+rationalize
+rationalp
+read
+read-byte
+read-char
+read-char-no-hang
+read-delimited-list
+read-from-string
+read-line
+read-preserving-whitespace
+read-sequence
+reader-error
+readtable
+readtable-case
+readtablep
+real
+realp
+realpart
+reduce
+reinitialize-instance
+rem
+remf
+remhash
+remove
+remove-duplicates
+remove-if
+remove-if-not
+remove-method
+remprop
+rename-file
+rename-package
+replace
+require
+rest
+restart
+restart-bind
+restart-case
+restart-name
+return
+return-from
+revappend
+reverse
+room
+rotatef
+round
+row-major-aref
+rplaca
+rplacd
+safety
+satisfies
+sbit
+scale-float
+schar
+search
+second
+sequence
+serious-condition
+set
+set-difference
+set-dispatch-macro-character
+set-exclusive-or
+set-macro-character
+set-pprint-dispatch
+set-syntax-from-char
+setf
+setq
+seventh
+shadow
+shadowing-import
+shared-initialize
+shiftf
+short-float
+short-float-epsilon
+short-float-negative-epsilon
+short-site-name
+signal
+signed-byte
+signum
+simple-array
+simple-base-string
+simple-bit-vector
+simple-bit-vector-p
+simple-condition
+simple-condition-format-arguments
+simple-condition-format-control
+simple-error
+simple-string
+simple-string-p
+simple-type-error
+simple-vector
+simple-vector-p
+simple-warning
+sin
+single-float
+single-float-epsilon
+single-float-negative-epsilon
+sinh
+sixth
+sleep
+slot-boundp
+slot-exists-p
+slot-makunbound
+slot-missing
+slot-unbound
+slot-value
+software-type
+software-version
+some
+sort
+space
+special
+special-operator-p
+speed
+sqrt
+stable-sort
+standard
+standard-char
+standard-char-p
+standard-class
+standard-generic-function
+standard-method
+standard-object
+step
+storage-condition
+store-value
+stream
+stream-element-type
+stream-error
+stream-error-stream
+stream-external-format
+streamp
+string
+string-capitalize
+string-downcase
+string-equal
+string-greaterp
+string-left-trim
+string-lessp
+string-not-equal
+string-not-greaterp
+string-not-lessp
+string-right-trim
+string-stream
+string-trim
+string-upcase
+string/=
+string<
+string<=
+string=
+string>
+string>=
+stringp
+structure
+structure-class
+structure-object
+style-warning
+sublis
+subseq
+subsetp
+subst
+subst-if
+subst-if-not
+substitute
+substitute-if
+substitute-if-not
+subtypep
+svref
+sxhash
+symbol
+symbol-function
+symbol-macrolet
+symbol-name
+symbol-package
+symbol-plist
+symbol-value
+symbolp
+synonym-stream
+synonym-stream-symbol
+t
+tagbody
+tailp
+tan
+tanh
+tenth
+terpri
+the
+third
+throw
+time
+trace
+translate-logical-pathname
+translate-pathname
+tree-equal
+truename
+truncate
+two-way-stream
+two-way-stream-input-stream
+two-way-stream-output-stream
+type
+type-error
+type-error-datum
+type-error-expected-type
+type-of
+typecase
+typep
+unbound-slot
+unbound-slot-instance
+unbound-variable
+undefined-function
+unexport
+unintern
+union
+unless
+unread-char
+unsigned-byte
+untrace
+unuse-package
+unwind-protect
+update-instance-for-different-class
+update-instance-for-redefined-class
+upgraded-array-element-type
+upgraded-complex-part-type
+upper-case-p
+use-package
+use-value
+user-homedir-pathname
+values
+values-list
+variable
+vector
+vector-pop
+vector-push
+vector-push-extend
+vectorp
+warn
+warning
+when
+wild-pathname-p
+with-accessors
+with-compilation-unit
+with-condition-restarts
+with-hash-table-iterator
+with-input-from-string
+with-open-file
+with-open-stream
+with-output-to-string
+with-package-iterator
+with-simple-restart
+with-slots
+with-standard-io-syntax
+write
+write-byte
+write-char
+write-line
+write-sequence
+write-string
+write-to-string
+y-or-n-p
+yes-or-no-p
+zerop
