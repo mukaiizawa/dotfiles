@@ -4,7 +4,7 @@ Macro DEFINE-METHOD-COMBINATION
 Syntax:
 define-method-combination name [[short-form-option]] => name
 define-method-combination name lambda-list (method-group-specifier*) [(:arguments . args-lambda-list)] [(:generic-function generic-function-symbol)] [[declaration* | documentation]] form* => name
-short-form-option::= :documentation documentation | 
+short-form-option::= :documentation documentation |
                      :identity-with-one-argument identity-with-one-argument |
                      :operator operator
 method-group-specifier::= (name {qualifier-pattern+ | predicate} [[long-form-option]])
@@ -32,7 +32,7 @@ Description:
 The macro define-method-combination is used to define new types of method combination.
 There are two forms of define-method-combination. The short form is a simple facility for the cases that are expected to be most commonly needed. The long form is more powerful but more verbose. It resembles defmacro in that the body is an expression, usually using backquote, that computes a form. Thus arbitrary control structures can be implemented. The long form also allows arbitrary processing of method qualifiers.
 
-Short Form 
+Short Form
 The short form syntax of define-method-combination is recognized when the second subform is a non-nil symbol or is not present. When the short form is used, name is defined as a type of method combination that produces a Lisp form (operator method-call method-call ...). The operator is a symbol that can be the name of a function, macro, or special operator. The operator can be supplied by a keyword option; it defaults to name.
 Keyword options for the short form are the following:
  The :documentation option is used to document the method-combination type; see description of long form below.
@@ -44,7 +44,7 @@ A method combination procedure defined in this way accepts an optional argument 
 The short form automatically includes error checking and support for around methods.
 For a discussion of built-in method combination types, see Section 7.6.6.4 (Built-in Method Combination Types).
 
-Long Form 
+Long Form
 The long form syntax of define-method-combination is recognized when the second subform is a list.
 The lambda-list receives any arguments provided after the name of the method combination type in the :method-combination option to defgeneric.
 A list of method group specifiers follows. Each specifier selects a subset of the applicable methods to play a particular role, either by matching their qualifiers against some patterns or by testing their qualifiers with a predicate. These method group specifiers define all method qualifiers that can be used with this type of method combination.
@@ -65,9 +65,9 @@ In addition, &whole var can be placed first in the :arguments lambda-list. It ca
 Erroneous conditions detected by the body should be reported with method-combination-error or invalid-method-error; these functions add any necessary contextual information to the error message and will signal the appropriate error.
 The body forms are evaluated inside of the bindings created by the lambda list and method group specifiers.  Declarations at the head of the body are positioned directly inside of bindings created by the lambda list and outside of the bindings of the method group variables. Thus method group variables cannot be declared in this way. locally may be used around the body, however.
 Within the body forms, generic-function-symbol is bound to the generic function object.
- Documentation is attached as a documentation string to name (as kind method-combination) and to the method combination object. 
+ Documentation is attached as a documentation string to name (as kind method-combination) and to the method combination object.
  Note that two methods with identical specializers, but with different qualifiers, are not ordered by the algorithm described in Step 2 of the method selection and combination process described in Section 7.6.6 (Method Selection and Combination). Normally the two methods play different roles in the effective method because they have different qualifiers, and no matter how they are ordered in the result of Step 2, the effective method is the same. If the two methods play the same role and their order matters,  an error is signaled. This happens as part of the qualifier pattern matching in define-method-combination.
- If a define-method-combination form appears as a top level form, the compiler must make the method combination name be recognized as a valid method combination name in subsequent defgeneric forms. However, the method combination is executed no earlier than when the define-method-combination form is executed, and possibly as late as the time that generic functions that use the method combination are executed. 
+ If a define-method-combination form appears as a top level form, the compiler must make the method combination name be recognized as a valid method combination name in subsequent defgeneric forms. However, the method combination is executed no earlier than when the define-method-combination form is executed, and possibly as late as the time that generic functions that use the method combination are executed.
 
 Examples:
 Most examples of the long form of define-method-combination also illustrate the use of the related functions that are provided as part of the declarative method combination facility.
@@ -174,7 +174,7 @@ Most examples of the long form of define-method-combination also illustrate the 
  (defun positive-integer-qualifier-p (method-qualifiers)
    (and (= (length method-qualifiers) 1)
         (typep (first method-qualifiers) '(integer 0 *))))
- 
+
 ;;; Example of the use of :arguments
  (define-method-combination progn-with-lock ()
          ((methods ()))
@@ -187,7 +187,7 @@ Most examples of the long form of define-method-combination also illustrate the 
       (unlock (object-lock ,object))))
 
 Side Effects:
-The compiler is not required to perform any compile-time side-effects. 
+The compiler is not required to perform any compile-time side-effects.
 
 Exceptional Situations:
 Method combination types defined with the short form require exactly one qualifier per method. An error of type error is signaled if there are applicable methods with no qualifiers or with qualifiers that are not supported by the method combination type. At least one primary method must be applicable or an error of type error is signaled.

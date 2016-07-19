@@ -12,7 +12,7 @@ form---a form.
 Description:
 Assigns values to variables.
 This is just like setq, except that the assignments happen ``in parallel.'' That is, first all of the forms are evaluated, and only then are the variables set to the resulting values. In this way, the assignment to one variable does not affect the value computation of another in the way that would occur with setq's sequential assignment.
-If any var refers to a binding made by symbol-macrolet, then that var is treated as if psetf (not psetq) had been used. 
+If any var refers to a binding made by symbol-macrolet, then that var is treated as if psetf (not psetq) had been used.
 
 Examples:
  ;; A simple use of PSETQ to establish values for variables.

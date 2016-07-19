@@ -17,22 +17,22 @@ Description:
 Within the lexical scope of the body forms, the name is defined via macrolet such that successive invocations of (name) will return the symbols, one by one, from the packages in package-list.
 It is unspecified whether symbols inherited from multiple packages are returned more than once. The order of symbols returned does not necessarily reflect the order of packages in package-list. When package-list has more than one element, it is unspecified whether duplicate symbols are returned once or more than once.
 Symbol-types controls which symbols that are accessible in a package are returned as follows:
-:internal 
+:internal
  The symbols that are present in the package, but that are not exported.
-:external 
+:external
  The symbols that are present in the package and are exported.
-:inherited 
+:inherited
  The symbols that are exported by used packages and that are not shadowed.
 When more than one argument is supplied for symbol-types, a symbol is returned if its accessibility matches any one of the symbol-types supplied. Implementations may extend this syntax by recognizing additional symbol accessibility types.
 An invocation of (name) returns four values as follows:
 1.  A flag that indicates whether a symbol is returned (true means that a symbol is returned). 2.  A symbol that is accessible in one the indicated packages. 3.  The accessibility type for that symbol; i.e., one of the symbols :internal, :external, or :inherited. 4.  The package from which the symbol was obtained. The package is one of the packages present or named in package-list.
 After all symbols have been returned by successive invocations of (name), then only one value is returned, namely nil.
 The meaning of the second, third, and fourth values is that the returned symbol is accessible in the returned package in the way indicated by the second return value as follows:
-:internal 
+:internal
 Means present and not exported.
-:external 
+:external
 Means present and exported.
-:inherited 
+:inherited
 Means not present (thus not shadowed) but inherited from some used package.
 It is unspecified what happens if any of the implicit interior state of an iteration is returned outside the dynamic extent of the with-package-iterator form such as by returning some closure over the invocation form.
 Any number of invocations of with-package-iterator can be nested, and the body of the innermost one can invoke all of the locally established macros, provided all those macros have distinct names.
@@ -50,7 +50,7 @@ The following function should return t on any package, and signal an error if th
          (push (list symbol accessibility) all-entries)))
      (with-package-iterator (generator-fn package
                              :internal :external :inherited)
-       (loop    
+       (loop
          (multiple-value-bind (more? symbol accessibility pkg)
              (generator-fn)
            (unless more? (return))

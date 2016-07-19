@@ -6,7 +6,7 @@ trace function-name* => trace-result
 untrace function-name* => untrace-result
 
 Arguments and Values:
-function-name---a function name. 
+function-name---a function name.
 trace-result---implementation-dependent, unless no function-names are supplied, in which case trace-result is a list of function names.
 untrace-result---implementation-dependent.
 

@@ -16,17 +16,17 @@ Compound Type Specifier Syntax:
 vector [{element-type | *} [{size | *}]]
 
 Compound Type Specifier Arguments:
-size---a non-negative fixnum. 
+size---a non-negative fixnum.
 element-type---a type specifier.
 
 Compound Type Specifier Description:
 This denotes the set of specialized vectors whose element type and dimension match the specified values. Specifically:
-If element-type is the symbol *, vectors are not excluded on the basis of their element type. Otherwise, only those vectors are included whose actual array element type  is the result of upgrading element-type; see Section 15.1.2.1 (Array Upgrading). 
+If element-type is the symbol *, vectors are not excluded on the basis of their element type. Otherwise, only those vectors are included whose actual array element type  is the result of upgrading element-type; see Section 15.1.2.1 (Array Upgrading).
 If a size is specified, the set includes only those vectors whose only dimension is size. If the symbol * is specified instead of a size, the set is not restricted on the basis of dimension.
 
 Notes:
 The type (vector e s) is equivalent to the type (array e (s)).
 The type (vector bit) has the name bit-vector.
 The union of all types (vector C), where C is any subtype of character, has the name string.
- (vector *) refers to all vectors regardless of element type, (vector type-specifier) refers only to those vectors that can result from giving type-specifier as the :element-type argument to make-array. 
+ (vector *) refers to all vectors regardless of element type, (vector type-specifier) refers only to those vectors that can result from giving type-specifier as the :element-type argument to make-array.
 

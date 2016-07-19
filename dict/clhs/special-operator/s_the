@@ -7,12 +7,12 @@ the value-type form => result*
 Arguments and Values:
 value-type---a type specifier; not evaluated.
 form---a form; evaluated.
-results---the values resulting from the evaluation of form. These values must conform to the type supplied by value-type; see below. 
+results---the values resulting from the evaluation of form. These values must conform to the type supplied by value-type; see below.
 
 Description:
 the specifies that the values[1a] returned by form are of the types specified by value-type. The consequences are undefined if any result is not of the declared type.
 It is permissible for form to yield a different number of values than are specified by value-type, provided that the values for which types are declared are indeed of those types. Missing values are treated as nil for the purposes of checking their types.
-Regardless of number of values declared by value-type, the number of values returned by the the special form is the same as the number of values returned by form.  
+Regardless of number of values declared by value-type, the number of values returned by the the special form is the same as the number of values returned by form.
 
 Examples:
  (the symbol (car (list (gensym)))) =>  #:G9876

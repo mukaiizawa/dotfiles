@@ -3,8 +3,8 @@ Macro RESTART-BIND
 
 Syntax:
 restart-bind ({(name function {key-val-pair}*)}) form* => result*
-key-val-pair::= :interactive-function interactive-function | 
-                :report-function report-function | 
+key-val-pair::= :interactive-function interactive-function |
+                :report-function report-function |
                 :test-function test-function
 
 Arguments and Values:
@@ -25,12 +25,12 @@ If the restart is invoked interactively from the debugger (using invoke-restart-
 If a restart is invoked interactively but no interactive-function is used, then an argument list of nil is used. In that case, the function must be compatible with an empty argument list.
 If the restart is presented interactively (e.g., by the debugger), the presentation is done by calling the function which resulted from evaluating report-function. This function must be a function of one argument, a stream. It is expected to print a description of the action that the restart takes to that stream. This function is called any time the restart is printed while *print-escape* is nil.
 In the case of interactive invocation, the result is dependent on the value of :interactive-function as follows.
-:interactive-function 
+:interactive-function
  Value is evaluated in the current lexical environment and should return a function of no arguments which constructs a list of arguments to be used by invoke-restart-interactively when invoking this restart. The function may prompt interactively using query I/O if necessary.
-:report-function 
+:report-function
  Value is evaluated in the current lexical environment and should return a function of one argument, a stream, which prints on the stream a summary of the action that this restart takes. This function is called whenever the restart is reported (printed while *print-escape* is nil). If no :report-function option is provided, the manner in which the restart is reported is implementation-dependent.
- :test-function 
- Value is evaluated in the current lexical environment and should return a function of one argument, a condition, which returns true if the restart is to be considered visible. 
+ :test-function
+ Value is evaluated in the current lexical environment and should return a function of one argument, a condition, which returns true if the restart is to be considered visible.
 
 Affected By:
 *query-io*.

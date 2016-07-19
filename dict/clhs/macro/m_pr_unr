@@ -1,5 +1,5 @@
 
-Macro PRINT-UNREADABLE-OBJECT 
+Macro PRINT-UNREADABLE-OBJECT
 
 Syntax:
 print-unreadable-object (object stream &key type identity) form* => nil

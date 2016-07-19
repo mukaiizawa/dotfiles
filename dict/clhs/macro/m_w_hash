@@ -27,7 +27,7 @@ The following function should return t on any hash table, and signal an error if
      (maphash #'(lambda (key value) (push (list key value) all-entries))
               hash-table)
      (with-hash-table-iterator (generator-fn hash-table)
-       (loop    
+       (loop
          (multiple-value-bind (more? key value) (generator-fn)
            (unless more? (return))
            (unless (eql value (gethash key hash-table unique))

@@ -14,13 +14,13 @@ main-clause::= unconditional | accumulation | conditional | termination-test | i
 initial-final::= initially compound-form+ | finally compound-form+
 unconditional::= {do | doing} compound-form+ | return {form | it}
 accumulation::= list-accumulation | numeric-accumulation
-list-accumulation::= {collect | collecting | append | appending | nconc | nconcing} {form | it} 
+list-accumulation::= {collect | collecting | append | appending | nconc | nconcing} {form | it}
                      [into simple-var]
 numeric-accumulation::= {count | counting | sum | summing | }
                          maximize | maximizing | minimize | minimizing {form | it}
                         [into simple-var] [type-spec]
-conditional::= {if | when | unless} form selectable-clause {and selectable-clause}* 
-               [else selectable-clause {and selectable-clause}*] 
+conditional::= {if | when | unless} form selectable-clause {and selectable-clause}*
+               [else selectable-clause {and selectable-clause}*]
                [end]
 selectable-clause::= unconditional | accumulation | conditional
 termination-test::= while form | until form | repeat form | always form | never form | thereis form

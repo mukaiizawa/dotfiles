@@ -13,7 +13,7 @@ result---the primary value of the last form, or nil if no pairs were supplied.
 Description:
 Assigns values to variables.
 (setq var1 form1 var2 form2 ...) is the simple variable assignment statement of Lisp. First form1 is evaluated and the result is stored in the variable var1, then form2 is evaluated and the result stored in var2, and so forth. setq may be used for assignment of both lexical and dynamic variables.
-If any var refers to a binding made by symbol-macrolet, then that var is treated as if setf (not setq) had been used. 
+If any var refers to a binding made by symbol-macrolet, then that var is treated as if setf (not setq) had been used.
 
 Examples:
  ;; A simple use of SETQ to establish values for variables.

@@ -9,7 +9,7 @@ pair::= place newvalue
 Arguments and Values:
 place---a place.
 newvalue---a form.
-results---the multiple values[2] returned by the storing form for the last place, or nil if there are no pairs. 
+results---the multiple values[2] returned by the storing form for the last place, or nil if there are no pairs.
 
 Description:
 setf changes the value of place to be newvalue.

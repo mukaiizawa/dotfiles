@@ -3,8 +3,8 @@ Macro RESTART-CASE
 
 Syntax:
 restart-case restartable-form {clause} => result*
-clause::= (case-name lambda-list 
-           [[:interactive interactive-expression | :report report-expression | :test test-expression]] 
+clause::= (case-name lambda-list
+           [[:interactive interactive-expression | :report report-expression | :test test-expression]]
            declaration* form*)
 
 Arguments and Values:
@@ -25,10 +25,10 @@ If case-name is a symbol, it names this restart.
 It is possible to have more than one clause use the same case-name. In this case, the first clause with that name is found by find-restart. The other clauses are accessible using compute-restarts.
 Each arglist is an ordinary lambda list to be bound during the execution of its corresponding forms. These parameters are used by the restart-case clause to receive any necessary data from a call to invoke-restart.
 By default, invoke-restart-interactively passes no arguments and all arguments must be optional in order to accomodate interactive restarting. However, the arguments need not be optional if the :interactive keyword has been used to inform invoke-restart-interactively about how to compute a proper argument list.
-Keyword options have the following meaning. :interactive 
+Keyword options have the following meaning. :interactive
 The value supplied by :interactive value must be a suitable argument to function. (function value) is evaluated in the current lexical environment. It should return a function of no arguments which returns arguments to be used by invoke-restart-interactively when it is invoked. invoke-restart-interactively is called in the dynamic environment available prior to any restart attempt, and uses query I/O for user interaction.
 If a restart is invoked interactively but no :interactive option was supplied, the argument list used in the invocation is the empty list.
-:report 
+:report
 If the value supplied by :report value is a lambda expression or a symbol, it must be acceptable to function. (function value) is evaluated in the current lexical environment. It should return a function of one argument, a stream, which prints on the stream a description of the restart. This function is called whenever the restart is printed while *print-escape* is nil.
 If value is a string, it is a shorthand for
  (lambda (stream) (write-string value stream))
@@ -38,10 +38,10 @@ When *print-escape* is nil, the printer uses the report information for a restar
 which might then display as something like:
  :CONTINUE -- Return to command level
 The consequences are unspecified if an unnamed restart is specified but no :report option is provided.
- :test 
+ :test
 The value supplied by :test value must be a suitable argument to function. (function value) is evaluated in the current lexical environment. It should return a function of one argument, the condition, that returns true if the restart is to be considered visible.
-The default for this option is equivalent to (lambda (c) (declare (ignore c)) t). 
-If the restartable-form is a list whose car is any of the symbols signal, error, cerror, or warn (or is a macro form which macroexpands into such a list), then with-condition-restarts is used implicitly to associate the indicated restarts with the condition to be signaled. 
+The default for this option is equivalent to (lambda (c) (declare (ignore c)) t).
+If the restartable-form is a list whose car is any of the symbols signal, error, cerror, or warn (or is a macro form which macroexpands into such a list), then with-condition-restarts is used implicitly to associate the indicated restarts with the condition to be signaled.
 
 Examples:
  (restart-case
@@ -82,7 +82,7 @@ Examples:
               :topping topping)
        (use-new-ice-cream (new-ice-cream)
          :report 'Use a new ice cream.'
-         :interactive read-new-value 
+         :interactive read-new-value
          (setq ice-cream new-ice-cream))
        (use-new-sauce (new-sauce)
          :report 'Use a new sauce.'

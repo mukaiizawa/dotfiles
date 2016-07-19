@@ -32,11 +32,11 @@ Examples:
        (temp-two 0 (1- temp-two)))
       ((> (- temp-one temp-two) 5) temp-one)) =>  4
  (do ((temp-one 1 (1+ temp-one))
-       (temp-two 0 (1+ temp-one)))    
+       (temp-two 0 (1+ temp-one)))
       ((= 3 temp-two) temp-one)) =>  3
  (do* ((temp-one 1 (1+ temp-one))
         (temp-two 0 (1+ temp-one)))
-       ((= 3 temp-two) temp-one)) =>  2                    
+       ((= 3 temp-two) temp-one)) =>  2
  (do ((j 0 (+ j 1)))
      (nil)                       ;Do forever.
    (format t '~%Input ~D:' j)
@@ -72,7 +72,7 @@ a-vector =>  #(1 0 3 0)
              (y '() (cons (car x) y)))
             ((endp x) y)))
 As an example of nested iterations, consider a data structure that is a list of conses. The car of each cons is a list of symbols, and the cdr of each cons is a list of equal length containing corresponding values. Such a data structure is similar to an association list, but is divided into ``frames''; the overall structure resembles a rib-cage. A lookup function on such a data structure might be:
- (defun ribcage-lookup (sym ribcage)          
+ (defun ribcage-lookup (sym ribcage)
         (do ((r ribcage (cdr r)))
             ((null r) nil)
           (do ((s (caar r) (cdr s))
@@ -87,7 +87,7 @@ other iteration functions (dolist, dotimes, and loop) and more primitive functio
 Notes:
 If end-test-form is nil, the test will never succeed. This provides an idiom for ``do forever'': the body of the do or do* is executed repeatedly. The infinite loop can be terminated by the use of return, return-from, go to an outer level, or throw.
 A do form may be explained in terms of the more primitive forms block, return, let, loop, tagbody, and psetq as follows:
- (block nil       
+ (block nil
    (let ((var1 init1)
          (var2 init2)
          ...

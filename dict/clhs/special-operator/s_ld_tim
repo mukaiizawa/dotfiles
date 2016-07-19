@@ -1,5 +1,5 @@
 
-Special Operator LOAD-TIME-VALUE 
+Special Operator LOAD-TIME-VALUE
 
 Syntax:
 load-time-value form &optional read-only-p => object
@@ -12,7 +12,7 @@ object---the primary value resulting from evaluating form.
 Description:
 load-time-value provides a mechanism for delaying evaluation of form until the expression is in the run-time environment; see Section 3.2 (Compilation).
 Read-only-p designates whether the result can be considered a constant object. If t, the result is a read-only quantity that can, if appropriate to the implementation, be copied into read-only space and/or coalesced with similar constant objects from other programs. If nil (the default), the result must be neither copied nor coalesced; it must be considered to be potentially modifiable data.
-If a load-time-value expression is processed by compile-file, the compiler performs its normal semantic processing (such as macro expansion and translation into machine code) on form, but arranges for the execution of form to occur at load time in a null lexical environment, with the result of this evaluation then being treated as a literal object at run time. It is guaranteed that the evaluation of form will take place only once when the file is loaded, but the order of evaluation with respect to the evaluation of top level forms in the file is implementation-dependent. 
+If a load-time-value expression is processed by compile-file, the compiler performs its normal semantic processing (such as macro expansion and translation into machine code) on form, but arranges for the execution of form to occur at load time in a null lexical environment, with the result of this evaluation then being treated as a literal object at run time. It is guaranteed that the evaluation of form will take place only once when the file is loaded, but the order of evaluation with respect to the evaluation of top level forms in the file is implementation-dependent.
 If a load-time-value expression appears within a function compiled with compile, the form is evaluated at compile time in a null lexical environment. The result of this compile-time evaluation is treated as a literal object in the compiled code.
 If a load-time-value expression is processed by eval, form is evaluated in a null lexical environment, and one value is returned. Implementations that implicitly compile (or partially compile) expressions processed by eval might evaluate form only once, at the time this compilation is performed.
 If the same list (load-time-value form) is evaluated or compiled more than once, it is implementation-dependent whether form is evaluated only once or is evaluated more than once. This can happen both when an expression being evaluated or compiled shares substructure, and when the same form is processed by eval or compile multiple times. Since a load-time-value expression can be referenced in more than one place and can be evaluated multiple times by eval, it is implementation-dependent whether each execution returns a fresh object or returns the same object as some other execution. Users must use caution when destructively modifying the resulting object.

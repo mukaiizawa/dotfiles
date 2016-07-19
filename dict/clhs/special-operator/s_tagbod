@@ -12,7 +12,7 @@ Description:
 Executes zero or more statements in a lexical environment that provides for control transfers to labels indicated by the tags.
 The statements in a tagbody are evaluated in order from left to right, and their values are discarded. If at any time there are no remaining statements, tagbody returns nil. However, if (go tag) is evaluated, control jumps to the part of the body labeled with the tag. (Tags are compared with eql.)
 A tag established by tagbody has lexical scope and has dynamic extent. Once tagbody has been exited, it is no longer valid to go to a tag in its body. It is permissible for go to jump to a tagbody that is not the innermost tagbody containing that go; the tags established by a tagbody only shadow other tags of like name.
-The determination of which elements of the body are tags and which are statements is made prior to any macro expansion of that element. If a statement is a macro form and its macro expansion is an atom, that atom is treated as a statement, not a tag. 
+The determination of which elements of the body are tags and which are statements is made prior to any macro expansion of that element. If a statement is a macro form and its macro expansion is an atom, that atom is treated as a statement, not a tag.
 
 Examples:
  (let (val)
@@ -55,10 +55,10 @@ go
 Notes:
 The macros in the next figure have implicit tagbodies.
 
-do              do-external-symbols  dotimes 
+do              do-external-symbols  dotimes
 -----------------------------------------------
-do*             do-symbols           prog    
-do-all-symbols  dolist               prog*   
+do*             do-symbols           prog
+do-all-symbols  dolist               prog*
 
 Figure 5-10.  Macros that have implicit tagbodies.
 

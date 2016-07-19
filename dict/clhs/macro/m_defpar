@@ -7,16 +7,16 @@ defvar name [initial-value [documentation]] => name
 
 Arguments and Values:
 name---a symbol; not evaluated.
- 
+
 initial-value---a form; for defparameter, it is always evaluated, but for defvar it is evaluated only if name is not already bound.
-documentation---a string; not evaluated. 
+documentation---a string; not evaluated.
 
 Description:
 defparameter and defvar establish name as a dynamic variable.
 defparameter unconditionally assigns the initial-value to the dynamic variable named name. defvar, by contrast, assigns initial-value (if supplied) to the dynamic variable named name only if name is not already bound.
- If no initial-value is supplied, defvar leaves the value cell of the dynamic variable named name undisturbed; if name was previously bound, its old value persists, and if it was previously unbound, it remains unbound. 
+ If no initial-value is supplied, defvar leaves the value cell of the dynamic variable named name undisturbed; if name was previously bound, its old value persists, and if it was previously unbound, it remains unbound.
 If documentation is supplied, it is attached to name as a documentation string of kind variable.
- defparameter and defvar normally appear as a top level form, but it is meaningful for them to appear as non-top-level forms. However, the compile-time side effects described below only take place when they appear as top level forms. 
+ defparameter and defvar normally appear as a top level form, but it is meaningful for them to appear as non-top-level forms. However, the compile-time side effects described below only take place when they appear as top level forms.
 
 Examples:
  (defparameter *p* 1) =>  *P*
@@ -53,7 +53,7 @@ On the other hand, there is potential value to using defvar in this situation. F
 The choice of whether to use defparameter or defvar has visible consequences to programs, but is nevertheless often made for subjective reasons.
 
 Side Effects:
-If a defvar or defparameter form appears as a top level form, the compiler must recognize that the name has been proclaimed special. However, it must neither evaluate the initial-value form nor assign the dynamic variable named name at compile time. 
+If a defvar or defparameter form appears as a top level form, the compiler must recognize that the name has been proclaimed special. However, it must neither evaluate the initial-value form nor assign the dynamic variable named name at compile time.
 There may be additional (implementation-defined) compile-time or run-time side effects, as long as such effects do not interfere with the correct operation of conforming programs.
 
 Affected By:

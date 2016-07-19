@@ -29,7 +29,7 @@ Examples:
    (flet ((exit (n) (return-from out n)))
      (block out (exit 1)))
    2) =>  1
- (block nil  
+ (block nil
    (unwind-protect (return-from nil 1)
      (return-from nil 2)))
 =>  2

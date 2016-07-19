@@ -33,5 +33,5 @@ See Also:
 read
 
 Notes:
-Programmers and implementations that define additional macro characters are strongly encouraged to make them respect *read-suppress* just as standardized macro characters do. That is, when the value of *read-suppress* is true, they should ignore type errors when reading a following object and the functions that implement dispatching macro characters should tolerate nil as their infix parameter value even if a numeric value would ordinarily be required. 
+Programmers and implementations that define additional macro characters are strongly encouraged to make them respect *read-suppress* just as standardized macro characters do. That is, when the value of *read-suppress* is true, they should ignore type errors when reading a following object and the functions that implement dispatching macro characters should tolerate nil as their infix parameter value even if a numeric value would ordinarily be required.
 

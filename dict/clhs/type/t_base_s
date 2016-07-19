@@ -14,7 +14,7 @@ Compound Type Specifier Syntax:
 base-string [size]
 
 Compound Type Specifier Arguments:
-size---a non-negative fixnum, or the symbol *. 
+size---a non-negative fixnum, or the symbol *.
 
 Compound Type Specifier Description:
 This is equivalent to the type (vector base-char size); that is, the set of base strings of size size.

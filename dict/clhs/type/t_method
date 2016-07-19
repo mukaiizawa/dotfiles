@@ -2,7 +2,7 @@
 System Class METHOD
 
 Class Precedence List:
-method, t 
+method, t
 
 Description:
 A method is an object that represents a modular part of the behavior of a generic function.

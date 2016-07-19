@@ -5,7 +5,7 @@ Class Precedence List:
 number, t
 
 Description:
-The type number contains objects which represent mathematical numbers.  The types real and complex are disjoint subtypes of number. 
+The type number contains objects which represent mathematical numbers.  The types real and complex are disjoint subtypes of number.
 The function = tests for numerical equality. The function eql, when its arguments are both numbers, tests that they have both the same type and numerical value. Two numbers that are the same under eql or = are not necessarily the same under eq.
 
 Notes:

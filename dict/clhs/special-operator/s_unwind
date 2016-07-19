@@ -13,7 +13,7 @@ Description:
 unwind-protect evaluates protected-form and guarantees that cleanup-forms are executed before unwind-protect exits, whether it terminates normally or is aborted by a control transfer of some kind. unwind-protect is intended to be used to make sure that certain side effects take place after the evaluation of protected-form.
 If a non-local exit occurs during execution of cleanup-forms, no special action is taken. The cleanup-forms of unwind-protect are not protected by that unwind-protect.
 unwind-protect protects against all attempts to exit from protected-form, including go, handler-case, ignore-errors, restart-case, return-from, throw, and with-simple-restart.
-Undoing of handler and restart bindings during an exit happens in parallel with the undoing of the bindings of dynamic variables and catch tags, in the reverse order in which they were established. The effect of this is that cleanup-form sees the same handler and restart bindings, as well as dynamic variable bindings and catch tags, as were visible when the unwind-protect was entered. 
+Undoing of handler and restart bindings during an exit happens in parallel with the undoing of the bindings of dynamic variables and catch tags, in the reverse order in which they were established. The effect of this is that cleanup-form sees the same handler and restart bindings, as well as dynamic variable bindings and catch tags, as were visible when the unwind-protect was entered.
 
 Examples:
  (tagbody
@@ -47,11 +47,11 @@ The following code is not correct:
             (perform-access))
      (setq *access-count* old-count)))
 ;;; The following returns 2.
- (block nil  
+ (block nil
    (unwind-protect (return 1)
      (return 2)))
 ;;; The following has undefined consequences.
- (block a   
+ (block a
    (block b
      (unwind-protect (return-from a 1)
        (return-from b 2))))
@@ -103,7 +103,7 @@ The following code is not correct:
    (let ((x 5))
      (declare (special x))
      (unwind-protect (return)
-       (print x))))         
+       (print x))))
  Affected By: None.
 Exceptional Situations: None.
 

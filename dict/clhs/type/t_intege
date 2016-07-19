@@ -6,7 +6,7 @@ Class Precedence List:
 
 Description:
 An integer is a mathematical integer. There is no limit on the magnitude of an integer.
-The types fixnum and bignum form an exhaustive partition of type integer. 
+The types fixnum and bignum form an exhaustive partition of type integer.
 
  Compound Type Specifier Kind:
 Abbreviating.

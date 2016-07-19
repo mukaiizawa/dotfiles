@@ -6,7 +6,7 @@ real, number, t
 
 Description:
 The type real includes all numbers that represent mathematical real numbers, though there are mathematical real numbers (e.g., irrational numbers) that do not have an exact representation in Common Lisp. Only reals can be ordered using the <, >, <=, and >= functions.
-The types rational and float are disjoint subtypes of type real. 
+The types rational and float are disjoint subtypes of type real.
 
 Compound Type Specifier Kind:
 Abbreviating.

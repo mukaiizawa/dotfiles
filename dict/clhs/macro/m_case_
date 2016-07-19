@@ -1,5 +1,5 @@
 
-Macro CASE, CCASE, ECASE 
+Macro CASE, CCASE, ECASE
 
 Syntax:
 case keyform {normal-clause}* [otherwise-clause] => result*
@@ -22,14 +22,14 @@ These macros allow the conditional execution of a body of forms in a clause that
 The keyform or keyplace is evaluated to produce the test-key.
 Each of the normal-clauses is then considered in turn. If the test-key is the same as any key for that clause, the forms in that clause are evaluated as an implicit progn, and the values it returns are returned as the value of the case, ccase, or ecase form.
 These macros differ only in their behavior when no normal-clause matches; specifically:
-case 
+case
 If no normal-clause matches, and there is an otherwise-clause, then that otherwise-clause automatically matches; the forms in that clause are evaluated as an implicit progn, and the values it returns are returned as the value of the case.
 If there is no otherwise-clause, case returns nil.
-ccase 
+ccase
 If no normal-clause matches, a correctable error of type type-error is signaled. The offending datum is the test-key and the expected type is type equivalent to (member key1 key2 ...). The store-value restart can be used to correct the error.
 If the store-value restart is invoked, its argument becomes the new test-key, and is stored in keyplace as if by (setf keyplace test-key). Then ccase starts over, considering each clause anew.
  The subforms of keyplace might be evaluated again if none of the cases holds.
-ecase 
+ecase
 If no normal-clause matches, a non-correctable error of type type-error is signaled. The offending datum is the test-key and the expected type is type equivalent to (member key1 key2 ...).
 Note that in contrast with ccase, the caller of ecase may rely on the fact that ecase does not return if a normal-clause does not match.
 

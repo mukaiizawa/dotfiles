@@ -9,11 +9,11 @@ test-form---a form; always evaluated.
 place---a place; evaluated if an error is signaled.
 datum-form---a form that evaluates to a datum. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled.
 argument-form---a form that evaluates to an argument. Evaluated each time an error is to be signaled, or not at all if no error is to be signaled.
-datum, arguments---designators for a condition of default type error. (These designators are the result of evaluating datum-form and each of the argument-forms.)  
+datum, arguments---designators for a condition of default type error. (These designators are the result of evaluating datum-form and each of the argument-forms.)
 
 Description:
 assert assures that test-form evaluates to true. If test-form evaluates to false, assert signals a correctable error (denoted by datum and arguments). Continuing from this error using the continue restart makes it possible for the user to alter the values of the places before assert evaluates test-form again. If the value of test-form is non-nil, assert returns nil.
-The places are generalized references to data upon which test-form depends, whose values can be changed by the user in attempting to correct the error. Subforms of each place are only evaluated if an error is signaled, and might be re-evaluated if the error is re-signaled (after continuing without actually fixing the problem).  The order of evaluation of the places is not specified; see Section 5.1.1.1 (Evaluation of Subforms to Places).   If a place form is supplied that produces more values than there are store variables, the extra values are ignored. If the supplied form produces fewer values than there are store variables, the missing values are set to nil. 
+The places are generalized references to data upon which test-form depends, whose values can be changed by the user in attempting to correct the error. Subforms of each place are only evaluated if an error is signaled, and might be re-evaluated if the error is re-signaled (after continuing without actually fixing the problem).  The order of evaluation of the places is not specified; see Section 5.1.1.1 (Evaluation of Subforms to Places).   If a place form is supplied that produces more values than there are store variables, the extra values are ignored. If the supplied form produces fewer values than there are store variables, the missing values are set to nil.
 
 Examples:
  (setq x (make-array '(3 5) :initial-element 3))

@@ -22,15 +22,15 @@ These macros allow the conditional execution of a body of forms in a clause that
 The keyform or keyplace is evaluated to produce the test-key.
 Each of the normal-clauses is then considered in turn. If the test-key is of the type given by the clauses's type, the forms in that clause are evaluated as an implicit progn, and the values it returns are returned as the value of the typecase, ctypecase, or etypecase form.
 These macros differ only in their behavior when no normal-clause matches; specifically:
-typecase 
+typecase
 If no normal-clause matches, and there is an otherwise-clause, then that otherwise-clause automatically matches; the forms in that clause are evaluated as an implicit progn, and the values it returns are returned as the value of the typecase.
 If there is no otherwise-clause, typecase returns nil.
-ctypecase 
+ctypecase
 If no normal-clause matches, a correctable error of type type-error is signaled. The offending datum is the test-key and the expected type is type equivalent to (or type1 type2 ...). The store-value restart can be used to correct the error.
 If the store-value restart is invoked, its argument becomes the new test-key, and is stored in keyplace as if by (setf keyplace test-key). Then ctypecase starts over, considering each clause anew.
 If the store-value restart is invoked interactively, the user is prompted for a new test-key to use.
 The subforms of keyplace might be evaluated again if none of the cases holds.
-etypecase 
+etypecase
 If no normal-clause matches, a non-correctable error of type type-error is signaled. The offending datum is the test-key and the expected type is type equivalent to (or type1 type2 ...).
 Note that in contrast with ctypecase, the caller of etypecase may rely on the fact that etypecase does not return if a normal-clause does not match.
 In all three cases, is permissible for more than one clause to specify a matching type, particularly if one is a subtype of another; the earliest applicable clause is chosen.

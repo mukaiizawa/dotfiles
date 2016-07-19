@@ -17,7 +17,7 @@ Compound Type Specifier Arguments:
 typespec---a type specifier that denotes a subtype of type real.
 
 Compound Type Specifier Description:
-Every element of this type is a complex whose real part and imaginary part are each of type  (upgraded-complex-part-type typespec).  This type encompasses those complexes that can result by giving numbers of type typespec to complex. 
+Every element of this type is a complex whose real part and imaginary part are each of type  (upgraded-complex-part-type typespec).  This type encompasses those complexes that can result by giving numbers of type typespec to complex.
 (complex type-specifier) refers to all complexes that can result from giving numbers of type type-specifier to the function complex, plus all other complexes of the same specialized representation.
 
 Notes:

@@ -4,15 +4,15 @@ Macro DEFINE-CONDITION
 Syntax:
 define-condition name (parent-type*) ({slot-spec}*) option* => name
 slot-spec::= slot-name | (slot-name slot-option)
-slot-option::= [[{:reader symbol}* | 
-               {:writer function-name}* | 
-               {:accessor symbol}* | 
-               {:allocation allocation-type} | 
-               {:initarg symbol}* | 
-               {:initform form} | 
+slot-option::= [[{:reader symbol}* |
+               {:writer function-name}* |
+               {:accessor symbol}* |
+               {:allocation allocation-type} |
+               {:initarg symbol}* |
+               {:initform form} |
                {:type type-specifier} ]]
-option::= [[(:default-initargs . initarg-list) | 
-          (:documentation string) | 
+option::= [[(:default-initargs . initarg-list) |
+          (:documentation string) |
           (:report report-name) ]]
 function-name::= {symbol | (setf symbol)}
 allocation-type::= :instance | :class
@@ -26,45 +26,45 @@ slot-spec -- the name of a slot or a list consisting of the slot-name followed b
 slot-name -- a slot name (a symbol), the list of a slot name, or the list of slot name/slot form pairs.
 
 Option -- Any of the following:
-:reader 
+:reader
 :reader can be supplied more than once for a given slot and cannot be nil.
-:writer 
+:writer
 :writer can be supplied more than once for a given slot and must name a generic function.
-:accessor 
+:accessor
 :accessor can be supplied more than once for a given slot and cannot be nil.
-:allocation 
+:allocation
 :allocation can be supplied once at most for a given slot. The default if :allocation is not supplied is :instance.
-:initarg 
+:initarg
 :initarg can be supplied more than once for a given slot.
-:initform 
+:initform
 :initform can be supplied once at most for a given slot.
-:type 
+:type
 :type can be supplied once at most for a given slot.
-:documentation 
+:documentation
 :documentation can be supplied once at most for a given slot.
-:report 
+:report
 :report can be supplied once at most.
 
 Description:
-define-condition defines a new condition type called name, which is a subtype of  the type or types named by parent-type. Each parent-type argument specifies a direct supertype of the new condition. The new condition inherits slots and methods from each of its direct supertypes, and so on. 
+define-condition defines a new condition type called name, which is a subtype of  the type or types named by parent-type. Each parent-type argument specifies a direct supertype of the new condition. The new condition inherits slots and methods from each of its direct supertypes, and so on.
 If a slot name/slot form pair is supplied, the slot form is a form that can be evaluated by make-condition to produce a default value when an explicit value is not provided. If no slot form is supplied, the contents of the slot is initialized in an implementation-dependent way.
 If the type being defined and some other type from which it inherits have a slot by the same name, only one slot is allocated in the condition, but the supplied slot form overrides any slot form that might otherwise have been inherited from a parent-type. If no slot form is supplied, the inherited slot form (if any) is still visible.
 Accessors are created according to the same rules as used by defclass.
 
 A description of slot-options follows:
-:reader 
+:reader
 The :reader slot option specifies that an unqualified method is to be defined on the generic function named by the argument to :reader to read the value of the given slot.
 * The :initform slot option is used to provide a default initial value form to be used in the initialization of the slot. This form is evaluated every time it is used to initialize the slot. The lexical environment in which this form is evaluated is the lexical environment in which the define-condition form was evaluated. Note that the lexical environment refers both to variables and to functions. For local slots, the dynamic environment is the dynamic environment in which make-condition was called; for shared slots, the dynamic environment is the dynamic environment in which the define-condition form was evaluated.
  No implementation is permitted to extend the syntax of define-condition to allow (slot-name form) as an abbreviation for (slot-name :initform form).
-:initarg 
+:initarg
 The :initarg slot option declares an initialization argument named by its symbol argument and specifies that this initialization argument initializes the given slot. If the initialization argument has a value in the call to initialize-instance, the value is stored into the given slot, and the slot's :initform slot option, if any, is not evaluated. If none of the initialization arguments specified for a given slot has a value, the slot is initialized according to the :initform slot option, if specified.
-:type 
+:type
 The :type slot option specifies that the contents of the slot is always of the specified type. It effectively declares the result type of the reader generic function when applied to an object of this condition type. The consequences of attempting to store in a slot a value that does not satisfy the type of the slot is undefined.
-:default-initargs 
+:default-initargs
  This option is treated the same as it would be defclass.
-:documentation 
+:documentation
  The :documentation slot option provides a documentation string for the slot.
-:report 
+:report
  Condition reporting is mediated through the print-object method for the condition type in question, with *print-escape* always being nil. Specifying (:report report-name) in the definition of a condition type C is equivalent to:
  (defmethod print-object ((x c) stream)
    (if *print-escape* (call-next-method) (report-name x stream)))
@@ -76,7 +76,7 @@ If report-name is a string, it is a shorthand for
 This option is processed after the new condition type has been defined, so use of the slot accessors within the :report function is permitted. If this option is not supplied, information about how to report this type of condition is inherited from the parent-type.
 The consequences are unspecifed if an attempt is made to read a slot that has not been explicitly initialized and that has not been given a default value.
 The consequences are unspecified if an attempt is made to assign the slots by using setf.
-If a define-condition form appears as a top level form, the compiler must make name recognizable as a valid type name, and it must be possible to reference the condition type as the parent-type of another condition type in a subsequent define-condition form in the file being compiled. 
+If a define-condition form appears as a top level form, the compiler must make name recognizable as a valid type name, and it must be possible to reference the condition type as the parent-type of another condition type in a subsequent define-condition form in the file being compiled.
 
 Examples:
 The following form defines a condition of type peg/hole-mismatch which inherits from a condition type called blocks-world-error:

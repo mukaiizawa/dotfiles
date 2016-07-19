@@ -12,10 +12,10 @@ For the four defined subtypes of type float, it is true that intermediate betwee
 
 Format  Minimum Precision  Minimum Exponent Size
 ------------------------------------------------
-Short   13 bits            5 bits                
-Single  24 bits            8 bits                
-Double  50 bits            8 bits                
-Long    50 bits            8 bits                
+Short   13 bits            5 bits
+Single  24 bits            8 bits
+Double  50 bits            8 bits
+Long    50 bits            8 bits
 
 Figure 12-12.  Recommended Minimum Floating-Point Precision and Exponent Size
 

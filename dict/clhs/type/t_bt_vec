@@ -15,7 +15,7 @@ Compound Type Specifier Syntax:
 bit-vector [size]
 
 Compound Type Specifier Arguments:
-size---a non-negative fixnum, or the symbol *. 
+size---a non-negative fixnum, or the symbol *.
 
 Compound Type Specifier Description:
 This denotes the same type as the type (array bit (size)); that is, the set of bit vectors of size size.

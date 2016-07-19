@@ -11,15 +11,15 @@ documentation---a string; not evaluated.
 form---a form.
 
 Description:
-Defines name as a macro by associating a macro function with that name in the global environment.  The macro function is defined in the same lexical environment in which the defmacro form appears. 
+Defines name as a macro by associating a macro function with that name in the global environment.  The macro function is defined in the same lexical environment in which the defmacro form appears.
 The parameter variables in lambda-list are bound to destructured portions of the macro call.
-The expansion function accepts two arguments, a form and an environment. The expansion function returns a form. The body of the expansion function is specified by forms. Forms are executed in order. The value of the last form executed is returned as the expansion of the macro.   The body forms of the expansion function (but not the lambda-list)  are implicitly enclosed in a block whose name is name. 
+The expansion function accepts two arguments, a form and an environment. The expansion function returns a form. The body of the expansion function is specified by forms. Forms are executed in order. The value of the last form executed is returned as the expansion of the macro.   The body forms of the expansion function (but not the lambda-list)  are implicitly enclosed in a block whose name is name.
 The lambda-list conforms to the requirements described in Section 3.4.4 (Macro Lambda Lists).
-Documentation is attached as a documentation string to name (as kind function) and to the macro function. 
+Documentation is attached as a documentation string to name (as kind function) and to the macro function.
 defmacro can be used to redefine a macro or to replace a function definition with a macro definition.
 Recursive expansion of the form returned must terminate, including the expansion of other macros which are subforms of other forms returned.
-The consequences are undefined if the result of fully macroexpanding a form contains any circular list structure except in literal objects. 
-If a defmacro form appears as a top level form, the compiler must store the macro definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the macro can be evaluated at compile time if it is referenced within the file being compiled. 
+The consequences are undefined if the result of fully macroexpanding a form contains any circular list structure except in literal objects.
+If a defmacro form appears as a top level form, the compiler must store the macro definition at compile time, so that occurrences of the macro later on in the file can be expanded correctly. Users must ensure that the body of the macro can be evaluated at compile time if it is referenced within the file being compiled.
 
 Examples:
  (defmacro mac1 (a b) 'Mac1 multiplies and adds'

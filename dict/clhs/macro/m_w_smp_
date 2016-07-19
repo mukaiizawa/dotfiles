@@ -6,7 +6,7 @@ with-simple-restart (name format-control format-argument*) form* => result*
 
 Arguments and Values:
 name---a symbol.
-format-control---a format control. 
+format-control---a format control.
 format-argument---an object (i.e., a format argument).
 forms---an implicit progn.
 results---in the normal situation, the values returned by the forms; in the exceptional situation where the restart named name is invoked, two values---nil and t.
