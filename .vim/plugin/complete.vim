@@ -36,12 +36,12 @@ let s:unite_source = {
 
 function! s:unite_source.gather_candidates(args, context)
   let s:path = $HOME . '/dotfiles/dict/lisp.dict'
-  let s:lines = readfile(s:path)
   if !filereadable(s:path)
     call PrintError(printf('CompleteLispWords: "%s" is not found.', s:path))
     return []
   endif
   let s:result = []
+  let s:lines = readfile(s:path)
   for s:line in s:lines
     let s:splitedLine = split(s:line, ',')
     call add(s:result, {
