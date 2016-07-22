@@ -225,24 +225,24 @@ endif
 " }}}
 " Mapping the others {{{
 
-" Redo changes which were undone with U key.
+" redo changes which were undone with U key
 nnoremap U  <C-r>
 
-" Toggle `wrap' option
+" toggle `wrap' option
 nnoremap <Space>w :set wrap!<CR>
 
-" Yank or Paste to clipboard.
+" yank or Paste to clipboard
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
 vnoremap <C-Insert> "*y
 
-" Redraw at center of window.
+" redraw at center of window
 nmap n nzz
 nmap N Nzz
 nmap g, g,zz
 
-" Cursor motion
+" cursor motion
 nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space>j Lzz
@@ -255,20 +255,25 @@ vnoremap <Space>k Hzz
 nnoremap ) }
 nnoremap ( {
 
-" Change directory to carrent buffer directory.
+" change directory to carrent buffer directory
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
 
-" Toggle a buffer which edit the one befor.
+" toggle a buffer which edit the one befor
 nnoremap <silent>mm :e #<CR>
 
-" Edit vimrc, gvimrc.
+" edit vimrc, gvimrc
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 
-" Reroad vimrc.
+" reroad vimrc
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 
+" completefunction
+set completefunc=CompleteWords
+inoremap <C-k> <C-x><C-u>
+
 " }}}
+
 
 " ======================================
 " Note:
@@ -439,8 +444,8 @@ nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
 " line
 nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
 
-" lispwords
-nnoremap <silent>mrl    :<C-u>Unite lispwords -no-wrap -horizontal<CR>
+" help
+nnoremap <silent>mrl    :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 
 " menu
 nnoremap <silent>me    :<C-u>Unite menu<CR> 
@@ -499,4 +504,3 @@ vmap gww <Plug>(openbrowser-search)
 " }}}
 
 " vim: foldmethod=marker
-
