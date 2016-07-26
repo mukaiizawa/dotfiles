@@ -1,0 +1,29 @@
+
+Macro DEFCOLLECTION
+
+Syntax:
+defcollection (inherited-class :accessor origin-class) {slot-description}* => structure-name
+
+Arguments and Values:
+inherited-class---a symbol.
+accessor---a keyword.
+origin-class---a symbol.
+structure-name---a symbol.
+
+Examples:
+;; define original structure
+ (defstruct node name)
+
+;; define inherited collection structure
+ (defcollection (nodes :set node))
+
+;; define structure components records
+ (defstruct graph
+   (nodes nil :type nodes))
+
+ (defparameter *nodes* nil)
+ (push (make-node :name "node1") *nodes*)
+ (push (make-node :name "node2") *nodes*)
+
+ (make-graph :nodes (make-nodes :set (nreverse *nodes*)))
+
