@@ -301,6 +301,8 @@ call unite#custom#profile('default', 'context', {
 
 call unite#custom_default_action('directory', 'vimfiler')
 
+call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
+
 " }}}
 "  NeoMru {{{
 
