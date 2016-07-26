@@ -32,6 +32,8 @@ setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-string-ahead-reader
 setlocal lispwords+=with-open-ahead-reader
 
+setlocal lispwords+=defcollection
+
 " for html
 " {{{
 

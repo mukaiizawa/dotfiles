@@ -108,6 +108,8 @@ syn keyword lispFunc with-ahead-reader
 syn keyword lispFunc with-string-ahead-reader
 syn keyword lispFunc with-open-ahead-reader
 
+syn keyword lispFunc defcollection
+
 
 " function
 syn keyword lispFunc canonical-letargs
