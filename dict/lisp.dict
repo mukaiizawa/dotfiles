@@ -687,4 +687,3 @@ Function mkstr	~/dotfiles/dict/lisp/user-defined/mkstr
 Function mksym	~/dotfiles/dict/lisp/user-defined/mksym
 Function mkkey	~/dotfiles/dict/lisp/user-defined/mkkey
 Function canonical-letargs	~/dotfiles/dict/lisp/user-defined/canonical-letargs
-Macro defcollection	~/dotfiles/dict/lisp/user-defined/defcollection
