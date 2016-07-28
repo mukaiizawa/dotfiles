@@ -109,6 +109,7 @@ syn keyword lispFunc with-string-ahead-reader
 syn keyword lispFunc with-open-ahead-reader
 
 syn keyword lispFunc deftable
+syn keyword lispFunc deftables
 
 
 " function
