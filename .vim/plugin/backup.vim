@@ -25,7 +25,7 @@ function! MakeBackupFile()
             \  s:backupDir .
             \  '/' . expand('%:t') . '.' . localtime())
     endif
-  end if
+  endif
 
 endfunction
 
