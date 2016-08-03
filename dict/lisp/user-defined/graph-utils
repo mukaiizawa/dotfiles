@@ -1,0 +1,25 @@
+
+Library GRAPH-UTILS
+
+Syntax:
+mksym &rest objects => keyword
+
+Arguments and Values:
+object---an object.
+symbol---a keyword.
+
+Description:
+The mksym function takes one or more arguments and returns the keyword.
+(creating one if necessary)
+Whose print-name is their concatenation.
+It can take as an argument any object which has a
+printable representation: symbols, strings, numbers, even lists.
+
+Examples:
+(mkkey 'key "w" 0 #\r #\d)
+=> :|KEYw0rd|
+
+See Also:
+mksym
+
+
