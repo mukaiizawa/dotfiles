@@ -117,7 +117,7 @@ Exceptional Situations:
 If host is incorrectly supplied, an error of type type-error is signaled.
 
 See Also:
-logical-pathname,  Section 19.1.2 (Pathnames as Filenames)
+logical-pathname
 
 Notes:
 Implementations can define additional functions that operate on logical pathname hosts, for example to specify additional translation rules or options.
