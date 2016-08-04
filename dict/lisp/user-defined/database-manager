@@ -1,0 +1,41 @@
+
+Library DATABASE-MANAGER
+
+Macro deftables
+
+Structure table, column
+
+Function set-attr! key value alist => modified-alist
+(set-attr! 'rankdir "BT" *global-graph-conf*)
+
+Function make-continuous-edge continuous-nodes => edges
+(make-continuous-edges '("a0" "a1" "a2" "a3"))
+=> (("a0" "a1") ("a1" "a2") ("a2" "a3"))
+
+Examples:
+;; make tables
+(defparameter tables
+  (deftables
+    (user_tbl
+      "ユーザーマスタ"
+      (user_id "ユーザーID" :primarykey? t :type "varchar2" :length 8)
+      (user_name "ユーザー名" :type "varchar2" :required? t))
+    (group_tbl
+      "部署テーブル"
+      (group_id "部署ID" :primarykey? t  :type "varchar2" :length 8)
+      (group_name "部署名" :required? t :type "varchar2" :length 20))
+    (user_group_tbl
+      "ユーザー部署中間テーブル"
+      (user_id "ユーザーID" :primarykey? t :foreignkey '(user_tbl user_id) :type "varchar2" :length 8)
+      (group_id "部署ID" :primarykey? t :foreignkey '(group_tbl group_id) :type "varchar2" :length 8))))
+
+;; create ER Diagram
+(dot
+  (make-graph :nodes (tables->nodes tables)
+              :edges (tables->edges tables))
+  :file "sample-er")
+
+;; create `create-table' sql
+(tables->create-sql tables)
+
+

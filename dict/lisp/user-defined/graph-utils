@@ -5,6 +5,7 @@ Variable *global-graph-conf*, *global-node-conf*, *global-edge-conf*
 
 Structure graph, subgraph
 
+
 Function set-attr! key value alist => modified-alist
 (set-attr! 'rankdir "BT" *global-graph-conf*)
 
@@ -12,7 +13,7 @@ Function make-continuous-edge continuous-nodes => edges
 (make-continuous-edges '("a0" "a1" "a2" "a3"))
 => (("a0" "a1") ("a1" "a2") ("a2" "a3"))
 
-Function dot graph &key digraph? file => make-graph
+Method dot graph &key digraph? file => make-graph
 ;; sample-layout
 (defparameter *edges* nil)
 (dostring (c (expand-hyphen "B-Z"))
@@ -25,8 +26,8 @@ Function dot graph &key digraph? file => make-graph
 
 ;; sample-cluster
 (dot
-  (make-graph :nodes '(("start" (shape "Mdiamond"))
-                       ("end" (shape "Msquare")))
+  (make-graph :nodes '(("start" (shape "Mdiamond") (color "green"))
+                       ("end" (shape "Msquare") (color "red")))
               :edges '(("start" "a0")
                        ("start" "b0")
                        ("a3" "end")
