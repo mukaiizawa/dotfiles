@@ -1,0 +1,56 @@
+
+Library AHEAD-READER
+
+Structure ahead-reader
+
+Macro with-ahead-reader
+with-ahead-reader (reader &optional (stream *standard-output*)) &body body
+
+Macro with-string-ahead-reader
+with-string-ahead-reader (reader string) &body
+
+Macro with-open-ahead-reader
+with-open-ahead-reader (reader pathname &key if-does-not-exist) &body body
+
+Function get-curr, get-next
+get-curr reader => current-character
+get-next reader => next-character
+
+Function reader-curr-in?, reader-next-in?
+reader-curr-in? reader &rest args => find-current-character?
+reader-next-in? reader &rest args => find-next-character?
+
+Function reach-eof?
+reach-eof? reader => generalized-boolean
+
+Function read-next
+read-next reader &key (cache t) => reader
+read next and return reader.
+
+Function read-if
+read-if function reader &key (cache t) => reader
+read next untill function return true.
+return reader.
+
+Function read-number
+read-number reader => reader
+read next untill context in number
+return reader.
+
+Function read-paren
+read-paren reader &key (cache t) => reader
+read inner parren.
+paren do not chache.
+
+Function add-char
+add-char reader character => reader
+add character to buffer of reader.
+
+Function append-str
+append-str reader string => reader
+append string to buffer.
+
+Function get-buf
+get-buf reader => buffer
+get buffer of reader and clear buffer.
+
