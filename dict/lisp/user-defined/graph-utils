@@ -1,25 +1,49 @@
 
 Library GRAPH-UTILS
 
-Syntax:
-mksym &rest objects => keyword
+Variable *global-graph-conf*, *global-node-conf*, *global-edge-conf*
 
-Arguments and Values:
-object---an object.
-symbol---a keyword.
+Structure graph, subgraph
 
-Description:
-The mksym function takes one or more arguments and returns the keyword.
-(creating one if necessary)
-Whose print-name is their concatenation.
-It can take as an argument any object which has a
-printable representation: symbols, strings, numbers, even lists.
+Function set-attr! key value alist => modified-alist
+(set-attr! 'rankdir "BT" *global-graph-conf*)
 
-Examples:
-(mkkey 'key "w" 0 #\r #\d)
-=> :|KEYw0rd|
+Function make-continuous-edge continuous-nodes => edges
+(make-continuous-edges '("a0" "a1" "a2" "a3"))
+=> (("a0" "a1") ("a1" "a2") ("a2" "a3"))
 
-See Also:
-mksym
+Function dot graph &key digraph? file => make-graph
+;; sample-layout
+(defparameter *edges* nil)
+(dostring (c (expand-hyphen "B-Z"))
+  (push (list #\A c) *edges*))
+
+(dolist (layout (list "circo" "dot" "fdp" "neato" "osage" "sfdp" "twopi"))
+  (set-attr! 'layout layout *global-graph-conf*)
+  (dot (make-graph :edges (reverse *edges*))
+       :file (mkstr "sample-layout-" layout)))
+
+;; sample-cluster
+(dot
+  (make-graph :nodes '(("start" (shape "Mdiamond"))
+                       ("end" (shape "Msquare")))
+              :edges '(("start" "a0")
+                       ("start" "b0")
+                       ("a3" "end")
+                       ("b3" "end")
+                       ("a1" "b3")
+                       ("b2" "a3")
+                       ("b0" "a1"))
+              :subgraphs (list (make-subgraph  
+                                 :graph-conf '((label "process1") (style "filled") (color "coral"))
+                                 :node-conf '((color "white"))
+                                 :edges (make-continuous-edges '("a0" "a1" "a2" "a3")))
+                               (make-subgraph  
+                                 :graph-conf '((label "process2") (style "filled") (color "aquamarine"))
+                                 :node-conf '((color "black"))
+                                 :edges (make-continuous-edges '("b0" "b1" "b2" "b3"))))
+              :ranks '(("start" "a0" "a1" "a2" "a3")
+                       ("b0" "b1" "b2" "b3" "end")))
+  :file "sample-cluster")
 
 
