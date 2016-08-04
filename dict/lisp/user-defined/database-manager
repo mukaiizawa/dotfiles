@@ -5,12 +5,19 @@ Macro deftables
 
 Structure table, column
 
-Function set-attr! key value alist => modified-alist
-(set-attr! 'rankdir "BT" *global-graph-conf*)
+Function get-tables-name
+(get-table-name table)
+;; => `shema'.`phisical-name'
 
-Function make-continuous-edge continuous-nodes => edges
-(make-continuous-edges '("a0" "a1" "a2" "a3"))
-=> (("a0" "a1") ("a1" "a2") ("a2" "a3"))
+Function get-primarykey
+(get-table-name table)
+;; => '("key1" "key2" ... "keyn")
+
+Function tables->nodes, tables->edges, tables->graph
+convert from table-list to graph-utils node, edge and graph
+
+Function tables->create-sql
+convert from table-list to create table sql (only support `oracle database')
 
 Examples:
 ;; make tables
@@ -30,12 +37,8 @@ Examples:
       (group_id "部署ID" :primarykey? t :foreignkey '(group_tbl group_id) :type "varchar2" :length 8))))
 
 ;; create ER Diagram
-(dot
-  (make-graph :nodes (tables->nodes tables)
-              :edges (tables->edges tables))
-  :file "sample-er")
+(dot (tables->graph tables) :file "sample-er")
 
 ;; create `create-table' sql
 (tables->create-sql tables)
-
 

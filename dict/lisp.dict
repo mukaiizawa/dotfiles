@@ -690,4 +690,5 @@ Function canonical-letargs	~/dotfiles/dict/lisp/user-defined/canonical-letargs
 Macro deftable	~/dotfiles/dict/lisp/user-defined/deftable
 Library ahead-reader	~/dotfiles/dict/lisp/user-defined/ahead-reader
 Library database-manager	~/dotfiles/dict/lisp/user-defined/database-manager
-Library xml-manager	~/dotfiles/dict/lisp/user-defined/graph-utils
+Library graph-utils	~/dotfiles/dict/lisp/user-defined/graph-utils
+Library xml-manager	~/dotfiles/dict/lisp/user-defined/xml-manager

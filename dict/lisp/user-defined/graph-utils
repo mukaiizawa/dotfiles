@@ -5,9 +5,10 @@ Variable *global-graph-conf*, *global-node-conf*, *global-edge-conf*
 
 Structure graph, subgraph
 
-
 Function set-attr! key value alist => modified-alist
 (set-attr! 'rankdir "BT" *global-graph-conf*)
+(set-attr! 'layout "circle" *global-graph-conf*)
+...
 
 Function make-continuous-edge continuous-nodes => edges
 (make-continuous-edges '("a0" "a1" "a2" "a3"))
@@ -47,4 +48,292 @@ Method dot graph &key digraph? file => make-graph
                        ("b0" "b1" "b2" "b3" "end")))
   :file "sample-cluster")
 
+graphviz overview {{{
+
+The following is an abstract grammar defining the DOT language. Terminals are shown in bold font and nonterminals in italics. Literal characters are given in single quotes. Parentheses ( and ) indicate grouping when needed. Square brackets [ and ] enclose optional items. Vertical bars | separate alternatives.
+<graph> :: [ <strict> ] (graph | digraph) [ ID ] '{' <stmt_list> '}'
+<stmt_list> :: [ <stmt> [ ';' ] <stmt_list> ]
+<stmt> :: <node_stmt> | <edge_stmt> | <attr_stmt> | ID '=' ID | <subgraph>
+<attr_stmt> :: (<graph> | <node> | <edge>) <attr_list>
+<attr_list> :: '[' [ <a_list> ] ']' [ <attr_list> ]
+<a_list> :: ID '=' ID [ (';' | ',') ] [ <a_list> ]
+<edge_stmt> :: (<node_id> | <subgraph>) <edgeRHS> [ <attr_list> ]
+<edgeRHS> :: edgeop (<node_id> | <subgraph>) [ <edgeRHS> ]
+<node_stmt> :: <node_id> [ <attr_list> ]
+<node_id> :: ID [ <port> ]
+<port> :: ':' ID [ ':' <compass_pt> ] | ':' <compass_pt>
+<subgraph> : [ <subgraph> [ ID ] ] '{' <stmt_list> '}'
+<compass_pt> : (n | ne | e | se | s | sw | w | nw | c | _)
+The keywords <node>, <edge>, <graph>, <digraph>, <subgraph>, and <strict> are case-independent. Note also that the allowed compass point values are not keywords, so these strings can be used elsewhere as ordinary identifiers and, conversely, the parser will actually accept any identifier.
+
+An ID is one of the following:
+
+Any string of alphabetic ([a-zA-Z\200-\377]) characters, underscores ('_') or digits ([0-9]), not beginning with a digit;
+a numeral [-]?(.[0-9]+ | [0-9]+(.[0-9]*)? );
+any double-quoted string ("...") possibly containing escaped quotes ('")1;
+an HTML string (<...>).
+An ID is just a string; the lack of quote characters in the first two forms is just for simplicity. There is no semantic difference between abc_2 and "abc_2", or between 2.34 and "2.34". Obviously, to use a keyword as an ID, it must be quoted. Note that, in HTML strings, angle brackets must occur in matched pairs, and newlines and other formatting whitespace characters are allowed. In addition, the content must be legal XML, so that the special XML escape sequences for ", &, <, and > may be necessary in order to embed these characters in attribute values or raw text. As an ID, an HTML string can be any legal XML string. However, if used as a label attribute, it is interpreted specially and must follow the syntax for HTML-like labels.
+Both quoted strings and HTML strings are scanned as a unit, so any embedded comments will be treated as part of the strings.
+
+An edgeop is -> in directed graphs and -- in undirected graphs.
+
+The language supports C++-style comments: /* */ and //. In addition, a line beginning with a '#' character is considered a line output from a C preprocessor (e.g., # 34 to indicate line 34 ) and discarded.
+
+Semicolons and commas aid readability but are not required. Also, any amount of whitespace may be inserted between terminals.
+
+As another aid for readability, dot allows double-quoted strings to span multiple physical lines using the standard C convention of a backslash immediately preceding a newline character2. In addition, double-quoted strings can be concatenated using a '+' operator. As HTML strings can contain newline characters, which are used solely for formatting, the language does not allow escaped newlines or concatenation operators to be used within them.
+
+Subgraphs and Clusters
+Subgraphs play three roles in Graphviz. First, a subgraph can be used to represent graph structure, indicating that certain nodes and edges should be grouped together. This is the usual role for subgraphs and typically specifies semantic information about the graph components. It can also provide a convenient shorthand for edges. An edge statement allows a subgraph on both the left and right sides of the edge operator. When this occurs, an edge is created from every node on the left to every node on the right. For example, the specification
+  A -> {B C}
+is equivalent to
+  A -> B
+  A -> C
+In the second role, a subgraph can provide a context for setting attributes. For example, a subgraph could specify that blue is the default color for all nodes defined in it. In the context of graph drawing, a more interesting example is:
+
+subgraph { 
+rank = same; A; B; C; 
+} 
+This (anonymous) subgraph specifies that the nodes A, B and C should all be placed on the same rank if drawn using dot.
+The third role for subgraphs directly involves how the graph will be laid out by certain layout engines. If the name of the subgraph begins with cluster, Graphviz notes the subgraph as a special cluster subgraph. If supported, the layout engine will do the layout so that the nodes belonging to the cluster are drawn together, with the entire drawing of the cluster contained within a bounding rectangle. Note that, for good and bad, cluster subgraphs are not part of the DOT language, but solely a syntactic convention adhered to by certain of the layout engines.
+
+Lexical and Semantic Notes
+A graph must be specified as either a digraph or a graph. Semantically, this indicates whether or not there is a natural direction from one of the edge's nodes to the other. Lexically, a digraph must specify an edge using the edge operator -> while a undirected graph must use --. Operationally, the distinction is used to define different default rendering attributes. For example, edges in a digraph will be drawn, by default, with an arrowhead pointing to the head node. For ordinary graphs, edges are drawn without any arrowheads by default.
+A graph may also be described as strict. This forbids the creation of multi-edges, i.e., there can be at most one edge with a given tail node and head node in the directed case. For undirected graphs, there can be at most one edge connected to the same two nodes. Subsequent edge statements using the same two nodes will identify the edge with the previously defined one and apply any attributes given in the edge statement. For example, the graph
+
+strict graph { 
+  a -- b
+  a -- b
+  b -- a [color=blue]
+} 
+will have a single edge connecting nodes a and b, whose color is blue.
+If a default attribute is defined using a node, edge, or graph statement, or by an attribute assignment not attached to a node or edge, any object of the appropriate type defined afterwards will inherit this attribute value. This holds until the default attribute is set to a new value, from which point the new value is used. Objects defined before a default attribute is set will have an empty string value attached to the attribute once the default attribute definition is made.
+
+Note, in particular, that a subgraph receives the attribute settings of its parent graph at the time of its definition. This can be useful; for example, one can assign a font to the root graph and all subgraphs will also use the font. For some attributes, however, this property is undesirable. If one attaches a label to the root graph, it is probably not the desired effect to have the label used by all subgraphs. Rather than listing the graph attribute at the top of the graph, and the resetting the attribute as needed in the subgraphs, one can simply defer the attribute definition in the graph until the appropriate subgraphs have been defined.
+
+If an edge belongs to a cluster, its endpoints belong to that cluster. Thus, where you put an edge can effect a layout, as clusters are sometimes laid out recursively.
+
+There are certain restrictions on subgraphs and clusters. First, at present, the names of a graph and it subgraphs share the same namespace. Thus, each subgraph must have a unique name. Second, although nodes can belong to any number of subgraphs, it is assumed clusters form a strict hierarchy when viewed as subsets of nodes and edges.
+
+Character encodings
+The DOT language assumes at least the ascii character set. Quoted strings, both ordinary and HTML-like, may contain non-ascii characters. In most cases, these strings are uninterpreted: they simply serve as unique identifiers or values passed through untouched. Labels, however, are meant to be displayed, which requires that the software be able to compute the size of the text and determine the appropriate glyphs. For this, it needs to know what character encoding is used.
+By default, DOT assumes the UTF-8 character encoding. It also accepts the Latin1 (ISO-8859-1) character set, assuming the input graph uses the charset attribute to specify this. For graphs using other character sets, there are usually programs, such as iconv, which will translate from one character set to another.
+
+Another way to avoid non-ascii characters in labels is to use HTML entities for special characters. During label evaluation, these entities are translated into the underlying character. This table shows the supported entities, with their Unicode value, a typical glyph, and the HTML entity name. Thus, to include a lower-case Greek beta into a string, one can use the ascii sequence &beta;. In general, one should only use entities that are allowed in the output character set, and for which there is a glyph in the font.
+
+In quoted strings in DOT, the only escaped character is double-quote ("). That is, in quoted strings, the dyad \" is converted to "; all other characters are left unchanged. In particular, \\ remains \\. Layout engines may apply additional escape sequences.
+Previous to 2.30, the language allowed escaped newlines to be used anywhere outside of HTML strings. The new lex-based scanner makes this difficult to implement. Given the perceived lack of usefulness of this generality, we have restricted this feature to double-quoted strings, where it can actually be helpful.
+
+}}}
+html-like-label {{{
+
+Each of the HTML elements has a set of optional attributes. Attribute values must appear in double quotes.
+
+<!-- Table element -->
+
+<TABLE
+  ALIGN="CENTER|LEFT|RIGHT"
+  BGCOLOR="color"
+  BORDER="value"
+  CELLBORDER="value"
+  CELLPADDING="value"
+  CELLSPACING="value"
+  COLOR="color"
+  COLUMNS="value"
+  FIXEDSIZE="FALSE|TRUE"
+  GRADIENTANGLE="value"
+  HEIGHT="value"
+  HREF="value"
+  ID="value"
+  PORT="portName"
+  ROWS="value"
+  SIDES="value"
+  STYLE="value"
+  TARGET="value"
+  TITLE="value"
+  TOOLTIP="value"
+  VALIGN="MIDDLE|BOTTOM|TOP"
+  WIDTH="value"
+>
+<!-- Table row -->
+
+<TR
+  <!-- No attributes -->
+>
+<!-- Table cell -->
+
+<TD
+  ALIGN="CENTER|LEFT|RIGHT|TEXT"
+  BALIGN="CENTER|LEFT|RIGHT"
+  BGCOLOR="color"
+  BORDER="value"
+  CELLPADDING="value"
+  CELLSPACING="value"
+  COLOR="color"
+  COLSPAN="value"
+  FIXEDSIZE="FALSE|TRUE"
+  GRADIENTANGLE="value"
+  HEIGHT="value"
+  HREF="value"
+  ID="value"
+  PORT="portName"
+  ROWSPAN="value"
+  SIDES="value"
+  STYLE="value"
+  TARGET="value"
+  TITLE="value"
+  TOOLTIP="value"
+  VALIGN="MIDDLE|BOTTOM|TOP"
+  WIDTH="value"
+>
+<!-- Font specification -->
+
+<FONT
+  COLOR="color"
+  FACE="fontname"
+  POINT-SIZE="value"
+>
+<!-- Line break -->
+
+<BR
+  ALIGN="CENTER|LEFT|RIGHT"
+/>
+<!-- Image inclusion -->
+
+<IMG
+  SCALE="FALSE|TRUE|WIDTH|HEIGHT|BOTH"
+  SRC="value"
+/>
+<!-- Italic style -->
+
+<I
+  <!-- No attributes -->
+>
+<!-- Bold style -->
+
+<B
+  <!-- No attributes -->
+>
+<!-- Underline text -->
+
+<U
+  <!-- No attributes -->
+>
+<!-- Overline text -->
+
+<O
+  <!-- No attributes -->
+>
+<!-- Subscript text -->
+
+<SUB
+  <!-- No attributes -->
+>
+<!-- Superscript text -->
+
+<SUP
+  <!-- No attributes -->
+>
+<!-- Strike-through text -->
+
+<S
+  <!-- No attributes -->
+>
+<!-- Horizontal rule -->
+
+<HR
+  <!-- No attributes -->
+/>
+<!-- Vertical rule -->
+
+<VR
+  <!-- No attributes -->
+/>
+ALIGN
+
+specifies horizontal placement. When an object is allocated more space than required, this value determines where the extra space is placed left and right of the object.
+CENTER aligns the object in the center. (Default)
+LEFT aligns the object on the left.
+RIGHT aligns the object on the right.
+(<TD> only) TEXT aligns lines of text using the full cell width. The alignment of a line is determined by its (possibly implicit) associated <BR> element.
+The contents of a cell are normally aligned as a block. In particular, lines of text are first aligned as a text block based on the width of the widest line and the corresponding <BR> elements. Then, the entire text block is aligned within a cell. If, however, the cell's ALIGN value is "TEXT", and the cell contains lines of text, then the lines are justified using the entire available width of the cell. If the cell does not contain text, then the contained image or table is centered.
+
+BALIGN
+specifies the default alignment of <BR> elements contained in the cell. That is, if a <BR> element has no explicit ALIGN attribute, the attribute value is specified by the value of BALIGN.
+BGCOLOR="color"
+sets the color of the background. This color can be overridden by a BGCOLOR attribute in descendents. The value can be a single color or two colors separated by a colon, the latter indicating a gradient fill.
+BORDER="value"
+specifies the width of the border around the object in points. A value of zero indicates no border. The default is 1. The maximum value is 255. If set in a table, and CELLBORDER is not set, this value is also used for all cells in the table. It can be overridden by a BORDER tag in a cell.
+CELLBORDER="value"
+specifies the width of the border for all cells in a table. It can be overridden by a BORDER tag in a cell. The maximum value is 255.
+CELLPADDING="value"
+specifies the space, in points, between a cell's border and its content. The default is 2. The maximum value is 255.
+CELLSPACING="value"
+specifies the space, in points, between cells in a table and between a cell and the table's border. The default is 2. The maximum value is 127.
+COLOR="color"
+sets the color of the font within the scope of <FONT>...</FONT>, or the border color of the table or cell within the scope of <TABLE>...</TABLE>, or <TD>...</TD>. This color can be overridden by a COLOR attribute in descendents. By default, the font color is determined by the fontcolor attribute of the corresponding node, edge or graph, and the border color is determined by the color attribute of the corresponding node, edge or graph.
+COLSPAN="value"
+specifies the number of columns spanned by the cell. The default is 1. The maximum value is 65535.
+COLUMNS="value"
+provides general formatting information concerning the columns. At present, the only legal value is "*", which causes a vertical rule to appear between every cell in every row.
+FACE="fontname"
+specifies the font to use within the scope of <FONT>...</FONT>. This can be overridden by a FACE attribute in descendents. By default, the font name is determined by the fontname attribute of the corresponding node, edge or graph.
+FIXEDSIZE
+specifies whether the values given by the WIDTH and HEIGHT attributes are enforced.
+FALSE allows the object to grow so that all its contents will fit. (Default)
+TRUE fixes the object size to its given WIDTH and HEIGHT. Both of these attributes must be supplied.
+GRADIENTANGLE="value"
+gives the angle used in a gradient fill if the BGCOLOR is a color list. For the default linear gradient, this specifies the angle of a line through the center along which the colors transform. Thus, an angle of 0 will cause a left-to-right progression. For radial gradients (see STYLE), the angle specifies the position of the center of the coloring. An angle of 0 places the center at the center of the table or cell; an non-zero angle places the fill center along that angle near the boundary.
+HEIGHT="value"
+specifies the mininum height, in points, of the object. The height includes the contents, any spacing and the border. Unless FIXEDSIZE is true, the height will be expanded to allow the contents to fit. The maximum value is 65535.
+HREF="value"
+attaches a URL to the object. Note that the "value" is treated as an escString similarly to the URL attribute.
+ID="value"
+allows the user to specify a unique ID for a table or cell. See the id attribute for more information. Note that the "value" is treated as an escString similarly to the id attribute.
+POINT-SIZE="value"
+sets the size of the font, in points, used within the scope of <FONT>...</FONT>. This can be overridden by a POINT-SIZE attribute in descendents. By default, the font size is determined by the fontsize attribute of the corresponding node, edge or graph.
+PORT="value"
+attaches a portname to the object. (See portPos.) This can be used to modify the head or tail of an edge, so that the end attaches directly to the object.
+ROWS="value"
+provides general formatting information concerning the rows. At present, the only legal value is "*", which causes a horizontal rule to appear between every row.
+ROWSPAN="value"
+specifies the number of rows spanned by the cell. The default is 1. The maximum value is 65535.
+SCALE
+specifies how an image will use any extra space available in its cell. Allowed values are
+FALSE : keep image its natural size. (Default)
+TRUE : scale image uniformly to fit.
+WIDTH : expand image width to fill
+HEIGHT : expand image height to fill
+BOTH : expand both image width height to fill
+If this attribute is undefined, the image inherits the imagescale attribute of the graph object being drawn. As with the imagescale attribute, if the cell has a fixed size and the image is too large, any offending dimension will be shrunk to fit the space, the scaling being uniform in width and height if SCALE="true". Note that the containing cell's ALIGN and VALIGN attributes override an image's SCALE attribute.
+SIDES="value"
+specifies which sides of a border in a cell or table should be drawn, if a border is drawn. By default, all sides are drawn. The "value" string can contain any collection of the (case-insensitive) characters 'L', 'T', 'R', or 'B', corresponding to the left, top, right and, bottom sides of the border, respectively. For example, SIDES="LB" would indicate only the left and bottom segments of the border should be drawn.
+SRC="value"
+specifies the image file to be displayed in the cell. Note that if the software is used as a web server, file system access to images is more restricted. See GV_FILE_PATH and SERVER_NAME.
+STYLE
+
+specifies style characteristics of the table or cell. Style characteristics are given as a comma or space separated list of style attributes. At present, the only legal attributes are "ROUNDED" and "RADIAL" for tables, and "RADIAL" for cells. If "ROUNDED" is specified, the table will have rounded corners. This probably works best if the outmost cells have no borders, or their CELLSPACING is sufficiently large. If it is desirable to have borders around the cells, use HR and VR elements, or the COLUMNS and ROWS attributes of TABLE.
+The "RADIAL" attribute indicates a radial gradient fill. See the BGCOLOR and GRADIENTANGLE attributes.
+
+TARGET="value"
+determines which window of the browser is used for the URL if the object has one. See W3C documentation. Note that the "value" is treated as an escString similarly to the target attribute.
+TITLE="value"
+sets the tooltip annotation attached to the element. This is used only if the element has a HREF attribute. Note that the "value" is treated as an escString similarly to the tooltip attribute.
+TOOLTIP="value"
+is an alias for TITLE.
+VALIGN
+
+specifies vertical placement. When an object is allocated more space than required, this value determines where the extra space is placed above and below the object.
+MIDDLE aligns the object in the center. (Default)
+BOTTOM aligns the object on the bottom.
+TOP aligns the object on the top.
+WIDTH="value"
+specifies the mininum width, in points, of the object. The width includes the contents, any spacing and the border. Unless FIXEDSIZE is true, the width will be expanded to allow the contents to fit. The maximum value is 65535.
+There is some inheritance among the attributes. If a table specifies a CELLPADDING, CELLBORDER or BORDER value, this value is used by the table's cells unless overridden. If a cell or table specifies a BGCOLOR, this will be the background color for all of its descendents. Of course, if a background or fill color is specified for the graph object owning the label, this will be the original background for the label. The object's fontname, fontcolor and fontsize attributes are the default for drawing text. These can be overridden by using FONT to set new values. The new font values will hold until overridden by an enclosed FONT element. Finally, the pencolor or color of the graph object will be used as the border color.
+
+If you want horizontal or vertical rules used uniformly within a table, consider using the COLUMNS or ROWS attributes rather than using many HR and VR elements.
+
+Because of certain limitations in handling tables in a device-independent manner, when BORDER is 1 and both table and cell borders are on and CELLSPACING is less than 2, anomalies can arise in the output, such as gaps between sides of borders which should be abutting or even collinear. The user can usual get around this by increasing the border size or the spacing, or turning off the table border.
+
+}}}
 
