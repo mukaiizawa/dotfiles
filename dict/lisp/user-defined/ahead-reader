@@ -3,13 +3,9 @@ Library AHEAD-READER
 
 Structure ahead-reader
 
-Macro with-ahead-reader
+Macro with-ahead-reader, with-string-ahead-reader, with-open-ahead-reader
 with-ahead-reader (reader &optional (stream *standard-output*)) &body body
-
-Macro with-string-ahead-reader
 with-string-ahead-reader (reader string) &body
-
-Macro with-open-ahead-reader
 with-open-ahead-reader (reader pathname &key if-does-not-exist) &body body
 
 Function get-curr, get-next
@@ -29,28 +25,34 @@ read next and return reader.
 
 Function read-if
 read-if function reader &key (cache t) => reader
-read next untill function return true.
-return reader.
+read next character untill function return true.
+
+Function read-space
+read-space reader &key (cache t) => reader
+read continuous spaces.
 
 Function read-number
-read-number reader => reader
+read-number reader &key (cache t) => reader
 read next untill context in number
-return reader.
 
 Function read-paren
 read-paren reader &key (cache t) => reader
 read inner parren.
 paren do not chache.
 
-Function add-char
+Function read-segment
+read-segment reader &key (cache t) => reader
+Read up to the next character comes out twice.
+next character and final character (it means segment character) do not chache.
+
+Function add-char, append-str
 add-char reader character => reader
-add character to buffer of reader.
-
-Function append-str
 append-str reader string => reader
-append string to buffer.
+put character or append string to buffer of reader.
 
-Function get-buf
+Function get-buf, refer-buf
 get-buf reader => buffer
-get buffer of reader and clear buffer.
+refer-buf reader => buffer
+get-buf and refer-buf each get buffer of reader.
+but get-buf clear the buffer of reader.
 
