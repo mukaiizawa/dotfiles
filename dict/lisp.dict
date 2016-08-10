@@ -692,3 +692,4 @@ Library ahead-reader	~/dotfiles/dict/lisp/user-defined/ahead-reader
 Library database-manager	~/dotfiles/dict/lisp/user-defined/database-manager
 Library graph-utils	~/dotfiles/dict/lisp/user-defined/graph-utils
 Library xml-manager	~/dotfiles/dict/lisp/user-defined/xml-manager
+Library regex	~/dotfiles/dict/lisp/user-defined/regex
