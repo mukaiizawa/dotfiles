@@ -81,7 +81,6 @@ syn keyword lispFunc eql?
 syn keyword lispFunc symbol?
 syn keyword lispFunc null?
 
-
 " macro
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-encoding
@@ -146,7 +145,6 @@ syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
 syn keyword lispFunc mkkey
 syn keyword lispFunc explode
-syn keyword lispFunc stream->string
 syn keyword lispFunc string->list
 syn keyword lispFunc list->string
 syn keyword lispFunc string->byte
