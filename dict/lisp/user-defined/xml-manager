@@ -84,21 +84,22 @@ Example:
 (princ (DSL->xml dom))
 
 ;; convert from xml to DSL
-(xml->DSL
-  "
-  <!DOCTYPE html>
-  <html>
-  <meta charset='utf-8'>
-  <head>
-  <link href='css/common.css' rel='stylesheet' media='screen' />
-  </head>
-  <body>
-  <p>
-  <img src='img/image.png' />
-  </p>
-  <a href='index.html'>go home</a>
-  </body>
-  </html>")
+(with-input-from-string
+  (in "
+      <!DOCTYPE html>
+      <html>
+      <meta charset='utf-8'>
+      <head>
+      <link href='css/common.css' rel='stylesheet' media='screen' />
+      </head>
+      <body>
+      <p>
+      <img src='img/image.png' />
+      </p>
+      <a href='index.html'>go home</a>
+      </body>
+      </html>")
+      (xml->DSL in))
 => (:!DOCTYPE "html")
    (:html ()
      (:meta ((charset "utf-8")))
