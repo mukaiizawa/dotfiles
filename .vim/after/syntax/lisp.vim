@@ -146,6 +146,7 @@ syn keyword lispFunc mkstr
 syn keyword lispFunc mksym
 syn keyword lispFunc mkkey
 syn keyword lispFunc explode
+syn keyword lispFunc stream->string
 syn keyword lispFunc string->list
 syn keyword lispFunc list->string
 syn keyword lispFunc string->byte
