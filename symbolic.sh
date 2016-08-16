@@ -5,8 +5,8 @@
 ln -s ~/dotfiles/.vim       ~/.vim
 ln -s ~/dotfiles/.vim       ~/vimfiles
 ln -s ~/dotfiles/.vimrc     ~/.vimrc
+ln -s ~/dotfiles/.gvimrc    ~/.gvimrc
 ln -s ~/dotfiles/.vimshrc   ~/.vimshrc
 ln -s ~/dotfiles/.gitignore ~/.gitignore
-
-
 #ln -s ~/dotfiles/.minvimrc ~/.vimrc
+
