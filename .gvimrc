@@ -10,7 +10,6 @@ set guioptions+=c
 set cursorline
 set visualbell t_vb=
 
-au GUIEnter * simalt ~x
 colorscheme shin-dark
 syntax on
 
@@ -20,6 +19,7 @@ set nomousefocus
 set mousehide
 
 if has("win32")
+  au GUIEnter * simalt ~x
   set guifont=MS_Gothic:h12:cSHIFTJIS 
   set linespace=1
   set columns=80
