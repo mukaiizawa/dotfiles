@@ -325,4 +325,5 @@ syn keyword lispKey :var
 syn keyword lispKey :video
 syn keyword lispKey :wbr
 
+syn keyword lispKey :htime
 

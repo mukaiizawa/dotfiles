@@ -159,6 +159,8 @@ setlocal lispwords+=:var
 setlocal lispwords+=:video
 setlocal lispwords+=:wbr
 
+setlocal lispwords+=:htime
+
 " }}}
 
 
