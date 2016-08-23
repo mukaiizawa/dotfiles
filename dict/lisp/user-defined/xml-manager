@@ -2,8 +2,8 @@
 Library XML-MANAGER
 
 Variable *indent*
-set nil to disable indent
-default value is t
+whether print with indent or not.
+default value is nil
 
 Variable *single-tag*
 list of single tag.
