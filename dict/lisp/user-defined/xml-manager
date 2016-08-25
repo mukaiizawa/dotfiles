@@ -1,11 +1,15 @@
 
 Library XML-MANAGER
 
-Variable *indent*
+Variable *with-format*
 whether print with indent or not.
 default value is nil
 
-Variable *single-tag*
+Variable *single-tags*
+list of single tag.
+this list be used to check element that single-tag or not.
+
+Variable *consider-newline-tags*
 list of single tag.
 this list be used to check element that single-tag or not.
 
@@ -33,6 +37,17 @@ Function DSL->xml, xml->DSL
 DSL->xml xml => string
 xml->DSL xml-nodes => string
 see at example.
+
+Function import-xml
+import-xml xml => xml-nodes
+xml---a string
+xml-nodes---a node list
+convert from xml to xml node list.
+convenient at the time of the import xml that already exists.
+
+Macro to-pre-code
+to-pre-code xml => xml-nodes
+like a import-xml but to-pre-code convert from xml to node list that surrounded with pre and code tags.
 
 Example:
 ;; define macro :foobar.
