@@ -282,6 +282,11 @@ inoremap <C-k> <C-x><C-u>
 " ======================================
 
 " Setting of Plugin.
+" 2html {{{
+
+let g:html_number_lines = 0
+
+" }}}
 "  Unite {{{
 
 let g:unite_no_default_keymappings = 1
@@ -300,7 +305,6 @@ call unite#custom#profile('default', 'context', {
       \ })
 
 call unite#custom_default_action('directory', 'vimfiler')
-
 call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
 
 " }}}
