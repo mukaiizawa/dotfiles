@@ -22,9 +22,6 @@ syn keyword lispFunc defexe
 syn keyword lispFunc canonical-letargs
 syn keyword lispFunc before
 syn keyword lispFunc after
-syn keyword lispFunc fn-if
-syn keyword lispFunc fn-and
-syn keyword lispFunc fn-or
 syn keyword lispFunc last1
 syn keyword lispFunc single?
 syn keyword lispFunc alist?
