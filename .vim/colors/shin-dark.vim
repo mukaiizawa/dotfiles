@@ -31,7 +31,7 @@ highlight Special        guifg=#87ceeb
 highlight Delimiter      guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
 " Underlined
-highlight Underlined     guifg=#0000cc
+highlight Underlined     guifg=#fad07a
 " Ignore
 highlight Ignore         guifg=#ff0000
 " Error
