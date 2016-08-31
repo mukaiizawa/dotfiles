@@ -3,11 +3,11 @@ setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
 
+" stdlib
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
 setlocal lispwords+=alambda
 setlocal lispwords+=dostring
-setlocal lispwords+=dofile
 setlocal lispwords+=dorange
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-encoding
@@ -21,23 +21,20 @@ setlocal lispwords+=aif
 setlocal lispwords+=awhen
 setlocal lispwords+=acond
 setlocal lispwords+=dcond
-setlocal lispwords+=dbind
-setlocal lispwords+=mbind
-setlocal lispwords+=mlist
 setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
 setlocal lispwords+=defexe
 
+" ahead-reader
 setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-string-ahead-reader
 setlocal lispwords+=with-open-ahead-reader
 
+" database-manager
 setlocal lispwords+=deftable
 setlocal lispwords+=deftables
 
-" for html
-" {{{
-
+" xml-manager
 setlocal lispwords+=with-html-output
 setlocal lispwords+=:a
 setlocal lispwords+=:abbr
@@ -158,9 +155,6 @@ setlocal lispwords+=:ul
 setlocal lispwords+=:var
 setlocal lispwords+=:video
 setlocal lispwords+=:wbr
-
-setlocal lispwords+=:htime
-
-" }}}
+setlocal lispwords+=:time
 
 
