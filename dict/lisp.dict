@@ -683,11 +683,7 @@ Variable *terminal-io*	~/dotfiles/dict/lisp/variable/v_termin
 Variable +, ++, +++	~/dotfiles/dict/lisp/variable/v_pl_plp
 Variable -	~/dotfiles/dict/lisp/variable/v__
 Variable /, //, ///	~/dotfiles/dict/lisp/variable/v_sl_sls
-Function mkstr	~/dotfiles/dict/lisp/user-defined/mkstr
-Function mksym	~/dotfiles/dict/lisp/user-defined/mksym
-Function mkkey	~/dotfiles/dict/lisp/user-defined/mkkey
-Function canonical-letargs	~/dotfiles/dict/lisp/user-defined/canonical-letargs
-Macro deftable	~/dotfiles/dict/lisp/user-defined/deftable
+Library stdlib	~/dotfiles/dict/lisp/user-defined/stdlib
 Library ahead-reader	~/dotfiles/dict/lisp/user-defined/ahead-reader
 Library database-manager	~/dotfiles/dict/lisp/user-defined/database-manager
 Library graph-utils	~/dotfiles/dict/lisp/user-defined/graph-utils

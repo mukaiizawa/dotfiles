@@ -1,0 +1,96 @@
+
+ Function MKSTR {{{
+
+ Syntax:
+ mkstr &rest objects => string
+
+ Arguments and Values:
+ object---an object.
+ string---a string.
+
+ Description:
+ The mkstr function takes any number of arguments and concatenates their printed
+ representatios into a string
+
+ Examples:
+ (mkstr pi " pieces of " 'Pi)
+ => "3.141592653589793 pieces of PI"
+
+ See Also:
+ mksym
+
+}}}
+Function MKSYM {{{
+
+Syntax:
+mksym &rest objects => symbol
+
+Arguments and Values:
+object---an object.
+symbol---a symbol.
+
+Description:
+The mksym function takes one or more arguments and returns the symbol.
+(creating one if necessary)
+Whose print-name is their concatenation.
+It can take as an argument any object which has a
+printable representation: symbols, strings, numbers, even lists.
+
+Examples:
+(mksym 'ar "Madi" #\L #\L 0)
+=> |ARMadiLL0|
+
+See Also:
+mkstr
+
+}}}
+Function MKKEY {{{
+
+Syntax:
+mksym &rest objects => keyword
+
+Arguments and Values:
+object---an object.
+symbol---a keyword.
+
+Description:
+The mksym function takes one or more arguments and returns the keyword.
+(creating one if necessary)
+Whose print-name is their concatenation.
+It can take as an argument any object which has a
+printable representation: symbols, strings, numbers, even lists.
+
+Examples:
+(mkkey 'key "w" 0 #\r #\d)
+=> :|KEYw0rd|
+
+See Also:
+mksym
+
+}}}
+Function CANONICAL-LETARGS {{{
+
+Syntax:
+canonical-letargs list => canonical-list
+
+Arguments and Values:
+list---a list.
+canonical-list---list for let's bindding form.
+
+Description:
+The canonical-letargs function handles the case of a let form binding being
+a single symbol.
+
+Examples:
+In the following, a is normalised to (a)
+(canonical-letargs '(a (b) (c nil)))
+=> ((A) (B) (C NIL))
+
+Exceptional Situations:
+Should signal an error of type type-error if list can't bind
+
+Notes:
+Doug Hoyte's Let Over Lambda
+let-binding-transform
+
+}}}
