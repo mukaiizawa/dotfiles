@@ -27,8 +27,8 @@ Method dot graph &key digraph? file => make-graph
 
 ;; sample-cluster
 (dot
-  (make-graph :nodes '(("start" (shape "Mdiamond") (color "green"))
-                       ("end" (shape "Msquare") (color "red")))
+  (make-graph :nodes '(("start" ((shape "Mdiamond") (color "green")))
+                       ("end" ((shape "Msquare") (color "yellow"))))
               :edges '(("start" "a0")
                        ("start" "b0")
                        ("a3" "end")
@@ -39,11 +39,11 @@ Method dot graph &key digraph? file => make-graph
               :subgraphs (list (make-subgraph  
                                  :graph-conf '((label "process1") (style "filled") (color "coral"))
                                  :node-conf '((color "white"))
-                                 :edges (make-continuous-edges '("a0" "a1" "a2" "a3")))
+                                 :edges (make-continuous-edges '("a0" "a1" "a2" "a3") '((color "red"))))
                                (make-subgraph  
                                  :graph-conf '((label "process2") (style "filled") (color "aquamarine"))
                                  :node-conf '((color "black"))
-                                 :edges (make-continuous-edges '("b0" "b1" "b2" "b3"))))
+                                 :edges (make-continuous-edges '("b0" "b1" "b2" "b3") '((color "blue")))))
               :ranks '(("start" "a0" "a1" "a2" "a3")
                        ("b0" "b1" "b2" "b3" "end")))
   :file "sample-cluster")
