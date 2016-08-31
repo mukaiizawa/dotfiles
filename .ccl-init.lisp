@@ -1,11 +1,19 @@
 
 (setq *print-pretty* t)
-(defparameter *module-ahead-reader*)
-(defparameter *module-database-manager*)
-(defparameter *module-date-utils*)
-(defparameter *module-graph-utils*)
-(defparameter *module-regex*)
-(defparameter *module-stdlib*)
-(defparameter *module-test-utils*)
-(defparameter *module-xml-manager*)
+
+(defmacro make-module-pathname (str)
+  `(defparameter
+     ,(intern (concatenate 'string
+                           "*module-" str "*"))
+     ,(merge-pathnames (pathname (concatenate 'string str ".lisp"))
+                       (merge-pathnames (pathname "Lisp/lib/") (user-homedir-pathname)))))
+
+(make-module-pathname "ahead-reader")
+(make-module-pathname "database-manager")
+(make-module-pathname "date-utils")
+(make-module-pathname "graph-utils")
+(make-module-pathname "regex")
+(make-module-pathname "stdlib")
+(make-module-pathname "test-utils")
+(make-module-pathname "xml-manager")
 
