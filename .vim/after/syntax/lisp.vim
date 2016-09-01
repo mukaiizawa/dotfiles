@@ -316,3 +316,5 @@ syn keyword lispFunc eql?
 syn keyword lispFunc symbol?
 syn keyword lispFunc null?
 
+" ltk
+syn keyword lispFunc with-ltk

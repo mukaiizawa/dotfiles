@@ -157,4 +157,6 @@ setlocal lispwords+=:video
 setlocal lispwords+=:wbr
 setlocal lispwords+=:time
 
+" ltk
+setlocal lispwords+=with-ltk
 
