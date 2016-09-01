@@ -159,4 +159,5 @@ setlocal lispwords+=:time
 
 " ltk
 setlocal lispwords+=with-ltk
+setlocal lispwords+=with-ltk-handlers
 
