@@ -242,7 +242,7 @@ nmap n nzz
 nmap N Nzz
 nmap g, g,zz
 
-" map Y to behave like a C
+" map `Y' to behave like a `C'
 nnoremap Y y$
 
 " cursor motion
