@@ -242,6 +242,9 @@ nmap n nzz
 nmap N Nzz
 nmap g, g,zz
 
+" map Y to behave like a C
+nnoremap Y y$
+
 " cursor motion
 nnoremap <Space>h 0
 nnoremap <Space>l $
