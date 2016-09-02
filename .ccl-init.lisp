@@ -12,6 +12,7 @@
 (make-module-pathname "database-manager")
 (make-module-pathname "date-utils")
 (make-module-pathname "graph-utils")
+(make-module-pathname "ltk")
 (make-module-pathname "regex")
 (make-module-pathname "stdlib")
 (make-module-pathname "test-utils")
