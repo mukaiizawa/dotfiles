@@ -81,7 +81,7 @@ let g:unite_source_menu_menus.Encoding = {
       \      [ "utf16-be", "setlocal fenc=utf16be" ],
       \      [ "jis"     , "setlocal fenc=jis"     ],
       \      [ "sjis"    , "setlocal fenc=sjis"    ],
-      \      [ "unicode" , "setlocal fenc=unicode" ],
+      \      [ "latin1" , "setlocal fenc=latin1" ],
       \      [ "utf8     -re edit" , "e ++enc=Utf8"    ],
       \      [ "cp932    -re edit" , "e ++enc=cp932"   ],
       \      [ "euc      -re edit" , "e ++enc=euc"     ],
@@ -90,7 +90,7 @@ let g:unite_source_menu_menus.Encoding = {
       \      [ "utf16-be -re edit" , "e ++enc=utf16be" ],
       \      [ "jis      -re edit" , "e ++enc=jis"     ],
       \      [ "sjis     -re edit" , "e ++enc=sjis"    ],
-      \      [ "unicode  -re edit" , "e ++enc=unicode" ],
+      \      [ "latin1   -re edit" , "e ++enc=latin1" ],
       \  ]
       \
       \ }
