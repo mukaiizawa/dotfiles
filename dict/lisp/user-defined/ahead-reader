@@ -10,7 +10,7 @@ with-open-ahead-reader (reader pathname &key if-does-not-exist) &body body
 
 Function get-curr, get-next
 get-curr reader => current-character
-get-next reader => next-character
+get-next reader &optional n => next-character
 
 Function reader-curr-in?, reader-next-in?
 reader-curr-in? reader &rest args => find-current-character?
