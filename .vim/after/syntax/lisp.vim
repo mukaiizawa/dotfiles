@@ -86,7 +86,7 @@ syn keyword lispFunc parse-int
 syn keyword lispFunc parse-sym
 syn keyword lispFunc getopt
 syn keyword lispFunc expand-hyphen
-syn keyword lispFunc executable
+syn keyword lispFunc to-executable
 syn keyword lispFunc exit
 syn keyword lispFunc call
 syn keyword lispFunc args
