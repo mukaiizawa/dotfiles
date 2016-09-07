@@ -39,7 +39,7 @@ syn keyword lispFunc before?
 syn keyword lispFunc after?
 syn keyword lispFunc last-member
 syn keyword lispFunc most
-syn keyword lispFunc maprec
+syn keyword lispFunc maptree
 syn keyword lispFunc memoize
 syn keyword lispFunc compose
 syn keyword lispFunc repeat
