@@ -43,7 +43,6 @@ syn keyword lispFunc most
 syn keyword lispFunc maptree
 syn keyword lispFunc memoize
 syn keyword lispFunc compose
-syn keyword lispFunc repeat
 syn keyword lispFunc empty?
 syn keyword lispFunc blank?
 syn keyword lispFunc mkstr
