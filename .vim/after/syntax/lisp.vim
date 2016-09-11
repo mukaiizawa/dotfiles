@@ -53,8 +53,6 @@ syn keyword lispFunc string->list
 syn keyword lispFunc list->string
 syn keyword lispFunc string->byte
 syn keyword lispFunc byte->string
-syn keyword lispFunc replstr
-syn keyword lispFunc trimstr
 syn keyword lispFunc format-string
 syn keyword lispFunc guess-encoding
 syn keyword lispFunc stdin
