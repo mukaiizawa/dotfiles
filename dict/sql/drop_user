@@ -1,0 +1,4 @@
+
+/* ORACLE */
+DROP USER <USER> CASCADE;
+

@@ -1,2 +1,4 @@
 UPDATE	~/dotfiles/dict/sql/update
 INSERT	~/dotfiles/dict/sql/insert
+DROP USER	~/dotfiles/dict/sql/drop_user
+IMPDP	~/dotfiles/dict/sql/impdp
