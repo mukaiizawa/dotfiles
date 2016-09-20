@@ -146,19 +146,20 @@ let g:unite_source_menu_menus.StartupLogo ={
 
 function! UniteStartup()
   if argc()==0 && bufnr('$')==1 
-        \ Unite
-        \ output:echo:":":!
-        \ output:echo:"===:Edit:===":! menu:Edit
-        \ output:echo:":":!
-        \ output:echo:"===:Search:===":! menu:Search
-        \ output:echo:":":!
-        \ output:echo:"===:Neobundle:===":! menu:NeoBundle
-        \ output:echo:":":! menu:StartupLogo
-        \ output:echo:":":!
-        \ neomru/file
-        \ -hide-source-names
-        \ -no-split
-        \ -no-wrap
+    Unite
+          \ output:echo:":":!
+          \ output:echo:"===:Edit:===":! menu:Edit
+          \ output:echo:":":!
+          \ output:echo:"===:Search:===":! menu:Search
+          \ output:echo:":":!
+          \ output:echo:"===:Neobundle:===":! menu:NeoBundle
+          \ output:echo:":":! menu:StartupLogo
+          \ output:echo:":":!
+          \ neomru/file
+          \ output:echo:":":!
+          \ -hide-source-names
+          \ -no-split
+          \ -no-wrap
   endif
 endfunction
 
