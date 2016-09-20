@@ -1,10 +1,7 @@
 
-UPDATE
-<TABLE>
+UPDATE <TABLE>
 SET
-<COLUMN1> = <VAL1>
-[,<COLUMN2> = <VAL2>]
-[,<COLUMN3> = <VAL3>]
-[...]
+<COLUMN> = <VALUE>
+[,<COLUMN> = <VALUE>]*
 [WHERE <CONDITION>];
 
