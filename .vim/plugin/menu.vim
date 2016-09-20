@@ -146,7 +146,6 @@ let g:unite_source_menu_menus.StartupLogo ={
 
 function! UniteStartup()
   if argc()==0 && bufnr('$')==1 
-
         \ Unite
         \ output:echo:":":!
         \ output:echo:"===:Edit:===":! menu:Edit
@@ -156,12 +155,10 @@ function! UniteStartup()
         \ output:echo:"===:Neobundle:===":! menu:NeoBundle
         \ output:echo:":":! menu:StartupLogo
         \ output:echo:":":!
-        \ neomru/directory
         \ neomru/file
         \ -hide-source-names
         \ -no-split
         \ -no-wrap
-
   endif
 endfunction
 
@@ -170,5 +167,4 @@ augroup startupMenu
   autocmd!
   autocmd VimEnter * nested :UniteStartup
 augroup END
-
 
