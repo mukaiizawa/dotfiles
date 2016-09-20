@@ -6,6 +6,8 @@ setlocal shiftwidth=4
 " stdlib
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
+setlocal lispwords+=ilet
+setlocal lispwords+=ilet*
 setlocal lispwords+=ilambda
 setlocal lispwords+=alambda
 setlocal lispwords+=dostring
