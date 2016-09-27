@@ -3,10 +3,12 @@
 
 (defmacro make-module-pathname (str)
   `(defparameter
-     ,(intern (string-upcase (concatenate 'string
-                                          "*module-" str "*")))
+     ,(intern (string-upcase
+                (concatenate 'string
+                             "*module-" str "*")))
      ,(merge-pathnames (pathname (concatenate 'string str ".lisp"))
-                       (merge-pathnames (pathname "Lisp/lib/") (user-homedir-pathname)))))
+                       (merge-pathnames (pathname "Lisp/lib/")
+                                        (user-homedir-pathname)))))
 
 (make-module-pathname "ahead-reader")
 (make-module-pathname "cordinate-manager")
