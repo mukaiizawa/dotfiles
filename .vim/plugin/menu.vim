@@ -53,6 +53,17 @@ let g:unite_source_menu_menus.Search = {
 
 
 "}}}
+" native2ascii "{{{
+
+let g:unite_source_menu_menus.Native2ascii = {
+      \   "command_candidates" : [
+      \       [ "native2ascii -encoding UTF-8", "%!native2ascii" ],
+      \       [ "native2ascii -reverse", "%!native2ascii -reverse" ],
+      \   ]
+      \ }
+
+
+"}}}
 " NeoBundle "{{{
 
 let g:unite_source_menu_menus.NeoBundle = {
