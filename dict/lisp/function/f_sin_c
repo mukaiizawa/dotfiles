@@ -22,5 +22,5 @@ Exceptional Situations:
 Should signal an error of type type-error if radians is not a number. Might signal arithmetic-error.
 
 See Also:
-asin, acos, atan, Section 12.1.3.3 (Rule of Float Substitutability)
+asin, acos, atan
 
