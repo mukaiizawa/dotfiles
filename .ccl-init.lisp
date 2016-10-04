@@ -11,7 +11,7 @@
                                         (user-homedir-pathname)))))
 
 (make-module-pathname "ahead-reader")
-(make-module-pathname "cordinate-manager")
+(make-module-pathname "coordinate-manager")
 (make-module-pathname "csv-reader")
 (make-module-pathname "database-manager")
 (make-module-pathname "date-utils")
