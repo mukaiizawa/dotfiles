@@ -34,8 +34,8 @@ setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-string-ahead-reader
 setlocal lispwords+=with-open-ahead-reader
 
-" cordinate-manager
-setlocal lispwords+=with-cordinates
+" coordinate-manager
+setlocal lispwords+=with-coordinates
 
 " database-manager
 setlocal lispwords+=deftable
