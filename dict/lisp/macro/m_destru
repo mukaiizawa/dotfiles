@@ -13,7 +13,6 @@ results---the values returned by the forms.
 
 Description:
 destructuring-bind binds the variables specified in lambda-list to the corresponding values in the tree structure resulting from the evaluation of expression; then destructuring-bind evaluates forms.
-The lambda-list supports destructuring as described in Section 3.4.5 (Destructuring Lambda Lists).
 
 Examples:
  (defun iota (n) (loop for i from 1 to n collect i))       ;helper
