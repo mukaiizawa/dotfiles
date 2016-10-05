@@ -203,7 +203,7 @@ Function find-symbol	~/dotfiles/dict/lisp/function/f_find_s
 Function finish-output, force-output...	~/dotfiles/dict/lisp/function/f_finish
 Function float	~/dotfiles/dict/lisp/function/f_float
 Function floatp	~/dotfiles/dict/lisp/function/f_floatp
-Function floor, ffloor, ceiling, fceiling...	~/dotfiles/dict/lisp/function/f_floorc
+Function floor, ceiling, truncate, round...	~/dotfiles/dict/lisp/function/f_floorc
 Function fmakunbound	~/dotfiles/dict/lisp/function/f_fmakun
 Function format	~/dotfiles/dict/lisp/function/f_format
 Function funcall	~/dotfiles/dict/lisp/function/f_funcal
