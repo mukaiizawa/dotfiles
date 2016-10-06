@@ -30,6 +30,14 @@ Examples:
              '#(3.5 2 #C(1.0 0.0) #C(0.0 1.0))
              :start 2) =>  NIL
 
+ (find-if #'oddp '(0 0)) => NIL
+ (find-if #'oddp '(0 1)) => 1
+ (find-if #'oddp '(1 1)) => 1
+
+ (find-if-not #'oddp '(0 0)) => 0
+ (find-if-not #'oddp '(0 1)) => 0
+ (find-if-not #'oddp '(1 1)) => NIL
+
 Exceptional Situations:
 Should be prepared to signal an error of type type-error if sequence is not a proper sequence.
 
@@ -39,4 +47,7 @@ position
 Notes:
 The :test-not argument is deprecated.
 The function find-if-not is deprecated.
+
+(find-if-not #'zerop '(0 0 3))
+== (find-if (complement #'zerop) '(0 0 3))
 
