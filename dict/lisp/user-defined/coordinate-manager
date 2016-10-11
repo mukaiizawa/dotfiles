@@ -1,0 +1,15 @@
+
+Library COORDINATE-MANAGER
+
+Structure coordinate
+x---a number
+y---a number
+z---a number
+
+Macro with-coordinates
+with-coordinates (&rest coordinates) &body body
+
+Function make-vector
+make-vector &optional (x 0) (y 0) (z 0)
+create coordinate with initial value x, y and z.
+

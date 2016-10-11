@@ -683,9 +683,10 @@ Variable *terminal-io*	~/dotfiles/dict/lisp/variable/v_termin
 Variable +, ++, +++	~/dotfiles/dict/lisp/variable/v_pl_plp
 Variable -	~/dotfiles/dict/lisp/variable/v__
 Variable /, //, ///	~/dotfiles/dict/lisp/variable/v_sl_sls
-Library stdlib	~/dotfiles/dict/lisp/user-defined/stdlib
 Library ahead-reader	~/dotfiles/dict/lisp/user-defined/ahead-reader
+Library coordinate-manager	~/dotfiles/dict/lisp/user-defined/coordinate-manager
 Library database-manager	~/dotfiles/dict/lisp/user-defined/database-manager
 Library graph-utils	~/dotfiles/dict/lisp/user-defined/graph-utils
-Library xml-manager	~/dotfiles/dict/lisp/user-defined/xml-manager
 Library regex	~/dotfiles/dict/lisp/user-defined/regex
+Library stdlib	~/dotfiles/dict/lisp/user-defined/stdlib
+Library xml-manager	~/dotfiles/dict/lisp/user-defined/xml-manager
