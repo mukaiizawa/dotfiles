@@ -25,6 +25,7 @@ syn keyword lispFunc aand
 syn keyword lispFunc acond
 syn keyword lispFunc dcond
 syn keyword lispFunc defexe
+syn keyword lispFunc chain
 syn keyword lispFunc canonical-letargs
 syn keyword lispFunc before
 syn keyword lispFunc after
