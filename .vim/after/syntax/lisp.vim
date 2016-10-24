@@ -34,6 +34,7 @@ syn keyword lispFunc single?
 syn keyword lispFunc alist?
 syn keyword lispFunc append1
 syn keyword lispFunc conc1
+syn keyword lispFunc vassoc
 syn keyword lispFunc mklist
 syn keyword lispFunc mkalist
 syn keyword lispFunc iota
