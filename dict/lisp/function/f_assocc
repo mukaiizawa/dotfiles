@@ -46,7 +46,7 @@ Exceptional Situations:
 Should be prepared to signal an error of type type-error if alist is not an association list.
 
 See Also:
-rassoc, find, member, position,  Section 3.6 (Traversal Rules and Side Effects)
+rassoc, find, member, position
 
 Notes:
 The :test-not parameter is deprecated.
