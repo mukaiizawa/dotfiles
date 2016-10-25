@@ -5,6 +5,7 @@ setlocal iskeyword=33,38,42,43,45,47-58,60-90,97-122,_
 syn keyword lispFunc with-gensyms
 syn keyword lispFunc with-encoding
 syn keyword lispFunc mkstr-if
+syn keyword lispFunc mkstr-aif
 syn keyword lispFunc asetf
 syn keyword lispFunc let1
 syn keyword lispFunc ilet

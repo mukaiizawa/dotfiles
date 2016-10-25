@@ -7,6 +7,7 @@ setlocal shiftwidth=4
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
 setlocal lispwords+=mkstr-if
+setlocal lispwords+=mkstr-aif
 setlocal lispwords+=let1
 setlocal lispwords+=ilet
 setlocal lispwords+=ilet*
