@@ -120,7 +120,7 @@ syn keyword lispFunc with-coordinates
 
 " database-manager
 syn keyword lispFunc deftable
-syn keyword lispFunc deftables
+syn keyword lispFunc defschema
 
 " xml-manager
 syn keyword lispFunc with-html-output

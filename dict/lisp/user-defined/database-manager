@@ -1,7 +1,7 @@
 
 Library DATABASE-MANAGER
 
-Macro deftables
+Macro defschema
 
 Structure table, column
 
@@ -20,9 +20,9 @@ Function tables->create-sql
 convert from table-list to create table sql (only support `oracle database')
 
 Examples:
-;; make tables
-(defparameter tables
-  (deftables
+;; make schema
+(defparameter schema
+  (defschema common "共通スキーマ"
     (user_tbl
       "ユーザーマスタ"
       (user_id "ユーザーID" :primarykey? t :type "varchar2" :length 8)
@@ -37,8 +37,8 @@ Examples:
       (group_id "部署ID" :primarykey? t :foreignkey '(group_tbl group_id) :type "varchar2" :length 8))))
 
 ;; create ER Diagram
-(dot (tables->graph tables) :file "sample-er")
+(dot (schema->graph schema) :file "sample-er")
 
 ;; create `create-table' sql
-(tables->create-sql tables)
+(schema->create-sql schema)
 
