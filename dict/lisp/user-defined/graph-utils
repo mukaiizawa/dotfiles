@@ -5,9 +5,9 @@ Variable *global-graph-conf*, *global-node-conf*, *global-edge-conf*
 
 Structure graph, subgraph
 
-Function set-attr! key value alist => modified-alist
-(set-attr! 'rankdir "BT" *global-graph-conf*)
-(set-attr! 'layout "circle" *global-graph-conf*)
+Function set-graph-attr! key value alist => modified-alist
+(set-graph-attr! 'rankdir "BT" *global-graph-conf*)
+(set-graph-attr! 'layout "circle" *global-graph-conf*)
 ...
 
 Function make-continuous-edge continuous-nodes => edges
@@ -21,7 +21,7 @@ Method dot graph &key digraph? file => make-graph
   (push (list #\A c) *edges*))
 
 (dolist (layout (list "circo" "dot" "fdp" "neato" "osage" "sfdp" "twopi"))
-  (set-attr! 'layout layout *global-graph-conf*)
+  (set-graph-attr! 'layout layout *global-graph-conf*)
   (dot (make-graph :edges (reverse *edges*))
        :file (mkstr "sample-layout-" layout)))
 
