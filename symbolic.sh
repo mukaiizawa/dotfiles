@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Note: Execute this.
 #   mod +x symbolic.sh
 
