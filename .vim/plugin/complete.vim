@@ -1,17 +1,17 @@
 
 function! CompleteWords(findstart, base)
+  let s:commonPath = $HOME . '/dotfiles/word/common.word'
   let s:path = $HOME . '/dotfiles/word/' . expand("%:e") . '.word'
-  if !filereadable(s:path)
-    call PrintError(printf("CompleteWords: The file type`%s' is not implemented.", expand("%:e")))
-    return []
-  endif
   if a:findstart
     " get cursor word.
     let s:cur_text = strpart(getline('.'), 0, col('.') - 1)
     return match(s:cur_text, '\f*$')
   else
     " find word matching with `a:base'
-    let s:lines = readfile(s:path)
+    let s:lines = readfile(s:commonPath) +
+          \ (filereadable(s:path)?
+          \   readfile(s:path):
+          \   [])
     let s:result = []
     for s:line in s:lines
       if s:line =~ '^' . a:base
