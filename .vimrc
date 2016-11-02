@@ -79,7 +79,6 @@ set splitright
 set list
 set listchars=tab:->,eol:<,trail:>
 set backspace=start,eol,indent
-set ambiwidth=double
 
 " }}}
 " Setting for Status line, Tab page {{{

@@ -25,6 +25,7 @@ if has("win32")
   set columns=80
   set lines=25
   set cmdheight=2
+  set ambiwidth=double
 elseif has("mac")
   set guifont=Monaco:h14
 elseif has("unix")
