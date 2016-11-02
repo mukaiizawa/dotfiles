@@ -5,9 +5,11 @@ if exists("syntax_on")
 endif
 let g:colors_name = "shin-dark"
 
-" :help group-name "{{{
+" :help group-name
+
 " Comment
 highlight Comment        guifg=#a6f02e
+
 " Constant
 highlight Constant       guifg=#87ceeb
 highlight String         guifg=#ffaaaa
@@ -15,31 +17,40 @@ highlight Character      guifg=#db7093
 highlight Number         guifg=#fadd5a
 highlight Boolean        guifg=#87ceeb gui=bold
 highlight Float          guifg=#fadd5a
+
 " Identifier
 highlight Identifier     guifg=#87ceeb
 highlight Function       guifg=#fad07a
+
 " Statement
 highlight Statement      guifg=#cc7833
 highlight Exception      guifg=#f86060 gui=bold
+
 " Preproc
 highlight PreProc        guifg=#fad07a
+
 " Type
 highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#cc7833
+
 " Special
 highlight Special        guifg=#87ceeb
 highlight Delimiter      guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
+
 " Underlined
 highlight Underlined     guifg=#fad07a
+
 " Ignore
 highlight Ignore         guifg=#ff0000
+
 " Error
 highlight Error          guifg=#66d9ef guibg=#202020 gui=bold
+
 " Todo
 highlight Todo           guifg=#66d9ef guibg=#202020 gui=bold
-" }}}
-" :help highlight-groups "{{{
+
+" :help highlight-groups
 
 highlight Normal        guifg=#ffffff guibg=#303030
 highlight NonText       guifg=#666666 guibg=#303030
@@ -86,6 +97,4 @@ highlight StatusLineNC  guifg=#808080               gui=bold
 highlight TabLine       guifg=#cccccc guibg=#666666
 highlight TabLineFill                 guibg=#666666
 highlight TabLineSel    guifg=#eeeeee guibg=#666666
-
-" }}}
 

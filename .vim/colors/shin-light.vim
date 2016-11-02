@@ -6,32 +6,43 @@ endif
 
 let colors_name = "shin-light"
 
-" :help group-name "{{{
-" Syntax group
+" :help group-name
+
 " Comment
 highlight Comment      guifg=#ff5050
+
 " Constant
 highlight Constant     guifg=#00884c
+
 " Identifier
 highlight Identifier   guifg=#b07800
+
 " Statement
 highlight Statement    guifg=#80a030 gui=BOLD 
+
 " Ignore
 highlight Ignore       guifg=bg
+
 " Preproc
 highlight PreProc      guifg=#0090a0
+
 " Special
 highlight Special      guifg=#8040f0
+
 " Type
 highlight Type         guifg=#b06c58 gui=BOLD 
+
 " Underlined
 highlight Underlined   guifg=blue    gui=UNDERLINE 
+
 " Error
 highlight Error        guifg=#f8f8f8 guibg=#4040ff gui=BOLD 
+
 " Todo
 highlight Todo         guifg=#0080f0 gui=BOLD,UNDERLINE 
-" }}}
-" :help highlightghlight-groups "{{{
+
+
+" :help highlightghlight-groups
 
 highlight Normal       guifg=#404040 guibg=#fff4e8
 highlight NonText      guifg=#a05040 gui=BOLD
@@ -47,10 +58,10 @@ highlight DiffChange   guifg=#208040 guibg=#c0f0d0
 highlight DiffDelete   guifg=#ff2020 guibg=#eaf2b0
 highlight DiffAdd      guifg=#ff2020 guibg=#eaf2b0
 
-" number
+" Number
 highlight LineNr       guifg=#e0b090
 
-" conceal
+" Conceal
 highlight SpecialKey   guifg=#0080ff
 
 " Search
@@ -77,8 +88,4 @@ highlight Folded       guifg=#804030 guibg=#ffe4d4
 highlight Title        guifg=fg      gui=BOLD
 highlight Visual       guifg=#804020 guibg=#ffc0a0
 highlight VertSplit    guifg=#f8f8f8 guibg=#904838 gui=NONE
-
-" }}}
-
-
 
