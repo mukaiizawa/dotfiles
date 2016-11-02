@@ -45,10 +45,10 @@ highlight Underlined     guifg=#fad07a
 highlight Ignore         guifg=#ff0000
 
 " Error
-highlight Error          guifg=#66d9ef guibg=#202020 gui=bold
+highlight Error          guifg=#f86060 gui=bold
 
 " Todo
-highlight Todo           guifg=#66d9ef guibg=#202020 gui=bold
+highlight Todo           guifg=#f86060 gui=bold
 
 " :help highlight-groups
 
