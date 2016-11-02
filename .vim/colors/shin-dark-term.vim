@@ -46,10 +46,10 @@ highlight Underlined     ctermfg=33
 highlight Ignore         ctermfg=161
 
 " Error
-highlight Error          ctermfg=45    ctermbg=232
+highlight Error          ctermfg=161   cterm=NONE
 
 " Todo
-highlight TODO           ctermfg=45    ctermbg=232
+highlight Todo           ctermfg=161   cterm=NONE
 
 " :help highlight-groups
 
