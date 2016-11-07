@@ -1,6 +1,6 @@
 
 " add accessor
-nnoremap <buffer> sa ^wv/ <CR>"ty/ <CR>:nohl<CR>wve"nyo<CR>
+nnoremap <buffer> sa ^wvf "ty;wve"nyo<CR>
       \ public <C-r>t<C-r>n<ESC>biget<Esc>l~hea() {<CR>
       \   return <C-r>n;<CR>
       \ }<CR><Esc>(=ap)o
