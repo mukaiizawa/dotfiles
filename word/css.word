@@ -3,15 +3,12 @@
 @charset "Shift_JIS";
 @charset "UTF-8";
 @import url();
-a
 a:active
 a:focus
 a:hover
 a:link
 a:visited
 address
-auto
-b
 background
 background-attachment
 background-color
@@ -20,10 +17,8 @@ background-position
 background-position-x
 background-position-y
 background-repeat
-big
 block
 blockquote
-body
 border
 border-bottom
 border-bottom-color
@@ -47,46 +42,23 @@ border-top-style
 border-top-width
 border-width
 bottom
-br
 center
-cite
 clear
 color
-dd
 decoration
-del
 display
-div
-dl
-dt
-em
 fixed
 float
-font
 font-color
 font-family
 font-size
 font-style
-h1
-h2
-h3
-h4
-h5
-h6
 height
 hidden
-hr
-html
-i
 inline
 image
-img
 input
-ins
-left
 letter-spacing
-li
-line
 line-height
 list-style-position
 list-style-type
@@ -98,11 +70,8 @@ margin-top
 margin:0px;
 margin:0px; padding:0px;
 no-repeat
-none
-ol
 optgroup
 option
-p
 padding
 padding-bottom
 padding-left
@@ -110,20 +79,14 @@ padding-right
 padding-top
 padding:0px;
 position
-pre
-q
 repeat
 repeat-x
 repeat-y
 right
 scroll
 select
-size
 small
-span
 strong
-td
-text
 text-align
 text-align: center;
 text-align: left;
@@ -132,9 +95,6 @@ text-decoration
 text-indent
 text-transform
 textarea
-top
-tt
-ul
 vertical-align
 visibility
 visible
