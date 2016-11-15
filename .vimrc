@@ -143,6 +143,7 @@ nnoremap <Insert> <NOP>
 nnoremap <Del> <NOP>
 
 " visual mode
+vnoremap / y/<C-r>"<CR>
 vnoremap s <NOP>
 vnoremap <BS> <NOP>
 vnoremap <CR> <NOP>
