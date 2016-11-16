@@ -143,7 +143,6 @@ nnoremap <Insert> <NOP>
 nnoremap <Del> <NOP>
 
 " visual mode
-vnoremap / y/<C-r>"<CR>
 vnoremap s <NOP>
 vnoremap <BS> <NOP>
 vnoremap <CR> <NOP>
@@ -237,6 +236,9 @@ nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
 vnoremap <C-Insert> "*y
+
+" serarch with selection
+vnoremap / y/<C-r>"<CR>
 
 " redraw at center of window
 nmap n nzz
