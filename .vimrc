@@ -234,6 +234,9 @@ nnoremap U  <C-r>
 " toggle `wrap' option
 nnoremap <Space>w :set wrap!<CR>
 
+" toggle `eapandtab' option
+nnoremap <Space><Tab> :set expandtab!<CR>
+
 " yank or Paste to clipboard
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
