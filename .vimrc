@@ -215,6 +215,9 @@ inoremap jj <Esc>
 " IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
+" to insert tab
+inoremap <Tab> <C-v><Tab>
+
 " Insert date.
 if exists("*strftime")
   inoremap <C-d> <Esc>:InsertDate<CR>
