@@ -25,7 +25,7 @@ highlight Function       ctermfg=222   cterm=NONE
 
 " Statement
 highlight Statement      ctermfg=172   cterm=NONE
-highlight Exception      ctermfg=196   cterm=NONE
+highlight Exception      ctermfg=197   cterm=NONE
 
 " Preproc
 highlight PreProc        ctermfg=222   cterm=NONE
@@ -43,13 +43,13 @@ highlight SpecialComment ctermfg=120
 highlight Underlined     ctermfg=33
 
 " Ignore
-highlight Ignore         ctermfg=196
+highlight Ignore         ctermfg=197
 
 " Error
-highlight Error          ctermfg=196   ctermbg=235 cterm=NONE
+highlight Error          ctermfg=197   ctermbg=235 cterm=NONE
 
 " Todo
-highlight Todo           ctermfg=196   ctermbg=235 cterm=NONE
+highlight Todo           ctermfg=197   ctermbg=235 cterm=NONE
 
 " :help highlight-groups
 
@@ -78,7 +78,7 @@ highlight SpecialKey     ctermfg=244
 highlight Folded         ctermfg=244   ctermbg=237
 highlight MatchParen     ctermfg=black ctermbg=172
 highlight Search         ctermfg=229   ctermbg=244
-highlight Title          ctermfg=196
+highlight Title          ctermfg=197
 highlight Visual         ctermfg=255   ctermbg=20  cterm=bold
 highlight VertSplit      ctermfg=239               cterm=bold
 
