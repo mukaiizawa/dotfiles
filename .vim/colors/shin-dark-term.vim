@@ -67,7 +67,7 @@ highlight LineNr         ctermfg=244
 
 highlight Folded         ctermfg=244   ctermbg=237
 highlight Search         ctermfg=229   ctermbg=244
-highlight Visual                       ctermbg=242
+highlight Visual         ctermfg=255   ctermbg=20  cterm=bold
 highlight VertSplit      ctermfg=239               cterm=bold
 
 " pop up menu
