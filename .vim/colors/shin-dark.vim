@@ -79,6 +79,7 @@ highlight Folded        guifg=#aaaaaa guibg=#404040
 highlight MatchParen    guifg=#000000 guibg=#fd971f gui=bold
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
 highlight Title         guifg=#f86060
+" TODO highlight Visual        guifg=#eeeeee guibg=#3399FF  gui=bold
 highlight Visual        guifg=#fad07a guibg=#505050 gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
