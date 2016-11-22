@@ -93,7 +93,7 @@ highlight WildMenu      guifg=#66d9ef guibg=#000000 gui=bold
 highlight StatusLine    guifg=#ffffff guibg=#4a4a4a gui=bold
 highlight StatusLineNC  guifg=#808080               gui=bold
 
-" for tab
+" for tab page
 highlight TabLine       guifg=#cccccc guibg=#666666
 highlight TabLineFill                 guibg=#666666
 highlight TabLineSel    guifg=#eeeeee guibg=#666666
