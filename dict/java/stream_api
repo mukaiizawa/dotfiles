@@ -1,0 +1,60 @@
+
+JavaのStream API覚書
+java8で追加されたStream APIを用いることにより、
+従来のコードが簡略化できることがある。
+よく使うコードを中心に記す。
+
+# Streamの作成方法
+
+## コレクション
+ new ArrayList<>()
+ .stream();
+
+##  配列
+Arrays
+.stream(arr);
+
+## Map
+new HashMap<>()
+.entrySet()
+.stream();
+
+
+# 中間操作
+
+## ソート処理
+### ソート順の反転
+reversed()によりソートの逆順を指定できる。
+list
+.stream()
+.sorted(Comparator.comparing(x -> x.getStr().length().reversed())
+.collect(Collectors.toList());
+
+### ソート条件の追加
+thenComparing()によりソート条件を追加できる。
+list
+.stream()
+.sorted(Comparator.comparing(x -> x.getStr().length())
+    .thenComparing(x -> x.getStr2().length())
+    .thenComparing(...)
+    ...)
+.collect(Collectors.toList());
+
+
+# 終端操作
+
+## コレクションの生成
+### Listの生成
+あるオブジェクトのリストからそのオブジェクトのプロパティのリストを生成する例を示す。
+list
+.stream()
+.map(x -> x.getMember1())
+.collect(Collectors.toList()));
+
+### Mapの生成
+あるオブジェクトのリストからメンバAをキーに、メンバBを値に持つマップを作成する例を示す。
+list
+.stream()
+.collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
+
+
