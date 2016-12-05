@@ -74,8 +74,9 @@ BigDecimal subtract(BigDecimal subtrahend)
 BigDecimal multiply(BigDecimal multiplicand)
 
 ## 除算
-除算実行時にはスケールを指定すること。
+除算実行時にはスケールと丸めモードを指定すること。
 BigDecimal divide(BigDecimal divisor, RoundingMode roundingMode)
+BigDecimal divide(BigDecimal divisor, int scale, RoundingMode roundingMode)  
 
 ## 剰余
 BigDecimal remainder(BigDecimal divisor)
