@@ -19,21 +19,22 @@ new HashMap<>()
 .entrySet()
 .stream();
 
+## Streamクラスのofメソッドから作成
+Stream.of("a", "b", "c")
+
 
 # 中間操作
 
 ## ソート処理
 ### ソート順の反転
 reversed()によりソートの逆順を指定できる。
-list
-.stream()
+stream
 .sorted(Comparator.comparing(x -> x.getStr().length().reversed())
 .collect(Collectors.toList());
 
 ### ソート条件の追加
 thenComparing()によりソート条件を追加できる。
-list
-.stream()
+stream
 .sorted(Comparator.comparing(x -> x.getStr().length())
     .thenComparing(x -> x.getStr2().length())
     .thenComparing(...)
@@ -44,8 +45,7 @@ list
 ## フィルタ処理
 .filter()は写像後の値が真になるデータのみ抽出する。
 例ではオブジェクトのlengthメソッドが5よりも大きいオブジェクトが抽出される。
-list
-.stream()
+stream
 .filter(x -> x.length() > 5)
 .collect(Collectors.toList());
 
@@ -55,15 +55,20 @@ list
 ## コレクションの生成
 ### Listの生成
 あるオブジェクトのリストからそのオブジェクトのプロパティのリストを生成する例を示す。
-list
-.stream()
+stream
 .map(x -> x.getMember1())
 .collect(Collectors.toList()));
 
 ### Mapの生成
 あるオブジェクトのリストからメンバAをキーに、メンバBを値に持つマップを作成する例を示す。
-list
-.stream()
+stream
 .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
 
+
+# 値の集約
+## 畳み込み
+reduceメソッドを用いて畳み込み処理が行える。
+最初の引数はいわゆるLispにおける:initial-valueのような振る舞いをする。
+stream
+.reduce("", (x1, x2) -> x1 + "," + x2);
 
