@@ -67,8 +67,15 @@ stream
 
 # 値の集約
 ## 畳み込み
+<U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
+Optional<T> reduce(BinaryOperator<T> accumulator)
 reduceメソッドを用いて畳み込み処理が行える。
 最初の引数はいわゆるLispにおける:initial-valueのような振る舞いをする。
 stream
 .reduce("", (x1, x2) -> x1 + "," + x2);
+また、最初の引数を指定しない場合Optionalが返る。
+その際、値の取得にはorElse(T)を使い事が多いのではないだろうか。
+stream
+.reduce((x1, x2) -> x1 + "," + x2)
+.orElse("");
 
