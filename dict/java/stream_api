@@ -41,6 +41,15 @@ list
 .collect(Collectors.toList());
 
 
+## フィルタ処理
+.filter()は写像後の値が真になるデータのみ抽出する。
+例ではオブジェクトのlengthメソッドが5よりも大きいオブジェクトが抽出される。
+list
+.stream()
+.filter(x -> x.length() > 5)
+.collect(Collectors.toList());
+
+
 # 終端操作
 
 ## コレクションの生成
