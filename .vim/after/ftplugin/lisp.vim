@@ -3,6 +3,16 @@ setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
 
+nnoremap <buffer>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
+
+if has('win32') || has ('win64')
+  nnoremap <buffer>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+else
+  nnoremap <buffer>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
+endif
+
+nnoremap <buffer>gcs  :<C-u>lcd %:h<CR> :!sbcl --sysinit .sbclrc --script %<CR>
+
 " stdlib
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character

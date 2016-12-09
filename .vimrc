@@ -182,32 +182,6 @@ nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
 " }}}
-" Mapping for Calling External Program {{{
-
-" Execute current buffer with clisp.
-if executable('clisp')
-  nnoremap <silent>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
-else
-  nnoremap <silent>gcl  :<C-u>echo "clisp: command not found"<CR>
-endif
-
-" Execute current buffer with ccl.
-if executable('wx86cl64')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-elseif executable('lx86cl64')
-  nnoremap <silent>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
-else
-  nnoremap <silent>gcw  :<C-u>echo "ccl: command not found"<CR>
-endif
-
-" Execute current buffer with sbcl.
-if executable('sbcl')
-  nnoremap <silent>gcs  :<C-u>lcd %:h<CR> :!sbcl --script %<CR>
-else
-  nnoremap <silent>gcs  :<C-u>echo "sbcl: command not found"<CR>
-endif
-
-" }}}
 " Mapping for Insert Mode {{{
 
 " End insert mode with jj.
