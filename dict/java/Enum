@@ -1,6 +1,12 @@
 
-列挙型（enum）
-javaでは列挙型を定義することができる。
+Class Enum<E extends Enum<E>>
+
+java.lang.Object
+  java.lang.Enum<E>
+
+# 概要
+列挙を実現するためのクラス。
+全てのenum型は暗黙のうちにEnum抽象クラスを継承している。
 
 # 定義方法
 public enum Type {
