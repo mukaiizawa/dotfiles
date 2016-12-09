@@ -1,20 +1,24 @@
 
-JavaのStream API覚書
-java8で追加されたStream APIを用いることにより、
-従来のコードが簡略化できることがある。
-よく使うコードを中心に記す。
+Interface Stream<K,V>
 
-# Streamの作成方法
+java.lang.Object
+  java.util.stream
 
-## コレクション
+# 概要
+java8で追加されたStreamのAPIを用いることにより、
+streamを実装しているクラスを用いる際に従来のコードを簡略化できることがある。
+
+# Streamの生成方法
+
+## Listから生成
  new ArrayList<>()
  .stream();
 
-##  配列
+##  配列から生成
 Arrays
 .stream(arr);
 
-## Map
+## Mapから生成
 new HashMap<>()
 .entrySet()
 .stream();
