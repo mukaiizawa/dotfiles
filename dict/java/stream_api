@@ -65,8 +65,17 @@ stream
 .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
 
 
-# 値の集約
-## 畳み込み
+### グルーピング化してMapへ
+streamの構成要素
+あるオブジェクトのリストからオブジェクトのメンバの値でグルーピングした
+マップを返す例を示す。
+list // List<Structure> list
+.stream()
+.collect(Collectors.groupingBy(x -> x.getId()));
+
+
+## 値の集約
+### 畳み込み
 <U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
 Optional<T> reduce(BinaryOperator<T> accumulator)
 reduceメソッドを用いて畳み込み処理が行える。
