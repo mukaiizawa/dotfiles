@@ -1,4 +1,4 @@
 Class BigDecimal	~/dotfiles/dict/java/BigDecimal
 Class HashMap	~/dotfiles/dict/java/HashMap
-Interface Stream ~/dotfiles/dict/java/Stream
-Class Enum ~/dotfiles/dict/java/Enum
+Interface Stream	~/dotfiles/dict/java/Stream
+Class Enum	~/dotfiles/dict/java/Enum
