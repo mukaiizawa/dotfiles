@@ -24,7 +24,7 @@ highlight Constant       ctermfg=123   cterm=NONE
 highlight Function       ctermfg=222   cterm=NONE
 
 " Statement
-highlight Statement      ctermfg=172   cterm=NONE
+highlight Statement      ctermfg=208   cterm=NONE
 highlight Exception      ctermfg=197   cterm=NONE
 
 " Preproc
@@ -32,7 +32,7 @@ highlight PreProc        ctermfg=222   cterm=NONE
 
 " Type
 highlight Type           ctermfg=123
-highlight Structure      ctermfg=172
+highlight Structure      ctermfg=208
 
 " Special
 highlight Special        ctermfg=123
@@ -76,7 +76,7 @@ highlight Conceal        ctermfg=244
 highlight SpecialKey     ctermfg=244
 
 highlight Folded         ctermfg=244   ctermbg=237
-highlight MatchParen     ctermfg=black ctermbg=172
+highlight MatchParen     ctermfg=black ctermbg=208
 highlight Search         ctermfg=229   ctermbg=244
 highlight Title          ctermfg=197
 highlight Visual         ctermfg=255   ctermbg=20  cterm=bold
