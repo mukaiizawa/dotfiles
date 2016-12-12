@@ -22,6 +22,7 @@ Arrays
 new HashMap<>()
 .entrySet()
 .stream();
+Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異なることに注意。
 
 ## Streamクラスのofメソッドから作成
 Stream.of("a", "b", "c")
