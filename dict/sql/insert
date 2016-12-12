@@ -20,3 +20,14 @@ SELECT
 FROM <TABLE>
 [WHERE <CONDITION>];
 
+
+Oracleでは複数レコード同時に登録するには以下の文法を用いることができる。
+それにより、INSERTを省くことができる。
+
+INSERT ALL
+INTO <TABLE> VALUES (<VALUE> [,<VALUE>]*)
+INTO <TABLE> VALUES (<VALUE> [,<VALUE>]*)
+...
+INTO <TABLE> VALUES (<VALUE> [,<VALUE>]*)
+
+
