@@ -1,4 +1,6 @@
 
-/* ORACLE */
+# Oracle
+従来のimpとは互換性がない。
+別のDBから表領域を指定し直してインポート可能。
 IMPDP <USER>/<PASS>@<SID> DUMPFILE=<DMPFILE> LOGFILE=<LOGFILE> SCHEMAS=<SCHEMA> [REMAP_TABLESPACE=<FROM>:<TO>]*
 
