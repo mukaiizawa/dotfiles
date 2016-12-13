@@ -19,6 +19,9 @@ Examples:
  (let ((state1 (make-random-state))
        (state2 (make-random-state)))
    (= (random 1000 state1) (random 1000 state2))) =>  true
+ (let ((state1 (make-random-state t))
+       (state2 (make-random-state t)))
+   (= (random 1000 state1) (random 1000 state2))) =>  nil
 
 Side Effects:
 The random-state is modified.
