@@ -31,6 +31,12 @@ Stream.of("a", "b", "c")
 # 中間操作
 
 ## ソート処理
+### ソート条件の指定
+.sorted()を利用してソートできる。
+またComparator.comparing()を利用してソート条件を指定する。
+stream
+.sorted(Comparator.comparing(x -> x.getStr().length())
+
 ### ソート順の反転
 reversed()によりソートの逆順を指定できる。
 stream
