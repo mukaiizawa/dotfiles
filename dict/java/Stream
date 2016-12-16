@@ -37,6 +37,12 @@ Stream.of("a", "b", "c")
 stream
 .sorted(Comparator.comparing(x -> x.getStr().length())
 
+### デフォルトのソート条件
+Comparatableを実装済みのクラスのstreamをソートするときは
+Comparator.naturalOrder(): 昇順
+Comparator.reverseOrder(): 降順 
+を用いることができる。
+
 ### ソート順の反転
 reversed()によりソートの逆順を指定できる。
 stream
