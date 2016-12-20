@@ -64,3 +64,24 @@ public enum Type {
 
 ただし、列挙子名をそのまま取得したいだけなら暗黙的に定義されるname()を使用すればよい。
 
+# switchによる条件分岐
+switch文と組み合わせることにより、見通しの良い条件分岐を実現できる。
+
+switch (type) {
+  case TYPE1:
+    ...
+    break;
+  case TYPE2:
+    ...
+    break;
+
+  ...
+
+  case TYPEN:
+    ...
+    break;
+  default:
+    ...
+    break;
+}
+
