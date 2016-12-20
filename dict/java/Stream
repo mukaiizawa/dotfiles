@@ -23,6 +23,7 @@ new HashMap<>()
 .entrySet()
 .stream();
 Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異なることに注意。
+なお、stream中ではgetKey()とgetValue()を用いてMapのキーと値にアクセスする。
 
 ## Streamクラスのofメソッドから作成
 Stream.of("a", "b", "c")
@@ -76,11 +77,20 @@ stream
 .map(x -> x.getMember1())
 .collect(Collectors.toList()));
 
+#### MapからListの生成
+MapからListへの変換はよくあるため、ここに記す。
+値がtrueのキーからなるListの生成例
+map    // Map<String, boolean>
+.entrySet()
+.stream
+.filter(x -> x.getValue())
+.map(x -> x.getKey())
+.collect(Collectors.toList()));
+
 ### Mapの生成
 あるオブジェクトのリストからメンバAをキーに、メンバBを値に持つマップを作成する例を示す。
 stream
 .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
-
 
 ### グルーピング化してMapへ
 streamの構成要素
