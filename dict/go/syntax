@@ -48,6 +48,14 @@ var i, s, b = 0, "str", true
 // var s string = "str"
 // var b bool = true
 
+## 定数宣言
+const <identifier> (<type>)? = <expression>
+const \(
+  (<identifier> (<type>)? = <expression>)+
+\)
+constを用いて定数を宣言可能．
+<type>がない場合は，右辺で型推論を行う．
+
 ## 省略変数宣言
 <identifier> := <expression>
 <identifier>の型を<expression>から推論する宣言．
