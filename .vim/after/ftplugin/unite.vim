@@ -1,4 +1,3 @@
-
 " normal mode
 nmap <buffer> i     <Plug>(unite_insert_enter)
 nmap <buffer> I     <Plug>(unite_insert_head)
@@ -14,5 +13,3 @@ nmap <buffer> <CR>  <Plug>(unite_do_default_action)
 
 " insert mode
 imap <buffer> <CR> <Plug>(unite_do_default_action)
-
-

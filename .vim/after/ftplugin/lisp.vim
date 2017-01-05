@@ -1,4 +1,3 @@
-
 setlocal nocindent
 setlocal lisp
 setlocal shiftwidth=4
@@ -179,4 +178,3 @@ setlocal lispwords+=:time
 " ltk
 setlocal lispwords+=with-ltk
 setlocal lispwords+=with-ltk-handlers
-
