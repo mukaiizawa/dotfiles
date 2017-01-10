@@ -207,10 +207,16 @@ b := B {}
 b.x = 3    // b.A.xと書かなくてよい．
 と書ける．
 
+### 関数
+<signature> = <identifier> <type>
+<signatures> = <signature1>, <signature2> ... <signatureN>
+func <identifier> (<signatures>) ([<signatures>]) {
+  ...
+}
+
 ## 参照型
 ### ポインタ
 ### スライス
-### 関数
 ### チャネル
 
 ## インターフェース型
