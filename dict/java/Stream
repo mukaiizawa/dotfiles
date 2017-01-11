@@ -1,4 +1,3 @@
-
 Interface Stream<K,V>
 
 java.lang.Object
