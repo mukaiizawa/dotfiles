@@ -208,11 +208,22 @@ b.x = 3    // b.A.xと書かなくてよい．
 と書ける．
 
 ### 関数
-<signature> = <identifier> <type>
-<signatures> = <signature1>, <signature2> ... <signatureN>
-func <identifier> (<signatures>) ([<signatures>]) {
+<signature> = <identifier1>, <identifier2>, ... , <identifierN> <type>
+<signatures> = <signature1>, <signature2>, ... , <signatureN>
+func <identifier> (<signatures>) (<signatures>) {
   ...
 }
+関数宣言は関数名、引数リスト、返り値のリストにより構成される。
+返り値のリストは、関数の返り値がない場合は省略できる。
+また、返り値が1つの場合は括弧を省略できる。
+引数リストと返り値のリストは同じ型が続く限り型の宣言を省略できる。
+そのため、次の2つの記述は同じものと見做される。
+func f(i, j, k int, s, t string) {}
+func f(i int, j int, k int, s string, t string) {}
+関数への引数は値渡しされる。
+ただし、間接的に参照されている引数に変更を加えると呼び出し元にも影響が及ぶ。
+#### 返り値が複数ある関数
+
 
 ## 参照型
 ### ポインタ
