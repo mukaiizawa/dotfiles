@@ -8,7 +8,7 @@ function! Insert(str)
 endfunction
 
 function! InsertDate()
-  call Insert(strftime("%Y/%m/%d"))
+  call Insert(strftime("%Y-%m-%d"))
 endfunction
 
 command! InsertDate call InsertDate()
