@@ -3,3 +3,4 @@ Class Enum	~/dotfiles/dict/java/Enum
 Class HashMap	~/dotfiles/dict/java/HashMap
 Class String	~/dotfiles/dict/java/String
 Interface Stream	~/dotfiles/dict/java/Stream
+Recipe Translate date	~/dotfiles/dict/java/TranslateDate
