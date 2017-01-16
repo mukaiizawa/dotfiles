@@ -6,8 +6,10 @@ Calendar,
 SimpleDateFormat,
 Locale
 辺りを理解していれば簡単な日付操作が可能。
+
 ## 書式指定子
 SimpleDateFormatにて以下の書式指定子が使用できる。
+
 文字, 日付または時刻のコンポーネント,     例
 -------------------------------------------------------------------------------
 G,    紀元,                               AD
@@ -33,12 +35,14 @@ S,    ミリ秒,                             978
 z,    タイムゾーン,                       Pacific Standard Time; PST; GMT-08:00
 Z,    タイムゾーン,                       -0800
 X,    タイムゾーン,                       -08; -0800; -08:00
+
 ## 日付を文字列に変換する
 new SimpleDateFormat("yyyyMMdd").format(new Date())
 new SimpleDateFormat("GGGGy年", new Locale("ja", "JP", "JP")).format(new Date())
 SimpleDateFormatのformatメソッドを用いて、
 Dateオブジェクトを書式を指定して文字列に変換できる。
 第2引数にロケールを渡すことにより、そのロケールに応じた出力が得られる。
+
 ## 文字列から日付に変換する
 new SimpleDateFormat("yyyyMMdd").parse("19990101")
 SimpleDateFormatのparseメソッドを用いて、
@@ -46,6 +50,8 @@ SimpleDateFormatのparseメソッドを用いて、
 変換に失敗した時はParseExceptionが発生する。
 
 # 応用
+日付操作の基本的な事項を組み合わせることにより、様々な処理が可能。
+
 ## 西暦から和暦への変換
 new SimpleDateFormat("GGGGy年M月d日", new Locale("ja", "JP", "JP")).format(
     new SimpleDateFormat("yyyyMMdd").parse("19990101"));
