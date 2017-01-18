@@ -81,7 +81,7 @@ MapからListへの変換はよくあるため、ここに記す。
 値がtrueのキーからなるListの生成例
 map    // Map<String, boolean>
 .entrySet()
-.stream
+.stream()
 .filter(x -> x.getValue())
 .map(x -> x.getKey())
 .collect(Collectors.toList()));
