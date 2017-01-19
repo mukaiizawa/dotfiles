@@ -1,4 +1,3 @@
-
 get()
 
 # 概要
@@ -10,4 +9,3 @@ $(this)
 .find('.class')
 .map(function(i, e) {return $(e).text()})
 .get()
-
