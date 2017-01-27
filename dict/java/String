@@ -50,7 +50,9 @@ boolean contains(CharSequence s)
 boolean matches(String regex)
 containsはレシーバが文字のシーケンスを含む場合にtrueを返す。
 そうでなければfalseを返す。
-matchesは正規表現を使って検索可能な点を除いてcontainsと同じである。
+matchesは指定した文字列が正規表現と完全にマッチした場合にtrueを返す。
+そうでなければfalseを返す。
+matchesは部分一致ではtrueは返らないことに注意せよ。
 
 # 文字列の置換
 String replaceFirst(String regex, String replacement)
