@@ -57,6 +57,14 @@ stream
     .thenComparing(...)
     ...)
   .collect(Collectors.toList());
+下のようにメソッド参照を用いた書き方も可能
+...
+  .sorted(
+      Comparator
+      .comparing((Somethig x) -> x.getStatus().getCd())
+      .thenComparing(Comparator.comparing(Somethig::getOne).reversed())
+      .thenComparing(Comparator.comparing(Somethig::getTwo)))
+...
 
 
 ## フィルタ処理
