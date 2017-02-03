@@ -8,104 +8,86 @@ java8で追加されたStreamのAPIを用いることにより、
 streamを実装しているクラスを用いる際に従来のコードを簡略化できることがある。
 
 # Streamの生成方法
-
 ## Listから生成
-new ArrayList<>()
-  .stream();
-
+    new ArrayList<>()
+      .stream();
 ##  配列から生成
-Arrays
-  .stream(arr);
-
+    Arrays
+      .stream(arr);
 ## Mapから生成
-new HashMap<>()
-  .entrySet()
-  .stream();
+    new HashMap<>()
+      .entrySet()
+      .stream();
 Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異なることに注意。
 なお、stream中ではgetKey()とgetValue()を用いてMapのキーと値にアクセスする。
-
 ## Streamクラスのofメソッドから作成
-Stream.of("a", "b", "c")
-
+    Stream.of("a", "b", "c")
 
 # 中間操作
-
 ## ソート処理
 ### ソート条件の指定
 .sorted()を利用してソートできる。
 またComparator.comparing()を利用してソート条件を指定する。
-stream
-  .sorted(Comparator.comparing(x -> x.getStr().length())
-
+    stream
+      .sorted(Comparator.comparing(x -> x.getStr().length())
 ### デフォルトのソート条件
 Comparatableを実装済みのクラスのstreamをソートするときは
 Comparator.naturalOrder(): 昇順
 Comparator.reverseOrder(): 降順 
 を用いることができる。
-
 ### ソート順の反転
 reversed()によりソートの逆順を指定できる。
-stream
-  .sorted(Comparator.comparing(x -> x.getStr().length().reversed())
-  .collect(Collectors.toList());
-
+    stream
+      .sorted(Comparator.comparing(x -> x.getStr().length().reversed())
+      .collect(Collectors.toList());
 ### ソート条件の追加
 thenComparing()によりソート条件を追加できる。
-stream
-  .sorted(Comparator.comparing(x -> x.getStr().length())
-    .thenComparing(x -> x.getStr2().length())
-    .thenComparing(...)
-    ...)
-  .collect(Collectors.toList());
+    stream
+      .sorted(Comparator.comparing(x -> x.getStr().length())
+        .thenComparing(x -> x.getStr2().length())
+        .thenComparing(...)
+        ...)
+      .collect(Collectors.toList());
 下のようにメソッド参照を用いた書き方も可能
-...
-  .sorted(
-      Comparator
-      .comparing((Somethig x) -> x.getStatus().getCd())
-      .thenComparing(Comparator.comparing(Somethig::getOne).reversed())
-      .thenComparing(Comparator.comparing(Somethig::getTwo)))
-...
-
-
+      .sorted(
+          Comparator
+          .comparing((Somethig x) -> x.getStatus().getCd())
+          .thenComparing(Comparator.comparing(Somethig::getOne).reversed())
+          .thenComparing(Comparator.comparing(Somethig::getTwo)))
 ## フィルタ処理
 .filter()は写像後の値が真になるデータのみ抽出する。
 例ではオブジェクトのlengthメソッドが5よりも大きいオブジェクトが抽出される。
-stream
-  .filter(x -> x.length() > 5)
-  .collect(Collectors.toList());
-
+    stream
+      .filter(x -> x.length() > 5)
+      .collect(Collectors.toList());
 
 # 終端操作
-
 ## コレクションの生成
 ### Listの生成
 あるオブジェクトのリストからそのオブジェクトのプロパティのリストを生成する例を示す。
-stream
-  .map(x -> x.getMember1())
-  .collect(Collectors.toList()));
-
+    stream
+      .map(x -> x.getMember1())
+      .collect(Collectors.toList()));
 #### MapからListの生成
 MapからListへの変換はよくあるため、ここに記す。
 値がtrueのキーからなるListの生成例
-map    // Map<String, boolean>
-  .entrySet()
-  .stream()
-  .filter(x -> x.getValue())
-  .map(x -> x.getKey())
-  .collect(Collectors.toList()));
-
+    map    // Map<String, boolean>
+      .entrySet()
+      .stream()
+      .filter(x -> x.getValue())
+      .map(x -> x.getKey())
+      .collect(Collectors.toList()));
 ### Mapの生成
 あるオブジェクトのリストからメンバAをキーに、メンバBを値に持つマップを作成する例を示す。
-stream
-  .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
-
+    stream
+      .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
 ### グルーピング化してMapへ
 streamの構成要素
 あるオブジェクトのリストからオブジェクトのメンバの値でグルーピングした
 マップを返す例を示す。
-list // List<Structure> list
-  .stream()
-  .collect(Collectors.groupingBy(x -> x.getId()));
+    list
+      .stream()
+      .collect(Collectors.groupingBy(x -> x.getId()));
 
 ## 値の集約
 ### 畳み込み
@@ -113,19 +95,18 @@ list // List<Structure> list
 Optional<T> reduce(BinaryOperator<T> accumulator)
 reduceメソッドを用いて畳み込み処理が行える。
 最初の引数はいわゆるLispにおける:initial-valueのような振る舞いをする。
-stream
-  .reduce("", (x1, x2) -> x1 + "," + x2);
+    stream
+      .reduce("", (x1, x2) -> x1 + "," + x2);
 また、最初の引数を指定しない場合Optionalが返る。
 その際、値の取得にはorElse(T)を使い事が多いのではないだろうか。
-stream
-  .reduce((x1, x2) -> x1 + "," + x2)
-  .orElse("");
-
+    stream
+      .reduce((x1, x2) -> x1 + "," + x2)
+      .orElse("");
 ### 最大値、最小値の取得
 Optional<T> max(Comparator<? super T> comparator)
 Optional<T> min(Comparator<? super T> comparator)
 最大/最小値はそれぞれmax/minを用いて取得できる。
 数字の文字のstreamから最大の数字を取得する例を示す。
-stream
-  .map(x -> Integer.parseInt(x))
-  .min(Comparator.naturalOrder());
+    stream
+      .map(x -> Integer.parseInt(x))
+      .min(Comparator.naturalOrder());

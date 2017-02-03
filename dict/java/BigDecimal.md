@@ -57,21 +57,16 @@ BigDecimal(String val)
 BigDecimal setScale(int newScale)
 BigDecimal setScale(int newScale, RoundingMode roundingMode)
 スケールのみの設定、スケールと丸めモードの同時指定ができる。
-
 ## 加算
 BigDecimal add(BigDecimal augend)
-
 ## 減算
 BigDecimal subtract(BigDecimal subtrahend)
-
 ## 乗算
 BigDecimal multiply(BigDecimal multiplicand)
-
 ## 除算
 除算実行時にはスケールと丸めモードを指定すること。
 BigDecimal divide(BigDecimal divisor, RoundingMode roundingMode)
 BigDecimal divide(BigDecimal divisor, int scale, RoundingMode roundingMode)  
-
 ## 剰余
 BigDecimal remainder(BigDecimal divisor)
 
@@ -88,8 +83,7 @@ BigDecimalには3つの表示用のメソッドが用意されている。
 String toEngineeringString(): 指数が必要な場合、技術表記法で、このBigDecimalの文字列表現を返す。
 String toPlainString(): 指数フィールドなしで、このBigDecimalの文字列表現を返す。
 String toString(): 指数が必要な場合、科学表記法で、このBigDecimalの文字列表現を返す。
-
-実行例
+## 実行例
 input       toPlainString()  toString()  toEngineeringString()
 --------------------------------------------------------------
 0                 0             0                0
