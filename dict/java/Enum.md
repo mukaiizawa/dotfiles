@@ -15,26 +15,7 @@ java.lang.Object
       ...
       ,TYPEN
     }
-
-# 使用例
-定義したenumは関数の呼び出しの型やswitchにて使用することができる。
-    public void foo(Type type) {
-      ...
-    }
-
-    switch(type) {
-      case TYPE1:
-        ...
-        break;
-      case TYPE2:
-        ...
-        break;
-        ...
-      case TYPEN:
-        break;
-    }
-
-# 明示的なコンストラクタを定義する場合
+## 明示的なコンストラクタを定義する場合
 フィールドを設けてコンストラクタやメソッドを定義することができる。
 ただし、列挙子の最後にセミコロンを付加する必要がある
 またコンストラクタはprivateで宣言する必要がある。
@@ -58,7 +39,13 @@ java.lang.Object
     }
 ただし、列挙子名をそのまま取得したいだけなら暗黙的に定義されるname()を使用すればよい。
 
-# switchによる条件分岐
+# 使用例
+## 同値判定
+定義したenumは`==`演算子を用いて比較することができる。
+    if(TYPE1 == type) {
+        ...
+    }
+## switchによる条件分岐
 switch文と組み合わせることにより、見通しの良い条件分岐を実現できる。
     switch (type) {
       case TYPE1:
