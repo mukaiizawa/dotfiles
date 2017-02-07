@@ -1,6 +1,7 @@
 jQuery addClass()	~/dotfiles/dict/js/addClass.md
 jQuery attr()	~/dotfiles/dict/js/attr.md
 jQuery get()	~/dotfiles/dict/js/get.md
+jQuery hasClass()	~/dotfiles/dict/js/hasClass.md
 jQuery hide()	~/dotfiles/dict/js/hide.md
 jQuery html()	~/dotfiles/dict/js/html.md
 jQuery map()	~/dotfiles/dict/js/map.md
