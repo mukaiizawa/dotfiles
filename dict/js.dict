@@ -1,4 +1,6 @@
-jQuery get	~/dotfiles/dict/js/get
-jQuery html	~/dotfiles/dict/js/html
-jQuery map	~/dotfiles/dict/js/map
-jQuery text	~/dotfiles/dict/js/text
+jQuery get	~/dotfiles/dict/js/get.md
+jQuery hide	~/dotfiles/dict/js/hide.md
+jQuery html	~/dotfiles/dict/js/html.md
+jQuery map	~/dotfiles/dict/js/map.md
+jQuery show	~/dotfiles/dict/js/show.md
+jQuery text	~/dotfiles/dict/js/text.md
