@@ -2,7 +2,6 @@ html(), html(val), html(function)
 
 # 概要
 指定した要素のHTMLの取得、書き換えをする。
-textも参照のこと。
 
 # 使用例
 ## 指定した要素のHTML取得
@@ -22,3 +21,6 @@ textも参照のこと。
 その返り値を設定することができる。
     $(this)
     .html(function(){return val;});
+
+# 参照
+text()

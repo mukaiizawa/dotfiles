@@ -19,3 +19,6 @@ htmlも参照。
 htmlと同様にコールバック関数の返り値を用いて値を設定することも可能。
     $(this)
     .text(function() {return val;})
+
+# 参照
+html()

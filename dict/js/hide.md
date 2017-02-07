@@ -9,3 +9,6 @@ hide()
     $('selector').on("click", function() {
       $(this).hide();
     });
+
+# 参照
+show()
