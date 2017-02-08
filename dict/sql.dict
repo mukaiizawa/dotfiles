@@ -1,5 +1,5 @@
 DROP USER	~/dotfiles/dict/sql/drop_user.md
-Design pattern	~/dotfiles/dict/sql/table_design.md
 IMPDP	~/dotfiles/dict/sql/impdp.md
 INSERT	~/dotfiles/dict/sql/insert.md
+Table design pattern	~/dotfiles/dict/sql/table_design.md
 UPDATE	~/dotfiles/dict/sql/update.md
