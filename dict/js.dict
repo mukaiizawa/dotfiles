@@ -4,6 +4,7 @@ jQuery get()	~/dotfiles/dict/js/get.md
 jQuery hasClass()	~/dotfiles/dict/js/hasClass.md
 jQuery hide()	~/dotfiles/dict/js/hide.md
 jQuery html()	~/dotfiles/dict/js/html.md
+jQuery length	~/dotfiles/dict/js/length.md
 jQuery map()	~/dotfiles/dict/js/map.md
 jQuery removeAttr()	~/dotfiles/dict/js/removeAttr.md
 jQuery removeClass()	~/dotfiles/dict/js/removeClass.md
