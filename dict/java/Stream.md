@@ -27,9 +27,13 @@ Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異�
 ## ソート処理
 ### ソート条件の指定
 .sorted()を利用してソートできる。
-またComparator.comparing()を利用してソート条件を指定する。
+ソート条件はComparator.comparing()を利用する。
+メソッド参照形式を用いた記述例を以下に示す。
     stream
-      .sorted(Comparator.comparing(x -> x.getStr().length())
+      .sorted(Comparator.comparing(Car::getSpeed))
+ラムダ式を用いた記述例を以下に示す。
+    stream
+      .sorted(Comparator.comparing(x -> x.getStr().length()))
 ### デフォルトのソート条件
 Comparatableを実装済みのクラスのstreamをソートするときは
 Comparator.naturalOrder(): 昇順
