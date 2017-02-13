@@ -25,16 +25,18 @@ Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異�
 
 # 中間操作
 ## ソート処理
-### ソート条件の指定
-.sorted()を利用してソートできる。
-ソート条件はComparator.comparing()を利用する。
+soretedにComparatorを渡すことにより、その条件でソートを行うことができる。
+### ソートキーを指定する関数の指定によるソート
+Comparator.comparing()
+comparingは関数型を引数に受け取るため、
+複数のシンタックスを用いることができる。
 メソッド参照形式を用いた記述例を以下に示す。
     stream
       .sorted(Comparator.comparing(Car::getSpeed))
 ラムダ式を用いた記述例を以下に示す。
     stream
       .sorted(Comparator.comparing(x -> x.getStr().length()))
-### デフォルトのソート条件
+### デフォルトのソート条件によるソート
 Comparatableを実装済みのクラスのstreamをソートするときは
 Comparator.naturalOrder(): 昇順
 Comparator.reverseOrder(): 降順 
@@ -42,7 +44,7 @@ Comparator.reverseOrder(): 降順
 ### ソート順の反転
 reversed()によりソートの逆順を指定できる。
     stream
-      .sorted(Comparator.comparing(x -> x.getStr().length().reversed())
+      .sorted(Comparator.comparing(x -> x.getStr().length()).reversed())
       .collect(Collectors.toList());
 ### ソート条件の追加
 thenComparing()によりソート条件を追加できる。
@@ -58,6 +60,7 @@ thenComparing()によりソート条件を追加できる。
           .comparing((Somethig x) -> x.getStatus().getCd())
           .thenComparing(Comparator.comparing(Somethig::getOne).reversed())
           .thenComparing(Comparator.comparing(Somethig::getTwo)))
+
 ## フィルタ処理
 .filter()は写像後の値が真になるデータのみ抽出する。
 例ではオブジェクトのlengthメソッドが5よりも大きいオブジェクトが抽出される。
