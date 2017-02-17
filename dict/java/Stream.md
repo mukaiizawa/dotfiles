@@ -97,15 +97,23 @@ streamの構成要素
       .collect(Collectors.groupingBy(x -> x.getId()));
 
 ## 値の集約
+### 条件に最初に一致した値を取得
+Optional<T> findFirst()
+streamの最初の要素を返す。
 ### 畳み込み
-<U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
-Optional<T> reduce(BinaryOperator<T> accumulator)
 reduceメソッドを用いて畳み込み処理が行える。
+畳み込みを行うには初期値を指定する場合はとそうでない場合の二通りの方法がある。
+#### 初期値を指定した畳み込み
+`<U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)`
 最初の引数はいわゆるLispにおける:initial-valueのような振る舞いをする。
     stream
       .reduce("", (x1, x2) -> x1 + "," + x2);
-また、最初の引数を指定しない場合Optionalが返る。
-その際、値の取得にはorElse(T)を使い事が多いのではないだろうか。
+初期値を指定することにより、streamの要素が全くない場合も単位元が返る。
+#### 初期値を指定しない畳み込み
+Optional<T> reduce(BinaryOperator<T> accumulator)
+最初の引数を指定しない場合Optionalが返る。
+orElse(T)を用いることにより、
+単位元を指定した時のreduceの振る舞いと同じようにすることもできる。
     stream
       .reduce((x1, x2) -> x1 + "," + x2)
       .orElse("");
