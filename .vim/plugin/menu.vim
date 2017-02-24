@@ -1,4 +1,3 @@
-
 function! GetStartUpList()
   let s:path = $HOME . '/dotfiles/startup.logo'
   if !filereadable(s:path)
@@ -179,4 +178,3 @@ augroup startupMenu
   autocmd!
   autocmd VimEnter * nested :UniteStartup
 augroup END
-

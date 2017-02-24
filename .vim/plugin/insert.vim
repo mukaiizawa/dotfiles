@@ -1,4 +1,3 @@
-
 function! Insert(str)
   let s:lineStr = getline('.')
   let s:leftPart = s:lineStr[: col('.') - 1 ]

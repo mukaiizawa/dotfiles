@@ -45,4 +45,3 @@ function! s:pyonpyon()
 endfunction
 
 command! PyonPyon call <SID>start_pyonpyon()
-

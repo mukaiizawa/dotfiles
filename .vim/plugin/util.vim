@@ -1,4 +1,3 @@
-
 " FillWhiteSpace {{{
 
 function! FillWhiteSpace(argStr, targetLength)
@@ -19,4 +18,3 @@ endfunction
 
 
 " }}}
-

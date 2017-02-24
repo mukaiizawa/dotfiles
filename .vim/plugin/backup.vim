@@ -35,4 +35,3 @@ augroup makeBackupFile
   autocmd!
   autocmd BufWritePre * nested :MakeBackupFile
 augroup END
-

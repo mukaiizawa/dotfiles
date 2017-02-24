@@ -1,4 +1,3 @@
-
 function! CompleteWords(findstart, base)
   let s:commonPath = $HOME . '/dotfiles/word/common.word'
   let s:path = $HOME . '/dotfiles/word/' . expand("%:e") . '.word'
@@ -53,4 +52,3 @@ endfunction
 
 call unite#define_source(s:unite_source)
 unlet s:unite_source
-

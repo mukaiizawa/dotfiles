@@ -1,4 +1,3 @@
-
 " SurroundWith {{{
 
 function! SurroundWith(leftPart, rightPart, currentLine)
