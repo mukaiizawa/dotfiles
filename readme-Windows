@@ -1,30 +1,32 @@
 The first setup of vim for Windows.
 
-1.Dowonload gvimxx.exe from "www.vim.org"
+# Dowonload gvimxx.exe from "www.vim.org"
 
-2.Install git and Clone "dotfiles" repository from git.
-  $ git clone git://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
-  or
-  $ git clone https://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
+# Install git and Clone "dotfiles" repository from git.
+    $ git clone git://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
+or
+    $ git clone https://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
 
-3.Install mingw to build "vimproc"
+# Execute "symbolic.bat" to make symboliclink.
 
-4.Execute "symbolic.bat" to make symboliclink.
+# Install mingw to build "vimproc"
+## Compile vimproc
+    cd ~\.vim\bundle
+    git clone https://github.com/Shougo/vimproc.vim.git vimproc
+    cd vimproc
+    make -f make_mingw64.mak
+[vimproc releases](https://github.com/Shougo/vimproc.vim/releases)
 
-5.Make gitconfig
-  $ git config user.name "mukaiizawa"
-  $ git config user.email "mukaiizawa@yahoo.co.jp"
-  $ git config --global http.proxy http://proxy.example.com:8080
-
+# Make gitconfig
+    $ git config user.name "mukaiizawa"
+    $ git config user.email "mukaiizawa@yahoo.co.jp"
+    $ git config --global http.proxy http://proxy.example.com:8080
 .gitconfig
-[user]
-  name = mukaiizawa
-  email = mukaiizawa@yahoo.co.jp
-[http]
-  proxy = http://proxy.example.com:8080
-
+    [user]
+      name = mukaiizawa
+      email = mukaiizawa@yahoo.co.jp
+    [http]
+      proxy = http://proxy.example.com:8080
 
 Cautions!
 The path of git is letting it pass. 
-
-
