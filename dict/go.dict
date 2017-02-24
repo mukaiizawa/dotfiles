@@ -1,3 +1,3 @@
-Tutorial Syntax	~/dotfiles/dict/go/syntax
-Tutorial Type	~/dotfiles/dict/go/type
-Package bufio	~/dotfiles/dict/go/bufio
+Tutorial Syntax	~/dotfiles/dict/go/syntax.md
+Tutorial Type	~/dotfiles/dict/go/type.md
+Package bufio	~/dotfiles/dict/go/bufio.md
