@@ -1,4 +1,3 @@
-
 Condition Type UNDEFINED-FUNCTION
 
 Class Precedence List:
@@ -10,4 +9,3 @@ The name of the cell (see cell-error) is the function name which was funbound.
 
 See Also:
 cell-error-name
-

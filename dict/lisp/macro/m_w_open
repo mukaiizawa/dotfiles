@@ -1,4 +1,3 @@
-
 macro WITH-OPEN-FILE
 
 Syntax:
@@ -56,4 +55,3 @@ See the function open.
 
 See Also:
 open, close, pathname, logical-pathname
-

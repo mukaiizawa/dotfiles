@@ -1,4 +1,3 @@
-
 Function CLOSE
 
 Syntax:
@@ -27,4 +26,3 @@ The stream is closed (if necessary). If abort is true and the stream is an outpu
 
 See Also:
 open
-

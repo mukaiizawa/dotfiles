@@ -1,4 +1,3 @@
-
 Restart STORE-VALUE
 
 Data Arguments Required:
@@ -22,4 +21,3 @@ Examples:
 
 See Also:
 invoke-restart, store-value (function), ccase, check-type, ctypecase, use-value (function and restart)
-

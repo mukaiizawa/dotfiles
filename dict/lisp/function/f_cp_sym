@@ -1,4 +1,3 @@
-
 Function COPY-SYMBOL
 
 Syntax:
@@ -45,4 +44,3 @@ make-symbol
 
 Notes:
 Implementors are encouraged not to copy the string which is the symbol's name unnecessarily. Unless there is a good reason to do so, the normal implementation strategy is for the new-symbol's name to be identical to the given symbol's name.
-

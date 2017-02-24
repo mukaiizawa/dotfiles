@@ -1,4 +1,3 @@
-
 Function SUBTYPEP
 
 Syntax:
@@ -71,4 +70,3 @@ If (array <aet-x>) and (array <aet-y>) are different names for exactly the same 
 
 Notes:
 The small differences between the subtypep specification for the array and complex types are necessary because there is no creation function for complexes which allows the specification of the resultant part type independently of the actual types of the parts. Thus in the case of the type complex, the actual type of the parts is referred to, although a number can be a member of more than one type. For example, 17 is of type (mod 18) as well as type (mod 256) and type integer; and 2.3f5 is of type single-float as well as type float.
-

@@ -1,4 +1,3 @@
-
 Library DATABASE-MANAGER
 
 Macro defschema
@@ -41,4 +40,3 @@ Examples:
 
 ;; create `create-table' sql
 (schema->create-sql schema)
-

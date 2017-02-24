@@ -1,4 +1,3 @@
-
 Variable *DEBUG-IO*, *ERROR-OUTPUT*, *QUERY-IO*, *STANDARD-INPUT*, *STANDARD-OUTPUT*, *TRACE-OUTPUT*
 
 Value Type:
@@ -58,4 +57,3 @@ The functions y-or-n-p and yes-or-no-p use query I/O for their input and output.
 In the normal Lisp read-eval-print loop, input is read from standard input. Many input functions, including read and read-char, take a stream argument that defaults to standard input.
 In the normal Lisp read-eval-print loop, output is sent to standard output. Many output functions, including print and write-char, take a stream argument that defaults to standard output.
 A program that wants, for example, to divert output to a file should do so by binding *standard-output*; that way error messages sent to *error-output* can still get to the user by going through *terminal-io* (if *error-output* is bound to *terminal-io*), which is usually what is desired.
-

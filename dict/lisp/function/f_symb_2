@@ -1,4 +1,3 @@
-
 Function SYMBOL-NAME
 
 
@@ -19,4 +18,3 @@ Examples:
 
 Exceptional Situations:
 Should signal an error of type type-error if symbol is not a symbol.
-

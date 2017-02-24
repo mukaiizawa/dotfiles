@@ -1,4 +1,3 @@
-
 Function STRING=, STRING/=, STRING<, STRING>, STRING<=, STRING>=, STRING-EQUAL, STRING-NOT-EQUAL, STRING-LESSP, STRING-GREATERP, STRING-NOT-GREATERP, STRING-NOT-LESSP
 
 Syntax:
@@ -68,4 +67,3 @@ char=
 
 Notes:
 equal calls string= if applied to two strings.
-

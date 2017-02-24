@@ -1,4 +1,3 @@
-
 Variable *PRINT-BASE*, *PRINT-RADIX*
 
 Value Type:
@@ -45,4 +44,3 @@ Might be bound by format, and write, write-to-string.
 
 See Also:
 format, write, write-to-string
-

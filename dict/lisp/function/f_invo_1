@@ -1,4 +1,3 @@
-
 Function INVOKE-RESTART
 
 Syntax:
@@ -37,4 +36,3 @@ find-restart, restart-bind, restart-case, invoke-restart-interactively
 Notes:
 The most common use for invoke-restart is in a handler. It might be used explicitly, or implicitly through invoke-restart-interactively or a restart function.
 Restart functions call invoke-restart, not vice versa. That is, invoke-restart provides primitive functionality, and restart functions are non-essential ``syntactic sugar.''
-

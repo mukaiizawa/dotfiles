@@ -1,4 +1,3 @@
-
 Function HASH-TABLE-COUNT
 
 Syntax:
@@ -35,4 +34,3 @@ The following relationships are functionally correct, although in practice using
                 (incf total))
             table)
    total)
-

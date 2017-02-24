@@ -1,4 +1,3 @@
-
 Macro POP
 
 Syntax:
@@ -29,4 +28,3 @@ Notes:
 The effect of (pop place) is roughly equivalent to
  (prog1 (car place) (setf place (cdr place)))
 except that the latter would evaluate any subforms of place three times, while pop evaluates them only once.
-

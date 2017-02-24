@@ -1,4 +1,3 @@
-
 Macro PROG, PROG*
 
 Syntax:
@@ -76,4 +75,3 @@ Notes:
  prog can be explained in terms of block, let, and tagbody as follows:
  (prog variable-list declaration . body)
     ==  (block nil (let variable-list declaration (tagbody . body)))
-

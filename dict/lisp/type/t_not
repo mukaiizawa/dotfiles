@@ -1,4 +1,3 @@
-
 Type Specifier NOT
 
 Compound Type Specifier Kind:
@@ -14,4 +13,3 @@ Compound Type Specifier Description:
 This denotes the set of all objects that are not of the type typespec.
 The argument is required, and cannot be *.
 The symbol not is not valid as a type specifier.
-

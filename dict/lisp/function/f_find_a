@@ -1,4 +1,3 @@
-
 Function FIND-ALL-SYMBOLS
 
 Syntax:
@@ -25,4 +24,3 @@ OR=>  (CAR TEMP::CAR VEHICLES:CAR)
 
 See Also:
 find-symbol
-

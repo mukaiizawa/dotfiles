@@ -1,4 +1,3 @@
-
 Variable *MODULES*
 
 Value Type:
@@ -18,4 +17,3 @@ provide, require
 
 Notes:
 The variable *modules* is deprecated.
-

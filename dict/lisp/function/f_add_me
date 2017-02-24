@@ -1,4 +1,3 @@
-
 Standard Generic Function ADD-METHOD
 
 Syntax:
@@ -21,4 +20,3 @@ If method is a method object of another generic function, an error of type error
 
 See Also:
 defmethod, defgeneric, find-method, remove-method
-

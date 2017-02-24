@@ -1,4 +1,3 @@
-
 Type SIMPLE-STRING
 
 Supertypes:
@@ -18,4 +17,3 @@ Compound Type Specifier Arguments:
 
 Compound Type Specifier Description:
 This denotes the union of all types (simple-array c (size)) for all subtypes c of character; that is, the set of simple strings of size size.
-

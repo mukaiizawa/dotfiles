@@ -1,4 +1,3 @@
-
 Condition Type TYPE-ERROR
 
 Class Precedence List:
@@ -9,4 +8,3 @@ The type type-error represents a situation in which an object is not of the expe
 
 See Also:
 type-error-datum, type-error-expected-type
-

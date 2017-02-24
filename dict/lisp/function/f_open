@@ -1,4 +1,3 @@
-
 Function OPEN
 
 Syntax:
@@ -101,4 +100,3 @@ open does not automatically close the file when an abnormal exit occurs.
 When element-type is a subtype of character, read-char and/or write-char can be used on the resulting file stream.
 When element-type is a subtype of integer, read-byte and/or write-byte can be used on the resulting file stream.
 When element-type is :default, the type can be determined by using stream-element-type.
-

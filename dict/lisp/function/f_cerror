@@ -1,4 +1,3 @@
-
 Function CERROR
 
 Syntax:
@@ -118,4 +117,3 @@ If datum is a condition type rather than a string, the format directive ~* may b
 (cerror 'enter a new value to replace ~*~s'
         'not-a-number
         :argument a)
-

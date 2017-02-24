@@ -1,4 +1,3 @@
-
 (setq *print-pretty* t)
 
 (defmacro make-module-pathname (str)
@@ -22,4 +21,3 @@
 (make-module-pathname "stdlib")
 (make-module-pathname "test-utils")
 (make-module-pathname "xml-manager")
-

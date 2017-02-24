@@ -1,4 +1,3 @@
-
 Constant Variable ARRAY-TOTAL-SIZE-LIMIT
 
 Constant Value:
@@ -10,4 +9,3 @@ The actual limit on the array total size imposed by the implementation might var
 
 See Also:
 make-array, array-element-type
-

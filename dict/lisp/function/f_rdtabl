@@ -1,4 +1,3 @@
-
 Accessor READTABLE-CASE
 
 Syntax:
@@ -23,4 +22,3 @@ See Also:
 
 Notes:
 copy-readtable copies the readtable case of the readtable.
-

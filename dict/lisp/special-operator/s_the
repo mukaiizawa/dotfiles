@@ -1,4 +1,3 @@
-
 Special Operator THE
 
 Syntax:
@@ -44,4 +43,3 @@ The values type specifier can be used to indicate the types of multiple values:
  (the (values string t)
       (gethash the-key the-string-table))
 setf can be used with the type declarations. In this case the declaration is transferred to the form that specifies the new value. The resulting setf form is then analyzed.
-

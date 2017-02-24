@@ -1,4 +1,3 @@
-
 Function DISASSEMBLE
 
 Syntax:
@@ -23,4 +22,3 @@ Affected By:
 
 Exceptional Situations:
 Should signal an error of type type-error if fn is not an extended function designator or a lambda expression.
-

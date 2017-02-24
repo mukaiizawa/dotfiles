@@ -1,4 +1,3 @@
-
 Function FUNCTIONP
 
 Syntax:
@@ -24,4 +23,3 @@ Examples:
 
 Notes:
  (functionp object) ==  (typep object 'function)
-

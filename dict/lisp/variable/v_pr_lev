@@ -1,4 +1,3 @@
-
 Variable *PRINT-LEVEL*, *PRINT-LENGTH*
 
 Value Type:
@@ -60,4 +59,3 @@ Examples:
 
 See Also:
 write
-

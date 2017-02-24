@@ -1,4 +1,3 @@
-
 Macro PUSHNEW
 
 Syntax:
@@ -45,4 +44,3 @@ The effect of
 is roughly equivalent to
  (setf place (adjoin item place :test p))
 except that the subforms of place are evaluated only once, and item is evaluated before place.
-

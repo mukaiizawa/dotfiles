@@ -1,4 +1,3 @@
-
 Function EVENP, ODDP
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if integer is not an integer.
 Notes:
  (evenp integer) ==  (not (oddp integer))
  (oddp integer)  ==  (not (evenp integer))
-

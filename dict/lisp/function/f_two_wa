@@ -1,4 +1,3 @@
-
 Function TWO-WAY-STREAM-INPUT-STREAM, TWO-WAY-STREAM-OUTPUT-STREAM
 
 Syntax:
@@ -13,4 +12,3 @@ output-stream---an output stream.
 Description:
 two-way-stream-input-stream returns the stream from which two-way-stream receives input.
 two-way-stream-output-stream returns the stream to which two-way-stream sends output.
-

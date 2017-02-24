@@ -1,4 +1,3 @@
-
 Macro RETURN
 
 Syntax:
@@ -25,4 +24,3 @@ Notes:
  (return) ==  (return-from nil)
  (return form) ==  (return-from nil form)
 The implicit blocks established by macros such as do are often named nil, so that return can be used to exit from such forms.
-

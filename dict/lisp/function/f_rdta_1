@@ -1,4 +1,3 @@
-
 Function READTABLEP
 
 Syntax:
@@ -18,4 +17,3 @@ Examples:
 
 Notes:
  (readtablep object) ==  (typep object 'readtable)
-

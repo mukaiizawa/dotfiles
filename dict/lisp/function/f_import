@@ -1,4 +1,3 @@
-
 Function IMPORT
 
 Syntax:
@@ -31,4 +30,3 @@ import signals a correctable error of type package-error if any of the symbols t
 
 See Also:
 shadow, export
-

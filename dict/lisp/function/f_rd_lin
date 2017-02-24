@@ -1,4 +1,3 @@
-
 Function READ-LINE
 
 Syntax:
@@ -41,4 +40,3 @@ read
 
 Notes:
 The corresponding output function is write-line.
-

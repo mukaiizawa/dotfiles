@@ -1,4 +1,3 @@
-
 Variable +, ++, +++
 
 Value Type:
@@ -27,4 +26,3 @@ Lisp read-eval-print loop.
 
 See Also:
 - (variable), * (variable), / (variable)
-

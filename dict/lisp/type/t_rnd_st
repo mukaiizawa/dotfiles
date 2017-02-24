@@ -1,4 +1,3 @@
-
 System Class RANDOM-STATE
 
 Class Precedence List:
@@ -10,4 +9,3 @@ Implementations are required to provide a read syntax for objects of type random
 
 See Also:
 *random-state*, random
-

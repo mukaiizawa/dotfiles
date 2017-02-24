@@ -1,4 +1,3 @@
-
 Accessor SYMBOL-PLIST
 
 Syntax:
@@ -30,4 +29,3 @@ get, remprop
 
 Notes:
 The use of setf should be avoided, since a symbol's property list is a global resource that can contain information established and depended upon by unrelated programs in the same Lisp image.
-

@@ -1,4 +1,3 @@
-
 Function INVOKE-RESTART-INTERACTIVELY
 
 Syntax:
@@ -41,4 +40,3 @@ find-restart, invoke-restart, restart-case, restart-bind
 
 Notes:
 invoke-restart-interactively is used internally by the debugger and may also be useful in implementing other portable, interactive debugging tools.
-

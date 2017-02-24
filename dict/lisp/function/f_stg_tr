@@ -1,4 +1,3 @@
-
 Function STRING-TRIM, STRING-LEFT-TRIM, STRING-RIGHT-TRIM
 
 
@@ -31,4 +30,3 @@ Examples:
 
 Affected By:
 The implementation.
-

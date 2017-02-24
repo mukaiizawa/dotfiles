@@ -1,4 +1,3 @@
-
 Function DIRECTORY
 
 Syntax:
@@ -24,4 +23,3 @@ pathname,  logical-pathname,  ensure-directories-exist
 Notes:
 If the pathspec is not wild, the resulting list will contain either zero or one elements.
 Common Lisp specifies ``&key'' in the argument list to directory even though no standardized keyword arguments to directory are defined. ``:allow-other-keys t'' may be used in conforming programs in order to quietly ignore any additional keywords which are passed by the program but not supported by the implementation.
-

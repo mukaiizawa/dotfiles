@@ -1,4 +1,3 @@
-
 Type SIMPLE-BASE-STRING
 
 Supertypes:
@@ -18,4 +17,3 @@ Compound Type Specifier Arguments:
 
 Compound Type Specifier Description:
 This is equivalent to the type (simple-array base-char (size)); that is, the set of simple base strings of size size.
-

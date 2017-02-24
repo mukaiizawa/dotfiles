@@ -1,4 +1,3 @@
-
 Standard Generic Function REINITIALIZE-INSTANCE
 
 Syntax:
@@ -26,4 +25,3 @@ initialize-instance, shared-initialize, update-instance-for-redefined-class, upd
 
 Notes:
 Initargs are declared as valid by using the :initarg option to defclass, or by defining methods for reinitialize-instance or shared-initialize. The keyword name of each keyword parameter specifier in the lambda list of any method defined on reinitialize-instance or shared-initialize is declared as a valid initialization argument name for all classes for which that method is applicable.
-

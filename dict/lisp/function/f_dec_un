@@ -1,4 +1,3 @@
-
 Function DECODE-UNIVERSAL-TIME
 
 Syntax:
@@ -31,4 +30,3 @@ Implementation-dependent mechanisms for calculating when or if daylight savings 
 
 See Also:
 encode-universal-time, get-universal-time
-

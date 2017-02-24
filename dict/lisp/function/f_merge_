@@ -1,4 +1,3 @@
-
 Function MERGE-PATHNAMES
 
 Syntax:
@@ -36,4 +35,3 @@ See Also:
 
 Notes:
 The net effect is that if just a name is supplied, the host, device, directory, and type will come from default-pathname, but the version will come from default-version. If nothing or just a directory is supplied, the name, type, and version will come from default-pathname together.
-

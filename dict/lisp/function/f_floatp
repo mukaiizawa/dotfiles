@@ -1,4 +1,3 @@
-
 Function FLOATP
 
 Syntax:
@@ -20,4 +19,3 @@ Examples:
 
 Notes:
  (floatp object) ==  (typep object 'float)
-

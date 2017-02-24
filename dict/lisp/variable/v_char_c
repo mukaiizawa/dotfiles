@@ -1,4 +1,3 @@
-
 Constant Variable CHAR-CODE-LIMIT
 
 Constant Value:
@@ -12,4 +11,3 @@ char-code
 
 Notes:
 The value of char-code-limit might be larger than the actual number of characters supported by the implementation.
-

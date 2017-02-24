@@ -1,4 +1,3 @@
-
 Function FILL
 
 Syntax:
@@ -32,4 +31,3 @@ replace, nsubstitute
 
 Notes:
  (fill sequence item) == (nsubstitute-if item (constantly t) sequence)
-

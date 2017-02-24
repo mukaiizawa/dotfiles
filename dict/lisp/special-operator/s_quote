@@ -1,4 +1,3 @@
-
 Special Operator QUOTE
 
 Syntax:
@@ -33,4 +32,3 @@ Examples:
 Notes:
 The textual notation 'object is equivalent to (quote object); see Section 3.2.1 (Compiler Terminology).
 Some objects, called self-evaluating objects, do not require quotation by quote. However, symbols and lists are used to represent parts of programs, and so would not be useable as constant data in a program without quote. Since quote suppresses the evaluation of these objects, they become data rather than program.
-

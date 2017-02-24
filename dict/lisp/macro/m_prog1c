@@ -1,4 +1,3 @@
-
 Macro PROG1, PROG2
 
 Syntax:
@@ -49,4 +48,3 @@ Notes:
 prog1 and prog2 are typically used to evaluate one or more forms with side effects and return a value that must be computed before some or all of the side effects happen.
  (prog1 form*) ==  (values (multiple-value-prog1 form*))
  (prog2 form1 form*) ==  (let () form1 (prog1 form*))
-

@@ -1,4 +1,3 @@
-
 Macro CASE, CCASE, ECASE
 
 Syntax:
@@ -83,4 +82,3 @@ Notes:
 (let ((#1=#:g0001 test-key))
   (cond {((member #1# '(key*)) form*)}*))
 The specific error message used by ecase and ccase can vary between implementations. In situations where control of the specific wording of the error message is important, it is better to use case with an otherwise-clause that explicitly signals an error with an appropriate message.
-

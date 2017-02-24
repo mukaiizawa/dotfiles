@@ -1,4 +1,3 @@
-
 Function SXHASH
 
 Syntax:
@@ -32,4 +31,3 @@ Many common hashing needs are satisfied by make-hash-table and the related funct
 The hash codes returned by sxhash are not necessarily related to any hashing strategy used by any other function in Common Lisp.
 For objects of types that equal compares with eq, item 3 requires that the hash-code be based on some immutable quality of the identity of the object. Another legitimate implementation technique would be to have sxhash assign (and cache) a random hash code for these objects, since there is no requirement that similar but non-eq objects have the same hash code.
 Although similarity is defined for symbols in terms of both the symbol's name and the packages in which the symbol is accessible, item 3 disallows using package information to compute the hash code, since changes to the package status of a symbol are not visible to equal.
-

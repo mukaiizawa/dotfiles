@@ -1,4 +1,3 @@
-
 Function FILE-ERROR-PATHNAME
 
 Syntax:
@@ -13,4 +12,3 @@ Returns the ``offending pathname'' of a condition of type file-error.
 
 See Also:
 file-error
-

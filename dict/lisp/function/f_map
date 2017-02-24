@@ -1,4 +1,3 @@
-
 Function MAP
 
 Syntax:
@@ -34,4 +33,3 @@ Exceptional Situations:
 An error of type type-error must be signaled if the result-type is not a recognizable subtype of list, not a recognizable subtype of vector, and not nil.
 Should be prepared to signal an error of type type-error if any sequence is not a proper sequence.
 An error of type type-error should be signaled if result-type specifies the number of elements and the minimum length of the sequences is different from that number.
-

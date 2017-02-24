@@ -1,4 +1,3 @@
-
 Declaration FTYPE
 
 Syntax:
@@ -24,4 +23,3 @@ ftype   declarations can be free declarations or bound declarations. ftype decla
 
 See Also:
 declare, declaim, proclaim
-

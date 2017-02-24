@@ -1,4 +1,3 @@
-
 Special Operator PROGV
 
 Syntax:
@@ -28,4 +27,3 @@ let
 
 Notes:
 Among other things, progv is useful when writing interpreters for languages embedded in Lisp; it provides a handle on the mechanism for binding dynamic variables.
-

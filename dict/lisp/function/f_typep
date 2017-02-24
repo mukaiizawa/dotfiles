@@ -1,4 +1,3 @@
-
 Function TYPEP
 
 Syntax:
@@ -48,4 +47,3 @@ type-of, upgraded-array-element-type, upgraded-complex-part-type
 
 Notes:
 Implementations are encouraged to recognize and optimize the case of (typep x (the class y)), since it does not involve any need for expansion of deftype information at runtime.
-

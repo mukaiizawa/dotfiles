@@ -1,4 +1,3 @@
-
 Macro DEFPARAMETER, DEFVAR
 
 Syntax:
@@ -83,4 +82,3 @@ defparameter and defvar might be defined as follows:
            ,(when documentation-p
               `(setf (documentation ',name 'variable) ',documentation))
            ',name))
-

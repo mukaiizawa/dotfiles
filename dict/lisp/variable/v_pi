@@ -1,4 +1,3 @@
-
 Constant Variable PI
 
 Value:
@@ -21,4 +20,3 @@ Examples:
 
 Notes:
 An approximation to <PI> in some other precision can be obtained by writing (float pi x), where x is a float of the desired precision, or by writing (coerce pi type), where type is the desired type, such as short-float.
-

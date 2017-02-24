@@ -1,4 +1,3 @@
-
 Function PEEK-CHAR
 
 Syntax:
@@ -35,4 +34,3 @@ Exceptional Situations:
 If eof-error-p is true and an end of file[2] occurs an error of type end-of-file is signaled.
 If peek-type is a character, an end of file[2] occurs, and eof-error-p is true, an error of type end-of-file is signaled.
 If recursive-p is true and an end of file[2] occurs, an error of type end-of-file is signaled.
-

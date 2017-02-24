@@ -1,4 +1,3 @@
-
 Function FBOUNDP
 
 Syntax:
@@ -42,4 +41,3 @@ It is permissible to call symbol-function on any symbol that is fbound.
 fboundp is sometimes used to ``guard'' an access to the function cell, as in:
 (if (fboundp x) (symbol-function x))
 Defining a setf expander F does not cause the setf function (setf F) to become defined.
-

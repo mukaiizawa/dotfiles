@@ -1,4 +1,3 @@
-
 Accessor BIT, SBIT
 
 Syntax:
@@ -33,4 +32,3 @@ aref
 Notes:
 bit and sbit are like aref except that they require arrays to be a bit array and a simple bit array, respectively.
 bit and sbit, unlike char and schar, allow the first argument to be an array of any rank.
-

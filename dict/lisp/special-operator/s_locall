@@ -1,4 +1,3 @@
-
 Special Operator LOCALLY
 
 Syntax:
@@ -47,4 +46,3 @@ declare
 Notes:
 The special declaration may be used with locally to affect references to, rather than bindings of, variables.
 If a locally form is a top level form, the body forms are also processed as top level forms. See Section 3.2.3 (File Compilation).
-

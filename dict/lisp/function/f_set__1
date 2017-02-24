@@ -1,4 +1,3 @@
-
 Function SET-DISPATCH-MACRO-CHARACTER, GET-DISPATCH-MACRO-CHARACTER
 
 Syntax:
@@ -51,4 +50,3 @@ See Also:
 
 Notes:
 It is necessary to use make-dispatch-macro-character to set up the dispatch character before specifying its sub-characters.
-

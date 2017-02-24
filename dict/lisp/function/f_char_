@@ -1,4 +1,3 @@
-
 Accessor CHAR, SCHAR
 
 Syntax:
@@ -38,4 +37,3 @@ aref, elt
 
 Notes:
  (char s j) ==  (aref (the string s) j)
-

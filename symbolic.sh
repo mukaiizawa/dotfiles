@@ -12,4 +12,3 @@ ln -s ~/dotfiles/.vimshrc   ~/.vimshrc
 ln -s ~/dotfiles/.gitignore ~/.gitignore
 ln -s ~/dotfiles/.ccl-init.lisp ~/.ccl-init.lisp
 #ln -s ~/dotfiles/.minvimrc ~/.vimrc
-

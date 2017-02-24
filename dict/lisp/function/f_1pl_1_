@@ -1,4 +1,3 @@
-
 Function 1+, 1-
 
 Syntax:
@@ -28,4 +27,3 @@ Notes:
  (1+ number) ==  (+ number 1)
  (1- number) ==  (- number 1)
  Implementors are encouraged to make the performance of both the previous expressions be the same.
-

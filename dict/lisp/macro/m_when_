@@ -1,4 +1,3 @@
-
 Macro WHEN, UNLESS
 
 Syntax:
@@ -52,4 +51,3 @@ Notes:
  (unless test {form}+) ==  (cond ((not test) {form}+))
  (unless test {form}+) ==  (if test nil (progn {form}+))
  (unless test {form}+) ==  (when (not test) {form}+)
-

@@ -1,4 +1,3 @@
-
 Function BYTE, BYTE-SIZE, BYTE-POSITION
 
 Syntax:
@@ -29,4 +28,3 @@ Notes:
 A byte of size of 0 is permissible; it refers to a byte of width zero. For example,
  (ldb (byte 0 3) #o7777) =>  0
  (dpb #o7777 (byte 0 3) 0) =>  0
-

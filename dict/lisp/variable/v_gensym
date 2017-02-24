@@ -1,4 +1,3 @@
-
 Variable *GENSYM-COUNTER*
 
 Value Type:
@@ -19,4 +18,3 @@ gensym
 
 Notes:
 The ability to pass a numeric argument to gensym has been deprecated; explicitly binding *gensym-counter* is now stylistically preferred.
-

@@ -1,4 +1,3 @@
-
 System Class STRING
 
 Class Precedence List:
@@ -18,4 +17,3 @@ size---a non-negative fixnum, or the symbol *.
 
 Compound Type Specifier Description:
 This denotes the union of all types (array c (size)) for all subtypes c of character; that is, the set of strings of size size.
-

@@ -1,4 +1,3 @@
-
 Function MAPC, MAPCAR, MAPCAN, MAPL, MAPLIST, MAPCON
 
 Syntax:
@@ -63,4 +62,3 @@ Should be prepared to signal an error of type type-error if any list is not a pr
 
 See Also:
 dolist, map
-

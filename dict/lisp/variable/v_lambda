@@ -1,4 +1,3 @@
-
 Constant Variable LAMBDA-LIST-KEYWORDS
 
 Constant Value:
@@ -9,4 +8,3 @@ A list of all the lambda list keywords used in the implementation, including the
 
 See Also:
 defun, flet, defmacro, macrolet
-

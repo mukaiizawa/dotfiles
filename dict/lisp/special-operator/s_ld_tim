@@ -1,4 +1,3 @@
-
 Special Operator LOAD-TIME-VALUE
 
 Syntax:
@@ -58,4 +57,3 @@ compile-file, compile, eval
 Notes:
 load-time-value must appear outside of quoted structure in a ``for evaluation'' position. In situations which would appear to call for use of load-time-value within a quoted structure, the backquote reader macro is probably called for; see Section 2.4.6 (Backquote).
 Specifying nil for read-only-p is not a way to force an object to become modifiable if it has already been made read-only. It is only a way to say that, for an object that is modifiable, this operation is not intended to make that object read-only.
-

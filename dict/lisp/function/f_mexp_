@@ -1,4 +1,3 @@
-
 Function MACROEXPAND, MACROEXPAND-1
 
 Syntax:
@@ -86,4 +85,3 @@ See Also:
 
 Notes:
 Neither macroexpand nor macroexpand-1 makes any explicit attempt to expand macro forms that are either subforms of the form or subforms of the expansion. Such expansion might occur implicitly, however, due to the semantics or implementation of the macro function.
-

@@ -1,4 +1,3 @@
-
 Function SPECIAL-OPERATOR-P
 
 Syntax:
@@ -21,4 +20,3 @@ Should signal type-error if its argument is not a symbol.
 
 Notes:
 Historically, this function was called special-form-p. The name was finally declared a misnomer and changed, since it returned true for special operators, not special forms.
-

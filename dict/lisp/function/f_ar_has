@@ -1,4 +1,3 @@
-
 Function ARRAY-HAS-FILL-POINTER-P
 
 Syntax:
@@ -27,4 +26,3 @@ make-array, fill-pointer
 
 Notes:
 Since arrays of rank other than one cannot have a fill pointer, array-has-fill-pointer-p always returns nil when its argument is such an array.
-

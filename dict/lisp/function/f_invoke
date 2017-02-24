@@ -1,4 +1,3 @@
-
 Function INVOKE-DEBUGGER
 
 Syntax:
@@ -29,4 +28,3 @@ Affected By:
 
 See Also:
 error, break
-

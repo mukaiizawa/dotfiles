@@ -1,4 +1,3 @@
-
 Local Function CALL-NEXT-METHOD
 
 Syntax:
@@ -27,4 +26,3 @@ When providing arguments to call-next-method, the following rule must be satisfi
 
 See Also:
 define-method-combination, defmethod, next-method-p, no-next-method, call-method.
-

@@ -1,4 +1,3 @@
-
 Function ALPHANUMERICP
 
 Syntax:
@@ -30,4 +29,3 @@ Notes:
 Alphanumeric characters are graphic as defined by graphic-char-p. The alphanumeric characters are a subset of the graphic characters. The standard characters A through Z, a through z, and 0 through 9 are alphanumeric characters.
  (alphanumericp x)
    ==  (or (alpha-char-p x) (not (null (digit-char-p x))))
-

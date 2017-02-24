@@ -1,4 +1,3 @@
-
 Function ZEROP
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if number is not a number.
 
 Notes:
  (zerop number) ==  (= number 0)
-

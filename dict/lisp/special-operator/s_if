@@ -1,4 +1,3 @@
-
 Special Operator IF
 
 Syntax:
@@ -34,4 +33,3 @@ cond, unless, when
 Notes:
  (if test-form then-form else-form)
  ==  (cond (test-form then-form) (t else-form))
-

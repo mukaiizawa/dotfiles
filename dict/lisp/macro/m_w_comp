@@ -1,4 +1,3 @@
-
 Macro WITH-COMPILATION-UNIT
 
 Syntax:
@@ -29,4 +28,3 @@ Note however that if the implementation does not normally defer any warnings, us
 
 See Also:
 compile, compile-file
-

@@ -1,4 +1,3 @@
-
 System Class TWO-WAY-STREAM
 
 Class Precedence List:
@@ -9,4 +8,3 @@ A bidirectional composite stream that receives its input from an associated inpu
 
 See Also:
 make-two-way-stream, two-way-stream-input-stream, two-way-stream-output-stream
-

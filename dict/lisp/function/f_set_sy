@@ -1,4 +1,3 @@
-
 Function SET-SYNTAX-FROM-CHAR
 
 Syntax:
@@ -30,4 +29,3 @@ set-macro-character, make-dispatch-macro-character
 
 Notes:
 The constituent traits of a character are ``hard wired'' into the parser for extended tokens. For example, if the definition of S is copied to *, then * will become a constituent that is alphabetic[2] but that cannot be used as a short float exponent marker. For further information, see Section 2.1.4.2 (Constituent Traits).
-

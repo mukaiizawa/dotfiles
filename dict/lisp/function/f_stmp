@@ -1,4 +1,3 @@
-
 Function STREAMP
 
 Syntax:
@@ -18,4 +17,3 @@ Examples:
 
 Notes:
  (streamp object) ==  (typep object 'stream)
-

@@ -1,4 +1,3 @@
-
 Accessor MASK-FIELD
 
 Syntax:
@@ -30,4 +29,3 @@ Notes:
  (logbitp j (mask-field (byte s p) n))
    ==  (and (>= j p) (< j s) (logbitp j n))
  (mask-field bs n) ==  (logand n (dpb -1 bs 0))
-

@@ -1,4 +1,3 @@
-
 Function SYNONYM-STREAM-SYMBOL
 
 Syntax:
@@ -13,4 +12,3 @@ Returns the symbol whose symbol-value the synonym-stream is using.
 
 See Also:
 make-synonym-stream
-

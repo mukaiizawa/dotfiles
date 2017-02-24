@@ -1,4 +1,3 @@
-
 Function LOGAND, LOGANDC1, LOGANDC2, LOGEQV, LOGIOR, LOGNAND, LOGNOR, LOGNOT, LOGORC1, LOGORC2, LOGXOR
 
 Syntax:
@@ -88,4 +87,3 @@ Because the following functions are not associative, they take exactly two argum
  (logiorc1 n1 n2) ==  (logior (lognot n1) n2)
  (logiorc2 n1 n2) ==  (logior n1 (lognot n2))
  (logbitp j (lognot x)) ==  (not (logbitp j x))
-

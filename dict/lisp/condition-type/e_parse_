@@ -1,4 +1,3 @@
-
 Condition Type PARSE-ERROR
 
 Class Precedence List:
@@ -9,4 +8,3 @@ The type parse-error consists of error conditions that are related to parsing.
 
 See Also:
 parse-namestring, reader-error
-

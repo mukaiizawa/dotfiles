@@ -1,4 +1,3 @@
-
 Function READ-SEQUENCE
 
 Syntax:
@@ -31,4 +30,3 @@ write-sequence, read-line
 
 Notes:
 read-sequence is identical in effect to iterating over the indicated subsequence and reading one element at a time from stream and storing it into sequence, but may be more efficient than the equivalent loop. An efficient implementation is more likely to exist for the case where the sequence is a vector with the same element type as the stream.
-

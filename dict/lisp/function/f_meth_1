@@ -1,4 +1,3 @@
-
 Function METHOD-COMBINATION-ERROR
 
 Syntax:
@@ -21,4 +20,3 @@ Affected By:
 
 See Also:
 define-method-combination
-

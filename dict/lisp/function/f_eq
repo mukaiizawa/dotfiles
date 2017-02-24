@@ -1,4 +1,3 @@
-
 Function EQ
 
 Syntax:
@@ -61,4 +60,3 @@ get             remf
 get-properties  remprop
 
 Figure 5-11.  Operators that always prefer EQ over EQL
-

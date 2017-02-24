@@ -1,4 +1,3 @@
-
 Function READ-BYTE
 
 Syntax:
@@ -34,4 +33,3 @@ If there are no bytes remaining in the stream and eof-error-p is true, an error 
 
 See Also:
 read-char,  read-sequence,  write-byte
-

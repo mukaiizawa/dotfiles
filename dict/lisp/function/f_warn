@@ -1,4 +1,3 @@
-
 Function WARN
 
 Syntax:
@@ -54,4 +53,3 @@ If datum is a condition type, the result of (apply #'make-condition datum argume
 
 See Also:
 *break-on-signals*, muffle-warning, signal
-

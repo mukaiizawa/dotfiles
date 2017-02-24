@@ -1,4 +1,3 @@
-
 Function MAP-INTO
 
 Syntax:
@@ -39,4 +38,3 @@ map-into could be defined by:
                          (mapcar #'(lambda (seq) (elt seq index))
                                  sequences))))
    result-sequence)
-

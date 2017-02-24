@@ -1,4 +1,3 @@
-
 Function GET-UNIVERSAL-TIME, GET-DECODED-TIME
 
 Syntax:
@@ -35,4 +34,3 @@ decode-universal-time, encode-universal-time
 Notes:
  (get-decoded-time) ==  (decode-universal-time (get-universal-time))
 No implementation is required to have a way to verify that the time returned is correct. However, if an implementation provides a validity check (e.g., the failure to have properly initialized the system clock can be reliably detected) and that validity check fails, the implementation is strongly encouraged (but not required) to signal an error of type error (rather than, for example, returning a known-to-be-wrong value) that is correctable by allowing the user to interactively set the correct time.
-

@@ -1,4 +1,3 @@
-
 Macro DEFPACKAGE
 
 Syntax:
@@ -87,4 +86,3 @@ defpackage cannot be used to create two ``mutually recursive'' packages, such as
 However, nothing prevents the user from using the package-affecting functions such as use-package, import, and export to establish such links after a more standard use of defpackage.
 The macroexpansion of defpackage could usefully canonicalize the names into strings, so that even if a source file has random symbols in the defpackage form, the compiled file would only contain strings.
 Frequently additional implementation-dependent options take the form of a keyword standing by itself as an abbreviation for a list (keyword T); this syntax should be properly reported as an unrecognized option in implementations that do not support it.
-

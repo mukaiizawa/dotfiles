@@ -1,4 +1,3 @@
-
 Standard Generic Function UPDATE-INSTANCE-FOR-DIFFERENT-CLASS
 
 Syntax:
@@ -31,4 +30,3 @@ change-class, shared-initialize
 Notes:
 Initargs are declared as valid by using the :initarg option to defclass, or by defining methods for update-instance-for-different-class or shared-initialize. The keyword name of each keyword parameter specifier in the lambda list of any method defined on update-instance-for-different-class or shared-initialize is declared as a valid initarg name for all classes for which that method is applicable.
 The value returned by update-instance-for-different-class is ignored by change-class.
-

@@ -1,4 +1,3 @@
-
 Macro PSETQ
 
 Syntax:
@@ -46,4 +45,3 @@ The values of forms are assigned to vars.
 
 See Also:
 psetf, setq
-

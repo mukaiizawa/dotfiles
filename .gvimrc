@@ -30,4 +30,3 @@ elseif has("mac")
 elseif has("unix")
   set guifont=DejaVu\ Sans\ Mono\ 10.5
 endif
-

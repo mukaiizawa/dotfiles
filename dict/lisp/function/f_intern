@@ -1,4 +1,3 @@
-
 Function INTERN
 
 Syntax:
@@ -34,4 +33,3 @@ find-symbol, read, symbol, unintern
 
 Notes:
 intern does not need to do any name conflict checking because it never creates a new symbol if there is already an accessible symbol with the name given.
-

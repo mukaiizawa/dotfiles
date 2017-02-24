@@ -1,4 +1,3 @@
-
 Declaration OPTIMIZE
 
 Syntax:
@@ -47,4 +46,3 @@ declare, declaim, proclaim, Section 3.3.4 (Declaration Scope)
 
 Notes:
 An optimize declaration never applies to either a variable or a function binding. An optimize declaration can only be a free declaration. For more information, see Section 3.3.4 (Declaration Scope).
-

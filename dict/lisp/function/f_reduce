@@ -1,4 +1,3 @@
-
 Function REDUCE
 
 Syntax:
@@ -40,4 +39,3 @@ Examples:
 
 Exceptional Situations:
 Should be prepared to signal an error of type type-error if sequence is not a proper sequence.
-

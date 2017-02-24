@@ -1,4 +1,3 @@
-
 Function MAKE-CONDITION
 
 Syntax:
@@ -32,4 +31,3 @@ The set of defined condition types.
 
 See Also:
 define-condition
-

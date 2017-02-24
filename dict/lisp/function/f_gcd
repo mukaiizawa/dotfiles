@@ -1,4 +1,3 @@
-
 Function GCD
 
 Syntax:
@@ -30,4 +29,3 @@ lcm
 Notes:
 For three or more arguments,
  (gcd b c ... z) ==  (gcd (gcd a b) c ... z)
-

@@ -1,4 +1,3 @@
-
 Function KEYWORDP
 
 Syntax:
@@ -25,4 +24,3 @@ Examples:
 
 See Also:
 constantp, keyword, symbolp, symbol-package
-

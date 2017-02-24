@@ -1,4 +1,3 @@
-
 Function APPEND
 
 Syntax:
@@ -22,4 +21,3 @@ Examples:
 
 See Also:
 nconc, concatenate
-

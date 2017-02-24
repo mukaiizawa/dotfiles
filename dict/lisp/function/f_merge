@@ -1,4 +1,3 @@
-
 Function MERGE
 
 Syntax:
@@ -42,4 +41,3 @@ An error of type type-error should be signaled if result-type specifies the numb
 
 See Also:
 sort, stable-sort
-

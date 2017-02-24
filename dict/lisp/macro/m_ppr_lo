@@ -1,4 +1,3 @@
-
 Macro PPRINT-LOGICAL-BLOCK
 
 Syntax:
@@ -39,4 +38,3 @@ pprint-pop, pprint-exit-if-list-exhausted
 Notes:
 One reason for using the pprint-logical-block macro when the value of *print-pretty* is nil would be to allow it to perform checking for dotted lists, as well as (in conjunction with pprint-pop) checking for *print-level* or *print-length* being exceeded.
 Detection of circularity and sharing is supported by the pretty printer by in essence performing requested output twice. On the first pass, circularities and sharing are detected and the actual outputting of characters is suppressed. On the second pass, the appropriate ``#n='' and ``#n#'' markers are inserted and characters are output. This is why the restriction on side-effects is necessary. Obeying this restriction is facilitated by using pprint-pop, instead of an ordinary pop when traversing a list being printed by the body forms of the pprint-logical-block form.)
-

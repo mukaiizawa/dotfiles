@@ -1,4 +1,3 @@
-
 Function NUMERATOR, DENOMINATOR
 
 Syntax:
@@ -28,4 +27,3 @@ See Also:
 
 Notes:
  (gcd (numerator x) (denominator x)) =>  1
-

@@ -1,4 +1,3 @@
-
 Function FIND-RESTART
 
 Syntax:
@@ -37,4 +36,3 @@ Notes:
  (find-restart identifier)
  ==  (find identifier (compute-restarts) :key :restart-name)
 Although anonymous restarts have a name of nil, the consequences are unspecified if nil is given as an identifier. Occasionally, programmers lament that nil is not permissible as an identifier argument. In most such cases, compute-restarts can probably be used to simulate the desired effect.
-

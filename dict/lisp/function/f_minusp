@@ -1,4 +1,3 @@
-
 Function MINUSP, PLUSP
 
 Syntax:
@@ -21,4 +20,3 @@ Examples:
 
 Exceptional Situations:
 Should signal an error of type type-error if real is not a real.
-

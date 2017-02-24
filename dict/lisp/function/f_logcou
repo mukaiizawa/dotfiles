@@ -1,4 +1,3 @@
-
 Function LOGCOUNT
 
 Syntax:
@@ -32,4 +31,3 @@ The following identity always holds:
     (logcount x)
  ==  (logcount (- (+ x 1)))
  ==  (logcount (lognot x))
-

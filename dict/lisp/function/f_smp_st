@@ -1,4 +1,3 @@
-
 Function SIMPLE-STRING-P
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Notes:
  (simple-string-p object) ==  (typep object 'simple-string)
-

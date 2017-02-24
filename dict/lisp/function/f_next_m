@@ -1,4 +1,3 @@
-
 Local Function NEXT-METHOD-P
 
 Syntax:
@@ -14,4 +13,3 @@ Whether or not next-method-p is fbound in the global environment is implementati
 
 See Also:
 call-next-method, defmethod, call-method
-

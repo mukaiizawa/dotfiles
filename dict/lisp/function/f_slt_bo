@@ -1,4 +1,3 @@
-
 Function SLOT-BOUNDP
 
 Syntax:
@@ -27,4 +26,3 @@ slot-makunbound, slot-missing
 Notes:
 The function slot-boundp allows for writing after methods on initialize-instance in order to initialize only those slots that have not already been bound.
 Although no implementation is required to do so, implementors are strongly encouraged to implement the function slot-boundp using the function slot-boundp-using-class described in the Metaobject Protocol.
-

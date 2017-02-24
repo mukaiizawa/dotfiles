@@ -1,4 +1,3 @@
-
 Standard Generic Function NO-APPLICABLE-METHOD
 
 Syntax:
@@ -18,4 +17,3 @@ The generic function no-applicable-method is not intended to be called by progra
 
 Exceptional Situations:
 The default method signals an error of type error.
-

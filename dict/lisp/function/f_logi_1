@@ -1,4 +1,3 @@
-
 Function LOGICAL-PATHNAME
 
 Syntax:
@@ -17,4 +16,3 @@ Signals an error of type type-error if pathspec isn't supplied correctly.
 
 See Also:
 logical-pathname, translate-logical-pathname
-

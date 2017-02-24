@@ -1,4 +1,3 @@
-
 Macro WITH-INPUT-FROM-STRING
 
 Syntax:
@@ -35,4 +34,3 @@ The value of the place named by index, if any, is modified.
 
 See Also:
 make-string-input-stream
-

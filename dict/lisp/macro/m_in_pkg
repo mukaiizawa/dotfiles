@@ -1,4 +1,3 @@
-
 Macro IN-PACKAGE
 
 Syntax:
@@ -20,4 +19,3 @@ An error of type package-error is signaled if the specified package does not exi
 
 See Also:
 *package*
-

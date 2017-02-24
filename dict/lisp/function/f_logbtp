@@ -1,4 +1,3 @@
-
 Function LOGBITP
 
 Syntax:
@@ -26,4 +25,3 @@ Should signal an error of type type-error if index is not a non-negative integer
 
 Notes:
  (logbitp k n) ==  (ldb-test (byte 1 k) n)
-

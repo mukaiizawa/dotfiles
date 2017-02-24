@@ -1,4 +1,3 @@
-
 Function CHAR-UPCASE, CHAR-DOWNCASE
 
 Syntax:
@@ -44,4 +43,3 @@ upper-case-p, alpha-char-p
 Notes:
 If the corresponding-char is different than character, then both the character and the corresponding-char have case.
 Since char-equal ignores the case of the characters it compares, the corresponding-character is always the same as character under char-equal.
-

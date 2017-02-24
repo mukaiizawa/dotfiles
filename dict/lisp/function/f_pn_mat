@@ -1,4 +1,3 @@
-
 Function PATHNAME-MATCH-P
 
 Syntax:
@@ -18,4 +17,3 @@ If pathname or wildcard is not a pathname, string, or stream associated with a f
 
 See Also:
 directory, pathname, logical-pathname
-

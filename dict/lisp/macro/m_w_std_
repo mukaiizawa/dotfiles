@@ -1,4 +1,3 @@
-
 Macro WITH-STANDARD-IO-SYNTAX
 
 Syntax:
@@ -45,4 +44,3 @@ Examples:
  (with-open-file (file pathname :direction :input)
    (with-standard-io-syntax
      (setq data (read file))))
-

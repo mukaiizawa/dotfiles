@@ -1,4 +1,3 @@
-
 Symbol DECLARE
 
 Syntax:
@@ -55,4 +54,3 @@ The consequences of trying to use a declare expression as a form to be evaluated
 
 See Also:
 proclaim, declaration, dynamic-extent, ftype, ignorable, ignore, inline, notinline, optimize, type
-

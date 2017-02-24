@@ -1,4 +1,3 @@
-
 Function REVAPPEND, NRECONC
 
 Syntax:
@@ -52,4 +51,3 @@ Notes:
 The following functional equivalences are true, although good implementations will typically use a faster algorithm for achieving the same effect:
  (revappend list tail) ==  (nconc (reverse list) tail)
  (nreconc list tail) ==  (nconc (nreverse list) tail)
-

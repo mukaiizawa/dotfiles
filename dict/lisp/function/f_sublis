@@ -1,4 +1,3 @@
-
 Function SUBLIS, NSUBLIS
 
 Syntax:
@@ -63,4 +62,3 @@ Because the side-effecting variants (e.g., nsublis) potentially change the path 
      (funcall fn '((a . b) (b . a)) data)))
  (test-it #'sublis) =>  ((B A) (B A))
  (test-it #'nsublis) =>  ((A B) (A B))
-

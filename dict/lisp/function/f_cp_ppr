@@ -1,4 +1,3 @@
-
 Function COPY-PPRINT-DISPATCH
 
 Syntax:
@@ -13,4 +12,3 @@ Creates and returns a copy of the specified table, or of the value of *print-ppr
 
 Exceptional Situations:
 Should signal an error of type type-error if table is not a pprint dispatch table.
-

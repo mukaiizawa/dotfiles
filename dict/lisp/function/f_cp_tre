@@ -1,4 +1,3 @@
-
 Function COPY-TREE
 
 Syntax:
@@ -36,4 +35,3 @@ Examples:
 
 See Also:
 tree-equal
-

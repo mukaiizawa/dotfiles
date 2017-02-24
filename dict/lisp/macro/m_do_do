@@ -1,4 +1,3 @@
-
 Macro DO, DO*
 
 Syntax:
@@ -100,4 +99,3 @@ A do form may be explained in terms of the more primitive forms block, return, l
                   ...
                   varn stepn))))
 do* is similar, except that let* and setq replace the let and psetq, respectively.
-

@@ -1,4 +1,3 @@
-
 Function FUNCALL
 
 Syntax:
@@ -35,4 +34,3 @@ Notes:
  ==  (apply function arg1 arg2 ... nil)
  ==  (apply function (list arg1 arg2 ...))
 The difference between funcall and an ordinary function call is that in the former case the function is obtained by ordinary evaluation of a form, and in the latter case it is obtained by the special interpretation of the function position that normally occurs.
-

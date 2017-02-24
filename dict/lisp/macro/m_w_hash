@@ -1,4 +1,3 @@
-
 Macro WITH-HASH-TABLE-ITERATOR
 
 Syntax:
@@ -48,4 +47,3 @@ The following could be an acceptable definition of maphash, implemented by with-
 
 Exceptional Situations:
 The consequences are undefined if the local function named name established by with-hash-table-iterator is called after it has returned false as its primary value.
-

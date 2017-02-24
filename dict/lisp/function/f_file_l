@@ -1,4 +1,3 @@
-
 Function FILE-LENGTH
 
 Syntax:
@@ -27,4 +26,3 @@ Should signal an error of type type-error if stream is not a stream associated w
 
 See Also:
 open
-

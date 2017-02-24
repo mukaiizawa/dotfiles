@@ -1,4 +1,3 @@
-
 Type SIMPLE-VECTOR
 
 Supertypes:
@@ -19,4 +18,3 @@ size---a non-negative fixnum, or the symbol *. The default is the symbol *.
 
 Compound Type Specifier Description:
 This is the same as (simple-array t (size)).
-

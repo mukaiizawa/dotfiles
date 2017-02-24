@@ -23,5 +23,4 @@ REM mklink    "C:\users\%HOME%\.vimshrc"    "C:\users\%HOME%\dotfiles\.vimshrc"
 REM mklink    "C:\users\%HOME%\.gitignore"  "C:\users\%HOME%\dotfiles\.gitignore"
 REM mklink    "C:\users\%HOME%\.gitconfig"  "C:\users\%HOME%\dotfiles\.gitconfig"
  
-echo It finished. & pause > nul & EXIT
-
+ECHO It finished. & pause > nul & EXIT

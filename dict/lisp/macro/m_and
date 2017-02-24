@@ -1,4 +1,3 @@
-
 Macro AND
 
 Syntax:
@@ -33,4 +32,3 @@ cond, every, if, or, when
 Notes:
  (and form) ==  (let () form)
  (and form1 form2 ...) ==  (when form1 (and form2 ...))
-

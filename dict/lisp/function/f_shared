@@ -1,4 +1,3 @@
-
 Standard Generic Function SHARED-INITIALIZE
 
 Syntax:
@@ -28,4 +27,3 @@ Notes:
 Initargs are declared as valid by using the :initarg option to defclass, or by defining methods for shared-initialize. The keyword name of each keyword parameter specifier in the lambda list of any method defined on shared-initialize is declared as a valid initarg name for all classes for which that method is applicable.
 Implementations are permitted to optimize :initform forms that neither produce nor depend on side effects, by evaluating these forms and storing them into slots before running any initialize-instance methods, rather than by handling them in the primary initialize-instance method. (This optimization might be implemented by having the allocate-instance method copy a prototype instance.)
 Implementations are permitted to optimize default initial value forms for initargs associated with slots by not actually creating the complete initialization argument list when the only method that would receive the complete list is the method on standard-object. In this case default initial value forms can be treated like :initform forms. This optimization has no visible effects other than a performance improvement.
-

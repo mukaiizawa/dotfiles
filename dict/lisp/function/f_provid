@@ -1,4 +1,3 @@
-
 Function PROVIDE, REQUIRE
 
 Syntax:
@@ -46,4 +45,3 @@ See Also:
 Notes:
 The functions provide and require are deprecated.
 If a module consists of a single package, it is customary for the package and module names to be the same.
-

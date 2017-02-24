@@ -1,4 +1,3 @@
-
 Function PARSE-INTEGER
 
 
@@ -28,4 +27,3 @@ Examples:
 
 Exceptional Situations:
 If junk-allowed is false, an error is signaled if substring does not consist entirely of the representation of an integer, possibly surrounded on either side by whitespace[1] characters.
-

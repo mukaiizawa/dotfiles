@@ -1,4 +1,3 @@
-
 Accessor SYMBOL-VALUE
 
 Syntax:
@@ -55,4 +54,3 @@ boundp, makunbound, set, setq
 
 Notes:
 symbol-value can be used to get the value of a constant variable. symbol-value cannot access the value of a lexical variable.
-

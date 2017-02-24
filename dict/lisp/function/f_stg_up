@@ -1,4 +1,3 @@
-
 Function STRING-UPCASE, STRING-DOWNCASE, STRING-CAPITALIZE, NSTRING-UPCASE, NSTRING-DOWNCASE, NSTRING-CAPITALIZE
 
 Syntax:
@@ -53,4 +52,3 @@ char-upcase, char-downcase
 
 Notes:
 The result is always of the same length as string.
-

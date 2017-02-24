@@ -1,4 +1,3 @@
-
 Condition Type END-OF-FILE
 
 Class Precedence List:
@@ -9,4 +8,3 @@ The type end-of-file consists of error conditions related to read operations tha
 
 See Also:
 stream-error-stream
-

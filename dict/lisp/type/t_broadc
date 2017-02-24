@@ -1,4 +1,3 @@
-
 System Class BROADCAST-STREAM
 
 Class Precedence List:
@@ -19,4 +18,3 @@ For any output operations not having their return values explicitly specified ab
 
 See Also:
 broadcast-stream-streams, make-broadcast-stream
-

@@ -1,4 +1,3 @@
-
 Function MACHINE-TYPE
 
 Syntax:
@@ -20,4 +19,3 @@ The machine type. The implementation.
 
 See Also:
 machine-version
-

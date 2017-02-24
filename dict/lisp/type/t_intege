@@ -1,4 +1,3 @@
-
 System Class INTEGER
 
 Class Precedence List:
@@ -23,4 +22,3 @@ This denotes the integers on the interval described by lower-limit and upper-lim
 Notes:
 The type (integer lower upper), where lower and upper are most-negative-fixnum and most-positive-fixnum, respectively, is also called fixnum.
 The type (integer 0 1) is also called bit. The type (integer 0 *) is also called unsigned-byte.
-

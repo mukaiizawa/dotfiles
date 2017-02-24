@@ -1,4 +1,3 @@
-
 Function HASH-TABLE-TEST
 
 Syntax:
@@ -16,4 +15,3 @@ Should signal an error of type type-error if hash-table is not a hash table.
 
 See Also:
 make-hash-table
-

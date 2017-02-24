@@ -1,4 +1,3 @@
-
 Accessor SVREF
 
 Syntax:
@@ -26,4 +25,3 @@ aref, sbit, schar, vector
 Notes:
 svref is identical to aref except that it requires its first argument to be a simple vector.
  (svref v i) ==  (aref (the simple-vector v) i)
-

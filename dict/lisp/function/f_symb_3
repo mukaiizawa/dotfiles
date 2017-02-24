@@ -1,4 +1,3 @@
-
 Function SYMBOL-PACKAGE
 
 Syntax:
@@ -44,4 +43,3 @@ Should signal an error of type type-error if symbol is not a symbol.
 
 See Also:
 intern
-

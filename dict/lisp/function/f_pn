@@ -1,4 +1,3 @@
-
 Function PATHNAME
 
 Syntax:
@@ -51,4 +50,3 @@ OR=>  false
 
 See Also:
 pathname, logical-pathname
-

@@ -1,4 +1,3 @@
-
 Library COORDINATE-MANAGER
 
 Structure coordinate
@@ -12,4 +11,3 @@ with-coordinates (&rest coordinates) &body body
 Function make-vector
 make-vector &optional (x 0) (y 0) (z 0)
 create coordinate with initial value x, y and z.
-

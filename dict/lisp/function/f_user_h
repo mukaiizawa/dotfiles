@@ -1,4 +1,3 @@
-
 Function USER-HOMEDIR-PATHNAME
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Affected By:
 The host computer's file system, and the implementation.
-

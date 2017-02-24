@@ -1,4 +1,3 @@
-
 Function NCONC
 
 Syntax:
@@ -43,4 +42,3 @@ The lists are modified rather than copied.
 
 See Also:
 append, concatenate
-

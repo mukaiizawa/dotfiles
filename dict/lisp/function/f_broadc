@@ -1,4 +1,3 @@
-
 Function BROADCAST-STREAM-STREAMS
 
 Syntax:
@@ -10,4 +9,3 @@ streams---a list of streams.
 
 Description:
 Returns a list of output streams that constitute all the streams to which the broadcast-stream is broadcasting.
-

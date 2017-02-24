@@ -1,4 +1,3 @@
-
 Macro DEFINE-CONDITION
 
 Syntax:
@@ -136,4 +135,3 @@ Note that since no :report clause was given, the information inherited from mach
 
 See Also:
 make-condition, defclass
-

@@ -1,4 +1,3 @@
-
 Function REMOVE, REMOVE-IF, REMOVE-IF-NOT, DELETE, DELETE-IF, DELETE-IF-NOT
 
 Syntax:
@@ -82,4 +81,3 @@ Notes:
 If sequence is a vector, the result might or might not be simple, and might or might not be identical to sequence.
 The :test-not argument is deprecated.
 The functions delete-if-not and remove-if-not are deprecated.
-

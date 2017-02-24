@@ -1,4 +1,3 @@
-
 Function SHORT-SITE-NAME, LONG-SITE-NAME
 
 Syntax:
@@ -21,4 +20,3 @@ OR=>  'CMU Computer Science Department'
 
 Affected By:
 The implementation, the location of the computer hardware, and the installation/configuration process.
-

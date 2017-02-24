@@ -1,4 +1,3 @@
-
 Type SIMPLE-ARRAY
 
 Supertypes:
@@ -25,4 +24,3 @@ This compound type specifier is treated exactly as the corresponding compound ty
 Notes:
 It is implementation-dependent whether displaced arrays, vectors with fill pointers, or arrays that are actually adjustable are simple arrays.
  (simple-array *) refers to all simple arrays regardless of element type, (simple-array type-specifier) refers only to those simple arrays that can result from giving type-specifier as the :element-type argument to make-array.
-

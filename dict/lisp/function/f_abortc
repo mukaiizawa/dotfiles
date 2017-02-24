@@ -1,4 +1,3 @@
-
 Function ABORT, CONTINUE, MUFFLE-WARNING, STORE-VALUE, USE-VALUE
 
 Syntax:
@@ -134,4 +133,3 @@ Notes:
  (use-value x) ==  (let ((r (find-restart 'use-value))) (if r (invoke-restart r x)))
  (store-value x) ==  (let ((r (find-restart 'store-value))) (if r (invoke-restart r x)))
 No functions defined in this specification are required to provide a use-value restart.
-

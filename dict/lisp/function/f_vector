@@ -1,4 +1,3 @@
-
 Function VECTOR
 
 Syntax:
@@ -27,4 +26,3 @@ vector is analogous to list.
   ==  (make-array (list n) :element-type t
                           :initial-contents
                             (list a1 a2 ... an))
-

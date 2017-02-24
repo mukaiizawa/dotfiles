@@ -1,4 +1,3 @@
-
 Type KEYWORD
 
 Supertypes:
@@ -13,4 +12,3 @@ Interning a symbol in the KEYWORD package has three automatic effects:
 
 See Also:
 keywordp
-

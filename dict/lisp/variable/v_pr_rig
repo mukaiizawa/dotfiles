@@ -1,4 +1,3 @@
-
 Variable *PRINT-RIGHT-MARGIN*
 
 Value Type:
@@ -13,4 +12,3 @@ If it is nil, the right margin is taken to be the maximum line length such that 
 
 Notes:
 This measure is in units of ems in order to be compatible with implementation-defined variable-width fonts while still not requiring the language to provide support for fonts.
-

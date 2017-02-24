@@ -1,4 +1,3 @@
-
 Function WRITE, PRIN1, PRINT, PPRINT, PRINC
 
 Syntax:
@@ -79,4 +78,3 @@ The functions prin1 and print do not bind *print-readably*.
            (write-char #space output-stream))
  (pprint object output-stream)
 ==  (write object :stream output-stream :escape t :pretty t)
-

@@ -1,4 +1,3 @@
-
 Function TYPE-OF
 
 Syntax:
@@ -51,4 +50,3 @@ array-element-type, class-of, defstruct, typecase, typep
 
 Notes:
 Implementors are encouraged to arrange for type-of to return  a portable value.
-

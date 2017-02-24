@@ -1,4 +1,3 @@
-
 Condition Type STORAGE-CONDITION
 
 Class Precedence List:
@@ -9,4 +8,3 @@ The type storage-condition consists of serious conditions that relate to problem
 
 Notes:
 While some Common Lisp operations might signal storage-condition because they are defined to create objects, it is unspecified whether operations that are not defined to create objects create them anyway and so might also signal storage-condition. Likewise, the evaluator itself might create objects and so might signal storage-condition. (The natural assumption might be that such object creation is naturally inefficient, but even that is implementation-dependent.) In general, the entire question of how storage allocation is done is implementation-dependent, and so any operation might signal storage-condition at any time. Because such a condition is indicative of a limitation of the implementation or of the image rather than an error in a program, objects of type storage-condition are not of type error.
-

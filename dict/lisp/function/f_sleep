@@ -1,4 +1,3 @@
-
 Function SLEEP
 
 Syntax:
@@ -28,4 +27,3 @@ The granularity of the scheduler.
 
 Exceptional Situations:
 Should signal an error of type type-error if seconds is not a non-negative real.
-

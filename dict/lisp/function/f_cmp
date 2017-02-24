@@ -1,4 +1,3 @@
-
 Function COMPILE
 
 Syntax:
@@ -39,4 +38,3 @@ For information about errors detected during the compilation process, see Sectio
 
 See Also:
 compile-file
-

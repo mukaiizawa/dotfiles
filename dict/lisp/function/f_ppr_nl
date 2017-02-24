@@ -1,4 +1,3 @@
-
 Function PPRINT-NEWLINE
 
 Syntax:
@@ -30,4 +29,3 @@ Affected By:
 
 Exceptional Situations:
 An error of type type-error is signaled if kind is not one of :linear, :fill, :miser, or :mandatory.
-

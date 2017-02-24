@@ -1,4 +1,3 @@
-
 Function NAMESTRING, FILE-NAMESTRING, DIRECTORY-NAMESTRING, HOST-NAMESTRING, ENOUGH-NAMESTRING
 
 Syntax:
@@ -65,4 +64,3 @@ Examples:
 
 See Also:
 truename, merge-pathnames, pathname, logical-pathname
-

@@ -1,4 +1,3 @@
-
 Function COMPILE-FILE-PATHNAME
 
 Syntax:
@@ -23,4 +22,3 @@ An error of type file-error might be signaled if either input-file or output-fil
 
 See Also:
 compile-file, pathname, logical-pathname
-

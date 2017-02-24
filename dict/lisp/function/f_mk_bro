@@ -1,4 +1,3 @@
-
 Function MAKE-BROADCAST-STREAM
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if any stream is not an output stream.
 
 See Also:
 broadcast-stream-streams
-

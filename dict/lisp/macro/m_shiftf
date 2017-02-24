@@ -1,4 +1,3 @@
-
 Macro SHIFTF
 
 Syntax:
@@ -54,4 +53,3 @@ except that the latter would evaluate any subforms of each place twice, whereas 
  (prog1 (nth (setq n (+ n 1)) x)
         (setf (nth (setq n (+ n 1)) x) 'z)) =>  B
  x =>  (A B Z D)
-

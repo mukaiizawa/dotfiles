@@ -7,20 +7,18 @@ The first setup of vim for Windows.
 or
     $ git clone https://github.com/mukaiizawa/dotfiles c:\Users\user-name\dotfiles
 
-# Execute "symbolic.bat" to make symboliclink.
-
 # Install mingw to build "vimproc"
-## Compile vimproc
-    cd ~\.vim\bundle
-    git clone https://github.com/Shougo/vimproc.vim.git vimproc
-    cd vimproc
-    make -f make_mingw64.mak
+## build vimproc
+or download vimproc
 [vimproc releases](https://github.com/Shougo/vimproc.vim/releases)
+
+# Execute "symbolic.bat" to make symboliclink.
 
 # Make gitconfig
     $ git config user.name "mukaiizawa"
     $ git config user.email "mukaiizawa@yahoo.co.jp"
     $ git config --global http.proxy http://proxy.example.com:8080
+
 .gitconfig
     [user]
       name = mukaiizawa

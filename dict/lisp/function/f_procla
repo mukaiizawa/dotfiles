@@ -1,4 +1,3 @@
-
 Function PROCLAIM
 
 Syntax:
@@ -41,4 +40,3 @@ If compile time side effects are desired, eval-when may be useful. For example:
    (proclaim '(special *x*)))
 In most such cases, however, it is preferrable to use declaim for this purpose.
 Since proclaim forms are ordinary function forms, macro forms can expand into them.
-

@@ -1,4 +1,3 @@
-
 Function LOGTEST
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if integer-1 is not an integer. Should
 
 Notes:
  (logtest x y) ==  (not (zerop (logand x y)))
-

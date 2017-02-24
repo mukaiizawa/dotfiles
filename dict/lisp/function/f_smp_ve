@@ -1,4 +1,3 @@
-
 Function SIMPLE-VECTOR-P
 
 Syntax:
@@ -21,4 +20,3 @@ simple-vector
 
 Notes:
  (simple-vector-p object) ==  (typep object 'simple-vector)
-

@@ -1,4 +1,3 @@
-
 Function READ-DELIMITED-LIST
 
 Syntax:
@@ -46,4 +45,3 @@ read, peek-char, read-char, unread-char.
 
 Notes:
 read-delimited-list is intended for use in implementing reader macros. Usually it is desirable for char to be a terminating macro character so that it can be used to delimit tokens; however, read-delimited-list makes no attempt to alter the syntax specified for char by the current readtable. The caller must make any necessary changes to the readtable syntax explicitly.
-

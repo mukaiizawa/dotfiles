@@ -1,4 +1,3 @@
-
 Type SIMPLE-BIT-VECTOR
 
 Supertypes:
@@ -18,4 +17,3 @@ size---a non-negative fixnum, or the symbol *. The default is the symbol *.
 
 Compound Type Specifier Description:
 This denotes the same type as the type (simple-array bit (size)); that is, the set of simple bit vectors of size size.
-

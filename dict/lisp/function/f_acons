@@ -1,4 +1,3 @@
-
 Function ACONS
 
 Syntax:
@@ -27,4 +26,3 @@ assoc, pairlis
 
 Notes:
 (acons key datum alist) ==  (cons (cons key datum) alist)
-

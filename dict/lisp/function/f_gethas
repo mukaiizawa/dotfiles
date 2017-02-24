@@ -1,4 +1,3 @@
-
 Accessor GETHASH
 
 Syntax:
@@ -43,4 +42,3 @@ remhash
 
 Notes:
 The secondary value, present-p, can be used to distinguish the absence of an entry from the presence of an entry that has a value of default.
-

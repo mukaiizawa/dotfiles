@@ -1,4 +1,3 @@
-
 Function CHARACTER
 
 Syntax:
@@ -27,4 +26,3 @@ coerce
 
 Notes:
  (character object) ==  (coerce object 'character)
-

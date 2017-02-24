@@ -1,4 +1,3 @@
-
 Function RATIONAL, RATIONALIZE
 
 Syntax:
@@ -34,4 +33,3 @@ It is always the case that
 and
  (float (rationalize x) x) ==  x
 That is, rationalizing a float by either method and then converting it back to a float of the same format produces the original number.
-

@@ -1,4 +1,3 @@
-
 Macro TIME
 
 Syntax:
@@ -22,4 +21,3 @@ get-internal-real-time, get-internal-run-time
 Notes:
 In general, these timings are not guaranteed to be reliable enough for marketing comparisons. Their value is primarily heuristic, for tuning purposes.
 For useful background information on the complicated issues involved in interpreting timing results, see Performance and Evaluation of Lisp Programs.
-

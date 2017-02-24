@@ -1,4 +1,3 @@
-
 Function ALPHA-CHAR-P
 
 Syntax:
@@ -27,4 +26,3 @@ Should signal an error of type type-error if character is not a character.
 
 See Also:
 alphanumericp
-

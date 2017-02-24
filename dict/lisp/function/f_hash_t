@@ -1,4 +1,3 @@
-
 Function HASH-TABLE-P
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Notes:
  (hash-table-p object) ==  (typep object 'hash-table)
-

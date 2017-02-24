@@ -1,4 +1,3 @@
-
 Function COMPUTE-RESTARTS
 
 Syntax:
@@ -52,4 +51,3 @@ Existing restarts.
 
 See Also:
 find-restart, invoke-restart, restart-bind
-

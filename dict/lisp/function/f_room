@@ -1,4 +1,3 @@
-
 Function ROOM
 
 Syntax:
@@ -16,4 +15,3 @@ Output to standard output.
 
 Affected By:
 *standard-output*.
-

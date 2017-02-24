@@ -1,4 +1,3 @@
-
 Function ASSOC, ASSOC-IF, ASSOC-IF-NOT
 
 Syntax:
@@ -57,4 +56,3 @@ The two expressions
 and
 (find item list :test fn :key #'car)
 are equivalent in meaning with one exception: if nil appears in alist in place of a pair, and item is nil, find will compute the car of the nil in alist, find that it is equal to item, and return nil, whereas assoc will ignore the nil in alist and continue to search for an actual cons whose car is nil.
-

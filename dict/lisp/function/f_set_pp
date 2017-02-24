@@ -1,4 +1,3 @@
-
 Function SET-PPRINT-DISPATCH
 
 Syntax:
@@ -24,4 +23,3 @@ Notes:
 Since pprint dispatch tables are often used to control the pretty printing of Lisp code, it is common for the type-specifier to be an expression of the form
  (cons car-type cdr-type)
 This signifies that the corresponding object must be a cons cell whose car matches the type specifier car-type and whose cdr matches the type specifier cdr-type. The cdr-type can be omitted in which case it defaults to t.
-

@@ -1,4 +1,3 @@
-
 Function SIN, COS, TAN
 
 Syntax:
@@ -23,4 +22,3 @@ Should signal an error of type type-error if radians is not a number. Might sign
 
 See Also:
 asin, acos, atan
-

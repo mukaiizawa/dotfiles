@@ -1,4 +1,3 @@
-
 Function ADJUST-ARRAY
 
 Syntax:
@@ -79,4 +78,3 @@ An error of type error is signaled if fill-pointer is supplied and non-nil but a
 
 See Also:
 adjustable-array-p, make-array, array-dimension-limit, array-total-size-limit, array
-

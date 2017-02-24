@@ -1,4 +1,3 @@
-
 Function STRING
 
 Syntax:
@@ -26,4 +25,3 @@ coerce, string (type).
 Notes:
 coerce can be used to convert a sequence of characters to a string.
 prin1-to-string, princ-to-string, write-to-string, or format (with a first argument of nil) can be used to get a string representation of a number or any other object.
-

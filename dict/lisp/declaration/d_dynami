@@ -1,4 +1,3 @@
-
 Declaration DYNAMIC-EXTENT
 
 Syntax:
@@ -109,4 +108,3 @@ declare
 Notes:
 The most common optimization is to stack allocate the initial value of the objects named by the vars.
 It is permissible for an implementation to simply ignore this declaration.
-

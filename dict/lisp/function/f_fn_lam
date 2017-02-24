@@ -1,4 +1,3 @@
-
 Function FUNCTION-LAMBDA-EXPRESSION
 
 Syntax:
@@ -55,4 +54,3 @@ OR=>  (LAMBDA (X) (BLOCK BAR X)), false, 'BAR in FOO'
 
 Notes:
 Although implementations are free to return ``nil, true, nil'' in all cases, they are encouraged to return a lambda expression as the primary value in the case where the argument was created by a call to compile or eval (as opposed to being created by loading a compiled file).
-

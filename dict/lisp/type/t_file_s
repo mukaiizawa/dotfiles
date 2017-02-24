@@ -1,4 +1,3 @@
-
 System Class FILE-STREAM
 
 Class Precedence List:
@@ -10,4 +9,3 @@ An object of type file-stream is a stream the direct source or sink of which is 
 
 See Also:
 load, open, with-open-file
-

@@ -1,4 +1,3 @@
-
 Type Specifier MEMBER
 
 Compound Type Specifier Kind:
@@ -16,4 +15,3 @@ The type specifiers (member) and nil are equivalent. * can be among the objects,
 
 See Also:
 the type eql
-

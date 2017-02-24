@@ -1,4 +1,3 @@
-
 Function ERROR
 
 Syntax:
@@ -66,4 +65,3 @@ Some implementations may provide debugger commands for interactively returning f
    (push-the-button))
 In this scenario, there should be no chance that error will return and the button will get pushed.
 While the meaning of this program is clear and it might be proven `safe' by a formal theorem prover, such a proof is no guarantee that the program is safe to execute. Compilers have been known to have bugs, computers to have signal glitches, and human beings to manually intervene in ways that are not always possible to predict. Those kinds of errors, while beyond the scope of the condition system to formally model, are not beyond the scope of things that should seriously be considered when writing code that could have the kinds of sweeping effects hinted at by this example.
-

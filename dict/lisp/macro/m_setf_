@@ -1,4 +1,3 @@
-
 Macro SETF, PSETF
 
 Syntax:
@@ -42,4 +41,3 @@ define-setf-expander, defsetf, *macroexpand-hook*
 
 See Also:
 define-setf-expander, defsetf, macroexpand-1, rotatef, shiftf
-

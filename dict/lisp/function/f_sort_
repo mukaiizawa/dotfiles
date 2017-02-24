@@ -1,4 +1,3 @@
-
 Function SORT, STABLE-SORT
 
 Syntax:
@@ -70,4 +69,3 @@ merge
 
 Notes:
 If sequence is a vector, the result might or might not be simple, and might or might not be identical to sequence.
-

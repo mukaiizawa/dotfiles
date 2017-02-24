@@ -1,4 +1,3 @@
-
 Function CONS
 
 Syntax:
@@ -27,4 +26,3 @@ list
 
 Notes:
 If object-2 is a list, cons can be thought of as producing a new list which is like it but has object-1 prepended.
-

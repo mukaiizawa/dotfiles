@@ -1,4 +1,3 @@
-
 Function GET-OUTPUT-STREAM-STRING
 
 Syntax:
@@ -27,4 +26,3 @@ The consequences are undefined if string-output-stream is a stream that was not 
 
 See Also:
 make-string-output-stream
-

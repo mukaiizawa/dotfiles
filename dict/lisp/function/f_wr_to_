@@ -1,4 +1,3 @@
-
 Function WRITE-TO-STRING, PRIN1-TO-STRING, PRINC-TO-STRING
 
 Syntax:
@@ -53,4 +52,3 @@ Notes:
  (prin1-to-string object)
 ==  (with-output-to-string (string-stream)
      (prin1 object string-stream))
-

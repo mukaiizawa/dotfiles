@@ -1,4 +1,3 @@
-
 Function DIGIT-CHAR-P
 
 Syntax:
@@ -37,4 +36,3 @@ alphanumericp
 
 Notes:
 Digits are graphic characters.
-

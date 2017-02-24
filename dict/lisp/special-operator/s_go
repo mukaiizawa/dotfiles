@@ -1,4 +1,3 @@
-
 Special Operator GO
 
 Syntax:
@@ -27,4 +26,3 @@ The following is in error because the tagbody is passed over before the go form 
 
 See Also:
 tagbody
-

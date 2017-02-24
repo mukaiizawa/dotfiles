@@ -1,4 +1,3 @@
-
 Macro RESTART-CASE
 
 Syntax:
@@ -142,4 +141,3 @@ Unnamed restarts are generally only useful interactively and an interactive opti
        (signal fred))
    (a ...)
    (b ...))
-

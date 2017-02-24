@@ -1,4 +1,3 @@
-
 Macro DEFSETF
 
 Syntax:
@@ -84,4 +83,3 @@ documentation, setf,  define-setf-expander, get-setf-expansion
 Notes:
 forms must include provision for returning the correct value (the value  or values  of store-variable). This is handled by forms rather than by defsetf because in many cases this value can be returned at no extra cost, by calling a function that simultaneously stores into the place and returns the correct value.
 A setf of a call on access-fn also evaluates all of access-fn's arguments; it cannot treat any of them specially. This means that defsetf cannot be used to describe how to store into a generalized reference to a byte, such as (ldb field reference).  define-setf-expander  is used to handle situations that do not fit the restrictions imposed by defsetf and gives the user additional control.
-

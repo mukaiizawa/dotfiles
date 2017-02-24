@@ -1,4 +1,3 @@
-
 Function MAKE-STRING-INPUT-STREAM
 
 Syntax:
@@ -22,4 +21,3 @@ Examples:
 
 See Also:
 with-input-from-string
-

@@ -1,4 +1,3 @@
-
 Standard Generic Function COMPUTE-APPLICABLE-METHODS
 
 Syntax:
@@ -17,4 +16,3 @@ Given a generic-function and a set of function-arguments, the function compute-a
 
 Affected By:
 defmethod
-

@@ -1,4 +1,3 @@
-
 Macro DEFINE-COMPILER-MACRO
 
 Syntax:
@@ -123,4 +122,3 @@ compiler-macro-function, defmacro, documentation, Section 3.4.11 (Syntactic Inte
 
 Notes:
 The consequences of writing a compiler macro definition for a function in the COMMON-LISP package are undefined; it is quite possible that in some implementations such an attempt would override an equivalent or equally important definition. In general, it is recommended that a programmer only write compiler macro definitions for functions he or she personally maintains--writing a compiler macro definition for a function maintained elsewhere is normally considered a violation of traditional rules of modularity and data abstraction.
-

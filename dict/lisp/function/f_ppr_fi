@@ -1,4 +1,3 @@
-
 Function PPRINT-FILL, PPRINT-LINEAR, PPRINT-TABULAR
 
 Syntax:
@@ -47,4 +46,3 @@ The function pprint-tabular could be defined as follows:
           (pprint-tab :section-relative 0 tabsize s)
           (pprint-newline :fill s))))
 Note that it would have been inconvenient to specify this function using format, because of the need to pass its tabsize argument through to a ~:T format directive nested within an iteration over a list.
-

@@ -1,4 +1,3 @@
-
 Function EXPORT
 
 Syntax:
@@ -33,4 +32,3 @@ If any of the symbols is not accessible at all in package, an error of type pack
 
 See Also:
 import, unexport
-

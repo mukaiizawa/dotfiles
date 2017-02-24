@@ -1,4 +1,3 @@
-
 Function COPY-LIST
 
 Syntax:
@@ -35,4 +34,3 @@ copy-alist, copy-seq, copy-tree
 
 Notes:
 The copy created is equal to list, but not eq.
-
