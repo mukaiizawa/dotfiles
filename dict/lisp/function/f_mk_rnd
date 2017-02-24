@@ -1,4 +1,3 @@
-
 Function MAKE-RANDOM-STATE
 
 Syntax:
@@ -39,4 +38,3 @@ random, *random-state*
 
 Notes:
 One important use of make-random-state is to allow the same series of pseudo-random numbers to be generated many times within a single program.
-

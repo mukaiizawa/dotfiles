@@ -1,4 +1,3 @@
-
 Function UPGRADED-COMPLEX-PART-TYPE
 
 Syntax:
@@ -16,4 +15,3 @@ The purpose of upgraded-complex-part-type is to reveal how an implementation doe
 
 See Also:
 complex (function and type)
-

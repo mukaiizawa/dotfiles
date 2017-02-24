@@ -1,4 +1,3 @@
-
 Standard Generic Function CLASS-NAME
 
 Syntax:
@@ -20,4 +19,3 @@ find-class, Section 4.3 (Classes)
 Notes:
 If S is a symbol such that S =(class-name C) and C =(find-class S), then S is the proper name of C. For further discussion, see Section 4.3 (Classes).
 The name of an anonymous class is nil.
-

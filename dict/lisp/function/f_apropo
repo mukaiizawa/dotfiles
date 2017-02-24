@@ -1,4 +1,3 @@
-
 Function APROPOS, APROPOS-LIST
 
 Syntax:
@@ -21,4 +20,3 @@ Whether or not the search is case-sensitive is implementation-defined.
 Affected By:
 The set of symbols which are currently interned in any packages being searched.
 apropos is also affected by *standard-output*.
-

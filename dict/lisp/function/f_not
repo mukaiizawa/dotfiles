@@ -1,4 +1,3 @@
-
 Function NOT
 
 Syntax:
@@ -24,4 +23,3 @@ null
 
 Notes:
 not is intended to be used to invert the `truth value' of a boolean (or generalized boolean) whereas null is intended to be used to test for the empty list. Operationally, not and null compute the same result; which to use is a matter of style.
-

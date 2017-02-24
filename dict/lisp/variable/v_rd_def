@@ -1,4 +1,3 @@
-
 Variable *READ-DEFAULT-FLOAT-FORMAT*
 
 Value Type:
@@ -20,4 +19,3 @@ Examples:
 =>  (1.0d0 1.0d0 1.0s0 1.0 1.0d0 1.0d0) ;Implementation has float formats S, F, D.
 =>  (1.0d0 1.0d0 1.0   1.0 1.0d0 1.0L0) ;Implementation has float formats F, D, L.
 =>  (1.0d0 1.0d0 1.0s0 1.0 1.0d0 1.0L0) ;Implementation has formats S, F, D, L.
-

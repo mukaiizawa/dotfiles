@@ -1,4 +1,3 @@
-
 System Class ARRAY
 
 Class Precedence List:
@@ -30,4 +29,3 @@ See Also:
 
 Notes:
 Note that the type (array t) is a proper subtype of the type (array *). The reason is that the type (array t) is the set of arrays that can hold any object (the elements are of type t, which includes all objects). On the other hand, the type (array *) is the set of all arrays whatsoever, including for example arrays that can hold only characters. The type (array character) is not a subtype of the type (array t); the two sets are disjoint because the type (array character) is not the set of all arrays that can hold characters, but rather the set of arrays that are specialized to hold precisely characters and no other objects.
-

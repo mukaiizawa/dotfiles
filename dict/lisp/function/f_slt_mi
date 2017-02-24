@@ -1,4 +1,3 @@
-
 Standard Generic Function SLOT-MISSING
 
 Syntax:
@@ -33,4 +32,3 @@ defclass, slot-exists-p, slot-value
 
 Notes:
 The set of arguments (including the class of the instance) facilitates defining methods on the metaclass for slot-missing.
-

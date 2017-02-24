@@ -1,4 +1,3 @@
-
 Function TRUENAME
 
 Syntax:
@@ -44,4 +43,3 @@ pathname, logical-pathname
 
 Notes:
 truename may be used to account for any filename translations performed by the file system.
-

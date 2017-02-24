@@ -1,4 +1,3 @@
-
 Library AHEAD-READER
 
 Structure ahead-reader
@@ -55,4 +54,3 @@ get-buf reader => buffer
 refer-buf reader => buffer
 get-buf and refer-buf each get buffer of reader.
 but get-buf clear the buffer of reader.
-

@@ -1,4 +1,3 @@
-
 Function ABS
 
 Syntax:
@@ -26,4 +25,3 @@ Notes:
 If number is a complex, the result is equivalent to the following:
 (sqrt (+ (expt (realpart number) 2) (expt (imagpart number) 2)))
 An implementation should not use this formula directly for all complexes but should handle very large or very small components specially to avoid intermediate overflow or underflow.
-

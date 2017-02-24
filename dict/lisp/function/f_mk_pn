@@ -1,4 +1,3 @@
-
 Function MAKE-PATHNAME
 
 Syntax:
@@ -67,4 +66,3 @@ merge-pathnames, pathname, logical-pathname
 
 Notes:
 Portable programs should not supply :unspecific for any component.
-

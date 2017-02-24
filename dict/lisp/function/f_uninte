@@ -1,4 +1,3 @@
-
 Function UNINTERN
 
 Syntax:
@@ -29,4 +28,3 @@ Current state of the package system.
 
 Exceptional Situations:
  iving a shadowing symbol to unintern can uncover a name conflict that had previously been resolved by the shadowing. If package A uses packages B and C, A contains a shadowing symbol x, and B and C each contain external symbols named x, then removing the shadowing symbol x from A will reveal a name conflict between b:x and c:x if those two symbols are distinct. In this case unintern will signal an error.
-

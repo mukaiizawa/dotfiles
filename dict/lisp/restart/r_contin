@@ -1,4 +1,3 @@
-
 Restart CONTINUE
 
 Description:
@@ -16,4 +15,3 @@ Examples:
 
 See Also:
 invoke-restart, continue (function), assert, cerror
-

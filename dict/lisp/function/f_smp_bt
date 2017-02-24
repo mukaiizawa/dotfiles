@@ -1,4 +1,3 @@
-
 Function SIMPLE-BIT-VECTOR-P
 
 Syntax:
@@ -20,4 +19,3 @@ simple-vector-p
 
 Notes:
  (simple-bit-vector-p object) ==  (typep object 'simple-bit-vector)
-

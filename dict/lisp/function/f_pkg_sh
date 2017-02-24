@@ -1,4 +1,3 @@
-
 Function PACKAGE-SHADOWING-SYMBOLS
 
 Syntax:
@@ -27,4 +26,3 @@ shadow, shadowing-import
 
 Notes:
 Whether the list of symbols is fresh is implementation-dependent.
-

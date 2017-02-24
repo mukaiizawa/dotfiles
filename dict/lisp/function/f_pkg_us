@@ -1,4 +1,3 @@
-
 Function PACKAGE-USE-LIST
 
 Syntax:
@@ -21,4 +20,3 @@ Should signal an error of type type-error if package is not a package designator
 
 See Also:
 use-package, unuse-package
-

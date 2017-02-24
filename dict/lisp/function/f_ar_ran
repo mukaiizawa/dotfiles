@@ -1,4 +1,3 @@
-
 Function ARRAY-RANK
 
 Syntax:
@@ -22,4 +21,3 @@ Should signal an error of type type-error if its argument is not an array.
 
 See Also:
 array-rank-limit, make-array
-

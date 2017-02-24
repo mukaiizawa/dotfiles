@@ -1,4 +1,3 @@
-
 Function RENAME-FILE
 
 Syntax:
@@ -36,4 +35,3 @@ An error of type file-error might be signaled if filespec is wild.
 
 See Also:
 truename, pathname, logical-pathname
-

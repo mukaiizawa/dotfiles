@@ -1,4 +1,3 @@
-
 Macro REMF
 
 Syntax:
@@ -25,4 +24,3 @@ The property list stored in place is modified.
 
 See Also:
 remprop, getf
-

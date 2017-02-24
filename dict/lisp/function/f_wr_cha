@@ -1,4 +1,3 @@
-
 Function WRITE-CHAR
 
 Syntax:
@@ -29,4 +28,3 @@ Affected By:
 
 See Also:
 read-char, write-byte,  write-sequence
-

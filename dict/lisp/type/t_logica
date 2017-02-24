@@ -1,4 +1,3 @@
-
 System Class LOGICAL-PATHNAME
 
 Class Precedence List:
@@ -6,4 +5,3 @@ logical-pathname, pathname, t
 
 Description:
 A pathname that uses a namestring syntax that is implementation-independent, and that has component values that are implementation-independent. Logical pathnames do not refer directly to filenames
-

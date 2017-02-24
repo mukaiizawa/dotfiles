@@ -1,4 +1,3 @@
-
 Function UPGRADED-ARRAY-ELEMENT-TYPE
 
 Syntax:
@@ -23,4 +22,3 @@ Notes:
 Except for storage allocation consequences and dealing correctly with the optional environment argument, upgraded-array-element-type could be defined as:
  (defun upgraded-array-element-type (type &optional environment)
    (array-element-type (make-array 0 :element-type type)))
-

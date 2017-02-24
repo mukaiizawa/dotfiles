@@ -1,4 +1,3 @@
-
 Macro DEFUN
 
 Syntax:
@@ -58,4 +57,3 @@ flet, labels, block, return-from, declare, documentation
 Notes:
 return-from can be used to return prematurely from a function defined by defun.
 Additional side effects might take place when additional information (typically debugging information) about the function definition is recorded.
-

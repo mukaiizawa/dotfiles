@@ -1,4 +1,3 @@
-
 Type UNSIGNED-BYTE
 
 Supertypes:
@@ -21,4 +20,3 @@ This denotes the set of non-negative integers that can be represented in a byte 
 
 Notes:
 The type (unsigned-byte 1) is also called bit.
-

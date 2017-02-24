@@ -1,4 +1,3 @@
-
 Function SOFTWARE-TYPE, SOFTWARE-VERSION
 
 Syntax:
@@ -21,4 +20,3 @@ Operating system environment.
 
 Notes:
 This information should be of use to maintainers of the implementation.
-

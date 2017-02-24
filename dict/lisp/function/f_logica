@@ -1,4 +1,3 @@
-
 Accessor LOGICAL-PATHNAME-TRANSLATIONS
 
 Syntax:
@@ -121,4 +120,3 @@ logical-pathname
 
 Notes:
 Implementations can define additional functions that operate on logical pathname hosts, for example to specify additional translation rules or options.
-

@@ -1,4 +1,3 @@
-
 Function TERPRI, FRESH-LINE
 
 Syntax:
@@ -38,4 +37,3 @@ Affected By:
 Notes:
 terpri is identical in effect to
  (write-char #Newline output-stream)
-

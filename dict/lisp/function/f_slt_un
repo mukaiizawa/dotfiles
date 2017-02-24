@@ -1,4 +1,3 @@
-
 Standard Generic Function SLOT-UNBOUND
 
 Syntax:
@@ -26,4 +25,3 @@ slot-makunbound
 
 Notes:
 An unbound slot may occur if no :initform form was specified for the slot and the slot value has not been set, or if slot-makunbound has been called on the slot.
-

@@ -1,4 +1,3 @@
-
 Standard Generic Function PRINT-OBJECT
 
 Syntax:
@@ -39,4 +38,3 @@ In some implementations the stream argument passed to a print-object method is n
 
 See Also:
 pprint-fill, pprint-logical-block, pprint-pop, write, *print-readably*, *print-escape*, *print-pretty*, *print-length*
-

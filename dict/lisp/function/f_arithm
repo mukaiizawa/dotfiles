@@ -1,4 +1,3 @@
-
 Function ARITHMETIC-ERROR-OPERANDS, ARITHMETIC-ERROR-OPERATION
 
 Syntax:
@@ -16,4 +15,3 @@ arithmetic-error-operation returns a list of the offending operation in the offe
 
 See Also:
 arithmetic-error
-

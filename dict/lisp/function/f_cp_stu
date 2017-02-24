@@ -1,4 +1,3 @@
-
 Function COPY-STRUCTURE
 
 Syntax:
@@ -17,4 +16,3 @@ the :copier option to defstruct
 
 Notes:
 The copy is the same as the given structure under equalp, but not under equal.
-

@@ -1,4 +1,3 @@
-
 Function VALUES-LIST
 
 Syntax:
@@ -26,5 +25,4 @@ multiple-value-bind, multiple-value-list, multiple-values-limit, values
 Notes:
  (values-list list) ==  (apply #'values list)
  (equal x (multiple-value-list (values-list x))) returns true for all lists x.
-
 

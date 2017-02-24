@@ -1,4 +1,3 @@
-
 Variable *PRINT-READABLY*
 
 Value Type:
@@ -59,4 +58,3 @@ write, print-unreadable-object
 
 Notes:
 The rules for ``similarity'' imply that #A or #( syntax cannot be used for arrays of element type other than t. An implementation will have to use another syntax or signal an error of type print-not-readable.
-

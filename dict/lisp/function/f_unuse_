@@ -1,4 +1,3 @@
-
 Function UNUSE-PACKAGE
 
 Syntax:
@@ -30,4 +29,3 @@ urrent state of the package system.
 
 See Also:
 use-package, package-use-list
-

@@ -1,4 +1,3 @@
-
 Function FILE-POSITION
 
 Syntax:
@@ -65,4 +64,3 @@ file-length, file-string-length, open
 
 Notes:
 Implementations that have character files represented as a sequence of records of bounded size might choose to encode the file position as, for example, <<record-number>>*<<max-record-size>>+<<character-within-record>>. This is a valid encoding because it increases monotonically as each character is read or written, though not necessarily by 1 at each step. An integer might then be considered ``inappropriate'' as position-spec to file-position if, when decoded into record number and character number, it turned out that the supplied record was too short for the specified character number.
-

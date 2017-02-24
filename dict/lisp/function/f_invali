@@ -1,4 +1,3 @@
-
 Function INVALID-METHOD-ERROR
 
 Syntax:
@@ -22,4 +21,3 @@ Affected By:
 
 See Also:
 define-method-combination
-

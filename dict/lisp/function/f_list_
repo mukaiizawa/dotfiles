@@ -1,4 +1,3 @@
-
 Function LIST, LIST*
 
 Syntax:
@@ -36,4 +35,3 @@ cons
 
 Notes:
  (list* x) ==  x
-

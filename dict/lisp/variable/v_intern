@@ -1,4 +1,3 @@
-
 Constant Variable INTERNAL-TIME-UNITS-PER-SECOND
 
 Constant Value:
@@ -12,4 +11,3 @@ get-internal-run-time, get-internal-real-time
 
 Notes:
 These units form the basis of the Internal Time format representation.
-

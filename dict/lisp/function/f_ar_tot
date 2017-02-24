@@ -1,4 +1,3 @@
-
 Function ARRAY-TOTAL-SIZE
 
 Syntax:
@@ -31,4 +30,3 @@ Since the product of no arguments is one, the array total size of a zero-dimensi
  (array-total-size x)
     ==  (apply #'* (array-dimensions x))
     ==  (reduce #'* (array-dimensions x))
-

@@ -1,4 +1,3 @@
-
 Function REMOVE-DUPLICATES, DELETE-DUPLICATES
 
 Syntax:
@@ -44,4 +43,3 @@ Notes:
 If sequence is a vector, the result might or might not be simple, and might or might not be identical to sequence.
 The :test-not argument is deprecated.
 These functions are useful for converting sequence into a canonical form suitable for representing a set.
-

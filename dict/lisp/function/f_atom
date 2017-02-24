@@ -1,4 +1,3 @@
-
 Function ATOM
 
 Syntax:
@@ -21,4 +20,3 @@ Examples:
 Notes:
  (atom object) ==  (typep object 'atom) ==  (not (consp object))
  ==  (not (typep object 'cons)) ==  (typep object '(not cons))
-

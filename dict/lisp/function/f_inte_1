@@ -1,4 +1,3 @@
-
 Function INTEGERP
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Notes:
  (integerp object) ==  (typep object 'integer)
-

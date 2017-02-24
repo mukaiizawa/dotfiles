@@ -1,4 +1,3 @@
-
 Standard Generic Function DOCUMENTATION, (SETF DOCUMENTATION)
 
 Syntax:
@@ -102,4 +101,3 @@ A conforming implementation or a conforming program may extend the set of symbol
 Notes:
 This standard prescribes no means to retrieve the documentation strings for individual slots specified in a defclass form, but implementations might still provide debugging tools and/or programming language extensions which manipulate this information.
 Implementors wishing to provide such support are encouraged to consult the Metaobject Protocol for suggestions about how this might be done.
-

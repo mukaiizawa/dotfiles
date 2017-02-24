@@ -1,4 +1,3 @@
-
 Function PRINT-NOT-READABLE-OBJECT
 
 Syntax:
@@ -13,4 +12,3 @@ Returns the object that could not be printed readably in the situation represent
 
 See Also:
 print-not-readable
-

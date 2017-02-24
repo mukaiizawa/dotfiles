@@ -1,4 +1,3 @@
-
 Variable *PRINT-ESCAPE*
 
 Value Type:
@@ -28,4 +27,3 @@ write, readtable-case
 
 Notes:
 princ effectively binds *print-escape* to false. prin1 effectively binds *print-escape* to true.
-

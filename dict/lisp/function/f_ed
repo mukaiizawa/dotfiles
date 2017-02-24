@@ -1,4 +1,3 @@
-
 Function ED
 
 Syntax:
@@ -22,4 +21,3 @@ Implementation-dependent additional conditions might be signaled as well.
 
 See Also:
 pathname,  logical-pathname,  compile-file, load
-

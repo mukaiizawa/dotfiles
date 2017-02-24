@@ -1,4 +1,3 @@
-
 Macro ASSERT
 
 Syntax:
@@ -62,4 +61,3 @@ check-type, error, Section 5.1 (Generalized Reference)
 
 Notes:
 The debugger need not include the test-form in the error message, and the places should not be included in the message, but they should be made available for the user's perusal. If the user gives the ``continue'' command, the values of any of the references can be altered. The details of this depend on the implementation's style of user interface
-

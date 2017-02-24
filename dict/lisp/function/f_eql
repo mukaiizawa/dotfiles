@@ -1,4 +1,3 @@
-
 Function EQL
 
 Syntax:
@@ -44,4 +43,3 @@ Notes:
 eql is the same as eq, except that if the arguments are characters or numbers of the same type then their values are compared. Thus eql tells whether two objects are conceptually the same, whereas eq tells whether two objects are implementationally identical. It is for this reason that eql, not eq, is the default comparison predicate for operators that take sequences as arguments.
 eql may not be true of two floats even when they represent the same value. = is used to compare mathematical values.
 Two complex numbers are considered to be eql if their real parts are eql and their imaginary parts are eql. For example, (eql #C(4 5) #C(4 5)) is true and (eql #C(4 5) #C(4.0 5.0)) is false. Note that while (eql #C(5.0 0.0) 5.0) is false, (eql #C(5 0) 5) is true. In the case of (eql #C(5.0 0.0) 5.0) the two arguments are of different types, and so cannot satisfy eql. In the case of (eql #C(5 0) 5), #C(5 0) is not a complex number, but is automatically reduced to the integer 5.
-

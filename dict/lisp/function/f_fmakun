@@ -1,4 +1,3 @@
-
 Function FMAKUNBOUND
 
 Syntax:
@@ -24,4 +23,3 @@ The consequences are undefined if name is a special operator.
 
 See Also:
 fboundp, makunbound
-

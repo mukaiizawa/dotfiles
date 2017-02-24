@@ -1,4 +1,3 @@
-
 Function MAKE-ARRAY
 
 Syntax:
@@ -95,4 +94,3 @@ adjustable-array-p, aref, arrayp, array-element-type, array-rank-limit, array-di
 
 Notes:
 There is no specified way to create an array for which adjustable-array-p definitely returns false. There is no specified way to create an array that is not a simple array.
-

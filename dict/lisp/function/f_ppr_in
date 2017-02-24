@@ -1,4 +1,3 @@
-
 Function PPRINT-INDENT
 
 Syntax:
@@ -16,4 +15,3 @@ N can be negative; however, the total indentation cannot be moved left of the be
 
 Exceptional Situations:
 An error is signaled if relative-to is any object other than :block or :current.
-

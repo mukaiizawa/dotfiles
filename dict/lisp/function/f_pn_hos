@@ -1,4 +1,3 @@
-
 Function PATHNAME-HOST, PATHNAME-DEVICE, PATHNAME-DIRECTORY, PATHNAME-NAME, PATHNAME-TYPE, PATHNAME-VERSION
 
 Syntax:
@@ -90,4 +89,3 @@ Should signal an error of type type-error if its first argument is not a pathnam
 
 See Also:
 pathname, logical-pathname
-

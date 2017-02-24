@@ -1,4 +1,3 @@
-
 Macro DEFSTRUCT
 
 Syntax:
@@ -379,4 +378,3 @@ Notes:
 The printer-name should observe the values of such printer-control variables as *print-escape*.
 The restriction against issuing a warning for type mismatches between a slot-initform and the corresponding slot's :type option is necessary because a slot-initform must be specified in order to specify slot options; in some cases, no suitable default may exist.
 The mechanism by which defstruct arranges for slot accessors to be usable with setf is implementation-dependent; for example, it may use setf functions, setf expanders, or some other implementation-dependent mechanism known to that implementation's code for setf.
-

@@ -1,4 +1,3 @@
-
 Function COPY-SEQ
 
 Syntax:
@@ -27,4 +26,3 @@ Notes:
 From a functional standpoint,
  (copy-seq x) ==  (subseq x 0)
 However, the programmer intent is typically very different in these two cases.
-

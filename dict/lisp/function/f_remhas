@@ -1,4 +1,3 @@
-
 Function REMHASH
 
 Syntax:
@@ -22,4 +21,3 @@ Examples:
 
 Side Effects:
 The hash-table is modified.
-

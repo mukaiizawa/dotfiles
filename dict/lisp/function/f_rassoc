@@ -1,4 +1,3 @@
-
 Function RASSOC, RASSOC-IF, RASSOC-IF-NOT
 
 Syntax:
@@ -42,4 +41,3 @@ The expressions
  and
  (find item list :test fn :key #'cdr)
 are equivalent in meaning, except when the item is nil nd nil appears in place of a pair in the alist. See the function assoc.
-

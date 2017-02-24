@@ -1,4 +1,3 @@
-
 Macro PRINT-UNREADABLE-OBJECT
 
 Syntax:
@@ -26,4 +25,3 @@ OR=>  '#<FAA:AIRPLANE NW0773 17>'
 
 Exceptional Situations:
 If *print-readably* is true, print-unreadable-object signals an error of type print-not-readable without printing anything.
-

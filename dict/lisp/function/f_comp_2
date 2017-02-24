@@ -1,4 +1,3 @@
-
 Function COMPLEX
 
 Syntax:
@@ -24,4 +23,3 @@ Examples:
 
 See Also:
 realpart, imagpart
-

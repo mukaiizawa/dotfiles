@@ -1,4 +1,3 @@
-
 Function RANDOM-STATE-P
 
 Syntax:
@@ -21,4 +20,3 @@ make-random-state, *random-state*
 
 Notes:
  (random-state-p object) ==  (typep object 'random-state)
-

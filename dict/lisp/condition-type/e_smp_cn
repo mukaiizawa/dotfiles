@@ -1,4 +1,3 @@
-
 Condition Type SIMPLE-CONDITION
 
 Class Precedence List:
@@ -9,4 +8,3 @@ The type simple-condition represents conditions that are signaled by signal when
 
 See Also:
 simple-condition-format-control,  simple-condition-format-arguments
-

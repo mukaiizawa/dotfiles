@@ -1,4 +1,3 @@
-
 Macro DEFINE-METHOD-COMBINATION
 
 Syntax:
@@ -200,4 +199,3 @@ call-method, call-next-method, documentation, method-qualifiers, method-combinat
 
 Notes:
 The :method-combination option of defgeneric is used to specify that a generic function should use a particular method combination type. The first argument to the :method-combination option is the name of a method combination type and the remaining arguments are options for that type.
-

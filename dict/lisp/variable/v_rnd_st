@@ -1,4 +1,3 @@
-
 Variable *RANDOM-STATE*
 
 Value Type:
@@ -35,4 +34,3 @@ make-random-state, random, random-state
 
 Notes:
 Binding *random-state* to a different random state object correctly saves and restores the old random state object.
-

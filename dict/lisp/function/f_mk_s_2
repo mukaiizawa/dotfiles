@@ -1,4 +1,3 @@
-
 Function MAKE-STRING-OUTPUT-STREAM
 
 Syntax:
@@ -21,4 +20,3 @@ Examples:
 
 See Also:
 get-output-stream-string, with-output-to-string
-

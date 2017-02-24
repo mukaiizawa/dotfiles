@@ -1,4 +1,3 @@
-
 Function MAKE-TWO-WAY-STREAM
 
 Syntax:
@@ -22,4 +21,3 @@ Examples:
 
 Exceptional Situations:
 Should signal an error of type type-error if input-stream is not an input stream. Should signal an error of type type-error if output-stream is not an output stream.
-

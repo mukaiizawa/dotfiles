@@ -1,4 +1,3 @@
-
 Macro DEFMETHOD
 
 Syntax:
@@ -48,4 +47,3 @@ If a generic function is currently named by function-name, the lambda list of th
 
 See Also:
 defgeneric, documentation
-

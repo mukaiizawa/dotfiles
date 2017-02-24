@@ -1,4 +1,3 @@
-
 Function FIND-SYMBOL
 
 Syntax:
@@ -49,4 +48,3 @@ intern, find-all-symbols
 
 Notes:
 find-symbol is operationally equivalent to intern, except that it never creates a new symbol.
-

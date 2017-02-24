@@ -1,4 +1,3 @@
-
 Function MAKE-LIST
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if size is not a non-negative integer.
 
 See Also:
 cons, list
-

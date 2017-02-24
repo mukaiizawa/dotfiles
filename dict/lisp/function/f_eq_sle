@@ -1,4 +1,3 @@
-
 Function =, /=, <, >, <=, >=
 
 Syntax:
@@ -63,4 +62,3 @@ Might signal type-error if some argument is not a real. Might signal arithmetic-
 
 Notes:
 = differs from eql in that (= 0.0 -0.0) is always true, because = compares the mathematical values of its operands, whereas eql compares the representational values, so to speak.
-

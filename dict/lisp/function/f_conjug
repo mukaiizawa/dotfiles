@@ -1,4 +1,3 @@
-
 Function CONJUGATE
 
 Syntax:
@@ -22,4 +21,3 @@ Examples:
 Notes:
 For a complex number z,
  (conjugate z) ==  (complex (realpart z) (- (imagpart z)))
-

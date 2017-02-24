@@ -1,4 +1,3 @@
-
 Variable *PRINT-CIRCLE*
 
 Value Type:
@@ -28,4 +27,3 @@ write
 
 Notes:
 An attempt to print a circular structure with *print-circle* set to nil may lead to looping behavior and failure to terminate.
-

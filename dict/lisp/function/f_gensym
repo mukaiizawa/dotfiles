@@ -1,4 +1,3 @@
-
 Function GENSYM
 
 Syntax:
@@ -39,4 +38,3 @@ gentemp, *gensym-counter*
 
 Notes:
 The ability to pass a numeric argument to gensym has been deprecated; explicitly binding *gensym-counter* is now stylistically preferred. (The somewhat baroque conventions for the optional argument are historical in nature, and supported primarily for compatibility with older dialects of Lisp. In modern code, it is recommended that the only kind of argument used be a string prefix. In general, though, to obtain more flexible control of the new-symbol's name, consider using make-symbol instead.)
-

@@ -1,4 +1,3 @@
-
 System Class NUMBER
 
 Class Precedence List:
@@ -10,4 +9,3 @@ The function = tests for numerical equality. The function eql, when its argument
 
 Notes:
 Common Lisp differs from mathematics on some naming issues. In mathematics, the set of real numbers is traditionally described as a subset of the complex numbers, but in Common Lisp, the type real and the type complex are disjoint. The Common Lisp type which includes all mathematical complex numbers is called number. The reasons for these differences include historical precedent, compatibility with most other popular computer languages, and various issues of time and space efficiency.
-

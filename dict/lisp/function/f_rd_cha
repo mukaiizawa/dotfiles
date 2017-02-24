@@ -1,4 +1,3 @@
-
 Function READ-CHAR
 
 Syntax:
@@ -36,4 +35,3 @@ read-byte,  read-sequence,  write-char, read
 
 Notes:
 The corresponding output function is write-char.
-

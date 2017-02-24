@@ -45,4 +45,3 @@ break, signal, warn, error, typep
 Notes:
 *break-on-signals* is intended primarily for use in debugging code that does signaling. When setting *break-on-signals*, the user is encouraged to choose the most restrictive specification that suffices. Setting *break-on-signals* effectively violates the modular handling of condition signaling. In practice, the complete effect of setting *break-on-signals* might be unpredictable in some cases since the user might not be aware of the variety or number of calls to signal that are used in code called only incidentally.
 *break-on-signals* enables an early entry to the debugger but such an entry does not preclude an additional entry to the debugger in the case of operations such as error and cerror.
-

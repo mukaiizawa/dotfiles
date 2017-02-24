@@ -1,4 +1,3 @@
-
 Local Macro PPRINT-EXIT-IF-LIST-EXHAUSTED
 
 Syntax:
@@ -13,4 +12,3 @@ An error is signaled (at macro expansion time or at run time) if pprint-exit-if-
 
 See Also:
 pprint-logical-block, pprint-pop.
-

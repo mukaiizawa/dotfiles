@@ -1,4 +1,3 @@
-
 Variable *PRINT-ARRAY*
 
 Value Type:
@@ -12,4 +11,3 @@ Controls the format in which arrays are printed. If it is false, the contents of
 
 Affected By:
 The implementation.
-

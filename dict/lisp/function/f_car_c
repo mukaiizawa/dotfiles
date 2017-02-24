@@ -1,4 +1,3 @@
-
 Accessor CAR, CDR, CAAR, CADR, CDAR, CDDR, CAAAR, CAADR, CADAR, CADDR, CDAAR, CDADR, CDDAR, CDDDR, CAAAAR, CAAADR, CAADAR, CAADDR, CADAAR, CADADR, CADDAR, CADDDR, CDAAAR, CDAADR, CDADAR, CDADDR, CDDAAR, CDDADR, CDDDAR, CDDDDR
 
 Syntax:
@@ -129,4 +128,3 @@ The car of a cons can also be altered by using rplaca, and the cdr of a cons can
 (cadr x)   ==  (second x) ==  (car (cdr x))
 (caddr x)  ==  (third x)  ==  (car (cdr (cdr x)))
 (cadddr x) ==  (fourth x) ==  (car (cdr (cdr (cdr x))))
-

@@ -1,4 +1,3 @@
-
 Function CELL-ERROR-NAME
 
 Syntax:
@@ -14,4 +13,3 @@ The nature of the result depends on the specific type of condition. For example,
 
 See Also:
 cell-error, unbound-slot, unbound-variable, undefined-function
-

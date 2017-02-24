@@ -1,4 +1,3 @@
-
 Declaration TYPE
 
 Syntax:
@@ -90,4 +89,3 @@ To see why, consider (f most-positive-fixnum 1 -1). Although the arguments and t
  (defun f (x y)
    (declare (fixnum x y z))
    (the fixnum (+ (the fixnum (+ x y)) z)))
-

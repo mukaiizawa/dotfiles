@@ -1,4 +1,3 @@
-
 Function SYMBOLP
 
 Syntax:
@@ -24,4 +23,3 @@ keywordp, symbol, typep
 
 Notes:
  (symbolp object) ==  (typep object 'symbol)
-

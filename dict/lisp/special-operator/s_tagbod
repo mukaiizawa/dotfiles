@@ -1,4 +1,3 @@
-
 Special Operator TAGBODY
 
 Syntax:
@@ -61,4 +60,3 @@ do*             do-symbols           prog
 do-all-symbols  dolist               prog*
 
 Figure 5-10.  Macros that have implicit tagbodies.
-

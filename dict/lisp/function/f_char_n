@@ -1,4 +1,3 @@
-
 Function CHAR-NAME
 
 Syntax:
@@ -39,4 +38,3 @@ name-char
 
 Notes:
 Non-graphic characters having names are written by the Lisp printer as ``#</TT>'' followed by the their name
-

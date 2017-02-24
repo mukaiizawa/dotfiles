@@ -1,4 +1,3 @@
-
 Macro IGNORE-ERRORS
 
 Syntax:
@@ -35,4 +34,3 @@ is equivalent to:
  (handler-case (progn . forms)
    (error (condition) (values nil condition)))
 Because the second return value is a condition in the exceptional case, it is common (but not required) to arrange for the second return value in the normal case to be missing or nil so that the two situations can be distinguished.
-

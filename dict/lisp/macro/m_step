@@ -1,4 +1,3 @@
-
 Macro STEP
 
 Syntax:
@@ -18,4 +17,3 @@ trace
 
 Notes:
 Implementations are encouraged to respond to the typing of ? or the pressing of a ``help key'' by providing help including a list of commands.
-

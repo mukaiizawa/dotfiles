@@ -1,4 +1,3 @@
-
 Function +
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Exceptional Situations:
 Might signal type-error if some argument is not a number. Might signal arithmetic-error.
-

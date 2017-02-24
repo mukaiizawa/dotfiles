@@ -1,4 +1,3 @@
-
 Function PACKAGE-ERROR-PACKAGE
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 See Also:
 package-error
-

@@ -1,4 +1,3 @@
-
 Condition Type SIMPLE-TYPE-ERROR
 
 Class Precedence List:
@@ -9,4 +8,3 @@ Conditions of type simple-type-error are like conditions of type type-error, exc
 
 See Also:
 simple-condition,  simple-condition-format-control,  simple-condition-format-arguments, type-error-datum, type-error-expected-type
-

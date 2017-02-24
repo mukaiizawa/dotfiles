@@ -1,4 +1,3 @@
-
 Function LDB-TEST
 
 Syntax:
@@ -24,4 +23,3 @@ Notes:
  (ldb-test bytespec n) ==
  (not (zerop (ldb bytespec n))) ==
  (logtest (ldb bytespec -1) n)
-

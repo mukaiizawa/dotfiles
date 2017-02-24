@@ -1,4 +1,3 @@
-
 Function ARRAY-DIMENSIONS
 
 Syntax:
@@ -21,4 +20,3 @@ Should signal an error of type type-error if its argument is not an array.
 
 See Also:
 array-dimension
-

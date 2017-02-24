@@ -1,4 +1,3 @@
-
 Special Operator FUNCTION
 
 Syntax:
@@ -26,4 +25,3 @@ defun, fdefinition, flet, labels, symbol-function
 
 Notes:
 The notation #'name may be used as an abbreviation for (function name).
-

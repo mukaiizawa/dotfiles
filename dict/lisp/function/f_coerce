@@ -1,4 +1,3 @@
-
 Function COERCE
 
 Syntax:
@@ -65,4 +64,3 @@ rational, floor, char-code, char-int
 Notes:
 Coercions from floats to rationals and from ratios to integers are not provided because of rounding problems.
  (coerce x 't) ==  (identity x) ==  x
-

@@ -1,4 +1,3 @@
-
 System Class VECTOR
 
 Class Precedence List:
@@ -29,4 +28,3 @@ The type (vector e s) is equivalent to the type (array e (s)).
 The type (vector bit) has the name bit-vector.
 The union of all types (vector C), where C is any subtype of character, has the name string.
  (vector *) refers to all vectors regardless of element type, (vector type-specifier) refers only to those vectors that can result from giving type-specifier as the :element-type argument to make-array.
-

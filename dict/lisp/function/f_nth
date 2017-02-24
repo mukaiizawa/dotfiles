@@ -1,4 +1,3 @@
-
 Accessor NTH
 
 Syntax:
@@ -27,4 +26,3 @@ Examples:
 
 See Also:
 elt, first, nthcdr
-

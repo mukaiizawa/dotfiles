@@ -1,4 +1,3 @@
-
 Function WRITE-BYTE
 
 Syntax:
@@ -29,4 +28,3 @@ Might signal an error of type type-error if byte is not an integer of the stream
 
 See Also:
 read-byte, write-char,  write-sequence
-

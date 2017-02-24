@@ -1,4 +1,3 @@
-
 Macro WITH-OUTPUT-TO-STRING
 
 Syntax:
@@ -38,4 +37,3 @@ The consequences are undefined if destructive modifications are performed direct
 
 See Also:
 make-string-output-stream, vector-push-extend
-

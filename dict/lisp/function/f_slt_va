@@ -1,4 +1,3 @@
-
 Function SLOT-VALUE
 
 Syntax:
@@ -53,4 +52,3 @@ slot-missing, slot-unbound, with-slots
 Notes:
 Although no implementation is required to do so, implementors are strongly encouraged to implement the function slot-value using the function slot-value-using-class described in the Metaobject Protocol.
 Implementations may optimize slot-value by compiling it inline.
-

@@ -1,4 +1,3 @@
-
 Accessor GET
 
 Syntax:
@@ -56,4 +55,3 @@ Notes:
  (get x y) ==  (getf (symbol-plist x) y)
 Numbers and characters are not recommended for use as indicators in portable code since get tests with eq rather than eql, and consequently the effect of using such indicators is implementation-dependent.
 There is no way using get to distinguish an absent property from one whose value is default. However, see get-properties.
-

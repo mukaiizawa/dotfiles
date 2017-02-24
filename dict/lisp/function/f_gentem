@@ -1,4 +1,3 @@
-
 Function GENTEMP
 
 Syntax:
@@ -41,4 +40,3 @@ The function gentemp is deprecated.
 If package is the KEYWORD package, the result is an external symbol of package. Otherwise, the result is an internal symbol of package.
 The gentemp internal counter is independent of *gensym-counter*, the counter used by gensym. There is no provision for accessing the gentemp internal counter.
 Just because gentemp creates a symbol which did not previously exist does not mean that such a symbol might not be seen in the future (e.g., in a data file---perhaps even created by the same program in another session). As such, this symbol is not truly unique in the same sense as a gensym would be. In particular, programs which do automatic code generation should be careful not to attach global attributes to such generated symbols (e.g., special declarations) and then write them into a file because such global attributes might, in a different session, end up applying to other symbols that were automatically generated on another day for some other purpose.
-

@@ -1,4 +1,3 @@
-
 Function REMPROP
 
 Syntax:
@@ -49,4 +48,3 @@ remf, symbol-plist
 
 Notes:
 Numbers and characters are not recommended for use as indicators in portable code since remprop tests with eq rather than eql, and consequently the effect of using such indicators is implementation-dependent. Of course, if you've gotten as far as needing to remove such a property, you don't have much choice---the time to have been thinking about this was when you used setf of get to establish the property.
-

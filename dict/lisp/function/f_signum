@@ -1,4 +1,3 @@
-
 Function SIGNUM
 
 Syntax:
@@ -27,4 +26,3 @@ Examples:
 
 Notes:
  (signum x) ==  (if (zerop x) x (/ x (abs x)))
-

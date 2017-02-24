@@ -1,4 +1,3 @@
-
 Function SET
 
 Syntax:
@@ -55,4 +54,3 @@ setq, progv, symbol-value
 Notes:
 The function set is deprecated.
 set cannot change the value of a lexical variable.
-

@@ -1,4 +1,3 @@
-
 Function MAKE-CONCATENATED-STREAM
 
 Syntax:
@@ -21,4 +20,3 @@ Should signal type-error if any argument is not an input stream.
 
 See Also:
 concatenated-stream-streams
-

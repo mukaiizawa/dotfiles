@@ -1,4 +1,3 @@
-
 System Class ECHO-STREAM
 
 Class Precedence List:
@@ -10,4 +9,3 @@ All input taken from the input stream is echoed to the output stream. Whether th
 
 See Also:
 echo-stream-input-stream, echo-stream-output-stream, make-echo-stream
-

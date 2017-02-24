@@ -1,4 +1,3 @@
-
 Accessor ELT
 
 Syntax:
@@ -28,4 +27,3 @@ aref, nth
 
 Notes:
 aref may be used to access vector elements that are beyond the vector's fill pointer.
-

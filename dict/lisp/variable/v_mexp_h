@@ -1,4 +1,3 @@
-
 Variable *MACROEXPAND-HOOK*
 
 Value Type:
@@ -27,4 +26,3 @@ Notes:
 The net effect of the chosen initial value is to just invoke the macro function, giving it the macro form and environment as its two arguments.
 Users or user programs can assign this variable to customize or trace the macro expansion mechanism. Note, however, that this variable is a global resource, potentially shared by multiple programs; as such, if any two programs depend for their correctness on the setting of this variable, those programs may not be able to run in the same Lisp image. For this reason, it is frequently best to confine its uses to debugging situations.
 Users who put their own function into *macroexpand-hook* should consider saving the previous value of the hook, and calling that value from their own.
-

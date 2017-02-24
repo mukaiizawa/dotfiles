@@ -1,4 +1,3 @@
-
 Standard Generic Function INITIALIZE-INSTANCE
 
 Syntax:
@@ -18,4 +17,3 @@ Programmers can define methods for initialize-instance to specify actions to be 
 
 See Also:
 shared-initialize, make-instance, slot-boundp, slot-makunbound, Section 7.1 (Object Creation and Initialization), Section 7.1.4 (Rules for Initialization Arguments), Section 7.1.2 (Declaring the Validity of Initialization Arguments)
-

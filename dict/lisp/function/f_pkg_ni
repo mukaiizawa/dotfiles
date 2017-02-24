@@ -1,4 +1,3 @@
-
 Function PACKAGE-NICKNAMES
 
 Syntax:
@@ -18,4 +17,3 @@ Examples:
 
 Exceptional Situations:
 Should signal an error of type type-error if package is not a package designator.
-

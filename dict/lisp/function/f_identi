@@ -1,4 +1,3 @@
-
 Function IDENTITY
 
 Syntax:
@@ -19,4 +18,3 @@ identity is intended for use with functions that require a function as an argume
 (eql x (identity x)) returns true for all possible values of x, but (eq x (identity x)) might return false when x is a number or character.
 identity could be defined by
 (defun identity (x) x)
-

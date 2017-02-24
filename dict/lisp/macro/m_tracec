@@ -1,4 +1,3 @@
-
 Macro TRACE, UNTRACE
 
 Syntax:
@@ -48,4 +47,3 @@ See Also:
 Notes:
 trace and untrace may also accept additional implementation-dependent argument formats. The format of the trace output is implementation-dependent.
 Although trace can be extended to permit non-standard options, implementations are nevertheless encouraged (but not required) to warn about the use of syntax or options that are neither specified by this standard nor added as an extension by the implementation, since they could be symptomatic of typographical errors or of reliance on features supported in implementations other than the current implementation.
-

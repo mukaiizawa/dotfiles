@@ -1,4 +1,3 @@
-
 Type EXTENDED-CHAR
 
 Supertypes:
@@ -9,4 +8,3 @@ The type extended-char is equivalent to the type (and character (not base-char))
 
 Notes:
 The type extended-char might have no elements[4] in implementations in which all characters are of type base-char.
-

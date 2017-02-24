@@ -1,4 +1,3 @@
-
 Macro DOTIMES
 
 Syntax:
@@ -59,4 +58,3 @@ do, dolist, tagbody
 
 Notes:
 go may be used within the body of dotimes to transfer control to a statement labeled by a tag.
-

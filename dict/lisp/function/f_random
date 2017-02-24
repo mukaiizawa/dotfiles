@@ -1,4 +1,3 @@
-
 Function RANDOM
 
 Syntax:
@@ -34,4 +33,3 @@ make-random-state, *random-state*
 
 Notes:
 See Common Lisp: The Language for information about generating random numbers.
-

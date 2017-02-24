@@ -1,4 +1,3 @@
-
 Function APPLY
 
 Syntax:
@@ -37,4 +36,3 @@ Examples:
 
 See Also:
 funcall, fdefinition, function
-

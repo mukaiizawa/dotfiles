@@ -1,4 +1,3 @@
-
 Macro LAMBDA
 
 Syntax:
@@ -28,4 +27,3 @@ This macro could be implemented by:
 (defmacro lambda (&whole form &rest bvl-decls-and-body)
   (declare (ignore bvl-decls-and-body))
   `#',form)
-

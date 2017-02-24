@@ -1,4 +1,3 @@
-
 Function STREAM-EXTERNAL-FORMAT
 
 Syntax:
@@ -25,4 +24,3 @@ the :external-format argument to the function open and the with-open-file macro.
 
 Notes:
 The format returned is not necessarily meaningful to other implementations.
-

@@ -1,4 +1,3 @@
-
 Function ASH
 
 Syntax:
@@ -27,4 +26,3 @@ Should signal an error of type type-error if integer is not an integer. Should s
 Notes:
  (logbitp j (ash n k))
  ==  (and (>= j k) (logbitp (- j k) n))
-

@@ -1,4 +1,3 @@
-
 Function CODE-CHAR
 
 Syntax:
@@ -20,4 +19,3 @@ The implementation's character encoding.
 
 See Also:
 char-code
-

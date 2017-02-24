@@ -1,4 +1,3 @@
-
 System Class FLOAT
 
 Class Precedence List:
@@ -22,4 +21,3 @@ This denotes the floats on the interval described by lower-limit and upper-limit
 
 Notes:
 Note that all mathematical integers are representable not only as Common Lisp reals, but also as complex floats. For example, possible representations of the mathematical number 1 include the integer 1, the float 1.0, or the complex #C(1.0 0.0).
-

@@ -1,4 +1,3 @@
-
 Function CHARACTERP
 
 Syntax:
@@ -26,4 +25,3 @@ character (type and function), typep
 
 Notes:
  (characterp object) ==  (typep object 'character)
-

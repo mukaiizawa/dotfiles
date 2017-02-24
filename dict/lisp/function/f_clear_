@@ -1,4 +1,3 @@
-
 Function CLEAR-INPUT
 
 Syntax:
@@ -52,4 +51,3 @@ Should signal an error of type type-error if input-stream is not a stream design
 
 See Also:
 clear-output
-

@@ -1,4 +1,3 @@
-
 Function MACHINE-VERSION
 
 Syntax:
@@ -18,4 +17,3 @@ The machine version, and the implementation.
 
 See Also:
 machine-type, machine-instance
-

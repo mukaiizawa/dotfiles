@@ -1,4 +1,3 @@
-
 Declaration SPECIAL
 
 Syntax:
@@ -82,4 +81,3 @@ In the contorted code above, the outermost and innermost bindings of y are dynam
 
 See Also:
 defparameter, defvar
-

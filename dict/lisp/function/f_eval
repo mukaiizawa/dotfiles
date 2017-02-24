@@ -1,4 +1,3 @@
-
 Function EVAL
 
 Syntax:
@@ -29,4 +28,3 @@ To obtain the current dynamic value of a symbol, use of symbol-value is equivale
 Note that an eval form involves two levels of evaluation for its argument. First, form is evaluated by the normal argument evaluation mechanism as would occur with any call. The object that results from this normal argument evaluation becomes the value of the form parameter, and is then evaluated as part of the eval form. For example:
  (eval (list 'cdr (car '((quote (a . b)) c)))) =>  b
 The argument form (list 'cdr (car '((quote (a . b)) c))) is evaluated in the usual way to produce the argument (cdr (quote (a . b))); eval then evaluates its argument, (cdr (quote (a . b))), to produce b. Since a single evaluation already occurs for any argument form in any function form, eval is sometimes said to perform ``an extra level of evaluation.''
-

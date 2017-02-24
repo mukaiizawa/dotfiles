@@ -1,4 +1,3 @@
-
 Macro DECLAIM
 
 Syntax:
@@ -13,4 +12,3 @@ If a use of this macro appears as a top level form in a file being processed by 
 
 See Also:
 declare, proclaim
-

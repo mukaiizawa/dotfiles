@@ -1,4 +1,3 @@
-
 Variable *PRINT-GENSYM*
 
 Value Type:
@@ -18,4 +17,3 @@ Examples:
 
 See Also:
 write, *print-escape*
-

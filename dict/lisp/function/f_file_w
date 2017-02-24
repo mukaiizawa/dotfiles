@@ -1,4 +1,3 @@
-
 Function FILE-WRITE-DATE
 
 Syntax:
@@ -29,4 +28,3 @@ The host computer's file system.
 Exceptional Situations:
 An error of type file-error is signaled if pathspec is wild.
 An error of type file-error is signaled if the file system cannot perform the requested operation.
-

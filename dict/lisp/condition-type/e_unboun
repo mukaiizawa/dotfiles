@@ -1,4 +1,3 @@
-
 Condition Type UNBOUND-SLOT
 
 Class Precedence List:
@@ -10,4 +9,3 @@ The name of the cell (see cell-error) is the name of the slot.
 
 See Also:
 cell-error-name, unbound-slot-object
-

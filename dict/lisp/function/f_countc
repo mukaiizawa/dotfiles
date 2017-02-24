@@ -1,4 +1,3 @@
-
 Function COUNT, COUNT-IF, COUNT-IF-NOT
 
 Syntax:
@@ -32,4 +31,3 @@ Should be prepared to signal an error of type type-error if sequence is not a pr
 Notes:
 The :test-not argument is deprecated.
 The function count-if-not is deprecated.
-

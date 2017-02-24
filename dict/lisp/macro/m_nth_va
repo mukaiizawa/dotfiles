@@ -1,4 +1,3 @@
-
 Macro NTH-VALUE
 
 Syntax:
@@ -29,4 +28,3 @@ multiple-value-list, nth
 Notes:
 Operationally, the following relationship is true, although nth-value might be more efficient in some implementations because, for example, some consing might be avoided.
  (nth-value n form) ==  (nth n (multiple-value-list form))
-

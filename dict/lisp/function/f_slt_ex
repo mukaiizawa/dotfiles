@@ -1,4 +1,3 @@
-
 Function SLOT-EXISTS-P
 
 Syntax:
@@ -20,4 +19,3 @@ defclass, slot-missing
 
 Notes:
 Although no implementation is required to do so, implementors are strongly encouraged to implement the function slot-exists-p using the function slot-exists-p-using-class described in the Metaobject Protocol.
-

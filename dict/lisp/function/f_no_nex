@@ -1,4 +1,3 @@
-
 Standard Generic Function NO-NEXT-METHOD
 
 Syntax:
@@ -22,4 +21,3 @@ The system-supplied method on no-next-method signals an error of type error.
 
 See Also:
 call-next-method
-

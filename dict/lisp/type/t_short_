@@ -1,4 +1,3 @@
-
 Type SHORT-FLOAT, SINGLE-FLOAT, DOUBLE-FLOAT, LONG-FLOAT
 
 Supertypes:
@@ -38,4 +37,3 @@ long-lower-limit, long-upper-limit---interval designators for type long-float. T
 
 Compound Type Specifier Description:
 Each of these denotes the set of floats of the indicated type that are on the interval specified by the interval designators.
-

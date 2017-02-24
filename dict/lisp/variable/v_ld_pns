@@ -1,4 +1,3 @@
-
 Variable *LOAD-PATHNAME*, *LOAD-TRUENAME*
 
 Value Type:
@@ -18,4 +17,3 @@ The file system.
 
 See Also:
 load
-

@@ -1,4 +1,3 @@
-
 Special Form SETQ
 
 Syntax:
@@ -38,4 +37,3 @@ The primary value of each form is assigned to the corresponding var.
 
 See Also:
 psetq, set, setf
-

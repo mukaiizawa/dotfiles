@@ -1,4 +1,3 @@
-
 Function BOUNDP
 
 Syntax:
@@ -27,4 +26,3 @@ set, setq, symbol-value, makunbound
 
 Notes:
 The function bound determines only whether a symbol has a value in the global environment; any lexical bindings are ignored.
-

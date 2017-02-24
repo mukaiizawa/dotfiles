@@ -1,4 +1,3 @@
-
 Standard Generic Function UPDATE-INSTANCE-FOR-REDEFINED-CLASS
 
 Syntax:
@@ -68,4 +67,3 @@ make-instances-obsolete, shared-initialize
 
 Notes:
 Initargs are declared as valid by using the :initarg option to defclass, or by defining methods for update-instance-for-redefined-class or shared-initialize. The keyword name of each keyword parameter specifier in the lambda list of any method defined on update-instance-for-redefined-class or shared-initialize is declared as a valid initarg name for all classes for which that method is applicable.
-

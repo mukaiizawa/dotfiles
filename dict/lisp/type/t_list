@@ -1,4 +1,3 @@
-
 System Class LIST
 Class Precedence List:
 list, sequence, t
@@ -9,4 +8,3 @@ A proper list is a chain of conses terminated by the empty list, (), which is it
 Dotted lists and circular lists are also lists, but usually the unqualified term ``list'' within this specification means proper list. Nevertheless, the type list unambiguously includes dotted lists and circular lists.
 For each element of a list there is a cons. The empty list has no elements and is not a cons.
 The types cons and null form an exhaustive partition of the type list.
-

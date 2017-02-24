@@ -1,4 +1,3 @@
-
 Function PATHNAMEP
 
 Syntax:
@@ -24,4 +23,3 @@ Examples:
 
 Notes:
  (pathnamep object) ==  (typep object 'pathname)
-

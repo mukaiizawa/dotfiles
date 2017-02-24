@@ -1,4 +1,3 @@
-
 Special Operator EVAL-WHEN
 
 Syntax:
@@ -94,4 +93,3 @@ which would be treated by the above rules the same as
  (defun bar (x)
    (setf (symbol-function 'foo) #'(lambda () (+ x 3))))
 when the definition of bar is not a top level form.
-

@@ -1,4 +1,3 @@
-
 Function ARRAY-IN-BOUNDS-P
 
 Syntax:
@@ -27,4 +26,3 @@ Notes:
  (array-in-bounds-p array subscripts)
  ==  (and (not (some #'minusp (list subscripts)))
          (every #'< (list subscripts) (array-dimensions array)))
-

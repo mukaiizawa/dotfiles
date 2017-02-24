@@ -1,4 +1,3 @@
-
 Function BIT-AND, BIT-ANDC1, BIT-ANDC2, BIT-EQV, BIT-IOR, BIT-NAND, BIT-NOR, BIT-NOT, BIT-ORC1, BIT-ORC2, BIT-XOR
 
 Syntax:
@@ -58,4 +57,3 @@ Examples:
 
 See Also:
 lognot, logand
-

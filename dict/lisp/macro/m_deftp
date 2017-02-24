@@ -1,4 +1,3 @@
-
 Macro DEFTYPE
 
 Syntax:
@@ -33,4 +32,3 @@ Examples:
 
 See Also:
 declare, defmacro, documentation
-

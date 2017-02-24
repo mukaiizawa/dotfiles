@@ -1,4 +1,3 @@
-
 Function WRITE-STRING, WRITE-LINE
 
 Syntax:
@@ -40,4 +39,3 @@ write-line and write-string return string, not the substring bounded by start an
       (write-char (char string i)))
  (write-line string)
 ==  (prog1 (write-string string) (terpri))
-

@@ -1,4 +1,3 @@
-
 Function FIND, FIND-IF, FIND-IF-NOT
 
 Syntax:
@@ -50,4 +49,3 @@ The function find-if-not is deprecated.
 
 (find-if-not #'zerop '(0 0 3))
 == (find-if (complement #'zerop) '(0 0 3))
-

@@ -1,4 +1,3 @@
-
 Variable *READ-BASE*
 
 Value Type:
@@ -27,4 +26,3 @@ Examples:
 
 Notes:
 Altering the input radix can be useful when reading data files in special formats.
-

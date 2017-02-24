@@ -1,4 +1,3 @@
-
 Standard Generic Function DESCRIBE-OBJECT
 
 Syntax:
@@ -43,4 +42,3 @@ describe
 Notes:
 The same implementation techniques that are applicable to print-object are applicable to describe-object.
 The reason for making the return values for describe-object unspecified is to avoid forcing users to include explicit (values) in all of their methods. describe takes care of that.
-

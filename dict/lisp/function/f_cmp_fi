@@ -1,4 +1,3 @@
-
 Function COMPILE-FILE
 
 Syntax:
@@ -42,4 +41,3 @@ If either the attempt to open the source file for input or the attempt to open t
 
 See Also:
 compile, declare, eval-when, pathname, logical-pathname
-

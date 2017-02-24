@@ -1,4 +1,3 @@
-
 Macro MULTIPLE-VALUE-LIST
 
 Syntax:
@@ -20,4 +19,3 @@ values-list, multiple-value-call
 Notes:
 multiple-value-list and values-list are inverses of each other.
  (multiple-value-list form) ==  (multiple-value-call #'list form)
-

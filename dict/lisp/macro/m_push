@@ -1,4 +1,3 @@
-
 Macro PUSH
 
 Syntax:
@@ -33,4 +32,3 @@ Notes:
  The effect of (push item place) is equivalent to
  (setf place (cons item place))
 except that the subforms of place are evaluated only once, and item is evaluated before place.
-

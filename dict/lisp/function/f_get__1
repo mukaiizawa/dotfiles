@@ -1,4 +1,3 @@
-
 Function GET-INTERNAL-RUN-TIME
 
 Syntax:
@@ -18,4 +17,3 @@ internal-time-units-per-second
 
 Notes:
 Depending on the implementation, paging time and garbage collection time might be included in this measurement. Also, in a multitasking environment, it might not be possible to show the time for just the running process, so in some implementations, time taken by other processes during the same time interval might be included in this measurement as well.
-

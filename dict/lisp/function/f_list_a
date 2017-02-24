@@ -1,4 +1,3 @@
-
 Function LIST-ALL-PACKAGES
 
 Syntax:
@@ -17,4 +16,3 @@ Examples:
 
 Affected By:
 defpackage, delete-package, make-package
-

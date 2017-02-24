@@ -1,4 +1,3 @@
-
 Function ECHO-STREAM-INPUT-STREAM, ECHO-STREAM-OUTPUT-STREAM
 
 Syntax:
@@ -13,4 +12,3 @@ output-stream---an output stream.
 Description:
 echo-stream-input-stream returns the input stream from which echo-stream receives input.
 echo-stream-output-stream returns the output stream to which echo-stream sends output.
-

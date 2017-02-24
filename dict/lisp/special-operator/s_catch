@@ -1,4 +1,3 @@
-
 Special Operator CATCH
 
 Syntax:
@@ -36,4 +35,3 @@ An error of type control-error is signaled if throw is done when there is no sui
 Notes:
 It is customary for symbols to be used as tags, but any object is permitted. However, numbers should not be used because the comparison is done using eq.
 catch differs from block in that catch tags have dynamic scope while block names have lexical scope.
-

@@ -1,4 +1,3 @@
-
 Accessor REST
 
 Syntax:
@@ -27,4 +26,3 @@ cdr, nthcdr
 
 Notes:
 rest is often preferred stylistically over cdr when the argument is to being subjectively viewed as a list rather than as a cons.
-

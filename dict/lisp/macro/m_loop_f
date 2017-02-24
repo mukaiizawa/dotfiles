@@ -1,4 +1,3 @@
-
 Local Macro LOOP-FINISH
 
 Syntax:
@@ -49,4 +48,3 @@ Transfers control.
 
 Exceptional Situations:
 Whether or not loop-finish is fbound in the global environment is implementation-dependent; however, the restrictions on redefinition and shadowing of loop-finish are the same as for symbols in the COMMON-LISP package which are fbound in the global environment. The consequences of attempting to use loop-finish outside of loop are undefined.
-

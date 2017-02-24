@@ -1,4 +1,3 @@
-
 Macro WITH-SLOTS
 
 Syntax:
@@ -71,4 +70,3 @@ if slot-entryi is a symbol and is
  (variable-namei () (slot-value in 'slot-namei))
 if slot-entryi is of the form
  (variable-namei 'slot-namei))
-

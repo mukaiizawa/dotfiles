@@ -1,4 +1,3 @@
-
 Type NIL
 
 Supertypes:
@@ -9,4 +8,3 @@ The type nil contains no objects and so is also called the empty type. The type 
 
 Notes:
 The type containing the object nil is the type null, not the type nil.
-

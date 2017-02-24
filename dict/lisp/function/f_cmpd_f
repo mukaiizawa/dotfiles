@@ -1,4 +1,3 @@
-
 Function COMPILED-FUNCTION-P
 
 Syntax:
@@ -32,4 +31,3 @@ compile, compile-file, compiled-function
 
 Notes:
  (compiled-function-p object) ==  (typep object 'compiled-function)
-

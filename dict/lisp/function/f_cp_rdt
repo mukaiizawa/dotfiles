@@ -1,4 +1,3 @@
-
 Function COPY-READTABLE
 
 Syntax:
@@ -35,4 +34,3 @@ On the other hand,
  (setq *readtable* (copy-readtable))
 replaces the current readtable with a copy of itself. This is useful if you want to save a copy of a readtable for later use, protected from alteration in the meantime. It is also useful if you want to locally bind the readtable to a copy of itself, as in:
  (let ((*readtable* (copy-readtable))) ...)
-

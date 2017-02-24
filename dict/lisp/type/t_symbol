@@ -1,4 +1,3 @@
-
 System Class SYMBOL
 
 Class Precedence List:
@@ -26,4 +25,3 @@ If a symbol has a function attribute, it is said to be fbound, and that fact can
 The consequences are undefined if an attempt is made to change the functional value of a symbol that names a special form.
 Operations on a symbol's value cell and function cell are sometimes described in terms of their effect on the symbol itself, but the user should keep in mind that there is an intimate relationship between the contents of those cells and the global variable or global function definition, respectively.
 Symbols are used as identifiers for lexical variables and lexical function definitions, but in that role, only their object identity is significant. Common Lisp provides no operation on a symbol that can have any effect on a lexical variable or on a lexical function definition.
-

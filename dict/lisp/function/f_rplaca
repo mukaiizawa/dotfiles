@@ -1,4 +1,3 @@
-
 Function RPLACA, RPLACD
 
 Syntax:
@@ -26,4 +25,3 @@ The cons is modified.
 
 Exceptional Situations:
 Should signal an error of type type-error if cons is not a cons.
-

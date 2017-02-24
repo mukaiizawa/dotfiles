@@ -1,4 +1,3 @@
-
 Function DECODE-FLOAT, SCALE-FLOAT, FLOAT-RADIX, FLOAT-SIGN, FLOAT-DIGITS, FLOAT-PRECISION, INTEGER-DECODE-FLOAT
 
 Syntax:
@@ -80,4 +79,3 @@ The product of the first result of decode-float or integer-decode-float, of the 
                       (decode-float f)
    (* (scale-float signif expon) sign))
 ==  f
-

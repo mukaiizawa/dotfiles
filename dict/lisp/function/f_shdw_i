@@ -1,4 +1,3 @@
-
 Function SHADOWING-IMPORT
 
 Syntax:
@@ -30,4 +29,3 @@ Current state of the package system.
 
 See Also:
 import, unintern, package-shadowing-symbols
-

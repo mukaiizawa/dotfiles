@@ -1,4 +1,3 @@
-
 Function SIGNAL
 
 Syntax:
@@ -52,4 +51,3 @@ See Also:
 
 Notes:
 If (typep datum *break-on-signals*) yields true, the debugger is entered prior to beginning the signaling process. The continue restart can be used to continue with the signaling process. This is also true for all other functions and macros that should, might, or must signal conditions.
-

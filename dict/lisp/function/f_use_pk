@@ -1,4 +1,3 @@
-
 Function USE-PACKAGE
 
 Syntax:
@@ -29,4 +28,3 @@ unuse-package, package-use-list
 
 Notes:
 It is permissible for a package P1 to use a package P2 even if P2 already uses P1. The using of packages is not transitive, so no problem results from the apparent circularity.
-

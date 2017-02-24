@@ -1,4 +1,3 @@
-
 Macro DEFINE-SETF-EXPANDER
 
 Syntax:
@@ -66,4 +65,3 @@ setf, defsetf, documentation, get-setf-expansion
 
 Notes:
 define-setf-expander differs from the long form of defsetf in that while the body is being executed the variables in lambda-list are bound to parts of the place form, not to temporary variables that will be bound to the values of such parts. In addition, define-setf-expander does not have defsetf's restriction that access-fn must be a function or a function-like macro; an arbitrary defmacro destructuring pattern is permitted in lambda-list.
-

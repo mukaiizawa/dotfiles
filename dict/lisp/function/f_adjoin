@@ -1,4 +1,3 @@
-
 Function ADJOIN
 
 Syntax:
@@ -36,4 +35,3 @@ Notes:
  The :test-not parameter is deprecated.
  (adjoin item list :key fn)
    ==  (if (member (fn item) list :key fn) list (cons item list))
-

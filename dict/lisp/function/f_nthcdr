@@ -1,4 +1,3 @@
-
 Function NTHCDR
 
 Syntax:
@@ -29,4 +28,3 @@ For n being an integer greater than 1, the error checking done by (nthcdr n list
 
 See Also:
 cdr, nth, rest
-

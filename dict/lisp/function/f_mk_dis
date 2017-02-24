@@ -1,4 +1,3 @@
-
 Function MAKE-DISPATCH-MACRO-CHARACTER
 
 Syntax:
@@ -24,4 +23,3 @@ The readtable is altered.
 
 See Also:
 *readtable*, set-dispatch-macro-character
-

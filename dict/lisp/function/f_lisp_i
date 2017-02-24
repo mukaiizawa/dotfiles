@@ -1,4 +1,3 @@
-
 Function LISP-IMPLEMENTATION-TYPE, LISP-IMPLEMENTATION-VERSION
 
 Syntax:
@@ -22,4 +21,3 @@ OR=>  'Joe's Common Lisp'
 =>  '1.3a'
 =>  'V2'
 OR=>  'Release 17.3, ECO #6'
-

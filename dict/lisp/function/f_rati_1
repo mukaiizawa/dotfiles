@@ -1,4 +1,3 @@
-
 Function RATIONALP
 
 Syntax:
@@ -21,4 +20,3 @@ rational
 
 Notes:
  (rationalp object) ==  (typep object 'rational)
-

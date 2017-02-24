@@ -1,4 +1,3 @@
-
 Macro DEFINE-MODIFY-MACRO
 
 Syntax:
@@ -39,4 +38,3 @@ A macro definition is assigned to name.
 
 See Also:
 defsetf,  define-setf-expander,  documentation, Section 3.4.11 (Syntactic Interaction of Documentation Strings and Declarations)
-

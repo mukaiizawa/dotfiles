@@ -1,4 +1,3 @@
-
 Function MAKE-SYMBOL
 
 Syntax:
@@ -28,4 +27,3 @@ copy-symbol
 
 Notes:
 No attempt is made by make-symbol to convert the case of the name to uppercase. The only case conversion which ever occurs for symbols is done by the Lisp reader. The program interface to symbol creation retains case, and the program interface to interning symbols is case-sensitive.
-

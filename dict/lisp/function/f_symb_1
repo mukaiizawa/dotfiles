@@ -1,4 +1,3 @@
-
 Accessor SYMBOL-FUNCTION
 
 Syntax:
@@ -62,4 +61,3 @@ symbol-function cannot access the value of a lexical function name produced by f
 setf may be used with symbol-function to replace a global function definition when the symbol's function definition does not represent a special operator.
 (symbol-function symbol) ==  (fdefinition symbol)
 However, fdefinition accepts arguments other than just symbols.
-

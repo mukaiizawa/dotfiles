@@ -1,4 +1,3 @@
-
 Macro FORMATTER
 
 Syntax:
@@ -28,4 +27,3 @@ Might signal an error (at macro expansion time or at run time) if the argument i
 
 See Also:
 format
-

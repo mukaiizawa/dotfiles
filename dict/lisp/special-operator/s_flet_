@@ -1,4 +1,3 @@
-
 Special Operator FLET, LABELS, MACROLET
 
 Syntax:
@@ -108,4 +107,3 @@ declare, defmacro, defun, documentation, let
 Notes:
 It is not possible to define recursive functions with flet. labels can be used to define mutually recursive functions.
 If a macrolet form is a top level form, the body forms are also processed as top level forms. See Section 3.2.3 (File Compilation).
-

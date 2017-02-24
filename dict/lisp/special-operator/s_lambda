@@ -1,4 +1,3 @@
-
 Symbol LAMBDA
 
 Syntax:
@@ -22,4 +21,3 @@ The lambda form
  ((lambda lambda-list . body) . arguments)
 is semantically equivalent to the function form
  (funcall #'(lambda lambda-list . body) . arguments)
-

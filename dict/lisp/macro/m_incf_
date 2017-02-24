@@ -1,4 +1,3 @@
-
 Macro INCF, DECF
 
 Syntax:
@@ -34,4 +33,3 @@ Place is modified.
 
 See Also:
 +, -, 1+, 1-, setf
-

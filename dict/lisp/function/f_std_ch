@@ -1,4 +1,3 @@
-
 Function STANDARD-CHAR-P
 
 
@@ -21,4 +20,3 @@ Examples:
 
 Exceptional Situations:
 Should signal an error of type type-error if character is not a character.
-

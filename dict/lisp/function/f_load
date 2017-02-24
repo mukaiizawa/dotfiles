@@ -1,4 +1,3 @@
-
 Function LOAD
 
 Syntax:
@@ -64,4 +63,3 @@ An error of type file-error might be signaled if (wild-pathname-p filespec) retu
 
 See Also:
 error, merge-pathnames, *load-verbose*, *default-pathname-defaults*, pathname, logical-pathname
-

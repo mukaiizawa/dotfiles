@@ -1,4 +1,3 @@
-
 Function COMPLEXP
 
 Syntax:
@@ -20,4 +19,3 @@ complex (function and type), typep
 
 Notes:
  (complexp object) ==  (typep object 'complex)
-

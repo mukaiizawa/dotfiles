@@ -1,4 +1,3 @@
-
 Function BREAK
 
 Syntax:
@@ -44,4 +43,3 @@ break could be defined by:
                            :format-control format-control
                            :format-arguments format-arguments))))
    nil)
-

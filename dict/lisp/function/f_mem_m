@@ -1,4 +1,3 @@
-
 Function MEMBER, MEMBER-IF, MEMBER-IF-NOT
 
 Syntax:
@@ -42,4 +41,3 @@ The function member-if-not is deprecated.
 In the following
  (member 'a '(g (a y) c a d e a f)) =>  (A D E A F)
 the value returned by member is identical to the portion of the list beginning with a. Thus rplaca on the result of member can be used to alter the part of the list where a was found (assuming a check has been made that member did not return nil).
-

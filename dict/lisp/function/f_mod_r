@@ -1,4 +1,3 @@
-
 Function MOD, REM
 
 Syntax:
@@ -37,4 +36,3 @@ floor, truncate
 
 Notes:
 The result of mod is either zero or a  real  with the same sign as divisor.
-

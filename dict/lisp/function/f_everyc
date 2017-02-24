@@ -1,4 +1,3 @@
-
 Function EVERY, SOME, NOTEVERY, NOTANY
 
 Syntax:
@@ -37,4 +36,3 @@ and, or
 Notes:
  (notany predicate sequence*) ==  (not (some predicate sequence*))
  (notevery predicate sequence*) ==  (not (every predicate sequence*))
-

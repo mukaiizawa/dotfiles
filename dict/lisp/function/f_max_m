@@ -1,4 +1,3 @@
-
 Function MAX, MIN
 
 Syntax:
@@ -48,4 +47,3 @@ OR=>  1.0d0
 
 Exceptional Situations:
 Should signal an error of type type-error if any number is not a real.
-

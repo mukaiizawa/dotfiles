@@ -1,4 +1,3 @@
-
 Function GET-SETF-EXPANSION
 
 Syntax:
@@ -36,4 +35,3 @@ defsetf, define-setf-expander, setf
 
 Notes:
 Any compound form is a valid place, since any compound form whose operator f has no setf expander are expanded into a call to (setf f).
-

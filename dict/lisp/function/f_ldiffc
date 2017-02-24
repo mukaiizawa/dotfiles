@@ -1,4 +1,3 @@
-
 Function LDIFF, TAILP
 
 Syntax:
@@ -72,4 +71,3 @@ and ldiff could be defined by:
        (if (eql list object) (nreverse r) (nreconc r list)))
     (when (eql object list)
       (return (nreverse r)))))
-

@@ -1,4 +1,3 @@
-
 Restart MUFFLE-WARNING
 
 Description:
@@ -36,4 +35,3 @@ Examples:
 
 See Also:
 invoke-restart, muffle-warning (function), warn
-

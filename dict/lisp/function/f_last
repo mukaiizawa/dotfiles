@@ -1,4 +1,3 @@
-
 Function LAST
 
 Syntax:
@@ -46,4 +45,3 @@ Notes:
         (i 0 (+ i 1)))
        ((atom l) r)
      (if (>= i n) (pop r))))
-

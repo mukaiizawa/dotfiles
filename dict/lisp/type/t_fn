@@ -1,4 +1,3 @@
-
 System Class FUNCTION
 
 Class Precedence List:
@@ -45,4 +44,3 @@ If both these declarations are in effect, then within the shared scope of the de
         f))
 It is permitted to ignore one or all of the ftype declarations in force.
 * If two (or more) type declarations are in effect for a variable, and they are both function declarations, the declarations combine similarly.
-

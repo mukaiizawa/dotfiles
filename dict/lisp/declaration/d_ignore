@@ -1,4 +1,3 @@
-
 Declaration IGNORE, IGNORABLE
 
 Syntax:
@@ -25,4 +24,3 @@ The stream variables established by with-open-file, with-open-stream, with-input
 
 See Also:
 declare
-

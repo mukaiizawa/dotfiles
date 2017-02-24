@@ -1,4 +1,3 @@
-
 Macro WITH-ACCESSORS
 
 Syntax:
@@ -63,4 +62,3 @@ expands into the equivalent of
   (symbol-macrolet (Q1 ... Qn) form1 ... formk))
 where Qi is
  (variable-namei () (accessor-namei in))
-

@@ -1,4 +1,3 @@
-
 Function PARSE-NAMESTRING
 
 Syntax:
@@ -56,4 +55,3 @@ If thing is a logical pathname namestring and if the host portion of the namestr
 
 See Also:
 pathname, logical-pathname
-

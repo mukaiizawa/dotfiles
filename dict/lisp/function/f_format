@@ -1,4 +1,3 @@
-
 Function FORMAT
 
 Syntax:
@@ -24,4 +23,3 @@ If destination is a string with a fill pointer, the consequences are undefined i
 
 See Also:
 write
-

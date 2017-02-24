@@ -1,4 +1,3 @@
-
 Function CONSP
 
 Syntax:
@@ -22,4 +21,3 @@ listp
 
 Notes:
  (consp object) ==  (typep object 'cons) ==  (not (typep object 'atom)) ==  (typep object '(not atom))
-

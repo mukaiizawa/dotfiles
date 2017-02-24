@@ -1,4 +1,3 @@
-
 Function ADJUSTABLE-ARRAY-P
 
 Syntax:
@@ -24,4 +23,3 @@ Should signal an error of type type-error if its argument is not an array.
 
 See Also:
 adjust-array, make-array
-

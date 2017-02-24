@@ -1,4 +1,3 @@
-
 Function READ, READ-PRESERVING-WHITESPACE
 
 Syntax:
@@ -59,4 +58,3 @@ If eof-error-p is true, an error of type end-of-file is signaled at the end of f
 
 See Also:
 peek-char, read-char, unread-char, read-from-string, read-delimited-list, parse-integer, Section 2 (Syntax), Section 23.1 (Reader Concepts)
-

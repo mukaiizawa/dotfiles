@@ -1,4 +1,3 @@
-
 Accessor FIRST, SECOND, THIRD, FOURTH, FIFTH, SIXTH, SEVENTH, EIGHTH, NINTH, TENTH
 
 Syntax:
@@ -61,4 +60,3 @@ Notes:
 first is functionally equivalent to car, second is functionally equivalent to cadr, third is functionally equivalent to caddr, and fourth is functionally equivalent to cadddr.
 The ordinal numbering used here is one-origin, as opposed to the zero-origin numbering used by nth:
  (fifth x) ==  (nth 4 x)
-

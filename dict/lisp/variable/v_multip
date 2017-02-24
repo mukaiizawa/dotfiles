@@ -1,4 +1,3 @@
-
 Constant Variable MULTIPLE-VALUES-LIMIT
 
 Constant Value:
@@ -12,4 +11,3 @@ lambda-parameters-limit, call-arguments-limit
 
 Notes:
 Implementors are encouraged to make this limit as large as possible.
-

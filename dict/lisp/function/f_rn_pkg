@@ -1,4 +1,3 @@
-
 Function RENAME-PACKAGE
 
 Syntax:
@@ -25,4 +24,3 @@ Examples:
 
 See Also:
 make-package
-

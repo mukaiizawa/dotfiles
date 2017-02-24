@@ -1,4 +1,3 @@
-
 Library GRAPH-UTILS
 
 Variable *global-graph-conf*, *global-node-conf*, *global-edge-conf*
@@ -336,4 +335,3 @@ If you want horizontal or vertical rules used uniformly within a table, consider
 Because of certain limitations in handling tables in a device-independent manner, when BORDER is 1 and both table and cell borders are on and CELLSPACING is less than 2, anomalies can arise in the output, such as gaps between sides of borders which should be abutting or even collinear. The user can usual get around this by increasing the border size or the spacing, or turning off the table border.
 
 }}}
-

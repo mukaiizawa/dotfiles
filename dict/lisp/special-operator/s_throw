@@ -1,4 +1,3 @@
-
 Special Operator THROW
 
 Syntax:
@@ -44,4 +43,3 @@ block, catch, return-from, unwind-protect
 
 Notes:
 catch and throw are normally used when the exit point must have dynamic scope (e.g., the throw is not lexically enclosed by the catch), while block and return are used when lexical scope is sufficient.
-

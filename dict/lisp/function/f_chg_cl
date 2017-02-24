@@ -1,4 +1,3 @@
-
 Standard Generic Function CHANGE-CLASS
 
 Syntax:
@@ -52,4 +51,3 @@ update-instance-for-different-class
 
 Notes:
 The generic function change-class has several semantic difficulties. First, it performs a destructive operation that can be invoked within a method on an instance that was used to select that method. When multiple methods are involved because methods are being combined, the methods currently executing or about to be executed may no longer be applicable. Second, some implementations might use compiler optimizations of slot access, and when the class of an instance is changed the assumptions the compiler made might be violated. This implies that a programmer must not use change-class inside a method if any methods for that generic function access any slots, or the results are undefined.
-

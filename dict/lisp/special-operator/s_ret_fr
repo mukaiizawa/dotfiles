@@ -1,4 +1,3 @@
-
 Special Operator RETURN-FROM
 
 Syntax:
@@ -63,4 +62,3 @@ The following has undefined consequences because the block form exits normally b
 
 See Also:
 block, return, Section 3.1 (Evaluation)
-

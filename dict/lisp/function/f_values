@@ -1,4 +1,3 @@
-
 Accessor VALUES
 
 Syntax:
@@ -38,4 +37,3 @@ values-list, multiple-value-bind, multiple-values-limit
 
 Notes:
 Since values is a function, not a macro or special form, it receives as arguments only the primary values of its argument forms.
-

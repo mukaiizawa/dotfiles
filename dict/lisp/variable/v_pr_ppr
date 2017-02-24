@@ -1,4 +1,3 @@
-
 Variable *PRINT-PPRINT-DISPATCH*
 Value Type:
 a pprint dispatch table.
@@ -14,4 +13,3 @@ See Also:
 
 Notes:
 The intent is that the initial value of this variable should cause `traditional' pretty printing of code. In general, however, you can put a value in *print-pprint-dispatch* that makes pretty-printed output look exactly like non-pretty-printed output.  Setting *print-pretty* to true just causes the functions contained in the current pprint dispatch table to have priority over normal print-object methods; it has no magic way of enforcing that those functions actually produce pretty output. For details, see Section 22.2.1.4 (Pretty Print Dispatch Tables).
-

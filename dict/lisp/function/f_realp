@@ -1,4 +1,3 @@
-
 Function REALP
 
 Syntax:
@@ -19,4 +18,3 @@ Examples:
 
 Notes:
  (realp object) ==  (typep object 'real)
-

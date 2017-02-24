@@ -1,4 +1,3 @@
-
 Function MAKE-SEQUENCE
 
 Syntax:
@@ -38,4 +37,3 @@ make-array, make-list
 
 Notes:
  (make-sequence 'string 5) ==  (make-string 5)
-
