@@ -31,7 +31,7 @@ highlight PreProc        guifg=#fad07a
 
 " Type
 highlight Type           guifg=#87ceeb
-highlight Structure      guifg=#e67a45
+highlight Structure      guifg=#e67a45 gui=bold
 
 " Special
 highlight Special        guifg=#87ceeb

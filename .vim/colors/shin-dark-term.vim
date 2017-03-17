@@ -15,7 +15,7 @@ highlight Constant       ctermfg=123   cterm=NONE
 highlight String         ctermfg=217   cterm=NONE
 highlight Character      ctermfg=13    cterm=NONE
 highlight Number         ctermfg=229   cterm=NONE
-highlight Boolean        ctermfg=123   cterm=bold
+highlight Boolean        ctermfg=123   cterm=BOLD
 highlight float          ctermfg=229   cterm=NONE
 
 " Identifier
@@ -32,11 +32,11 @@ highlight PreProc        ctermfg=222   cterm=NONE
 
 " Type
 highlight Type           ctermfg=123
-highlight Structure      ctermfg=208
+highlight Structure      ctermfg=208   cterm=BOLD
 
 " Special
 highlight Special        ctermfg=123
-highlight Delimiter      ctermfg=14    cterm=bold
+highlight Delimiter      ctermfg=14    cterm=BOLD
 highlight SpecialComment ctermfg=120
 
 " Underlined
@@ -79,17 +79,17 @@ highlight Folded         ctermfg=244   ctermbg=237
 highlight MatchParen     ctermfg=black ctermbg=208
 highlight Search         ctermfg=229   ctermbg=244
 highlight Title          ctermfg=197
-highlight Visual         ctermfg=255   ctermbg=20  cterm=bold
-highlight VertSplit      ctermfg=239               cterm=bold
+highlight Visual         ctermfg=255   ctermbg=20  cterm=BOLD
+highlight VertSplit      ctermfg=239               cterm=BOLD
 
 " pop up menu
 highlight Pmenu          ctermfg=231   ctermbg=244
-highlight PmenuSel       ctermfg=45    ctermbg=232 cterm=bold
+highlight PmenuSel       ctermfg=45    ctermbg=232 cterm=BOLD
 highlight PmenuSbar                    ctermbg=232
 highlight PmenuThumb     ctermfg=232
-highlight WildMenu       ctermfg=45    ctermbg=232 cterm=bold
+highlight WildMenu       ctermfg=45    ctermbg=232 cterm=BOLD
 
 " statusline
-highlight StatusLine     ctermfg=231   ctermbg=235 cterm=bold
-highlight StatusLineNC   ctermfg=239               cterm=bold
+highlight StatusLine     ctermfg=231   ctermbg=235 cterm=BOLD
+highlight StatusLineNC   ctermfg=239               cterm=BOLD
 
