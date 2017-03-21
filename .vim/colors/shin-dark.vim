@@ -59,6 +59,7 @@ highlight NonText       guifg=#666666 guibg=#303030
 highlight Cursor        guifg=#000000 guibg=#ffffff
 highlight CursorIM                    guibg=#ff0000
 highlight CursorLine                  guibg=#404040
+highlight ColorColumn                 guibg=#404040
 
 " diff
 highlight DiffAdd       guifg=#000000 guibg=#f8b500

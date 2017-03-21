@@ -60,6 +60,7 @@ highlight NonText        ctermfg=244   ctermbg=235
 highlight Cursor         ctermfg=black ctermbg=white
 highlight CursorIM                     ctermbg=red
 highlight CursorLine                   ctermbg=237 cterm=NONE
+highlight ColorColumn                  ctermbg=237
 
 " diff
 highlight DiffAdd        ctermfg=black ctermbg=2
