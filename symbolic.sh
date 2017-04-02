@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Note: Execute this.
-#   mod +x symbolic.sh
+# chmod +x symbolic.sh
 
 # Note: ln:  (from) (to)
 ln -s ~/dotfiles/.vim       ~/.vim
