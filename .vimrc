@@ -371,6 +371,8 @@ let g:quickrun_config = {
       \
       \  'c' : {
       \    'hook/time/enable': 1,
+      \    'type': executable('clang')? 'c/clang':
+      \            executable('gcc')? 'c/gcc': '',
       \  },
       \
       \  'lisp' : {
