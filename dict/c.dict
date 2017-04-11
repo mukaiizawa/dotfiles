@@ -1,3 +1,5 @@
 Tutorial Syntax	~/dotfiles/dict/c/syntax.md
-Library string.h	~/dotfiles/dict/c/string.h.md
+Library ctype.h	~/dotfiles/dict/c/ctype.h.md
+Library stdio.h	~/dotfiles/dict/c/stdio.h.md
 Library stdlib.h	~/dotfiles/dict/c/stdlib.h.md
+Library string.h	~/dotfiles/dict/c/string.h.md

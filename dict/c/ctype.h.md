@@ -1,7 +1,7 @@
 ctype.h
 
 # 概要
-ctype.h
+ctype.hには文字の種類の判定など行う関数が定義されている。
 
 # アルファベットまたは数字か判定する
     int isalnum(int c)
