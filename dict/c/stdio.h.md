@@ -3,11 +3,20 @@ stdio.h
 # 概要
 stdio.hには入出力関係の関数が定義されている。
 
+# 汎用出力
+    int fprintf(FILE * restrict stream, const char * restrict format, ...);
+fprintfはstreamにformatに従った書式で書き込みを行う。
+書き込みに成功した場合は書き出された文字数を返す。
+失敗した場合は負の数が返る。
+
+# 標準出力に出力
+    int printf(const char * restrict format, ...);
+printfはfprintfのstreamに標準出力を指定したものと同じである。
+
 # 数値を文字列に変換する。
     int sprintf(char * restrict s, const char * restrict format, ...);
 sが指す領域に書き込む。
-sprintfの動作は出力がsが指す領域であることを除いてprintfjと同じである。
-
+sprintfの動作は出力がsが指す領域であることを除いてprintfと同じである。
 
 # 変換指定子について
 よく使うものを挙げる。
