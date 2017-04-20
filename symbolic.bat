@@ -15,6 +15,7 @@ SET /P HOME=">> "
 REM N.B mklink:  (to)  (from)
 MKLINK /D "C:\users\%HOME%\.vim"        "C:\users\%HOME%\dotfiles\.vim"
 MKLINK /D "C:\users\%HOME%\vimfiles"    "C:\users\%HOME%\dotfiles\.vim"
+MKLINK /D "C:\users\%HOME%\userbin"    "C:\users\%HOME%\dotfiles\bin"
 MKLINK    "C:\users\%HOME%\_vimrc"      "C:\users\%HOME%\dotfiles\.vimrc"
 MKLINK    "C:\users\%HOME%\_gvimrc"     "C:\users\%HOME%\dotfiles\.gvimrc"
 
