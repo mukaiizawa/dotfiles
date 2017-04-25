@@ -12,6 +12,11 @@ callocは大きさがsizeのn個の要素文の領域を確保し、
 領域の確保に失敗した場合はNULLポインタが返る。
 なお、返り値は使用する方にキャストしてから使うこと。
 
+# メモリの解放
+    void free(void *p)
+freeはポインタpがさすメモリ領域を解放する。
+pがNULLの場合は何もしない。
+
 # 文字列から数字に変換
     double atof(const char *string);
     int atoi(const char *string);
