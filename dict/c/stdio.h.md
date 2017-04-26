@@ -3,6 +3,13 @@ stdio.h
 # 概要
 stdio.hには入出力関係の関数が定義されている。
 
+# バッファのフラッシュ
+    int fflush(FILE *fp);
+fpが指すファイルポインタへの出力バッファをフラッシュする。
+出力バッファ以外のファイルポインタを受け取った場合の動作は未定義。
+引数がNULLの時はすべてのストリームに対してフラッシュを行う。
+成功時は0を、そうでなければEOFを返す。
+
 # 汎用出力
     int fprintf(FILE * restrict stream, const char * restrict format, ...);
 fprintfはstreamにformatに従った書式で書き込みを行う。
