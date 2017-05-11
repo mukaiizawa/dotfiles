@@ -25,14 +25,25 @@ function! CompleteWords(findstart, base)
 endfunction
 
 let s:unite_source = {
-\   'name': 'help',
-\   "default_action" : "vsplit",
-\ }
+      \   'name': 'help',
+      \   "default_action" : "vsplit",
+      \ }
+
+function! s:FuzzyFileType(fileType)
+  if a:fileType =~ '\(html\|htm\|xhtml\|css\)'
+    return 'html_css'
+  elseif a:fileType == 'h'
+    return 'c'
+  else
+    return a:fileType
+  endif
+endfunction
 
 function! s:unite_source.gather_candidates(args, context)
-  let s:path = $HOME . '/dotfiles/dict/' . expand("%:e") . '.dict'
+  let s:fileType = expand("%:e")
+  let s:path = $HOME . '/dotfiles/dict/' . s:FuzzyFileType(s:fileType) . '.dict'
   if !filereadable(s:path)
-    call PrintError(printf("Unite help: The file type`%s' is not implemented.", expand("%:e")))
+    call PrintError(printf("Unite help: The file type`%s' is not implemented.", s:fileType))
     return []
   endif
   let s:result = []
