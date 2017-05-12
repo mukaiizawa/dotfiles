@@ -30,7 +30,7 @@ let s:unite_source = {
       \ }
 
 function! s:FuzzyFileType(fileType)
-  if a:fileType =~ '\(html\|htm\|xhtml\|css\)'
+  if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\)'
     return 'html_css'
   elseif a:fileType == 'h'
     return 'c'
