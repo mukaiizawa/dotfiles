@@ -51,7 +51,7 @@ function! PrintSurround() range
         \   'c'          : ['printf("' , '\n");'],
         \   'cpp'        : ['std::cout << "' , '";'],
         \   'dosbatch'   : ['echo "' , '"'],
-        \   'html'       : ['<script>document.write("' , '")</script>'],
+        \   'html'       : ['console.log(' , ');'],
         \   'java'       : ['System.out.println(' , ');'],
         \   'javascript' : ['console.log(' , ');'],
         \   'jsp'        : ['console.log(' , ');'],
@@ -61,6 +61,7 @@ function! PrintSurround() range
         \   'ruby'       : ['puts "' , '"'],
         \   'vb'         : ['MsgBox ' , ''],
         \   'vim'        : ['echo "' , '"'],
+        \   'xhtml'      : ['console.log(' , ');'],
         \
         \ }
 
