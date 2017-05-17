@@ -55,7 +55,7 @@ removeは指定されたキーのマッピングがあればマップから削�
 # マップのイテレート
     for(Map.Entry<String, Object> entry : map.entrySet()){
         entry.getKey();
-        entry.getVal();
+        entry.getValue();
     }
 entrySet()でSetを取得することにより、拡張for文を使用することができる。
-Setのキーと値はそれぞれ`getKey()`、`getVal()`を用いて取得する。
+Setのキーと値はそれぞれ`getKey()`、`getValue()`を用いて取得する。
