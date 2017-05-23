@@ -7,12 +7,12 @@ cssセレクタの種類についてよく使うものをまとめる。
 # 文法
 セレクタ指定時の識別子を次のように定義する。
 また、必要に応じて末尾に数字を付加する。
-要素: <element>
-属性: <attribute>
-属性値: <value>
-id: <id>
-クラス: <class>
-セレクタ: <selector>
+要素名: <element>
+属性名: <attribute>
+属性値名: <value>
+id名: <id>
+クラス名: <class>
+上記の任意のセレクタ: <selector>
 
 # セレクタ
 - *
@@ -24,6 +24,7 @@ id: <id>
 - [<attribute>^=<value>]
 - [<attribute>$=<value>]
 - [<attribute>*=<value>]
+- <selector1><selector2>
 - <selector1>, <selector2>
 - <selector1> <selector2>
 - <selector1> > <selector2>
@@ -57,8 +58,11 @@ idが<id>であるような要素を対象と見做す。
 ## [<attribute>*=<value>]
 属性<attribute>の属性値に<value>を含むような要素を対象と見做す。
 
-## <selector1>, <selector2>
+## <selector1><selector2>
 セレクタ<selector1>及び、<selector2>にマッチする要素を対象と見做す。
+
+## <selector1>, <selector2>
+セレクタ<selector1>または、<selector2>にマッチする要素を対象と見做す。
 
 ## <selector1> <selector2>
 セレクタ<selector1>にマッチする要素の子要素のうち、
