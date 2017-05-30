@@ -1,4 +1,5 @@
 DROP USER	~/dotfiles/dict/sql/drop_user.md
+Genaration	~/dotfiles/dict/sql/generation.md
 IMPDP	~/dotfiles/dict/sql/impdp.md
 INSERT	~/dotfiles/dict/sql/insert.md
 Table design pattern	~/dotfiles/dict/sql/table_design.md
