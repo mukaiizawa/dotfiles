@@ -222,8 +222,6 @@ vnoremap <C-Insert> "*y
 vnoremap / y/<C-r>"<CR>
 
 " redraw at center of window
-nmap n nzz
-nmap N Nzz
 nmap g, g,zz
 
 " map `Y' to behave like a `C'
@@ -261,7 +259,6 @@ inoremap <C-k> <C-x><C-u>
 
 " }}}
 
-
 " ======================================
 " Note:
 " It is noapplicable to .minvimrc.
@@ -269,17 +266,15 @@ inoremap <C-k> <C-x><C-u>
 " ======================================
 
 " Setting of Plugin.
-" 2html {{{
+" {{{
 
+" 2html
 let g:html_number_lines = 0
 
-" }}}
-"  Unite {{{
-
+" Unite
 let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 100
 let g:unite_source_rec_max_cache_files = 200
-
 call unite#custom#profile('default', 'context', {
       \   'start_insert' : 1,
       \   'no_wrap' : 1,
@@ -290,38 +285,26 @@ call unite#custom#profile('default', 'context', {
       \   'cursor_line_time' : 0.0,
       \   'cursor_line_highlight' : 'Visual',
       \ })
-
 call unite#custom_default_action('directory', 'vimfiler')
 call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
 
-" }}}
-"  NeoMru {{{
-
+" NeoMru
 let g:neomru#file_mru_limit = 1000    " default value
 let g:neomru#directory_mru_limit = 500    " default value is 1000
 let g:neomru#directory_mru_ignore_pattern = ''
 
-" }}}
-"  VimFiler {{{
-
-" =============================================================
-" Note: Disable netrw.vim and set vimfiler as default explorer.
-" =============================================================
-let g:loaded_netrwPlugin = 1
+" VimFiler
+let g:loaded_netrwPlugin = 1    " disable netrw.
 let g:vimfiler_as_default_explorer = 1
-
-" ============================================================================
-" Note: This applies on the filenames of candidates.  It's not case sensitive.
-" Example: "dot files pattern."
-" let g:vimfiler_ignore_pattern = '^\.'
-" ============================================================================
 let g:vimfiler_ignore_pattern = ''
-
-" ===============================================================
-" Note: This variable controls vimfiler sorts directories as top.
-" ===============================================================
 let g:vimfiler_directory_display_top = 1
-
+let g:vimfiler_tree_leaf_icon = '|'
+let g:vimfiler_tree_opened_icon = '-'
+let g:vimfiler_tree_closed_icon = '+'
+let g:vimfiler_file_icon = ' '
+let g:vimfiler_readonly_file_icon = 'X'
+let g:vimfiler_marked_file_icon = '*'
+let g:vimfiler_tree_indentation = 1
 call vimfiler#custom#profile('default', 'context', {
       \ 'safe' : 0,
       \ 'auto-expand' : 1,
@@ -330,39 +313,8 @@ call vimfiler#custom#profile('default', 'context', {
       \ 'status' : 1,
       \ })
 
-" set vimfiler's icon
-let g:vimfiler_tree_leaf_icon = '|'
-let g:vimfiler_tree_opened_icon = '-'
-let g:vimfiler_tree_closed_icon = '+'
-let g:vimfiler_file_icon = ' '
-let g:vimfiler_readonly_file_icon = 'X'
-let g:vimfiler_marked_file_icon = '*'
-let g:vimfiler_tree_indentation = 1
-
-" }}}
-"  QuickRun {{{
-
-" ================================================
-" Note:
-" Define key mapping to execute quickrun as 'mq'.
-" Therefore, disable defaults key mappings.
-" Refer to " Mappnig for Plugin " of " Plefix m ".
-" ================================================
+" QuickRun
 let g:quickrun_no_default_key_mappings = 1
-
-
-" ==========================================================
-" Note:
-" --------	------
-" Symbol    Result ~
-" --------	------
-" %%        %
-" %c        Command (|quickrun-option-command|)
-" %o        Command line option (|quickrun-option-cmdopt|)
-" %s        Source (|quickrun-option-src|)
-" %a        Script's arguments (|quickrun-option-args|)
-" ==========================================================
-
 let g:quickrun_config = {
       \  '_' : {
       \    'split': 'vertical',
@@ -409,90 +361,54 @@ let g:quickrun_config = {
       \
       \}
 
-" }}}
-"  IndentLine {{{
-
+" IndentLine
 let g:indentLine_char = '|'
 let g:indentLine_fileType = ['']
 
-" ============================================================
-" Note:
-" This variable specify a list of file types.
-" When opening these types of files, the plugin is enabled by
-" default.
-" ============================================================
-
-" }}}
-"  caw {{{
-
-" Disable default mapping.
+" caw
 let g:caw_no_default_keymappings = 1
 
 " }}}
 
 " Mapping of Plugin.
-" Unite {{{
+" {{{
 
-" colorsheme
-nnoremap <silent>mc    :<C-u>Unite colorscheme -auto-preview<CR>
+" Unite
+nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent>me :<C-u>Unite menu<CR> 
+nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
+nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 
-" line
-nnoremap <silent>ml    :<C-u>Unite line -no-wrap<CR>
+" NeoMRU
+nnoremap <silent>mru :<C-u>Unite file_mru<CR>
+nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 
-" help
-nnoremap <silent>mrl    :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
+" VimFiler
+nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
 
-" menu
-nnoremap <silent>me    :<C-u>Unite menu<CR> 
+" VimShell
+nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
 
-" }}}
-" NeoMRU {{{
+" Quick Run
+nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
 
-nnoremap <silent>mru   :<C-u>Unite file_mru<CR>
-nnoremap <silent>mrd   :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
+" ContinuousNumber
+vnoremap <silent>gco :ContinuousNumber <C-a><CR>
 
-" }}}
-" VimFiler {{{
+" IndentLine
+nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
 
-nnoremap <silent>mf    :<C-u>VimFilerBufferDir -create<CR>
-
-" }}}
-" VimShell {{{
-
-nnoremap <silent>ms    :<C-u>VimShellBufferDir<CR>
-
-" }}}
-" Quick Run {{{
-
-nnoremap <silent>mq    :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
-
-" }}}
-" ContinuousNumber {{{
-
-vnoremap <silent>gco    :ContinuousNumber <C-a><CR>
-
-" }}}
-" IndentLine {{{
-
-nnoremap <Space>i      :<C-u>IndentLinesToggle<CR>
-
-" }}}
-" caw{{{
-
+" caw
 nmap gci <Plug>(caw:hatpos:toggle)
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
-
 vmap gci <Plug>(caw:hatpos:toggle)
 vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 
-" }}}
-" open-browser{{{
-
+" open-browser
 nmap gw  <Plug>(openbrowser-open)
 vmap gw  <Plug>(openbrowser-open)
-
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
 
