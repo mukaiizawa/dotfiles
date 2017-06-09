@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        # 概要
+        white-spaceは要素内のテキストをどのように表示するか指定するための
+        プロパティである。
+        指定できる属性値とその効果を示す。
+
+        値        改行   空白とタブ文字  テキストの折り返し
+        ==================================================
+        normal    詰める 詰める          折り返す
+        nowrap    詰める 詰める          折り返さない
+        pre       残す   残す            折り返さない
+        pre-wrap  残す   残す            折り返す
+        pre-line  残す   詰める          折り返す
+
+        # 初期値
+        normal
+    -->
+    <head>
+        <style>
+td { background-color:#888; }
+td:nth-child(1) { white-space:normal; }
+td:nth-child(2) { white-space:pre; }
+td:nth-child(3) { white-space:nowrap; }
+td:nth-child(4) { white-space:pre-wrap; }
+td:nth-child(5) { white-space:pre-line; }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>normal</th>
+                    <th>pre</th>
+                    <th>nowrap</th>
+                    <th>pre-wrap</th>
+                    <th>pre-line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        x           x
+                        xxxxxxxxxxxxx
+                    </td>
+                    <td>
+                        x           x
+                        xxxxxxxxxxxxx
+                    </td>
+                    <td>
+                        x           x
+                        xxxxxxxxxxxxx
+                    </td>
+                    <td>
+                        x           x
+                        xxxxxxxxxxxxx
+                    </td>
+                    <td>
+                        x           x
+                        xxxxxxxxxxxxx
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
