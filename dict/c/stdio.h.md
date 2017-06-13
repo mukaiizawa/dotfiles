@@ -20,9 +20,10 @@ fprintfはstreamにformatに従った書式で書き込みを行う。
     int printf(const char * restrict format, ...);
 printfはfprintfのstreamに標準出力を指定したものと同じである。
 
-# 数値を文字列に変換する。
+# バッファに出力
     int sprintf(char * restrict s, const char * restrict format, ...);
 sが指す領域に書き込む。
+また、出力の最後には終端文字が含まれる。
 sprintfの動作は出力がsが指す領域であることを除いてprintfと同じである。
 
 # 変換指定子について
