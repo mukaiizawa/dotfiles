@@ -6,7 +6,7 @@ show()
 
 # 使用例
 ## クリックした対象を非表示にする
-    $('selector').on("click", function() {
+    $('selector').on("click", function () {
       $(this).hide();
     });
 

@@ -8,19 +8,18 @@ html(), html(val), html(function)
 対象となるのはセレクタのすべての子要素であることに注意。
 また、指定した要素は含まない。
 対象要素が複数ある場合は最初の要素のみ対象となる。
-    $(this)
-    .html();
+    $(this).html();
 
 ## 指定した要素にHTMLを設定
 対象となるのはセレクタのすべての子要素であることに注意。
 また、指定した要素は含まない。
-    $(this)
-    .html(val);
+    $(this).html(val);
 
 またコールバック関数を指定することにより、
 その返り値を設定することができる。
-    $(this)
-    .html(function(){return val;});
+    $(this).html(function () {
+      return val;
+    });
 
 # 参照
 text()

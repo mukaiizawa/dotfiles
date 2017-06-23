@@ -6,5 +6,6 @@ jQueryオブジェクトの持つエレメントの集合を別のエレメン�
 
 # 使用例
 ## 指定したjQueryオブジェクトのエレメントの集合をテキストの集合に写像
-    $(this)
-    .map(function(i, e) {return $(e).text()});
+    $(this).map(function (i, e) {
+      return $(e).text()
+    });

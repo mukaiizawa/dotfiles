@@ -7,5 +7,7 @@ jQueryオブジェクトの持つエレメントすべてを配列で返す。
 ## 指定したjQueryオブジェクトのテキストを配列で取得
     $(this)
     .find('.class')
-    .map(function(i, e) {return $(e).text()})
+    .map(function(i, e) {
+      return $(e).text();
+    })
     .get()
