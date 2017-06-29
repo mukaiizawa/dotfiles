@@ -5,18 +5,20 @@ string.hには文字列操作に関する関数が収録されている。
 
 # 文字列をコピーする
     char *strcpy(char *to, char *from)
-fromからtoに文字列をコピーする。
-toには終端文字が含まれている必要がある。
-またfromにはヌル文字もコピーされるため、
+`from`から`to`に文字列をコピーする。
+`to`には終端文字が含まれている必要がある。
+また`from`にはヌル文字もコピーされるため、
 バッファーオーバーフローに注意する必要がある。
 
 # 文字列を比較する
     int strcmp(const char *s1, const char *s2);
-文字列s1, s2を比較する。
-s1とs2の関係により、次の値が返される。
+    int strncmp(const char *s1, const char *s2, size_t n);
+`strcmp`は文字列`s1`, `s2`を比較する。
+`s1`と`s2`の関係により、次の値が返される。
 - s1 < s2 => 負の数
 - s1 = s2 => 0
 - s1 > s2 => 正の数
+`strncmp`は先頭から`n`文字のみ比較すること以外`strcmp`と同じである。
 
 # 文字列から文字列を検索
     char *strstr(const char *s1, const char *s2);
