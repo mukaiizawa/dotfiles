@@ -48,7 +48,7 @@ function! PrintSurround() range
 
   let s:filetype = &filetype
   let s:printDic = {
-        \   'c'          : ['printf("' , '\n");'],
+        \   'c'          : ['printf("%d\n", ' , ');'],
         \   'cpp'        : ['std::cout << "' , '";'],
         \   'dosbatch'   : ['echo "' , '"'],
         \   'html'       : ['console.log(' , ');'],
