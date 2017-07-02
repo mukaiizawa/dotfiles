@@ -36,6 +36,10 @@ getは指定されたキーがマップされている値を返す。
 containsKeyメソッドを使うことにより、nullがマップされているのか値がなかったのかを区別できる。
 getOrDefaultはキーが存在しない場合にその方のデフォルト値を返すこと以外を除いてgetと同じである。
 
+# 値の置換
+    V replace(K key, V value)
+指定されたキーが存在する場合にのみ、そのキーの値を置換する。
+
 # 値の有無の確認
     public boolean containsKey(Object key)
     public boolean containsValue(Object value)
