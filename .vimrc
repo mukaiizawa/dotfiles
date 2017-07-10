@@ -10,15 +10,10 @@ if !has('gui_running')
 endif
 syntax enable
 
-" Initialization {{{
-
 if !1 | finish | endif
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
-" }}}
-" NeoBundle {{{
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -43,22 +38,11 @@ NeoBundle 'Yggdroot/indentLine'
 call neobundle#end()
 filetype plugin indent on
 
-" }}}
-
-" =======================================
-" Note:
-" A fundamental setting bigins from here.
-" It is applicable to .minvimrc.
-" =======================================
-
-" Setting
-" Setting for System {{{
-
-set encoding=utf-8            " Sets the character encoding used inside Vim.
-set wildmenu                  " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
-set showcmd                   " Show (partial) command in the last line of the screen.
-set iminsert=0                " 0 :lmap is off and IM is off
-set imsearch=0                " 0 :lmap is off and IM is off
+set encoding=utf-8
+set wildmenu
+set showcmd
+set iminsert=0
+set imsearch=0
 set helplang=en
 set history=2000
 set nrformats-=octal
@@ -67,90 +51,55 @@ set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
 set printoptions=wrap:y,number:y
-
-" }}}
-" Setting for Display {{{
-
 set number
-set nowrap                     " When off lines will not wrap and only part of long lines will be displayed.
-set showmatch                  " When a bracket is inserted, briefly jump to the matching one. 
+set nowrap
+set showmatch
 set foldmethod=marker
 set splitright
 set list
 set listchars=tab:->,eol:<,trail:>
 set backspace=start,eol,indent
-set cursorline
-
-" }}}
-" Setting for Status line, Tab page {{{
-
 set title
-set cmdheight=2                " Number of screen lines to use for the command-line.
-set laststatus=2               " Always, window show status.
-set showtabline=2              " Always, tab page labels show status.
+set cursorline
+set colorcolumn=80
+set cmdheight=2
+set laststatus=2
+set showtabline=2
 set tabline=%t
 set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
 set tabpagemax=300
-
-" }}}
-" Setting for File {{{
-
 set noundofile
-set viminfo=                   " Not use viminfo file.
+set viminfo=
 set nobackup
 set noswapfile
-
-" }}}
-" Setting for Search,Substitute {{{
-
-set hlsearch                   " When search word, highlight all its matches.
+set hlsearch
 set wrapscan
-set ignorecase                 " The case of normal letters is ignored.
-set smartcase                  " Override the ignorecase option if the search pattern contains uppercase charachers.
-
-" }}}
-" Setting for Tab,Indent {{{
-
+set ignorecase
+set smartcase
 set autoindent
-set tabstop=2                  " Number of spaces that a <Tab> in the file counts for.
+set tabstop=2
 set smartindent
 set expandtab
 set shiftwidth=2
 
-" }}}
-
-" Mapping
-" Mapping to NOP {{{
-
-" normal mode
-nnoremap Q <NOP>
-nnoremap } <NOP>
-nnoremap { <NOP>
-nnoremap s  <NOP>
-nnoremap zd <NOP>
-nnoremap zD <NOP>
-nnoremap zE <NOP>
-nnoremap ZZ <NOP>
-nnoremap dh <NOP>
-nnoremap dl <NOP>
-nnoremap ch <NOP>
-nnoremap cl <NOP>
-nnoremap <C-e> <NOP>
 nnoremap <C-d> <NOP>
-nnoremap <C-y> <NOP>
+nnoremap <C-e> <NOP>
 nnoremap <C-u> <NOP>
-nnoremap <Space> <NOP>
-nnoremap <Insert> <NOP>
+nnoremap <C-y> <NOP>
 nnoremap <Del> <NOP>
-
-" visual mode
-vnoremap s <NOP>
-vnoremap <BS> <NOP>
-vnoremap <CR> <NOP>
-
-" }}}
-" Mapping for Tab, Window {{{
-
+nnoremap <Insert> <NOP>
+nnoremap <Space> <NOP>
+nnoremap Q <NOP>
+nnoremap ZZ <NOP>
+nnoremap ch <NOP>
+nnoremap cj <NOP>
+nnoremap ck <NOP>
+nnoremap cl <NOP>
+nnoremap dh <NOP>
+nnoremap dj <NOP>
+nnoremap dk <NOP>
+nnoremap dl <NOP>
+nnoremap s  <NOP>
 nnoremap ss <C-w>s
 nnoremap sv <C-w>v
 nnoremap sh <C-w>h
@@ -161,14 +110,7 @@ nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
 
-" }}}
-" Mapping for Surround {{{
-
-" Surround with print
-nnoremap sp :<C-u>PrintSurround<CR>
-vnoremap sp :PrintSurround<CR>
-
-" Delete surround
+" surround delete
 nnoremap sd' f'x,x
 nnoremap sd" f"x,x
 nnoremap sd* f*x,x
@@ -181,53 +123,18 @@ nnoremap sd} f}xF{x
 nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
-" }}}
-" Mapping for Insert Mode {{{
-
-" End insert mode with jj.
 inoremap jj <Esc>
-
-" IM turn off automatically when leaving Insert mode.
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-
-" to insert tab
 inoremap <Tab> <C-v><Tab>
-
-" Insert date.
-if exists("*strftime")
-  inoremap <C-d> <Esc>:InsertDate<CR>
-else
-  echo "not exists strftime"
-endif
-
-" }}}
-" Mapping the others {{{
-
-" redo changes which were undone with U key
 nnoremap U  <C-r>
-
-" toggle `wrap' option
 nnoremap <Space>w :set wrap!<CR>
-
-" toggle `eapandtab' option
 nnoremap <Space><Tab> :set expandtab!<CR>
-
-" yank or Paste to clipboard
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
 vnoremap <C-Insert> "*y
-
-" serarch with selection
 vnoremap / y/<C-r>"<CR>
-
-" redraw at center of window
-nmap g, g,zz
-
-" map `Y' to behave like a `C'
 nnoremap Y y$
-
-" cursor motion
 nnoremap <Space>h 0
 nnoremap <Space>l $
 nnoremap <Space>j Lzz
@@ -239,39 +146,17 @@ vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
 nnoremap ) }
 nnoremap ( {
-
-" change directory to carrent buffer directory
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
-
-" toggle a buffer which edit the one befor
 nnoremap <silent>mm :e #<CR>
-
-" edit vimrc, gvimrc
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
-
-" reroad vimrc
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 
-" completefunction
 set completefunc=CompleteWords
 inoremap <C-k> <C-x><C-u>
 
-" }}}
-
-" ======================================
-" Note:
-" It is noapplicable to .minvimrc.
-" An expansive setting bigins from here
-" ======================================
-
-" Setting of Plugin.
-" {{{
-
-" 2html
+" unite
 let g:html_number_lines = 0
-
-" Unite
 let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 100
 let g:unite_source_rec_max_cache_files = 200
@@ -288,13 +173,13 @@ call unite#custom#profile('default', 'context', {
 call unite#custom_default_action('directory', 'vimfiler')
 call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
 
-" NeoMru
-let g:neomru#file_mru_limit = 1000    " default value
-let g:neomru#directory_mru_limit = 500    " default value is 1000
+" NeoMRU
+let g:neomru#file_mru_limit = 1000
+let g:neomru#directory_mru_limit = 500
 let g:neomru#directory_mru_ignore_pattern = ''
 
-" VimFiler
-let g:loaded_netrwPlugin = 1    " disable netrw.
+" vimfiler
+let g:loaded_netrwPlugin = 1
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_ignore_pattern = ''
 let g:vimfiler_directory_display_top = 1
@@ -313,7 +198,7 @@ call vimfiler#custom#profile('default', 'context', {
       \ 'status' : 1,
       \ })
 
-" QuickRun
+" quickrun
 let g:quickrun_no_default_key_mappings = 1
 let g:quickrun_config = {
       \  '_' : {
@@ -363,57 +248,35 @@ let g:quickrun_config = {
       \ },
       \}
 
-" IndentLine
+" indentLine
 let g:indentLine_char = '|'
 let g:indentLine_fileType = ['']
 
 " caw
 let g:caw_no_default_keymappings = 1
 
-" }}}
-
-" Mapping of Plugin.
-" {{{
-
-" Unite
+" plugin mapping
+nnoremap sp :<C-u>PrintSurround<CR>
+vnoremap sp :PrintSurround<CR>
+inoremap <C-d> <Esc>:InsertDate<CR>
 nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
 nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
 nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
-
-" NeoMRU
 nnoremap <silent>mru :<C-u>Unite file_mru<CR>
 nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
-
-" VimFiler
 nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
-
-" VimShell
 nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
-
-" Quick Run
 nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
-
-" ContinuousNumber
 vnoremap <silent>gco :ContinuousNumber <C-a><CR>
-
-" IndentLine
 nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
-
-" caw
 nmap gci <Plug>(caw:hatpos:toggle)
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 vmap gci <Plug>(caw:hatpos:toggle)
 vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
-
-" open-browser
 nmap gw  <Plug>(openbrowser-open)
 vmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
-
-" }}}
-
-" vim: foldmethod=marker
