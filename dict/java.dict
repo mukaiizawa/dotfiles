@@ -1,8 +1,10 @@
 Class ArrayList	~/dotfiles/dict/java/ArrayList.md
 Class BigDecimal	~/dotfiles/dict/java/BigDecimal.md
 Class Enum	~/dotfiles/dict/java/Enum.md
+Class Files	~/dotfiles/dict/java/Files.md
 Class HashMap	~/dotfiles/dict/java/HashMap.md
 Class String	~/dotfiles/dict/java/String.md
+Interface Path	~/dotfiles/dict/java/Path.md
 Interface Stream	~/dotfiles/dict/java/Stream.md
 JSF Converter	~/dotfiles/dict/java/Converter.md
 Recipe Dump object	~/dotfiles/dict/java/DumpObject.md
