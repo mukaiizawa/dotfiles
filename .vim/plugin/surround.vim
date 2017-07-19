@@ -44,7 +44,7 @@ function! PrintSurround() range
         \   'peal'       : ['print "' , '";'],
         \   'python'     : ['print("' , '")'],
         \   'ruby'       : ['puts "' , '"'],
-        \   'vb'         : ['MsgBox ' , ''],
+        \   'vb'         : ['Debug.Print ' , ''],
         \   'vim'        : ['echo "' , '"'],
         \   'xhtml'      : ['console.log(' , ');'],
         \
