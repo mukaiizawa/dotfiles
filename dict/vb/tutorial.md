@@ -51,15 +51,30 @@ VBAではダブルクォートで囲まれた文字の列を文字列と見做�
     "a" & "b"
     => "ab"
 文字列の結合は`&`演算子で行う。
+## 文字列の比較
+    "a" = "b"
+    => False
+    "a" <> "b"
+    => True
+文字列の等価判定は`=`演算子で行う。
+`=`演算子の逆の結果を得たい場合は`<>`演算子を使用する。
 ## 文字列の長さ取得
     Len(src as String)
 Lenは文字列srcの長さを取得する。
+## 部分文字列の検索
+    InStr(src as String, sub as String)
+InStrは文字列srcに部分文字列subが含まれているか判定する。
+含まれている場合、部分文字列が最初に出現する場所を返す。
+ただし、位置は一から数える。
+    InStr("abc", "b")
+    => 2
+また、部分文字列が存在しなかった場合は、零を返す。
 ## 部分文字列の取得
     Left(src as String, i As Integer)
     Right(src as String, i As Integer)
     Mid(src as String, i As Integer)
     Mid(src as String, i As Integer, n as Integer)
-Leftはsrc先頭からi文字目までの部分文字列を取得する。
+Leftはsrcの先頭からi文字目までの部分文字列を取得する。
 Rightはsrcの最後からi番目までの文字列を取得する。
 Left、Rightともに、次の場合はそれぞれ特定の値が返る。
 - iが0の場合: 空文字列
@@ -67,6 +82,9 @@ Left、Rightともに、次の場合はそれぞれ特定の値が返る。
 Midはsrcのi番目からn文字取得する。
 nが指定されていない場合は最後まで取得する。
 ただし、iが0以下の場合はエラーとなる。
+## 文字列の置換
+    Replace(src as String, from as String, to as String) as String
+Replaceは文字列src内の部分文字列fromを文字列toに置換する。
 ## 文字列の配列を文字列へ結合
     Join(arr As String()) As String
     Join(arr As String(), separator As String) As String
@@ -282,3 +300,14 @@ Functionプロシージャと同じである。
     Option Explicit
 モジュールの先頭に`Option Explicit`を記載することにより、
 変数宣言が矯正される。
+## 出力
+    MsgBox arg
+    Debug.Print arg
+MsgBoxはargをメッセージボックスで表示する。
+Debug.Printはargをイミディエイトウィンドウに表示する。
+VBEにイミディエイトウィンドウが表示されていない場合は次の手順で表示する。
+1. ツールバーの表示を選択
+2. イミディエイトウィンドウを選択
+## プログラムの終了
+    End
+Endステートメントでプログラムを終了できる。
