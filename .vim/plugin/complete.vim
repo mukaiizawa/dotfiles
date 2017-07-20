@@ -40,7 +40,7 @@ function! s:FuzzyFileType(fileType)
 endfunction
 
 function! s:unite_source.gather_candidates(args, context)
-  let s:fileType = expand("%:e")
+  let s:fileType = &filetype
   let s:path = $HOME . '/dotfiles/dict/' . s:FuzzyFileType(s:fileType) . '.dict'
   if !filereadable(s:path)
     call PrintError(printf("Unite help: The file type`%s' is not implemented.", s:fileType))
