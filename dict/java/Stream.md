@@ -8,6 +8,8 @@ java8で追加されたStreamのAPIを用いることにより、
 streamを実装しているクラスを用いる際に従来のコードを簡略化できることがある。
 
 # Streamの生成方法
+## 文字列から生成
+    "foo".chars()
 ## Listから生成
     new ArrayList<>()
       .stream();
