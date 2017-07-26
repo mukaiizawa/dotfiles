@@ -99,7 +99,7 @@ streamの構成要素
       .collect(Collectors.groupingBy(x -> x.getId()));
 
 ## 値の集約
-### 条件に最初に一致した値を取得
+### 最初の要素の取得
     Optional<T> findFirst()
 streamの最初の要素を返す。
 
