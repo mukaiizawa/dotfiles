@@ -81,6 +81,8 @@ set tabstop=2
 set smartindent
 set expandtab
 set shiftwidth=2
+set formatoptions-=tc
+set formatoptions+=roqj
 
 nnoremap <C-d> <NOP>
 nnoremap <C-e> <NOP>
