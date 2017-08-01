@@ -19,7 +19,7 @@ highlight Boolean        guifg=#87ceeb gui=bold
 highlight Float          guifg=#fadd5a
 
 " Identifier
-highlight Identifier     guifg=#87ceeb
+highlight Identifier       guifg=#a4e1f9
 highlight Function       guifg=#fad07a
 
 " Statement
@@ -34,7 +34,8 @@ highlight Type           guifg=#87ceeb
 highlight Structure      guifg=#e67a45 gui=bold
 
 " Special
-highlight Special        guifg=#87ceeb
+" highlight Special        guifg=#87ceeb
+highlight Special        guifg=#a4e1f9
 highlight Delimiter      guifg=#40e0db gui=bold
 highlight SpecialComment guifg=#a6f02e
 
