@@ -19,8 +19,10 @@ syn sync minlines=100
 syn case match
 
 syn region ParenList matchgroup=Delimiter start="(" end=")" contains=ALL
-syn region ParenQuoted matchgroup=Identifier start="[`~]" end="[ \t();]" contains=ALL 
-syn region ParenQuoted matchgroup=Identifier start="[`~](" end=")" contains=ALL 
+syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=ALL
+syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
+syn region ParenTilde matchgroup=PreProc start="\~" end="[ \t();]" contains=ALL
+syn region ParenTilde matchgroup=PreProc start="\~(" end=")" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
