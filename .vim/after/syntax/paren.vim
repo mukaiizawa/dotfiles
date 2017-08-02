@@ -38,7 +38,7 @@ syn match ParenError ")"
 " builtin function/macro
 syn keyword ParenBuiltin def fn if quote <-
 " numeric
-syn keyword ParenBuiltin + - * / = mod
+syn keyword ParenBuiltin + - * / = mod < > <= >=
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
 
 hi def link ParenLineComment Comment
