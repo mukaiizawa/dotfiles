@@ -26,6 +26,13 @@ Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異�
     Stream.of("a", "b", "c")
 
 # 中間操作
+## 写像
+mapを使用すると、すべての要素を写像できる。
+    stream
+      .map(x -> x * 2)
+      .collect(Collectors.toList());
+上の例は、すべての要素を二倍する。
+
 ## ソート処理
 soretedにComparatorを渡すことにより、その条件でソートを行うことができる。
 ### ソートキーを指定する関数の指定によるソート

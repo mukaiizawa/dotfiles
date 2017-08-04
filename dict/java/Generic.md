@@ -22,6 +22,12 @@ ArrayListの例を示す。
     }
 上記の例は、総称型Tを宣言した返り値がTのメソッドgetを宣言している。
 同様に、コンストラクタ限定のスコープでも総称型を用いることができる。
+また、仮型引数は複数指定できる。
+次の例は、値が取得できない場合に例外を投げるマップの値取得処理である。
+    public <S, T> T strictGet(Map<S, T> map, S key, Exception e) {
+      if (!map.containsKey(key)) throw e;
+      return map.get(key);
+    }
 
 # 型変数のバインド
 クラスに総称型が定義されている場合はオブジェクトの宣言時にその総称型を指定する。
