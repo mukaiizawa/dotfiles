@@ -13,7 +13,7 @@
 (make-module-pathname "coordinate-manager")
 (make-module-pathname "csv-reader")
 (make-module-pathname "database-manager")
-(make-module-pathname "date-utils")
+(make-module-pathname "date-time")
 (make-module-pathname "graph-utils")
 (make-module-pathname "ltk")
 (make-module-pathname "math")
