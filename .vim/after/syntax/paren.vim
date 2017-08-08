@@ -27,16 +27,16 @@ syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
 syn region ParenBlockComment start='"""' end='"""' contains=ParenTodo,ParenDoc
-syn match ParenVariable "\<.{1,}\>"
+syn match ParenVariable "\<\k\>"
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
-syn match ParenGlobal "\<$.\{1,}\>"
-syn match ParenKeyword "\<:.\{1,}\>"
+syn match ParenGlobal "\<$\k*\>"
+syn match ParenKeyword "\<:\k*\>"
 syn match ParenDoc "@\(note\|param\|return\|throws\)" contained
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
 " builtin function/macro
-syn keyword ParenBuiltin def fn if quote <-
+syn keyword ParenBuiltin def fn if let quote <-
 " numeric
 syn keyword ParenBuiltin + - * / = mod < > <= >=
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
