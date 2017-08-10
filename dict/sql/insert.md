@@ -1,3 +1,8 @@
+INSERT
+
+# 概要
+INSERT文はデータをテーブルに登録する際に使用する。
+
 # レコードの挿入
     INSERT INTO
     <TABLE>(
