@@ -98,3 +98,10 @@ BigDecimalには3つの表示用のメソッドが用意されている。
     0.000001          0.000001      0.000001         0.000001
     0.0000001         0.0000001     1E-7           100E-9
     0.0000001234      0.0000001234  1.234E-7       123.4E-9
+
+# 整数に変換
+    int intValue()
+    int intValueExact() throws ArithmeticException
+intValueはこの値を整数値を取得する。
+intValueExactはこの値が整数でない場合は、
+エラーを発生させるという点を除いてintValueと同じである。
