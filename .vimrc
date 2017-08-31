@@ -126,11 +126,11 @@ nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
 
 inoremap jj <Esc>
+inoremap <C-l> <C-n>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 inoremap <Tab> <C-v><Tab>
 nnoremap U  <C-r>
 nnoremap <Space>w :set wrap!<CR>
-nnoremap <Space><Tab> :set expandtab!<CR>
 nnoremap <S-Insert> "*p
 nnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
