@@ -12,8 +12,7 @@ set visualbell t_vb=
 colorscheme shin-dark
 syntax on
 
-" Mouse
-set mouse=a
+set mouse-=a
 set nomousefocus
 set mousehide
 
