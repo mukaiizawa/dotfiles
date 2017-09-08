@@ -58,8 +58,8 @@ highlight NonText       guifg=#666666 guibg=#404552
 " curcor
 highlight Cursor        guifg=#000000 guibg=#ffffff
 highlight CursorIM                    guibg=#ff0000
-highlight CursorLine                  guibg=#404040
-highlight ColorColumn                 guibg=#404040
+highlight CursorLine                  guibg=#393e49 
+highlight ColorColumn                 guibg=#393e49 
 
 " diff
 highlight DiffAdd       guifg=#000000 guibg=#f8b500
@@ -76,7 +76,7 @@ highlight Conceal       guifg=#666666
 highlight SpecialKey    guifg=#666666
 
 highlight Directory     guifg=#40e0db
-highlight Folded        guifg=#aaaaaa guibg=#404040
+highlight Folded        guifg=#aaaaaa guibg=#aaaaaa
 highlight MatchParen    guifg=#000000 guibg=#fd971f gui=bold
 highlight Search        guifg=#fad07a guibg=#888888 gui=bold
 highlight Title         guifg=#f86060
@@ -91,7 +91,7 @@ highlight PmenuThumb    guifg=#101010
 highlight WildMenu      guifg=#66d9ef guibg=#000000 gui=bold
 
 " statusline
-highlight StatusLine    guifg=#ffffff guibg=#4a4a4a gui=bold
+highlight StatusLine    guifg=#ffffff guibg=#aaaaaa gui=bold
 highlight StatusLineNC  guifg=#808080               gui=bold
 
 " for tab page
