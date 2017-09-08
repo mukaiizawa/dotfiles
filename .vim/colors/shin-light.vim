@@ -88,4 +88,3 @@ highlight Folded       guifg=#804030 guibg=#ffe4d4
 highlight Title        guifg=fg      gui=BOLD
 highlight Visual       guifg=#804020 guibg=#ffc0a0
 highlight VertSplit    guifg=#f8f8f8 guibg=#904838 gui=NONE
-

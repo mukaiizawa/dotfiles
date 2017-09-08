@@ -98,4 +98,3 @@ highlight StatusLineNC  guifg=#808080               gui=bold
 highlight TabLine       guifg=#cccccc guibg=#666666
 highlight TabLineFill                 guibg=#666666
 highlight TabLineSel    guifg=#eeeeee guibg=#666666
-
