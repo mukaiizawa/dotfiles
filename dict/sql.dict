@@ -1,7 +1,8 @@
-INSERT	~/dotfiles/dict/sql/insert.md
-UPDATE	~/dotfiles/dict/sql/update.md
-DROP USER	~/dotfiles/dict/sql/drop_user.md
 Genaration	~/dotfiles/dict/sql/generation.md
-Table design pattern	~/dotfiles/dict/sql/table_design.md
+INSERT	~/dotfiles/dict/sql/insert.md
+Oracle USER	~/dotfiles/dict/sql/user.md
 Oracle IMPDP	~/dotfiles/dict/sql/impdp.md
+Oracle START SHUTDOWN	~/dotfiles/dict/sql/start_shutdown.md
 Oracle Select Scheme Table Column	~/dotfiles/dict/sql/select_all_tab_column.md
+Table design pattern	~/dotfiles/dict/sql/table_design.md
+UPDATE	~/dotfiles/dict/sql/update.md
