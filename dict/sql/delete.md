@@ -1,5 +1,7 @@
+レコードの削除
+
 # レコードの削除
-    DELETE FROM <TABLE> [WHERE <CONDITION>];
-DELETEを実行することにより、対象テーブルのデータを削除することができる。
-このとき、テーブルそのものの削除は行われない。
-また、WHERE句を指定することにより、テーブルの対象データを絞り込むことが可能。
+レコードの削除についてまとめる。
+
+# 書式
+DELETE FROM [schema .] {table|view} [WHERE condition];
