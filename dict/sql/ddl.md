@@ -71,14 +71,17 @@ REVOKE文はGRANTとついになっている。
         [CONSTRAINT constraint_name]
             UNIQUE (column_list)
             | PRIMARY KEY (column_list)
-            | FOREIGN KEY (column_list) REFERENCES foreign_table (column_list)
+            | FOREIGN KEY (column_list) references_clause
             | CHECK ( condition )
     inline_constraint ::=
         [CONSTRAINT constraint_name]
             [NOT] NULL
             | UNIQUE
             | PRIMARY KEY
-            | REFERENCES foreign_table (column_list)
+            | references_clause
+    references_clause ::=
+        REFERENCES [schema .] table ( column_list )
+        [ON DELETE {CASCADE | SET NULL}]
     column_list ::= column [, column]
 引数の定義を示す。
     引数           定義
