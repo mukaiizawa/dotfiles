@@ -3,7 +3,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "shin-blue"
+let g:colors_name = "shin-deep-blue"
 
 " :help group-name
 
