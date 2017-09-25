@@ -91,7 +91,7 @@ highlight PmenuThumb    guifg=#101010
 highlight WildMenu      guifg=#66d9ef guibg=#000000 gui=bold
 
 " statusline
-highlight StatusLine    guifg=#191C1D guibg=#191C1D gui=bold
+highlight StatusLine    guifg=#aaaaaa guibg=#191C1D gui=bold
 highlight StatusLineNC  guifg=#7E8E91               gui=bold
 
 " for tab page
