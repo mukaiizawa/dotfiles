@@ -76,6 +76,10 @@ filterは写像後の値が真になるデータのみ抽出する。
     stream
       .filter(x -> x.length() > 5)
       .collect(Collectors.toList());
+## 重複の除去
+    Stream<T> distinct()
+このストリームの重複を取り除いたストリームを返す。
+比較は`equals`で行われる。
 
 # 終端操作
 ## コレクションの生成
