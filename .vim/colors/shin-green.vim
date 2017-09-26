@@ -5,95 +5,23 @@ if exists("syntax_on")
 endif
 let g:colors_name = "shin-green"
 
-" :help group-name
+highlight Comment      guifg=#A6F02E
+highlight Constant     guifg=#A6F02E
+highlight Identifier   guifg=#A6F02E
+highlight Statement    guifg=#A6F02E
+highlight PreProc      guifg=#A6F02E
+highlight Type         guifg=#A6F02E
+highlight Structure    guifg=#A6F02E
+highlight Special      guifg=#A6F02E
+highlight Underlined   guifg=#A6F02E
+highlight Ignore       guifg=#A6F02E
+highlight Error        guifg=#A6F02E
+highlight Todo         guifg=#A6F02E
 
-" Comment
-highlight Comment        guifg=#A6F02E
-
-" Constant
-highlight Constant       guifg=#87CEEB
-highlight String         guifg=#FFAAAA
-highlight Character      guifg=#DB7093
-highlight Number         guifg=#FADD5A
-highlight Boolean        guifg=#87CEEB gui=BOLD
-highlight Float          guifg=#FADD5A
-
-" Identifier
-highlight Identifier     guifg=#87CEEB
-highlight Function       guifg=#FAD07A
-
-" Statement
-highlight Statement      guifg=#CC7833
-highlight Exception      guifg=#F86060 gui=BOLD
-
-" Preproc
-highlight PreProc        guifg=#FAD07A
-
-" Type
-highlight Type           guifg=#87CEEB
-highlight Structure      guifg=#CC7833
-
-" Special
-highlight Special        guifg=#87CEEB
-highlight Delimiter      guifg=#40E0DB gui=BOLD
-highlight SpecialComment guifg=#A6F02E
-
-" Underlined
-highlight Underlined     guifg=#00BFFF
-
-" Ignore
-highlight Ignore         guifg=#FF0000
-
-" Error
-highlight Error          guifg=#66D9EF guibg=#202020 gui=BOLD
-
-" Todo
-highlight Todo           guifg=#66D9EF guibg=#202020 gui=BOLD
-
-" :help highlight-groups
-
-highlight Normal         guifg=#00FF00 guibg=#000000
-highlight NonText        guifg=#666666 guibg=#000000
-
-" curcor
-highlight Cursor         guifg=#000000 guibg=#FFFFFF
-highlight CursorIM                     guibg=#FF0000
-highlight CursorLine                   guibg=#404040
-
-" diff
-highlight DiffAdd        guifg=#000000 guibg=#F8B500
-highlight DiffChange     guifg=#000000 guibg=#FFAAAA
-highlight DiffDelete     guifg=#666666 guibg=#505050
-highlight DiffText       guifg=#000000 guibg=#D0D0D0
-
-" number
-highlight LineNr         guifg=#AAAAAA
-highlight CursorLineNr   guifg=#FAD07A               gui=BOLD
-
-" conceal
-highlight Conceal        guifg=#666666
-highlight SpecialKey     guifg=#666666
-
-highlight Directory      guifg=#40E0DB
-highlight Folded         guifg=#AAAAAA guibg=#404040
-highlight MatchParen     guifg=#FFFFFF guibg=#880000
-highlight Search         guifg=#FAD07A guibg=#888888 gui=BOLD
-highlight Title          guifg=#F86060
-highlight Visual         guifg=#FAD07A guibg=#505050 gui=BOLD
-highlight VertSplit      guifg=#666666               gui=BOLD
-
-" pop up menu
-highlight Pmenu          guifg=#FFFFFF guibg=#303030
-highlight PmenuSel       guifg=#66D9EF guibg=#000000 gui=BOLD
-highlight PmenuSbar                    guibg=#101010
-highlight PmenuThumb     guifg=#101010
-highlight WildMenu       guifg=#66D9EF guibg=#000000 gui=BOLD
-
-" statusline
-highlight StatusLine     guifg=#FFFFFF guibg=#4A4A4A gui=BOLD
-highlight StatusLineNC   guifg=#808080               gui=BOLD
-
-" for tab
-highlight TabLine        guifg=#CCCCCC guibg=#666666
-highlight TabLineFill                  guibg=#666666
-highlight TabLineSel     guifg=#EEEEEE guibg=#666666
+highlight Normal       guifg=#A6F02E guibg=#1E1E1E
+highlight NonText      guifg=#666666 guibg=#1E1E1E
+highlight CursorLine                 guibg=#404040
+highlight ColorColumn                guibg=#404040
+highlight StatusLine   guifg=#A6F02E guibg=#1E1E1E gui=BOLD
+highlight StatusLineNC guifg=#666666               gui=BOLD
+highlight VertSplit    guifg=#666666 guibg=#1E1E1E gui=BOLD
