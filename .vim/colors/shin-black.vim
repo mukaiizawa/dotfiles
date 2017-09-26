@@ -8,41 +8,41 @@ let g:colors_name = "shin-black"
 " :help group-name
 
 " Comment
-highlight Comment        guifg=#86C224
+highlight Comment        guifg=#7EA43F
 
 " Constant
-highlight Constant       guifg=#5E90A4
+highlight Constant       guifg=#6CA994
 highlight String         guifg=#B9ABA6
-highlight Character      guifg=#db7093
-highlight Number         guifg=#AF9A3E
-highlight Boolean        guifg=#5E90A4 gui=bold
-highlight Float          guifg=#AF9A3E
+highlight Character      guifg=#DB7093
+highlight Number         guifg=#D1B886
+highlight Boolean        guifg=#6CA994 gui=bold
+highlight Float          guifg=#D1B886
 
 " Identifier
-highlight Identifier     guifg=#5D7681
-highlight Function       guifg=#e1bb6d
+highlight Identifier     guifg=#6CA994
+highlight Function       guifg=#D1B886
 
 " Statement
-highlight Statement      guifg=#AF6845
+highlight Statement      guifg=#B77757
 highlight Exception      guifg=#C84D4D gui=bold
 
 " Preproc
-highlight PreProc        guifg=#e1bb6d
+highlight PreProc        guifg=#D1B886
 
 " Type
-highlight Type           guifg=#5E90A4
-highlight Structure      guifg=#AF6845 gui=bold
+highlight Type           guifg=#6CA994
+highlight Structure      guifg=#B77757 gui=bold
 
 " Special
-highlight Special        guifg=#5E90A4
-highlight Delimiter      guifg=#5D7681 gui=bold
-highlight SpecialComment guifg=#86C224
+highlight Special        guifg=#6CA994
+highlight Delimiter      guifg=#6CA994 gui=bold
+highlight SpecialComment guifg=#7EA43F
 
 " Underlined
-highlight Underlined     guifg=#e1bb6d
+highlight Underlined     guifg=#D1B886
 
 " Ignore
-highlight Ignore         guifg=#ff0000
+highlight Ignore         guifg=#FF0000
 
 " Error
 highlight Error          guifg=#C84D4D guibg=#000000 gui=bold
@@ -57,44 +57,44 @@ highlight NonText       guifg=#666666 guibg=#000000
 
 " curcor
 highlight Cursor        guifg=#000000 guibg=#7E8E91
-highlight CursorIM                    guibg=#ff0000
+highlight CursorIM                    guibg=#FF0000
 highlight CursorLine                  guibg=#191C1D
 highlight ColorColumn                 guibg=#191C1D
 
 " diff
-highlight DiffAdd       guifg=#000000 guibg=#f8b500
+highlight DiffAdd       guifg=#000000 guibg=#F8B500
 highlight DiffChange    guifg=#000000 guibg=#B9ABA6
 highlight DiffDelete    guifg=#666666 guibg=#505050
-highlight DiffText      guifg=#000000 guibg=#d0d0d0
+highlight DiffText      guifg=#000000 guibg=#D0D0D0
 
 " number
-highlight LineNr        guifg=#aaaaaa
-highlight CursorLineNr  guifg=#e1bb6d gui=bold
+highlight LineNr        guifg=#AAAAAA
+highlight CursorLineNr  guifg=#D1B886 gui=bold
 
 " conceal
 highlight Conceal       guifg=#666666
 highlight SpecialKey    guifg=#666666
 
-highlight Directory     guifg=#5D7681
-highlight Folded        guifg=#aaaaaa guibg=#191C1D
-highlight MatchParen    guifg=#000000 guibg=#fd971f gui=bold
-highlight Search        guifg=#e1bb6d guibg=#191C1D gui=bold
+highlight Directory     guifg=#6CA994
+highlight Folded        guifg=#AAAAAA guibg=#191C1D
+highlight MatchParen    guifg=#000000 guibg=#FD971F gui=bold
+highlight Search        guifg=#E1BB6D guibg=#191C1D gui=bold
 highlight Title         guifg=#C84D4D
-highlight Visual        guifg=#aaaaaa guibg=#191C1D gui=bold
+highlight Visual        guifg=#AAAAAA guibg=#191C1D gui=bold
 highlight VertSplit     guifg=#666666               gui=bold
 
 " pop up menu
 highlight Pmenu         guifg=#7E8E91 guibg=#000000
-highlight PmenuSel      guifg=#66d9ef guibg=#000000 gui=bold
+highlight PmenuSel      guifg=#66D9EF guibg=#000000 gui=bold
 highlight PmenuSbar                   guibg=#101010
 highlight PmenuThumb    guifg=#101010
-highlight WildMenu      guifg=#66d9ef guibg=#000000 gui=bold
+highlight WildMenu      guifg=#66D9EF guibg=#000000 gui=bold
 
 " statusline
-highlight StatusLine    guifg=#aaaaaa guibg=#191C1D gui=bold
+highlight StatusLine    guifg=#AAAAAA guibg=#191C1D gui=bold
 highlight StatusLineNC  guifg=#7E8E91               gui=bold
 
 " for tab page
-highlight TabLine       guifg=#cccccc guibg=#666666
+highlight TabLine       guifg=#CCCCCC guibg=#666666
 highlight TabLineFill                 guibg=#666666
-highlight TabLineSel    guifg=#eeeeee guibg=#666666
+highlight TabLineSel    guifg=#EEEEEE guibg=#666666
