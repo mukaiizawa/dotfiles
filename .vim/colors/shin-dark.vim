@@ -27,9 +27,6 @@ highlight Ignore         guifg=#FF0000
 highlight Error          guifg=#F86060 guibg=#303030 gui=BOLD
 highlight Todo           guifg=#F86060 guibg=#303030 gui=BOLD
 
-highlight Normal         guifg=#FFFFFF guibg=#303030
-highlight NonText        guifg=#666666 guibg=#303030
-
 highlight ColorColumn                  guibg=#404040
 highlight Conceal        guifg=#666666
 highlight Cursor         guifg=#000000 guibg=#FFFFFF
@@ -44,6 +41,8 @@ highlight Directory      guifg=#40E0DB
 highlight Folded         guifg=#AAAAAA guibg=#404040
 highlight LineNr         guifg=#AAAAAA
 highlight MatchParen     guifg=#000000 guibg=#FD971F gui=BOLD
+highlight NonText        guifg=#666666 guibg=#303030
+highlight Normal         guifg=#FFFFFF guibg=#303030
 highlight Pmenu          guifg=#FFFFFF guibg=#303030
 highlight PmenuSbar                    guibg=#101010
 highlight PmenuSel       guifg=#66D9EF guibg=#000000 gui=BOLD
