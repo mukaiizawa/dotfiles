@@ -1,2 +1,9 @@
-Tutorial Go	~/dotfiles/dict/go/tutorial.md
 Package bufio	~/dotfiles/dict/go/bufio.md
+Snippets astroid	~/dotfiles/dict/go/astroid.go
+Snippets cardioid	~/dotfiles/dict/go/cardioid.go
+Snippets cycloid	~/dotfiles/dict/go/cycloid.go
+Snippets dup	~/dotfiles/dict/go/dup.go
+Snippets echo	~/dotfiles/dict/go/echo.go
+Snippets hello	~/dotfiles/dict/go/hello.go
+Snippets lisajous	~/dotfiles/dict/go/lissajous.go
+Tutorial Go	~/dotfiles/dict/go/tutorial.md

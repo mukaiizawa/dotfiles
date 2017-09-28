@@ -4,5 +4,8 @@ Library math.h	~/dotfiles/dict/c/math.h.md
 Library stdio.h	~/dotfiles/dict/c/stdio.h.md
 Library stdlib.h	~/dotfiles/dict/c/stdlib.h.md
 Library string.h	~/dotfiles/dict/c/string.h.md
+Snippets cp	~/dotfiles/dict/c/cp.c
+Snippets echo	~/dotfiles/dict/c/echo.c
+Snippets wc	~/dotfiles/dict/c/wc.c
 Tutorial C	~/dotfiles/dict/c/tutorial.md
 Tutorial gdb	~/dotfiles/dict/c/gdb.md

@@ -1,4 +1,4 @@
-Recipe translate date
+Tutorial date
 
 # 基本
 Date,
