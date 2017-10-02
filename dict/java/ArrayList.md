@@ -30,7 +30,7 @@ addAllはListの末尾にコレクションを追加する。
     public boolean removeAll(Collection<?> c)
     public boolean removeIf(Predicate<? super E> filter)
 clearはListの要素をすべて削除する。
-removeにindexを私は場合は、indexにある要素を削除しその要素を返す。
+removeにindexを渡す場合は、indexにある要素を削除しその要素を返す。
 removeにオブジェクトを渡した場合は最初に見つかったオブジェクトを削除する。
 removeAllはコレクションに含まれる要素すべてを削除する。
 removeIfは指定された述語を満たすコレクションの要素をすべて削除する。
