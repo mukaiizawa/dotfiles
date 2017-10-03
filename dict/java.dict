@@ -9,7 +9,9 @@ IDE Eclipse	~/dotfiles/dict/java/eclipse.md
 Interface Path	~/dotfiles/dict/java/Path.md
 Interface Stream	~/dotfiles/dict/java/Stream.md
 JSF Converter	~/dotfiles/dict/java/Converter.md
-Snippets dump object	~/dotfiles/dict/java/dump.java
+Snippets dump object	~/dotfiles/dict/java/DumpObject.java
 Snippets point class	~/dotfiles/dict/java/Point.java
+Snippets time measurement 	~/dotfiles/dict/java/TimeMeasurement.java
 Tutorial Generic	~/dotfiles/dict/java/Generic.md
+Tutorial JPA	~/dotfiles/dict/java/JPA.md
 Tutorial date	~/dotfiles/dict/java/date.md
