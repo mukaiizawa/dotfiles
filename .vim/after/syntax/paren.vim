@@ -36,7 +36,7 @@ syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
 " builtin function/macro
-syn keyword ParenBuiltin def fn if let quote <-
+syn keyword ParenBuiltin class method function fn if let ? quote <-
 " numeric
 syn keyword ParenBuiltin + - * / = mod < > <= >=
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
