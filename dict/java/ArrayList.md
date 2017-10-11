@@ -14,11 +14,11 @@ ArrayListはListインターフェースのサイズの変更可能な配列の�
     public void add(int index, E element)
     public boolean addAll(Collection<? extends E> c)
     public boolean addAll(int index, Collection<? extends E> c)
-addはListの末尾に要素を追加する。
+addはリストの末尾に要素を追加する。
 コレクションが変更された場合はtrueを返す。
 引数にindexを指定した場合はその位置に要素を挿入する。
 その場合、その位置以降にあった各要素のindexは1増える。
-addAllはListの末尾にコレクションを追加する。
+addAllはリストの末尾にコレクションを追加する。
 追加される順番は追加するコレクションのイテレータに返される順番になる。
 引数にindexを指定した場合は、
 追加位置以降の要素を追加する要素だけ移動して挿入する。
@@ -29,7 +29,7 @@ addAllはListの末尾にコレクションを追加する。
     public boolean remove(Object o)
     public boolean removeAll(Collection<?> c)
     public boolean removeIf(Predicate<? super E> filter)
-clearはListの要素をすべて削除する。
+clearはリストの要素をすべて削除する。
 removeにindexを渡す場合は、indexにある要素を削除しその要素を返す。
 removeにオブジェクトを渡した場合は最初に見つかったオブジェクトを削除する。
 removeAllはコレクションに含まれる要素すべてを削除する。
@@ -38,22 +38,26 @@ remove, removeAll, removeIfは、
 指定した要素が含まれていた(即ち、コレクションが変更される)場合trueを返す。
 
 # 要素の取得
-    public E get(int index)
-このListのindexにある要素を取得する。
+    E get(int index)
+このリストのindexにある要素を取得する。
+
+# 要素の更新
+    set(int index, E element)
+このリストの指定された位置にある要素を、指定された要素に置き換える。
 
 # 大きさの取得
-    public int size()
-このListの大きさを返す。
+    int size()
+このリストの大きさを返す。
 
 # 空か判定
-    public boolean isEmpty()
-このListに要素が存在しない場合にtrueを返す。
+    boolean isEmpty()
+このリストに要素が存在しない場合にtrueを返す。
 
 # 要素が含まれているか判定
-    public boolean contains(Object o)
-指定した要素がListに存在する場合にtrueを返す。
+    boolean contains(Object o)
+指定した要素がリストに存在する場合にtrueを返す。
 
 # ソート
-    public void sort(Comparator<? super E> c)
-このListをComparatorに従いソートする。
-引数がnullの場合はこのListの要素の自然順序付けが使用される。
+    void sort(Comparator<? super E> c)
+このリストをComparatorに従いソートする。
+引数がnullの場合はこのリストの要素の自然順序付けが使用される。
