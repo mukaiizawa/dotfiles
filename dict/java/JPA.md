@@ -50,3 +50,13 @@ name属性を指定しない場合、このエンティティ名はクラス名�
                初期値はtrue
     updatable  このフィールドをSQLのupdate文に含めるか否か
                初期値はtrue
+
+# 関連アノテーション
+JPAにはテーブル間のリレーションを定義するアノテーションが三つある。
+- @ManyToOne
+- @OneToMany
+- @OneToOne
+# @ManyToOne
+# @OneToMany
+# @OneToOne
+業務的な制約などなければ普通は使用しない。
