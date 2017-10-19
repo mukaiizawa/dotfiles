@@ -9,17 +9,13 @@ streamを実装しているクラスを用いる際に従来のコードを簡�
 
 # Streamの生成方法
 ## 文字列から生成
-    "foo".chars()
+    "foo".chars();
 ## Listから生成
-    new ArrayList<>()
-      .stream();
+    list.stream();
 ##  配列から生成
-    Arrays
-      .stream(arr);
+    Arrays.stream(arr);
 ## Mapから生成
-    new HashMap<>()
-      .entrySet()
-      .stream();
+    map.entrySet().stream();
 Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異なることに注意。
 なお、stream中ではgetKey()とgetValue()を用いてMapのキーと値にアクセスする。
 ## Streamクラスのofメソッドから作成
