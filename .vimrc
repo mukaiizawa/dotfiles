@@ -111,6 +111,7 @@ nnoremap sl <C-w>l
 nnoremap sr <C-w>r
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
+nnoremap x "_x
 
 " surround delete
 nnoremap sd' f'x,x
