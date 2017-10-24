@@ -9,17 +9,13 @@ streamを実装しているクラスを用いる際に従来のコードを簡�
 
 # Streamの生成方法
 ## 文字列から生成
-    "foo".chars()
+    "foo".chars();
 ## Listから生成
-    new ArrayList<>()
-      .stream();
+    list.stream();
 ##  配列から生成
-    Arrays
-      .stream(arr);
+    Arrays.stream(arr);
 ## Mapから生成
-    new HashMap<>()
-      .entrySet()
-      .stream();
+    map.entrySet().stream();
 Mapから生成されるstreamの型はStream<Entry<...>>であり、他と異なることに注意。
 なお、stream中ではgetKey()とgetValue()を用いてMapのキーと値にアクセスする。
 ## Streamクラスのofメソッドから作成
@@ -145,3 +141,11 @@ orElse(T)を用いることにより、
     stream
       .map(x -> Integer.parseInt(x))
       .min(Comparator.naturalOrder());
+
+### 条件に一致する要素の有無の判定
+    boolean anyMatch(Predicate<? super T> predicate)
+    boolean noneMatch(Predicate<? super T> predicate)
+anyMatchはこのストリームのいずれかの要素が、
+指定された述語に一致するか否かを返す。
+noneMatchは指定された述語に一致する要素が、
+このストリーム内に存在しないか否かを返す。

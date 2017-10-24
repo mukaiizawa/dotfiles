@@ -29,7 +29,7 @@ hi Todo           guifg=#C84D4D guibg=#000000 gui=BOLD
 
 hi ColorColumn                  guibg=#191C1D
 hi Conceal        guifg=#666666
-hi Cursor         guifg=#000000 guibg=#7E8E91
+hi Cursor         guifg=#000000 guibg=#95A3A5
 hi CursorIM                     guibg=#FF0000
 hi CursorLine                   guibg=#191C1D
 hi CursorLineNr   guifg=#D1B886               gui=BOLD
@@ -43,16 +43,16 @@ hi Folded         guifg=#AAAAAA guibg=#191C1D
 hi LineNr         guifg=#AAAAAA
 hi MatchParen     guifg=#000000 guibg=#FD971F gui=BOLD
 hi NonText        guifg=#666666 guibg=#000000
-hi Normal         guifg=#7E8E91 guibg=#000000
+hi Normal         guifg=#95A3A5 guibg=#000000
 hi ModeMsg        guifg=#C84D4D               gui=BOLD
-hi Pmenu          guifg=#7E8E91 guibg=#000000
+hi Pmenu          guifg=#95A3A5 guibg=#000000
 hi PmenuSbar                    guibg=#101010
 hi PmenuSel       guifg=#66D9EF guibg=#000000 gui=BOLD
 hi PmenuThumb     guifg=#101010
 hi Search         guifg=#E1BB6D guibg=#191C1D gui=BOLD
 hi SpecialKey     guifg=#666666
 hi StatusLine     guifg=#AAAAAA guibg=#191C1D gui=BOLD
-hi StatusLineNC   guifg=#7E8E91               gui=BOLD
+hi StatusLineNC   guifg=#95A3A5               gui=BOLD
 hi TabLine        guifg=#CCCCCC guibg=#666666
 hi TabLineFill                  guibg=#666666
 hi TabLineSel     guifg=#EEEEEE guibg=#666666
