@@ -7,11 +7,11 @@ DML
 # SELECT
 ## 書式
     query ::=
-        SELECT [{ DISTINCT | ALL }] {* | c_selection [, c_selection]...}
+        SELECT [{ DISTINCT | ALL }] {* | c_selection [, c_selection] ...}
         FROM {( subquery ) | [schema .] {table | view}} [t_alias]
         [WHERE condition]
-        [GROUP BY column [, column]... [HAVING condition]]
-        [ORDER  BY order_by_clause [, order_by_clause]...]
+        [GROUP BY column [, column] ... [HAVING condition]]
+        [ORDER  BY order_by_clause [, order_by_clause] ...]
         [{INTERSECT | UNION [ALL] | MINUS} query] ;
     c_selection ::= [schema .] {table | view | t_alias} . column [AS c_alias]
     order_by_clause ::= {column | position} [ASC | DESC]
@@ -27,6 +27,7 @@ DML
               指定した別名はorder_by_clauseの中でのみ使用可能。
     t_alias   表の別名を指定する。
               別名を指定した場合は、その表は別名を使用する必要がある。
+    subquery  副問い合わせ
     WHERE     抽出する条件を指定する。
     GROUP BY  指定した対象ごとに、単一の行にする。
     HAVING    集約した行に対しての抽出条件を指定する。
@@ -42,14 +43,20 @@ DML
 ## 書式
     query ::=
         UPDATE [schema .] { table | view} [ alias ]
-        SET column = { expr | subquery }
+        SET update_clauses
         [WHERE condition] ;
     c_selection ::= column = { expr | subquery }
+    update_clauses ::= update_clause [, update_clause] ... 
+    update_clause ::= {
+        column = {expr | ( subquery )}
+        | ( column [, column] ...) = ( subquery )
+    }
 以下に、使用している字句の意味を示す。
-    引数  定義
+    引数      定義
     ----------------------------------------
-    SET   更新する項目と値を指定する。
-    WHERE 更新する対象の条件を指定する。
+    SET       更新する項目と値を指定する。
+    WHERE     更新する対象の条件を指定する。
+    subquery  副問い合わせ
 
 # DELETE
 ## 書式
@@ -66,8 +73,8 @@ DML
 # INSERT
 ## 書式
     query ::=
-        INSERT INTO [schema .] {table | view } [( column [, column]... )]
-        VALUES {( expr [, expr]...) | subquery};
+        INSERT INTO [schema .] {table | view } [( column [, column] ... )]
+        VALUES {( expr [, expr] ...) | subquery};
 以下に、使用している字句の意味を示す。
     引数        定義
     --------------------------------------
