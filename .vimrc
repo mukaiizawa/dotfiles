@@ -38,60 +38,82 @@ NeoBundle 'Yggdroot/indentLine'
 call neobundle#end()
 filetype plugin indent on
 
+set autoindent
+set backspace=start,eol,indent
+set cmdheight=2
+set colorcolumn=80
+set completefunc=CompleteWords
+set cursorline
 set encoding=utf-8
-set wildmenu
-set showcmd
-set iminsert=0
-set imsearch=0
-set helplang=en
-set history=2000
-set nrformats-=octal
+set expandtab
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
 set fileformats=unix,dos
-set printoptions=wrap:y,number:y
-set number
-set nowrap
-set showmatch
 set foldmethod=marker
-set splitright
+set formatoptions+=roqj
+set formatoptions-=tc
+set helplang=en
+set history=2000
+set hlsearch
+set ignorecase
+set iminsert=0
+set imsearch=0
+set laststatus=2
 set list
 set listchars=tab:->,eol:<,trail:>
-set backspace=start,eol,indent
-set title
-set cursorline
-set colorcolumn=80
-set cmdheight=2
-set laststatus=2
-set showtabline=2
-set tabline=%t
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
-set tabpagemax=300
-set noundofile
-set viminfo=
 set nobackup
 set noswapfile
-set hlsearch
-set wrapscan
-set ignorecase
-set smartcase
-set autoindent
-set tabstop=2
-set smartindent
-set expandtab
+set noundofile
+set nowrap
+set nrformats-=octal
+set number
+set printoptions=wrap:y,number:y
 set shiftwidth=2
-set formatoptions-=tc
-set formatoptions+=roqj
+set showcmd
+set showmatch
+set showtabline=2
+set smartcase
+set smartindent
+set splitright
+set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
+set tabline=%t
+set tabpagemax=300
+set tabstop=2
+set title
+set viminfo=
+set wildmenu
+set wrapscan
 
+inoremap <C-k> <C-x><C-u>
+inoremap <C-l> <C-n>
+inoremap <Tab> <C-v><Tab>
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+inoremap jj <Esc>
+nnoremap ( {
+nnoremap ) }
+nnoremap <C-Insert> "*y
 nnoremap <C-d> <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-u> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <Del> <NOP>
+nnoremap <F3> :<C-u>e $MYVIMRC<CR>
+nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
+nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 nnoremap <Insert> <NOP>
+nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
+nnoremap <Space><Space> zz
+nnoremap <Space>h 0
+nnoremap <Space>j Lzz
+nnoremap <Space>k Hzz
+nnoremap <Space>l $
+nnoremap <Space>w :set wrap!<CR>
+nnoremap <silent>mm :e #<CR>
 nnoremap Q <NOP>
+nnoremap U  <C-r>
+nnoremap Y y$
 nnoremap ZZ <NOP>
 nnoremap ch <NOP>
 nnoremap cj <NOP>
@@ -101,61 +123,37 @@ nnoremap dh <NOP>
 nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
+nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap j gj
+nnoremap k gk
 nnoremap s  <NOP>
-nnoremap ss <C-w>s
-nnoremap sv <C-w>v
+nnoremap sd" f"x,x
+nnoremap sd' f'x,x
+nnoremap sd( f)xF(x
+nnoremap sd) f)xF(x
+nnoremap sd* f*x,x
+nnoremap sd< f>xF<x
+nnoremap sd> f>xF<x
+nnoremap sd[ f]xF[x
+nnoremap sd] f]xF[x
+nnoremap sd{ f}xF{x
+nnoremap sd} f}xF{x
 nnoremap sh <C-w>h
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
-nnoremap sr <C-w>r
-nnoremap st :<C-u>tabnew<CR>
 nnoremap sq :<C-u>q<CR>
-
-" surround delete
-nnoremap sd' f'x,x
-nnoremap sd" f"x,x
-nnoremap sd* f*x,x
-nnoremap sd< f>xF<x
-nnoremap sd> f>xF<x
-nnoremap sd( f)xF(x
-nnoremap sd) f)xF(x
-nnoremap sd{ f}xF{x
-nnoremap sd} f}xF{x
-nnoremap sd[ f]xF[x
-nnoremap sd] f]xF[x
-
-inoremap jj <Esc>
-inoremap <C-l> <C-n>
-inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-inoremap <Tab> <C-v><Tab>
-nnoremap U  <C-r>
-nnoremap <Space>w :set wrap!<CR>
-nnoremap <S-Insert> "*p
-nnoremap <C-Insert> "*y
-vnoremap <S-Insert> "*p
-vnoremap <C-Insert> "*y
+nnoremap sr <C-w>r
+nnoremap ss <C-w>s
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sv <C-w>v
 vnoremap / y/<C-r>"<CR>
-nnoremap Y y$
-nnoremap <Space>h 0
-nnoremap <Space>l $
-nnoremap <Space>j Lzz
-nnoremap <Space>k Hzz
-nnoremap <Space><Space> zz
+vnoremap <C-Insert> "*y
+vnoremap <S-Insert> "*p
 vnoremap <Space>h 0
-vnoremap <Space>l $
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
-nnoremap ) }
-nnoremap ( {
-nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
-nnoremap <silent>mm :e #<CR>
-nnoremap <F3> :<C-u>e $MYVIMRC<CR>
-nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
-nnoremap <F5> :<C-u>source $MYVIMRC<CR>
-
-set completefunc=CompleteWords
-inoremap <C-k> <C-x><C-u>
+vnoremap <Space>l $
 
 " unite
 let g:html_number_lines = 0
@@ -258,27 +256,27 @@ let g:indentLine_fileType = ['']
 let g:caw_no_default_keymappings = 1
 
 " plugin mapping
-nnoremap sp :<C-u>PrintSurround<CR>
-vnoremap sp :PrintSurround<CR>
 inoremap <C-d> <Esc>:InsertDate<CR>
-nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
-nnoremap <silent>me :<C-u>Unite menu<CR> 
-nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
-nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
-nnoremap <silent>mru :<C-u>Unite file_mru<CR>
-nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
-nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
-nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
-nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
-vnoremap <silent>gco :ContinuousNumber <C-a><CR>
-nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
-nmap gci <Plug>(caw:hatpos:toggle)
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
-vmap gci <Plug>(caw:hatpos:toggle)
+nmap gci <Plug>(caw:hatpos:toggle)
+nmap gw  <Plug>(openbrowser-open)
+nmap gww <Plug>(openbrowser-search)
+nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
+nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent>me :<C-u>Unite menu<CR> 
+nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
+nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
+nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
+nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
+nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
+nnoremap <silent>mru :<C-u>Unite file_mru<CR>
+nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
+nnoremap sp :<C-u>PrintSurround<CR>
 vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
-nmap gw  <Plug>(openbrowser-open)
+vmap gci <Plug>(caw:hatpos:toggle)
 vmap gw  <Plug>(openbrowser-open)
-nmap gww <Plug>(openbrowser-search)
 vmap gww <Plug>(openbrowser-search)
+vnoremap <silent>gco :ContinuousNumber <C-a><CR>
+vnoremap sp :PrintSurround<CR>
