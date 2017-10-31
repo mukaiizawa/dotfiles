@@ -57,6 +57,15 @@ remove, removeAll, removeIfは、
     boolean contains(Object o)
 指定した要素がリストに存在する場合にtrueを返す。
 
+# 部分リストの取得
+    List<E> subList(int fromIndex, int toIndex)
+このリストの部分リストを返す。
+fromIndexは零から数える開始位置で、toIndexは自身を含まない終了位置である。
+    Arrays.asList(1, 2, 3).subList(0, 1);
+    => (1)
+    Arrays.asList(1, 2, 3).subList(0, 2);
+    => (1 2)
+
 # ソート
     void sort(Comparator<? super E> c)
 このリストをComparatorに従いソートする。
