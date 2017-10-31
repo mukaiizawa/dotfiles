@@ -147,6 +147,8 @@ nnoremap sr <C-w>r
 nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sv <C-w>v
+vnoremap ( {
+vnoremap ) }
 vnoremap / y/<C-r>"<CR>
 vnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
