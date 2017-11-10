@@ -11,6 +11,7 @@ IDE Eclipse	~/dotfiles/dict/java/eclipse.md
 Interface Path	~/dotfiles/dict/java/Path.md
 Interface Stream	~/dotfiles/dict/java/Stream.md
 JSF Converter	~/dotfiles/dict/java/Converter.md
+Snippets dump error 	~/dotfiles/dict/java/DumpError.java
 Snippets dump object	~/dotfiles/dict/java/DumpObject.java
 Snippets point class	~/dotfiles/dict/java/Point.java
 Snippets time measurement 	~/dotfiles/dict/java/TimeMeasurement.java
