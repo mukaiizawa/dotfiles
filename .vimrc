@@ -236,7 +236,7 @@ let g:quickrun_config = {
       \ },
       \  'java' : {
       \    'exec' : ['javac -J-Dfile.encoding=UTF8 %o %s'
-      \               , '%c -Dfile.encoding=UTF8 %s:t:r %a'],
+      \               , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'],
       \    'hook/time/enable': 1,
       \  },
       \  'python' : {
