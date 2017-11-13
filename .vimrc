@@ -105,10 +105,10 @@ nnoremap <Insert> <NOP>
 nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
-nnoremap <Space>h g0
+nnoremap <Space>h 0
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <Space>l g$
+nnoremap <Space>l $
 nnoremap <Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap Q <NOP>
