@@ -13,6 +13,8 @@ Interface Stream	~/dotfiles/dict/java/Stream.md
 JSF Converter	~/dotfiles/dict/java/Converter.md
 Snippets DateUtil	~/dotfiles/dict/java/DateUtil.java
 Snippets FileUtil	~/dotfiles/dict/java/FileUtil.java
+Snippets MailUtil	~/dotfiles/dict/java/MailUtil.java
+Snippets ResourceUtil	~/dotfiles/dict/java/ResourceUtil.java
 Snippets Util	~/dotfiles/dict/java/Util.java
 Snippets point class	~/dotfiles/dict/java/Point.java
 Snippets time measurement 	~/dotfiles/dict/java/TimeMeasurement.java

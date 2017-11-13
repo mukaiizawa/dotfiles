@@ -29,13 +29,6 @@ import java.util.stream.IntStream;
 public class FileUtil {
 
   /**
-   * 検査例外のIOExceptionのラッパークラス
-   */
-  public class XIOException extends RuntimeException {
-    public XIOException(IOException e) { super(e); }
-  }
-
-  /**
    * 拡張子取得
    * 返り値にはドットは含まない。
    * @param path パス
@@ -71,7 +64,7 @@ public class FileUtil {
       return Files.list(path).map(child -> getSize(child))
         .reduce(0L, (x1, x2) -> x1 + x2);
     } catch (IOException e) {
-      throw new XIOException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -85,7 +78,7 @@ public class FileUtil {
     try {
       Files.copy(src, dest);
     } catch (IOException e) {
-      throw new XIOException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -99,7 +92,7 @@ public class FileUtil {
       Files.createDirectories(dir);
       return dir;
     } catch (IOException e) {
-      throw new XIOException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -128,7 +121,7 @@ public class FileUtil {
         for (File f: path.toFile().listFiles()) delete(f.toPath());
       Files.delete(path);
     } catch (IOException e) {
-      throw new XIOException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -171,7 +164,7 @@ public class FileUtil {
     } catch (URISyntaxException e) {
       throw new IllegalStateException(e);
     } catch (IOException e) {
-      throw new XIOException(e);
+      throw new RuntimeException(e);
     }
   }
 
