@@ -105,10 +105,10 @@ nnoremap <Insert> <NOP>
 nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
-nnoremap <Space>h 0
+nnoremap <Space>h g0
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <Space>l $
+nnoremap <Space>l g$
 nnoremap <Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap Q <NOP>
@@ -152,10 +152,12 @@ vnoremap ) }
 vnoremap / y/<C-r>"<CR>
 vnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
-vnoremap <Space>h 0
+vnoremap <Space>h g0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
-vnoremap <Space>l $
+vnoremap <Space>l g$
+vnoremap j gj
+vnoremap k gk
 
 " unite
 let g:html_number_lines = 0
