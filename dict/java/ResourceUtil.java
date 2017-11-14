@@ -44,17 +44,28 @@ public class ResourceUtil {
 
   /**
    * プロパティファイルの値取得
+   * 指定されたプロパティファイルのキー値に対応する値を返す。
    * @param key プロパティのキー
    * @return プロパティの値
    */
-  public String getVal(String key) {
+  public String getStr(String key) {
     return rb.getString(key);
+  }
+
+  /**
+   * プロパティファイルの値取得
+   * 指定されたプロパティファイルのキー値に対応する値を整数にして返す。
+   * @param key プロパティのキー
+   * @return プロパティの値
+   */
+  public int getInt(String key) {
+    return Integer.parseInt(getStr(key));
   }
 
   public static void main(String[] args) {
     // requires test.properties
     ResourceUtil ru = ResourceUtil.getInstance("test");
-    System.out.println(ru.getVal("a"));
+    System.out.println(ru.getStr("a"));
   }
 
 }
