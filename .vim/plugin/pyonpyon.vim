@@ -30,16 +30,13 @@ function! s:pyonpyon()
   elseif s:x > s:maxX
     let [s:x, s:v] = [s:maxX, -s:v]
   endif
-
   let s:y += s:w
   if s:y < 0
     let [s:y, s:w] = [0, s:unit_v]
   elseif s:y > s:maxY
     let s:y = s:maxY
   end
-
   let s:w -= s:gravity
-
   execute "winpos " . float2nr(s:x) . " " . float2nr(s:maxY - s:y)
   call feedkeys(mode() ==# "i" ? "\<C-g>\<ESC>" : "g\<ESC>", "n")
 endfunction

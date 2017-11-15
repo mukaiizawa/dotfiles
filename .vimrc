@@ -105,10 +105,10 @@ nnoremap <Insert> <NOP>
 nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
-nnoremap <Space>h 0
+nnoremap <Space>h :call MoveLeftEnd()<CR>
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <Space>l $
+nnoremap <Space>l :call MoverRightEnd()<CR>
 nnoremap <Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap Q <NOP>

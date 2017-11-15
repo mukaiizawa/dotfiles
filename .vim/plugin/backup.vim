@@ -1,15 +1,12 @@
 function! MakeBackupFile()
-
   if has('win32') || has ('win64')
     let s:backupDir = $HOME . '/.back'
   else
     let s:backupDir = $HOME . '/.back/'
   endif
-
   if isdirectory(s:backupDir) == 0
     call mkdir(s:backupDir , 'p')
   endif
-
   if filereadable(expand('%')) && filewritable(expand('%'))   " unless new file
     if exists("*strftime")    " is executable function `strftime'
       let s:today = strftime("%y%m%d")
@@ -26,7 +23,6 @@ function! MakeBackupFile()
             \  '/' . expand('%:t') . '.' . localtime())
     endif
   endif
-
 endfunction
 
 command! MakeBackupFile call MakeBackupFile()

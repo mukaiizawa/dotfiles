@@ -1,5 +1,3 @@
-" surround.vim
-
 function! SurroundWith(leftPart, rightPart, currentLine)
   " move the first non-blank character of the line.
   execute ':normal ^'

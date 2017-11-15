@@ -1,4 +1,3 @@
-" for statusline
 function! CurrentFileformat()
   if &fileformat == 'unix'
     return 'LF'
