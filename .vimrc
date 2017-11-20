@@ -152,10 +152,10 @@ vnoremap ) }
 vnoremap / y/<C-r>"<CR>
 vnoremap <C-Insert> "*y
 vnoremap <S-Insert> "*p
-vnoremap <Space>h g0
+vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
-vnoremap <Space>l g$
+vnoremap <Space>l $
 vnoremap j gj
 vnoremap k gk
 
