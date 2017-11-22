@@ -105,12 +105,13 @@ nnoremap <Insert> <NOP>
 nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
-nnoremap <Space>h :call MoveLeftEnd()<CR>
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <Space>l :call MoverRightEnd()<CR>
 nnoremap <Space>w :set wrap!<CR>
+nnoremap <silent><Space>h :call MoveLeftEnd()<CR>
+nnoremap <silent><Space>l :call MoverRightEnd()<CR>
 nnoremap <silent>mm :e #<CR>
+nnoremap <silent>sq :<C-u>q<CR>
 nnoremap Q <NOP>
 nnoremap U  <C-r>
 nnoremap Y y$
@@ -142,7 +143,6 @@ nnoremap sh <C-w>h
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
-nnoremap sq :<C-u>q<CR>
 nnoremap sr <C-w>r
 nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
