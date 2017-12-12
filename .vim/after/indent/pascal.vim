@@ -3,6 +3,7 @@ setlocal indentkeys+==end;,==const,==type,==var,==begin,==repeat,==until,==for
 setlocal indentkeys+==program,==function,==procedure,==record,==if,==else,==case
 
 function! GetPascalIndent(line_num)
+  let line_num = a:line_num
   let prev_line = getline(a:line_num - 1)
   let prev_indent = indent(prevnonblank(a:line_num - 1))
   let curr_line = getline(a:line_num)
@@ -11,16 +12,15 @@ function! GetPascalIndent(line_num)
     return 0
   endif
 
+  if curr_line !~ "^\s*begin" && prev_line =~ '^\s*else$'
+    return indent(a:line_num - 1) + &shiftwidth
+  endif
+
   if prev_line =~ '^\s*\(begin\|for\|with\)'
     return indent(a:line_num - 1) + &shiftwidth
   endif
 
-  if prev_line =~ '^\s*else$'
-    return indent(a:line_num - 1) + &shiftwidth
-  endif
-
   if curr_line =~ '^\s*end'
-    let line_num = a:line_num
     let level = 1
     while line_num > 0 && level > 0
       let line_num = line_num - 1
