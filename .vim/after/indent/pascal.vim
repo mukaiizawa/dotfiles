@@ -15,7 +15,7 @@ function! GetPascalIndent(line_num)
     return 0
   endif
 
-  if curr_line =~ line_first . 'procedure'
+  if curr_line =~ line_first . '\(procedure\|function\)'
     return indent(line_num)
   endif
 
