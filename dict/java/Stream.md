@@ -81,22 +81,24 @@ filterは写像後の値が真になるデータのみ抽出する。
 ## コレクションの生成
 ### Listの生成
 あるオブジェクトのリストからそのオブジェクトのプロパティのリストを生成する例を示す。
-    stream
-      .map(x -> x.getMember1())
+    stream.map(x -> x.getMember1())
       .collect(Collectors.toList()));
 #### MapからListの生成
 MapからListへの変換はよくあるため、ここに記す。
 値がtrueのキーからなるListの生成例
-    map    // Map<String, Boolean>
-      .entrySet()
-      .stream()
+    map.entrySet().stream()
       .filter(x -> x.getValue())
       .map(x -> x.getKey())
       .collect(Collectors.toList()));
 ### Mapの生成
 あるオブジェクトのリストからメンバAをキーに、メンバBを値に持つマップを作成する例を示す。
-    stream
-      .collect(Collectors.toMap(x -> x.getA(), y -> y.getB()));
+    stream().collect(Collectors.toMap(
+          x -> x.getA()
+          , y -> x.getB()
+          , (o1, o2) -> o1
+          , LinkedHashMap::new));
+上の例では、キーが衝突した場合の処理と生成するマップのクラスを指定している。
+
 ### グルーピング化してMapへ
 streamの構成要素
 あるオブジェクトのリストからオブジェクトのメンバの値でグルーピングした
