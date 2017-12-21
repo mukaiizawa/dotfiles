@@ -85,15 +85,24 @@ limitを指定しないsplitはlimitに0を指定したsplitと同じ動作を�
 
 # 文字列の結合
     static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)
-elementsをdelimiterを用いて結合する。
+joinはelementsをdelimiterを用いて結合する。
     List<String> strings = new ArrayList<>();
     strings.add("Java");
     strings.add("is");
     strings.add("cool");
     String.join(" ", strings);
     => "Java is cool"
-このメソッドはJava8以降にのみ使用できる。
-elementがnullの場合は"null"が文字列に結合される。
+
+このメソッドはJava8以降にのみ使用できる。また、Java8以前の同等なコードを示す。
+  private static String StringJoin(String segment, Iterable<String> ir) {
+    Iterator<String> it = ir.iterator();
+    StringBuilder sb = new StringBuilder();
+    while (it.hasNext()) {
+      sb.append(it.next());
+      if (it.hasNext()) sb.append(segment);
+    }
+    return sb.toString();
+  }
 
 # 書式付き文字列
     static String format(String format, Object... args)
