@@ -94,8 +94,8 @@ joinはelementsをdelimiterを用いて結合する。
     => "Java is cool"
 
 このメソッドはJava8以降にのみ使用できる。また、Java8以前の同等なコードを示す。
-  private static String StringJoin(String segment, Iterable<String> ir) {
-    Iterator<String> it = ir.iterator();
+  private static String StringJoin(String segment, Collection<String> c) {
+    Iterator<String> it = c.iterator();
     StringBuilder sb = new StringBuilder();
     while (it.hasNext()) {
       sb.append(it.next());
