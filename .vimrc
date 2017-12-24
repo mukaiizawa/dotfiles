@@ -85,6 +85,7 @@ set viminfo=
 set wildmenu
 set wrapscan
 
+inoremap <C-d> <Esc>:call InsertDate()<CR>
 inoremap <C-k> <C-x><C-u>
 inoremap <C-l> <C-n>
 inoremap <Tab> <C-v><Tab>
@@ -159,8 +160,6 @@ vnoremap <Space>k Hzz
 vnoremap <Space>l $
 vnoremap j gj
 vnoremap k gk
-inoremap <C-d> <Esc>:call InsertDate()<CR>
-vnoremap sp :PrintSurround<CR>
 
 " unite
 let g:html_number_lines = 0
@@ -268,7 +267,12 @@ nmap gcc <Plug>(caw:wrap:toggle)
 nmap gci <Plug>(caw:hatpos:toggle)
 nmap gw  <Plug>(openbrowser-open)
 nmap gww <Plug>(openbrowser-search)
-nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
+vmap gca <Plug>(caw:dollarpos:toggle)
+vmap gcc <Plug>(caw:wrap:toggle)
+vmap gci <Plug>(caw:hatpos:toggle)
+vmap gw  <Plug>(openbrowser-open)
+vmap gww <Plug>(openbrowser-search)
+
 nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
 nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
@@ -278,10 +282,9 @@ nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nnoremap <silent>mru :<C-u>Unite file_mru<CR>
 nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
-nnoremap sp :<C-u>PrintSurround<CR>
-vmap gca <Plug>(caw:dollarpos:toggle)
-vmap gcc <Plug>(caw:wrap:toggle)
-vmap gci <Plug>(caw:hatpos:toggle)
-vmap gw  <Plug>(openbrowser-open)
-vmap gww <Plug>(openbrowser-search)
 vnoremap <silent>gco :ContinuousNumber <C-a><CR>
+
+nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
+
+nnoremap sp :<C-u>PrintSurround<CR>
+vnoremap sp :PrintSurround<CR>
