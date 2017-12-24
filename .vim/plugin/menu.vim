@@ -12,7 +12,6 @@ function! GetStartUpList()
   return s:result
 endfunction
 
-
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
@@ -106,7 +105,7 @@ let g:unite_source_menu_menus.StartupLogo ={
       \ }
 
 function! UniteStartup()
-  if argc()==0 && bufnr('$')==1 
+  if argc() == 0 && bufnr('$') == 1 
     Unite
           \ output:echo:":":!
           \ output:echo:"===:Edit:===":! menu:Setting

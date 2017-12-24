@@ -9,3 +9,11 @@ endfunction
 function! PrintError(msg)
   echohl Error | echomsg a:msg | echohl None
 endfunction
+
+function ToggleShiftWidth()
+  if &shiftwidth == 2
+    setl shiftwidth=4
+  else
+    setl shiftwidth=2
+  endif
+endfunction

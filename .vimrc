@@ -110,6 +110,7 @@ nnoremap <Space>k Hzz
 nnoremap <Space>w :set wrap!<CR>
 nnoremap <silent><Space>h :call MoveLeftEnd()<CR>
 nnoremap <silent><Space>l :call MoverRightEnd()<CR>
+nnoremap <silent><Space>s :call ToggleShiftWidth()<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap <silent>sq :<C-u>q<CR>
 nnoremap Q <NOP>
