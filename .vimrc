@@ -159,6 +159,8 @@ vnoremap <Space>k Hzz
 vnoremap <Space>l $
 vnoremap j gj
 vnoremap k gk
+inoremap <C-d> <Esc>:call InsertDate()<CR>
+vnoremap sp :PrintSurround<CR>
 
 " unite
 let g:html_number_lines = 0
@@ -261,7 +263,6 @@ let g:indentLine_fileType = ['']
 let g:caw_no_default_keymappings = 1
 
 " plugin mapping
-inoremap <C-d> <Esc>:InsertDate<CR>
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
 nmap gci <Plug>(caw:hatpos:toggle)
@@ -284,4 +285,3 @@ vmap gci <Plug>(caw:hatpos:toggle)
 vmap gw  <Plug>(openbrowser-open)
 vmap gww <Plug>(openbrowser-search)
 vnoremap <silent>gco :ContinuousNumber <C-a><CR>
-vnoremap sp :PrintSurround<CR>
