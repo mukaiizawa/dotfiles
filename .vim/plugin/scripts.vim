@@ -2,9 +2,9 @@
 
 function ToggleShiftWidth()
   if &shiftwidth == 2
-    setl shiftwidth=4
+    set shiftwidth=4
   else
-    setl shiftwidth=2
+    set shiftwidth=2
   endif
 endfunction
 
