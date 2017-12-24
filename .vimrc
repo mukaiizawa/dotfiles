@@ -8,35 +8,22 @@ if !has('gui_running')
     colorscheme shin-dark-term
   endif
 endif
-syntax enable
 
-if !1 | finish | endif
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin'  : 'make -f make_cygwin.mak',
-      \     'mac'     : 'make -f make_mac.mak',
-      \     'unix'    : 'make -f make_unix.mak',
-      \    }
-      \ }
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tyru/caw.vim'
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'Yggdroot/indentLine'
-call neobundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'Shougo/unite.vim', { 'branch': 'prompt' }
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'thinca/vim-quickrun'
+Plug 'tyru/caw.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'ujihisa/unite-colorscheme'
+Plug 'vim-jp/vimdoc-ja'
+Plug 'Yggdroot/indentLine'
+call plug#end()
 filetype plugin indent on
+syntax enable
 
 set autoindent
 set backspace=start,eol,indent
