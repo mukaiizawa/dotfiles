@@ -1,15 +1,17 @@
 function! GetStartUpList()
-  let s:path = $HOME . '/dotfiles/startup.logo'
-  if !filereadable(s:path)
-    call PrintError(printf('GetStartUpList: "%s" is not found.', s:path))
+  let path = $HOME . '/dotfiles/startup.logo'
+  let action =  "Unite neomru/file -hide-source-names -no-split -no-wrap"
+  if !filereadable(path)
+    call PrintError(printf('GetStartUpList: "%s" is not found.', path))
     return []
   endif
-  let s:result = []
-  let s:lines = readfile(s:path)
-  for s:line in s:lines
-    call add(s:result, [s:line, "enew"])
+  let result = repeat([[" ", action]], &lines)
+  let padding = repeat(" ", &columns)
+  let lines = readfile(path)
+  for line in lines
+    call add(result, [padding . line, action])
   endfor
-  return s:result
+  return result
 endfunction
 
 if !exists("g:unite_source_menu_menus")
@@ -43,18 +45,6 @@ let g:unite_source_menu_menus.Native2ascii = {
       \   "command_candidates" : [
       \       ["native2ascii", "%!native2ascii"],
       \       ["native2ascii -reverse", "%!native2ascii -reverse"],
-      \   ]
-      \ }
-
-let g:unite_source_menu_menus.NeoBundle = {
-      \   "command_candidates" : [
-      \       ["NeoBundleLog", "NeoBundleLog"],
-      \       ["NeoBundleList", "NeoBundleList"],
-      \       ["NeoBundleClean", "NeoBundleClean"],
-      \       ["NeoBundleCheck", "NeoBundleCheck"],
-      \       ["NeoBundleUpdate", "NeoBundleUpdate"],
-      \       ["NeoBundleInstall", "NeoBundleInstall"],
-      \       ["NeoBundleCheckUpdate", "NeoBundleCheckUpdate"],
       \   ]
       \ }
 
@@ -94,32 +84,19 @@ let g:unite_source_menu_menus.Format = {
       \
       \ }
 
-let g:unite_source_menu_menus.Substitute ={
+let g:unite_source_menu_menus.Substitute = {
       \  "command_candidates" : [
       \      ["Remove ", "%s///g"],
       \  ]
       \ }
 
-let g:unite_source_menu_menus.StartupLogo ={
-      \  "command_candidates" : GetStartUpList()
+let g:unite_source_menu_menus.StartupLogo = {
+      \  "command_candidates" : GetStartUpList(),
       \ }
 
 function! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
-    Unite
-          \ output:echo:":":!
-          \ output:echo:"===:Edit:===":! menu:Setting
-          \ output:echo:":":!
-          \ output:echo:"===:Search:===":! menu:Search
-          \ output:echo:":":!
-          \ output:echo:"===:Neobundle:===":! menu:NeoBundle
-          \ output:echo:":":! menu:StartupLogo
-          \ output:echo:":":!
-          \ neomru/file
-          \ output:echo:":":!
-          \ -hide-source-names
-          \ -no-split
-          \ -no-wrap
+    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap
   endif
 endfunction
 
