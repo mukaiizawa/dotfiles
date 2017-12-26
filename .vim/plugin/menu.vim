@@ -1,6 +1,7 @@
 function! GetStartUpList()
   let path = $HOME . '/dotfiles/startup.logo'
-  let action = "Unite neomru/file -hide-source-names -no-split -no-wrap -start-insert"
+  let action = "Unite neomru/file -hide-source-names -no-split -no-wrap "
+        \ . "-start-insert"
   if !filereadable(path)
     call PrintError(printf('GetStartUpList: "%s" is not found.', path))
     return []
@@ -96,7 +97,8 @@ let g:unite_source_menu_menus.StartupLogo = {
 
 function! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
-    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap -no-start-insert
+    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap 
+          \ -no-start-insert
   endif
 endfunction
 
