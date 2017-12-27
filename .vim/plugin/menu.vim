@@ -1,17 +1,35 @@
 function! GetStartUpList()
-  let path = $HOME . '/dotfiles/startup.logo'
+  let banner_path = $HOME . '/dotfiles/startup.banner'
+  let logo_path = $HOME . '/dotfiles/startup.logo'
   let action = "Unite neomru/file -hide-source-names -no-split -no-wrap "
         \ . "-start-insert"
-  if !filereadable(path)
-    call PrintError(printf('GetStartUpList: "%s" is not found.', path))
-    return []
+  let result = []
+  if !filereadable(banner_path) || !filereadable(logo_path)
+    call PrintError(printf('GetStartUpList: logo not found.'))
+    return result
   endif
-  let result = repeat([[" ", action]], &lines)
-  let padding = repeat(" ", &columns)
-  let lines = readfile(path)
-  for line in lines
-    call add(result, [padding . line, action])
+
+  let banner =  readfile(banner_path)
+  for line in banner
+    call add(result, [line, action])
   endfor
+
+  let logo =  readfile(logo_path)
+  if !has('gui')
+    let padding_top = &lines - len(banner) - len(logo) - 7
+    let padding_left = repeat(" ", &columns - 50)
+  else
+    let padding_top = 20
+    let padding_left = repeat(" ", 180)
+  endif
+  while padding_top > 0
+    call add(result, ["", action])
+    let padding_top = padding_top - 1
+  endwhile
+  for line in logo
+    call add(result, [padding_left . line, action])
+  endfor
+
   return result
 endfunction
 
