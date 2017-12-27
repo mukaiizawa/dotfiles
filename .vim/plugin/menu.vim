@@ -15,13 +15,14 @@ function! GetStartUpList()
   endfor
 
   let logo =  readfile(logo_path)
-  if !has('gui')
-    let padding_top = &lines - len(banner) - len(logo) - 7
-    let padding_left = repeat(" ", &columns - 50)
-  else
-    let padding_top = 20
-    let padding_left = repeat(" ", 180)
+  let win_height = &lines
+  let win_width = &columns
+  if has('gui')
+    let win_height = 55
+    let win_width = 230
   endif
+  let padding_top = win_height - len(banner) - len(logo) - 7
+  let padding_left = repeat(" ", win_width - 50)
   while padding_top > 0
     call add(result, ["", action])
     let padding_top = padding_top - 1
