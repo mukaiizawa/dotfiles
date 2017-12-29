@@ -17,7 +17,7 @@ function! GetStartUpList()
   let logo =  readfile(logo_path)
   let win_height = &lines
   let win_width = &columns
-  if has('gui')
+  if has('win32') || has('win64')
     let win_height = 55
     let win_width = 230
   endif
