@@ -1,16 +1,36 @@
 function! GetStartUpList()
-  let path = $HOME . '/dotfiles/startup.logo'
-  let action =  "Unite neomru/file -hide-source-names -no-split -no-wrap"
-  if !filereadable(path)
-    call PrintError(printf('GetStartUpList: "%s" is not found.', path))
-    return []
+  let banner_path = $HOME . '/dotfiles/startup.banner'
+  let logo_path = $HOME . '/dotfiles/startup.logo'
+  let action = "Unite neomru/file -hide-source-names -no-split -no-wrap "
+        \ . "-start-insert"
+  let result = []
+  if !filereadable(banner_path) || !filereadable(logo_path)
+    call PrintError(printf('GetStartUpList: logo not found.'))
+    return result
   endif
-  let result = repeat([[" ", action]], &lines)
-  let padding = repeat(" ", &columns)
-  let lines = readfile(path)
-  for line in lines
-    call add(result, [padding . line, action])
+
+  let banner =  readfile(banner_path)
+  for line in banner
+    call add(result, [line, action])
   endfor
+
+  let logo =  readfile(logo_path)
+  let win_height = &lines
+  let win_width = &columns
+  if has('gui')
+    let win_height = 55
+    let win_width = 230
+  endif
+  let padding_top = win_height - len(banner) - len(logo) - 7
+  let padding_left = repeat(" ", win_width - 50)
+  while padding_top > 0
+    call add(result, ["", action])
+    let padding_top = padding_top - 1
+  endwhile
+  for line in logo
+    call add(result, [padding_left . line, action])
+  endfor
+
   return result
 endfunction
 
@@ -96,7 +116,8 @@ let g:unite_source_menu_menus.StartupLogo = {
 
 function! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
-    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap
+    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap 
+          \ -no-start-insert
   endif
 endfunction
 

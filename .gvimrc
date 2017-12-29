@@ -26,8 +26,6 @@ if has("win32")
   au GUIEnter * simalt ~x
   set guifont=MS_Gothic:h12:cSHIFTJIS 
   set linespace=1
-  set columns=80
-  set lines=25
   set cmdheight=2
   set ambiwidth=double
 elseif has("mac")

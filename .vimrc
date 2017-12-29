@@ -10,11 +10,11 @@ if !has('gui_running')
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/unite.vim', { 'branch': 'prompt' }
+Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/neomru.vim'
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
@@ -160,7 +160,7 @@ call unite#custom#profile('default', 'context', {
       \   'marked_icon' : '@',
       \   'candidate_icon' : '*',
       \   'direction' : 'topleft',
-      \   'cursor_line_time' : 0.0,
+      \   'cursor_line_time' : '0.0',
       \   'cursor_line_highlight' : 'Visual',
       \ })
 call unite#custom_default_action('directory', 'vimfiler')
@@ -184,11 +184,11 @@ let g:vimfiler_readonly_file_icon = 'X'
 let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
 call vimfiler#custom#profile('default', 'context', {
-      \ 'safe' : 0,
-      \ 'auto-expand' : 1,
-      \ 'auto-cd' : 1,
-      \ 'find' : 1,
-      \ 'status' : 1,
+      \  'safe' : 0,
+      \  'auto-expand' : 1,
+      \  'auto-cd' : 1,
+      \  'find' : 1,
+      \  'status' : 1,
       \ })
 
 " quickrun
