@@ -8,16 +8,14 @@ function! GetStartUpList()
     call PrintError(printf('GetStartUpList: logo not found.'))
     return result
   endif
-
   let banner =  readfile(banner_path)
   for line in banner
     call add(result, [line, action])
   endfor
-
   let logo =  readfile(logo_path)
   let win_height = &lines
   let win_width = &columns
-  if has('gui')
+  if has('win32') || has ('win64')
     let win_height = 55
     let win_width = 230
   endif
@@ -30,7 +28,6 @@ function! GetStartUpList()
   for line in logo
     call add(result, [padding_left . line, action])
   endfor
-
   return result
 endfunction
 

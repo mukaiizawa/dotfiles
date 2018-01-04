@@ -22,11 +22,10 @@ set mouse-=a
 set nomousefocus
 set mousehide
 
-if has("win32")
+if has('win32') || has ('win64')
   au GUIEnter * simalt ~x
   set guifont=MS_Gothic:h12:cSHIFTJIS 
   set linespace=1
-  set cmdheight=2
   set ambiwidth=double
 elseif has("mac")
   set guifont=Monaco:h14
