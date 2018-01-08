@@ -20,4 +20,5 @@
 (make-module-pathname "regex")
 (make-module-pathname "stdlib")
 (make-module-pathname "test-utils")
+(make-module-pathname "vba")
 (make-module-pathname "xml-manager")
