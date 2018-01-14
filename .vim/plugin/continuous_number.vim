@@ -1,1 +1,9 @@
-command! -count -nargs=1 ContinuousNumber let c = col('.')| for n in range(1, <count>?<count>-line('.'):1) |exec 'normal! j' . n . <q-args>| call cursor('.', c)|endfor
+function! ContinuousNumber(count)
+  let c = col('.')
+  for n in range(1, a:count? a:count - line('.'): 1)
+    exec 'normal! j' . n . ''
+    call cursor('.', c)
+  endfor
+endfunction
+
+command! -count ContinuousNumber call ContinuousNumber(<count>)
