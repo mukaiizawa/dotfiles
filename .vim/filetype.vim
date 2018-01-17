@@ -5,4 +5,5 @@ endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.p setfiletype paren
   au! BufRead,BufNewFile *.m setfiletype mulk
+  au! BufRead,BufNewFile *.mod setfiletype modula2
 augroup END
