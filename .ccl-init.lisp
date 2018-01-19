@@ -17,6 +17,7 @@
 (make-module-pathname "graph-utils")
 (make-module-pathname "ltk")
 (make-module-pathname "math")
+(make-module-pathname "pict")
 (make-module-pathname "regex")
 (make-module-pathname "stdlib")
 (make-module-pathname "test-utils")
