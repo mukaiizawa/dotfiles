@@ -1,6 +1,5 @@
 DDL	~/dotfiles/dict/sql/ddl.md
 DML	~/dotfiles/dict/sql/dml.md
 Genaration	~/dotfiles/dict/sql/generation.md
-Oracle IMPDP	~/dotfiles/dict/sql/impdp.md
-Oracle START SHUTDOWN	~/dotfiles/dict/sql/start_shutdown.md
 Table design pattern	~/dotfiles/dict/sql/table_design.md
+Tutorial Oracle	~/dotfiles/dict/sql/tutorial_oracle.md
