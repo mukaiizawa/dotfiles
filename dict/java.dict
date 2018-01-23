@@ -21,6 +21,7 @@ Snippets StringUtil	~/dotfiles/dict/java/StringUtil.java
 Snippets Util	~/dotfiles/dict/java/Util.java
 Snippets point class	~/dotfiles/dict/java/Point.java
 Snippets time measurement 	~/dotfiles/dict/java/TimeMeasurement.java
+Template	~/dotfiles/dict/java/Template.java
 Tutorial Generic	~/dotfiles/dict/java/Generic.md
 Tutorial JPA	~/dotfiles/dict/java/JPA.md
 Tutorial date	~/dotfiles/dict/java/date.md
