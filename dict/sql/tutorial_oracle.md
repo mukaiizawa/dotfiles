@@ -44,6 +44,22 @@ Oracleインストール後にインスタンスの作成を行う必要があ�
 CASCADE句を付けるとユーザに紐づくオブジェクトも同時に削除される。
     DROP USER <user_name> CASCADE;
 
+## パスワードの更新
+    ALTER USER SCOTT IDENTIFIED BY <password>;
+
+## 管理ユーザのパスワード更新
+管理ユーザのパスワード更新はOS認証によるログインを行う必要がある。
+    SET ORACLE_SID=REYDB
+    SQLPLUS / AS SYSDBA
+    SQL> ALTER USER SYSTEM IDENTIFIED BY <password>;
+    SQL> ALTER USER SYS IDENTIFIED BY <password>;
+
+## パスワードの無期限化
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+
+## パスワードの大文字小文字の無視
+ALTER SYSTEM SET SEC_CASE_SENSITIVE_LOGON=FALSE SCOPE=BOTH;
+
 # テーブル
 ## オブジェクト管理テーブル
 OracleにはOracleのオブジェクトを管理するテーブルがある。
