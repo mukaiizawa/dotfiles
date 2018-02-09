@@ -148,9 +148,12 @@ dir内のPathがディレクトリを表す場合でも再帰的ではない。
     NOFOLLOW_LINKS
 シンボリックリンクを辿らない。
 
-## CopyOption
+## Interface CopyOption
     REPLACE_EXISTING
 ファイルが存在する場合は、
 ファイルが空でないディレクトリでなければ置換する。
 ファイルが存在し、シンボリックリンクである場合は、
 リンクのターゲットではなくシンボリックリンク自身が置換される。
+
+fromからtoへコピーする例を示す。
+    Files.copy(from, to, StandardCopyOption.REPLACE_EXISTING);
