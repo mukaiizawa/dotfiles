@@ -125,23 +125,23 @@ Oracle Data Pumpを使用する作業項目は次の通り。
   - ディレクトリオブジェクトの権限付与
   - invalidオブジェクトを再コンパイルする
 
-説明の都合上、以降は次のユーザが存在することにする。
-    user_name: TEST_USER
-    password: PASSWORD
-
 ## ディレクトリオブジェクトの作成と権限の付与
 Oracle Data Pumpを使用するにはディレクトリオブジェクトの作成と権限の付与が必要になる。
 
-'DATA_PUMP_DIR'というディレクトリオブジェクトを作成しTEST_USERに権限を付与する例を示す。
-    $ SQLPlus system/*****
-    SQL> CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS 'C:/app/oracle/admin/dpdump';
-    SQL> GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO TEST_USER;
+'DATA_PUMP_DIR'というディレクトリオブジェクトを作成してユーザ<user>に権限を付与する例を示す。
+    CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS 'C:\app\oracle\admin\dpdump';
+    GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO <user>;
+
+次のSQLで定義されているディレクトリオブジェクトを確認できる。
+    SELECT DIRECTORY_NAME, DIRECTORY_PATH FROM ALL_DIRECTORIES;
 
 ## データのエクスポート
-    expdp TEST_USER/PASSWORD@SID DIRECTORY=DATA_PUMP_DIR TABLES=EMP
+あるスキーマをエクスポートする例を示す。
+    expdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema>
 
 ## データのインポート
-    impdp TEST_USER/PASSWORD@SID DIRECTORY=DATA_PUMP_DIR DUMPFILE=TEST.DMP TABLES=EMP
+先にエクスポートしたダンプファイルをインポートする例を示す。
+    impdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema> NOLOGFILE=y
 
 ## オブジェクトのリビルド
 次のSQLで無効なオブジェクトがないか確認する。
@@ -158,16 +158,17 @@ Oracle Data Pumpを使用するにはディレクトリオブジェクトの作�
     -------------------------------------------------------------
     REMAP_SCHEMA     export時と異なるスキーマにimportする
                      例) FROMスキーマからTOスキーマに変更する場合
-                     impdb TEST_USER/PASSWORD DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXP.DMP REMAP_SCHEMA=FROM:TO
+                     REMAP_SCHEMA=FROM:TO
     REMAP_TABLESPACE export時と異なる表領域にimportする
                      例) FROM表領域のオブジェクトをTO表領域にimportする場合
-                     impdp TEST_USER/PASSWORD DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXP.DMP REMAP_TABLESPACE=FROM:TO
+                     REMAP_TABLESPACE=FROM:TO
 
 ## 主要なオプション
 主要なオプションを示す。
 
     オプション  意味
     -------------------------------------------------------------
+    DUMPFILE    <data_pump_dir>:<file_name>
     TABLES      テーブル名を指定
     SCHEMAS     スキーマ名を指定
     TABLESPACES 表領域名を指定
