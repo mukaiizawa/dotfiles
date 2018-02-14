@@ -90,11 +90,90 @@ OracleにはOracleのオブジェクトを管理するテーブルがある。
     NULLABLE      列のNULL制約の有無。NULL制約がある場合はNそうでなければY
     DATA_DEFAULT  列のデフォルト値 
 
-# impdb
-impdbはデータベースにテーブルやスキーマなどをインポートするためのツールである。
+# SQLPlus
+SQLPlusはクライアントからサーバに接続するツールである。
 
-## 書式
-    IMPDP <USER>/<PASS>@<SID> DUMPFILE=<DMPFILE> LOGFILE=<LOGFILE> SCHEMAS=<SCHEMA> [REMAP_TABLESPACE=<FROM>:<TO>]*
+## 接続設定
+クライアントから接続するときに識別子は'tnsnames.ora'で管理されている。
+    {oracle_home}/product/{version}/client_1/network/admin/tnsnames.ora
 
-## 注意事項
-従来のimpとは互換性がない。別のDBから表領域を指定し直してインポート可能。
+サンプルファイルがsampleの下にある。
+
+Oracle Net Configuration Assistantを用いて設定すると次のような記述が追加される。
+    <alias> =
+      (DESCRIPTION =
+        (ADDRESS_LIST =
+          (ADDRESS = (PROTOCOL = TCP) (HOST = 192.xxx.xxx.xxx) (PORT = 1521)))
+        (CONNECT_DATA = (SERVICE_NAME = <oracle_sid>)))
+    <alias> -- SQLPlusで使用するエイリアス
+    <oracle_sid> -- オラクルのSID
+
+# Oracle Data Pump
+Oracle 10gから導入されたテクノロジー。
+
+論理バックアップの取得やデータベース間のデータ移動を可能にする。
+
+Oracle Data Pumpを使用する作業項目は次の通り。
+- 移行元
+  - ダンプファイルをエクスポートするフォルダを作成
+  - ディレクトリオブジェクトの作成
+  - ディレクトリオブジェクトの権限付与
+  - オブジェクトのエクスポート
+- 移行先
+  - ダンプファイルをインポートするフォルダを作成
+  - ディレクトリオブジェクトの作成
+  - ディレクトリオブジェクトの権限付与
+  - invalidオブジェクトを再コンパイルする
+
+説明の都合上、以降は次のユーザが存在することにする。
+    user_name: TEST_USER
+    password: PASSWORD
+
+## ディレクトリオブジェクトの作成と権限の付与
+Oracle Data Pumpを使用するにはディレクトリオブジェクトの作成と権限の付与が必要になる。
+
+'DATA_PUMP_DIR'というディレクトリオブジェクトを作成しTEST_USERに権限を付与する例を示す。
+    $ SQLPlus system/*****
+    SQL> CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS 'C:/app/oracle/admin/dpdump';
+    SQL> GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO TEST_USER;
+
+## データのエクスポート
+    expdp TEST_USER/PASSWORD@SID DIRECTORY=DATA_PUMP_DIR TABLES=EMP
+
+## データのインポート
+    impdp TEST_USER/PASSWORD@SID DIRECTORY=DATA_PUMP_DIR DUMPFILE=TEST.DMP TABLES=EMP
+
+## オブジェクトのリビルド
+次のSQLで無効なオブジェクトがないか確認する。
+    SELECT OWNER, OBJECT_TYPE, STATUS, OBJECT_NAME FROM ALL_OBJECTS WHERE STATUS='INVALID';
+
+無効なオブジェクトがある場合は次のファンクションを実行する。
+    $ SQLPlus / as sysdba
+    SQL> CALL UTL_RECOMP.RECOMP_SERIAL('NEW_ONE');
+
+### インポート先の変更
+インポート時にエクスポート時の環境と異なる場合に次のオプションを指定する。
+
+    オプション       意味
+    -------------------------------------------------------------
+    REMAP_SCHEMA     export時と異なるスキーマにimportする
+                     例) FROMスキーマからTOスキーマに変更する場合
+                     impdb TEST_USER/PASSWORD DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXP.DMP REMAP_SCHEMA=FROM:TO
+    REMAP_TABLESPACE export時と異なる表領域にimportする
+                     例) FROM表領域のオブジェクトをTO表領域にimportする場合
+                     impdp TEST_USER/PASSWORD DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXP.DMP REMAP_TABLESPACE=FROM:TO
+
+## 主要なオプション
+主要なオプションを示す。
+
+    オプション  意味
+    -------------------------------------------------------------
+    TABLES      テーブル名を指定
+    SCHEMAS     スキーマ名を指定
+    TABLESPACES 表領域名を指定
+    FULL        FULL=Y  でデータベース全体を指定
+    CONTENT     CONTENT=data_only 表のデータのみ
+                CONTENT=metadata_only 表の定義のみ
+                CONTENT=all(デフォルト) 表のデータと定義の両方
+    NOLOGFILE   NOLOGFILE=y で、ログファイルの出力を行わない
+    EXCLUDE     一部のオブジェクトを除く
