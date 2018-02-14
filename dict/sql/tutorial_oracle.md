@@ -42,7 +42,7 @@ Oracleインストール後にインスタンスの作成を行う必要があ�
 
 ## ユーザの削除
 CASCADE句を付けるとユーザに紐づくオブジェクトも同時に削除される。
-    DROP USER <user_name> CASCADE;
+    DROP USER <user_name> [CASCADE];
 
 ## パスワード
 ### パスワードの更新
@@ -50,7 +50,7 @@ CASCADE句を付けるとユーザに紐づくオブジェクトも同時に削�
 
 ### 管理ユーザのパスワード更新
 管理ユーザのパスワード更新はOS認証によるログインを行う必要がある。
-    SET ORACLE_SID=REYDB
+    SET ORACLE_SID=<oracle_sid>
     SQLPLUS / AS SYSDBA
     SQL> ALTER USER SYSTEM IDENTIFIED BY <password>;
     SQL> ALTER USER SYS IDENTIFIED BY <password>;
@@ -63,7 +63,7 @@ ALTER SYSTEM SET SEC_CASE_SENSITIVE_LOGON=FALSE SCOPE=BOTH;
 
 ## ユーザのロックの確認
 次のSQLでユーザがロックされているか確認ができる。
-    SELECT USERNAME, ACCOUNT_STATUS, FROM DBA_USERS WHERE USERNAME = ' <user_name>';
+    SELECT USERNAME, ACCOUNT_STATUS, FROM DBA_USERS WHERE USERNAME = ' <user_name> ';
 
 ## ユーザのロックの解除
     ALTER USER <user_name> ACCOUNT UNLOCK;
@@ -94,10 +94,10 @@ OracleにはOracleのオブジェクトを管理するテーブルがある。
 SQLPlusはクライアントからサーバに接続するツールである。
 
 ## 接続設定
-クライアントから接続するときに識別子は'tnsnames.ora'で管理されている。
+クライアントから接続するときの識別子は'tnsnames.ora'で管理されている。
     {oracle_home}/product/{version}/client_1/network/admin/tnsnames.ora
 
-サンプルファイルがsampleの下にある。
+サンプルファイルが同ディレクトリ内のsampleディレクトリ内にある。
 
 Oracle Net Configuration Assistantを用いて設定すると次のような記述が追加される。
     <alias> =
