@@ -2,19 +2,22 @@ DML
 
 # 概要
 データ操作言語(DML)についてまとめる。
-ここで述べる言語の書式は不完全で、本質が分かりやすくするための誤りも含まれる。
+
+ただし、ここで述べる言語の書式は使用頻度の高いものに限る。
 
 # SELECT
 ## 書式
-    query ::=
-        SELECT [{ DISTINCT | ALL }] {* | c_selection [, c_selection] ...}
-        FROM {( subquery ) | [schema .] {table | view}} [t_alias]
-        [WHERE condition]
-        [GROUP BY column [, column] ... [HAVING condition]]
-        [ORDER  BY order_by_clause [, order_by_clause] ...]
-        [{INTERSECT | UNION [ALL] | MINUS} query] ;
-    c_selection ::= [schema .] {table | view | t_alias} . column [AS c_alias]
-    order_by_clause ::= {column | position} [ASC | DESC]
+    <query> ::=
+        SELECT [ { DISTINCT | ALL } ] { * | <c_selection> [, <c_selection>] ...}
+        FROM { ( <subquery> ) | [<schema> .] { <table> | <view> } } [<t_alias>]
+        [WHERE <condition>]
+        [GROUP BY <column> [, <column>] ... [HAVING <condition>]]
+        [ORDER  BY <order_by_clause> [, <order_by_clause>] ...]
+        [{ INTERSECT | UNION [ALL] | MINUS } query] ;
+    <c_selection> ::=
+        [<schema> .] { <table> | <view> | <t_alias> } . <column> [AS <c_alias>]
+    <order_by_clause> ::= { <column> | <position> } [ ASC | DESC ]
+
 以下に、使用している字句の意味を示す。
     引数      定義
     ----------------------------------------------------------------------
@@ -41,16 +44,17 @@ DML
 
 # UPDATE
 ## 書式
-    query ::=
-        UPDATE [schema .] { table | view} [ alias ]
-        SET update_clauses
+    <query> ::=
+        UPDATE [<schema> .] { <table> | <view> } [ <t_alias> ]
+        SET <update_clauses>
         [WHERE condition] ;
-    c_selection ::= column = { expr | subquery }
-    update_clauses ::= update_clause [, update_clause] ... 
-    update_clause ::= {
-        column = {expr | ( subquery )}
-        | ( column [, column] ...) = ( subquery )
+    <c_selection> ::= <column> = { <expr> | <subquery> }
+    <update_clauses> ::= <update_clause> [, <update_clause>] ... 
+    <update_clause> ::= {
+        <column> = { <expr> | ( <subquery> ) }
+        | ( <column> [, <column>] ...) = ( <subquery> )
     }
+
 以下に、使用している字句の意味を示す。
     引数      定義
     ----------------------------------------
@@ -60,9 +64,10 @@ DML
 
 # DELETE
 ## 書式
-    query ::=
-        DELETE FROM [schema .] {table | view}
+    <query> ::=
+        DELETE FROM [<schema> .] { <table> | <view> }
         [WHERE condition] ;
+
 以下に、使用している字句の意味を示す。
     引数        定義
     --------------------------------------
@@ -72,9 +77,13 @@ DML
 
 # INSERT
 ## 書式
-    query ::=
-        INSERT INTO [schema .] {table | view } [( column [, column] ... )]
-        VALUES {( expr [, expr] ...) | subquery};
+    <query> ::= INSERT INTO <t_expr_clause> { <values_clause> | <subquery> } ;
+    <t_expr_clause> ::= {
+        [<schema> .] { <table> | <view> }
+        | ( <subquery> )
+    }
+    <values_clause> ::= VALUES ( <expr> [, <expr>] ... )
+
 以下に、使用している字句の意味を示す。
     引数        定義
     --------------------------------------
