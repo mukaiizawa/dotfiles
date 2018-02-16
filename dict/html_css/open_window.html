@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <a href='https://www.google.co.jp/'
+            target='x'
+            onclick='openX(); return false;'>
+            google.com
+        </a>
+    </body>
+    <script>
+
+    var window_ref = null;
+
+    function openX() {
+        if (window_ref == null || window_ref.closed) {
+            window_ref = window.open(
+                    'https://www.google.co.jp/'
+                    , 'BanndedWords'
+                    , 'resizable=yes,scrollbars=yes,status=yes');
+        } else {
+            window_ref.focus();
+        }
+    }
+
+    </script>
+</html>
