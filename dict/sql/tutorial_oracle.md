@@ -18,6 +18,28 @@ Oracleインストール後にインスタンスの作成を行う必要があ�
 
 インスタンスの作成はこの文書では扱わない。
 
+# PFILE/SPFILE
+Oracleには初期化パラメータを指定するファイルが二種類存在し、それぞれPFILE(パラメーターファイル)とSPFILE(サーバパラメーターファイル)という。
+
+## PFILE/SPFILEの確認
+次のSQLを実行するとSPFILEが使用されている場合は、結果にその場所が表示される。
+    SHOW PARAMETER PFILE
+    SHOW PARAMETER SPFILE
+
+## PFILE/SPFILEの作成
+PFILE(SPFILE)を作成するには次の方法がある。
+- エディタで編集(PFILE)
+- SPFILE(PFILE)から作成
+- メモリから作成
+
+PFILE(SPFILE)を作成するには次の書式を用いる。
+    CREATE <dest> = ' <dest_path> ' FROM { MEMORY | <src> } = ' <src_path> ' };
+    <dest> ::= { PFILE | SPFILE }
+    <src> ::= { SPFILE | PFILE }
+    <dest_path> -- 作成するPFILE(SPFILE)の場所
+    <src_path> -- 作成元のSPFILE(PFILE)の場所
+    ただし、<dest>と<src>が同一であってはならない。
+
 # 表領域
 ## 表領域の作成
 表領域を作成する例を示す。
@@ -46,7 +68,7 @@ CASCADE句を付けるとユーザに紐づくオブジェクトも同時に削�
 
 ## パスワード
 ### パスワードの更新
-    ALTER USER SCOTT IDENTIFIED BY <password>;
+    ALTER USER <user> IDENTIFIED BY <password>;
 
 ### 管理ユーザのパスワード更新
 管理ユーザのパスワード更新はOS認証によるログインを行う必要がある。
@@ -162,6 +184,8 @@ Oracle Data Pumpを使用するにはディレクトリオブジェクトの作�
     REMAP_TABLESPACE export時と異なる表領域にimportする
                      例) FROM表領域のオブジェクトをTO表領域にimportする場合
                      REMAP_TABLESPACE=FROM:TO
+                     表領域を複数マップする場合は次の書式となる。
+                     REMAP_TABLESPACE=(FROM:TO,FROM2:TO2, ... ,FROMN:TON)
 
 ## 主要なオプション
 主要なオプションを示す。
