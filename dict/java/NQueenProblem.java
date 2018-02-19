@@ -34,8 +34,7 @@ public class NQueenProblem {
     if (row == BOARD_SIZE) printBoard();
     else {
       for (int col = 0; col < BOARD_SIZE; col++) {
-        if (canPut(row, col)) {
-          board[row][col] = true;
+        if (board[row][col] = canPut(row, col)) {
           tryPut(row + 1);
           board[row][col] = false;
         }
