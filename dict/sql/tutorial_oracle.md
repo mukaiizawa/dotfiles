@@ -112,6 +112,15 @@ OracleにはOracleのオブジェクトを管理するテーブルがある。
     NULLABLE      列のNULL制約の有無。NULL制約がある場合はNそうでなければY
     DATA_DEFAULT  列のデフォルト値 
 
+## テーブル定義の更新
+テーブルの列の追加、更新はALTER文を使用する。
+    <query> ::= ALTER TABLE <table_name> { ADD | MODIFY } (
+                    <expr>
+                    [, <expr>] ...
+                );
+    <expr> ::= <column_name> <type> [<constraints>]
+    <type> :;= VARCHAR2(xx) | NUMBER(xx) | etc...
+
 # SQLPlus
 SQLPlusはクライアントからサーバに接続するツールである。
 
