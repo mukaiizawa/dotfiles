@@ -90,6 +90,7 @@ nnoremap <Del> <NOP>
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
+nnoremap <F6> :<C-u>source $MYGVIMRC<CR>
 nnoremap <Insert> <NOP>
 nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
