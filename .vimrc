@@ -196,49 +196,53 @@ call vimfiler#custom#profile('default', 'context', {
 " quickrun
 let g:quickrun_no_default_key_mappings = 1
 let g:quickrun_config = {
-      \  '_' : {
-      \    'split': 'vertical',
-      \    'outputter/buffer/close_on_empty' :1
-      \  },
-      \  'c' : {
-      \    'hook/time/enable': 1,
-      \    'type': executable('clang')? 'c/clang':
-      \            executable('gcc')? 'c/gcc': '',
-      \  },
-      \  'lisp' : {
-      \    'type': executable('lx86cl64')? 'lisp/ccll':
-      \            executable('wx86cl64')? 'lisp/cclw':
-      \            executable('clisp')? 'lisp/clisp':
-      \            executable('sbcl')? 'lisp/sbcl': '',
-      \    'hook/time/enable': 1,
-      \  },
-      \  'lisp/sbcl' : {
-      \   'command' : 'sbcl',
-      \   'cmdopt' : '--script',
+      \ '_' : {
+      \   'split': 'vertical',
+      \   'outputter/buffer/close_on_empty' :1
       \ },
-      \  'lisp/ccll' : {
+      \ 'c' : {
+      \   'hook/time/enable': 1,
+      \   'type': executable('clang')? 'c/clang':
+      \           executable('gcc')? 'c/gcc': '',
+      \ },
+      \ 'java' : {
+      \   'exec' : ['javac -J-Dfile.encoding=UTF8 %o %s'
+      \              , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'],
+      \   'hook/time/enable': 1,
+      \ },
+      \ 'lisp' : {
+      \   'type': executable('lx86cl64')? 'lisp/ccll':
+      \           executable('wx86cl64')? 'lisp/cclw':
+      \           executable('clisp')? 'lisp/clisp':
+      \           executable('sbcl')? 'lisp/sbcl': '',
+      \   'hook/time/enable': 1,
+      \ },
+      \ 'lisp/sbcl' : {
+      \  'command' : 'sbcl',
+      \  'cmdopt' : '--script',
+      \ },
+      \ 'lisp/ccll' : {
       \   'command' : 'lx86cl64',
       \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
       \ },
-      \  'lisp/cclw' : {
+      \ 'lisp/cclw' : {
       \   'command' : 'wx86cl64',
       \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
       \ },
-      \  'lisp/clisp': {
+      \ 'lisp/clisp': {
       \   'command': 'clisp',
       \ },
-      \  'java' : {
-      \    'exec' : ['javac -J-Dfile.encoding=UTF8 %o %s'
-      \               , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'],
-      \    'hook/time/enable': 1,
-      \  },
-      \  'python' : {
-      \    'type' : executable('python3')? 'python/python3': 'python/python2',
-      \  },
-      \  'python/python3': {
-      \   'command': 'python3',
+      \ 'paren' : {
+      \   'command': 'paren',
+      \   'exec': '%c %s',
       \ },
-      \  'python/python2': {
+      \ 'python' : {
+      \   'type' : executable('python3')? 'python/python3': 'python/python2',
+      \ },
+      \ 'python/python3': {
+      \  'command': 'python3',
+      \ },
+      \ 'python/python2': {
       \   'command': 'python',
       \ },
       \}
