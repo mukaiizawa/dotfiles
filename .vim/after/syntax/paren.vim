@@ -46,7 +46,7 @@ hi def link ParenBlockComment Comment
 hi def link ParenDoc Special
 hi def link ParenString String
 hi def link ParenNumber Number
-hi def link ParenVariable Pmenu
+hi def link ParenVariable Identifier
 hi def link ParenGlobal Identifier
 hi def link ParenBuiltin Statement
 hi def link ParenConstant Constant
