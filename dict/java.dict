@@ -7,7 +7,8 @@ Class HashMap	~/dotfiles/dict/java/HashMap.md
 Class Math	~/dotfiles/dict/java/Math.md
 Class Optional	~/dotfiles/dict/java/Optional.md
 Class String	~/dotfiles/dict/java/String.md
-Game NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
+Algorithm NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
+Algorithm QuickSort	~/dotfiles/dict/java/QuickSort.java
 IDE Eclipse	~/dotfiles/dict/java/eclipse.md
 Interface Path	~/dotfiles/dict/java/Path.md
 Interface Stream	~/dotfiles/dict/java/Stream.md

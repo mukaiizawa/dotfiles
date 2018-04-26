@@ -1,7 +1,6 @@
 /*
  * n queen problem
  */
-
 public class NQueenProblem {
 
   private static final int BOARD_SIZE = 8;
