@@ -7,6 +7,6 @@ Library string.h	~/dotfiles/dict/c/string.h.md
 Snippets cp	~/dotfiles/dict/c/cp.c
 Snippets echo	~/dotfiles/dict/c/echo.c
 Snippets wc	~/dotfiles/dict/c/wc.c
-Template	~/dotfiles/dict/c/template.c
+Template function pointer	~/dotfiles/dict/c/fpointer.c
 Tutorial C	~/dotfiles/dict/c/tutorial.md
 Tutorial gdb	~/dotfiles/dict/c/gdb.md
