@@ -51,6 +51,11 @@ reversedによりソートの逆順を指定できる。
     stream
       .sorted(Comparator.comparing(x -> x.getStr().length()).reversed())
       .collect(Collectors.toList());
+### null値の優先度
+nullsFirst, nullsLastにより、null値が含まれる場合の優先度を指定できる。
+    stream
+      .sorted(Comparator.nullsFirst(Comparator.comparing(x -> x.getStr().length())))
+      .collect(Collectors.toList());
 ### ソート条件の追加
 thenComparingによりソート条件を追加できる。
     stream
