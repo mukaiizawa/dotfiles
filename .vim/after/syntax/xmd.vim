@@ -14,8 +14,10 @@ syn match XMDTitle "^#\+\ .*$" contains=XMDDelim
 
 hi def link XMDCode Function
 hi def link XMDDelim Delimiter
+hi def link XMDList Structure
 hi def link XMDQuote Comment
 hi def link XMDTableSep Statement
 hi def link XMDTitle title
+
 
 let b:current_syntax = "xmd"
