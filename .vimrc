@@ -21,7 +21,6 @@ Plug 'tyru/open-browser.vim'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'Yggdroot/indentLine'
-Plug 'kannokanno/previm'
 call plug#end()
 filetype plugin indent on
 syntax enable
@@ -244,6 +243,9 @@ let g:quickrun_config = {
       \ },
       \ 'python/python2': {
       \   'command': 'python',
+      \ },
+      \ 'xmd': {
+      \   'command': 'xmdrd',
       \ },
       \}
 
