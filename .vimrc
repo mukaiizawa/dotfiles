@@ -231,9 +231,6 @@ let g:quickrun_config = {
       \ 'lisp/clisp': {
       \   'command': 'clisp',
       \ },
-      \ 'markdown' : {
-      \   'command': 'xmdrd',
-      \ },
       \ 'paren' : {
       \   'command': 'paren',
       \   'exec': '%c -f%s',
