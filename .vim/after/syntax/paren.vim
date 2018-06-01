@@ -27,18 +27,21 @@ syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
 syn region ParenBlockComment start='"""' end='"""' contains=ParenTodo,ParenDoc
-syn match ParenVariable "\<\k\>"
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
-syn match ParenGlobal "\<$\k*\>"
+syn match ParenGlobal "\<\$\k*\>"
+syn keyword ParenNil nil
+syn keyword ParenBoolean true false
 syn match ParenKeyword "\<:\k*\>"
 syn match ParenDoc "@\(note\|param\|return\|throws\)" contained
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
-" builtin function/macro
-syn keyword ParenBuiltin class method function fn if let ? quote <-
-" numeric
+syn keyword ParenBuiltin quote macro lambda <- if
+syn keyword ParenBuiltin function
+syn keyword ParenBuiltin nil? same? 
+syn keyword ParenBuiltin list reduce append
 syn keyword ParenBuiltin + - * / = mod < > <= >=
+
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
 
 hi def link ParenLineComment Comment
@@ -46,10 +49,11 @@ hi def link ParenBlockComment Comment
 hi def link ParenDoc Special
 hi def link ParenString String
 hi def link ParenNumber Number
-hi def link ParenVariable Identifier
 hi def link ParenGlobal Identifier
+hi def link ParenBoolean Boolean
 hi def link ParenBuiltin Statement
 hi def link ParenConstant Constant
+hi def link ParenNil Identifier
 hi def link ParenKeyword Identifier
 hi def link ParenTodo ToDo
 hi def link ParenError Error
