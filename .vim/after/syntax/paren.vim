@@ -38,8 +38,8 @@ syn match ParenError ")"
 
 syn keyword ParenBuiltin quote macro lambda <- if
 syn keyword ParenBuiltin function
-syn keyword ParenBuiltin nil? same? 
-syn keyword ParenBuiltin list reduce append
+syn keyword ParenBuiltin nil? same? not and or
+syn keyword ParenBuiltin cons list map reduce append
 syn keyword ParenBuiltin + - * / = mod < > <= >=
 
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
