@@ -36,7 +36,7 @@ syn match ParenDoc "@\(note\|param\|return\|throws\)" contained
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
-syn keyword ParenBuiltin quote macro lambda <- if begin
+syn keyword ParenBuiltin quote backquote comma splice macro lambda <- if begin
 syn keyword ParenBuiltin function begin-if
 syn keyword ParenBuiltin nil? same? atom? cons? list? not and or
 syn keyword ParenBuiltin cons list nth map reduce append
