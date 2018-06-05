@@ -26,17 +26,17 @@ syn region ParenTilde matchgroup=PreProc start="\~(" end=")" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
-syn region ParenBlockComment start='"""' end='"""' contains=ParenTodo,ParenDoc
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
 syn match ParenGlobal "\<\$\k*\>"
 syn keyword ParenNil nil
 syn keyword ParenBoolean true false
 syn match ParenKeyword "\<:\k*\>"
-syn match ParenDoc "@\(note\|param\|return\|throws\)" contained
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
-syn keyword ParenBuiltin quote backquote comma splice macro lambda <- if begin
+syn keyword ParenBuiltin quote backquote unquote splice macro lambda <- if
+syn keyword ParenBuiltin begin
+
 syn keyword ParenBuiltin function begin-if
 syn keyword ParenBuiltin nil? same? atom? cons? list? not and or
 syn keyword ParenBuiltin cons list nth map reduce append
@@ -46,7 +46,6 @@ syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
 
 hi def link ParenLineComment Comment
 hi def link ParenBlockComment Comment
-hi def link ParenDoc Special
 hi def link ParenString String
 hi def link ParenNumber Number
 hi def link ParenGlobal Identifier
