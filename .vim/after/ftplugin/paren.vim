@@ -12,3 +12,4 @@ setlocal lispwords+=if
 setlocal lispwords+=macro
 setlocal lispwords+=lambda
 setlocal lispwords+=function
+setlocal lispwords+=begin-if

@@ -36,10 +36,10 @@ syn match ParenDoc "@\(note\|param\|return\|throws\)" contained
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
-syn keyword ParenBuiltin quote macro lambda <- if
-syn keyword ParenBuiltin function
-syn keyword ParenBuiltin nil? same? not and or
-syn keyword ParenBuiltin cons list map reduce append
+syn keyword ParenBuiltin quote macro lambda <- if begin
+syn keyword ParenBuiltin function begin-if
+syn keyword ParenBuiltin nil? same? atom? cons? list? not and or
+syn keyword ParenBuiltin cons list nth map reduce append
 syn keyword ParenBuiltin + - * / = mod < > <= >=
 
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
