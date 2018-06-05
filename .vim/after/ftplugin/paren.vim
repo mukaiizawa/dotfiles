@@ -5,9 +5,10 @@ setlocal define=^\\s*(\\(macro\\|lambda\\)
 setlocal formatoptions-=t
 setlocal iskeyword+=+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
 setlocal commentstring=;%s
-setlocal comments^=:;;;,:;;,sr:#\|,mb:\|,ex:\|#
+setlocal comments=:;
 
 setlocal lispwords=let
+setlocal lispwords+=if
 setlocal lispwords+=macro
 setlocal lispwords+=lambda
 setlocal lispwords+=function
