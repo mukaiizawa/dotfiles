@@ -35,11 +35,14 @@ syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
 syn keyword ParenBuiltin quote backquote unquote splice macro lambda <- if
-syn keyword ParenBuiltin begin
-
+syn keyword ParenBuiltin begin let cond
 syn keyword ParenBuiltin function begin-if
+
 syn keyword ParenBuiltin nil? same? atom? cons? list? not and or
 syn keyword ParenBuiltin cons list nth map reduce append
+
+syn keyword ParenBuiltin ->list
+
 syn keyword ParenBuiltin + - * / = mod < > <= >=
 
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
