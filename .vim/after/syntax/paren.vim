@@ -28,9 +28,8 @@ syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
 syn match ParenGlobal "\<\$\k*\>"
-syn keyword ParenNil nil
-syn keyword ParenBoolean true false
 syn match ParenKeyword "\<:\k*\>"
+syn keyword ParenSymbol nil true
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
@@ -43,7 +42,7 @@ syn keyword ParenBuiltin cons list nth map reduce append
 
 syn keyword ParenBuiltin ->list
 
-syn keyword ParenBuiltin + - * / = mod < > <= >=
+syn keyword ParenBuiltin + - * / = mod < > <= >= negated
 
 syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
 
@@ -51,11 +50,9 @@ hi def link ParenLineComment Comment
 hi def link ParenBlockComment Comment
 hi def link ParenString String
 hi def link ParenNumber Number
-hi def link ParenGlobal Identifier
-hi def link ParenBoolean Boolean
+hi def link ParenSymbol Identifier
 hi def link ParenBuiltin Statement
 hi def link ParenConstant Constant
-hi def link ParenNil Identifier
 hi def link ParenKeyword Identifier
 hi def link ParenTodo ToDo
 hi def link ParenError Error
