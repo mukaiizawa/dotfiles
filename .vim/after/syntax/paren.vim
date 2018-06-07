@@ -36,15 +36,20 @@ syn match ParenError ")"
 syn keyword ParenBuiltin quote backquote unquote splice macro lambda <- if
 syn keyword ParenBuiltin begin let cond
 syn keyword ParenBuiltin function begin-if
+syn keyword ParenBuiltin type
 
-syn keyword ParenBuiltin nil? same? atom? cons? list? not and or
-syn keyword ParenBuiltin cons list nth map reduce append
+syn keyword ParenBuiltin nil? same? atom? cons? list? type? not and or
+syn keyword ParenBuiltin <-car <-cdr cons list nth map reduce append reverse
+
+syn keyword ParenBuiltin {} <-{} has-key?
+
+syn keyword ParenBuiltin remove remove-if
 
 syn keyword ParenBuiltin ->list
 
-syn keyword ParenBuiltin + - * / = mod < > <= >= negated
+syn keyword ParenBuiltin + ++ <-+ - -- <-- * / = mod < > <= >= negated
 
-syn match ParenBuiltin "\<c[ad]\{1,5}r\>"
+syn match ParenBuiltin "\<\(<-\)\?c[ad]\{1,4}r\>"
 
 hi def link ParenLineComment Comment
 hi def link ParenBlockComment Comment
