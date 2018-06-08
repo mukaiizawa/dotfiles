@@ -43,7 +43,7 @@ syn keyword ParenBuiltin <-car <-cdr cons list nth map reduce append reverse
 
 syn keyword ParenBuiltin {} <-{} has-key?
 
-syn keyword ParenBuiltin remove remove-if
+syn keyword ParenBuiltin find find-if remove remove-if
 
 syn keyword ParenBuiltin ->list
 
