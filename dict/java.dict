@@ -17,11 +17,12 @@ Snippets AheadReader	~/dotfiles/dict/java/AheadReader.java
 Snippets DateUtil	~/dotfiles/dict/java/DateUtil.java
 Snippets FileUtil	~/dotfiles/dict/java/FileUtil.java
 Snippets MailUtil	~/dotfiles/dict/java/MailUtil.java
+Snippets Point	~/dotfiles/dict/java/Point.java
 Snippets ResourceUtil	~/dotfiles/dict/java/ResourceUtil.java
 Snippets StringUtil	~/dotfiles/dict/java/StringUtil.java
+Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
 Snippets Util	~/dotfiles/dict/java/Util.java
-Snippets point class	~/dotfiles/dict/java/Point.java
-Snippets time measurement 	~/dotfiles/dict/java/TimeMeasurement.java
+Snippets XMLChecker	~/dotfiles/dict/java/XMLChecker.java
 Template	~/dotfiles/dict/java/Template.java
 Tutorial Generic	~/dotfiles/dict/java/Generic.md
 Tutorial JPA	~/dotfiles/dict/java/JPA.md
