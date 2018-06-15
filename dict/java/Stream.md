@@ -71,6 +71,15 @@ thenComparingによりソート条件を追加できる。
           .thenComparing(Comparator.comparing(Somethig::getOne).reversed())
           .thenComparing(Comparator.comparing(Somethig::getTwo)))
 
+### 日本語のソート
+java.text.collatorをComparator内で使用することにより、漢字の音読みによるソートを行うことが可能。
+    Collator collator = Collator.getInstance(Locale.JAPANESE);
+    ...
+    .sorted(((Comparator<String>)((l, r) -> collator.compare(l, r)))
+        ...
+        .thenComparing(...))
+    .collect(Collectors.toList());
+
 ## フィルタ処理
 filterは写像後の値が真になるデータのみ抽出する。
 例ではオブジェクトのlengthメソッドが5よりも大きいオブジェクトが抽出される。
