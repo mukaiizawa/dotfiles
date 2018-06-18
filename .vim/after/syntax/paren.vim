@@ -43,13 +43,13 @@ syn keyword ParenBuiltin nil? same? atom? cons? list? type? ! not and or
 syn keyword ParenBuiltin cons list len nth map reduce append reverse
 syn keyword ParenBuiltin add push pop last-cons last
 
-syn keyword ParenBuiltin {} <-{} has-key?
+syn keyword ParenBuiltin get put has-key?
 
 syn keyword ParenBuiltin find find-if remove remove-if
 
 syn keyword ParenBuiltin ->list
 
-syn keyword ParenBuiltin + ++ <-+ - -- <-- * / = mod < > <= >= negated
+syn keyword ParenBuiltin + ++ inc - -- dec * / = mod < > <= >= negated
 
 syn match ParenBuiltin "\<\(<-\)\?c[ad]\{1,4}r\>"
 
