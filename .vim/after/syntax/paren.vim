@@ -39,7 +39,9 @@ syn keyword ParenBuiltin function begin-if
 syn keyword ParenBuiltin type
 
 syn keyword ParenBuiltin nil? same? atom? cons? list? type? ! not and or
-syn keyword ParenBuiltin <-car <-cdr cons list nth map reduce append reverse
+
+syn keyword ParenBuiltin cons list len nth map reduce append reverse
+syn keyword ParenBuiltin add push pop last-cons last
 
 syn keyword ParenBuiltin {} <-{} has-key?
 
