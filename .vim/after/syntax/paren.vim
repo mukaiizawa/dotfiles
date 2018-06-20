@@ -45,6 +45,8 @@ syn keyword ParenBuiltin add push pop last-cons last
 
 syn keyword ParenBuiltin get put has-key?
 
+syn keyword ParenBuiltin all-satisfy? any-satisfy?
+syn keyword ParenBuiltin all-satisfy-binary-function?
 syn keyword ParenBuiltin find find-if remove remove-if
 
 syn keyword ParenBuiltin ->list
