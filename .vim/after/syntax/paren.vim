@@ -33,25 +33,72 @@ syn keyword ParenSymbol nil true
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 
-syn keyword ParenBuiltin quote backquote unquote splice macro lambda <- if
-syn keyword ParenBuiltin begin let cond
-syn keyword ParenBuiltin function begin-if
-syn keyword ParenBuiltin type
-
-syn keyword ParenBuiltin nil? same? atom? cons? list? type? ! not and or
-
-syn keyword ParenBuiltin cons list len nth map reduce append reverse
-syn keyword ParenBuiltin add push pop last-cons last
-
-syn keyword ParenBuiltin get put has-key?
-
-syn keyword ParenBuiltin all-satisfy? any-satisfy?
-syn keyword ParenBuiltin all-satisfy-binary-function?
-syn keyword ParenBuiltin find find-if remove remove-if
-
+syn keyword ParenBuiltin !
+syn keyword ParenBuiltin *
+syn keyword ParenBuiltin +
+syn keyword ParenBuiltin ++
+syn keyword ParenBuiltin -
+syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
-
-syn keyword ParenBuiltin + ++ inc - -- dec * / = mod < > <= >= negated
+syn keyword ParenBuiltin /
+syn keyword ParenBuiltin <
+syn keyword ParenBuiltin <-
+syn keyword ParenBuiltin <=
+syn keyword ParenBuiltin =
+syn keyword ParenBuiltin >
+syn keyword ParenBuiltin >=
+syn keyword ParenBuiltin add
+syn keyword ParenBuiltin all-satisfy?
+syn keyword ParenBuiltin and
+syn keyword ParenBuiltin any-satisfy?
+syn keyword ParenBuiltin append
+syn keyword ParenBuiltin atom?
+syn keyword ParenBuiltin backquote
+syn keyword ParenBuiltin begin
+syn keyword ParenBuiltin begin-if
+syn keyword ParenBuiltin cond
+syn keyword ParenBuiltin cons
+syn keyword ParenBuiltin cons?
+syn keyword ParenBuiltin dec
+syn keyword ParenBuiltin each-pair-satisfy?
+syn keyword ParenBuiltin find
+syn keyword ParenBuiltin find-if
+syn keyword ParenBuiltin function
+syn keyword ParenBuiltin get
+syn keyword ParenBuiltin has-key?
+syn keyword ParenBuiltin identity
+syn keyword ParenBuiltin if
+syn keyword ParenBuiltin inc
+syn keyword ParenBuiltin lambda
+syn keyword ParenBuiltin last
+syn keyword ParenBuiltin last-cons
+syn keyword ParenBuiltin length
+syn keyword ParenBuiltin let
+syn keyword ParenBuiltin list
+syn keyword ParenBuiltin list?
+syn keyword ParenBuiltin macro
+syn keyword ParenBuiltin map
+syn keyword ParenBuiltin mod
+syn keyword ParenBuiltin negated
+syn keyword ParenBuiltin nil?
+syn keyword ParenBuiltin not
+syn keyword ParenBuiltin nth
+syn keyword ParenBuiltin nthcdr
+syn keyword ParenBuiltin or
+syn keyword ParenBuiltin pop
+syn keyword ParenBuiltin push
+syn keyword ParenBuiltin put
+syn keyword ParenBuiltin quote
+syn keyword ParenBuiltin reduce
+syn keyword ParenBuiltin remove
+syn keyword ParenBuiltin remove-if
+syn keyword ParenBuiltin reverse
+syn keyword ParenBuiltin same?
+syn keyword ParenBuiltin splice
+syn keyword ParenBuiltin sublist
+syn keyword ParenBuiltin type
+syn keyword ParenBuiltin type?
+syn keyword ParenBuiltin unquote
 
 syn match ParenBuiltin "\<\(<-\)\?c[ad]\{1,4}r\>"
 
