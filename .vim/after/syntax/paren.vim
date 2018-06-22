@@ -59,6 +59,7 @@ syn keyword ParenBuiltin begin-if
 syn keyword ParenBuiltin cond
 syn keyword ParenBuiltin cons
 syn keyword ParenBuiltin cons?
+syn keyword ParenBuiltin copy-list
 syn keyword ParenBuiltin dec
 syn keyword ParenBuiltin each-pair-satisfy?
 syn keyword ParenBuiltin find
