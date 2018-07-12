@@ -56,6 +56,36 @@ syn keyword ParenBuiltin atom?
 syn keyword ParenBuiltin backquote
 syn keyword ParenBuiltin begin
 syn keyword ParenBuiltin begin-if
+syn keyword ParenBuiltin caaaar
+syn keyword ParenBuiltin caaadr
+syn keyword ParenBuiltin caaar
+syn keyword ParenBuiltin caadar
+syn keyword ParenBuiltin caaddr
+syn keyword ParenBuiltin caadr
+syn keyword ParenBuiltin caar
+syn keyword ParenBuiltin cadaar
+syn keyword ParenBuiltin cadadr
+syn keyword ParenBuiltin cadar
+syn keyword ParenBuiltin caddar
+syn keyword ParenBuiltin cadddr
+syn keyword ParenBuiltin caddr
+syn keyword ParenBuiltin cadr
+syn keyword ParenBuiltin car
+syn keyword ParenBuiltin cdaaar
+syn keyword ParenBuiltin cdaadr
+syn keyword ParenBuiltin cdaar
+syn keyword ParenBuiltin cdadar
+syn keyword ParenBuiltin cdaddr
+syn keyword ParenBuiltin cdadr
+syn keyword ParenBuiltin cdar
+syn keyword ParenBuiltin cddaar
+syn keyword ParenBuiltin cddadr
+syn keyword ParenBuiltin cddar
+syn keyword ParenBuiltin cdddar
+syn keyword ParenBuiltin cddddr
+syn keyword ParenBuiltin cdddr
+syn keyword ParenBuiltin cddr
+syn keyword ParenBuiltin cdr
 syn keyword ParenBuiltin cond
 syn keyword ParenBuiltin cons
 syn keyword ParenBuiltin cons?
@@ -65,10 +95,9 @@ syn keyword ParenBuiltin each-pair-satisfy?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
 syn keyword ParenBuiltin function
-syn keyword ParenBuiltin get
-syn keyword ParenBuiltin has-key?
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin if
+syn keyword ParenBuiltin in?
 syn keyword ParenBuiltin inc
 syn keyword ParenBuiltin lambda
 syn keyword ParenBuiltin last
@@ -100,8 +129,13 @@ syn keyword ParenBuiltin sublist
 syn keyword ParenBuiltin type
 syn keyword ParenBuiltin type?
 syn keyword ParenBuiltin unquote
+syn keyword ParenBuiltin {}
 
-syn match ParenBuiltin "\<\(<-\)\?c[ad]\{1,4}r\>"
+" paren object system
+syn keyword ParenBuiltin class
+syn keyword ParenBuiltin method
+syn match ParenMethod "\<\.\k*\>"
+syn match ParenClass "\<:\u\k*\>"
 
 hi def link ParenLineComment Comment
 hi def link ParenBlockComment Comment
@@ -112,6 +146,8 @@ hi def link ParenBuiltin Statement
 hi def link ParenConstant Constant
 hi def link ParenKeyword Identifier
 hi def link ParenTodo ToDo
+hi def link ParenClass Type
+hi def link ParenMethod Function
 hi def link ParenError Error
 
 let b:current_syntax = "paren"
