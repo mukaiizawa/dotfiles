@@ -6,13 +6,16 @@ java.lang.Object
 
 # 概要
 BigDecimalは変更が不可能な、任意精度の符号付き小数を表す。
-BigDecimalは、任意精度の「スケールなしの整数値」と、
-32ビット整数の「スケール」で構成される。
+
+BigDecimalは任意精度の「スケールなしの整数値」と32ビット整数の「スケール」で構成される。
+
 BigDecimalで表される数値は(unscaledValue×10-scale)となる。
+
 また、演算する際の丸めのモードを指定することができる。
-丸めモードの指定にはRoundingMode enum(RoundingMode.HALF_UPなど)の列挙型をしようすること。
-同じ数値でも表現が異なる(スケールが異なる)可能性があるため、
-算術および丸めの規則は、数値的な結果と、結果の表現に使用するスケールの両方を指定する必要がある。
+
+丸めモードの指定にはRoundingMode enum(RoundingMode.HALF_UPなど)の列挙型を使用すること。
+
+同じ数値でも表現が異なる(スケールが異なる)可能性があるため、算術および丸めの規則は数値的な結果と結果の表現に使用するスケールの両方を指定する必要がある。
 
 # 丸めに用いるenum
 以下に主要な丸めモードを示す。
@@ -58,23 +61,32 @@ doubleを受け取るコンストラクタも存在するが、非推奨であ�
 ## スケールの設定
     BigDecimal setScale(int newScale)
     BigDecimal setScale(int newScale, RoundingMode roundingMode)
+
 スケールのみの設定、スケールと丸めモードの同時指定ができる。
+
 ## 加算
     BigDecimal add(BigDecimal augend)
+
 ## 減算
     BigDecimal subtract(BigDecimal subtrahend)
+
 ## 乗算
     BigDecimal multiply(BigDecimal multiplicand)
+
 ## 除算
 除算実行時にはスケールと丸めモードを指定すること。
+
     BigDecimal divide(BigDecimal divisor, RoundingMode roundingMode)
-    BigDecimal divide(BigDecimal divisor, int scale, RoundingMode roundingMode)  
+    BigDecimal divide(BigDecimal divisor, int scale, RoundingMode roundingMode)
+
 ## 剰余
     BigDecimal remainder(BigDecimal divisor)
 
 # 値の比較を行う
     int compareTo(BigDecimal val)
+
 値の比較には`compareTo`メソッドを用いる。
+
 このBigDecimalの数値がvalより小さい場合は-1、等しい場合は0、大きい場合は1を返す。
 
 # 絶対値取得
