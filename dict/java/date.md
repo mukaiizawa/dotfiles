@@ -7,6 +7,8 @@ SimpleDateFormat,
 Locale
 辺りを理解していれば簡単な日付操作が可能。
 
+java8以降が使用できる環境であれば、スレッドセーフなDateTimeFormatterを使用できる。
+
 ## 書式指定子
 SimpleDateFormatにて以下の書式指定子が使用できる。
 

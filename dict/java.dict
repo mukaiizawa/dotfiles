@@ -22,6 +22,7 @@ Snippets ResourceUtil	~/dotfiles/dict/java/ResourceUtil.java
 Snippets StringUtil	~/dotfiles/dict/java/StringUtil.java
 Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
 Snippets Util	~/dotfiles/dict/java/Util.java
+Snippets XDateUtil	~/dotfiles/dict/java/XDateUtil.java
 Snippets XMLChecker	~/dotfiles/dict/java/XMLChecker.java
 Template	~/dotfiles/dict/java/Template.java
 Tutorial Generic	~/dotfiles/dict/java/Generic.md

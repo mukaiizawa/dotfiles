@@ -7,6 +7,7 @@ import java.util.Locale;
 
 /**
  * 日付ユーティリティ
+ * LocalDateを使用したユーティリティはXDateUtil参照
  */
 public class DateUtil {
 
