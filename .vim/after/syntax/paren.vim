@@ -41,6 +41,7 @@ syn keyword ParenBuiltin -
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
 syn keyword ParenBuiltin /
+syn keyword ParenBuiltin /=
 syn keyword ParenBuiltin <
 syn keyword ParenBuiltin <-
 syn keyword ParenBuiltin <=
@@ -52,6 +53,7 @@ syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
 syn keyword ParenBuiltin any-satisfy?
 syn keyword ParenBuiltin append
+syn keyword ParenBuiltin assert
 syn keyword ParenBuiltin atom?
 syn keyword ParenBuiltin backquote
 syn keyword ParenBuiltin begin
