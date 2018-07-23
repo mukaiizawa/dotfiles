@@ -64,6 +64,16 @@ public class XDateUtil {
   }
 
   /**
+   * 日付の翌日取得
+   * @param date 有効開始日(yyyyMMdd)
+   * @return 引数が{@code FIRST_VALID_DATE_FROM}の場合、空文字列
+   *         そうでない場合、引数の前日を表す文字列(yyyyMMdd)
+   */
+  public String tomorrowOf(String date) {
+    return LocalDate.parse(date, yyyyMMdd).plusDays(1).format(yyyyMMdd);
+  }
+
+  /**
    * 西暦を表す文字列(yyyyMMdd)の和暦変換処理
    * @param date 和暦に変換する対象の文字列(yyyyMMdd)
    * @return 引数の和暦表現
@@ -76,6 +86,7 @@ public class XDateUtil {
     XDateUtil du = new XDateUtil();
     assert du.subtract("19000101", "19000102") == 1;
     assert du.yesterdayOf("19000103").equals("19000102");
+    assert du.tomorrowOf("19000103").equals("19000104");
     assert du.toJapanese("19920722").equals("平成4年7月22日");
   }
 
