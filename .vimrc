@@ -209,6 +209,10 @@ let g:quickrun_config = {
       \              , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'],
       \   'hook/time/enable': 1,
       \ },
+      \ 'javascript' : {
+      \   'command': 'cscript',
+      \   'exec': '%c %s',
+      \ },
       \ 'lisp' : {
       \   'type': executable('lx86cl64')? 'lisp/ccll':
       \           executable('wx86cl64')? 'lisp/cclw':
