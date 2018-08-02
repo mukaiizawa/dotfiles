@@ -131,7 +131,7 @@ syn keyword ParenBuiltin sublist
 syn keyword ParenBuiltin type
 syn keyword ParenBuiltin type?
 syn keyword ParenBuiltin unquote
-syn keyword ParenBuiltin {}
+syn keyword ParenBuiltin .
 
 " paren object system
 syn keyword ParenBuiltin class
