@@ -14,15 +14,16 @@ endif
 " 110 n o p q r s t u v w
 " 120 x y z { | } ~ .
 
-syn iskeyword 33,35,36-38,42-43,45-58,60-63,65-91,93-95,97-125
+syn iskeyword 33,35,36-38,42-43,45-58,60-63,65-90,94-95,97-125
 syn sync minlines=100
 syn case match
 
+syn region ParenCons matchgroup=PreProc start="\[" end="\]" contains=ALL
 syn region ParenList matchgroup=Delimiter start="(" end=")" contains=ALL
+syn region ParenQuoted matchgroup=Identifier start="'" end="[ \t();]" contains=ALL
+syn region ParenQuoted matchgroup=Identifier start="'(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
-syn region ParenTilde matchgroup=PreProc start="\~" end="[ \t();]" contains=ALL
-syn region ParenTilde matchgroup=PreProc start="\~(" end=")" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
@@ -32,6 +33,7 @@ syn match ParenKeyword "\<:\k*\>"
 syn keyword ParenSymbol nil true
 syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
+syn match ParenError "]"
 
 syn keyword ParenBuiltin !
 syn keyword ParenBuiltin *
