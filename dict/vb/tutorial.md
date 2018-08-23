@@ -199,7 +199,7 @@ Do While Loop文は述語を満たす間繰り返す。
     Do Untile 述語
         処理
     Loop
-Do Untile Loop文は述語をを満たしていない間繰り返す。
+Do Untile Loop文は述語を満たしていない間繰り返す。
 ### Do Loop While文
     Do
         処理

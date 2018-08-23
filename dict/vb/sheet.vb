@@ -14,3 +14,6 @@ Worksheets.Add after:=Worksheets(Worksheets.Count)
 
 ' 追加したシートの名称変更
 Worksheets.Add(after:=Worksheets(Worksheets.Count)).Name("sheet2")
+
+' シート名一覧の取得(put imidiate window and press enter)
+For Each i In ThisWorkbook.Sheets: debug.print i.name : next i
