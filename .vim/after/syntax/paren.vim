@@ -42,6 +42,7 @@ syn keyword ParenBuiltin ++
 syn keyword ParenBuiltin -
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
+syn keyword ParenBuiltin .
 syn keyword ParenBuiltin /
 syn keyword ParenBuiltin /=
 syn keyword ParenBuiltin <
@@ -95,6 +96,7 @@ syn keyword ParenBuiltin cons
 syn keyword ParenBuiltin cons?
 syn keyword ParenBuiltin copy-list
 syn keyword ParenBuiltin dec
+syn keyword ParenBuiltin dequeue
 syn keyword ParenBuiltin each-pair-satisfy?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
@@ -122,6 +124,7 @@ syn keyword ParenBuiltin or
 syn keyword ParenBuiltin pop
 syn keyword ParenBuiltin push
 syn keyword ParenBuiltin put
+syn keyword ParenBuiltin queue
 syn keyword ParenBuiltin quote
 syn keyword ParenBuiltin reduce
 syn keyword ParenBuiltin remove
@@ -133,7 +136,6 @@ syn keyword ParenBuiltin sublist
 syn keyword ParenBuiltin type
 syn keyword ParenBuiltin type?
 syn keyword ParenBuiltin unquote
-syn keyword ParenBuiltin .
 
 " paren object system
 syn keyword ParenBuiltin class
