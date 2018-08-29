@@ -1,6 +1,3 @@
+Snippet	~/dotfiles/dict/bat/snippet.md
 Template	~/dotfiles/dict/bat/template.bat
-Tips 環境変数の更新	~/dotfiles/dict/bat/env.bat
-Tips エラーハンドリング	~/dotfiles/dict/bat/error.md
-Tips コマンドライン引数	~/dotfiles/dict/bat/args.md
-Tips ディレクトリ関連	~/dotfiles/dict/bat/dir.md
-Tips 対話処理	~/dotfiles/dict/bat/yes_no.md
+Tutorial	~/dotfiles/dict/bat/tutorial.md
