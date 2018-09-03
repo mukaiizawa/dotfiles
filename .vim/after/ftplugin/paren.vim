@@ -6,6 +6,7 @@ setlocal formatoptions-=t
 setlocal iskeyword+=+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
 setlocal commentstring=;%s
 setlocal comments=:;
+setlocal comments^=:;;,:;;;,:;;;;
 
 setlocal lispwords=let
 setlocal lispwords+=if
