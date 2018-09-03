@@ -14,16 +14,16 @@ endif
 " 110 n o p q r s t u v w
 " 120 x y z { | } ~ .
 
-syn iskeyword 33,35,36-38,42-43,45-58,60-63,65-90,94-95,97-125
+syn iskeyword 35-38,42-43,45-58,60-63,65-90,94-95,97-125
 syn sync minlines=100
 syn case match
 
-syn region ParenCons matchgroup=PreProc start="\[" end="\]" contains=ALL
 syn region ParenList matchgroup=Delimiter start="(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="'" end="[ \t();]" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="'(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
+syn region ParenNot matchgroup=ParenBuiltin start="!" end="" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
 syn match ParenLineComment ";.*$" contains=ParenTodo
@@ -35,7 +35,6 @@ syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
 syn match ParenError ")"
 syn match ParenError "]"
 
-syn keyword ParenBuiltin !
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin +
 syn keyword ParenBuiltin ++
@@ -56,11 +55,13 @@ syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
 syn keyword ParenBuiltin any-satisfy?
 syn keyword ParenBuiltin append
+syn keyword ParenBuiltin append1
 syn keyword ParenBuiltin assert
 syn keyword ParenBuiltin atom?
 syn keyword ParenBuiltin backquote
 syn keyword ParenBuiltin begin
 syn keyword ParenBuiltin begin-if
+syn keyword ParenBuiltin begin0
 syn keyword ParenBuiltin caaaar
 syn keyword ParenBuiltin caaadr
 syn keyword ParenBuiltin caaar
@@ -100,6 +101,7 @@ syn keyword ParenBuiltin dequeue
 syn keyword ParenBuiltin each-pair-satisfy?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
+syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin function
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin if
@@ -122,6 +124,7 @@ syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin nthcdr
 syn keyword ParenBuiltin or
 syn keyword ParenBuiltin pop
+syn keyword ParenBuiltin precondition
 syn keyword ParenBuiltin push
 syn keyword ParenBuiltin put
 syn keyword ParenBuiltin queue

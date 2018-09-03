@@ -138,6 +138,24 @@ version1.8の段階で改行と見做される文字は次の通り。
 - `\u000D`(CR)
 - `\u000A`(LF)
 
+# ファイルへ書き込み
+    static Path write(Path path, Iterable<? extends CharSequence> lines
+    , Charset cs, OpenOption... options) throws IOException
+
+システムプロパティの"line.separator"で定義された改行文字でlinesを一行ずつ書き込む。
+
+optionsパラメータはファイルを作成または開く方法を指定します。オプションがない場合、このメソッドはCREATE、TRUNCATE_EXISTING、およびWRITEオプションが指定されたものと見做す。
+
+従来のtry-resource文を使用した場合と似ている。
+    try (Writer wr = new OutputStreamWriter(
+          new FileOutputStream(Paths.get("result.csv").toFile()), charset))
+    {
+      for (String line: lines) wr.write(line);
+    } catch (IOException e) {
+        // ...
+    }
+
+
 # Streamの作成
     static Stream<Path> list(Path dir) throws IOException
 ディレクトリdir内のエントリを要素に持つ遅延設定Streamを返す。
