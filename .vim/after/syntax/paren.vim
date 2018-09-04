@@ -26,14 +26,17 @@ syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
 syn region ParenNot matchgroup=ParenBuiltin start="!" end="" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\[\\"]' end='"'
-syn match ParenLineComment ";.*$" contains=ParenTodo
+syn match ParenComment ";.*$" contains=ParenXdoc,ParenTodo
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
 syn match ParenGlobal "\<\$\k*\>"
 syn match ParenKeyword "\<:\k*\>"
 syn keyword ParenSymbol nil true
-syn match ParenTodo "\c\<\(todo\|fixme\|note\)\>" contained
+syn match ParenTodo "\c\<\(todo\|note\)\>" contained
 syn match ParenError ")"
 syn match ParenError "]"
+
+syn match ParenXdoc "^;:.*$" contains=ParenXdocTitle
+syn match ParenXdocTitle "#\+\ .*$" contained
 
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin +
@@ -51,6 +54,7 @@ syn keyword ParenBuiltin =
 syn keyword ParenBuiltin >
 syn keyword ParenBuiltin >=
 syn keyword ParenBuiltin add
+syn keyword ParenBuiltin alist?
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
 syn keyword ParenBuiltin any-satisfy?
@@ -99,10 +103,13 @@ syn keyword ParenBuiltin copy-list
 syn keyword ParenBuiltin dec
 syn keyword ParenBuiltin dequeue
 syn keyword ParenBuiltin each-pair-satisfy?
+syn keyword ParenBuiltin even?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin function
+syn keyword ParenBuiltin function?
+syn keyword ParenBuiltin group
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin if
 syn keyword ParenBuiltin in?
@@ -113,6 +120,7 @@ syn keyword ParenBuiltin last-cons
 syn keyword ParenBuiltin length
 syn keyword ParenBuiltin let
 syn keyword ParenBuiltin list
+syn keyword ParenBuiltin list->alist
 syn keyword ParenBuiltin list?
 syn keyword ParenBuiltin macro
 syn keyword ParenBuiltin map
@@ -122,8 +130,10 @@ syn keyword ParenBuiltin nil?
 syn keyword ParenBuiltin not
 syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin nthcdr
+syn keyword ParenBuiltin odd?
 syn keyword ParenBuiltin or
 syn keyword ParenBuiltin pop
+syn keyword ParenBuiltin postcondition
 syn keyword ParenBuiltin precondition
 syn keyword ParenBuiltin push
 syn keyword ParenBuiltin put
@@ -146,7 +156,7 @@ syn keyword ParenBuiltin method
 syn match ParenMethod "\<\.\k*\>"
 syn match ParenClass "\<:\u\k*\>"
 
-hi def link ParenLineComment Comment
+hi def link ParenComment Comment
 hi def link ParenBlockComment Comment
 hi def link ParenString String
 hi def link ParenNumber Number
@@ -158,5 +168,8 @@ hi def link ParenTodo ToDo
 hi def link ParenClass Type
 hi def link ParenMethod Function
 hi def link ParenError Error
+
+hi def link ParenXdoc Comment
+hi def link ParenXdocTitle title
 
 let b:current_syntax = "paren"
