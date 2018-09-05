@@ -103,6 +103,7 @@ syn keyword ParenBuiltin copy-list
 syn keyword ParenBuiltin dec
 syn keyword ParenBuiltin dequeue
 syn keyword ParenBuiltin each-pair-satisfy?
+syn keyword ParenBuiltin error
 syn keyword ParenBuiltin even?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
@@ -130,6 +131,7 @@ syn keyword ParenBuiltin nil?
 syn keyword ParenBuiltin not
 syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin nthcdr
+syn keyword ParenBuiltin number?
 syn keyword ParenBuiltin odd?
 syn keyword ParenBuiltin or
 syn keyword ParenBuiltin pop
@@ -146,6 +148,7 @@ syn keyword ParenBuiltin reverse
 syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin splice
 syn keyword ParenBuiltin sublist
+syn keyword ParenBuiltin symbol?
 syn keyword ParenBuiltin type
 syn keyword ParenBuiltin type?
 syn keyword ParenBuiltin unquote
