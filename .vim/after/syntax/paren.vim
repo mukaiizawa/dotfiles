@@ -53,7 +53,6 @@ syn keyword ParenBuiltin <=
 syn keyword ParenBuiltin =
 syn keyword ParenBuiltin >
 syn keyword ParenBuiltin >=
-syn keyword ParenBuiltin add
 syn keyword ParenBuiltin alist?
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
