@@ -1,6 +1,5 @@
 setlocal nocindent
 setlocal lisp
-setlocal shiftwidth=4
 
 nnoremap <buffer>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
 

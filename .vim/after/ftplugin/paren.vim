@@ -1,6 +1,5 @@
 setlocal nocindent
 setlocal lisp
-setlocal shiftwidth=4
 setlocal define=^\\s*(\\(macro\\|lambda\\)
 setlocal formatoptions-=t
 setlocal iskeyword+=+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
