@@ -1,4 +1,4 @@
-scriptencoding utf-8
+
 
 if !has('gui_running')
   if has('win32') || has ('win64')
@@ -77,7 +77,6 @@ inoremap <C-k> <C-x><C-u>
 inoremap <C-l> <C-n>
 inoremap <Tab> <C-v><Tab>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-inoremap jj <Esc>
 nnoremap ( {
 nnoremap ) }
 nnoremap <C-Insert> "*y
