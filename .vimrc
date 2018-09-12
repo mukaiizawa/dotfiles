@@ -234,6 +234,10 @@ let g:quickrun_config = {
       \ 'lisp/clisp': {
       \   'command': 'clisp',
       \ },
+      \ 'markdown' : {
+      \   'command': 'pandoc',
+      \   'exec': '%c %s -t docx -o %s:t:r.docx',
+      \ },
       \ 'paren' : {
       \   'command': 'paren',
       \   'exec': '%c -f%s',
