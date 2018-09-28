@@ -76,7 +76,7 @@ public class MailUtil {
   /**
    * メール送信処理
    * 処理の途中で例外が発生した場合は、
-   * 例外の内容にかかわらず処理を中断しLECSExceptionを投げる。
+   * 例外の内容にかかわらず処理を中断しRuntimeExceptionを投げる。
    * @param to メール送信先
    * @param subject メール件名
    * @param body メール本文
