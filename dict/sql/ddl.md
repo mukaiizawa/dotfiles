@@ -7,10 +7,12 @@ DDL
 
 # GRANT
 GRANT文はあるユーザに対してシステム権限またはオブジェクト権限を付与する。
+
 ## 書式
     GRANT {sys_privilege | obj_privilege_list ON obj_name} TO user [, user]... ;
     obj_privilege_list ::= {ALL | obj_privilege [, obj_privilege]...}
     obj_privilege ::= {INSERT | DELETE | UPDATE | SELECT | REFERENCES}
+
 引数の定義を下に示す。
     引数          定義
     -------------------------------------------------------------------
@@ -21,8 +23,10 @@ GRANT文はあるユーザに対してシステム権限またはオブジェク
 
 # REVOKE
 REVOKE文はGRANTで付与した権限を取り消す。
+
 ## 書式
     REVOKE {sys_privilege | obj_privilege_list ON obj_name} TO user [, user]... ;
+
 REVOKE文はGRANTとついになっている。
 引数の定義はGRANTを参考のこと。
 
@@ -30,10 +34,12 @@ REVOKE文はGRANTとついになっている。
 ## 書式
     CREATE USER user IDENTIFIED BY password ;
     DROP USER user [CASCADE] ;
+
 引数の定義を示す。
     引数    定義
     ------------------------------------------------------------------
     CASCADE ユーザに紐づけられたオブジェクトをすべて削除する。
+
 ## 注意事項
 11g以降Oracleではデフォルトでパスワードの大文字小文字は区別する。
 次の手順で大文字小文字を区別しているか確認できる。
@@ -46,6 +52,7 @@ REVOKE文はGRANTとついになっている。
     CREATE [OR REPLACE] VIEW [schema .] view [( alias [, alias]...)] AS
     subquery ;
     DROP [schema .] VIEW view [{CASCADE | RESTRICT}] ;
+
 引数の定義を示す。
     引数       定義
     -------------------------------------------------------------------------
@@ -66,7 +73,7 @@ REVOKE文はGRANTとついになっている。
     rerational_props ::= column_definition | out_of_line_constraint
     column_definition ::=
         column datatype [DEFAULT default_value]
-            [inline_constraint [, inline_constraint]...]
+            [inline_constraint [, inline_constraint] ...]
     out_of_line_constraint ::=
         [CONSTRAINT constraint_name]
             UNIQUE (column_list)
@@ -83,6 +90,7 @@ REVOKE文はGRANTとついになっている。
         REFERENCES [schema .] table ( column_list )
         [ON DELETE {CASCADE | SET NULL}]
     column_list ::= column [, column]
+
 引数の定義を示す。
     引数           定義
     -------------------------------------------------------------------
@@ -96,3 +104,25 @@ REVOKE文はGRANTとついになっている。
     REFERENCES     外部キー制約を指定する際の参照先。
     foreign_table  外部キーを指定するテーブル。
     CHECK          検査制約。
+
+# 表制約
+表の制約は作成後に追加、更新、削除することが可能。
+
+## 書式
+### 制約の追加
+制約の追加の書式を示す。
+    ALTER TABLE [schema .] table ADD　CONSTRAINT constraint_name {
+        UNIQUE (column [, column …])
+        | PRIMARY KEY (column [, column ...])
+        | FOREIGN KEY (column [, column ...])
+        | [schema .] object [(column)] [ON DELETE { CASCADE | SET NULL }]
+        | CHECK (condition)
+    };
+
+### NOT NULL 制約の追加
+NOT NULL制約は追加ではなく、変更の扱いとなる。
+    ALTER TABLE [schema .] table MODIFY (column NOT NULL);
+
+### 表制約の削除
+表制約を削除するには、制約名を指定して削除する。
+    ALTER TABLE [schema .] table DROP CONSTRAINT constraint_name [CASCADE];
