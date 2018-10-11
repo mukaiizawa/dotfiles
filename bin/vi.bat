@@ -1,2 +1,5 @@
-@echo off
+@ECHO OFF
+
+REM alias of vim
+
 gvim

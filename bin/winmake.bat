@@ -1,4 +1,5 @@
-@echo off
-rem make for windows
+@ECHO OFF
 
-make os=windows %1 %2 %3 %4 %5
+REM make for winodws
+
+make os=windows
