@@ -62,6 +62,8 @@ syn keyword ParenBuiltin append1
 syn keyword ParenBuiltin assert
 syn keyword ParenBuiltin atom?
 syn keyword ParenBuiltin backquote
+syn keyword ParenBuiltin basic-catch
+syn keyword ParenBuiltin basic-try
 syn keyword ParenBuiltin begin
 syn keyword ParenBuiltin begin-if
 syn keyword ParenBuiltin begin0
@@ -80,6 +82,7 @@ syn keyword ParenBuiltin cadddr
 syn keyword ParenBuiltin caddr
 syn keyword ParenBuiltin cadr
 syn keyword ParenBuiltin car
+syn keyword ParenBuiltin catch
 syn keyword ParenBuiltin cdaaar
 syn keyword ParenBuiltin cdaadr
 syn keyword ParenBuiltin cdaar
@@ -104,6 +107,7 @@ syn keyword ParenBuiltin dequeue
 syn keyword ParenBuiltin each-pair-satisfy?
 syn keyword ParenBuiltin error
 syn keyword ParenBuiltin even?
+syn keyword ParenBuiltin finally
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-if
 syn keyword ParenBuiltin flatten
@@ -148,6 +152,7 @@ syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin splice
 syn keyword ParenBuiltin sublist
 syn keyword ParenBuiltin symbol?
+syn keyword ParenBuiltin try
 syn keyword ParenBuiltin type
 syn keyword ParenBuiltin type?
 syn keyword ParenBuiltin unquote

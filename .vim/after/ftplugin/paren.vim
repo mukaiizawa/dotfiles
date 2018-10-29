@@ -13,3 +13,9 @@ setlocal lispwords+=macro
 setlocal lispwords+=lambda
 setlocal lispwords+=function
 setlocal lispwords+=begin-if
+
+setlocal lispwords+=try
+setlocal lispwords+=catch
+setlocal lispwords+=basic-try
+setlocal lispwords+=basic-catch
+setlocal lispwords+=finally
