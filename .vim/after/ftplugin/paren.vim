@@ -8,7 +8,6 @@ setlocal comments=:;
 setlocal comments^=:;;,:;\:,:;;;,:;;;;
 
 setlocal lispwords=let
-setlocal lispwords+=if
 setlocal lispwords+=macro
 setlocal lispwords+=lambda
 setlocal lispwords+=function
