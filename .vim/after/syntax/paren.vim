@@ -15,7 +15,7 @@ endif
 " 120 x y z { | } ~ .
 
 syn iskeyword 35-38,42-43,45-58,60-63,65-90,94-95,97-125
-syn sync minlines=100
+syn sync minlines=1000
 syn case match
 
 syn region ParenList matchgroup=Delimiter start="(" end=")" contains=ALL
