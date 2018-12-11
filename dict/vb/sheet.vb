@@ -1,5 +1,8 @@
 ' sheet
 
+' アクティブなシートの取得
+ActiveSheet
+
 ' シートの追加
 Worksheets.Add
 

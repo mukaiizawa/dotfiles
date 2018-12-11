@@ -1,9 +1,10 @@
 Game nqueen	~/dotfiles/dict/vb/nqueen.vb
 Game numpre	~/dotfiles/dict/vb/numpre.vb
+Snippets book	~/dotfiles/dict/vb/book.vb
 Snippets cell	~/dotfiles/dict/vb/cell.vb
 Snippets hyperlink	~/dotfiles/dict/vb/hyperlink.vb
 Snippets sheet	~/dotfiles/dict/vb/sheet.vb
+Template	~/dotfiles/dict/vb/template.vb
 Tutorial Dictionary	~/dotfiles/dict/vb/dictionary.md
 Tutorial Range	~/dotfiles/dict/vb/range.md
 Tutorial VBA	~/dotfiles/dict/vb/tutorial.md
-Template	~/dotfiles/dict/vb/template.vb
