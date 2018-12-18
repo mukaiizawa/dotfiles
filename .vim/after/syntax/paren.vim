@@ -14,7 +14,7 @@ endif
 " 110 n o p q r s t u v w
 " 120 x y z { | } ~ .
 
-syn iskeyword 35-38,42-43,45-58,60-63,65-90,94-95,97-125
+syn iskeyword 35-38,42-43,45-58,60-63,65-91,93-95,97-125
 syn sync minlines=1000
 syn case match
 
@@ -25,18 +25,14 @@ syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=A
 syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
 syn region ParenNot matchgroup=ParenBuiltin start="!" end="" contains=ALL
 syn match ParenNumber "\d"
-syn region ParenString start='"' skip='\\[\\"]' end='"'
-syn match ParenComment ";.*$" contains=ParenXdoc,ParenTodo
+syn region ParenString start='"' skip='\\.' end='"'
+syn match ParenComment ";.*$" contains=ParenTodo
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
 syn match ParenGlobal "\<\$\k*\>"
 syn match ParenKeyword "\<:\k*\>"
 syn keyword ParenSymbol nil true
 syn match ParenTodo "\c\<\(todo\|note\)\>" contained
 syn match ParenError ")"
-syn match ParenError "]"
-
-syn match ParenXdoc "^;:.*$" contains=ParenXdocTitle
-syn match ParenXdocTitle "#\+\ .*$" contained
 
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin +
@@ -175,8 +171,5 @@ hi def link ParenTodo ToDo
 hi def link ParenClass Type
 hi def link ParenMethod Function
 hi def link ParenError Error
-
-hi def link ParenXdoc Comment
-hi def link ParenXdocTitle title
 
 let b:current_syntax = "paren"
