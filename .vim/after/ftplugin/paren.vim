@@ -6,6 +6,7 @@ setlocal iskeyword+=+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
 setlocal commentstring=;%s
 setlocal comments=:;
 setlocal comments^=:;;,:;\:,:;;;,:;;;;
+setlocal shiftwidth=4
 
 setlocal lispwords=let
 setlocal lispwords+=macro
