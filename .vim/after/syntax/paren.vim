@@ -14,7 +14,6 @@ endif
 " 110 n o p q r s t u v w
 " 120 x y z { | } ~ .
 
-syn iskeyword 35-38,42-43,45-58,60-63,65-91,93-95,97-125
 syn sync minlines=1000
 syn case match
 

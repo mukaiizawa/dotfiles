@@ -2,7 +2,7 @@ setlocal nocindent
 setlocal lisp
 setlocal define=^\\s*(\\(macro\\|lambda\\)
 setlocal formatoptions-=t
-setlocal iskeyword+=+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
+setlocal iskeyword=35-38,42-43,45-58,60-63,65-91,93-95,97-125
 setlocal commentstring=;%s
 setlocal comments=:;
 setlocal comments^=:;;,:;\:,:;;;,:;;;;
