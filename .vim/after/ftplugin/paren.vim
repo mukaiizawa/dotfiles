@@ -20,3 +20,6 @@ setlocal lispwords+=finally
 setlocal lispwords+=function
 setlocal lispwords+=while
 setlocal lispwords+=when
+
+setlocal lispwords+=class
+setlocal lispwords+=method
