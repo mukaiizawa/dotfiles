@@ -180,3 +180,27 @@ htmlと同様にコールバック関数の返り値を用いて値を設定す�
 
 ## 参照
 html()
+
+# ajax
+AJAX通信を実行する。
+
+    $.ajax({
+        url: 'https://foo.com',
+        type: 'POST',
+        headers: {
+            ...
+        },
+        data: {
+            ...
+        },
+        dataType: 'html'
+    })
+    .done(function(data) {
+        alert(JSON.stringify(data));
+    })
+    .fail(function(data) {
+        alert(JSON.stringify(data));
+    })
+    .always(function(data) {
+        alert(JSON.stringify(data));
+    });
