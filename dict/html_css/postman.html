@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      vim: sw=2
+    -->
+    <meta charset="UTF-8">
+    <title>POSTMAN</title>
+    <!-- {{{ -->
+    <style>
+
+body { margin:0 auto; width:90vw; color:#00ff00; background-color:#303030; }
+a, a:visited { color:#00ff00; }
+button { margin:0.5em; }
+header { font-size:1.4em; }
+#wrapper:after { clear:both; }
+#left { width:25%; }
+#right { width:65%; }
+#left, #right {
+  padding:1em;
+  float:left;
+  height:80vh;
+  overflow:scroll;
+  background-color:#303030;
+  border:medium solid #404040;
+}
+.folding { margin:0; padding-left:0; list-style:none; }
+.folding ul { margin:0; padding-left:2em; }
+.folding header { margin:0; }
+.folding header { cursor:pointer; }
+.folding header:hover { color:#e67a45; }
+.folding section { margin:1em; display:none; }
+.folding section div { padding:0.5em; border-bottom:medium solid #404040; }
+.folding section input { width:100%; }
+.folding section label:after { content: "："; }
+
+    </style>
+    <!-- }}} -->
+    <!-- {{{ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+
+var baseURL = 'http://localhost:3000';
+
+function parseResponse(data) {
+  var s = '';
+  for (var key in data) {
+    if (key == 'responseText') {
+      s = data[key];
+      $('#wrapper').replaceWith(s);
+      $('body').append(
+        '<script>' +
+          'alert("An error occured. please reload(CTRL-R)");' +
+        '<\/script>');
+        break;
+    }
+  }
+  $('#result').replaceWith(
+    '<div id="result">'
+    + JSON.stringify(data)
+    + '</div>');
+}
+
+function xGET(url, data) {
+  var query = '';
+  if (data.length != 0) {
+    query = '?';
+    for (var key in data) query += (key + '=' + data[key]);
+  }
+  $.ajax({
+    url: baseURL + url + query,
+    type: 'GET',
+    headers: {
+      Authorization: "Bearer " + $('#bearer').val()
+    },
+    xhrFields: {
+        withCredentials: true
+    },
+    crossDomain: true
+  })
+  .always((data) => {
+    parseResponse(data);
+  });
+}
+
+function _POST(method, url, data) {
+  $.ajax({
+    url: baseURL + url,
+    type: method,
+    headers: {
+      Authorization: "Bearer " + $('#bearer').val()
+    },
+    data: data,
+    dataType: 'json',
+    xhrFields: {
+        withCredentials: true
+    },
+    crossDomain: true
+  })
+  .always((data) => {
+    parseResponse(data);
+  });
+}
+
+function xPOST(url, data) {
+  _POST('POST', url, data);
+}
+
+function xDELETE(url, data) {
+  _POST('DELETE', url, data);
+}
+
+$(function() {
+  $('.folding header').click(function() {
+    $(this).next('.folding section').slideToggle('fast');
+    $('.folding header').not($(this)).next('.folding section').slideUp('fast');
+  });
+  $('[name="xcheckbox"]').click(function() {
+    if ($(this).prop('checked'))
+      $(this).prev().val('1');
+    else
+      $(this).prev().val('0');
+  });
+});
+
+  </script>
+  <!-- }}} -->
+  </head>
+  <body>
+
+    <h1>POSTMAN</h1>
+    <div id='wrapper'>
+
+      <div id='left'>
+
+        <ul class="folding">
+          <!-- GET /products {{{ -->
+
+          <li>
+            <header>GET /products</header>
+            <section id='products_index'>
+              <script>
+$(function() {
+  $('#products_index button').click(function() {
+    xGET('/products', { brand_id: $('#products_index [name="brand_id"]').val() });
+  });
+});
+              </script>
+              <div>
+                <label>brand_id</label>
+                <input type="text" name="brand_id" value='1'/>
+              </div>
+              <button>submit</button>
+            </section>
+          </li>
+
+          <!-- }}} -->
+          <!-- POST /login {{{ -->
+
+          <li>
+            <header>POST /login</header>
+            <section id='login'>
+              <script>
+$(function() {
+  $("#login button").click(function() {
+    xPOST('/login', {
+      user: {
+        email: $('#login [name="email"]').val(),
+        password: $('#login [name="password"]').val()
+      }
+    });
+  });
+});
+              </script>
+              <div>
+                <label>mail addr</label>
+                <input type="text" name="email"/>
+              </div>
+              <div>
+                <label>password</label>
+                <input type="password" name="password"/>
+              </div>
+              <button>submit</button>
+            </section>
+          </li>
+
+          <!-- }}} -->
+        </ul>
+      </div>
+
+      <div id='right'>
+        <header>result</header>
+        <div id='result'></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
