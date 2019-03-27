@@ -1,4 +1,4 @@
-
+" .vimrc
 
 if !has('gui_running')
   if has('win32') || has ('win64')
