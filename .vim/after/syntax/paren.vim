@@ -49,7 +49,7 @@ syn keyword ParenBuiltin symbol-bind
 syn keyword ParenBuiltin throw
 
 " primitive
-syn keyword ParenBuiltin samep
+syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin operator?
 syn keyword ParenBuiltin print
