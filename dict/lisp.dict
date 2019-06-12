@@ -646,6 +646,7 @@ Type simple-string	~/dotfiles/dict/lisp/type/t_smp_st
 Type simple-vector	~/dotfiles/dict/lisp/type/t_smp_ve
 Type standard-char	~/dotfiles/dict/lisp/type/t_std_ch
 Type unsigned-byte	~/dotfiles/dict/lisp/type/t_unsgn_
+Tutorial	~/dotfiles/dict/lisp/tutorial.md
 Variable *, **, ***	~/dotfiles/dict/lisp/variable/v__stst_
 Variable *break-on-signals*	~/dotfiles/dict/lisp/variable/v_break_
 Variable *compile-file-pathname*...	~/dotfiles/dict/lisp/variable/v_cmp_fi
