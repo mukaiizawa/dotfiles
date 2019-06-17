@@ -41,10 +41,10 @@ endfunction
 
 function! s:unite_source.gather_candidates(args, context)
   let s:fileType = &filetype
-  let s:path = $HOME . '/dotfiles/dict/' . s:FuzzyFileType(s:fileType) . '.dict'
+  let s:root = $HOME . '/dotfiles/dict/routes/'
+  let s:path = s:root . s:FuzzyFileType(s:fileType) . '.dict'
   if !filereadable(s:path)
-    call PrintError(printf("Unite help: The file type`%s' is not implemented.", s:fileType))
-    return []
+    let s:path = s:root . 'etc.dict'
   endif
   let s:result = []
   let s:lines = readfile(s:path)
