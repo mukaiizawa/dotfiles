@@ -155,13 +155,13 @@ let g:unite_source_rec_min_cache_files = 100
 let g:unite_source_rec_max_cache_files = 200
 call unite#custom#profile('default', 'context', {
       \   'start_insert' : 1,
-      \   'no_wrap' : 1,
-      \   'prompt' : '> ',
-      \   'marked_icon' : '@',
-      \   'candidate_icon' : '*',
-      \   'direction' : 'topleft',
-      \   'cursor_line_time' : '0.0',
-      \   'cursor_line_highlight' : 'Visual',
+      \   'no_wrap': 1,
+      \   'prompt': '> ',
+      \   'marked_icon': '@',
+      \   'candidate_icon': '*',
+      \   'direction': 'topleft',
+      \   'cursor_line_time': '0.0',
+      \   'cursor_line_highlight': 'Visual',
       \ })
 call unite#custom_default_action('directory', 'vimfiler')
 call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
@@ -184,77 +184,89 @@ let g:vimfiler_readonly_file_icon = 'X'
 let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_tree_indentation = 1
 call vimfiler#custom#profile('default', 'context', {
-      \  'safe' : 0,
-      \  'auto-expand' : 1,
-      \  'auto-cd' : 1,
-      \  'find' : 1,
-      \  'status' : 1,
+      \   'safe': 0,
+      \   'auto-expand': 1,
+      \   'auto-cd': 1,
+      \   'find': 1,
+      \   'status': 1,
       \ })
 
 " quickrun
 let g:quickrun_no_default_key_mappings = 1
 let g:quickrun_config = {
-      \ '_' : {
-      \   'split': 'vertical',
-      \   'outputter/buffer/close_on_empty' :1
-      \ },
-      \ 'c' : {
-      \   'hook/time/enable': 1,
-      \   'type': executable('clang')? 'c/clang':
-      \           executable('gcc')? 'c/gcc': '',
-      \ },
-      \ 'java' : {
-      \   'exec' : ['javac -J-Dfile.encoding=UTF8 %o %s'
-      \              , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'],
-      \   'hook/time/enable': 1,
-      \ },
-      \ 'javascript' : {
-      \   'command': 'cscript',
-      \   'exec': '%c %s',
-      \ },
-      \ 'lisp' : {
-      \   'type': executable('lx86cl64')? 'lisp/ccll':
-      \           executable('wx86cl64')? 'lisp/cclw':
-      \           executable('clisp')? 'lisp/clisp':
-      \           executable('sbcl')? 'lisp/sbcl': '',
-      \   'hook/time/enable': 1,
-      \ },
-      \ 'lisp/sbcl' : {
-      \  'command' : 'sbcl',
-      \  'cmdopt' : '--script',
-      \ },
-      \ 'lisp/ccll' : {
-      \   'command' : 'lx86cl64',
-      \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
-      \ },
-      \ 'lisp/cclw' : {
-      \   'command' : 'wx86cl64',
-      \   'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
-      \ },
-      \ 'lisp/clisp': {
-      \   'command': 'clisp',
-      \ },
-      \ 'markdown' : {
-      \   'command': 'pandoc',
-      \   'exec': '%c %s -t docx -o %s:t:r.docx',
-      \ },
-      \ 'paren' : {
-      \   'command': 'paren',
-      \   'exec': '%c -f%s',
-      \ },
-      \ 'python' : {
-      \   'type' : executable('python3')? 'python/python3': 'python/python2',
-      \ },
-      \ 'python/python3': {
-      \  'command': 'python3',
-      \ },
-      \ 'python/python2': {
-      \   'command': 'python',
-      \ },
-      \ 'xmd': {
-      \   'command': 'xmdrd',
-      \ },
-      \}
+      \   '_': {
+      \     'split': 'vertical',
+      \     'outputter/buffer/close_on_empty':1
+      \   },
+      \   'c': {
+      \     'hook/time/enable': 1,
+      \     'type': executable('clang')? 'c/clang':
+      \             executable('gcc')? 'c/gcc': '',
+      \   },
+      \   'cs': {
+      \     'runmode': 'simple',
+      \     'command': 'csc',
+      \     'exec': [
+      \        '%c /nologo %s > nul'
+      \        , '%s:p:r.exe %a'
+      \        , ':call delete("%S:p:r.exe")'
+      \     ],
+      \     'tempfile': '{tempname()}.cs',
+      \   },
+      \   'java': {
+      \     'exec': [
+      \       'javac -J-Dfile.encoding=UTF8 %o %s'
+      \       , '%c -ea -Dfile.encoding=UTF8 %s:t:r %a'
+      \     ],
+      \     'hook/time/enable': 1,
+      \   },
+      \   'javascript': {
+      \     'command': 'cscript',
+      \     'exec': '%c %s',
+      \   },
+      \   'lisp': {
+      \     'type': executable('lx86cl64')? 'lisp/ccll':
+      \             executable('wx86cl64')? 'lisp/cclw':
+      \             executable('clisp')? 'lisp/clisp':
+      \             executable('sbcl')? 'lisp/sbcl': '',
+      \     'hook/time/enable': 1,
+      \   },
+      \   'lisp/sbcl': {
+      \    'command': 'sbcl',
+      \    'cmdopt': '--script',
+      \   },
+      \   'lisp/ccll': {
+      \     'command': 'lx86cl64',
+      \     'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
+      \   },
+      \   'lisp/cclw': {
+      \     'command': 'wx86cl64',
+      \     'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
+      \   },
+      \   'lisp/clisp': {
+      \     'command': 'clisp',
+      \   },
+      \   'markdown': {
+      \     'command': 'pandoc',
+      \     'exec': '%c %s -t docx -o %s:t:r.docx',
+      \   },
+      \   'paren': {
+      \     'command': 'paren',
+      \     'exec': '%c -f%s',
+      \   },
+      \   'python': {
+      \     'type': executable('python3')? 'python/python3': 'python/python2',
+      \   },
+      \   'python/python3': {
+      \    'command': 'python3',
+      \   },
+      \   'python/python2': {
+      \     'command': 'python',
+      \   },
+      \   'xmd': {
+      \     'command': 'xmdrd',
+      \   },
+      \ }
 
 " indentLine
 let g:indentLine_char = '|'
