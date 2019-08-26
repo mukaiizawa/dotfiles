@@ -1,5 +1,8 @@
 逆引きgit
 
+# remoteリポジトリからclone
+    git clone https://github.com/mukaiizawa/dotfiles dotfiles
+
 # branchの一覧
     git branch -a
 
