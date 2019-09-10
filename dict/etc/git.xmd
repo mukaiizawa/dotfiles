@@ -1,21 +1,17 @@
 逆引きgit
 
-# remoteリポジトリからclone
+# repository
+## clone remote repository
     git clone https://github.com/mukaiizawa/dotfiles dotfiles
 
-# branchの一覧
+# branch
+## display all branches
     git branch -a
 
-# branchを作成
-remoteのbranchからbranchを作成。
-
-    git checkout -b <new_branch> origin/<from_branch>
-
-localのbranchからbranchを作成。
-
-    git checkout <from_branch>
+## create branch
+    git checkout <original_branch>
     git checkout -b <new_branch>
-
-いずれの場合もremoteに登録する場合は別途pushすること。
-
     git push -u origin <branch_name>
+
+## checkout remote branche
+    git checkout -b <local_branch> origin/<remote_branch>
