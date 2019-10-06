@@ -13,5 +13,5 @@
     git checkout -b <new_branch>
     git push -u origin <branch_name>
 
-## checkout remote branche
+## checkout remote branch
     git checkout -b <local_branch> origin/<remote_branch>
