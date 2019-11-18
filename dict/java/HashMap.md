@@ -61,10 +61,18 @@ removeは指定されたキーのマッピングがあればマップから削�
 このマップ内のキー値マッピングの数を返す。
 
 # マップのイテレート
+entrySet()でSetを取得することにより、拡張for文を使用することができる。
+Setのキーと値はそれぞれ`getKey()`、`getValue()`を用いて取得する。
+
     for (Map.Entry<String, Object> entry: map.entrySet()) {
         key = entry.getKey();
         value = entry.getValue();
         ...
     }
-entrySet()でSetを取得することにより、拡張for文を使用することができる。
-Setのキーと値はそれぞれ`getKey()`、`getValue()`を用いて取得する。
+
+keySet()用いてkeyでループすることも可能。
+
+    for (String key : map.keySet()) {
+        key    // access key
+        map.get(key);    // access value
+    }
