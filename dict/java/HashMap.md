@@ -61,7 +61,7 @@ removeは指定されたキーのマッピングがあればマップから削�
 このマップ内のキー値マッピングの数を返す。
 
 # マップのイテレート
-    for(Map.Entry<String, Object> entry: map.entrySet()) {
+    for (Map.Entry<String, Object> entry: map.entrySet()) {
         key = entry.getKey();
         value = entry.getValue();
         ...
