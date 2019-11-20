@@ -22,7 +22,6 @@ syn region ParenQuoted matchgroup=Identifier start="'" end="[ \t();]" contains=A
 syn region ParenQuoted matchgroup=Identifier start="'(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`(" end=")" contains=ALL
-syn region ParenNot matchgroup=ParenBuiltin start="!" end="" contains=ALL
 syn match ParenNumber "\d"
 syn region ParenString start='"' skip='\\.' end='"'
 syn match ParenComment ";.*$" contains=ParenTodo
