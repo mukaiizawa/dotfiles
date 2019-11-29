@@ -178,6 +178,7 @@ syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin inc!
 syn keyword ParenBuiltin integer?
 syn keyword ParenBuiltin is-a?
+syn keyword ParenBuiltin keyword->string
 syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin lambda-body
 syn keyword ParenBuiltin lambda-parameter
