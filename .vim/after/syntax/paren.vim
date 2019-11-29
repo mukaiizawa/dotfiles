@@ -232,6 +232,7 @@ syn keyword ParenBuiltin unless
 syn keyword ParenBuiltin unwind-protect
 syn keyword ParenBuiltin when
 syn keyword ParenBuiltin while
+syn keyword ParenBuiltin with-gensyms
 syn keyword ParenBuiltin write-byte
 syn keyword ParenBuiltin write-string
 syn keyword ParenBuiltin zero?

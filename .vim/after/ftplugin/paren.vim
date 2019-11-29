@@ -13,10 +13,12 @@ setlocal lispwords+=macro
 setlocal lispwords+=lambda
 setlocal lispwords+=try
 setlocal lispwords+=catch
+setlocal lispwords+=basic-catch
 setlocal lispwords+=throw
 
 setlocal lispwords+=function
 setlocal lispwords+=while
+setlocal lispwords+=with-gensyms
 setlocal lispwords+=dotimes
 setlocal lispwords+=dolist
 setlocal lispwords+=when
