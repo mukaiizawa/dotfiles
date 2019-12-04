@@ -164,6 +164,9 @@ Oracle Net Configuration Assistantを用いて設定すると次のような記�
     <alias> -- SQLPlusで使用するエイリアス
     <oracle_sid> -- オラクルのSID
 
+## ファイル読み込み
+    sqlplus -L -S <user>/<pass>@<sid> @<file>
+
 # Oracle Data Pump
 Oracle 10gから導入されたテクノロジー。
 
