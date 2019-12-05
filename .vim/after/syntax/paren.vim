@@ -76,7 +76,6 @@ syn keyword ParenBuiltin truncate
 
 " automatic generated built-in function/macro {{{
 
-syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin +
 syn keyword ParenBuiltin ++
@@ -113,6 +112,7 @@ syn keyword ParenBuiltin bit-shift
 syn keyword ParenBuiltin bit-xor
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin break
+syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin byte-array
 syn keyword ParenBuiltin byte-array->string
 syn keyword ParenBuiltin byte-array-length
@@ -165,6 +165,7 @@ syn keyword ParenBuiltin dec!
 syn keyword ParenBuiltin different?
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
+syn keyword ParenBuiltin ensure-arguments
 syn keyword ParenBuiltin even?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-class
@@ -194,6 +195,7 @@ syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin make-accessor
 syn keyword ParenBuiltin make-method-dispatcher
 syn keyword ParenBuiltin map
+syn keyword ParenBuiltin measure
 syn keyword ParenBuiltin method
 syn keyword ParenBuiltin method?
 syn keyword ParenBuiltin minus?
@@ -216,6 +218,7 @@ syn keyword ParenBuiltin quit
 syn keyword ParenBuiltin read
 syn keyword ParenBuiltin read-byte
 syn keyword ParenBuiltin read-char
+syn keyword ParenBuiltin read-line
 syn keyword ParenBuiltin reduce
 syn keyword ParenBuiltin repl
 syn keyword ParenBuiltin reverse
@@ -230,16 +233,21 @@ syn keyword ParenBuiltin sublist
 syn keyword ParenBuiltin symbol->keyword
 syn keyword ParenBuiltin symbol->string
 syn keyword ParenBuiltin symbol?
+syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin unless
 syn keyword ParenBuiltin unwind-protect
 syn keyword ParenBuiltin when
 syn keyword ParenBuiltin while
 syn keyword ParenBuiltin with-gensyms
+syn keyword ParenBuiltin with-memory-stream
+syn keyword ParenBuiltin with-open-append
+syn keyword ParenBuiltin with-open-read
+syn keyword ParenBuiltin with-open-update
+syn keyword ParenBuiltin with-open-write
 syn keyword ParenBuiltin write-byte
+syn keyword ParenBuiltin write-line
 syn keyword ParenBuiltin write-string
 syn keyword ParenBuiltin zero?
-syn keyword ParenBuiltin measure
-syn keyword ParenBuiltin ensure-arguments
 
 " }}}
 

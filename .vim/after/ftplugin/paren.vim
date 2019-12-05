@@ -16,12 +16,17 @@ setlocal lispwords+=catch
 setlocal lispwords+=basic-catch
 setlocal lispwords+=throw
 
+setlocal lispwords+=dolist
+setlocal lispwords+=dotimes
 setlocal lispwords+=function
+setlocal lispwords+=when
 setlocal lispwords+=while
 setlocal lispwords+=with-gensyms
-setlocal lispwords+=dotimes
-setlocal lispwords+=dolist
-setlocal lispwords+=when
+setlocal lispwords+=with-memory-stream
+setlocal lispwords+=with-open-append
+setlocal lispwords+=with-open-read
+setlocal lispwords+=with-open-update
+setlocal lispwords+=with-open-write
 
 setlocal lispwords+=class
 setlocal lispwords+=method
