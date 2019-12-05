@@ -44,8 +44,8 @@ syn keyword ParenBuiltin if
 syn keyword ParenBuiltin unwind_protect
 syn keyword ParenBuiltin labels
 syn keyword ParenBuiltin goto
-syn keyword ParenBuiltin throw
-syn keyword ParenBuiltin basic_catch
+syn keyword ParenBuiltin basic-throw
+syn keyword ParenBuiltin basic-catch
 syn keyword ParenBuiltin return
 syn keyword ParenBuiltin assert
 
@@ -76,6 +76,7 @@ syn keyword ParenBuiltin truncate
 
 " automatic generated built-in function/macro {{{
 
+syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin +
 syn keyword ParenBuiltin ++
@@ -237,6 +238,8 @@ syn keyword ParenBuiltin with-gensyms
 syn keyword ParenBuiltin write-byte
 syn keyword ParenBuiltin write-string
 syn keyword ParenBuiltin zero?
+syn keyword ParenBuiltin measure
+syn keyword ParenBuiltin ensure-arguments
 
 " }}}
 

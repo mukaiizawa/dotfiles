@@ -252,7 +252,7 @@ let g:quickrun_config = {
       \   },
       \   'paren': {
       \     'command': 'paren',
-      \     'exec': '%c -f%s',
+      \     'exec': '%c %s',
       \   },
       \   'python': {
       \     'type': executable('python3')? 'python/python3': 'python/python2',
