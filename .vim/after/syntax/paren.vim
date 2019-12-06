@@ -94,6 +94,7 @@ syn keyword ParenBuiltin =
 syn keyword ParenBuiltin >
 syn keyword ParenBuiltin >=
 syn keyword ParenBuiltin []
+syn keyword ParenBuiltin address
 syn keyword ParenBuiltin adjacent-satisfy?
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
@@ -191,6 +192,7 @@ syn keyword ParenBuiltin length
 syn keyword ParenBuiltin list
 syn keyword ParenBuiltin list=
 syn keyword ParenBuiltin list?
+syn keyword ParenBuiltin load
 syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin make-accessor
 syn keyword ParenBuiltin make-method-dispatcher
@@ -226,6 +228,7 @@ syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin string+
 syn keyword ParenBuiltin string->byte-array
+syn keyword ParenBuiltin string->keyword
 syn keyword ParenBuiltin string->symbol
 syn keyword ParenBuiltin string=
 syn keyword ParenBuiltin string?
