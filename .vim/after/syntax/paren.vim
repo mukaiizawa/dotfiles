@@ -95,7 +95,6 @@ syn keyword ParenBuiltin >
 syn keyword ParenBuiltin >=
 syn keyword ParenBuiltin []
 syn keyword ParenBuiltin address
-syn keyword ParenBuiltin adjacent-satisfy?
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
 syn keyword ParenBuiltin any-satisfy?
@@ -166,6 +165,7 @@ syn keyword ParenBuiltin dec!
 syn keyword ParenBuiltin different?
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
+syn keyword ParenBuiltin each-adjacent-satisfy?
 syn keyword ParenBuiltin ensure-arguments
 syn keyword ParenBuiltin even?
 syn keyword ParenBuiltin find
@@ -224,6 +224,7 @@ syn keyword ParenBuiltin read-line
 syn keyword ParenBuiltin reduce
 syn keyword ParenBuiltin repl
 syn keyword ParenBuiltin reverse
+syn keyword ParenBuiltin reverse!
 syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin string+
@@ -238,6 +239,7 @@ syn keyword ParenBuiltin symbol->string
 syn keyword ParenBuiltin symbol?
 syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin unless
+syn keyword ParenBuiltin unsigned-integer?
 syn keyword ParenBuiltin unwind-protect
 syn keyword ParenBuiltin when
 syn keyword ParenBuiltin while
