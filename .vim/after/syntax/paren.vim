@@ -161,7 +161,6 @@ syn keyword ParenBuiltin class-exists?
 syn keyword ParenBuiltin cons?
 syn keyword ParenBuiltin continue
 syn keyword ParenBuiltin copy-list
-syn keyword ParenBuiltin dec!
 syn keyword ParenBuiltin different?
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
@@ -178,7 +177,6 @@ syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin for
 syn keyword ParenBuiltin function
 syn keyword ParenBuiltin identity
-syn keyword ParenBuiltin inc!
 syn keyword ParenBuiltin integer?
 syn keyword ParenBuiltin is-a?
 syn keyword ParenBuiltin keyword->string
