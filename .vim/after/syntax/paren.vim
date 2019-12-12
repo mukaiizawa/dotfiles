@@ -82,6 +82,7 @@ syn keyword ParenBuiltin ++
 syn keyword ParenBuiltin -
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
+syn keyword ParenBuiltin ->string
 syn keyword ParenBuiltin .
 syn keyword ParenBuiltin ..
 syn keyword ParenBuiltin /
@@ -165,7 +166,7 @@ syn keyword ParenBuiltin different?
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
 syn keyword ParenBuiltin each-adjacent-satisfy?
-syn keyword ParenBuiltin ensure-arguments
+syn keyword ParenBuiltin ensure-argument
 syn keyword ParenBuiltin even?
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-class
@@ -188,6 +189,7 @@ syn keyword ParenBuiltin last
 syn keyword ParenBuiltin last-cons
 syn keyword ParenBuiltin length
 syn keyword ParenBuiltin list
+syn keyword ParenBuiltin list->string
 syn keyword ParenBuiltin list=
 syn keyword ParenBuiltin list?
 syn keyword ParenBuiltin load
@@ -248,7 +250,7 @@ syn keyword ParenBuiltin with-open-read
 syn keyword ParenBuiltin with-open-update
 syn keyword ParenBuiltin with-open-write
 syn keyword ParenBuiltin write-byte
-syn keyword ParenBuiltin write-line
+syn keyword ParenBuiltin write-new-line
 syn keyword ParenBuiltin write-string
 syn keyword ParenBuiltin zero?
 
