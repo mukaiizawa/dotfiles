@@ -14,11 +14,12 @@ Interface Path	~/dotfiles/dict/java/Path.md
 Interface Stream	~/dotfiles/dict/java/Stream.md
 JSF Converter	~/dotfiles/dict/java/Converter.md
 Snippets AheadReader	~/dotfiles/dict/java/AheadReader.java
+Snippets DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
 Snippets DateUtil	~/dotfiles/dict/java/DateUtil.java
 Snippets FileUtil	~/dotfiles/dict/java/FileUtil.java
 Snippets MailUtil	~/dotfiles/dict/java/MailUtil.java
 Snippets Point	~/dotfiles/dict/java/Point.java
-Snippets ResourceUtil	~/dotfiles/dict/java/ResourceUtil.java
+Snippets ResourceManager	~/dotfiles/dict/java/ResourceManager.java
 Snippets StringUtil	~/dotfiles/dict/java/StringUtil.java
 Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
 Snippets Util	~/dotfiles/dict/java/Util.java
