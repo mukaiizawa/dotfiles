@@ -83,7 +83,6 @@ syn keyword ParenBuiltin -
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
 syn keyword ParenBuiltin ->string
-syn keyword ParenBuiltin .
 syn keyword ParenBuiltin ..
 syn keyword ParenBuiltin /
 syn keyword ParenBuiltin //
@@ -104,6 +103,14 @@ syn keyword ParenBuiltin append-atom
 syn keyword ParenBuiltin array-copy
 syn keyword ParenBuiltin array-length
 syn keyword ParenBuiltin array?
+syn keyword ParenBuiltin ascii->digit
+syn keyword ParenBuiltin ascii-alpha?
+syn keyword ParenBuiltin ascii-digit?
+syn keyword ParenBuiltin ascii-lower
+syn keyword ParenBuiltin ascii-space?
+syn keyword ParenBuiltin ascii-upper
+syn keyword ParenBuiltin assoc
+syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin atom?
 syn keyword ParenBuiltin basic-catch
 syn keyword ParenBuiltin begin0
@@ -111,6 +118,7 @@ syn keyword ParenBuiltin bit-and
 syn keyword ParenBuiltin bit-or
 syn keyword ParenBuiltin bit-shift
 syn keyword ParenBuiltin bit-xor
+syn keyword ParenBuiltin boot
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin break
 syn keyword ParenBuiltin butlast
@@ -151,12 +159,6 @@ syn keyword ParenBuiltin cddddr
 syn keyword ParenBuiltin cdddr
 syn keyword ParenBuiltin cddr
 syn keyword ParenBuiltin cdr!
-syn keyword ParenBuiltin char->digit
-syn keyword ParenBuiltin char-alpha?
-syn keyword ParenBuiltin char-digit?
-syn keyword ParenBuiltin char-lower
-syn keyword ParenBuiltin char-space?
-syn keyword ParenBuiltin char-upper
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin class-exists?
 syn keyword ParenBuiltin cons?
@@ -168,6 +170,8 @@ syn keyword ParenBuiltin dotimes
 syn keyword ParenBuiltin each-adjacent-satisfy?
 syn keyword ParenBuiltin ensure-argument
 syn keyword ParenBuiltin even?
+syn keyword ParenBuiltin expand-macro
+syn keyword ParenBuiltin expand-macro-all
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin find-class
 syn keyword ParenBuiltin find-cons
@@ -177,6 +181,7 @@ syn keyword ParenBuiltin find-method
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin for
 syn keyword ParenBuiltin function
+syn keyword ParenBuiltin global-method-sym
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin integer?
 syn keyword ParenBuiltin is-a?
