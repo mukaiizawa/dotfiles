@@ -183,9 +183,11 @@ syn keyword ParenBuiltin for
 syn keyword ParenBuiltin function
 syn keyword ParenBuiltin global-method-sym
 syn keyword ParenBuiltin identity
+syn keyword ParenBuiltin import
 syn keyword ParenBuiltin integer?
 syn keyword ParenBuiltin is-a?
 syn keyword ParenBuiltin keyword->string
+syn keyword ParenBuiltin keyword->symbol
 syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin lambda-body
 syn keyword ParenBuiltin lambda-parameter
@@ -231,6 +233,7 @@ syn keyword ParenBuiltin repl
 syn keyword ParenBuiltin reverse
 syn keyword ParenBuiltin reverse!
 syn keyword ParenBuiltin same?
+syn keyword ParenBuiltin shell
 syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin string+
 syn keyword ParenBuiltin string->byte-array
