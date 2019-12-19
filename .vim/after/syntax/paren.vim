@@ -93,15 +93,12 @@ syn keyword ParenBuiltin <=
 syn keyword ParenBuiltin =
 syn keyword ParenBuiltin >
 syn keyword ParenBuiltin >=
-syn keyword ParenBuiltin []
 syn keyword ParenBuiltin address
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin and
 syn keyword ParenBuiltin any-satisfy?
 syn keyword ParenBuiltin append
 syn keyword ParenBuiltin append-atom
-syn keyword ParenBuiltin array-copy
-syn keyword ParenBuiltin array-length
 syn keyword ParenBuiltin array?
 syn keyword ParenBuiltin ascii->digit
 syn keyword ParenBuiltin ascii-alpha?
@@ -124,8 +121,11 @@ syn keyword ParenBuiltin break
 syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin byte-array
 syn keyword ParenBuiltin byte-array->string
+syn keyword ParenBuiltin byte-array-copy
+syn keyword ParenBuiltin byte-array-length
 syn keyword ParenBuiltin byte-array-length
 syn keyword ParenBuiltin byte-array?
+syn keyword ParenBuiltin byte-array[]
 syn keyword ParenBuiltin byte?
 syn keyword ParenBuiltin caaaar
 syn keyword ParenBuiltin caaadr
@@ -238,7 +238,9 @@ syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin string+
 syn keyword ParenBuiltin string->byte-array
 syn keyword ParenBuiltin string->keyword
+syn keyword ParenBuiltin string->list
 syn keyword ParenBuiltin string->symbol
+syn keyword ParenBuiltin string-index
 syn keyword ParenBuiltin string=
 syn keyword ParenBuiltin string?
 syn keyword ParenBuiltin sublist
