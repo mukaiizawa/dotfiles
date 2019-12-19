@@ -161,6 +161,7 @@ syn keyword ParenBuiltin cddr
 syn keyword ParenBuiltin cdr!
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin class-exists?
+syn keyword ParenBuiltin concat
 syn keyword ParenBuiltin cons?
 syn keyword ParenBuiltin continue
 syn keyword ParenBuiltin copy-list
@@ -235,7 +236,6 @@ syn keyword ParenBuiltin reverse!
 syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin shell
 syn keyword ParenBuiltin special-operator?
-syn keyword ParenBuiltin string+
 syn keyword ParenBuiltin string->byte-array
 syn keyword ParenBuiltin string->keyword
 syn keyword ParenBuiltin string->list
@@ -243,7 +243,7 @@ syn keyword ParenBuiltin string->symbol
 syn keyword ParenBuiltin string-index
 syn keyword ParenBuiltin string=
 syn keyword ParenBuiltin string?
-syn keyword ParenBuiltin sublist
+syn keyword ParenBuiltin subseq
 syn keyword ParenBuiltin symbol->keyword
 syn keyword ParenBuiltin symbol->string
 syn keyword ParenBuiltin symbol?
