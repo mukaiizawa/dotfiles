@@ -33,21 +33,21 @@ syn match ParenTodo "\c\<\(todo\|note\)\>" contained
 syn match ParenError ")"
 
 " special -- see special.wk
-syn keyword ParenBuiltin let
-syn keyword ParenBuiltin dynamic
-syn keyword ParenBuiltin symbol_bind
-syn keyword ParenBuiltin begin
-syn keyword ParenBuiltin macro
-syn keyword ParenBuiltin lambda
-syn keyword ParenBuiltin quote
-syn keyword ParenBuiltin if
-syn keyword ParenBuiltin unwind_protect
-syn keyword ParenBuiltin labels
-syn keyword ParenBuiltin goto
-syn keyword ParenBuiltin basic-throw
-syn keyword ParenBuiltin basic-catch
-syn keyword ParenBuiltin return
+syn keyword ParenBuiltin <-
 syn keyword ParenBuiltin assert
+syn keyword ParenBuiltin basic-catch
+syn keyword ParenBuiltin basic-throw
+syn keyword ParenBuiltin begin
+syn keyword ParenBuiltin dynamic
+syn keyword ParenBuiltin goto
+syn keyword ParenBuiltin if
+syn keyword ParenBuiltin labels
+syn keyword ParenBuiltin lambda
+syn keyword ParenBuiltin let
+syn keyword ParenBuiltin macro
+syn keyword ParenBuiltin quote
+syn keyword ParenBuiltin return
+syn keyword ParenBuiltin unwind-protect
 
 " built-in -- see prim.wk
 syn keyword ParenBuiltin apply
@@ -88,7 +88,6 @@ syn keyword ParenBuiltin /
 syn keyword ParenBuiltin //
 syn keyword ParenBuiltin /=
 syn keyword ParenBuiltin <
-syn keyword ParenBuiltin <-
 syn keyword ParenBuiltin <=
 syn keyword ParenBuiltin =
 syn keyword ParenBuiltin >
@@ -223,6 +222,7 @@ syn keyword ParenBuiltin operator?
 syn keyword ParenBuiltin or
 syn keyword ParenBuiltin plus?
 syn keyword ParenBuiltin pop!
+syn keyword ParenBuiltin primitive
 syn keyword ParenBuiltin push!
 syn keyword ParenBuiltin quit
 syn keyword ParenBuiltin read
@@ -235,6 +235,7 @@ syn keyword ParenBuiltin reverse
 syn keyword ParenBuiltin reverse!
 syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin shell
+syn keyword ParenBuiltin special-operator
 syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin string->byte-array
 syn keyword ParenBuiltin string->keyword
