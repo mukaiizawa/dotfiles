@@ -117,6 +117,7 @@ syn keyword ParenBuiltin bit-xor
 syn keyword ParenBuiltin boot
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin break
+syn keyword ParenBuiltin built-in-function
 syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin byte-array
 syn keyword ParenBuiltin byte-array->string
@@ -222,7 +223,6 @@ syn keyword ParenBuiltin operator?
 syn keyword ParenBuiltin or
 syn keyword ParenBuiltin plus?
 syn keyword ParenBuiltin pop!
-syn keyword ParenBuiltin primitive
 syn keyword ParenBuiltin push!
 syn keyword ParenBuiltin quit
 syn keyword ParenBuiltin read

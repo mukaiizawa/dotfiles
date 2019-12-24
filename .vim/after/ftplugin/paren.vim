@@ -15,11 +15,11 @@ setlocal lispwords+=try
 setlocal lispwords+=catch
 setlocal lispwords+=basic-catch
 
+setlocal lispwords+=built-in-function
 setlocal lispwords+=dolist
 setlocal lispwords+=dotimes
 setlocal lispwords+=for
 setlocal lispwords+=function
-setlocal lispwords+=primitive
 setlocal lispwords+=special-operator
 setlocal lispwords+=unless
 setlocal lispwords+=when
