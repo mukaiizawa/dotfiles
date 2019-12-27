@@ -82,7 +82,6 @@ syn keyword ParenBuiltin ++
 syn keyword ParenBuiltin -
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin ->list
-syn keyword ParenBuiltin ->string
 syn keyword ParenBuiltin ..
 syn keyword ParenBuiltin /
 syn keyword ParenBuiltin //
@@ -239,6 +238,7 @@ syn keyword ParenBuiltin same?
 syn keyword ParenBuiltin shell
 syn keyword ParenBuiltin special-operator
 syn keyword ParenBuiltin special-operator?
+syn keyword ParenBuiltin string
 syn keyword ParenBuiltin string->byte-array
 syn keyword ParenBuiltin string->keyword
 syn keyword ParenBuiltin string->list
