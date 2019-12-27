@@ -105,6 +105,7 @@ syn keyword ParenBuiltin ascii-digit?
 syn keyword ParenBuiltin ascii-lower
 syn keyword ParenBuiltin ascii-space?
 syn keyword ParenBuiltin ascii-upper
+syn keyword ParenBuiltin assert-error
 syn keyword ParenBuiltin assoc
 syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin atom?
@@ -117,7 +118,8 @@ syn keyword ParenBuiltin bit-xor
 syn keyword ParenBuiltin boot
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin break
-syn keyword ParenBuiltin built-in-function
+syn keyword ParenBuiltin builtin-function
+syn keyword ParenBuiltin builtin-name
 syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin byte-array
 syn keyword ParenBuiltin byte-array->string
@@ -182,6 +184,7 @@ syn keyword ParenBuiltin find-method
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin for
 syn keyword ParenBuiltin function
+syn keyword ParenBuiltin function?
 syn keyword ParenBuiltin global-method-sym
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin import
@@ -192,7 +195,6 @@ syn keyword ParenBuiltin keyword->symbol
 syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin lambda-body
 syn keyword ParenBuiltin lambda-parameter
-syn keyword ParenBuiltin lambda?
 syn keyword ParenBuiltin last
 syn keyword ParenBuiltin last-cons
 syn keyword ParenBuiltin length

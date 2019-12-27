@@ -15,7 +15,7 @@ setlocal lispwords+=try
 setlocal lispwords+=catch
 setlocal lispwords+=basic-catch
 
-setlocal lispwords+=built-in-function
+setlocal lispwords+=builtin-function
 setlocal lispwords+=dolist
 setlocal lispwords+=dotimes
 setlocal lispwords+=for
