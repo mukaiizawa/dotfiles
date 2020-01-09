@@ -2,6 +2,10 @@
 CD /D %~DP0
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-SET VAR=hello world.
+ECHO start: %DATE% %TIME%
 
+SET VAR=hello world.
 ECHO !VAR!
+
+ECHO end: %DATE% %TIME%
+PAUSE
