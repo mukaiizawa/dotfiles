@@ -20,6 +20,7 @@ setlocal lispwords+=dolist
 setlocal lispwords+=dotimes
 setlocal lispwords+=for
 setlocal lispwords+=function
+setlocal lispwords+=global-symbol
 setlocal lispwords+=special-operator
 setlocal lispwords+=unless
 setlocal lispwords+=when
