@@ -71,21 +71,51 @@ public class DatabaseManager {
       env = new Env(sid);
       env.setConn(DriverManager.getConnection(
             env.getUrl(), env.getUser(), env.getPassword()));
+      env.getConn().setAutoCommit(false);
     } catch (ClassNotFoundException e) {
-      throw new IllegalStateException("オラクルドライバーがロードできませんでした。");
+      throw new IllegalStateException("could not load driver");
     } catch (SQLException e) {
-      throw new IllegalStateException("データベースに接続できませんでした。");
+      throw new IllegalStateException("could not connect database");
     }
   }
 
-  public static DatabaseManager getCombiInstance() {
+  public static DatabaseManager getInstance1() {
     if (sid1 == null) return sid1 = new DatabaseManager("sid1");
     return sid1;
   }
 
-  public static DatabaseManager getLecsInstance() {
+  public static DatabaseManager getInstance2() {
     if (sid2 == null) return sid2 = new DatabaseManager("sid2");
     return sid2;
+  }
+
+  public void commit() {
+    try {
+      env.getConn().commit();
+    } catch (SQLException e) {
+    }
+  }
+
+  public void rollback() {
+    try {
+      env.getConn().rollback();
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public void close() {
+    try {
+      env.getConn().close();
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public void execute(String query) throws SQLException {
+    Statement stmt = env.getConn().createStatement();
+    stmt.executeUpdate(query);
+    stmt.close();
   }
 
   private Map<String, String> getRecord(String query) {
@@ -112,7 +142,7 @@ public class DatabaseManager {
       return records;
     } catch (SQLException e) {
       e.printStackTrace(System.out);
-      throw new IllegalStateException("検索処理に失敗しました。");
+      throw new IllegalStateException("getRecords failed");
     }
   }
 
