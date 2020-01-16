@@ -35,8 +35,8 @@ syn match ParenError ")"
 " special -- see special.wk
 syn keyword ParenBuiltin <-
 syn keyword ParenBuiltin assert
-syn keyword ParenBuiltin basic-catch
-syn keyword ParenBuiltin basic-throw
+syn keyword ParenBuiltin catch
+syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin begin
 syn keyword ParenBuiltin dynamic
 syn keyword ParenBuiltin goto
@@ -185,6 +185,7 @@ syn keyword ParenBuiltin for
 syn keyword ParenBuiltin function
 syn keyword ParenBuiltin function?
 syn keyword ParenBuiltin global-method-sym
+syn keyword ParenBuiltin global-symbol
 syn keyword ParenBuiltin identity
 syn keyword ParenBuiltin import
 syn keyword ParenBuiltin integer?
