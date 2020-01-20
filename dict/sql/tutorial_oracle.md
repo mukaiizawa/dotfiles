@@ -3,6 +3,11 @@ Oracle tutorial
 # 概要
 Oracleデータベース固有の覚書をまとめる。
 
+# ログファイル
+12cでは次のパスにログが出力される。
+
+    oracle/gdiag/rdbms/<SID>/<SID>/trace/<SID>_xxx.trc
+
 # 起動
 ホストマシンでSQLPlusを起動して実行する。
     SQLPlus / AS SYSDBA
