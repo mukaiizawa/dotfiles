@@ -17,7 +17,6 @@ hi def link XMDDelim Delimiter
 hi def link XMDList Structure
 hi def link XMDQuote Comment
 hi def link XMDTableSep Statement
-hi def link XMDTitle title
-
+hi def link XMDTitle Title
 
 let b:current_syntax = "xmd"
