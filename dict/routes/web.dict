@@ -8,4 +8,4 @@ Recipe open window	~/dotfiles/dict/web/open_window.html
 Recipe selector	~/dotfiles/dict/web/selector.md
 Recipe width height	~/dotfiles/dict/web/width_height.md
 Template	~/dotfiles/dict/web/template.html
-jQuery tutorial	~/dotfiles/dict/web/jquery.html
+jQuery tutorial	~/dotfiles/dict/web/jquery.md
