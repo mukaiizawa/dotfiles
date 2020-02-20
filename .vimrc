@@ -75,6 +75,7 @@ inoremap <C-k> <C-x><C-u>
 inoremap <C-l> <C-n>
 inoremap <Tab> <C-v><Tab>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
 nnoremap ( {
 nnoremap ) }
 nnoremap <C-Insert> "*y
@@ -93,10 +94,10 @@ nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <Space>w :set wrap!<CR>
 nnoremap <silent><Space>h :call MoveLeftEnd()<CR>
 nnoremap <silent><Space>l :call MoverRightEnd()<CR>
-nnoremap <silent><Space>s :call ToggleShiftWidth()<CR>
+nnoremap <silent><Space>s :vs<CR>:terminal ++curwin<CR>
+nnoremap <silent><Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap <silent>sq :<C-u>q<CR>
 nnoremap Q <NOP>
@@ -112,6 +113,7 @@ nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
 nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap gf :vs<CR>gf
 nnoremap j gj
 nnoremap k gk
 nnoremap s  <NOP>
@@ -134,8 +136,9 @@ nnoremap sr <C-w>r
 nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sv <C-w>v
-nnoremap sw :vs<CR>:terminal ++curwin<CR>
+
 tnoremap <Esc> <C-w>N
+
 vnoremap ( {
 vnoremap ) }
 vnoremap / y/<C-r>"<CR>

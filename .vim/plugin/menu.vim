@@ -101,6 +101,14 @@ let g:unite_source_menu_menus.Format = {
       \
       \ }
 
+let g:unite_source_menu_menus.ShiftWidth = {
+      \  "command_candidates" : [
+      \      ["2", "setlocal shiftwidth=2"],
+      \      ["4", "setlocal shiftwidth=4"],
+      \      ["8"    , "setlocal shiftwidth=8"]
+      \  ]
+      \ }
+
 let g:unite_source_menu_menus.Substitute = {
       \  "command_candidates" : [
       \      ["Remove ", "%s///g"],
