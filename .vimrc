@@ -11,10 +11,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/neomru.vim'
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
@@ -136,6 +134,7 @@ nnoremap sr <C-w>r
 nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sv <C-w>v
+nnoremap sw :vs<CR>:terminal ++curwin<CR>
 vnoremap ( {
 vnoremap ) }
 vnoremap / y/<C-r>"<CR>
@@ -295,7 +294,6 @@ nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
 nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nnoremap <silent>mru :<C-u>Unite file_mru<CR>
-nnoremap <silent>ms :<C-u>VimShellBufferDir<CR>
 vnoremap <silent>gco :ContinuousNumber<CR>
 
 nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
