@@ -135,6 +135,7 @@ nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sv <C-w>v
 nnoremap sw :vs<CR>:terminal ++curwin<CR>
+tnoremap <Esc> <C-w>N
 vnoremap ( {
 vnoremap ) }
 vnoremap / y/<C-r>"<CR>
