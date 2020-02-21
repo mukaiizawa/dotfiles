@@ -96,7 +96,7 @@ nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
 nnoremap <silent><Space>h :call MoveLeftEnd()<CR>
 nnoremap <silent><Space>l :call MoverRightEnd()<CR>
-nnoremap <silent><Space>s :vs<CR>:terminal ++curwin<CR>
+nnoremap <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
 nnoremap <silent><Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
 nnoremap <silent>sq :<C-u>q<CR>
