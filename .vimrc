@@ -298,7 +298,6 @@ nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
 nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nnoremap <silent>mru :<C-u>Unite file_mru<CR>
-vnoremap <silent>gco :ContinuousNumber<CR>
 
 nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
 
