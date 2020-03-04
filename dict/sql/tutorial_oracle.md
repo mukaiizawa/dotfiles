@@ -154,6 +154,14 @@ Oracleでは、表制約は次のテーブルから確認可能。
 # SQLPlus
 SQLPlusはクライアントからサーバに接続するツールである。
 
+## リスナーを経由しない接続
+DBサーバなど、直接ログインできる環境においては、リスナーを経由せずに接続可能。
+
+ただし、環境変数`ORACLE_HOME`が設定されている必要がある。
+
+    set oracle_home=xxx
+    sqlplus system/<pass>
+
 ## 接続設定
 クライアントから接続するときの識別子は'tnsnames.ora'で管理されている。
     {oracle_home}/product/{version}/client_1/network/admin/tnsnames.ora
