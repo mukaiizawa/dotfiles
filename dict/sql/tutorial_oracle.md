@@ -28,16 +28,19 @@ Oracleには初期化パラメータを指定するファイルが二種類存�
 
 ## PFILE/SPFILEの確認
 次のSQLを実行するとSPFILEが使用されている場合は、結果にその場所が表示される。
+
     SHOW PARAMETER PFILE
     SHOW PARAMETER SPFILE
 
 ## PFILE/SPFILEの作成
 PFILE(SPFILE)を作成するには次の方法がある。
+
 - エディタで編集(PFILE)
 - SPFILE(PFILE)から作成
 - メモリから作成
 
 PFILE(SPFILE)を作成するには次の書式を用いる。
+
     CREATE <dest> = ' <dest_path> ' FROM { MEMORY | <src> } = ' <src_path> ' };
     <dest> ::= { PFILE | SPFILE }
     <src> ::= { SPFILE | PFILE }
@@ -73,26 +76,32 @@ CASCADE句を付けるとユーザに紐づくオブジェクトも同時に削�
 
 ## パスワード
 ### パスワードの更新
+
     ALTER USER <user> IDENTIFIED BY <password>;
 
 ### 管理ユーザのパスワード更新
 管理ユーザのパスワード更新はOS認証によるログインを行う必要がある。
+
     SET ORACLE_SID=<oracle_sid>
     SQLPLUS / AS SYSDBA
     SQL> ALTER USER SYSTEM IDENTIFIED BY <password>;
     SQL> ALTER USER SYS IDENTIFIED BY <password>;
 
 ### パスワードの無期限化
-ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+
+    ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 
 ### パスワードの大文字小文字の無視
-ALTER SYSTEM SET SEC_CASE_SENSITIVE_LOGON=FALSE SCOPE=BOTH;
+
+    ALTER SYSTEM SET SEC_CASE_SENSITIVE_LOGON=FALSE SCOPE=BOTH;
 
 ## ユーザのロックの確認
 次のSQLでユーザがロックされているか確認ができる。
+
     SELECT USERNAME, ACCOUNT_STATUS, FROM DBA_USERS WHERE USERNAME = ' <user_name> ';
 
 ## ユーザのロックの解除
+
     ALTER USER <user_name> ACCOUNT UNLOCK;
 
 # テーブル
@@ -106,6 +115,7 @@ OracleにはOracleのオブジェクトを管理するテーブルがある。
     DBA_TAB_COLUMNS  データベース内すべてのオブジェクト
 
 これらのテーブルに共通の、主要な列を示す。
+
     列名            説明
     ----------------------------------------------------------------------
     OWNER         所有者
@@ -144,6 +154,7 @@ Oracleでは、表制約は次のテーブルから確認可能。
 
 ## テーブル定義の更新
 テーブルの列の追加、更新はALTER文を使用する。
+
     <query> ::= ALTER TABLE <table_name> { ADD | MODIFY } (
                     <expr>
                     [, <expr>] ...
@@ -164,11 +175,13 @@ DBサーバなど、直接ログインできる環境においては、リスナ
 
 ## 接続設定
 クライアントから接続するときの識別子は'tnsnames.ora'で管理されている。
-    {oracle_home}/product/{version}/client_1/network/admin/tnsnames.ora
+
+    <oracle_home>/product/<version>/client_1/network/admin/tnsnames.ora
 
 サンプルファイルが同ディレクトリ内のsampleディレクトリ内にある。
 
 Oracle Net Configuration Assistantを用いて設定すると次のような記述が追加される。
+
     <alias> =
       (DESCRIPTION =
         (ADDRESS_LIST =
@@ -178,6 +191,7 @@ Oracle Net Configuration Assistantを用いて設定すると次のような記�
     <oracle_sid> -- オラクルのSID
 
 ## ファイル読み込み
+
     sqlplus -L -S <user>/<pass>@<sid> @<file>
 
 # Oracle Data Pump
@@ -186,6 +200,7 @@ Oracle 10gから導入されたテクノロジー。
 論理バックアップの取得やデータベース間のデータ移動を可能にする。
 
 Oracle Data Pumpを使用する作業項目は次の通り。
+
 - 移行元
   - ダンプファイルをエクスポートするフォルダを作成
   - ディレクトリオブジェクトの作成
@@ -200,27 +215,33 @@ Oracle Data Pumpを使用する作業項目は次の通り。
 ## ディレクトリオブジェクトの作成と権限の付与
 Oracle Data Pumpを使用するにはディレクトリオブジェクトの作成と権限の付与が必要になる。
 
-'DATA_PUMP_DIR'というディレクトリオブジェクトを作成してユーザ<user>に権限を付与する例を示す。
+`DATA_PUMP_DIR`というディレクトリオブジェクトを作成してユーザ<user>に権限を付与する例を示す。
+
     CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS 'C:\app\oracle\admin\dpdump';
     GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO <user>;
 
 次のSQLで定義されているディレクトリオブジェクトを確認できる。
+
     SELECT DIRECTORY_NAME, DIRECTORY_PATH FROM ALL_DIRECTORIES;
 
 ## データのエクスポート
 あるスキーマをエクスポートする例を示す。
+
     expdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema>
 
 ## データのインポート
 先にエクスポートしたダンプファイルをインポートする例を示す。
+
     impdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema> NOLOGFILE=y
 
 ## オブジェクトのリビルド
 次のSQLで無効なオブジェクトがないか確認する。
+
     SELECT OWNER, OBJECT_TYPE, STATUS, OBJECT_NAME FROM ALL_OBJECTS WHERE STATUS='INVALID';
 
-無効なオブジェクトがある場合は次のファンクションを実行する。
-    $ SQLPlus / as sysdba
+無効なオブジェクトがある場合は次のクエリを実行する。
+
+    $SQLPlus / as sysdba
     SQL> CALL UTL_RECOMP.RECOMP_SERIAL('NEW_ONE');
 
 ### インポート先の変更
@@ -252,3 +273,28 @@ Oracle Data Pumpを使用するにはディレクトリオブジェクトの作�
                 CONTENT=all(デフォルト) 表のデータと定義の両方
     NOLOGFILE   NOLOGFILE=y で、ログファイルの出力を行わない
     EXCLUDE     一部のオブジェクトを除く
+
+# ホストのIPアドレスの変更手順
+OracleデータベースをインストールしたホストのIPアドレスを変更する一例を示す。
+
+## spfileの修正
+spfile内にホストのIPアドレスを保持していることがあるため次の手順で修正を行う。
+
+現在のspfileの場所を取得し、spfileからpfileの作成。
+
+    sqlplus / as sysdba
+    SELECT VALUE FROM V$SYSTEM_PARAMETER WHERE NAME = 'spfile';
+    CREATE PFILE='<spfile_dir>\initORCL.ORA' FROM SPFILE;
+
+pfileをテキストエディタで編集し、pfileからspfileを生成する。
+
+    CREATE SPFILE='<spfile>' FROM PFILE='<spfile_dir>\initORCL.ora';
+
+## oraファイルの変更
+以下の場所のファイルのIPアドレスを修正する。
+
+    <oracle_home>\NETWORK\ADMIN\listener.ora
+    <oracle_home>\NETWORK\ADMIN\tnsnames.ora
+    <oracle_home>\NETWORK\ADMIN\sqlnet.ora
+
+Oracleのサービスを再起動して、リスナーを介した接続が可能になっていれば成功である。
