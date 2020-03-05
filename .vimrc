@@ -148,6 +148,7 @@ vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
 vnoremap <Space>l $
+vnoremap gzc :'<,'>call Xfold()<CR>
 vnoremap j gj
 vnoremap k gk
 
