@@ -34,38 +34,46 @@ Function toPDFPath (file)
   Dim pdf
   pdf = Left(file, Len(file) - Len(fso.GetExtensionName(file))) & "pdf"
   If fso.FileExists(pdf) Then
-    On Error Resume Next
     Xprint("remove:" & pdf)
     Call fso.DeleteFile(pdf)
-    If Err.Number > 0 Then
-      Xerror("could not delete already existed pdf file '" & pdf & "'")
-      Err.Clear
-    End If
-    On Error GoTo 0
   End If
   toPDFPath = pdf
 End Function
 
 Sub WordToPDF(file)
+  On Error Resume Next
   Dim f
   Set f = word.Documents.Open(file.path, , True)
-  Call word.ActiveDocument.ExportAsFixedFormat(toPDFPath(file), _
-    17, False)
+  Call word.ActiveDocument.ExportAsFixedFormat(toPDFPath(file), 17, False)
   Call f.Close(.0)
+  If Err.Number > 0 Then
+    Xerror("failed:" & file.name)
+    Err.Clear
+  End If
 End Sub
 
 Sub ExcelToPDF(file)
+  On Error Resume Next
   Dim f
   Set f = excel.Workbooks.Open(file.path)
   Call f.ExportAsFixedFormat(0, toPDFPath(file), 0)
   Call f.Close(False)
+  If Err.Number > 0 Then
+    Xerror("failed:" & file.name)
+    Err.Clear
+  End If
 End Sub
 
 Sub PowerPointToPDF(file)
+  On Error Resume Next
   Dim f
   Set f = ppt.Presentations.Open(file.path, True, False, False)
   Call f.SaveAs(toPDFPath(file), 32, False)
   Call f.Close
+  If Err.Number > 0 Then
+    Xerror("failed:" & file.name)
+    Err.Clear
+  End If
 End Sub
 
 Sub toPDF(folder)
