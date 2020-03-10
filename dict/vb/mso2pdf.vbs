@@ -1,21 +1,27 @@
 ' Microsoft Office to PDF
-'
-' Usage: cscript mso2pdf.vbs [OPTION]
-'   -r -- recursive
 
 Option Explicit
 
+'option
+Dim isRecursive
+
+' global variable
 Dim fso
 Dim word
 Dim excel
 Dim ppt
+
+Sub Usage()
+  Xprint("Usage: cscript mso2pdf.vbs [OPTION]")
+  Xprint("  -r execute recursively")
+End Sub
 
 Sub Xprint(msg)
   WScript.StdOut.Write(msg & vbCrLf)
 End Sub
 
 Sub Xerror(msg)
-  WScript.StdErr.Write("error:" & msg & vbCrLf)
+  WScript.StdErr.Write(msg & vbCrLf)
 End Sub
 
 Function toPDFPath (file)
@@ -55,7 +61,7 @@ Sub PowerPointToPDF(file)
   Call f.SaveAs(toPDFPath(file), 32, False)
 End Sub
 
-Sub toPDF(folder, isRecur)
+Sub toPDF(folder)
   Dim file
   For Each file In folder.files
     If (file.Attributes And 2) = 0 Then
@@ -74,11 +80,27 @@ Sub toPDF(folder, isRecur)
       End Select
     End If
   Next 
-  If isRecur Then
+  If isRecursive Then
     For Each file In folder.subfolders
-      Call toPDF(file, True)
+      Call toPDF(file)
     Next
   End If
+End Sub
+
+Sub ParseArgs()
+  isRecursive = False
+  If WScript.Arguments.Count = 0 Then
+    EXIT Sub
+  End If
+  If WScript.Arguments.Count = 1 Then
+    If StrComp(WScript.Arguments.Item(0) , "-r") = 0 Then
+      isRecursive = True
+      EXIT Sub
+    End If
+  End If
+  Xerror("Illegal arguments")
+  Call Usage()
+  WScript.Quit(1)
 End Sub
 
 Sub Init()
@@ -96,7 +118,8 @@ End Sub
 
 Sub Main()
   Call Init()
-  Call toPDF(fso.GetFolder("."), False)
+  Call ParseArgs()
+  Call toPDF(fso.GetFolder("."))
   Call Finalize()
 End Sub
 
