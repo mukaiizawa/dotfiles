@@ -13,7 +13,13 @@ Dim ppt
 
 Sub Usage()
   Xprint("Usage: cscript mso2pdf.vbs [OPTION]")
+  Xprint("OPTION")
   Xprint("  -r execute recursively")
+  Xprint("")
+  Xprint("Create a PDF file from Microsoft Office.")
+  Xprint("")
+  Xprint("Support file type")
+  Xprint("  xlsx, xls, docx, doc, pptx, ppt")
 End Sub
 
 Sub Xprint(msg)
@@ -59,6 +65,7 @@ Sub PowerPointToPDF(file)
   Dim f
   Set f = ppt.Presentations.Open(file.path, True, False, False)
   Call f.SaveAs(toPDFPath(file), 32, False)
+  Call f.Close
 End Sub
 
 Sub toPDF(folder)
@@ -72,9 +79,9 @@ Sub toPDF(folder)
         Case "xlsx", "xls"
           Xprint("start:" & file.path)
           Call ExcelToPDF(file)
-        Case "ppt", "xls"
+        Case "pptx", "ppt"
           Xprint("start:" & file.path)
-          Call ExcelToPDF(file)
+          Call PowerPointToPDF(file)
         Case Else
           Xprint("skip:" & file.path)
       End Select
