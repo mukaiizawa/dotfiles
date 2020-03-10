@@ -23,7 +23,7 @@ Function toPDFPath (file)
   pdf = Left(file, Len(file) - Len(fso.GetExtensionName(file))) & "pdf"
   If fso.FileExists(pdf) Then
     On Error Resume Next
-    Xprint("remove '" & pdf & "'")
+    Xprint("remove:" & pdf)
     Call fso.DeleteFile(pdf)
     If Err.Number > 0 Then
       Xerror("could not delete already existed pdf file '" & pdf & "'")
