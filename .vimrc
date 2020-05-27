@@ -112,7 +112,7 @@ nnoremap dh <NOP>
 nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
-nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap gcd  :<C-u>lcd %:h<CR>:pwd<CR>
 nnoremap gf :vs<CR>gf
 nnoremap j gj
 nnoremap k gk
