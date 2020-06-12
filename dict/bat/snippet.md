@@ -59,6 +59,10 @@
 
 EXITに/Bフラグを付けることにより、呼び出しもとに戻れる。
 
+終了ラベルを定義して、GOTOでジャンプすると可読性が高くなる場合もある。
+
+    IF NOT %ERRORLEVEL% == 0 GOTO end_batch
+
 # パスの確認 
 javaにパスが通っているか確認する例を示す。
     WHERE /Q java.exe
