@@ -30,6 +30,7 @@ setlocal lispwords+=special-operator
 setlocal lispwords+=unless
 setlocal lispwords+=when
 setlocal lispwords+=while
+setlocal lispwords+=with
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-memory-stream
 setlocal lispwords+=with-open-append
