@@ -28,6 +28,7 @@ setlocal lispwords+=function
 setlocal lispwords+=function!
 setlocal lispwords+=global-symbol
 setlocal lispwords+=special-operator
+setlocal lispwords+=switch
 setlocal lispwords+=unless
 setlocal lispwords+=when
 setlocal lispwords+=while
