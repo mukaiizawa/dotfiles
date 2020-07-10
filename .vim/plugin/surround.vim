@@ -39,7 +39,7 @@ function! PrintSurround() range
         \   'javascript' : ['console.log(' , ');'],
         \   'jsp'        : ['console.log(' , ');'],
         \   'lisp'       : ['#o' , ''],
-        \   'paren'      : ['(print ' , ')'],
+        \   'paren'      : ['(write ' , ')'],
         \   'peal'       : ['print "' , '";'],
         \   'python'     : ['print("' , '")'],
         \   'ruby'       : ['puts "' , '"'],
