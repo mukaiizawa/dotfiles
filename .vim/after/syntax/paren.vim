@@ -260,6 +260,7 @@ hi def link ParenNumber Number
 hi def link ParenSymbol Identifier
 hi def link ParenBuiltin Statement
 hi def link ParenConstant Constant
+hi def link ParenGlobal Identifier
 hi def link ParenKeyword Identifier
 hi def link ParenTodo ToDo
 hi def link ParenClass Type
