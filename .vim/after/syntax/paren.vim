@@ -34,7 +34,6 @@ syn match ParenError ")"
 
 " automatic generated -- run rw.p {{{
 
-syn keyword ParenBuiltin global-symbol
 syn keyword ParenBuiltin special-operator
 syn keyword ParenBuiltin macro
 syn keyword ParenBuiltin function
@@ -62,7 +61,7 @@ syn keyword ParenBuiltin builtin-function
 syn keyword ParenBuiltin with-gensyms
 syn keyword ParenBuiltin begin0
 syn keyword ParenBuiltin when
-syn keyword ParenBuiltin ||
+syn keyword ParenBuiltin \|\|
 syn keyword ParenBuiltin &&
 syn keyword ParenBuiltin switch
 syn keyword ParenBuiltin break
@@ -82,6 +81,8 @@ syn keyword ParenBuiltin !
 syn keyword ParenBuiltin nil?
 syn keyword ParenBuiltin cons?
 syn keyword ParenBuiltin atom?
+syn keyword ParenBuiltin symbol?
+syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin gensym
 syn keyword ParenBuiltin cons
@@ -137,6 +138,8 @@ syn keyword ParenBuiltin reverse!
 syn keyword ParenBuiltin append-atom
 syn keyword ParenBuiltin push!
 syn keyword ParenBuiltin pop!
+syn keyword ParenBuiltin assoc
+syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin map
 syn keyword ParenBuiltin reduce
@@ -146,8 +149,9 @@ syn keyword ParenBuiltin remove
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin any-satisfy?
 syn keyword ParenBuiltin each-adjacent-satisfy?
-syn keyword ParenBuiltin assoc
-syn keyword ParenBuiltin assoc!
+syn keyword ParenBuiltin number?
+syn keyword ParenBuiltin integer?
+syn keyword ParenBuiltin byte?
 syn keyword ParenBuiltin ascii-space?
 syn keyword ParenBuiltin ascii-alpha?
 syn keyword ParenBuiltin ascii-digit?
@@ -155,22 +159,9 @@ syn keyword ParenBuiltin ascii-lower
 syn keyword ParenBuiltin ascii-upper
 syn keyword ParenBuiltin ascii->digit
 syn keyword ParenBuiltin digit->ascii
-syn keyword ParenBuiltin string
-syn keyword ParenBuiltin string?
-syn keyword ParenBuiltin string-eq?
-syn keyword ParenBuiltin string-codepoint
-syn keyword ParenBuiltin string->array
-syn keyword ParenBuiltin string-slice
-syn keyword ParenBuiltin string-at
-syn keyword ParenBuiltin string-length
-syn keyword ParenBuiltin string-index
-syn keyword ParenBuiltin string->list
-syn keyword ParenBuiltin number?
-syn keyword ParenBuiltin integer?
-syn keyword ParenBuiltin byte?
 syn keyword ParenBuiltin =
 syn keyword ParenBuiltin &
-syn keyword ParenBuiltin |
+syn keyword ParenBuiltin \|
 syn keyword ParenBuiltin <<
 syn keyword ParenBuiltin >>
 syn keyword ParenBuiltin ^
@@ -189,11 +180,24 @@ syn keyword ParenBuiltin ++
 syn keyword ParenBuiltin --
 syn keyword ParenBuiltin abs
 syn keyword ParenBuiltin exp
+syn keyword ParenBuiltin string
+syn keyword ParenBuiltin string?
+syn keyword ParenBuiltin string-eq?
+syn keyword ParenBuiltin string-codepoint
+syn keyword ParenBuiltin string->array
+syn keyword ParenBuiltin string-slice
+syn keyword ParenBuiltin string-at
+syn keyword ParenBuiltin string-length
+syn keyword ParenBuiltin string-index
+syn keyword ParenBuiltin string->list
 syn keyword ParenBuiltin bytes
-syn keyword ParenBuiltin symbol?
-syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin bytes?
 syn keyword ParenBuiltin bytes-eq?
+syn keyword ParenBuiltin ->bytes
+syn keyword ParenBuiltin bytes->symbol
+syn keyword ParenBuiltin bytes->keyword
+syn keyword ParenBuiltin bytes->string
+syn keyword ParenBuiltin bytes->string!
 syn keyword ParenBuiltin bytes-at
 syn keyword ParenBuiltin bytes-at!
 syn keyword ParenBuiltin bytes-length
@@ -202,11 +206,11 @@ syn keyword ParenBuiltin bytes-unmatch-index
 syn keyword ParenBuiltin bytes-copy
 syn keyword ParenBuiltin bytes-slice
 syn keyword ParenBuiltin bytes-concat
-syn keyword ParenBuiltin bytes->string
-syn keyword ParenBuiltin bytes->symbol
-syn keyword ParenBuiltin bytes->keyword
 syn keyword ParenBuiltin array
 syn keyword ParenBuiltin array?
+syn keyword ParenBuiltin array->list
+syn keyword ParenBuiltin array-at
+syn keyword ParenBuiltin array-at!
 syn keyword ParenBuiltin array-length
 syn keyword ParenBuiltin array-copy
 syn keyword ParenBuiltin array-slice
@@ -214,15 +218,12 @@ syn keyword ParenBuiltin object?
 syn keyword ParenBuiltin is-a?
 syn keyword ParenBuiltin find-class
 syn keyword ParenBuiltin find-method
+syn keyword ParenBuiltin error-if-not-object
 syn keyword ParenBuiltin make-accessor
 syn keyword ParenBuiltin make-method-dispatcher
-syn keyword ParenBuiltin method?
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin method
 syn keyword ParenBuiltin error
-syn keyword ParenBuiltin Path.separator
-syn keyword ParenBuiltin Path.of
-syn keyword ParenBuiltin Path.getcwd
 syn keyword ParenBuiltin with-ahead-reader
 syn keyword ParenBuiltin read-byte
 syn keyword ParenBuiltin read-char
@@ -245,12 +246,6 @@ syn keyword ParenBuiltin quit
 syn keyword ParenBuiltin load
 syn keyword ParenBuiltin import
 syn keyword ParenBuiltin boot
-syn keyword ParenBuiltin $import
-syn keyword ParenBuiltin $args
-syn keyword ParenBuiltin $stdin
-syn keyword ParenBuiltin $stdout
-syn keyword ParenBuiltin $external-encoding
-syn keyword ParenBuiltin $paren-home
 
 " }}}
 
