@@ -15,18 +15,19 @@ setlocal shiftwidth=4
 setlocal lispwords=let
 setlocal lispwords+=macro
 setlocal lispwords+=lambda
-setlocal lispwords+=try
 setlocal lispwords+=catch
-setlocal lispwords+=basic-catch
 
 " macro
 setlocal lispwords+=builtin-function
+setlocal lispwords+=class
 setlocal lispwords+=dolist
 setlocal lispwords+=dotimes
 setlocal lispwords+=for
 setlocal lispwords+=function
 setlocal lispwords+=function!
 setlocal lispwords+=global-symbol
+setlocal lispwords+=method
+setlocal lispwords+=read-macro
 setlocal lispwords+=special-operator
 setlocal lispwords+=switch
 setlocal lispwords+=unless
@@ -39,7 +40,3 @@ setlocal lispwords+=with-open-append
 setlocal lispwords+=with-open-read
 setlocal lispwords+=with-open-update
 setlocal lispwords+=with-open-write
-
-" paren object system
-setlocal lispwords+=class
-setlocal lispwords+=method
