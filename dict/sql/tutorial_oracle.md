@@ -275,12 +275,14 @@ Oracle Data Pumpを使用するにはディレクトリオブジェクトの作�
     EXCLUDE     一部のオブジェクトを除く
 
 # ホストのIPアドレスの変更手順
-OracleデータベースをインストールしたホストのIPアドレスを変更する一例を示す。
-
 ## spfileの修正
 spfile内にホストのIPアドレスを保持していることがあるため次の手順で修正を行う。
 
-現在のspfileの場所を取得し、spfileからpfileの作成。
+なお、sqlplusがORA-12560でエラーになる場合は以下のコマンドで環境変数を設定すること。
+
+    set oracle_sid=<sid>
+
+現在のspfileの場所を取得し、spfileからpfileの作成する。
 
     sqlplus / as sysdba
     SELECT VALUE FROM V$SYSTEM_PARAMETER WHERE NAME = 'spfile';
@@ -289,6 +291,8 @@ spfile内にホストのIPアドレスを保持していることがあるため
 pfileをテキストエディタで編集し、pfileからspfileを生成する。
 
     CREATE SPFILE='<spfile>' FROM PFILE='<spfile_dir>\initORCL.ora';
+
+サービスをすべて停止し、生成されたspfileを手動で上書きする。
 
 ## oraファイルの変更
 以下の場所のファイルのIPアドレスを修正する。
