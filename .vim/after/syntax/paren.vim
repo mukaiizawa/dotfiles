@@ -32,13 +32,8 @@ syn keyword ParenSymbol nil true self
 syn match ParenTodo "\c\<\(todo\|note\)\>" contained
 syn match ParenError ")"
 
-" automatic generated -- run rw.p {{{
+" automatic generated -- see make rw.vim {{{
 
-syn keyword ParenBuiltin special-operator
-syn keyword ParenBuiltin macro
-syn keyword ParenBuiltin function
-syn keyword ParenBuiltin function!
-syn keyword ParenBuiltin builtin-function
 syn keyword ParenBuiltin special-operator
 syn keyword ParenBuiltin let
 syn keyword ParenBuiltin <-
@@ -55,7 +50,6 @@ syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin catch
 syn keyword ParenBuiltin assert
 syn keyword ParenBuiltin dynamic
-syn keyword ParenBuiltin global-symbol
 syn keyword ParenBuiltin function!
 syn keyword ParenBuiltin builtin-function
 syn keyword ParenBuiltin with-gensyms
@@ -70,7 +64,7 @@ syn keyword ParenBuiltin for
 syn keyword ParenBuiltin while
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
-syn keyword ParenBuiltin clock
+syn keyword ParenBuiltin timeit
 syn keyword ParenBuiltin expand-macro
 syn keyword ParenBuiltin expand-macro-all
 syn keyword ParenBuiltin function
@@ -81,6 +75,8 @@ syn keyword ParenBuiltin !
 syn keyword ParenBuiltin nil?
 syn keyword ParenBuiltin cons?
 syn keyword ParenBuiltin atom?
+syn keyword ParenBuiltin function?
+syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin symbol?
 syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin bound?
@@ -143,9 +139,9 @@ syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin map
 syn keyword ParenBuiltin reduce
-syn keyword ParenBuiltin find-cons
-syn keyword ParenBuiltin find
-syn keyword ParenBuiltin remove
+syn keyword ParenBuiltin find-cons-if
+syn keyword ParenBuiltin find-if
+syn keyword ParenBuiltin remove-if
 syn keyword ParenBuiltin all-satisfy?
 syn keyword ParenBuiltin any-satisfy?
 syn keyword ParenBuiltin each-adjacent-satisfy?
@@ -182,8 +178,10 @@ syn keyword ParenBuiltin abs
 syn keyword ParenBuiltin exp
 syn keyword ParenBuiltin string
 syn keyword ParenBuiltin string?
-syn keyword ParenBuiltin string-eq?
-syn keyword ParenBuiltin string-codepoint
+syn keyword ParenBuiltin string=
+syn keyword ParenBuiltin string/=
+syn keyword ParenBuiltin string->code
+syn keyword ParenBuiltin code->string
 syn keyword ParenBuiltin string->array
 syn keyword ParenBuiltin string-slice
 syn keyword ParenBuiltin string-at
@@ -192,7 +190,8 @@ syn keyword ParenBuiltin string-index
 syn keyword ParenBuiltin string->list
 syn keyword ParenBuiltin bytes
 syn keyword ParenBuiltin bytes?
-syn keyword ParenBuiltin bytes-eq?
+syn keyword ParenBuiltin bytes=
+syn keyword ParenBuiltin bytes/=
 syn keyword ParenBuiltin ->bytes
 syn keyword ParenBuiltin bytes->symbol
 syn keyword ParenBuiltin bytes->keyword
@@ -214,6 +213,30 @@ syn keyword ParenBuiltin array-at!
 syn keyword ParenBuiltin array-length
 syn keyword ParenBuiltin array-copy
 syn keyword ParenBuiltin array-slice
+syn keyword ParenBuiltin fp
+syn keyword ParenBuiltin fopen
+syn keyword ParenBuiltin fgetc
+syn keyword ParenBuiltin fputc
+syn keyword ParenBuiltin fgets
+syn keyword ParenBuiltin fread
+syn keyword ParenBuiltin fwrite
+syn keyword ParenBuiltin fseek
+syn keyword ParenBuiltin ftell
+syn keyword ParenBuiltin fclose
+syn keyword ParenBuiltin stat
+syn keyword ParenBuiltin utime
+syn keyword ParenBuiltin getcwd
+syn keyword ParenBuiltin chdir
+syn keyword ParenBuiltin readdir
+syn keyword ParenBuiltin remove
+syn keyword ParenBuiltin mkdir
+syn keyword ParenBuiltin rename
+syn keyword ParenBuiltin time
+syn keyword ParenBuiltin clock
+syn keyword ParenBuiltin cycle
+syn keyword ParenBuiltin sleep
+syn keyword ParenBuiltin getenv
+syn keyword ParenBuiltin putenv
 syn keyword ParenBuiltin object?
 syn keyword ParenBuiltin is-a?
 syn keyword ParenBuiltin find-class
@@ -224,7 +247,9 @@ syn keyword ParenBuiltin make-method-dispatcher
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin method
 syn keyword ParenBuiltin error
-syn keyword ParenBuiltin with-ahead-reader
+syn keyword ParenBuiltin Path.of
+syn keyword ParenBuiltin Path.getcwd
+syn keyword ParenBuiltin reader-macro
 syn keyword ParenBuiltin read-byte
 syn keyword ParenBuiltin read-char
 syn keyword ParenBuiltin read-line
