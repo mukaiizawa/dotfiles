@@ -18,6 +18,7 @@ setlocal lispwords+=lambda
 setlocal lispwords+=catch
 
 " macro
+setlocal lispwords+=&<-
 setlocal lispwords+=builtin-function
 setlocal lispwords+=class
 setlocal lispwords+=dolist
@@ -25,18 +26,12 @@ setlocal lispwords+=dotimes
 setlocal lispwords+=for
 setlocal lispwords+=function
 setlocal lispwords+=function!
-setlocal lispwords+=global-symbol
 setlocal lispwords+=method
 setlocal lispwords+=reader-macro
 setlocal lispwords+=special-operator
 setlocal lispwords+=switch
-setlocal lispwords+=unless
 setlocal lispwords+=when
 setlocal lispwords+=while
-setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-memory-stream
-setlocal lispwords+=with-open-append
-setlocal lispwords+=with-open-read
-setlocal lispwords+=with-open-update
-setlocal lispwords+=with-open-write
+setlocal lispwords+=with-open

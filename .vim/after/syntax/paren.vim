@@ -252,8 +252,6 @@ syn keyword ParenBuiltin make-method-dispatcher
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin method
 syn keyword ParenBuiltin error
-syn keyword ParenBuiltin Path.of
-syn keyword ParenBuiltin Path.getcwd
 syn keyword ParenBuiltin unquote
 syn keyword ParenBuiltin unquote-splicing
 syn keyword ParenBuiltin quasiquote
@@ -267,11 +265,7 @@ syn keyword ParenBuiltin write-bytes
 syn keyword ParenBuiltin write-line
 syn keyword ParenBuiltin write
 syn keyword ParenBuiltin with-memory-stream
-syn keyword ParenBuiltin with-open-mode
-syn keyword ParenBuiltin with-open-read
-syn keyword ParenBuiltin with-open-write
-syn keyword ParenBuiltin with-open-append
-syn keyword ParenBuiltin with-open-update
+syn keyword ParenBuiltin with-open
 syn keyword ParenBuiltin eval
 syn keyword ParenBuiltin apply
 syn keyword ParenBuiltin repl
