@@ -28,6 +28,8 @@ syn match ParenComment ";.*$" contains=ParenTodo
 syn match ParenConstant "\<[A-Z_]\{1,}\>"
 syn match ParenGlobal "\<\$\k*\>"
 syn match ParenKeyword "\<:\k*\>"
+syn match ParenBuiltin "\[]"
+syn match ParenBuiltin "\[]<-"
 syn keyword ParenSymbol nil true self
 syn match ParenTodo "\c\<\(todo\|note\)\>" contained
 syn match ParenError ")"
@@ -211,8 +213,6 @@ syn keyword ParenBuiltin bytes-concat
 syn keyword ParenBuiltin array
 syn keyword ParenBuiltin array?
 syn keyword ParenBuiltin array->list
-syn keyword ParenBuiltin []
-syn keyword ParenBuiltin []<-
 syn keyword ParenBuiltin array-length
 syn keyword ParenBuiltin array-copy
 syn keyword ParenBuiltin array-slice
