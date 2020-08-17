@@ -191,10 +191,13 @@ syn keyword ParenBuiltin string<
 syn keyword ParenBuiltin string>
 syn keyword ParenBuiltin string<=
 syn keyword ParenBuiltin string>=
+syn keyword ParenBuiltin string-prefix?
+syn keyword ParenBuiltin string-suffix?
 syn keyword ParenBuiltin string-slice
 syn keyword ParenBuiltin string-at
 syn keyword ParenBuiltin string-length
 syn keyword ParenBuiltin string-index
+syn keyword ParenBuiltin string-last-index
 syn keyword ParenBuiltin string->list
 syn keyword ParenBuiltin bytes
 syn keyword ParenBuiltin bytes?
@@ -205,6 +208,7 @@ syn keyword ParenBuiltin bytes->symbol
 syn keyword ParenBuiltin bytes->keyword
 syn keyword ParenBuiltin bytes->string
 syn keyword ParenBuiltin bytes->string!
+syn keyword ParenBuiltin bytes->list
 syn keyword ParenBuiltin bytes-length
 syn keyword ParenBuiltin bytes-index
 syn keyword ParenBuiltin bytes-copy
@@ -259,10 +263,12 @@ syn keyword ParenBuiltin reader-macro
 syn keyword ParenBuiltin read-byte
 syn keyword ParenBuiltin read-char
 syn keyword ParenBuiltin read-line
+syn keyword ParenBuiltin read-lines
 syn keyword ParenBuiltin read
 syn keyword ParenBuiltin write-byte
 syn keyword ParenBuiltin write-bytes
 syn keyword ParenBuiltin write-line
+syn keyword ParenBuiltin write-lines
 syn keyword ParenBuiltin write
 syn keyword ParenBuiltin with-memory-stream
 syn keyword ParenBuiltin with-open
