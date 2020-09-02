@@ -40,11 +40,11 @@ function! PrintSurround() range
         \   'jsp'        : ['console.log(' , ');'],
         \   'lisp'       : ['#o' , ''],
         \   'paren'      : ['(write ' , ')'],
-        \   'peal'       : ['print "' , '";'],
-        \   'python'     : ['print("' , '")'],
+        \   'peal'       : ['print ' , ';'],
+        \   'python'     : ['print(' , ')'],
         \   'ruby'       : ['puts "' , '"'],
         \   'vb'         : ['Debug.Print ' , ''],
-        \   'vim'        : ['echo "' , '"'],
+        \   'vim'        : ['echo ' , ''],
         \   'xhtml'      : ['console.log(' , ');'],
         \
         \ }
