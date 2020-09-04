@@ -66,6 +66,8 @@ syn keyword ParenBuiltin for
 syn keyword ParenBuiltin while
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
+syn keyword ParenBuiltin dostring
+syn keyword ParenBuiltin doarray
 syn keyword ParenBuiltin timeit
 syn keyword ParenBuiltin expand-macro
 syn keyword ParenBuiltin expand-macro-all
@@ -224,6 +226,10 @@ syn keyword ParenBuiltin array-copy
 syn keyword ParenBuiltin array-slice
 syn keyword ParenBuiltin fp
 syn keyword ParenBuiltin fopen
+syn keyword ParenBuiltin fdopen
+syn keyword ParenBuiltin client-socket
+syn keyword ParenBuiltin server-socket
+syn keyword ParenBuiltin accept
 syn keyword ParenBuiltin fgetc
 syn keyword ParenBuiltin fputc
 syn keyword ParenBuiltin fgets
@@ -231,7 +237,9 @@ syn keyword ParenBuiltin fread
 syn keyword ParenBuiltin fwrite
 syn keyword ParenBuiltin fseek
 syn keyword ParenBuiltin ftell
+syn keyword ParenBuiltin fflush
 syn keyword ParenBuiltin fclose
+syn keyword ParenBuiltin closesocket
 syn keyword ParenBuiltin stat
 syn keyword ParenBuiltin utime
 syn keyword ParenBuiltin getcwd
@@ -271,9 +279,12 @@ syn keyword ParenBuiltin write-byte
 syn keyword ParenBuiltin write-bytes
 syn keyword ParenBuiltin write-line
 syn keyword ParenBuiltin write-lines
+syn keyword ParenBuiltin flush
 syn keyword ParenBuiltin write
 syn keyword ParenBuiltin with-memory-stream
 syn keyword ParenBuiltin with-open
+syn keyword ParenBuiltin with-server-socket
+syn keyword ParenBuiltin with-client-socket
 syn keyword ParenBuiltin eval
 syn keyword ParenBuiltin apply
 syn keyword ParenBuiltin repl
