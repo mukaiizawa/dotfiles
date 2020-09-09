@@ -252,8 +252,8 @@ let g:quickrun_config = {
       \     'command': 'clisp',
       \   },
       \   'markdown': {
-      \     'command': 'pandoc',
-      \     'exec': '%c %s -t docx -o %s:t:r.docx',
+      \     'command': 'paren',
+      \     'exec': '%c md2html.p %s',
       \   },
       \   'paren': {
       \     'command': 'paren',
@@ -269,7 +269,8 @@ let g:quickrun_config = {
       \     'command': 'python',
       \   },
       \   'xmd': {
-      \     'command': 'xmdrd',
+      \     'command': 'paren',
+      \     'exec': '%c md2html.p %s',
       \   },
       \ }
 
