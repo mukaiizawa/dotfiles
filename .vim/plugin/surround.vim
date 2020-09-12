@@ -39,12 +39,12 @@ function! PrintSurround() range
         \   'javascript' : ['console.log(' , ');'],
         \   'jsp'        : ['console.log(' , ');'],
         \   'lisp'       : ['#o' , ''],
-        \   'paren'      : ['(print ' , ')'],
-        \   'peal'       : ['print "' , '";'],
-        \   'python'     : ['print("' , '")'],
+        \   'paren'      : ['(write ' , ')'],
+        \   'peal'       : ['print ' , ';'],
+        \   'python'     : ['print(' , ')'],
         \   'ruby'       : ['puts "' , '"'],
         \   'vb'         : ['Debug.Print ' , ''],
-        \   'vim'        : ['echo "' , '"'],
+        \   'vim'        : ['echo ' , ''],
         \   'xhtml'      : ['console.log(' , ');'],
         \
         \ }

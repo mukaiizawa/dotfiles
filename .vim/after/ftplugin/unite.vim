@@ -1,4 +1,4 @@
-" unite key mapping
+" unite.vim
 
 imap <buffer> <CR> <Plug>(unite_do_default_action)
 nmap <buffer> <C-h> <Plug>(unite_delete_backward_path)

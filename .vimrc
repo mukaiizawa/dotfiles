@@ -19,6 +19,7 @@ Plug 'tyru/open-browser.vim'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'Yggdroot/indentLine'
+Plug 'mattn/emmet-vim'
 call plug#end()
 filetype plugin indent on
 syntax enable
@@ -112,7 +113,7 @@ nnoremap dh <NOP>
 nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
-nnoremap gcd  :<C-u>lcd %:h<CR> :pwd<CR>
+nnoremap gcd  :<C-u>lcd %:h<CR>:pwd<CR>
 nnoremap gf :vs<CR>gf
 nnoremap j gj
 nnoremap k gk
@@ -278,6 +279,23 @@ let g:indentLine_fileType = ['']
 
 " caw
 let g:caw_no_default_keymappings = 1
+
+" emmet
+let g:user_emmet_settings = {
+      \    'variables' : {
+      \        'lang' : 'ja',
+      \    },
+      \    'html' : {
+      \        'indentation' : '    ',
+      \        'expandos' : {
+      \            'ol': 'ol>li',
+      \            'ul': 'ul>li',
+      \        },
+      \        'default_attributes': {
+      \            'a': {'href': ''},
+      \        },
+      \    },
+      \ }
 
 " plugin mapping
 nmap gca <Plug>(caw:dollarpos:toggle)
