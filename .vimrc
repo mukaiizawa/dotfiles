@@ -312,9 +312,9 @@ vmap gww <Plug>(openbrowser-search)
 
 nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
-nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
+nnoremap <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
 nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
-nnoremap <silent>mq :<C-u>lcd %:h<CR> :<C-u>QuickRun<CR>
+nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
 nnoremap <silent>mrd :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>mrl :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nnoremap <silent>mru :<C-u>Unite file_mru<CR>
