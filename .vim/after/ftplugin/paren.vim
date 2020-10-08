@@ -2,7 +2,7 @@
 
 setlocal nocindent
 setlocal lisp
-setlocal define=^\\s*(\\(macro\\|lambda\\|function\\|class\\|method\\)
+setlocal define=^\\s*(\\(macro\\|f\\|function\\|class\\|method\\)
 setlocal formatoptions-=t
 setlocal iskeyword=33,35-38,42-43,45-58,60-63,65-91,93-95,97-125
 setlocal comments=:;
@@ -13,9 +13,9 @@ setlocal shiftwidth=4
 
 " special operator
 setlocal lispwords=let
-setlocal lispwords+=macro
-setlocal lispwords+=lambda
 setlocal lispwords+=catch
+setlocal lispwords+=f
+setlocal lispwords+=macro
 
 " macro
 setlocal lispwords+=&<-
