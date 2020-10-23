@@ -6,6 +6,7 @@ Peopleware	~/dotfiles/dict/etc/peopleware.xmd
 Technical Debt	~/dotfiles/dict/etc/tb.xmd
 The Playful World	~/dotfiles/dict/etc/tpw.xmd
 Worse is Better	~/dotfiles/dict/etc/wib.xmd
+debug	~/dotfiles/dict/etc/debug.xmd
 sicp	~/dotfiles/dict/etc/sicp.xmd
 エンジニアの心構え	~/dotfiles/dict/etc/tabechoku.xmd
 フェンスを外す人	~/dotfiles/dict/etc/detafdu.xmd
