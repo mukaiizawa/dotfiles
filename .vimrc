@@ -253,7 +253,10 @@ let g:quickrun_config = {
       \   },
       \   'markdown': {
       \     'command': 'paren',
-      \     'exec': '%c md2html.p %s',
+      \     'input': '%{expand("%:p")}',
+      \     'outputter': 'file',
+      \     'outputter/file/name': '%{expand("%:r")}.html',
+      \     'exec': '%c md2html.p',
       \   },
       \   'paren': {
       \     'command': 'paren',
@@ -270,7 +273,10 @@ let g:quickrun_config = {
       \   },
       \   'xmd': {
       \     'command': 'paren',
-      \     'exec': '%c md2html.p %s',
+      \     'input': '%{expand("%:p")}',
+      \     'outputter': 'file',
+      \     'outputter/file/name': '%{expand("%:r")}.html',
+      \     'exec': '%c md2html.p',
       \   },
       \ }
 
