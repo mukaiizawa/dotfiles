@@ -1,4 +1,4 @@
-Oracle tutorial
+Oracle
 
 # 概要
 Oracleデータベース固有の覚書をまとめる。

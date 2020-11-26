@@ -1,5 +1,6 @@
 DDL	~/dotfiles/dict/sql/ddl.md
 DML	~/dotfiles/dict/sql/dml.md
 Genaration	~/dotfiles/dict/sql/generation.md
+Oracle	~/dotfiles/dict/sql/oracle.md
+PostgreSQL	~/dotfiles/dict/sql/postgresql.md
 Table design pattern	~/dotfiles/dict/sql/table_design.md
-Tutorial Oracle	~/dotfiles/dict/sql/tutorial_oracle.md
