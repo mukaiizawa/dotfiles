@@ -271,13 +271,6 @@ let g:quickrun_config = {
       \   'python/python2': {
       \     'command': 'python',
       \   },
-      \   'xmd': {
-      \     'command': 'paren',
-      \     'input': '%{expand("%:p")}',
-      \     'outputter': 'file',
-      \     'outputter/file/name': '%{expand("%:r")}.html',
-      \     'exec': '%c md2html.p',
-      \   },
       \ }
 
 " indentLine
