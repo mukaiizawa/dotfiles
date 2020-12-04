@@ -77,6 +77,7 @@ syn keyword ParenBuiltin neq?
 syn keyword ParenBuiltin !
 syn keyword ParenBuiltin address
 syn keyword ParenBuiltin function?
+syn keyword ParenBuiltin builtin?
 syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin symbol?
 syn keyword ParenBuiltin keyword?
@@ -143,7 +144,6 @@ syn keyword ParenBuiltin collect
 syn keyword ParenBuiltin map
 syn keyword ParenBuiltin foreach
 syn keyword ParenBuiltin reduce
-syn keyword ParenBuiltin find-cons
 syn keyword ParenBuiltin find
 syn keyword ParenBuiltin select
 syn keyword ParenBuiltin except
@@ -197,6 +197,7 @@ syn keyword ParenBuiltin bytes
 syn keyword ParenBuiltin bytes?
 syn keyword ParenBuiltin memeq?
 syn keyword ParenBuiltin memneq?
+syn keyword ParenBuiltin memcmp
 syn keyword ParenBuiltin memempty?
 syn keyword ParenBuiltin mem->bytes
 syn keyword ParenBuiltin mem->sym
@@ -252,7 +253,6 @@ syn keyword ParenBuiltin find-class
 syn keyword ParenBuiltin find-method
 syn keyword ParenBuiltin error-if-not-object
 syn keyword ParenBuiltin make-accessor
-syn keyword ParenBuiltin &<-
 syn keyword ParenBuiltin make-method-dispatcher
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin method
