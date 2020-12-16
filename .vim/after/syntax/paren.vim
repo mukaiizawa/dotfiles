@@ -81,6 +81,7 @@ syn keyword ParenBuiltin builtin?
 syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin symbol?
 syn keyword ParenBuiltin keyword?
+syn keyword ParenBuiltin symcmp
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin gensym
 syn keyword ParenBuiltin nil?
@@ -138,6 +139,7 @@ syn keyword ParenBuiltin append
 syn keyword ParenBuiltin push!
 syn keyword ParenBuiltin pop!
 syn keyword ParenBuiltin assoc
+syn keyword ParenBuiltin nilable-assoc
 syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin collect
