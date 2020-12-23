@@ -200,6 +200,7 @@ syn keyword ParenBuiltin bytes?
 syn keyword ParenBuiltin memeq?
 syn keyword ParenBuiltin memneq?
 syn keyword ParenBuiltin memcmp
+syn keyword ParenBuiltin memhash
 syn keyword ParenBuiltin memempty?
 syn keyword ParenBuiltin mem->bytes
 syn keyword ParenBuiltin mem->sym
