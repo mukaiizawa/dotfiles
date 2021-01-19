@@ -125,9 +125,8 @@ public class DatabaseManager {
   }
 
   private List<Map<String, String>> getRecords(String query) {
-    try {
+    try (ResultSet rs = env.getConn().createStatement().executeQuery(query)) {
       List<Map<String, String>> records = new ArrayList<>();
-      ResultSet rs = env.getConn().createStatement().executeQuery(query);
       while (rs.next()) {
         ResultSetMetaData rsmd = rs.getMetaData();
         Map<String, String> record = new HashMap<>();
@@ -138,7 +137,6 @@ public class DatabaseManager {
         }
         records.add(record);
       }
-      rs.close();
       return records;
     } catch (SQLException e) {
       e.printStackTrace(System.out);
