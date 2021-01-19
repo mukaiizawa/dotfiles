@@ -227,7 +227,8 @@ Oracle Data Pumpを使用するにはディレクトリオブジェクトの作�
 ## データのエクスポート
 あるスキーマをエクスポートする例を示す。
 
-    expdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema>
+    expdp system/******@<oracle_sid> DIRECTORY=DATA_PUMP_DIR DUMPFILE=EXPDAT.DMP SCHEMAS=<schema> FLASHBACK_TIME=\"TO_TIMESTAMP(TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')\"
+    FLASHBACK_TIME -- 指定した時刻近傍で一貫性を保証する
 
 ## データのインポート
 先にエクスポートしたダンプファイルをインポートする例を示す。
