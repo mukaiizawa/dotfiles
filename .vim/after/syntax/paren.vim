@@ -138,6 +138,7 @@ syn keyword ParenBuiltin nilable-assoc
 syn keyword ParenBuiltin assoc!
 syn keyword ParenBuiltin flatten
 syn keyword ParenBuiltin collect
+syn keyword ParenBuiltin zip
 syn keyword ParenBuiltin map
 syn keyword ParenBuiltin foreach
 syn keyword ParenBuiltin reduce
@@ -150,6 +151,7 @@ syn keyword ParenBuiltin none?
 syn keyword ParenBuiltin every-adjacent?
 syn keyword ParenBuiltin array
 syn keyword ParenBuiltin array?
+syn keyword ParenBuiltin arr->list
 syn keyword ParenBuiltin arrlen
 syn keyword ParenBuiltin arrcpy
 syn keyword ParenBuiltin subarr
