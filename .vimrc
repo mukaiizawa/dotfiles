@@ -14,10 +14,9 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'thinca/vim-quickrun'
+Plug 'osyo-manga/unite-quickfix'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
-Plug 'ujihisa/unite-colorscheme'
-Plug 'vim-jp/vimdoc-ja'
 Plug 'Yggdroot/indentLine'
 Plug 'mattn/emmet-vim'
 call plug#end()
@@ -297,6 +296,10 @@ let g:user_emmet_settings = {
       \    },
       \ }
 
+" quickfix
+let unite_quickfix_filename_is_pathshorten = 0
+let g:unite_quickfix_is_multiline = 0
+
 " plugin mapping
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
@@ -309,7 +312,6 @@ vmap gci <Plug>(caw:hatpos:toggle)
 vmap gw  <Plug>(openbrowser-open)
 vmap gww <Plug>(openbrowser-search)
 
-nnoremap <silent>mc :<C-u>Unite colorscheme -auto-preview<CR>
 nnoremap <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
 nnoremap <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
@@ -317,6 +319,7 @@ nnoremap <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nnoremap <silent>mk :<C-u>Unite file_mru<CR>
 nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
 nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
+nnoremap <silent>mx :<C-u>Unite quickfix<CR>
 
 nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
 
