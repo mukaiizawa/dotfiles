@@ -1,7 +1,57 @@
 コードスニペット
 
-# 概要
-バッチファイルでよく使用する典型的なコード編を記述する。
+# 変数
+## 代入
+変数に値を代入するには、SETコマンドを使用する。
+
+  SET VAR=hello world
+
+`=`の間にスペースを挟むとそれ自身を含む値が代入される。
+
+## 参照
+変数の値の参照は`%<変数名>%`で行う。ただし、後述する理由で`!<変数名>!`を使用したほうがよい。
+
+# 条件分岐
+## IF
+IFの使用例を示す。
+    IF "x!VAR!"=="x" (
+        ...
+    )
+
+不可解な動作に悩まされないように上記の記法を用いること。
+
+## IF ELSE
+
+    IF <test> (
+        ...
+    ) ELSE (
+        ...
+    )
+
+## ELSE IF
+
+    IF <test> (
+        ...
+    ) ELSE IF <test> (
+        ...
+    ) ELSE IF <test> (
+        ...
+    ...
+    ) ELSE (
+        ...
+    )
+
+
+## NOT
+NOTは真偽値を反転させる。
+    IF NOT <test> (
+        ...
+    )
+
+## and / or
+バッチファイルにはandやor演算子が存在しない。
+
+そのためIF文を組み合わせるか、GOTO文を使用して同等の処理を行う必要がある。
 
 # カレントディレクトリの取得
 カレントディレクトリは環境変数CDに保持されている。
@@ -11,60 +61,82 @@
 
 # バッチファイルの起動ディレクトリ
 バッチファイルの起動ディレクトリは次の変数で保持されている。
+
     %~DP0
 
 バッチファイル起動時にCDと組み合わせて現在のディレクトリに移動しておくと便利。
+
     CD /D %~DP0
 
 # コマンドライン引数
-バッチファイルを起動時に半角スペース区切りで
-コマンドライン引数を渡すことができる。
+## コマンドライン引数の指定
+バッチファイルを起動時に半角スペース区切りでコマンドライン引数を渡すことができる。
+
     cmd arg1 arg2...
 
 コマンドライン引数の区切り文字は半角スペースのほかにも次のものがある。
+
 - セミコロン(;)
 - カンマ(,)
 - 等号(=)
 
 引数に区切り文字を含めたい場合はダブルクオーテーションでくくる必要がある。
+
     cmd "arg1" "arg2"...
 
 コマンドライン引数は環境変数
+
     %0, %1, ...
 
 から取得できる。ただし`%0`は実行中のバッチファイル名称が格納される。
 
-# 終了状態の確認
-直前のコマンドの終了状態は次のようにして取得できる。
-    IF NOT %ERRORLEVEL% == 0 (
-        ECHO ERROR OCCURED
-        PAUSE
-        EXIT 1
+## コマンドライン引数の確認
+次のようにしてコマンドライン引数が空でないか確認できる。
+
+    IF "x%1"=="x" (
+      ECHO Error -- require arguments
+      GOTO usage
     )
 
-また、次のように記述することにより、終了状態の確認を再利用可能。
+# モジュール化
+次のようにgoto式を利用すると処理のモジュール化ができる。
+
     CALL :Foo
-    CALL :CheckError
+    CALL :Bar
     EXIT 0
-    REM ...
+        ...
     :Foo
-    REM ...
-    :CheckError
-    IF NOT %ERRORLEVEL% == 0 (
-        ECHO ERROR OCCURED
-        PAUSE
-        EXIT 1
-    )
+    ECHO 1
+    EXIT /B 0
+    :Bar
+    ECHO 2
     EXIT /B 0
 
-EXITに/Bフラグを付けることにより、呼び出しもとに戻れる。
+EXITに/Bフラグを付けることにより、呼び出し元に戻れる。
 
-終了ラベルを定義して、GOTOでジャンプすると可読性が高くなる場合もある。
+# 終了状態の確認
+直前のコマンドの終了状態は次のようにして取得できる。
 
-    IF NOT %ERRORLEVEL% == 0 GOTO end_batch
+    IF NOT %ERRORLEVEL% == 0 (
+        ECHO ERROR OCCURED
+        PAUSE
+        EXIT 1
+    )
+
+次のように終了ラベルを定義して、GOTOでジャンプすると可読性が高くなる場合もある。
+
+    prog1
+    IF NOT %ERRORLEVEL% == 0 goto exit1
+    prog2
+    IF NOT %ERRORLEVEL% == 0 goto exit1
+        ...
+    ECHO succeed.
+    :exit1
+    ECHO failed.
 
 # パスの確認 
 javaにパスが通っているか確認する例を示す。
+
     WHERE /Q java.exe
     IF NOT %ERRORLEVEL% == 0 (
       ECHO required java.exe
@@ -75,12 +147,14 @@ javaにパスが通っているか確認する例を示す。
 # 環境変数の永続化
 SETXを利用すると永続的な環境変数の更新を行える。
 
-SETXの利用には管理者権限が必要なので注意すること。
+SETXの利用には管理者権限が必要。
+
     SETX /M JAVA_HOME "C:\Program Files\Java\jdk1.8.0_92"
     SETX /M PATH "%PATH%;C:\Program Files\Java\jdk1.8.0_92\bin"
 
 # 対話型
 次のようにgoto文を使用して指定した値が入力されるまでプロンプトを出せる。
+
     :HOME
     ECHO execute ? y/n
     SET /p c=
@@ -89,3 +163,8 @@ SETXの利用には管理者権限が必要なので注意すること。
     ECHO illegal value
     GOTO HOME
     :END
+
+# nulデバイスへのリダイレクト
+以下のようにしてnulデバイスへリダイレクトするとquietモードのような振る舞いを実現可能。
+
+    del *.pdf > nul > 2>&1
