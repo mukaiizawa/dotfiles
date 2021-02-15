@@ -124,6 +124,7 @@ syn keyword ParenBuiltin length
 syn keyword ParenBuiltin last-cons
 syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin nthcdr
+syn keyword ParenBuiltin sublis
 syn keyword ParenBuiltin last
 syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin ..
@@ -149,6 +150,9 @@ syn keyword ParenBuiltin every?
 syn keyword ParenBuiltin some?
 syn keyword ParenBuiltin none?
 syn keyword ParenBuiltin every-adjacent?
+syn keyword ParenBuiltin union
+syn keyword ParenBuiltin intersection
+syn keyword ParenBuiltin difference
 syn keyword ParenBuiltin array
 syn keyword ParenBuiltin array?
 syn keyword ParenBuiltin arr->list
