@@ -10,13 +10,7 @@ set guioptions-=b
 set guioptions+=c
 set visualbell t_vb=
 
-let s:colorscheme = $HOME . '/.colorscheme'
-if filereadable(s:colorscheme)
-  execute 'source ' . s:colorscheme
-else
-  colorscheme shin-dark
-endif
-unlet s:colorscheme
+colorscheme shin-dark
 syntax on
 
 set mouse-=a
