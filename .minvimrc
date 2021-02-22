@@ -136,3 +136,5 @@ vnoremap <Space>k Hzz
 vnoremap <Space>l $
 vnoremap j gj
 vnoremap k gk
+
+nnoremap mf :Explore<CR>
