@@ -72,12 +72,14 @@ syn keyword ParenBuiltin timeit
 syn keyword ParenBuiltin expand-macro
 syn keyword ParenBuiltin expand-macro-all
 syn keyword ParenBuiltin function
-syn keyword ParenBuiltin eq?
-syn keyword ParenBuiltin neq?
+syn keyword ParenBuiltin =
+syn keyword ParenBuiltin ==
 syn keyword ParenBuiltin !
+syn keyword ParenBuiltin !=
 syn keyword ParenBuiltin address
 syn keyword ParenBuiltin function?
 syn keyword ParenBuiltin builtin?
+syn keyword ParenBuiltin special-operator?
 syn keyword ParenBuiltin macro?
 syn keyword ParenBuiltin nil?
 syn keyword ParenBuiltin cons?
@@ -120,7 +122,7 @@ syn keyword ParenBuiltin list?
 syn keyword ParenBuiltin ->list
 syn keyword ParenBuiltin join
 syn keyword ParenBuiltin split
-syn keyword ParenBuiltin length
+syn keyword ParenBuiltin len
 syn keyword ParenBuiltin last-cons
 syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin nthcdr
@@ -149,6 +151,7 @@ syn keyword ParenBuiltin except
 syn keyword ParenBuiltin every?
 syn keyword ParenBuiltin some?
 syn keyword ParenBuiltin none?
+syn keyword ParenBuiltin include?
 syn keyword ParenBuiltin every-adjacent?
 syn keyword ParenBuiltin union
 syn keyword ParenBuiltin intersection
@@ -159,8 +162,6 @@ syn keyword ParenBuiltin arr->list
 syn keyword ParenBuiltin arrlen
 syn keyword ParenBuiltin arrcpy
 syn keyword ParenBuiltin subarr
-syn keyword ParenBuiltin memeq?
-syn keyword ParenBuiltin memneq?
 syn keyword ParenBuiltin memcmp
 syn keyword ParenBuiltin memhash
 syn keyword ParenBuiltin memempty?
@@ -183,7 +184,7 @@ syn keyword ParenBuiltin keyword?
 syn keyword ParenBuiltin symcmp
 syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin gensym
-syn keyword ParenBuiltin string
+syn keyword ParenBuiltin str
 syn keyword ParenBuiltin string?
 syn keyword ParenBuiltin str->num
 syn keyword ParenBuiltin str->code
@@ -204,13 +205,11 @@ syn keyword ParenBuiltin digit?
 syn keyword ParenBuiltin int->str
 syn keyword ParenBuiltin tolower
 syn keyword ParenBuiltin toupper
-syn keyword ParenBuiltin =
 syn keyword ParenBuiltin &
 syn keyword ParenBuiltin \|
 syn keyword ParenBuiltin <<
 syn keyword ParenBuiltin >>
 syn keyword ParenBuiltin ^
-syn keyword ParenBuiltin /=
 syn keyword ParenBuiltin +
 syn keyword ParenBuiltin -
 syn keyword ParenBuiltin *
