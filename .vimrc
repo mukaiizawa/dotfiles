@@ -26,7 +26,7 @@ syntax enable
 set autoindent
 set backspace=start,eol,indent
 set cmdheight=2
-set colorcolumn=80
+set colorcolumn=100
 set completefunc=CompleteWords
 set cursorline
 set encoding=utf-8
