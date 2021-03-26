@@ -129,6 +129,7 @@ syn keyword ParenBuiltin nthcdr
 syn keyword ParenBuiltin sublis
 syn keyword ParenBuiltin last
 syn keyword ParenBuiltin butlast
+syn keyword ParenBuiltin assoc
 syn keyword ParenBuiltin ..
 syn keyword ParenBuiltin group
 syn keyword ParenBuiltin reverse
@@ -173,7 +174,7 @@ syn keyword ParenBuiltin -
 syn keyword ParenBuiltin *
 syn keyword ParenBuiltin /
 syn keyword ParenBuiltin //
-syn keyword ParenBuiltin mod
+syn keyword ParenBuiltin %
 syn keyword ParenBuiltin <
 syn keyword ParenBuiltin >
 syn keyword ParenBuiltin <=
