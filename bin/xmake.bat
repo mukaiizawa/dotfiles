@@ -1,2 +1,2 @@
 @ECHO OFF
-make os=windows
+make os=windows debug=on %1
