@@ -164,11 +164,12 @@ syn keyword ParenBuiltin digit?
 syn keyword ParenBuiltin int->str
 syn keyword ParenBuiltin tolower
 syn keyword ParenBuiltin toupper
+syn keyword ParenBuiltin ~
 syn keyword ParenBuiltin &
 syn keyword ParenBuiltin \|
+syn keyword ParenBuiltin ^
 syn keyword ParenBuiltin <<
 syn keyword ParenBuiltin >>
-syn keyword ParenBuiltin ^
 syn keyword ParenBuiltin +
 syn keyword ParenBuiltin -
 syn keyword ParenBuiltin *

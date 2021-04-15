@@ -4,7 +4,7 @@ setlocal nocindent
 setlocal lisp
 setlocal define=^\\s*(\\(macro\\|f\\|function\\|class\\|method\\)
 setlocal formatoptions-=t
-setlocal iskeyword=33,35-38,42-43,45-58,60-63,65-91,93-95,97-125
+setlocal iskeyword=33,35-38,42-43,45-58,60-63,65-91,93-95,97-126
 setlocal comments=:;
 setlocal comments^=:;;;,:;;,sr:#;,mb:;,ex:;#
 setlocal commentstring=;%s
