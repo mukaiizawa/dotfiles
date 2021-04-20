@@ -236,7 +236,6 @@ syn keyword ParenBuiltin fread
 syn keyword ParenBuiltin fwrite
 syn keyword ParenBuiltin fseek
 syn keyword ParenBuiltin ftell
-syn keyword ParenBuiltin fflush
 syn keyword ParenBuiltin fclose
 syn keyword ParenBuiltin stat
 syn keyword ParenBuiltin utime
@@ -268,14 +267,14 @@ syn keyword ParenBuiltin unquote-splicing
 syn keyword ParenBuiltin quasiquote
 syn keyword ParenBuiltin reader-macro
 syn keyword ParenBuiltin read-byte
+syn keyword ParenBuiltin read-bytes
 syn keyword ParenBuiltin read-char
 syn keyword ParenBuiltin read-line
 syn keyword ParenBuiltin read
 syn keyword ParenBuiltin write-byte
-syn keyword ParenBuiltin write-mem
+syn keyword ParenBuiltin write-bytes
 syn keyword ParenBuiltin write-line
 syn keyword ParenBuiltin write
-syn keyword ParenBuiltin flush
 syn keyword ParenBuiltin with-memory-stream
 syn keyword ParenBuiltin with-open
 syn keyword ParenBuiltin eval
