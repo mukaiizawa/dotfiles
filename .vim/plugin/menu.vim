@@ -1,8 +1,9 @@
+" menu.vim
+
 function! GetStartUpList()
   let banner_path = $HOME . '/dotfiles/startup.banner'
   let logo_path = $HOME . '/dotfiles/startup.logo'
-  let action = "Unite neomru/file -hide-source-names -no-split -no-wrap "
-        \ . "-start-insert"
+  let action = "Unite neomru/file -hide-source-names -no-split -no-wrap -start-insert"
   let result = []
   if !filereadable(banner_path) || !filereadable(logo_path)
     call PrintError(printf('GetStartUpList: logo not found.'))
@@ -121,8 +122,7 @@ let g:unite_source_menu_menus.StartupLogo = {
 
 function! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
-    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap 
-          \ -no-start-insert
+    Unite menu:StartupLogo -hide-source-names -no-split -no-wrap -no-start-insert
   endif
 endfunction
 
