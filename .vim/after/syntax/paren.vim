@@ -47,7 +47,6 @@ syn keyword ParenBuiltin begin0
 syn keyword ParenBuiltin when
 syn keyword ParenBuiltin \|\|
 syn keyword ParenBuiltin &&
-syn keyword ParenBuiltin switch
 syn keyword ParenBuiltin break
 syn keyword ParenBuiltin continue
 syn keyword ParenBuiltin for
@@ -68,6 +67,7 @@ syn keyword ParenBuiltin address
 syn keyword ParenBuiltin len
 syn keyword ParenBuiltin slice
 syn keyword ParenBuiltin empty?
+syn keyword ParenBuiltin in?
 syn keyword ParenBuiltin function?
 syn keyword ParenBuiltin builtin?
 syn keyword ParenBuiltin special-operator?
@@ -139,7 +139,6 @@ syn keyword ParenBuiltin except
 syn keyword ParenBuiltin every?
 syn keyword ParenBuiltin some?
 syn keyword ParenBuiltin none?
-syn keyword ParenBuiltin include?
 syn keyword ParenBuiltin every-adjacent?
 syn keyword ParenBuiltin union
 syn keyword ParenBuiltin intersection
