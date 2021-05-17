@@ -255,7 +255,7 @@ let g:quickrun_config = {
       \     'input': '%{expand("%:p")}',
       \     'outputter': 'file',
       \     'outputter/file/name': '%{expand("%:r")}.html',
-      \     'exec': '%c md2html.p',
+      \     'exec': '%c md2html.p -t',
       \   },
       \   'paren': {
       \     'command': 'paren',
