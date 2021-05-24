@@ -180,6 +180,7 @@ syn keyword ParenBuiltin string?
 syn keyword ParenBuiltin str->num
 syn keyword ParenBuiltin chr
 syn keyword ParenBuiltin ord
+syn keyword ParenBuiltin wcwidth
 syn keyword ParenBuiltin ascii?
 syn keyword ParenBuiltin alnum?
 syn keyword ParenBuiltin alpha?
@@ -191,7 +192,6 @@ syn keyword ParenBuiltin upper?
 syn keyword ParenBuiltin lower
 syn keyword ParenBuiltin upper
 syn keyword ParenBuiltin str->arr
-syn keyword ParenBuiltin substr
 syn keyword ParenBuiltin strstr
 syn keyword ParenBuiltin strlstr
 syn keyword ParenBuiltin memlen
