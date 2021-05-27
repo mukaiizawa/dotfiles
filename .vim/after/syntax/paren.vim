@@ -64,10 +64,7 @@ syn keyword ParenBuiltin ==
 syn keyword ParenBuiltin !
 syn keyword ParenBuiltin !=
 syn keyword ParenBuiltin address
-syn keyword ParenBuiltin len
-syn keyword ParenBuiltin slice
 syn keyword ParenBuiltin empty?
-syn keyword ParenBuiltin in?
 syn keyword ParenBuiltin function?
 syn keyword ParenBuiltin builtin?
 syn keyword ParenBuiltin special-operator?
@@ -116,7 +113,6 @@ syn keyword ParenBuiltin ->list
 syn keyword ParenBuiltin join
 syn keyword ParenBuiltin split
 syn keyword ParenBuiltin last-cons
-syn keyword ParenBuiltin nth
 syn keyword ParenBuiltin last
 syn keyword ParenBuiltin butlast
 syn keyword ParenBuiltin assoc
@@ -124,7 +120,6 @@ syn keyword ParenBuiltin ..
 syn keyword ParenBuiltin group
 syn keyword ParenBuiltin reverse
 syn keyword ParenBuiltin reverse!
-syn keyword ParenBuiltin append
 syn keyword ParenBuiltin push!
 syn keyword ParenBuiltin pop!
 syn keyword ParenBuiltin flatten
@@ -144,9 +139,11 @@ syn keyword ParenBuiltin union
 syn keyword ParenBuiltin intersection
 syn keyword ParenBuiltin difference
 syn keyword ParenBuiltin number?
-syn keyword ParenBuiltin int?
 syn keyword ParenBuiltin byte?
-syn keyword ParenBuiltin int->str
+syn keyword ParenBuiltin int?
+syn keyword ParenBuiltin int
+syn keyword ParenBuiltin int32
+syn keyword ParenBuiltin float
 syn keyword ParenBuiltin ~
 syn keyword ParenBuiltin &
 syn keyword ParenBuiltin \|
@@ -176,8 +173,10 @@ syn keyword ParenBuiltin bound?
 syn keyword ParenBuiltin string
 syn keyword ParenBuiltin string!
 syn keyword ParenBuiltin str
+syn keyword ParenBuiltin bin
+syn keyword ParenBuiltin oct
+syn keyword ParenBuiltin hex
 syn keyword ParenBuiltin string?
-syn keyword ParenBuiltin str->num
 syn keyword ParenBuiltin chr
 syn keyword ParenBuiltin ord
 syn keyword ParenBuiltin wcwidth
@@ -191,9 +190,9 @@ syn keyword ParenBuiltin lower?
 syn keyword ParenBuiltin upper?
 syn keyword ParenBuiltin lower
 syn keyword ParenBuiltin upper
-syn keyword ParenBuiltin str->arr
 syn keyword ParenBuiltin strstr
 syn keyword ParenBuiltin strlstr
+syn keyword ParenBuiltin format
 syn keyword ParenBuiltin memlen
 syn keyword ParenBuiltin prefix?
 syn keyword ParenBuiltin suffix?
@@ -210,6 +209,10 @@ syn keyword ParenBuiltin dict
 syn keyword ParenBuiltin dict?
 syn keyword ParenBuiltin keys
 syn keyword ParenBuiltin {}
+syn keyword ParenBuiltin concat
+syn keyword ParenBuiltin slice
+syn keyword ParenBuiltin in?
+syn keyword ParenBuiltin len
 syn keyword ParenBuiltin fp
 syn keyword ParenBuiltin fopen
 syn keyword ParenBuiltin fgetc
