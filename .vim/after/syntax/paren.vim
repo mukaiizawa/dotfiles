@@ -247,7 +247,6 @@ syn keyword ParenBuiltin make-accessor
 syn keyword ParenBuiltin make-method-dispatcher
 syn keyword ParenBuiltin class
 syn keyword ParenBuiltin method
-syn keyword ParenBuiltin error
 syn keyword ParenBuiltin path
 syn keyword ParenBuiltin path.getcwd
 syn keyword ParenBuiltin unquote
@@ -268,6 +267,7 @@ syn keyword ParenBuiltin with-open
 syn keyword ParenBuiltin eval
 syn keyword ParenBuiltin apply
 syn keyword ParenBuiltin repl
+syn keyword ParenBuiltin raise
 syn keyword ParenBuiltin quit
 syn keyword ParenBuiltin load
 syn keyword ParenBuiltin import
