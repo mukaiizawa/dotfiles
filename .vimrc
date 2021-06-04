@@ -261,15 +261,6 @@ let g:quickrun_config = {
       \     'command': 'paren',
       \     'exec': '%c %s',
       \   },
-      \   'python': {
-      \     'type': executable('python3')? 'python/python3': 'python/python2',
-      \   },
-      \   'python/python3': {
-      \    'command': 'python3',
-      \   },
-      \   'python/python2': {
-      \     'command': 'python',
-      \   },
       \ }
 
 " indentLine
