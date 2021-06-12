@@ -63,6 +63,7 @@ syn keyword ParenBuiltin =
 syn keyword ParenBuiltin ==
 syn keyword ParenBuiltin !
 syn keyword ParenBuiltin !=
+syn keyword ParenBuiltin !==
 syn keyword ParenBuiltin address
 syn keyword ParenBuiltin empty?
 syn keyword ParenBuiltin function?
@@ -204,13 +205,15 @@ syn keyword ParenBuiltin bytes
 syn keyword ParenBuiltin bytes?
 syn keyword ParenBuiltin array
 syn keyword ParenBuiltin array?
-syn keyword ParenBuiltin arr->list
+syn keyword ParenBuiltin array->list
 syn keyword ParenBuiltin dict
 syn keyword ParenBuiltin dict?
 syn keyword ParenBuiltin keys
 syn keyword ParenBuiltin {}
 syn keyword ParenBuiltin concat
 syn keyword ParenBuiltin slice
+syn keyword ParenBuiltin swap!
+syn keyword ParenBuiltin sort!
 syn keyword ParenBuiltin in?
 syn keyword ParenBuiltin len
 syn keyword ParenBuiltin fp
