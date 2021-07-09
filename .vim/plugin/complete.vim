@@ -43,9 +43,6 @@ function! s:unite_source.gather_candidates(args, context)
   let s:fileType = &filetype
   let s:root = $HOME . '/dotfiles/dict/routes/'
   let s:path = s:root . s:FuzzyFileType(s:fileType) . '.dict'
-  if !filereadable(s:path)
-    let s:path = s:root . 'etc.dict'
-  endif
   let s:result = []
   let s:lines = readfile(s:path)
   for s:line in s:lines
