@@ -32,6 +32,8 @@ let s:unite_source = {
 function! s:FuzzyFileType(fileType)
   if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\|javascript\)'
     return 'web'
+  elseif a:fileType =~ '.git.*'
+    return 'git'
   elseif a:fileType == 'cpp'
     return 'c'
   else
@@ -43,6 +45,10 @@ function! s:unite_source.gather_candidates(args, context)
   let s:fileType = &filetype
   let s:root = $HOME . '/dotfiles/dict/routes/'
   let s:path = s:root . s:FuzzyFileType(s:fileType) . '.dict'
+  if !filereadable(s:path)
+    execute 'VimFiler' s:root . '../'
+    return []
+  endif
   let s:result = []
   let s:lines = readfile(s:path)
   for s:line in s:lines
