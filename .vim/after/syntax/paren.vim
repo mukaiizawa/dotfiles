@@ -34,8 +34,9 @@ syn keyword ParenBuiltin f
 syn keyword ParenBuiltin return
 syn keyword ParenBuiltin macro
 syn keyword ParenBuiltin unwind-protect
-syn keyword ParenBuiltin labels
-syn keyword ParenBuiltin goto
+syn keyword ParenBuiltin loop
+syn keyword ParenBuiltin break
+syn keyword ParenBuiltin continue
 syn keyword ParenBuiltin throw
 syn keyword ParenBuiltin catch
 syn keyword ParenBuiltin assert
@@ -47,10 +48,8 @@ syn keyword ParenBuiltin begin0
 syn keyword ParenBuiltin when
 syn keyword ParenBuiltin \|\|
 syn keyword ParenBuiltin &&
-syn keyword ParenBuiltin break
-syn keyword ParenBuiltin continue
-syn keyword ParenBuiltin for
 syn keyword ParenBuiltin while
+syn keyword ParenBuiltin for
 syn keyword ParenBuiltin dolist
 syn keyword ParenBuiltin dotimes
 syn keyword ParenBuiltin dostring
@@ -223,7 +222,6 @@ syn keyword ParenBuiltin array->list
 syn keyword ParenBuiltin dict
 syn keyword ParenBuiltin dict?
 syn keyword ParenBuiltin keys
-syn keyword ParenBuiltin {}
 syn keyword ParenBuiltin concat
 syn keyword ParenBuiltin slice
 syn keyword ParenBuiltin swap!
