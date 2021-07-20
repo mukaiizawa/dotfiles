@@ -177,6 +177,7 @@ syn keyword ParenBuiltin cosh
 syn keyword ParenBuiltin tanh
 syn keyword ParenBuiltin exp
 syn keyword ParenBuiltin log
+syn keyword ParenBuiltin pow
 syn keyword ParenBuiltin sqrt
 syn keyword ParenBuiltin symbol
 syn keyword ParenBuiltin keyword
