@@ -163,9 +163,6 @@ syn keyword ParenBuiltin \|
 syn keyword ParenBuiltin ^
 syn keyword ParenBuiltin <<
 syn keyword ParenBuiltin >>
-syn keyword ParenBuiltin abs
-syn keyword ParenBuiltin max
-syn keyword ParenBuiltin min
 syn keyword ParenBuiltin sin
 syn keyword ParenBuiltin cos
 syn keyword ParenBuiltin tan
@@ -179,6 +176,10 @@ syn keyword ParenBuiltin exp
 syn keyword ParenBuiltin log
 syn keyword ParenBuiltin pow
 syn keyword ParenBuiltin sqrt
+syn keyword ParenBuiltin abs
+syn keyword ParenBuiltin average
+syn keyword ParenBuiltin max
+syn keyword ParenBuiltin min
 syn keyword ParenBuiltin symbol
 syn keyword ParenBuiltin keyword
 syn keyword ParenBuiltin symbol?
