@@ -19,7 +19,7 @@ setlocal lispwords+=macro
 
 " macro
 setlocal lispwords+=&<-
-setlocal lispwords+=builtin-function
+setlocal lispwords+=built-in-function
 setlocal lispwords+=class
 setlocal lispwords+=doarray
 setlocal lispwords+=dolist
