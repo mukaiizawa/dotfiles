@@ -14,6 +14,7 @@
 # 条件分岐
 ## IF
 IFの使用例を示す。
+
     IF "x!VAR!"=="x" (
         ...
     )
@@ -36,7 +37,6 @@ IFの使用例を示す。
         ...
     ) ELSE IF <test> (
         ...
-    ...
     ) ELSE (
         ...
     )
@@ -44,6 +44,7 @@ IFの使用例を示す。
 
 ## NOT
 NOTは真偽値を反転させる。
+
     IF NOT <test> (
         ...
     )
@@ -134,7 +135,17 @@ EXITに/Bフラグを付けることにより、呼び出し元に戻れる。
     :exit1
     ECHO failed.
 
-# パスの確認 
+# ファイルの存在確認
+
+    SET FILENAME="test.txt"
+    IF EXIST %FILENAME% (
+        GOTO FILE_EXISTS
+    )
+    ...
+    :FILE_EXISTS
+    ECHO Not Found
+
+# 実行可能パスの確認
 javaにパスが通っているか確認する例を示す。
 
     WHERE /Q java.exe
