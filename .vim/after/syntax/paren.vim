@@ -45,8 +45,8 @@ syn keyword ParenBuiltIn function!
 syn keyword ParenBuiltIn with-gensyms
 syn keyword ParenBuiltIn begin0
 syn keyword ParenBuiltIn when
-syn keyword ParenBuiltIn \|\|
 syn keyword ParenBuiltIn &&
+syn keyword ParenBuiltIn \|\|
 syn keyword ParenBuiltIn while
 syn keyword ParenBuiltIn for
 syn keyword ParenBuiltIn dolist
@@ -127,7 +127,7 @@ syn keyword ParenBuiltIn foreach
 syn keyword ParenBuiltIn reduce
 syn keyword ParenBuiltIn find
 syn keyword ParenBuiltIn select
-syn keyword ParenBuiltIn except
+syn keyword ParenBuiltIn reject
 syn keyword ParenBuiltIn position
 syn keyword ParenBuiltIn every?
 syn keyword ParenBuiltIn some?
@@ -149,10 +149,6 @@ syn keyword ParenBuiltIn *
 syn keyword ParenBuiltIn /
 syn keyword ParenBuiltIn //
 syn keyword ParenBuiltIn %
-syn keyword ParenBuiltIn <
-syn keyword ParenBuiltIn >
-syn keyword ParenBuiltIn <=
-syn keyword ParenBuiltIn >=
 syn keyword ParenBuiltIn ++
 syn keyword ParenBuiltIn --
 syn keyword ParenBuiltIn ~
@@ -226,11 +222,17 @@ syn keyword ParenBuiltIn concat
 syn keyword ParenBuiltIn slice
 syn keyword ParenBuiltIn swap!
 syn keyword ParenBuiltIn sort!
+syn keyword ParenBuiltIn first
 syn keyword ParenBuiltIn last
 syn keyword ParenBuiltIn butlast
 syn keyword ParenBuiltIn in?
+syn keyword ParenBuiltIn index
 syn keyword ParenBuiltIn len
 syn keyword ParenBuiltIn empty?
+syn keyword ParenBuiltIn <
+syn keyword ParenBuiltIn >
+syn keyword ParenBuiltIn <=
+syn keyword ParenBuiltIn >=
 syn keyword ParenBuiltIn fp
 syn keyword ParenBuiltIn fopen
 syn keyword ParenBuiltIn fgetc
