@@ -54,8 +54,8 @@ syn keyword ParenBuiltIn dotimes
 syn keyword ParenBuiltIn dostring
 syn keyword ParenBuiltIn doarray
 syn keyword ParenBuiltIn timeit
-syn keyword ParenBuiltIn expand-macro
-syn keyword ParenBuiltIn expand-macro-all
+syn keyword ParenBuiltIn macroexpand-1
+syn keyword ParenBuiltIn macroexpand
 syn keyword ParenBuiltIn function
 syn keyword ParenBuiltIn =
 syn keyword ParenBuiltIn ==
@@ -75,8 +75,8 @@ syn keyword ParenBuiltIn cons?
 syn keyword ParenBuiltIn atom?
 syn keyword ParenBuiltIn cons
 syn keyword ParenBuiltIn car
-syn keyword ParenBuiltIn car!
 syn keyword ParenBuiltIn cdr
+syn keyword ParenBuiltIn car!
 syn keyword ParenBuiltIn cdr!
 syn keyword ParenBuiltIn caar
 syn keyword ParenBuiltIn cadr
