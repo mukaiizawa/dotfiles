@@ -68,8 +68,8 @@ syn keyword ParenBuiltIn function?
 syn keyword ParenBuiltIn built-in?
 syn keyword ParenBuiltIn special-operator?
 syn keyword ParenBuiltIn macro?
-syn keyword ParenBuiltIn procparams
-syn keyword ParenBuiltIn procbody
+syn keyword ParenBuiltIn params
+syn keyword ParenBuiltIn body
 syn keyword ParenBuiltIn nil?
 syn keyword ParenBuiltIn cons?
 syn keyword ParenBuiltIn atom?
