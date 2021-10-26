@@ -121,7 +121,6 @@ syn keyword ParenBuiltIn push!
 syn keyword ParenBuiltIn pop!
 syn keyword ParenBuiltIn flatten
 syn keyword ParenBuiltIn collect
-syn keyword ParenBuiltIn zip
 syn keyword ParenBuiltIn map
 syn keyword ParenBuiltIn foreach
 syn keyword ParenBuiltIn reduce
@@ -290,6 +289,7 @@ syn keyword ParenBuiltIn apply
 syn keyword ParenBuiltIn repl
 syn keyword ParenBuiltIn raise
 syn keyword ParenBuiltIn quit
+syn keyword ParenBuiltIn exit
 syn keyword ParenBuiltIn load
 syn keyword ParenBuiltIn import
 syn keyword ParenBuiltIn boot
