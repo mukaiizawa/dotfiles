@@ -85,7 +85,7 @@ nnoremap <C-u> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <Del> <NOP>
 nnoremap <F1> :windo diffthis<CR>
-nnoremap <F2> :windo diffoff<CR>
+nnoremap <F2> :windo diffoff!<CR>
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
