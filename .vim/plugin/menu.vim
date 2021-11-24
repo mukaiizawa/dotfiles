@@ -36,15 +36,6 @@ if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
 endif
 
-let g:unite_source_menu_menus.Diff = {
-      \  "command_candidates" : [
-      \      ["diffoff", "windo diffoff | set nowrap | set foldmethod=marker"],
-      \      ["diffthis", "diffthis"],
-      \      ["diffupdate", "diffupdate"],
-      \      ["diffbuffers", "windo diffthis"],
-      \  ]
-      \}
-
 let g:unite_source_menu_menus.Setting = {
       \  "command_candidates" : [
       \      ["vimrc", "edit $MYVIMRC"],
