@@ -124,9 +124,9 @@ syn keyword ParenBuiltIn collect
 syn keyword ParenBuiltIn map
 syn keyword ParenBuiltIn foreach
 syn keyword ParenBuiltIn reduce
-syn keyword ParenBuiltIn find
 syn keyword ParenBuiltIn select
 syn keyword ParenBuiltIn reject
+syn keyword ParenBuiltIn find
 syn keyword ParenBuiltIn position
 syn keyword ParenBuiltIn every?
 syn keyword ParenBuiltIn some?
@@ -135,6 +135,7 @@ syn keyword ParenBuiltIn every-adjacent?
 syn keyword ParenBuiltIn union
 syn keyword ParenBuiltIn intersection
 syn keyword ParenBuiltIn difference
+syn keyword ParenBuiltIn symmetric-difference
 syn keyword ParenBuiltIn product
 syn keyword ParenBuiltIn number?
 syn keyword ParenBuiltIn byte?
@@ -156,6 +157,7 @@ syn keyword ParenBuiltIn \|
 syn keyword ParenBuiltIn ^
 syn keyword ParenBuiltIn <<
 syn keyword ParenBuiltIn >>
+syn keyword ParenBuiltIn abs
 syn keyword ParenBuiltIn sin
 syn keyword ParenBuiltIn cos
 syn keyword ParenBuiltIn tan
@@ -169,10 +171,6 @@ syn keyword ParenBuiltIn exp
 syn keyword ParenBuiltIn log
 syn keyword ParenBuiltIn pow
 syn keyword ParenBuiltIn sqrt
-syn keyword ParenBuiltIn abs
-syn keyword ParenBuiltIn average
-syn keyword ParenBuiltIn max
-syn keyword ParenBuiltIn min
 syn keyword ParenBuiltIn symbol
 syn keyword ParenBuiltIn keyword
 syn keyword ParenBuiltIn symbol?
@@ -197,8 +195,10 @@ syn keyword ParenBuiltIn space?
 syn keyword ParenBuiltIn print?
 syn keyword ParenBuiltIn lower?
 syn keyword ParenBuiltIn upper?
+syn keyword ParenBuiltIn title?
 syn keyword ParenBuiltIn lower
 syn keyword ParenBuiltIn upper
+syn keyword ParenBuiltIn title
 syn keyword ParenBuiltIn strstr
 syn keyword ParenBuiltIn strlstr
 syn keyword ParenBuiltIn format
@@ -232,6 +232,8 @@ syn keyword ParenBuiltIn <
 syn keyword ParenBuiltIn >
 syn keyword ParenBuiltIn <=
 syn keyword ParenBuiltIn >=
+syn keyword ParenBuiltIn max
+syn keyword ParenBuiltIn min
 syn keyword ParenBuiltIn fp
 syn keyword ParenBuiltIn fopen
 syn keyword ParenBuiltIn fgetc
