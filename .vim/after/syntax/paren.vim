@@ -202,6 +202,9 @@ syn keyword ParenBuiltIn title
 syn keyword ParenBuiltIn strstr
 syn keyword ParenBuiltIn strlstr
 syn keyword ParenBuiltIn format
+syn keyword ParenBuiltIn strip
+syn keyword ParenBuiltIn lstrip
+syn keyword ParenBuiltIn rstrip
 syn keyword ParenBuiltIn bytes
 syn keyword ParenBuiltIn bytes?
 syn keyword ParenBuiltIn memcat
