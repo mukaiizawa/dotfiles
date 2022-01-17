@@ -108,7 +108,7 @@ syn keyword ParenBuiltIn cdddar
 syn keyword ParenBuiltIn cddddr
 syn keyword ParenBuiltIn list
 syn keyword ParenBuiltIn list?
-syn keyword ParenBuiltIn ->list
+syn keyword ParenBuiltIn atom->list
 syn keyword ParenBuiltIn join
 syn keyword ParenBuiltIn split
 syn keyword ParenBuiltIn last-cons
