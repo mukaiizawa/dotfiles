@@ -34,7 +34,7 @@ set expandtab
 set fileencoding=utf-8
 set fileencodings=utf-8,cp932,sjis,euc-jp
 set fileformat=unix
-set fileformats=unix,dos
+set fileformats=unix,dos,mac
 set foldmethod=marker
 set formatoptions+=roqjM
 set formatoptions-=tc
