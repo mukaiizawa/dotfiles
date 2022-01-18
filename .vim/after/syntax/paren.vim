@@ -108,7 +108,7 @@ syn keyword ParenBuiltIn cdddar
 syn keyword ParenBuiltIn cddddr
 syn keyword ParenBuiltIn list
 syn keyword ParenBuiltIn list?
-syn keyword ParenBuiltIn atom->list
+syn keyword ParenBuiltIn ->list
 syn keyword ParenBuiltIn join
 syn keyword ParenBuiltIn split
 syn keyword ParenBuiltIn last-cons
@@ -216,10 +216,10 @@ syn keyword ParenBuiltIn prefix?
 syn keyword ParenBuiltIn suffix?
 syn keyword ParenBuiltIn array
 syn keyword ParenBuiltIn array?
-syn keyword ParenBuiltIn array->list
 syn keyword ParenBuiltIn dict
 syn keyword ParenBuiltIn dict?
 syn keyword ParenBuiltIn keys
+syn keyword ParenBuiltIn list...
 syn keyword ParenBuiltIn concat
 syn keyword ParenBuiltIn slice
 syn keyword ParenBuiltIn swap!
