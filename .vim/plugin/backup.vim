@@ -3,7 +3,7 @@
 scriptencoding utf-8
 
 let s:backupRootDir = $HOME . '/.back/'
-let s:expired = 60 * 60 * 24 * 3
+let s:expired = 60 * 60 * 24 * 8
 
 function! s:isBackupEnable()
   return exists('*strftime') && exists('*mkdir')
