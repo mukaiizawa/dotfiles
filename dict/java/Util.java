@@ -1,6 +1,10 @@
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
+import java.security.SecureRandom;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 
 /**
  * ユーティリティクラス
@@ -50,9 +54,64 @@ public class Util {
     return buf;
   }
 
-  public static void  main(String[] args) {
-    Util util = new Util();
-    System.out.println(args);
+  public static final int SESSION_TIME_OUT = 10 * 60 * 60 * 1000;    // 10 hour
+
+  public static boolean isEmpty(String s) {
+    return s == null || s.isEmpty();
+  }
+
+  public static boolean isMail(String s) {
+    return s.matches("[a-zA-Z0-9!#%&'/=_~`\\*\\+\\?\\{\\}\\^\\$\\-\\|][a-zA-Z0-9!#%&'/=_~`\\.\\*\\+\\?\\{\\}\\^\\$\\-\\|]+@[a-zA-Z0-9!#%&'/=_~`\\*\\+\\?\\{\\}\\^\\$\\-\\|]+(\\.[a-zA-Z0-9!#%&'/=_~`\\*\\+\\?\\{\\}\\^\\$\\-\\|]+)+");
+  }
+
+  public static String nvl(String s) {
+    return nvl(s, "");
+  }
+
+  public static String nvl(String s, String t) {
+    if (s == null) return t;
+    return s;
+  }
+
+  public static String randval(int len) {
+    String symbols = "0123456789ABCDEF";
+    StringBuilder val = new StringBuilder();
+    Random rand = new SecureRandom();
+    for (int i = 0; i < len; i++)
+      val.append(symbols.charAt(rand.nextInt(symbols.length())));
+    return val.toString();
+  }
+
+  private static Date min(String s) throws Exception {
+    return new SimpleDateFormat("HH:mm").parse(s);
+  }
+
+  public static long diffMillSec(Date x, Date y) {
+    return Math.abs(x.getTime() - y.getTime());
+  }
+
+  public static long diffSec(Date x, Date y) {
+    return diffMillSec(x, y) / 1000;
+  }
+
+  public static long diffMin(Date x, Date y) {
+    return diffSec(x, y) / 60;
+  }
+
+  private static void xassert(boolean b) {
+    if (!b) throw new IllegalStateException();
+  }
+
+  public static void main(String[] args) throws Exception {
+    xassert(nvl(null).equals(""));
+    xassert(nvl("foo").equals("foo"));
+    xassert(nvl(null,"bar").equals("bar"));
+    xassert(nvl("foo","bar").equals("foo"));
+    xassert(!randval(10).equals(randval(10)));
+    xassert(diffMin(min("10:20"), min("11:10")) == 50);
+    xassert(diffSec(min("10:20"), min("11:10")) == 50 * 60);
+    xassert(diffMillSec(min("10:20"), min("11:10")) == 50 * 60 * 1000);
+    System.out.println("pass");
   }
 
 }
