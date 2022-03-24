@@ -58,7 +58,7 @@ syn keyword ParenBuiltIn alnum?
 syn keyword ParenBuiltIn alpha?
 syn keyword ParenBuiltIn apply
 syn keyword ParenBuiltIn array
-syn keyword ParenBuiltIn array
+syn keyword ParenBuiltIn array?
 syn keyword ParenBuiltIn ascii?
 syn keyword ParenBuiltIn asin
 syn keyword ParenBuiltIn assert
@@ -113,6 +113,7 @@ syn keyword ParenBuiltIn cdr
 syn keyword ParenBuiltIn cdr!
 syn keyword ParenBuiltIn chdir
 syn keyword ParenBuiltIn chr
+syn keyword ParenBuiltIn chunk
 syn keyword ParenBuiltIn class
 syn keyword ParenBuiltIn clock
 syn keyword ParenBuiltIn collect
@@ -135,6 +136,7 @@ syn keyword ParenBuiltIn dolist
 syn keyword ParenBuiltIn dostring
 syn keyword ParenBuiltIn dotimes
 syn keyword ParenBuiltIn drop
+syn keyword ParenBuiltIn drop-last
 syn keyword ParenBuiltIn drop-while
 syn keyword ParenBuiltIn dynamic
 syn keyword ParenBuiltIn empty?
@@ -190,6 +192,7 @@ syn keyword ParenBuiltIn keyword
 syn keyword ParenBuiltIn keyword?
 syn keyword ParenBuiltIn last
 syn keyword ParenBuiltIn last-cons
+syn keyword ParenBuiltIn last-index
 syn keyword ParenBuiltIn len
 syn keyword ParenBuiltIn let
 syn keyword ParenBuiltIn list
@@ -269,10 +272,11 @@ syn keyword ParenBuiltIn slice
 syn keyword ParenBuiltIn some?
 syn keyword ParenBuiltIn sort!
 syn keyword ParenBuiltIn space?
-syn keyword ParenBuiltIn span
 syn keyword ParenBuiltIn special-operator
 syn keyword ParenBuiltIn special-operator?
 syn keyword ParenBuiltIn split
+syn keyword ParenBuiltIn split-at
+syn keyword ParenBuiltIn split-with
 syn keyword ParenBuiltIn sqrt
 syn keyword ParenBuiltIn stat
 syn keyword ParenBuiltIn str
@@ -290,6 +294,7 @@ syn keyword ParenBuiltIn symcmp
 syn keyword ParenBuiltIn symmetric-difference
 syn keyword ParenBuiltIn system
 syn keyword ParenBuiltIn take
+syn keyword ParenBuiltIn take-last
 syn keyword ParenBuiltIn take-while
 syn keyword ParenBuiltIn tan
 syn keyword ParenBuiltIn tanh
@@ -299,6 +304,7 @@ syn keyword ParenBuiltIn timeit
 syn keyword ParenBuiltIn title
 syn keyword ParenBuiltIn title?
 syn keyword ParenBuiltIn union
+syn keyword ParenBuiltIn uniq
 syn keyword ParenBuiltIn unquote
 syn keyword ParenBuiltIn unquote-splicing
 syn keyword ParenBuiltIn unwind-protect
@@ -306,6 +312,7 @@ syn keyword ParenBuiltIn upper
 syn keyword ParenBuiltIn upper?
 syn keyword ParenBuiltIn utcoffset
 syn keyword ParenBuiltIn utime
+syn keyword ParenBuiltIn vals
 syn keyword ParenBuiltIn wcwidth
 syn keyword ParenBuiltIn when
 syn keyword ParenBuiltIn while
