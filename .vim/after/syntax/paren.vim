@@ -73,6 +73,7 @@ syn keyword ParenBuiltIn boot
 syn keyword ParenBuiltIn bound?
 syn keyword ParenBuiltIn break
 syn keyword ParenBuiltIn built-in-function
+syn keyword ParenBuiltIn built-in-name
 syn keyword ParenBuiltIn built-in?
 syn keyword ParenBuiltIn butlast
 syn keyword ParenBuiltIn byte?
@@ -213,7 +214,6 @@ syn keyword ParenBuiltIn make-method-dispatcher
 syn keyword ParenBuiltIn map
 syn keyword ParenBuiltIn max
 syn keyword ParenBuiltIn member
-syn keyword ParenBuiltIn memcat
 syn keyword ParenBuiltIn memcmp
 syn keyword ParenBuiltIn memcpy
 syn keyword ParenBuiltIn memlen
@@ -239,7 +239,9 @@ syn keyword ParenBuiltIn pos?
 syn keyword ParenBuiltIn position
 syn keyword ParenBuiltIn pow
 syn keyword ParenBuiltIn prefix?
+syn keyword ParenBuiltIn print
 syn keyword ParenBuiltIn print?
+syn keyword ParenBuiltIn println
 syn keyword ParenBuiltIn product
 syn keyword ParenBuiltIn push!
 syn keyword ParenBuiltIn putenv
@@ -284,8 +286,6 @@ syn keyword ParenBuiltIn string
 syn keyword ParenBuiltIn string!
 syn keyword ParenBuiltIn string?
 syn keyword ParenBuiltIn strip
-syn keyword ParenBuiltIn strlstr
-syn keyword ParenBuiltIn strstr
 syn keyword ParenBuiltIn suffix?
 syn keyword ParenBuiltIn swap!
 syn keyword ParenBuiltIn symbol
