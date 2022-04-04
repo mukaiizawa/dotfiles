@@ -76,6 +76,7 @@ syn keyword ParenBuiltIn built-in-function
 syn keyword ParenBuiltIn built-in-name
 syn keyword ParenBuiltIn built-in?
 syn keyword ParenBuiltIn butlast
+syn keyword ParenBuiltIn byte-len
 syn keyword ParenBuiltIn byte?
 syn keyword ParenBuiltIn bytes
 syn keyword ParenBuiltIn bytes?
@@ -216,8 +217,6 @@ syn keyword ParenBuiltIn max
 syn keyword ParenBuiltIn member
 syn keyword ParenBuiltIn memcmp
 syn keyword ParenBuiltIn memcpy
-syn keyword ParenBuiltIn memlen
-syn keyword ParenBuiltIn memmem
 syn keyword ParenBuiltIn method
 syn keyword ParenBuiltIn min
 syn keyword ParenBuiltIn mkdir
