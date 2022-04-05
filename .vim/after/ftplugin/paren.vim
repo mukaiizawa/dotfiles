@@ -38,4 +38,5 @@ setlocal lispwords+=with-client-socket
 setlocal lispwords+=with-gensyms
 setlocal lispwords+=with-memory-stream
 setlocal lispwords+=with-open
+setlocal lispwords+=with-process
 setlocal lispwords+=with-server-socket
