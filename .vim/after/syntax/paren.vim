@@ -233,7 +233,9 @@ syn keyword ParenBuiltIn params
 syn keyword ParenBuiltIn partial
 syn keyword ParenBuiltIn path
 syn keyword ParenBuiltIn path.getcwd
+syn keyword ParenBuiltIn pclose
 syn keyword ParenBuiltIn pop!
+syn keyword ParenBuiltIn popen
 syn keyword ParenBuiltIn pos?
 syn keyword ParenBuiltIn position
 syn keyword ParenBuiltIn pow
@@ -318,6 +320,7 @@ syn keyword ParenBuiltIn while
 syn keyword ParenBuiltIn with-gensyms
 syn keyword ParenBuiltIn with-memory-stream
 syn keyword ParenBuiltIn with-open
+syn keyword ParenBuiltIn with-process
 syn keyword ParenBuiltIn write
 syn keyword ParenBuiltIn write-byte
 syn keyword ParenBuiltIn write-bytes
