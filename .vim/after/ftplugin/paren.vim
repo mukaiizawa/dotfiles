@@ -18,7 +18,6 @@ setlocal lispwords+=f
 setlocal lispwords+=macro
 
 " macro
-setlocal lispwords+=&<-
 setlocal lispwords+=built-in-function
 setlocal lispwords+=class
 setlocal lispwords+=doarray
@@ -31,7 +30,6 @@ setlocal lispwords+=function!
 setlocal lispwords+=method
 setlocal lispwords+=reader-macro
 setlocal lispwords+=special-operator
-setlocal lispwords+=switch
 setlocal lispwords+=when
 setlocal lispwords+=while
 setlocal lispwords+=with-client-socket

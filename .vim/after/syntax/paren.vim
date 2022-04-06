@@ -37,9 +37,9 @@ syn keyword ParenBuiltIn ..
 syn keyword ParenBuiltIn /
 syn keyword ParenBuiltIn //
 syn keyword ParenBuiltIn ^
-syn keyword ParenBuiltIn ~
 syn keyword ParenBuiltIn \|
 syn keyword ParenBuiltIn \|\|
+syn keyword ParenBuiltIn ~
 syn keyword ParenBuiltIn +
 syn keyword ParenBuiltIn ++
 syn keyword ParenBuiltIn <
