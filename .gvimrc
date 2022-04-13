@@ -19,7 +19,7 @@ set mousehide
 
 if has('win32') || has ('win64')
   au GUIEnter * simalt ~x
-  set guifont=FIRA_CODE:h12,consolas:h12,MS_Gothic:h12    " set guifont=*
+  set guifont=Fira_Code_Retina:h12,MS_Gothic:h12
   set linespace=1
   set ambiwidth=double
 elseif has("mac")
