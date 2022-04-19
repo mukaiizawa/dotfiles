@@ -6,6 +6,7 @@ syn sync minlines=1000
 syn case match
 
 syn region ParenList matchgroup=Delimiter start="(" end=")" contains=ALL
+syn region ParenCommentReaderMacro matchgroup=Comment start="#;(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="'" end="[ \t();]" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="'(" end=")" contains=ALL
 syn region ParenQuoted matchgroup=Identifier start="`" end="[ \t();]" contains=ALL

@@ -5,8 +5,7 @@ setlocal lisp
 setlocal define=^\\s*(\\(macro\\|f\\|function\\|class\\|method\\)
 setlocal formatoptions-=t
 setlocal iskeyword=33,35-38,42-43,45-58,60-63,65-91,93-95,97-126
-setlocal comments=:;
-setlocal comments^=:;;;,:;;,sr:#;,mb:;,ex:;#
+setlocal comments=:;;;;;;,:;;;;;,:;;;;,:;;;,:;;,:;
 setlocal commentstring=;%s
 setlocal colorcolumn=100
 setlocal shiftwidth=4
