@@ -52,7 +52,7 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
 ## archive形式
 以下の書式でダンプファイルからリストアを行う。
 
-    pg_restore -h <host> -p <port> -C -d postgres <dump>
+    pg_restore -h <host> -d <database> -C <dump>
     
     -C -- create database before restore.
     dump -- dump file name.
