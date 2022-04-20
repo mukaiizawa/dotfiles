@@ -47,7 +47,7 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
 
     psql -h localhost -U postgres -d <database>
     # DROP SCHEMA IF EXISTS <schema> CASCADE;
-    psql -h localhost -U schema -d <database> -f xxx.dump
+    psql -h localhost -U postgres -d <database> -f xxx.dump
 
 ## archive形式
 以下の書式でダンプファイルからリストアを行う。
