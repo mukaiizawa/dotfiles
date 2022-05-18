@@ -305,6 +305,7 @@ vmap gci <Plug>(caw:hatpos:toggle)
 vmap gw  <Plug>(openbrowser-open)
 vmap gww <Plug>(openbrowser-search)
 
+nnoremap <silent>mb :<C-u>Unite bookmark<CR>
 nnoremap <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
 nnoremap <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
