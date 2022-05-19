@@ -18,5 +18,13 @@ Worksheets.Add after:=Worksheets(Worksheets.Count)
 ' 追加したシートの名称変更
 Worksheets.Add(after:=Worksheets(Worksheets.Count)).Name("sheet2")
 
+' 名前を表示する
+Sub DisplayName()
+  Dim name As Object
+  For Each name In Names
+    name.Visible = True
+  Next
+End Sub
+
 ' シート名一覧の取得(put imidiate window and press enter)
 For Each i In ThisWorkbook.Sheets: debug.print i.name : next i
