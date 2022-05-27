@@ -287,6 +287,11 @@ let g:user_emmet_settings = {
       \            'a': {'href': ''},
       \        },
       \    },
+      \    'paren' : {
+      \        'snippets': {
+      \            'main': "(function! main (args)\n  (write :hello-world))",
+      \        },
+      \    },
       \ }
 
 " quickfix
