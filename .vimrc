@@ -319,7 +319,5 @@ nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
 nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
 nnoremap <silent>mx :<C-u>Unite quickfix<CR>
 
-nnoremap <Space>i :<C-u>IndentLinesToggle<CR>
-
 nnoremap sp :<C-u>PrintSurround<CR>
 vnoremap sp :PrintSurround<CR>
