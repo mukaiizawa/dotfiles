@@ -11,14 +11,14 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/neomru.vim'
-Plug 'thinca/vim-quickrun'
+Plug 'Shougo/vimfiler.vim'
+Plug 'mattn/emmet-vim'
 Plug 'osyo-manga/unite-quickfix'
+Plug 'thinca/vim-quickrun'
+Plug 'tpope/vim-fugitive'
 Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'mattn/emmet-vim'
 call plug#end()
 filetype plugin indent on
 syntax enable
@@ -119,6 +119,8 @@ nnoremap gf :vs<CR>gf
 nnoremap j gj
 nnoremap k gk
 nnoremap s  <NOP>
+nnoremap sc" f"r',.
+nnoremap sc' f'r",.
 nnoremap sd" f"x,x
 nnoremap sd' f'x,x
 nnoremap sd( f)xF(x
@@ -128,6 +130,7 @@ nnoremap sd< f>xF<x
 nnoremap sd> f>xF<x
 nnoremap sd[ f]xF[x
 nnoremap sd] f]xF[x
+nnoremap sd` f`x,x
 nnoremap sd{ f}xF{x
 nnoremap sd} f}xF{x
 nnoremap sh <C-w>h
@@ -264,10 +267,6 @@ let g:quickrun_config = {
       \     'exec': '%c %s',
       \   },
       \ }
-
-" indentLine
-let g:indentLine_char = '|'
-let g:indentLine_fileType = ['']
 
 " caw
 let g:caw_no_default_keymappings = 1
