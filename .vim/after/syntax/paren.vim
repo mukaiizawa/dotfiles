@@ -155,6 +155,7 @@ syn keyword ParenBuiltIn f
 syn keyword ParenBuiltIn fclose
 syn keyword ParenBuiltIn fgetc
 syn keyword ParenBuiltIn fgets
+syn keyword ParenBuiltIn fill!
 syn keyword ParenBuiltIn find-class
 syn keyword ParenBuiltIn find-method
 syn keyword ParenBuiltIn flatten
@@ -213,9 +214,8 @@ syn keyword ParenBuiltIn macro
 syn keyword ParenBuiltIn macro?
 syn keyword ParenBuiltIn macroexpand
 syn keyword ParenBuiltIn macroexpand-1
-syn keyword ParenBuiltIn make-accessor
-syn keyword ParenBuiltIn make-method-dispatcher
 syn keyword ParenBuiltIn map
+syn keyword ParenBuiltIn map-group
 syn keyword ParenBuiltIn max
 syn keyword ParenBuiltIn member
 syn keyword ParenBuiltIn memcmp
@@ -231,7 +231,6 @@ syn keyword ParenBuiltIn object?
 syn keyword ParenBuiltIn oct
 syn keyword ParenBuiltIn odd?
 syn keyword ParenBuiltIn ord
-syn keyword ParenBuiltIn overload
 syn keyword ParenBuiltIn params
 syn keyword ParenBuiltIn partial
 syn keyword ParenBuiltIn path
@@ -264,6 +263,7 @@ syn keyword ParenBuiltIn reduce
 syn keyword ParenBuiltIn reject
 syn keyword ParenBuiltIn remove
 syn keyword ParenBuiltIn rename
+syn keyword ParenBuiltIn repeat
 syn keyword ParenBuiltIn repl
 syn keyword ParenBuiltIn return
 syn keyword ParenBuiltIn reverse
@@ -320,6 +320,7 @@ syn keyword ParenBuiltIn vals
 syn keyword ParenBuiltIn wcwidth
 syn keyword ParenBuiltIn when
 syn keyword ParenBuiltIn while
+syn keyword ParenBuiltIn with-arrow-syntax
 syn keyword ParenBuiltIn with-gensyms
 syn keyword ParenBuiltIn with-memory-stream
 syn keyword ParenBuiltIn with-open
