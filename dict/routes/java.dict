@@ -17,6 +17,7 @@ Snippets AheadReader	~/dotfiles/dict/java/AheadReader.java
 Snippets DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
 Snippets DateUtil	~/dotfiles/dict/java/DateUtil.java
 Snippets FileUtil	~/dotfiles/dict/java/FileUtil.java
+Snippets Lexer	~/dotfiles/dict/java/Lexer.java
 Snippets MailUtil	~/dotfiles/dict/java/MailUtil.java
 Snippets Point	~/dotfiles/dict/java/Point.java
 Snippets ResourceManager	~/dotfiles/dict/java/ResourceManager.java
