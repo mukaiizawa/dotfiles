@@ -43,10 +43,10 @@ endfunction
 
 function! s:unite_source.gather_candidates(args, context)
   let s:fileType = &filetype
-  let s:root = $HOME . '/dotfiles/dict/routes/'
-  let s:path = s:root . s:FuzzyFileType(s:fileType) . '.dict'
+  let s:root = $HOME . '/dotfiles/dict/'
+  let s:path = s:root . s:FuzzyFileType(s:fileType) . '/index.csv'
   if !filereadable(s:path)
-    execute 'VimFiler' s:root . '../'
+    execute 'VimFiler' s:root
     return []
   endif
   let s:result = []
