@@ -234,7 +234,6 @@ syn keyword ParenBuiltIn ord
 syn keyword ParenBuiltIn params
 syn keyword ParenBuiltIn partial
 syn keyword ParenBuiltIn path
-syn keyword ParenBuiltIn path.getcwd
 syn keyword ParenBuiltIn pclose
 syn keyword ParenBuiltIn pop!
 syn keyword ParenBuiltIn popen
@@ -244,6 +243,7 @@ syn keyword ParenBuiltIn pow
 syn keyword ParenBuiltIn prefix?
 syn keyword ParenBuiltIn print
 syn keyword ParenBuiltIn print?
+syn keyword ParenBuiltIn printf
 syn keyword ParenBuiltIn println
 syn keyword ParenBuiltIn product
 syn keyword ParenBuiltIn push!
@@ -294,7 +294,6 @@ syn keyword ParenBuiltIn suffix?
 syn keyword ParenBuiltIn swap!
 syn keyword ParenBuiltIn symbol
 syn keyword ParenBuiltIn symbol?
-syn keyword ParenBuiltIn symcmp
 syn keyword ParenBuiltIn symmetric-difference
 syn keyword ParenBuiltIn system
 syn keyword ParenBuiltIn take
@@ -331,7 +330,6 @@ syn keyword ParenBuiltIn write-bytes
 syn keyword ParenBuiltIn write-line
 syn keyword ParenBuiltIn zero?
 syn keyword ParenBuiltIn zip
-
 " }}}
 
 syn match ParenMethod "\<\.\k*\>"
