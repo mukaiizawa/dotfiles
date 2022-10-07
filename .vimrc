@@ -321,3 +321,9 @@ nnoremap <silent>mx :<C-u>Unite quickfix<CR>
 
 nnoremap sp :<C-u>PrintSurround<CR>
 vnoremap sp :PrintSurround<CR>
+
+" autocmd
+augroup vimrc
+  au!
+  au TerminalOpen * setlocal nonu
+augroup END
