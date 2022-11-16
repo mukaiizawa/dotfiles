@@ -1,6 +1,7 @@
 Game nqueen	~/dotfiles/dict/vb/nqueen.vb
 Game numpre	~/dotfiles/dict/vb/numpre.vb
 Script mso2pdf	~/dotfiles/dict/vb/mso2pdf.vbs
+Script run-macro	~/dotfiles/dict/vb/run-macro.vbs
 Snippets	~/dotfiles/dict/vb/snippets.vb
 Template	~/dotfiles/dict/vb/template.vb
 Tutorial Dictionary	~/dotfiles/dict/vb/dictionary.md
