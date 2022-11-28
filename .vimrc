@@ -78,7 +78,6 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 nnoremap ( {
 nnoremap ) }
-nnoremap / /\v
 nnoremap <C-Insert> "*y
 nnoremap <C-d> <NOP>
 nnoremap <C-e> <NOP>
