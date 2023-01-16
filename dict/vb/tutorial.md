@@ -220,6 +220,21 @@ Do Untile Loop文と同じである。
     Loop
 Doステートメントから脱出するにはExitステートメントにDoを指定する。
 
+# With Statement
+With Statementを使用すると、一度オブジェクトを宣言すれば`.`で省略して参照できるようになる。
+
+これは、
+
+    Worksheets(1).Cells(1, 1) = 1
+    Worksheets(1).Cells(2, 1) = 2
+
+以下のようにかける。
+
+    With Worksheets(1)
+    　　.Cells(1, 1) = 1
+    　　.Cells(2, 1) = 2
+    End With
+
 # ユーザ定義型
 ## ユーザ定義型の定義
     Type 型名称
