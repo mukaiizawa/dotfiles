@@ -1,40 +1,40 @@
 " menu.vim
 
-function! GetStartUpList()
+fu! GetStartUpList()
   let banner_path = $HOME . '/dotfiles/startup.banner'
   let logo_path = $HOME . '/dotfiles/startup.logo'
   let action = "Unite neomru/file -hide-source-names -no-split -no-wrap -start-insert"
   let result = []
   if !filereadable(banner_path) || !filereadable(logo_path)
     call PrintError(printf('GetStartUpList: logo not found.'))
-    return result
-  endif
+    retu result
+  en
   let banner =  readfile(banner_path)
   for line in banner
     call add(result, [line, action])
-  endfor
+  endfo
   let logo =  readfile(logo_path)
   let win_height = &lines
   let win_width = &columns
   if has('win32') || has('win64')
     let win_height = 55
     let win_width = 230
-  endif
+  en
   let padding_top = win_height - len(banner) - len(logo) - 7
   let padding_left = repeat(" ", win_width - 50)
   while padding_top > 0
     call add(result, ["", action])
     let padding_top = padding_top - 1
-  endwhile
+  endw
   for line in logo
     call add(result, [padding_left . line, action])
-  endfor
-  return result
-endfunction
+  endfo
+  retu result
+endf
 
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
-endif
+en
 
 let g:unite_source_menu_menus.Setting = {
       \  "command_candidates" : [
@@ -107,14 +107,14 @@ let g:unite_source_menu_menus.StartupLogo = {
       \  "command_candidates" : GetStartUpList(),
       \ }
 
-function! UniteStartup()
+fu! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
     Unite menu:StartupLogo -hide-source-names -no-split -no-wrap -no-start-insert
-  endif
-endfunction
+  en
+endf
 
-command! UniteStartup call UniteStartup()
-augroup startupMenu
-  autocmd!
-  autocmd VimEnter * nested :UniteStartup
-augroup END
+com! UniteStartup call UniteStartup()
+aug startupMenu
+  au!
+  au VimEnter * nested :UniteStartup
+aug END

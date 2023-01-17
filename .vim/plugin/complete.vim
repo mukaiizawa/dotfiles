@@ -1,54 +1,47 @@
-function! CompleteWords(findstart, base)
-  let s:commonPath = $HOME . '/dotfiles/word/common.word'
-  let s:path = $HOME . '/dotfiles/word/' . expand("%:e") . '.word'
-  if a:findstart
-    " get cursor word.
-    let s:cur_text = strpart(getline('.'), 0, col('.') - 1)
-    return match(s:cur_text, '\f*$')
-  else
-    " find word matching with `a:base'
-    let s:lines = readfile(s:commonPath) +
-          \ (filereadable(s:path)?
-          \   readfile(s:path):
-          \   [])
-    let s:result = []
-    for s:line in s:lines
-      if s:line =~ '^' . a:base
-        call add(s:result, {
-              \   'word' : s:line,
-              \   'abbr' : s:line
-              \ })
-      endif
-    endfor
-    return s:result
-  endif
-endfunction
+" complete.vim
 
 let s:unite_source = {
       \   'name': 'help',
       \   "default_action" : "vsplit",
       \ }
 
-function! s:FuzzyFileType(fileType)
-  if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\|javascript\)'
-    return 'web'
-  elseif a:fileType =~ '.git.*'
-    return 'git'
-  elseif a:fileType == 'cpp'
-    return 'c'
-  else
-    return a:fileType
-  endif
-endfunction
+fu! CompleteEnglishWords(findstart, base)
+  if a:findstart
+    " get cursor word.
+    let s:cur_text = strpart(getline('.'), 0, col('.') - 1)
+    retu match(s:cur_text, '\f*$')
+  el
+    " find word matching with `a:base'
+    let s:result = []
+    for s:line in readfile($HOME . '/dotfiles/word/en.word')
+      if s:line =~ '^' . a:base
+        call add(s:result, { 'word': s:line, 'abbr': s:line })
+      en
+    endfo
+    retu s:result
+  en
+endf
 
-function! s:unite_source.gather_candidates(args, context)
-  let s:fileType = &filetype
+fu! s:FuzzyFileType(fileType)
+  if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\|javascript\)'
+    retu 'web'
+  elsei a:fileType =~ '.git.*'
+    retu 'git'
+  elsei a:fileType == 'cpp'
+    retu 'c'
+  el
+    retu a:fileType
+  en
+endf
+
+fu! s:unite_source.gather_candidates(args, context)
+  let s:fileType = &ft
   let s:root = $HOME . '/dotfiles/dict/'
   let s:path = s:root . s:FuzzyFileType(s:fileType) . '/index.csv'
   if !filereadable(s:path)
-    execute 'VimFiler' s:root
-    return []
-  endif
+    exe 'VimFiler' s:root
+    retu []
+  en
   let s:result = []
   let s:lines = readfile(s:path)
   for s:line in s:lines
@@ -60,9 +53,9 @@ function! s:unite_source.gather_candidates(args, context)
           \   'action__path' : split(s:line, '	')[1],
           \   'action__line' :1,
           \ })
-  endfor
-  return s:result
-endfunction
+  endfo
+  retu s:result
+endf
 
 call unite#define_source(s:unite_source)
-unlet s:unite_source
+unl s:unite_source

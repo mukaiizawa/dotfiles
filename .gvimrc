@@ -1,29 +1,29 @@
 " .gvimrc
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
-set guioptions-=b
-set guioptions+=c
-set visualbell t_vb=
+se go-=m
+se go-=T
+se go-=r
+se go-=R
+se go-=l
+se go-=L
+se go-=b
+se go+=c
+se vb t_vb=
 
-colorscheme shin-dark
-syntax on
+colo shin-dark
+sy on
 
-set mouse-=a
-set nomousefocus
-set mousehide
+se mouse-=a
+se nomousef
+se mh
 
 if has('win32') || has ('win64')
   au GUIEnter * simalt ~x
-  set guifont=Iosevka_Fixed_Slab_Medium:h12,Consolas:h12,MS_Gothic:h12
-  set linespace=1
-  set ambiwidth=double
-elseif has("mac")
-  set guifont=Monaco:h14
-elseif has("unix")
-  set guifont=DejaVu\ Sans\ Mono\ 10.5
-endif
+  se gfn=Iosevka_Fixed_Slab_Medium:h12,Consolas:h12,MS_Gothic:h12
+  se lsp=1
+  se ambw=double
+elsei has("mac")
+  se gfn=Monaco:h14
+elsei has("unix")
+  se gfn=DejaVu\ Sans\ Mono\ 10.5
+en

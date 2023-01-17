@@ -1,5 +1,5 @@
 " go.vim
 
-setlocal noexpandtab
-setlocal tabstop=2
-setlocal shiftwidth=2
+setl noet
+setl ts=2
+setl sw=2

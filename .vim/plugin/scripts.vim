@@ -1,35 +1,35 @@
 " for mapping
 
-function MoveLeftEnd()
+fu! MoveLeftEnd()
   if &wrap
-    normal g0
-  else
-    normal 0
-  endif
-endfunction
+    norm g0
+  el
+    norm 0
+  en
+endf
 
-function MoverRightEnd()
+fu! MoverRightEnd()
   if &wrap
-    normal g$
-  else
-    normal $
-  endif
-endfunction
+    norm g$
+  el
+    norm $
+  en
+endf
 
-function Xfold() range
+fu! Xfold() range
   let s = caw#get_var('caw_oneline_comment', '')
   let e = ''
   if empty(s)
     let se = caw#get_var('caw_wrap_oneline_comment', [])
     let s = se[0]
     let e = se[1]
-  endif
+  en
   call append(a:firstline - 1, s . " {{{" . e)
   call append(a:firstline, '')
   call append(a:lastline + 2, '')
   call append(a:lastline + 3, s . " }}}" . e)
-endfunction
+endf
 
-function InsertDate()
-  execute ":normal a" . strftime("%Y-%m-%d")
-endfunction
+fu! InsertDate()
+  exe ":normal a" . strftime("%Y-%m-%d")
+endf

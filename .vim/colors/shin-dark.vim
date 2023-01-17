@@ -2,7 +2,7 @@ set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
-endif
+en
 let g:colors_name = "shin-dark"
 
 hi Comment        guifg=#A6F02E

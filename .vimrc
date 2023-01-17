@@ -2,12 +2,12 @@
 
 if !has('gui_running')
   if has('win32') || has ('win64')
-    colorscheme default
+    colo default
   else
-    set t_Co=256
-    colorscheme shin-dark-term
-  endif
-endif
+    se t_Co=256
+    colo shin-dark-term
+  en
+en
 
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/unite.vim'
@@ -21,141 +21,142 @@ Plug 'tyru/caw.vim'
 Plug 'tyru/open-browser.vim'
 call plug#end()
 filetype plugin indent on
-syntax enable
+sy enable
 
-set autoindent
-set backspace=start,eol,indent
-set cmdheight=2
-set colorcolumn=100
-set completefunc=CompleteWords
-set cursorline
-set encoding=utf-8
-set expandtab
-set fileencoding=utf-8
-set fileencodings=utf-8,cp932,sjis,euc-jp
-set fileformat=unix
-set fileformats=unix,dos,mac
-set foldmethod=marker
-set formatoptions+=roqjM
-set formatoptions-=tc
-set helplang=en
-set history=2000
-set hlsearch
-set ignorecase
-set iminsert=0
-set imsearch=0
-set laststatus=2
-set list
-set listchars=tab:->,eol:<,trail:>
-set nobackup
-set noswapfile
-set noundofile
-set nowrap
-set nrformats-=octal
-set number
-set printoptions=wrap:y,number:y
-set shiftwidth=2
-set showcmd
-set showmatch
-set showtabline=2
-set smartcase
-set smartindent
-set splitright
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
-set tabline=%t
-set tabpagemax=300
-set tabstop=2
-set title
-set viminfo=
-set wildmenu
-set wrapscan
+se ai
+se bs=start,eol,indent
+se cc=100
+se cfu=CompleteEnglishWords
+se ch=2
+se cpt=.,b,u
+se cul
+se enc=utf-8
+se et
+se fdm=marker
+se fenc=utf-8
+se fencs=utf-8,cp932,sjis,euc-jp
+se ff=unix
+se ffs=unix,dos,mac
+se fo+=roqjM
+se fo-=tc
+se hi=2000
+se hlg=en
+se hls
+se ic
+se imi=0
+se ims=0
+se lcs=tab:->,eol:<,trail:>
+se list
+se ls=2
+se nf-=octal
+se nobk
+se noswf
+se noudf
+se nowrap
+se nu
+se popt=wrap:y,number:y
+se sc
+se scs
+se si
+se sm
+se spr
+se stal=2
+se stl=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
+se sw=2
+se tal=%t
+se title
+se tpm=100
+se ts=2
+se vi=
+se wmnu
+se ws
 
-inoremap <C-d> <Esc>:call InsertDate()<CR>
-inoremap <C-k> <C-x><C-u>
-inoremap <C-l> <C-n>
-inoremap <Tab> <C-v><Tab>
-inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+ino <C-d> <Esc>:call InsertDate()<CR>
+ino <C-k> <C-x><C-u>
+ino <C-l> <C-n>
+ino <Tab> <C-v><Tab>
+ino <silent><ESC> <ESC>:set iminsert=0<CR>
 
-nnoremap ( {
-nnoremap ) }
-nnoremap <C-Insert> "*y
-nnoremap <C-d> <NOP>
-nnoremap <C-e> <NOP>
-nnoremap <C-u> <NOP>
-nnoremap <C-y> <NOP>
-nnoremap <Del> <NOP>
-nnoremap <F1> :windo diffthis<CR>
-nnoremap <F2> :windo diffoff!<CR>
-nnoremap <F3> :<C-u>e $MYVIMRC<CR>
-nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
-nnoremap <F5> :<C-u>source $MYVIMRC<CR>
-nnoremap <F6> :<C-u>source $MYGVIMRC<CR>
-nnoremap <Insert> <NOP>
-nnoremap <S-Insert> "*p
-nnoremap <Space> <NOP>
-nnoremap <Space><Space> zz
-nnoremap <Space>j Lzz
-nnoremap <Space>k Hzz
-nnoremap <silent><Space>h :call MoveLeftEnd()<CR>
-nnoremap <silent><Space>l :call MoverRightEnd()<CR>
-nnoremap <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
-nnoremap <silent><Space>w :set wrap!<CR>
-nnoremap <silent>mm :e #<CR>
-nnoremap <silent>sq :<C-u>q<CR>
-nnoremap Q <NOP>
-nnoremap U  <C-r>
-nnoremap Y y$
-nnoremap ZZ <NOP>
-nnoremap ch <NOP>
-nnoremap cj <NOP>
-nnoremap ck <NOP>
-nnoremap cl <NOP>
-nnoremap dh <NOP>
-nnoremap dj <NOP>
-nnoremap dk <NOP>
-nnoremap dl <NOP>
-nnoremap gcd  :<C-u>lcd %:h<CR>:pwd<CR>
-nnoremap gf :vs<CR>gf
-nnoremap j gj
-nnoremap k gk
-nnoremap s  <NOP>
-nnoremap sc" f"r',.
-nnoremap sc' f'r",.
-nnoremap sd" f"x,x
-nnoremap sd' f'x,x
-nnoremap sd( f)xF(x
-nnoremap sd) f)xF(x
-nnoremap sd* f*x,x
-nnoremap sd< f>xF<x
-nnoremap sd> f>xF<x
-nnoremap sd[ f]xF[x
-nnoremap sd] f]xF[x
-nnoremap sd` f`x,x
-nnoremap sd{ f}xF{x
-nnoremap sd} f}xF{x
-nnoremap sh <C-w>h
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sr <C-w>r
-nnoremap ss <C-w>s
-nnoremap st :<C-u>tabnew<CR>
-nnoremap sv <C-w>v
+nn ( {
+nn ) }
+nn <C-Insert> "*y
+nn <C-d> <NOP>
+nn <C-e> <NOP>
+nn <C-u> <NOP>
+nn <C-y> <NOP>
+nn <Del> <NOP>
+nn <F1> :windo diffthis<CR>
+nn <F2> :windo diffoff!<CR>
+nn <F3> :<C-u>e $MYVIMRC<CR>
+nn <F4> :<C-u>e $MYGVIMRC<CR>
+nn <F5> :<C-u>source $MYVIMRC<CR>
+nn <F6> :<C-u>source $MYGVIMRC<CR>
+nn <Insert> <NOP>
+nn <S-Insert> "*p
+nn <Space> <NOP>
+nn <Space><Space> zz
+nn <Space>j Lzz
+nn <Space>k Hzz
+nn <silent><Space>h :call MoveLeftEnd()<CR>
+nn <silent><Space>l :call MoverRightEnd()<CR>
+nn <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
+nn <silent><Space>w :set wrap!<CR>
+nn <silent>mm :e #<CR>
+nn <silent>sq :<C-u>q<CR>
+nn Q <NOP>
+nn U  <C-r>
+nn Y y$
+nn ZZ <NOP>
+nn ch <NOP>
+nn cj <NOP>
+nn ck <NOP>
+nn cl <NOP>
+nn dh <NOP>
+nn dj <NOP>
+nn dk <NOP>
+nn dl <NOP>
+nn gcd  :<C-u>lcd %:h<CR>:pwd<CR>
+nn gf :vs<CR>gf
+nn j gj
+nn k gk
+nn s  <NOP>
+nn sc" f"r',.
+nn sc' f'r",.
+nn sd" f"x,x
+nn sd' f'x,x
+nn sd( f)xF(x
+nn sd) f)xF(x
+nn sd* f*x,x
+nn sd< f>xF<x
+nn sd> f>xF<x
+nn sd[ f]xF[x
+nn sd] f]xF[x
+nn sd` f`x,x
+nn sd{ f}xF{x
+nn sd} f}xF{x
+nn sh <C-w>h
+nn sj <C-w>j
+nn sk <C-w>k
+nn sl <C-w>l
+nn sr <C-w>r
+nn ss <C-w>s
+nn st :<C-u>tabnew<CR>
+nn sv <C-w>v
 
-tnoremap <Esc> <C-w>N
+tno <Esc> <C-w>N
 
-vnoremap ( {
-vnoremap ) }
-vnoremap / y/<C-r>"<CR>
-vnoremap <C-Insert> "*y
-vnoremap <S-Insert> "*p
-vnoremap <Space>h 0
-vnoremap <Space>j Lzz
-vnoremap <Space>k Hzz
-vnoremap <Space>l $
-vnoremap gzc :'<,'>call Xfold()<CR>
-vnoremap j gj
-vnoremap k gk
+vn ( {
+vn ) }
+vn / y/<C-r>"<CR>
+vn <C-Insert> "*y
+vn <S-Insert> "*p
+vn <Space>h 0
+vn <Space>j Lzz
+vn <Space>k Hzz
+vn <Space>l $
+vn gzc :'<,'>call Xfold()<CR>
+vn j gj
+vn k gk
 
 " unite
 let g:html_number_lines = 0
@@ -298,32 +299,32 @@ let unite_quickfix_filename_is_pathshorten = 0
 let g:unite_quickfix_is_multiline = 0
 
 " plugin mapping
-nmap gca <Plug>(caw:dollarpos:toggle)
-nmap gcc <Plug>(caw:wrap:toggle)
-nmap gci <Plug>(caw:hatpos:toggle)
-nmap gw  <Plug>(openbrowser-open)
-nmap gww <Plug>(openbrowser-search)
-vmap gca <Plug>(caw:dollarpos:toggle)
-vmap gcc <Plug>(caw:wrap:toggle)
-vmap gci <Plug>(caw:hatpos:toggle)
-vmap gw  <Plug>(openbrowser-open)
-vmap gww <Plug>(openbrowser-search)
+nm gca <Plug>(caw:dollarpos:toggle)
+nm gcc <Plug>(caw:wrap:toggle)
+nm gci <Plug>(caw:hatpos:toggle)
+nm gw  <Plug>(openbrowser-open)
+nm gww <Plug>(openbrowser-search)
+vm gca <Plug>(caw:dollarpos:toggle)
+vm gcc <Plug>(caw:wrap:toggle)
+vm gci <Plug>(caw:hatpos:toggle)
+vm gw  <Plug>(openbrowser-open)
+vm gww <Plug>(openbrowser-search)
 
-nnoremap <silent>mb :<C-u>Unite bookmark<CR>
-nnoremap <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
-nnoremap <silent>me :<C-u>Unite menu<CR> 
-nnoremap <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
-nnoremap <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
-nnoremap <silent>mk :<C-u>Unite file_mru<CR>
-nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
-nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
-nnoremap <silent>mx :<C-u>Unite quickfix<CR>
+nn <silent>mb :<C-u>Unite bookmark<CR>
+nn <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
+nn <silent>me :<C-u>Unite menu<CR> 
+nn <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
+nn <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
+nn <silent>mk :<C-u>Unite file_mru<CR>
+nn <silent>ml :<C-u>Unite line -no-wrap<CR>
+nn <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
+nn <silent>mx :<C-u>Unite quickfix<CR>
 
-nnoremap sp :<C-u>PrintSurround<CR>
-vnoremap sp :PrintSurround<CR>
+nn sp :<C-u>PrintSurround<CR>
+vn sp :PrintSurround<CR>
 
 " autocmd
-augroup vimrc
+aug vimrc
   au!
-  au TerminalOpen * setlocal nonu
-augroup END
+  au TerminalOpen * setl nonu
+aug END

@@ -1,13 +1,13 @@
 " common utils
 
-function! FillWhiteSpace(argStr, targetLength)
+fu! FillWhiteSpace(argStr, targetLength)
   let s:returnStr = a:argStr
   while strlen(s:returnStr) < a:targetLength
     let s:returnStr = ' ' . s:returnStr
-  endwhile
-  return s:returnStr
-endfunction
+  endw
+  retu s:returnStr
+endf
 
-function! PrintError(msg)
+fu! PrintError(msg)
   echohl Error | echomsg a:msg | echohl None
-endfunction
+endf

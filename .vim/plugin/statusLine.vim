@@ -1,21 +1,23 @@
-function! CurrentFileformat()
+" statusLine.vim
+
+fu! CurrentFileformat()
   if &fileformat == 'unix'
-    return 'LF'
-  elseif &fileformat == 'dos'
-    return 'CRLF'
-  else
-    return 'CR'
-  endif
-endfunction
+    retu 'LF'
+  elsei &fileformat == 'dos'
+    retu 'CRLF'
+  el
+    retu 'CR'
+  en
+endf
 
-function! CurrentLine()
+fu! CurrentLine()
   let s:numOfDigit = strlen(line('$'))
-  return FillWhiteSpace(line('.'), s:numOfDigit) .
+  retu FillWhiteSpace(line('.'), s:numOfDigit) .
         \  '/' . FillWhiteSpace(line('$'), s:numOfDigit)
-endfunction
+endf
 
-function! CurrentCol()
+fu! CurrentCol()
   let s:numOfDigit = 3    " hard cording
-  return FillWhiteSpace(col('.'), s:numOfDigit) .
+  retu FillWhiteSpace(col('.'), s:numOfDigit) .
         \  '/' . FillWhiteSpace(col('$') - 1, s:numOfDigit)
-endfunction
+endf
