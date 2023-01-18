@@ -170,7 +170,9 @@ anyMatch
 asList
 binarySearch
 builder
+byte
 bytegetBytes
+char
 charAt
 chars
 chartoCharArray
@@ -211,6 +213,7 @@ ensureCapacity
 entrySet
 equals
 equalsIgnoreCase
+false
 fill
 filter
 findAny
@@ -227,6 +230,7 @@ get
 getChars
 hashCode
 indexOf
+int
 intern
 isEmpty
 iterate
@@ -237,6 +241,7 @@ lastIndexOf
 length
 limit
 listIterator
+long
 map
 mapToDouble
 mapToInt
@@ -288,5 +293,6 @@ toString
 toUpperCase
 trim
 trimToSize
+true
 valueOf
 values
