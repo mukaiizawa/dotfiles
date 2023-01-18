@@ -1,4 +1,4 @@
 " html.vim
 
-setl cpt=s~/dotfiles/word/css.word,.,b,u
+setl cpt=s~/dotfiles/word/css,.,b,u
 setl sw=4

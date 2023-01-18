@@ -13,7 +13,7 @@ fu! CompleteEnglishWords(findstart, base)
   el
     " find word matching with `a:base'
     let s:result = []
-    for s:line in readfile($HOME . '/dotfiles/word/en.word')
+    for s:line in readfile($HOME . '/dotfiles/word/en')
       if s:line =~ '^' . a:base
         call add(s:result, { 'word': s:line, 'abbr': s:line })
       en

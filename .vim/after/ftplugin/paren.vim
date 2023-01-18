@@ -1,6 +1,6 @@
 " paren.vim
 
-setl cpt=s~/dotfiles/word/paren.word,.,b,u
+setl cpt=s~/dotfiles/word/paren,.,b,u
 setl nocin
 setl lisp
 setl def=^\\s*(\\(macro\\|f\\|function\\|class\\|method\\)
