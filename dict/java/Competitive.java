@@ -2,6 +2,9 @@ import java.util.*;
 
 public class Main {
 
+  static int min(int x, int y) { return x < y? x: y; }
+  static int max(int x, int y) { return x < y? y: x; }
+
   static class ExReader
   { // {{{
 
@@ -83,6 +86,7 @@ public class Main {
     String[] vals = { "foo", "bar", "buzz" }; // literal
     vals.length;    // length
     Arrays.toString(vals);    // to String.
+    String[][][] vals = new String[5][5][5];    // three dimenional array.
 
     /* Math */
     // {{{
