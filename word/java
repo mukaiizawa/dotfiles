@@ -176,6 +176,7 @@ char
 charAt
 chars
 chartoCharArray
+class
 clear
 clone
 close
@@ -260,6 +261,8 @@ parallelSetAll
 parallelSort
 parallelStream
 peek
+private
+public
 put
 putAll
 read
@@ -282,11 +285,13 @@ sort
 sorted
 split
 startsWith
+static
 stream
 subList
 subSequence
 substring
 takeWhile
+throw
 toArray
 toLowerCase
 toString
@@ -296,3 +301,4 @@ trimToSize
 true
 valueOf
 values
+while
