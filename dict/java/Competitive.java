@@ -69,6 +69,15 @@ public class Main {
   static int[] A;
   static String[] S;
 
+  /* "0123" -> [ 0, 1, 2, 3] */
+  static int[] toDigits(String val)
+  { // {{{
+    int[] digits = new int[val.length()];
+    for (int i = 0; i < digits.length; i++) digits[i] = val.charAt(i) - '0';
+    return digits;
+  } // }}}
+
+  /* 2, 3, -1 -> [[-1, -1, -1], [-1, -1, -1]] */
   static int[][] make2diarray(int x, int y, int v)
   { // {{{
     int [][] ret = new int[x][y];
