@@ -82,12 +82,11 @@ public class Main {
   static int[] V;    // values of items
   static int kps(int i, int rest)
   { // {{{
-    int val;
     if (i == W.length) return 0;    // nothing item.
     if (TABLE[i][rest] != -1) return TABLE[i][rest];
-    else if (rest < W[i]) val = kps(i + 1, rest);   // insufficient capacity.
-    else val = Math.max(kps(i + 1, rest), kps(i + 1, rest - W[i]) + V[i]);
-    return TABLE[i][rest] = val;
+    return TABLE[i][rest] = (rest < W[i])?
+      kps(i + 1, rest):   // insufficient capacity.
+      Math.max(kps(i + 1, rest), kps(i + 1, rest - W[i]) + V[i]);
   } // }}}
 
   public static void main(String[] args) {
