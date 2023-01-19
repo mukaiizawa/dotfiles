@@ -1,92 +1,137 @@
 import java.util.*;
 
+class ExReader
+{ // {{{
+
+  private static int MAX_SIZE = 1024;
+  private InputStream in;
+  private byte[] buf;
+  private int p;
+  private int size;
+
+  public ExReader(InputStream in) throws Exception {
+    this.in = in;
+    this.buf = new byte[MAX_SIZE];
+    this.fetch();
+  }
+
+  private int digitVal(int ch) {
+    return ch - '0';
+  }
+
+  private boolean isDigit(int val) {
+    return 0x30 <= val && val <= 0x39;
+  }
+
+  private boolean isPrint(int val) {
+    return 0x20 < val && val < 0x7f;
+  }
+
+  public int fetch() throws Exception {
+    this.p = 0;
+    if (this.size == -1) throw new Exception("EOF reached");
+    return this.size = this.in.read(this.buf);
+  }
+
+  public int readByte() throws Exception {
+    if (this.p == this.size)
+      if (this.fetch() == -1) return -1;
+    return this.buf[this.p++];
+  }
+
+  public String readString() throws Exception {
+    int ch;
+    StringBuilder buf = new StringBuilder();
+    while (this.isPrint(ch = this.readByte())) buf.append((char)ch);
+    return buf.toString();
+  }
+
+  public long readLong() throws Exception {
+    int ch;
+    long val = 0;
+    boolean isMinus = false;
+    if (this.isDigit(ch = this.readByte())) val = this.digitVal(ch);
+    else if (ch == '-') isMinus = true;
+    else if (ch != '+') throw new IllegalStateException("unexpected token");
+    while (this.isDigit(ch = this.readByte())) val = val * 10 + digitVal(ch);
+    return isMinus? -val: val;
+  }
+
+  public int readInt() throws Exception {
+    return (int)readLong();
+  }
+
+} // }}}
+
 public class Main {
 
-  static int min(int x, int y) { return x < y? x: y; }
-  static int max(int x, int y) { return x < y? y: x; }
+  static int N;
+  static int[] A;
+  static String[] S;
 
-  static class ExReader
+  static int[][] make2diarray(int x, int y, int v)
   { // {{{
+    int [][] ret = new int[x][y];
+    for (int i = 0; i < x; i++) Arrays.fill(ret[i], v);
+    return ret;
+  } // }}}
 
-    private static int MAX_SIZE = 1024;
-    private InputStream in;
-    private byte[] buf;
-    private int p;
-    private int size;
-
-    public ExReader(InputStream in) throws Exception {
-      this.in = in;
-      this.buf = new byte[MAX_SIZE];
-      this.fetch();
-    }
-
-    private int digitVal(int ch) {
-      return ch - '0';
-    }
-
-    private boolean isDigit(int val) {
-      return 0x30 <= val && val <= 0x39;
-    }
-
-    private boolean isPrint(int val) {
-      return 0x20 < val && val < 0x7f;
-    }
-
-    public int fetch() throws Exception {
-      this.p = 0;
-      if (this.size == -1) throw new Exception("EOF reached");
-      return this.size = this.in.read(this.buf);
-    }
-
-    public int readByte() throws Exception {
-      if (this.p == this.size)
-        if (this.fetch() == -1) return -1;
-      return this.buf[this.p++];
-    }
-
-    public String readString() throws Exception {
-      int ch;
-      StringBuilder buf = new StringBuilder();
-      while (this.isPrint(ch = this.readByte())) buf.append((char)ch);
-      return buf.toString();
-    }
-
-    public long readLong() throws Exception {
-      int ch;
-      long val = 0;
-      boolean isMinus = false;
-      if (this.isDigit(ch = this.readByte())) val = this.digitVal(ch);
-      else if (ch == '-') isMinus = true;
-      else if (ch != '+') throw new IllegalStateException("unexpected token");
-      while (this.isDigit(ch = this.readByte())) val = val * 10 + digitVal(ch);
-      return isMinus? -val: val;
-    }
-
-    public int readInt() throws Exception {
-      return (int)readLong();
-    }
-
+  /* Knapsack problem solver */
+  static int[][] TABLE;    // item, rest capacity
+  static int[] W;    // weights of items
+  static int[] V;    // values of items
+  static int kps(int i, int rest)
+  { // {{{
+    int val;
+    if (i == W.length) return 0;    // nothing item.
+    if (TABLE[i][rest] != -1) return TABLE[i][rest];
+    else if (rest < W[i]) val = kps(i + 1, rest);   // insufficient capacity.
+    else val = Math.max(kps(i + 1, rest), kps(i + 1, rest - W[i]) + V[i]);
+    return TABLE[i][rest] = val;
   } // }}}
 
   public static void main(String[] args) {
-    /* Reader */
     ExReader rd = new ExReader(System.in);
-    // integer
-    int N = rd.readInt();
-    // integers
-    int[] vals = new int[N];
-    for (int i = 0; i < N; i++) vals[i] = rd.readInt();
-    // string
-    String val = rd.readString();
-    // strings
-    String[] vals = new String[N];
-    for (int i = 0; i < N; i++) vals[i] = rd.readString();
+    N = rd.readInt();
+    A = new int[N];
+    for (int i = 0; i < N; i++) A[i] = rd.readInt();
+    S = new String[N];
+    for (int i = 0; i < N; i++) S[i] = rd.readString();
 
     /* array */
     String[] vals = { "foo", "bar", "buzz" }; // literal
     vals.length;    // length
     Arrays.toString(vals);    // to String.
     String[][][] vals = new String[5][5][5];    // three dimenional array.
+
+    /* Arrays */
+    // {{{
+    static <T> List<T> asList(T... a); // Returns a fixed-size list backed by the specified array.
+    static int binarySearch(int[] a, int key); // Searches the specified array of ints for the specified value using the binary search algorithm.
+    static int binarySearch(int[] a, int fromIndex, int toIndex, int key); // Searches a range of the specified array of ints for the specified value using the binary search algorithm.
+    static int binarySearch(Object[] a, int fromIndex, int toIndex, Object key); // Searches a range of the specified array for the specified object using the binary search algorithm.
+    static int binarySearch(Object[] a, Object key); // Searches the specified array for the specified object using the binary search algorithm.
+    static <T> int binarySearch(T[] a, int fromIndex, int toIndex, T key, Comparator<? super T> c); // Searches a range of the specified array for the specified object using the binary search algorithm.
+    static <T> int binarySearch(T[] a, T key, Comparator<? super T> c); // Searches the specified array for the specified object using the binary search algorithm.
+    static int[] copyOf(int[] original, int newLength); // Copies the specified array, truncating or padding with zeros (if necessary) so the copy has the specified length.
+    static <T> T[] copyOf(T[] original, int newLength); // Copies the specified array, truncating or padding with nulls (if necessary) so the copy has the specified length.
+    static int[] copyOfRange(int[] original, int from, int to); // Copies the specified range of the specified array into a new array.
+    static <T> T[] copyOfRange(T[] original, int from, int to); // Copies the specified range of the specified array into a new array.
+    static <T,U> T[] copyOfRange(U[] original, int from, int to, Class<? extends T[]> newType); // Copies the specified range of the specified array into a new array.
+    static void fill(int[] a, int val); // Assigns the specified int value to each element of the specified array of ints.
+    static void fill(int[] a, int fromIndex, int toIndex, int val); // Assigns the specified int value to each element of the specified range of the specified array of ints.
+    static void fill(Object[] a, int fromIndex, int toIndex, Object val); // Assigns the specified Object reference to each element of the specified range of the specified array of Objects.
+    static void fill(Object[] a, Object val); // Assigns the specified Object reference to each element of the specified array of Objects.
+    static void setAll(int[] array, IntUnaryOperator generator); // Set all elements of the specified array, using the provided generator function to compute each element.
+    static <T> void setAll(T[] array, IntFunction<? extends T> generator); // Set all elements of the specified array, using the provided generator function to compute each element.
+    static void sort(int[] a); // Sorts the specified array into ascending numerical order.
+    static void sort(int[] a, int fromIndex, int toIndex); // Sorts the specified range of the array into ascending order.
+    static <T> void sort(T[] a, Comparator<? super T> c); // Sorts the specified array of objects according to the order induced by the specified comparator.
+    static <T> void sort(T[] a, int fromIndex, int toIndex, Comparator<? super T> c); // Sorts the specified range of the specified array of objects according to the order induced by the specified comparator.
+    static IntStream stream(int[] array); // Returns a sequential IntStream with the specified array as its source.
+    static <T> Stream<T> stream(T[] array); // Returns a sequential Stream with the specified array as its source.
+    static String toString(int[] a); // Returns a string representation of the contents of the specified array.
+    // }}}
 
     /* Math */
     // {{{
@@ -208,14 +253,9 @@ public class Main {
     static String valueOf(Object obj); // Returns the string representation of the Object argument.
     // }}}
 
-    /* StringBuilder */
-    StringBuilder sb = new StringBuilder();
-    sb.append("foo");
-    sb.append(3);
-    sb.toString();
-
     /* Collection */
     // {{{
+
     boolean add(E e); // Ensures that this collection contains the specified element (optional operation);.
     boolean addAll(Collection<? extends E> c); // Adds all of the elements in the specified collection to this collection (optional operation);.
     void clear(); // Removes all of the elements from this collection (optional operation);.
@@ -236,6 +276,10 @@ public class Main {
     Object[] toArray(); // Returns an array containing all of the elements in this collection.
     <T> T[] toArray(IntFunction<T[]> generator); // Returns an array containing all of the elements in this collection, using the provided generator function to allocate the returned array.
     <T> T[] toArray(T[] a); // Returns an array containing all of the elements in this collection; the runtime type of the returned array is that of the specified array.
+
+    Arrays.sort(vals, Comparator.comparingInt(String::length));
+    Arrays.sort(vals, (a, b) -> a.length() - b.length());
+
     // }}}
 
     /* Set */
@@ -243,19 +287,10 @@ public class Main {
     /* List */
     List<Integer> vals = Arrays.asList(0, 0, 0);
     List<String> lis = new ArrayList<>();
+    List<Integer> vals = stream.sorted().collect(Collectors.toList()); // sort in ascending order
+    List<Integer> vals = stream.sorted(reverseOrder()).collect(Collectors.toList()); // sort in descending order
     /* Map */
     Map<String, String> map = new HashMap<>();
-
-    /* sorting */
-
-    // Arrays#sort
-    Arrays.sort(vals, Comparator.comparingInt(String::length));
-    Arrays.sort(vals, (a, b) -> a.length() - b.length());
-    // Stream#sorted
-    // ascending order
-    List<Integer> vals = stream.sorted().collect(Collectors.toList());
-    // descending order
-    List<Integer> vals = stream.sorted(reverseOrder()).collect(Collectors.toList());
 
   }
 
