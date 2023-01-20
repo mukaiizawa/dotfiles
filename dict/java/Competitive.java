@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.InputStream;
 
 class ExReader
 { // {{{
@@ -109,7 +110,7 @@ public class Main {
     return sum;
   } // }}}
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     ExReader rd = new ExReader(System.in);
     int N = rd.readInt();
     int[] A = new int[N];
