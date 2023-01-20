@@ -65,10 +65,6 @@ class ExReader
 
 public class Main {
 
-  static int N;
-  static int[] A;
-  static String[] S;
-
   /* "0123" -> [ 0, 1, 2, 3] */
   static int[] toDigits(String val)
   { // {{{
@@ -86,24 +82,39 @@ public class Main {
   } // }}}
 
   /* Knapsack problem solver */
-  static int[][] TABLE;    // item, rest capacity
-  static int[] W;    // weights of items
-  static int[] V;    // values of items
-  static int kps(int i, int rest)
+  static int kps(int[][] memo, int[] weights, int[] values, int i, int rest)
   { // {{{
-    if (i == W.length) return 0;    // nothing item.
-    if (TABLE[i][rest] != -1) return TABLE[i][rest];
-    return TABLE[i][rest] = (rest < W[i])?
-      kps(i + 1, rest):   // insufficient capacity.
-      Math.max(kps(i + 1, rest), kps(i + 1, rest - W[i]) + V[i]);
+    if (i == weights.length) return 0;    // nothing item.
+    if (memo[i][rest] != -1) return memo[i][rest];
+    return memo[i][rest] = (rest < weights[i])?
+      kps(memo, weights, values, i + 1, rest):   // insufficient capacity.
+      Math.max(kps(memo, weights, values, i + 1, rest), kps(memo, weights, values, i + 1, rest - weights[i]) + values[i]);
+  } // }}}
+
+  /* Knapsack problem solver[Version with no value] */
+  static int kps(int maxWeight, int[] weights)
+  { // {{{
+    boolean[] possible = new boolean[maxWeight + 1];
+    possible[0] = true;
+    int sum = 0;
+    for (int i = 0; i < weights.length; i++) {
+      int weight = weights[i];
+      for (int j = maxWeight; j >= weight; j--) {
+        if (possible[j - weight]) {
+          possible[j] = true;
+          sum = Math.max(j, sum);
+        }
+      }
+    }
+    return sum;
   } // }}}
 
   public static void main(String[] args) {
     ExReader rd = new ExReader(System.in);
-    N = rd.readInt();
-    A = new int[N];
+    int N = rd.readInt();
+    int[] A = new int[N];
     for (int i = 0; i < N; i++) A[i] = rd.readInt();
-    S = new String[N];
+    String[] S = new String[N];
     for (int i = 0; i < N; i++) S[i] = rd.readString();
 
     /* array */
