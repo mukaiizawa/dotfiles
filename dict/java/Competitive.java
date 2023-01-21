@@ -110,6 +110,25 @@ public class Main {
     return sum;
   } // }}}
 
+  /* Knapsack problem solver[Version with no value, Each item has more than one.] */
+  static int kps(int maxWeight, int[] weights, int[] itemCounts)
+  { // {{{
+    boolean[] possible = new boolean[maxWeight + 1];
+    possible[0] = true;
+    for (int i = 0; i < N; i++) {
+      int weight = A[i];
+      for (int count = 0; count < itemCounts[i]; count++) {
+        for (int j = X; j >= weight; j--) {
+          if (possible[j - weight]) {
+            possible[j] = true;
+            sum = Math.max(j, sum);
+          }
+        }
+      }
+    }
+    return sum;
+  } // }}}
+
   public static void main(String[] args) throws Exception {
     ExReader rd = new ExReader(System.in);
     int N = rd.readInt();
