@@ -67,11 +67,19 @@ class ExReader
 public class Main {
 
   /* "0123" -> [ 0, 1, 2, 3] */
-  static int[] toDigits(String val)
+  static int[] string2digits(String val)
   { // {{{
     int[] digits = new int[val.length()];
     for (int i = 0; i < digits.length; i++) digits[i] = val.charAt(i) - '0';
     return digits;
+  } // }}}
+
+  /* [ 0, 1, 2, 3] -> "0123" */
+  static String digits2String(int[] digits)
+  { // {{{
+    StringBuilder sb = new StringBuilder();
+    for (int digit: digits) sb.append(String.valueOf(digit));
+    return sb.toString();
   } // }}}
 
   /* 2, 3, -1 -> [[-1, -1, -1], [-1, -1, -1]] */
@@ -329,7 +337,9 @@ public class Main {
     List<Integer> vals = stream.sorted().collect(Collectors.toList()); // sort in ascending order
     List<Integer> vals = stream.sorted(reverseOrder()).collect(Collectors.toList()); // sort in descending order
     /* Map */
-    Map<String, String> map = new HashMap<>();
+    Map<S, T> map = new HashMap<>();
+    map.put(key, val);
+    for (String key : map.keySet()) map.get(key);
 
   }
 
