@@ -34,6 +34,7 @@ charCodeAt
 children
 class
 clear
+clearRect
 close
 closest
 codePointAt
@@ -80,6 +81,8 @@ export
 extends
 false
 fill
+fillRect
+fillStyle
 filter
 final
 finally
@@ -111,6 +114,7 @@ getAttributeNode
 getAttributeNodeNS
 getBoundingClientRect
 getClientRects
+getContext
 getElementById
 getElementsByClassName
 getElementsByName
@@ -226,6 +230,8 @@ startsWith
 static
 status
 strike
+stroke
+strokeRect
 styleSheets
 sub
 substr
