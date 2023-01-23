@@ -290,7 +290,7 @@ public class Main {
     /* BigInteger */
     // {{{
 
-    // initialization
+    // initializations
     BigInteger o = BigInteger.ONE;
     BigInteger o = BigInteger.ZERO;
     BigInteger o = BigInteger.TEN;
@@ -310,7 +310,7 @@ public class Main {
     BigInteger q = o.gcd(p);
     int d = o.compareTo(p);    // { -1, 0, 1 }
 
-    // extraction
+    // extractions
     int x =  o.intValue();
     long x = o.longValue();
     String x = o.toString();
@@ -414,17 +414,120 @@ public class Main {
 
     // }}}
 
-    /* Set */
-    Set<String> set = new HashSet<>();
     /* List */
+    // {{{
+
+    // initializations
+    List<Integer> lis = new ArrayList<>();
     List<Integer> vals = Arrays.asList(0, 0, 0);
-    List<String> lis = new ArrayList<>();
+
+    // operations
+    lis.add(3);
+    int x = lis.get(0);
+    lis.set(0, 3);    // modify element
+    lis.remove(0);
+    lis.clear();
+
+    // iterations
+    for (int i = 0; i < lis.size(); i++) {
+      int x = lis.get(i);
+      ...
+    }
+
+    for (int x: lis) {
+      ...
+    }
+
+    // sortings
     List<Integer> vals = stream.sorted().collect(Collectors.toList()); // sort in ascending order
     List<Integer> vals = stream.sorted(reverseOrder()).collect(Collectors.toList()); // sort in descending order
+
+    // }}}
+
+    /* Set */
+    // {{{
+
+    // initializations
+    Set<Integer> set = new HashSet<>();
+    Set<Integer> set = new LinkedHashSet<>();
+    Set<Integer> set = new TreeSet<>();
+    Set<Integer> set = new HashSet<>(Arrays.asList(0, 1, 2));
+    Set<Integer> set = Stream.of(0, 1, 2).collect(Collectors.toSet());
+    Set<Integer> set = Set.of(0, 1, 2);    // immutable set
+
+    // operations
+    set.add(0);
+    set.remove(0);
+    set.clear(0);
+    set.addAll(set2);    // union
+    set.removeAll(set2);    // difference
+    set.retainAll(set2);    // intersection
+
+    if (set.containsAll(set2)) {
+    }
+
+    if (set.contains(o)) {
+      ...
+    }
+
+    // iterations
+    for (int x: set) {
+      ...
+    }
+
+    set.stream().forEach(x -> {
+      ...
+    });
+
+    // }}}
+
     /* Map */
+    // {{{
+
+    // initializations
     Map<S, T> map = new HashMap<>();
+
+    // operations
+    Object o = map.get(key);
+    Object o = map.get(key, default);
     map.put(key, val);
-    for (String key : map.keySet()) map.get(key);
+    map.remove(key);
+    map.clear();
+
+    if (map.containsKey(key)) { }
+
+    // iterations
+    for (String key: map.keySet()) {
+      Object val = map.get(key);
+    }
+    for(Object val: map.values()) {
+    }
+
+    // }}}
+
+    /* KeyValues */
+    // {{{
+
+    // initializations
+    KeyValues<String, Integer> kv = new KeyValues<>();
+
+    // operations
+    kv.put("even", 0);
+    kv.put("odd", 1);
+    kv.put("even", 2);
+    kv.toString(); // => { even: 0 2, odd: 1 };
+
+    if (kv.containsKey("even")) { }
+    if (kv.containsValue(0)) { }
+
+    // iterations
+    for (String key: kv.keySet()) {
+      for (Integer val: kv.get(key)) {
+        ...
+      }
+    }
+
+    // }}}
 
   }
 
