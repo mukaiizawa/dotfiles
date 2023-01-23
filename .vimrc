@@ -142,6 +142,7 @@ nn sr <C-w>r
 nn ss <C-w>s
 nn st :<C-u>tabnew<CR>
 nn sv <C-w>v
+nn zc zM
 
 tno <Esc> <C-w>N
 
