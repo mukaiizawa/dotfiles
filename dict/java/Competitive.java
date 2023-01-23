@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.InputStream;
+import java.math.BigInteger;
 
 class ExReader
 { // {{{
@@ -78,16 +79,16 @@ public class Main {
   static String digits2String(int[] digits)
   { // {{{
     StringBuilder sb = new StringBuilder();
-    for (int digit: digits) sb.append(String.valueOf(digit));
+    for (int digit: digits) sb.append(digit);
     return sb.toString();
   } // }}}
 
   /* 2, 3, -1 -> [[-1, -1, -1], [-1, -1, -1]] */
-  static int[][] make2diarray(int x, int y, int v)
+  static int[][] make2diarray(int h, int w, int v)
   { // {{{
-    int [][] ret = new int[x][y];
-    for (int i = 0; i < x; i++) Arrays.fill(ret[i], v);
-    return ret;
+    int [][] a = new int[h][w];
+    for (int[] r: a) Arrays.fill(r, v);
+    return a;
   } // }}}
 
   /* Knapsack problem solver */
@@ -230,6 +231,36 @@ public class Main {
     static double toRadians(double angdeg); // Converts an angle measured in degrees to an approximately equivalent angle measured in radians.
     static double ulp(double d); // Returns the size of an ulp of the argument.
     static float ulp(float f); // Returns the size of an ulp of the argument.
+    // }}}
+
+    /* BigInteger */
+    // {{{
+
+    // initialization
+    BigInteger o = BigInteger.ONE;
+    BigInteger o = BigInteger.ZERO;
+    BigInteger o = BigInteger.TEN;
+    BigInteger o = BigInteger.valueOf(3);
+    BigInteger o = new BigInteger("3");
+    BigInteger o = new BigInteger("3f", 16);    // radix
+
+    // operations
+    BigInteger q = o.add(p);
+    BigInteger q = o.subtract(p);
+    BigInteger q = o.multiply(p);
+    BigInteger q = o.divide(p);
+    BigInteger q = o.mod(p);
+    BigInteger q = o.negate(p);
+    BigInteger q = o.max(p);
+    BigInteger q = o.min(p);
+    BigInteger q = o.gcd(p);
+    int d = o.compareTo(p);    // { -1, 0, 1 }
+
+    // extraction
+    int x =  o.intValue();
+    long x = o.longValue();
+    String x = o.toString();
+
     // }}}
 
     /* String */
