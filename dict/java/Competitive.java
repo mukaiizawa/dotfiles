@@ -65,6 +65,60 @@ class ExReader
 
 } // }}}
 
+class KeyValues<K, V>
+{ // {{{
+  private Map<K, List<V>> map;
+
+  public <K, V> KeyValues() {
+    this.map = new HashMap<>();
+  }
+
+  public void clear() {
+    this.map.clear();
+  }
+
+  public boolean containsKey(Object key) {
+    return this.map.containsKey(key);
+  }
+
+  public boolean containsValue(Object value) {
+    return this.map.keySet().stream().anyMatch(x -> this.map.get(x).contains(value));
+  }
+
+  public List<V> get(Object key) {
+    if (this.map.containsKey(key)) return this.map.get(key);
+    return Collections.emptyList();
+  }
+
+  public boolean isEmpty() {
+    return this.map.isEmpty();
+  }
+
+  public Set<K> keySet() {
+    return this.map.keySet();
+  }
+
+  public void put(K key, V val) {
+    if (this.containsKey(key)) this.map.get(key).add(val);
+    else {
+      List<V> lis = new ArrayList<>();
+      lis.add(val);
+      this.map.put(key, lis);
+    }
+  }
+
+  public String toString() {
+    StringBuilder sb = new StringBuilder().append("{\n");
+    for (K key: this.keySet()) {
+      sb.append("  ").append(key).append(":");
+      for (V val: this.get(key)) sb.append(" ").append(val);
+      sb.append("\n");
+    }
+    return sb.append("}\n").toString();
+  }
+
+} // }}}
+
 public class Main {
 
   /* "0123" -> [ 0, 1, 2, 3] */
