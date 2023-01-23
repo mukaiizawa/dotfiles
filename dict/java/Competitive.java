@@ -237,6 +237,12 @@ public class Main {
 
     /* Math */
     // {{{
+
+    // static fields
+    double pi = Math.PI;
+    double e = Math.E;
+
+    // methods
     static double abs(double a); // Returns the absolute value of a double value.
     static float abs(float a); // Returns the absolute value of a float value.
     static int abs(int a); // Returns the absolute value of an int value.
