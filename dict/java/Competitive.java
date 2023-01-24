@@ -65,6 +65,57 @@ class ExReader
 
 } // }}}
 
+class Permutator<E> implements Iterator<E[]>
+{ // {{{
+
+  E[] o, p;
+  int sp;
+  int[] stack;
+
+  /*
+   * Heap's algorithm.
+   * Permutator<Integer> it = new Permutator<Integer>(vals);
+   * while (it.hasNext())
+   *   System.out.println(Arrays.toString(it.next()));
+   */
+  public Permutator(E[] args) {
+    stack = new int[args.length];    // Arrays.fill(stack, 0);
+    o = args;
+    p = Arrays.copyOf(o, stack.length);
+  }
+
+  @Override
+  public boolean hasNext() {
+    return o != null;
+  }
+
+  private void swap (int i, int j) {
+    E e = p[i];
+    p[i] = p[j];
+    p[j] = e;
+  }
+
+  @Override
+  public E[] next() {
+    while (sp < stack.length) {
+      if (stack[sp] < sp) {
+        if (sp % 2 == 0) swap(0, sp);
+        else swap(stack[sp], sp);
+        stack[sp]++;
+        sp = 0;
+        return p;
+      } else {
+        stack[sp] = 0;
+        sp++;
+      }
+    }
+    p = o;
+    o = null;
+    return p;
+  }
+
+} // }}}
+
 class KeyValues<K, V>
 { // {{{
   private Map<K, List<V>> map;
