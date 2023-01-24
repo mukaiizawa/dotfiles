@@ -145,6 +145,20 @@ public class Main {
     return a;
   } // }}}
 
+  /* 5 -> [false, false, true, true, false, true] */
+  static boolean[] sievePrimes(int n)
+  { // {{{
+    boolean[] primes = new boolean[n + 1];
+    if (n >= 2) primes[2] = true;
+    for (int i = 3; i <= n; i += 2) primes[i] = true;
+    for (int i = 3, e = (int)Math.floor(Math.sqrt(n)); i <= e; i += 2) {
+      if (primes[i]) {
+        for (int j = i * 3; j <= n; j += i << 1) primes[j] = false;
+      }
+    }
+    return primes;
+  } // }}}
+
   /* Knapsack problem solver */
   static int kps(int[][] memo, int[] weights, int[] values, int i, int rest)
   { // {{{
