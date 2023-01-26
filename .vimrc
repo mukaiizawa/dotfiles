@@ -280,19 +280,16 @@ let g:user_emmet_settings = {
       \    },
       \    'html' : {
       \        'indentation' : '    ',
+      \        'quote_char': "'",
       \        'expandos' : {
       \            'ol': 'ol>li',
       \            'ul': 'ul>li',
+      \            'table': 'table>thead>tr>th*3^^tbody>tr>td*3',
       \        },
       \        'default_attributes': {
       \            'a': {'href': ''},
       \        },
-      \    },
-      \    'paren' : {
-      \        'snippets': {
-      \            'main': "(function! main (args)\n  (write :hello-world))",
-      \        },
-      \    },
+      \    }
       \ }
 
 " quickfix
