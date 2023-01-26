@@ -12,6 +12,7 @@ alert
 anchor
 animate
 append
+appendChild
 arguments
 async
 at
@@ -31,6 +32,7 @@ catch
 char
 charAt
 charCodeAt
+childElementCount
 children
 class
 clear
@@ -151,6 +153,7 @@ isArray
 italics
 join
 keys
+lastChild
 lastElementChild
 lastIndexOf
 lastModified
@@ -194,6 +197,7 @@ remove
 removeAttribute
 removeAttributeNS
 removeAttributeNode
+removeChild
 repeat
 replace
 replaceAll
