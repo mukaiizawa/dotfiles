@@ -2,8 +2,7 @@ import java.util.*;
 import java.io.InputStream;
 import java.math.BigInteger;
 
-class ExReader
-{ // {{{
+class ExReader { // {{{
 
   private static int MAX_SIZE = 1024;
   private InputStream in;
@@ -64,9 +63,7 @@ class ExReader
   }
 
 } // }}}
-
-class Permutator<E> implements Iterator<E[]>
-{ // {{{
+class Permutator<E> implements Iterator<E[]> { // {{{
 
   E[] o, p;
   int sp;
@@ -114,10 +111,10 @@ class Permutator<E> implements Iterator<E[]>
     return p;
   }
 
-} // }}}
+}
+// }}}
+class KeyValues<K, V> { // {{{
 
-class KeyValues<K, V>
-{ // {{{
   private Map<K, List<V>> map;
 
   public <K, V> KeyValues() {
@@ -172,57 +169,70 @@ class KeyValues<K, V>
 
 public class Main {
 
-  /* "0123" -> [ 0, 1, 2, 3] */
-  static int[] string2digits(String val)
-  { // {{{
+  /*
+   * String to digit array.
+   * "0123" -> [ 0, 1, 2, 3]
+   */
+  static int[] string2digits(String val) {
     int[] digits = new int[val.length()];
     for (int i = 0; i < digits.length; i++) digits[i] = val.charAt(i) - '0';
     return digits;
-  } // }}}
+  }
 
-  /* [ 0, 1, 2, 3] -> "0123" */
-  static String digits2String(int[] digits)
-  { // {{{
+  /*
+   * Digit array to String.
+   * [ 0, 1, 2, 3] -> "0123"
+   */
+  static String digits2String(int[] digits) {
     StringBuilder sb = new StringBuilder();
     for (int digit: digits) sb.append(digit);
     return sb.toString();
-  } // }}}
+  }
 
-  /* 2, 3, -1 -> [[-1, -1, -1], [-1, -1, -1]] */
-  static int[][] make2diarray(int h, int w, int v)
-  { // {{{
+  /*
+   * Make two dimenional int array.
+   * 2, 3, -1 -> [[-1, -1, -1], [-1, -1, -1]]
+   */
+  static int[][] make2diarray(int h, int w, int v) {
     int [][] a = new int[h][w];
     for (int[] r: a) Arrays.fill(r, v);
     return a;
-  } // }}}
+  }
 
-  /* 5 -> [false, false, true, true, false, true] */
-  static boolean[] sievePrimes(int n)
-  { // {{{
+  /*
+   * Make prime Number table
+   * 5 -> [false, false, true, true, false, true]
+   */
+  static boolean[] sievePrimes(int n) {
     boolean[] primes = new boolean[n + 1];
     if (n >= 2) primes[2] = true;
     for (int i = 3; i <= n; i += 2) primes[i] = true;
     for (int i = 3, e = (int)Math.floor(Math.sqrt(n)); i <= e; i += 2) {
-      if (primes[i]) {
+      if (primes[i])
         for (int j = i * 3; j <= n; j += i << 1) primes[j] = false;
-      }
     }
     return primes;
-  } // }}}
+  }
 
-  /* Knapsack problem solver */
-  static int kps(int[][] memo, int[] weights, int[] values, int i, int rest)
-  { // {{{
+  // Algorithm
+
+  /*
+   * 0-1 Knapsack problem solver.
+   * int[][] memo = make2diarray(weights.length + 1, MAX_WEIGHT, -1);
+   * kps(memo, weights, values, 0, MAX_WEIGHT);
+   */
+  static int kps(int[][] memo, int[] weights, int[] values, int i, int rest) {
     if (i == weights.length) return 0;    // nothing item.
     if (memo[i][rest] != -1) return memo[i][rest];
     return memo[i][rest] = (rest < weights[i])?
       kps(memo, weights, values, i + 1, rest):   // insufficient capacity.
       Math.max(kps(memo, weights, values, i + 1, rest), kps(memo, weights, values, i + 1, rest - weights[i]) + values[i]);
-  } // }}}
+  }
 
-  /* Knapsack problem solver[Version with no value] */
-  static int kps(int maxWeight, int[] weights)
-  { // {{{
+  /*
+   * Knapsack problem solver with no value.
+   */
+  static int kps(int maxWeight, int[] weights) {
     boolean[] possible = new boolean[maxWeight + 1];
     possible[0] = true;
     int sum = 0;
@@ -236,11 +246,12 @@ public class Main {
       }
     }
     return sum;
-  } // }}}
+  }
 
-  /* Knapsack problem solver[Version with no value, Each item has more than one.] */
-  static int kps(int maxWeight, int[] weights, int[] itemCounts)
-  { // {{{
+  /*
+   * Knapsack problem solver with no value, each item has more than one.
+   */
+  static int kps(int maxWeight, int[] weights, int[] itemCounts) {
     boolean[] possible = new boolean[maxWeight + 1];
     possible[0] = true;
     for (int i = 0; i < N; i++) {
@@ -255,7 +266,7 @@ public class Main {
       }
     }
     return sum;
-  } // }}}
+  }
 
   public static void main(String[] args) throws Exception {
     ExReader rd = new ExReader(System.in);
