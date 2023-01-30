@@ -1,5 +1,5 @@
-Algorithm NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
 Algorithm Knapsack problem	~/dotfiles/dict/java/KnapsackProblem.java
+Algorithm NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
 Algorithm QuickSort	~/dotfiles/dict/java/QuickSort.java
 Snippets Competitive Programming	~/dotfiles/dict/java/Competitive.java
 Snippets JUnit	~/dotfiles/dict/java/JUnit.java
@@ -16,11 +16,12 @@ Utility javadoc CustomDoclet	~/dotfiles/dict/java/CustomDoclet.java
 class AheadReader	~/dotfiles/dict/java/AheadReader.java
 class DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
 class DateUtil	~/dotfiles/dict/java/DateUtil.java
+class DisjointSet	~/dotfiles/dict/java/DisjointSet.java
 class FileUtil	~/dotfiles/dict/java/FileUtil.java
+class KeyValues	~/dotfiles/dict/java/KeyValues.java
 class Lexer	~/dotfiles/dict/java/Lexer.java
 class MailUtil	~/dotfiles/dict/java/MailUtil.java
+class Permutator	~/dotfiles/dict/java/Permutator.java
 class Point	~/dotfiles/dict/java/Point.java
 class ResourceManager	~/dotfiles/dict/java/ResourceManager.java
 class XDateUtil	~/dotfiles/dict/java/XDateUtil.java
-class Permutator	~/dotfiles/dict/java/Permutator.java
-class KeyValues	~/dotfiles/dict/java/KeyValues.java
