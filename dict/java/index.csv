@@ -1,38 +1,26 @@
 Algorithm NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
+Algorithm Knapsack problem	~/dotfiles/dict/java/KnapsackProblem.java
 Algorithm QuickSort	~/dotfiles/dict/java/QuickSort.java
-Class ArrayList	~/dotfiles/dict/java/ArrayList.md
-Class BigDecimal	~/dotfiles/dict/java/BigDecimal.md
-Class Charset	~/dotfiles/dict/java/Charset.md
-Class Enum	~/dotfiles/dict/java/Enum.md
-Class Files	~/dotfiles/dict/java/Files.md
-Class HashMap	~/dotfiles/dict/java/HashMap.md
-Class Math	~/dotfiles/dict/java/Math.md
-Class Optional	~/dotfiles/dict/java/Optional.md
-Class String	~/dotfiles/dict/java/String.md
-IDE Eclipse	~/dotfiles/dict/java/eclipse.md
-Interface Path	~/dotfiles/dict/java/Path.md
-Interface Stream	~/dotfiles/dict/java/Stream.md
-JSF Converter	~/dotfiles/dict/java/Converter.md
-Snippets AheadReader	~/dotfiles/dict/java/AheadReader.java
 Snippets Competitive Programming	~/dotfiles/dict/java/Competitive.java
-Snippets DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
-Snippets DateUtil	~/dotfiles/dict/java/DateUtil.java
-Snippets FileUtil	~/dotfiles/dict/java/FileUtil.java
 Snippets JUnit	~/dotfiles/dict/java/JUnit.java
-Snippets Lexer	~/dotfiles/dict/java/Lexer.java
-Snippets MailUtil	~/dotfiles/dict/java/MailUtil.java
-Snippets Point	~/dotfiles/dict/java/Point.java
-Snippets ResourceManager	~/dotfiles/dict/java/ResourceManager.java
-Snippets StringUtil	~/dotfiles/dict/java/StringUtil.java
+Snippets Stream	~/dotfiles/dict/java/Stream.md
 Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
 Snippets Util	~/dotfiles/dict/java/Util.java
-Snippets Writer	~/dotfiles/dict/java/Writer.java
-Snippets XDateUtil	~/dotfiles/dict/java/XDateUtil.java
+Snippets Write to File	~/dotfiles/dict/java/Writer.java
 Snippets XMLChecker	~/dotfiles/dict/java/XMLChecker.java
-Template	~/dotfiles/dict/java/Template.java
-Tutorial Generic	~/dotfiles/dict/java/Generic.md
 Tutorial JAX-RS	~/dotfiles/dict/java/JAX-RS.md
 Tutorial JPA	~/dotfiles/dict/java/JPA.md
 Tutorial date	~/dotfiles/dict/java/date.md
 Utility javac/java wrapper	~/dotfiles/dict/java/run.bat
 Utility javadoc CustomDoclet	~/dotfiles/dict/java/CustomDoclet.java
+class AheadReader	~/dotfiles/dict/java/AheadReader.java
+class DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
+class DateUtil	~/dotfiles/dict/java/DateUtil.java
+class FileUtil	~/dotfiles/dict/java/FileUtil.java
+class Lexer	~/dotfiles/dict/java/Lexer.java
+class MailUtil	~/dotfiles/dict/java/MailUtil.java
+class Point	~/dotfiles/dict/java/Point.java
+class ResourceManager	~/dotfiles/dict/java/ResourceManager.java
+class XDateUtil	~/dotfiles/dict/java/XDateUtil.java
+class Permutator	~/dotfiles/dict/java/Permutator.java
+class KeyValues	~/dotfiles/dict/java/KeyValues.java

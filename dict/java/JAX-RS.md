@@ -1,6 +1,4 @@
 # JAX-RS
-この文書はJava API for RESTful Web Services (JAX-RS)についてまとめたものである。
-
 ## Application
 Java EEアプリケーションサーバで動かすにはApplicationサブクラスを作る。
 
