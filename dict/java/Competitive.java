@@ -138,6 +138,13 @@ public class Main {
   }
 
   /*
+   * Returns base x logarithm y.
+   */
+  static double log(double x, double y) {
+    return Math.log(y) / Math.log(x);
+  }
+
+  /*
    * String to digit array.
    */
   static int[] string2digits(String val) {
@@ -147,20 +154,36 @@ public class Main {
   }
 
   /*
-   * Integer to bit array.
-   *     10x10 = 2x00...01010
-   *     int2bits(10) = [false, true, false, true, false, ...]
+   * Integer to binary array.
+   *     10x11 = 2x1011
+   *     int2bina(10) = [0, 1, 0, 1, 0, 0, ...]
    */
-  static boolean[] int2bits(int x) {
-    boolean[] bits = new boolean[32];
-    for (int i = 0; i < 32; i++) bits[i] = (x / (1 << i)) % 2 == 1;
+  static int[] int2binaryArray(int x) {
+    int[] bits = new int[32];
+    for (int i = 0; i < 32; i++) bits[i] = (x / (1 << i)) % 2;
     return bits;
+  }
+
+  /*
+   * Integer to n-nary array.
+   *     10x11 = 3x102 = 4x23
+   *     int2nnary(11, 3) = [2, 0, 1, 0, 0, ...]
+   *     int2nnary(11, 4) = [3, 2, 0, 0, ...]
+   */
+  static int[] int2nnaryArray(int x, int radix) {
+    int len = (int)log(radix, 1L << 32);
+    int[] a = new int[len];
+    for (int i = 0, p = 1; i < len; i++) {
+      a[i] = (x / p) % radix;
+      p *= radix;
+    }
+    return a;
   }
 
   /*
    * Make two dimenional int array.
    */
-  static int[][] make2dia(int h, int w, int v) {
+  static int[][] make2diArray(int h, int w, int v) {
     int[][] a = new int[h][w];
     for (int[] r: a) Arrays.fill(r, v);
     return a;
@@ -169,7 +192,7 @@ public class Main {
   /*
    * Make two dimenional long array.
    */
-  static long[][] make2dia(int h, int w, long v) {
+  static long[][] make2dlArray(int h, int w, long v) {
     long[][] a = new long[h][w];
     for (long[] r: a) Arrays.fill(r, v);
     return a;
