@@ -61,11 +61,8 @@ public class Main {
       return buf[p++];
     }
 
-    public String readString() {
-      int ch;
-      StringBuilder buf = new StringBuilder();
-      while (isPrint(ch = readByte())) buf.append((char)ch);
-      return buf.toString();
+    public int readInt() {
+      return (int)readLong();
     }
 
     public long readLong() {
@@ -79,8 +76,35 @@ public class Main {
       return negate? -val: val;
     }
 
-    public int readInt() {
-      return (int)readLong();
+    public int[] readInt(int n) {
+      int[] a = new int[n];
+      for (int i = 0; i < n; i++) a[i] = readInt();
+      return a;
+    }
+
+    public long[] readLong(int n) {
+      long[] a = new long[n];
+      for (int i = 0; i < n; i++) a[i] = readLong();
+      return a;
+    }
+
+    public int[][] readInt(int n, int m) {
+      int[][] a = new int[n][m];
+      for (int i = 0; i < n; i++) a[i] = readInt(m);
+      return a;
+    }
+
+    public long[][] readLong(int n, int m) {
+      long[][] a = new long[n][m];
+      for (int i = 0; i < n; i++) a[i] = readLong(m);
+      return a;
+    }
+
+    public String readString() {
+      int ch;
+      StringBuilder buf = new StringBuilder();
+      while (isPrint(ch = readByte())) buf.append((char)ch);
+      return buf.toString();
     }
 
   }
@@ -93,17 +117,12 @@ public class Main {
       this.out = new PrintStream(out, false);
     }
 
-    public void writeLine(Object[] x) {
-      writeLine(Arrays.toString(x));
-    }
-
-    public void writeLine(int[] x) {
-      writeLine(Arrays.toString(x));
-    }
-
-    public void writeLine(Object x) {
-      out.println(x);
-    }
+    public void writeLine(Object x) { out.println(x); }
+    public void writeLine(Object[] x) { writeLine(Arrays.toString(x)); }
+    public void writeLine(int[] x) { writeLine(Arrays.toString(x)); }
+    public void writeLine(int[][] x) { writeLine(Arrays.deepToString(x)); }
+    public void writeLine(long[] x) { writeLine(Arrays.toString(x)); }
+    public void writeLine(long[][] x) { writeLine(Arrays.deepToString(x)); }
 
     public void close() {
       try {
@@ -114,9 +133,7 @@ public class Main {
       }
     }
 
-    public void flush() {
-      out.flush();
-    }
+    public void flush() { out.flush(); }
 
   }
 
@@ -135,6 +152,15 @@ public class Main {
   static int[][] make2dia(int h, int w, int v) {
     int[][] a = new int[h][w];
     for (int[] r: a) Arrays.fill(r, v);
+    return a;
+  }
+
+  /*
+   * Make two dimenional long array.
+   */
+  static long[][] make2dia(int h, int w, long v) {
+    long[][] a = new long[h][w];
+    for (long[] r: a) Arrays.fill(r, v);
     return a;
   }
 
