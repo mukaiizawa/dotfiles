@@ -148,7 +148,7 @@ public class Main {
 
   /*
    * Integer to bit array.
-   *     10 = 0000...0001010
+   *     10x10 = 2x00...01010
    *     int2bits(10) = [false, true, false, true, false, ...]
    */
   static boolean[] int2bits(int x) {
