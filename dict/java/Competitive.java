@@ -147,6 +147,17 @@ public class Main {
   }
 
   /*
+   * Integer to bit array.
+   *     10 = 0000...0001010
+   *     int2bits(10) = [false, true, false, true, false, ...]
+   */
+  static boolean[] int2bits(int x) {
+    boolean[] bits = new boolean[32];
+    for (int i = 0; i < 32; i++) bits[i] = (x / (1 << i)) % 2 == 1;
+    return bits;
+  }
+
+  /*
    * Make two dimenional int array.
    */
   static int[][] make2dia(int h, int w, int v) {
