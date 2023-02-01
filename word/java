@@ -302,6 +302,7 @@ removeRange
 replace
 replaceAll
 replaceFirst
+requireNonNull
 reset
 retainAll
 run
