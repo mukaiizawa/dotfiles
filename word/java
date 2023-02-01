@@ -23,6 +23,7 @@ ClassValue
 Cloneable
 Collection
 Collections
+Collectors
 Comparable
 Comparator
 Console
@@ -320,7 +321,9 @@ substring
 takeWhile
 throw
 toArray
+toList
 toLowerCase
+toSet
 toString
 toUpperCase
 trim
