@@ -2,6 +2,7 @@ Array
 Boolean
 Date
 Function
+JSON
 Number
 Object
 RegExp
@@ -180,6 +181,7 @@ package
 padEnd
 padStart
 parent
+parse
 pop
 prepend
 private
@@ -234,6 +236,7 @@ startsWith
 static
 status
 strike
+stringify
 stroke
 strokeRect
 styleSheets
