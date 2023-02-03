@@ -27,6 +27,126 @@ public class Main {
 
   }
 
+  static void swap(int[] a, int i, int j) { int x = a[i]; a[i] = a[j]; a[j] = x; }
+  static void swap(long[] a, int i, int j) { long x = a[i]; a[i] = a[j]; a[j] = x; }
+  static void swap(char[] a, int i, int j) { char x = a[i]; a[i] = a[j]; a[j] = x; }
+  static void swap(Object[] a, int i, int j) { Object x = a[i]; a[i] = a[j]; a[j] = x; }
+  static void reverse(int[] a) { reverse(a, 0, a.length); }
+  static void reverse(long[] a) { reverse(a, 0, a.length); }
+  static void reverse(char[] a) { reverse(a, 0, a.length); }
+  static void reverse(Object[] a) { reverse(a, 0, a.length); }
+  static void reverse(int[] a, int i) { reverse(a, i, a.length); }
+  static void reverse(long[] a, int i) { reverse(a, i, a.length); }
+  static void reverse(char[] a, int i) { reverse(a, i, a.length); }
+  static void reverse(Object[] a, int i) { reverse(a, i, a.length); }
+  static void reverse(int[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
+  static void reverse(long[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
+  static void reverse(char[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
+  static void reverse(Object[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
+  static int[] slice(int[] a) { return Arrays.copyOfRange(a, 0, a.length); }
+  static long[] slice(long[] a) { return Arrays.copyOfRange(a, 0, a.length); }
+  static char[] slice(char[] a) { return Arrays.copyOfRange(a, 0, a.length); }
+  static Object[] slice(Object[] a) { return Arrays.copyOfRange(a, 0, a.length); }
+  static int[] slice(int[] a, int i) { return Arrays.copyOfRange(a, i, a.length); }
+  static long[] slice(long[] a, int i) { return Arrays.copyOfRange(a, i, a.length); }
+  static char[] slice(char[] a, int i) { return Arrays.copyOfRange(a, i, a.length); }
+  static Object[] slice(Object[] a, int i) { return Arrays.copyOfRange(a, i, a.length); }
+  static int[] slice(int[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
+  static long[] slice(long[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
+  static char[] slice(char[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
+  static Object[] slice(Object[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
+  static double log(double x, double y) { return Math.log(y) / Math.log(x); }
+
+  static int lowerBound(int[] a, int x, int i, int j) {
+    while (i < j) {
+      int mid = i + j >> 1;
+      if (a[mid] < x) i = mid + 1;
+      else j = mid;
+    }
+    return i;
+  }
+
+  static int upperBound(int[] a, int x, int i, int j) {
+    while (i != j) {
+      int mid = i + j >> 1;
+      if (a[mid] > x) j = mid;
+      else i = mid;
+    }
+    return j - 1;
+  }
+
+  static int lowerBound(int[] a, int x) { return lowerBound(a, x, 0, a.length); }
+  static int upperBound(int[] a, int x) { return upperBound(a, x, 0, a.length); }
+
+  /*
+   * String to digit array.
+   */
+  static int[] string2digits(String val) {
+    int[] digits = new int[val.length()];
+    for (int i = 0; i < digits.length; i++) digits[i] = val.charAt(i) - '0';
+    return digits;
+  }
+
+  /*
+   * Integer to binary array.
+   *     10x11 = 2x1011
+   *     int2bina(10) = [0, 1, 0, 1, 0, 0, ...]
+   */
+  static int[] int2binaryArray(int x) {
+    int[] bits = new int[32];
+    for (int i = 0; i < 32; i++) bits[i] = (x / (1 << i)) % 2;
+    return bits;
+  }
+
+  /*
+   * Integer to n-nary array.
+   *     10x11 = 3x102 = 4x23
+   *     int2nnary(11, 3) = [2, 0, 1, 0, 0, ...]
+   *     int2nnary(11, 4) = [3, 2, 0, 0, ...]
+   */
+  static int[] int2nnaryArray(int x, int radix) {
+    int len = (int)log(radix, 1L << 32);
+    int[] a = new int[len];
+    for (int i = 0, p = 1; i < len; i++) {
+      a[i] = (x / p) % radix;
+      p *= radix;
+    }
+    return a;
+  }
+
+  /*
+   * Make two dimenional int array.
+   */
+  static int[][] make2diArray(int h, int w, int v) {
+    int[][] a = new int[h][w];
+    for (int[] r: a) Arrays.fill(r, v);
+    return a;
+  }
+
+  /*
+   * Make two dimenional long array.
+   */
+  static long[][] make2dlArray(int h, int w, long v) {
+    long[][] a = new long[h][w];
+    for (long[] r: a) Arrays.fill(r, v);
+    return a;
+  }
+
+  /*
+   * Computes an array of whether each number from 0 to n (inclusive) is prime:
+   *     sievePrimes(5) = [false, false, true, true, false, true]
+   */
+  static boolean[] sievePrimes(int n) {
+    boolean[] primes = new boolean[n + 1];
+    if (n >= 2) primes[2] = true;
+    for (int i = 3; i <= n; i += 2) primes[i] = true;
+    for (int i = 3, e = (int)Math.floor(Math.sqrt(n)); i <= e; i += 2) {
+      if (primes[i])
+        for (int j = i * 3; j <= n; j += i << 1) primes[j] = false;
+    }
+    return primes;
+  }
+
   static class ExReader {
 
     private static int MAX_SIZE = 1024;
@@ -135,82 +255,6 @@ public class Main {
 
     public void flush() { out.flush(); }
 
-  }
-
-  /*
-   * Returns base x logarithm y.
-   */
-  static double log(double x, double y) {
-    return Math.log(y) / Math.log(x);
-  }
-
-  /*
-   * String to digit array.
-   */
-  static int[] string2digits(String val) {
-    int[] digits = new int[val.length()];
-    for (int i = 0; i < digits.length; i++) digits[i] = val.charAt(i) - '0';
-    return digits;
-  }
-
-  /*
-   * Integer to binary array.
-   *     10x11 = 2x1011
-   *     int2bina(10) = [0, 1, 0, 1, 0, 0, ...]
-   */
-  static int[] int2binaryArray(int x) {
-    int[] bits = new int[32];
-    for (int i = 0; i < 32; i++) bits[i] = (x / (1 << i)) % 2;
-    return bits;
-  }
-
-  /*
-   * Integer to n-nary array.
-   *     10x11 = 3x102 = 4x23
-   *     int2nnary(11, 3) = [2, 0, 1, 0, 0, ...]
-   *     int2nnary(11, 4) = [3, 2, 0, 0, ...]
-   */
-  static int[] int2nnaryArray(int x, int radix) {
-    int len = (int)log(radix, 1L << 32);
-    int[] a = new int[len];
-    for (int i = 0, p = 1; i < len; i++) {
-      a[i] = (x / p) % radix;
-      p *= radix;
-    }
-    return a;
-  }
-
-  /*
-   * Make two dimenional int array.
-   */
-  static int[][] make2diArray(int h, int w, int v) {
-    int[][] a = new int[h][w];
-    for (int[] r: a) Arrays.fill(r, v);
-    return a;
-  }
-
-  /*
-   * Make two dimenional long array.
-   */
-  static long[][] make2dlArray(int h, int w, long v) {
-    long[][] a = new long[h][w];
-    for (long[] r: a) Arrays.fill(r, v);
-    return a;
-  }
-
-  /*
-   * Computes an array of whether each number from 0 to n (inclusive) is prime:
-   *     sievePrimes(5) = [false, false, true, true, false, true]
-   */
-  static boolean[] sievePrimes(int n) {
-    boolean[] primes = new boolean[n + 1];
-    if (n >= 2) primes[2] = true;
-    for (int i = 3; i <= n; i += 2) primes[i] = true;
-    for (int i = 3, e = (int)Math.floor(Math.sqrt(n)); i <= e; i += 2) {
-      if (primes[i])
-        for (int j = i * 3; j <= n; j += i << 1) primes[j] = false;
-    }
-    return primes;
   }
 
   public static void main(String[] args) {
