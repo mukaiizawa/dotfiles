@@ -176,7 +176,6 @@ bytegetBytes
 char
 charAt
 chars
-chartoCharArray
 class
 clear
 clone
@@ -322,6 +321,7 @@ substring
 takeWhile
 throw
 toArray
+toCharArray
 toList
 toLowerCase
 toSet
