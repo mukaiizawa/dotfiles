@@ -8,6 +8,7 @@ Object
 RegExp
 String
 abstract
+addEventListener
 after
 alert
 anchor
@@ -36,6 +37,7 @@ charCodeAt
 childElementCount
 children
 class
+classList
 clear
 clearRect
 close
