@@ -37,6 +37,7 @@ charCodeAt
 childElementCount
 children
 class
+classList
 clear
 clearRect
 close
