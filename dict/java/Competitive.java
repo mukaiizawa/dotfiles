@@ -107,6 +107,12 @@ public class Main {
       return buf.toString();
     }
 
+    public String[] readString(int n) {
+      String[] a = new String[n];
+      for (int i = 0; i < n; i++) a[i] = readString();
+      return a;
+    }
+
   }
 
   static class ExWriter {
