@@ -12,6 +12,7 @@ public class Main {
 
     public void solve() {
       var N = rd.readInt();
+      wr.writeLine(N);
     }
 
     @Override
@@ -227,6 +228,12 @@ public class Main {
       return buf.toString();
     }
 
+    public String[] readString(int n) {
+      String[] a = new String[n];
+      for (int i = 0; i < n; i++) a[i] = readString();
+      return a;
+    }
+
   }
 
   static class ExWriter {
@@ -237,12 +244,19 @@ public class Main {
       this.out = new PrintStream(out, false);
     }
 
+    public void write(Object x) { out.print(x); }
+    public void write(Object[] x) { write(Arrays.toString(x)); }
+    public void write(int[] x) { write(Arrays.toString(x)); }
+    public void write(int[][] x) { write(Arrays.deepToString(x)); }
+    public void write(long[] x) { write(Arrays.toString(x)); }
+    public void write(long[][] x) { write(Arrays.deepToString(x)); }
     public void writeLine(Object x) { out.println(x); }
     public void writeLine(Object[] x) { writeLine(Arrays.toString(x)); }
     public void writeLine(int[] x) { writeLine(Arrays.toString(x)); }
     public void writeLine(int[][] x) { writeLine(Arrays.deepToString(x)); }
     public void writeLine(long[] x) { writeLine(Arrays.toString(x)); }
     public void writeLine(long[][] x) { writeLine(Arrays.deepToString(x)); }
+    public void writeBool(boolean b) { writeLine(b? "Yes": "No"); }
 
     public void close() {
       try {

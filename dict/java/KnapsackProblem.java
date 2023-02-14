@@ -16,7 +16,7 @@ public class KnapsackProblem {
   }
 
   /*
-   * Knapsack problem solver with no value.
+   * 0-1 Knapsack problem solver with no value.
    */
   static int kps(int maxWeight, int[] weights) {
     boolean[] possible = new boolean[maxWeight + 1];
