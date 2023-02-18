@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 import java.util.function.*;
+import java.util.stream.*;
 
 public class Main {
 
@@ -32,6 +33,10 @@ public class Main {
   static void swap(long[] a, int i, int j) { long x = a[i]; a[i] = a[j]; a[j] = x; }
   static void swap(char[] a, int i, int j) { char x = a[i]; a[i] = a[j]; a[j] = x; }
   static void swap(Object[] a, int i, int j) { Object x = a[i]; a[i] = a[j]; a[j] = x; }
+  static int sum(int[] a) { return IntStream.of(a).sum(); }
+  static long sum(long[] a) { return LongStream.of(a).sum(); }
+  static int[] sort(int[] a) { Arrays.sort(a); return a; }
+  static long[] sort(long[] a) { Arrays.sort(a); return a; }
   static void reverse(int[] a) { reverse(a, 0, a.length); }
   static void reverse(long[] a) { reverse(a, 0, a.length); }
   static void reverse(char[] a) { reverse(a, 0, a.length); }
