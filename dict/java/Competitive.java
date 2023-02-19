@@ -63,27 +63,6 @@ public class Main {
   static Object[] slice(Object[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
   static double log(double x, double y) { return Math.log(y) / Math.log(x); }
 
-  static int lowerBound(int[] a, int x, int i, int j) {
-    while (i < j) {
-      int mid = i + j >> 1;
-      if (a[mid] < x) i = mid + 1;
-      else j = mid;
-    }
-    return i;
-  }
-
-  static int upperBound(int[] a, int x, int i, int j) {
-    while (i != j) {
-      int mid = i + j >> 1;
-      if (a[mid] > x) j = mid;
-      else i = mid;
-    }
-    return j - 1;
-  }
-
-  static int lowerBound(int[] a, int x) { return lowerBound(a, x, 0, a.length); }
-  static int upperBound(int[] a, int x) { return upperBound(a, x, 0, a.length); }
-
   /*
    * String to digit array.
    */
@@ -151,6 +130,15 @@ public class Main {
         for (int j = i * 3; j <= n; j += i << 1) primes[j] = false;
     }
     return primes;
+  }
+
+  static public long euclidean(long a, long b) {
+    while (b != 0) {
+      long m = a % b;
+      a = b;
+      b = m;
+    }
+    return a;
   }
 
   static class ExReader {
