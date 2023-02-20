@@ -16,9 +16,11 @@ if exists('g:user_emmet_settings')
   let g:user_emmet_settings.java = {
         \   'snippets': {
         \       'main': "public static void main(String[] args) {\n\t|\n}",
-        \       'fori': "for (int i = 0; i < N; i++) {\n\t|\n}",
-        \       'forj': "for (int j = 0; j < N; j++) {\n\t|\n}",
-        \       'fork': "for (int k = 0; k < N; k++) {\n\t|\n}",
+        \       'if': "if (|) {\n}",
+        \       'fori': "for (int i = 0; i < |; i++) {\n}",
+        \       'forj': "for (int j = 0; j < |; j++) {\n}",
+        \       'fork': "for (int k = 0; k < |; k++) {\n}",
+        \       'while': "while (|) {\n}",
         \   }
         \ }
 en
