@@ -209,7 +209,7 @@ sy keyword ParenBuiltIn log
 sy keyword ParenBuiltIn loop
 sy keyword ParenBuiltIn lower
 sy keyword ParenBuiltIn lower?
-sy keyword ParenBuiltIn lstrip
+sy keyword ParenBuiltIn ltrim
 sy keyword ParenBuiltIn macro
 sy keyword ParenBuiltIn macro?
 sy keyword ParenBuiltIn macroexpand
@@ -268,7 +268,7 @@ sy keyword ParenBuiltIn repl
 sy keyword ParenBuiltIn return
 sy keyword ParenBuiltIn reverse
 sy keyword ParenBuiltIn reverse!
-sy keyword ParenBuiltIn rstrip
+sy keyword ParenBuiltIn rtrim
 sy keyword ParenBuiltIn select
 sy keyword ParenBuiltIn select1
 sy keyword ParenBuiltIn sin
@@ -289,7 +289,6 @@ sy keyword ParenBuiltIn str
 sy keyword ParenBuiltIn string
 sy keyword ParenBuiltIn string!
 sy keyword ParenBuiltIn string?
-sy keyword ParenBuiltIn strip
 sy keyword ParenBuiltIn suffix?
 sy keyword ParenBuiltIn swap!
 sy keyword ParenBuiltIn symbol
@@ -306,6 +305,7 @@ sy keyword ParenBuiltIn time
 sy keyword ParenBuiltIn timeit
 sy keyword ParenBuiltIn title
 sy keyword ParenBuiltIn title?
+sy keyword ParenBuiltIn trim
 sy keyword ParenBuiltIn union
 sy keyword ParenBuiltIn uniq
 sy keyword ParenBuiltIn unquote
@@ -330,6 +330,7 @@ sy keyword ParenBuiltIn write-bytes
 sy keyword ParenBuiltIn write-line
 sy keyword ParenBuiltIn zero?
 sy keyword ParenBuiltIn zip
+
 " }}}
 
 sy match ParenMethod "\<\.\k*\>"
