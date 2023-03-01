@@ -34,7 +34,7 @@ se enc=utf-8
 se et
 se fdm=marker
 se fenc=utf-8
-se fencs=ucs-bom,utf-16le,utf-8,cp932,sjis,euc-jp
+se fencs=utf-8,cp932,sjis,euc-jp,ucs-bom,utf-16le
 se ff=unix
 se ffs=unix,dos,mac
 se fo+=roqjM
