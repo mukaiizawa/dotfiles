@@ -1,28 +1,4 @@
 /* 
- * Disjoint-set data structure - Library (Java)
- * 
- * Copyright (c) 2021 Project Nayuki. (MIT License)
- * https://www.nayuki.io/page/disjoint-set-data-structure
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
- * - The above copyright notice and this permission notice shall be included in
- *   all copies or substantial portions of the Software.
- * - The Software is provided "as is", without warranty of any kind, express or
- *   implied, including but not limited to the warranties of merchantability,
- *   fitness for a particular purpose and noninfringement. In no event shall the
- *   authors or copyright holders be liable for any claim, damages or other
- *   liability, whether in an action of contract, tort or otherwise, arising from,
- *   out of or in connection with the Software or the use or other dealings in the
- *   Software.
- */
-
-
-/* 
  * Disjoint sets.
  */
 class DisjointSet {
@@ -44,7 +20,10 @@ class DisjointSet {
     setCount = n;
   }
 
-  private int getRepr(int i) {
+  /*
+   * Returns the representative element of the set to which the element belongs.
+   */
+  public int getRepr(int i) {
     int parent = parents[i];
     while (true) {
       int grandparent = parents[parent];
@@ -65,7 +44,7 @@ class DisjointSet {
   /*
    * Returns the size of the set that the given element is a member of.
    */
-  public int getElementCount(int i) {
+  public int size(int i) {
     return sizes[getRepr(i)];
   }
 
