@@ -12,26 +12,12 @@ class DisjointSet {
    */
   public DisjointSet(int n) {
     parents = new int[n];
-    sizes   = new int[n];
+    sizes = new int[n];
     for (int i = 0; i < n; i++) {
       parents[i] = i;
-      sizes  [i] = 1;
+      sizes[i] = 1;
     }
     setCount = n;
-  }
-
-  /*
-   * Returns the representative element of the set to which the element belongs.
-   */
-  public int getRepr(int i) {
-    int parent = parents[i];
-    while (true) {
-      int grandparent = parents[parent];
-      if (grandparent == parent) return parent;
-      parents[i] = grandparent;  // Partial path compression
-      i = parent;
-      parent = grandparent;
-    }
   }
 
   /*
@@ -45,14 +31,28 @@ class DisjointSet {
    * Returns the size of the set that the given element is a member of.
    */
   public int size(int i) {
-    return sizes[getRepr(i)];
+    return sizes[getRepresentativeElement(i)];
+  }
+
+  /*
+   * Returns the representative element of the set to which the element belongs.
+   */
+  public int getRepresentativeElement(int i) {
+    int parent = parents[i];
+    while (true) {
+      int grandparent = parents[parent];
+      if (grandparent == parent) return parent;
+      parents[i] = grandparent;  // Partial path compression
+      i = parent;
+      parent = grandparent;
+    }
   }
 
   /*
    * Tests whether the given two elements are members of the same set.
    */
   public boolean areInSameSet(int i, int j) {
-    return getRepr(i) == getRepr(j);
+    return getRepresentativeElement(i) == getRepresentativeElement(j);
   }
 
   /*
@@ -61,8 +61,8 @@ class DisjointSet {
    * Otherwise they belong in the same set, nothing is changed and the method returns false.
    */
   public boolean merge(int i, int j) {
-    int repr0 = getRepr(i);
-    int repr1 = getRepr(j);
+    int repr0 = getRepresentativeElement(i);
+    int repr1 = getRepresentativeElement(j);
     if (repr0 == repr1) return false;
     if (sizes[repr0] < sizes[repr1]) {
       int temp = repr0;
