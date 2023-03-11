@@ -267,6 +267,8 @@ max
 merge
 min
 mismatch
+modPow
+multiply
 next
 nextBigDecimal
 nextBigInteger
@@ -319,6 +321,7 @@ stream
 subList
 subSequence
 substring
+subtract
 takeWhile
 throw
 toArray

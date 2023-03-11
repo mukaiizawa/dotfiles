@@ -62,6 +62,9 @@ public class Main {
   static char[] slice(char[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
   static Object[] slice(Object[] a, int i, int j) { return Arrays.copyOfRange(a, i, j); }
   static double log(double x, double y) { return Math.log(y) / Math.log(x); }
+  static BigInteger bigint(int x) { return bigint(String.valueOf(x)); }
+  static BigInteger bigint(long x) { return bigint(String.valueOf(x)); }
+  static BigInteger bigint(String x) { return new BigInteger(x); }
 
   /*
    * String to digit array.
