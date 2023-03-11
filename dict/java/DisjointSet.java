@@ -31,13 +31,13 @@ class DisjointSet {
    * Returns the size of the set that the given element is a member of.
    */
   public int size(int i) {
-    return sizes[getRepresentativeElement(i)];
+    return sizes[representative(i)];
   }
 
   /*
    * Returns the representative element of the set to which the element belongs.
    */
-  public int getRepresentativeElement(int i) {
+  public int representative(int i) {
     int parent = parents[i];
     while (true) {
       int grandparent = parents[parent];
@@ -49,10 +49,19 @@ class DisjointSet {
   }
 
   /*
+   * Returns the representative elements.
+   */
+  public Set<Integer> representatives() {
+    Set<Integer> set = new HashSet<>();
+    for (int i = 0; i < parents.length; i++) set.add(representative(i));
+    return set;
+  }
+
+  /*
    * Tests whether the given two elements are members of the same set.
    */
   public boolean areInSameSet(int i, int j) {
-    return getRepresentativeElement(i) == getRepresentativeElement(j);
+    return representative(i) == representative(j);
   }
 
   /*
@@ -61,8 +70,8 @@ class DisjointSet {
    * Otherwise they belong in the same set, nothing is changed and the method returns false.
    */
   public boolean merge(int i, int j) {
-    int repr0 = getRepresentativeElement(i);
-    int repr1 = getRepresentativeElement(j);
+    int repr0 = representative(i);
+    int repr1 = representative(j);
     if (repr0 == repr1) return false;
     if (sizes[repr0] < sizes[repr1]) {
       int temp = repr0;
