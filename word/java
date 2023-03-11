@@ -4,6 +4,7 @@ ArrayList
 Arrays
 AssertionError
 Base64
+BigInteger
 BitSet
 Boolean
 BufferedInputStream
