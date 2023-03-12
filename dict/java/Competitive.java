@@ -17,17 +17,6 @@ public class Main {
       wr.writeLine(N);
     }
 
-    @Override
-    public void run() {
-      try {
-        solve();
-      } catch (Throwable e) {
-        throw e;
-      } finally {
-        wr.close();
-      }
-    }
-
     void swap(int[] a, int i, int j) { int x = a[i]; a[i] = a[j]; a[j] = x; }
     void swap(long[] a, int i, int j) { long x = a[i]; a[i] = a[j]; a[j] = x; }
     void swap(char[] a, int i, int j) { char x = a[i]; a[i] = a[j]; a[j] = x; }
@@ -143,6 +132,17 @@ public class Main {
         b = m;
       }
       return a;
+    }
+
+    @Override
+    public void run() {
+      try {
+        solve();
+      } catch (Throwable e) {
+        throw e;
+      } finally {
+        wr.close();
+      }
     }
 
   }
