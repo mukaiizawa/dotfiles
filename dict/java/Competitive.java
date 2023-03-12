@@ -11,8 +11,9 @@ public class Main {
 
   static class Solver implements Runnable {
 
-    public void solve() {
+    void solve() {
       var N = rd.readInt();
+      var S = rd.readString();
       wr.writeLine(N);
     }
 
