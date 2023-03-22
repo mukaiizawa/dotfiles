@@ -48,6 +48,20 @@ PFILE(SPFILE)を作成するには次の書式を用いる。
     <src_path> -- 作成元のSPFILE(PFILE)の場所
     ただし、<dest>と<src>が同一であってはならない。
 
+# セッション
+セッションは`v$session`テーブルで管理されている。
+
+    select distinct s.sid || ',' || s.serial#
+    from v$session s
+    where
+      s.type <> 'BACKGROUND'
+      and s.schemaname = 'FOO'
+      and s.status = 'INACTIVE'
+
+上記のクエリの実行結果を使用して次のようにセッションを殺すことができる。
+
+    alter system kill session '422,35218' immediate;
+
 # 表領域
 ## 表領域の作成
 表領域を作成する例を示す。
