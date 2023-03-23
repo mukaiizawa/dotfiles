@@ -29,6 +29,7 @@ setl lw+=function!
 setl lw+=method
 setl lw+=reader-macro
 setl lw+=special-operator
+setl lw+=var
 setl lw+=when
 setl lw+=while
 setl lw+=with-client-socket
