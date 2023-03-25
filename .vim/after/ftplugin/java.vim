@@ -1,6 +1,6 @@
 " html.vim
 
-setl cpt=s~/dotfiles/word/java,.,b,u
+setl cpt+=s~/dotfiles/word/java
 
 " add accessor
 nn <buffer> sa ^t mawv;"ty;wve"nyG{o

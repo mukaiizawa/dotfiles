@@ -26,9 +26,8 @@ sy enable
 se ai
 se bs=start,eol,indent
 se cc=100
-se cfu=CompleteEnglishWords
 se ch=2
-se cpt=.,b,u
+se cpt=.,b,u,s~/dotfiles/word/en
 se cul
 se enc=utf-8
 se et
@@ -72,7 +71,6 @@ se wmnu
 se ws
 
 ino <C-d> <Esc>:call InsertDate()<CR>
-ino <C-k> <C-x><C-u>
 ino <C-l> <C-n>
 ino <Tab> <C-v><Tab>
 ino <silent><ESC> <ESC>:set iminsert=0<CR>

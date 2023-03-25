@@ -1,6 +1,6 @@
 " lisp.vim
 
-setl cpt=s~/dotfiles/word/lisp,.,b,u
+setl cpt+=s~/dotfiles/word/lisp
 setl lisp
 setl nocin
 

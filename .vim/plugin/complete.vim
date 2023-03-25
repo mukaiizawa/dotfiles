@@ -5,23 +5,6 @@ let s:unite_source = {
       \   "default_action" : "vsplit",
       \ }
 
-fu! CompleteEnglishWords(findstart, base)
-  if a:findstart
-    " get cursor word.
-    let s:cur_text = strpart(getline('.'), 0, col('.') - 1)
-    retu match(s:cur_text, '\f*$')
-  el
-    " find word matching with `a:base'
-    let s:result = []
-    for s:line in readfile($HOME . '/dotfiles/word/en')
-      if s:line =~ '^' . a:base
-        call add(s:result, { 'word': s:line, 'abbr': s:line })
-      en
-    endfo
-    retu s:result
-  en
-endf
-
 fu! s:FuzzyFileType(fileType)
   if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\|javascript\)'
     retu 'web'
