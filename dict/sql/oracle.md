@@ -62,6 +62,19 @@ PFILE(SPFILE)を作成するには次の書式を用いる。
 
     alter system kill session '422,35218' immediate;
 
+`v$sql`と結合すると、実行したクエリを確認することができる。
+
+    select s.sid, s.serial#, s.USERNAME, s.status, s.program, ltrim(q.sql_text)
+    from v$session s, v$open_cursor oc, v$sql q
+    where
+      s.type <> 'BACKGROUND'
+      and s.schemaname = 'FOO'
+      and s.status = 'INACTIVE'
+      and s.saddr = oc.saddr
+      and s.sid = oc.sid
+      and q.sql_id = oc.sql_id
+    order by oc.last_sql_active_time desc;
+
 # 表領域
 ## 表領域の作成
 表領域を作成する例を示す。
