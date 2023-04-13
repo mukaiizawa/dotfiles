@@ -309,7 +309,7 @@ vm gww <Plug>(openbrowser-search)
 nn <silent>mb :<C-u>Unite bookmark<CR>
 nn <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nn <silent>me :<C-u>Unite menu<CR> 
-nn <silent>mf :<C-u>lcd %:h<CR> :VimFilerBufferDir -create<CR>
+nn <silent>mf :<C-u>VimFilerBufferDir -create<CR>
 nn <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nn <silent>mk :<C-u>Unite file_mru<CR>
 nn <silent>ml :<C-u>Unite line -no-wrap<CR>
