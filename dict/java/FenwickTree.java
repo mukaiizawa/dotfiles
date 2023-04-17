@@ -18,20 +18,32 @@ class FenwickTree {
     }
   }
 
+  /*
+   * Get length of this instance.
+   */
   public int length() {
     return tree.length;
   }
 
+  /*
+   * Get value at `i`.
+   */
   public long get(int i) {
     long result = tree[i];
     for (int j = 1; (i & j) != 0; j <<= 1) result -= tree[i ^ j];
     return result;
   }
 
-  public void set(int i, long val) {
-    add(i, val - get(i));
+  /*
+   * Set `x` at `i`.
+   */
+  public void set(int i, long x) {
+    add(i, x - get(i));
   }
 
+  /*
+   * Add `n` at `i`.
+   */
   public void add(int i, long n) {
     do {
       tree[i] += n;
