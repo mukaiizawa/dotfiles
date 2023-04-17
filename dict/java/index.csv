@@ -17,6 +17,7 @@ class AheadReader	~/dotfiles/dict/java/AheadReader.java
 class DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
 class DateUtil	~/dotfiles/dict/java/DateUtil.java
 class DisjointSet	~/dotfiles/dict/java/DisjointSet.java
+class FenwickTree	~/dotfiles/dict/java/FenwickTree.java
 class FileUtil	~/dotfiles/dict/java/FileUtil.java
 class KeyValues	~/dotfiles/dict/java/KeyValues.java
 class Lexer	~/dotfiles/dict/java/Lexer.java
