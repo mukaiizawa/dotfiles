@@ -163,7 +163,7 @@ let g:unite_no_default_keymappings = 1
 let g:unite_source_rec_min_cache_files = 100
 let g:unite_source_rec_max_cache_files = 200
 call unite#custom#profile('default', 'context', {
-      \   'start_insert' : 1,
+      \   'start_insert': 1,
       \   'no_wrap': 1,
       \   'prompt': '> ',
       \   'marked_icon': '@',
@@ -273,25 +273,41 @@ let g:caw_no_default_keymappings = 1
 
 " emmet
 let g:user_emmet_settings = {
-      \    'variables' : {
-      \        'lang' : 'ja',
-      \    },
-      \    'html' : {
-      \        'indentation' : '    ',
-      \        'quote_char': "'",
-      \        'expandos' : {
-      \            'ol': 'ol>li',
-      \            'ul': 'ul>li',
-      \            'table': 'table>thead>tr>th*3^^tbody>tr>td*3',
-      \        },
-      \        'default_attributes': {
-      \            'a': {'href': ''},
-      \        },
-      \    }
+      \   'variables': {
+      \     'lang': 'ja',
+      \   },
+      \   'html': {
+      \     'indentation': '    ',
+      \     'quote_char': "'",
+      \     'expandos': {
+      \       'ol': 'ol>li',
+      \       'ul': 'ul>li',
+      \       'table': 'table>thead>tr>th*3^^tbody>tr>td*3',
+      \     },
+      \     'default_attributes': {
+      \       'a': {'href': ''},
+      \     },
+      \   },
+      \   'java': {
+      \     'snippets': {
+      \       '!': "public static void main(String[] args) {\n\t|\n}",
+      \       'main': "public static void main(String[] args) {\n\t|\n}",
+      \       'if': "if (|) {\n}",
+      \       'fori': "for (int i = 0; i < |; i++) {\n}",
+      \       'forj': "for (int j = 0; j < |; j++) {\n}",
+      \       'fork': "for (int k = 0; k < |; k++) {\n}",
+      \       'while': "while (|) {\n}",
+      \     }
+      \   },
+      \   'paren': {
+      \     'snippets': {
+      \       'main': "(function! main (args)\n  (write :hello-world))",
+      \     }
+      \   }
       \ }
 
 " quickfix
-let unite_quickfix_filename_is_pathshorten = 0
+let g:unite_quickfix_filename_is_pathshorten = 0
 let g:unite_quickfix_is_multiline = 0
 
 " plugin mapping

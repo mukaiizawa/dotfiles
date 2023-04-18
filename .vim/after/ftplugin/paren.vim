@@ -38,12 +38,3 @@ setl lw+=with-memory-stream
 setl lw+=with-open
 setl lw+=with-process
 setl lw+=with-server-socket
-
-" emmet
-if exists('g:user_emmet_settings')
-  let g:user_emmet_settings.paren = {
-        \   'snippets': {
-        \       'main': "(function! main (args)\n  (write :hello-world))",
-        \   }
-        \ }
-en
