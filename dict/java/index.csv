@@ -22,6 +22,7 @@ class FileUtil	~/dotfiles/dict/java/FileUtil.java
 class KeyValues	~/dotfiles/dict/java/KeyValues.java
 class Lexer	~/dotfiles/dict/java/Lexer.java
 class MailUtil	~/dotfiles/dict/java/MailUtil.java
+class Multiset	~/dotfiles/dict/java/Multiset.java
 class Permutator	~/dotfiles/dict/java/Permutator.java
 class Point	~/dotfiles/dict/java/Point.java
 class ResourceManager	~/dotfiles/dict/java/ResourceManager.java
