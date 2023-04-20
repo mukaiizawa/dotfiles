@@ -75,29 +75,29 @@ class Multiset {
   /*
    * Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
    */
-  public long lower(long val) {
-    return table.lowerKey(val);
+  public Optional<Long> lower(long val) {
+    return Optional.ofNullable(table.lowerKey(val));
   }
 
   /*
    * Returns the least element in this set strictly greater than the given element, or null if there is no such element.
    */
-  public long higher(long val) {
-    return table.higherKey(val);
+  public Optional<Long> higher(long val) {
+    return Optional.ofNullable(table.higherKey(val));
   }
 
   /*
    * Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
    */
-  public long ceiling(long val) {
-    return table.ceilingKey(val);
+  public Optional<Long> ceiling(long val) {
+    return Optional.ofNullable(table.ceilingKey(val));
   }
 
   /*
    * Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
    */
-  public long floor(long val) {
-    return table.floorKey(val);
+  public Optional<Long> floor(long val) {
+    return Optional.ofNullable(table.floorKey(val));
   }
 
   /*
