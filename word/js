@@ -111,6 +111,7 @@ fragmentDirective
 from
 fromCharCode
 fromCodePoint
+fromEntries
 get
 getAnimations
 getAttribute
