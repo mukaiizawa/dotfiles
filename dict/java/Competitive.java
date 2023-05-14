@@ -25,18 +25,18 @@ public class Main {
     long sum(long[] a) { return LongStream.of(a).sum(); }
     int[] sort(int[] a) { Arrays.sort(a); return a; }
     long[] sort(long[] a) { Arrays.sort(a); return a; }
-    void reverse(int[] a) { reverse(a, 0, a.length); }
-    void reverse(long[] a) { reverse(a, 0, a.length); }
-    void reverse(char[] a) { reverse(a, 0, a.length); }
-    void reverse(Object[] a) { reverse(a, 0, a.length); }
-    void reverse(int[] a, int i) { reverse(a, i, a.length); }
-    void reverse(long[] a, int i) { reverse(a, i, a.length); }
-    void reverse(char[] a, int i) { reverse(a, i, a.length); }
-    void reverse(Object[] a, int i) { reverse(a, i, a.length); }
-    void reverse(int[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
-    void reverse(long[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
-    void reverse(char[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
-    void reverse(Object[] a, int i, int j) { for (int k = i; k < j / 2; k++) swap(a, k, j - k - 1); }
+    int[] reverse(int[] a) { return reverse(a, 0, a.length); }
+    long[] reverse(long[] a) { return reverse(a, 0, a.length); }
+    char[] reverse(char[] a) { return reverse(a, 0, a.length); }
+    Object[] reverse(Object[] a) { return reverse(a, 0, a.length); }
+    int[] reverse(int[] a, int i) { return reverse(a, i, a.length); }
+    long[] reverse(long[] a, int i) { return reverse(a, i, a.length); }
+    char[] reverse(char[] a, int i) { return reverse(a, i, a.length); }
+    Object[] reverse(Object[] a, int i) { return reverse(a, i, a.length); }
+    int[] reverse(int[] a, int i, int j) { for (int k = 0; k < (j - i) / 2; k++) { swap(a, i + k, j - k - 1); } return a; }
+    long[] reverse(long[] a, int i, int j) { for (int k = 0; k < (j - i) / 2; k++) { swap(a, i + k, j - k - 1); } return a; }
+    char[] reverse(char[] a, int i, int j) { for (int k = 0; k < (j - i) / 2; k++) { swap(a, i + k, j - k - 1); } return a; }
+    Object[] reverse(Object[] a, int i, int j) { for (int k = 0; k < (j - i) / 2; k++) { swap(a, i + k, j - k - 1); } return a; }
     int[] slice(int[] a) { return Arrays.copyOfRange(a, 0, a.length); }
     long[] slice(long[] a) { return Arrays.copyOfRange(a, 0, a.length); }
     char[] slice(char[] a) { return Arrays.copyOfRange(a, 0, a.length); }

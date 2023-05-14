@@ -1,13 +1,22 @@
 /*
  * Multiset data structure.
  */
-class Multiset {
+class Multiset<E> {
 
   private int size;
-  private TreeMap<Long, Integer> table;
+  private TreeMap<E, Integer> table;
 
-  public Multiset() {
-    table = new TreeMap<>();
+  /*
+   * Constructor
+   *
+   *     Multiset<Long> ms = new Multiset<>(new Comparator<Long>() {
+   *       public int compare(Long o1, Long o2) {
+   *         return o1.compareTo(o2);
+   *       }
+   *     });
+   */
+  public Multiset(Comparator<? super E> cmp) {
+    table = new TreeMap<>(cmp);
   }
 
   /*
@@ -20,7 +29,7 @@ class Multiset {
   /*
    * Returns the number of elements `val` present in the multiset.
    */
-  public int count(long val) {
+  public int count(E val) {
     if (table.containsKey(val)) return table.get(val);
     return 0;
   }
@@ -28,21 +37,21 @@ class Multiset {
   /*
    * Return the set corresponding to the multiset.
    */
-  public Set<Long> set() {
+  public Set<E> set() {
     return table.keySet();
   }
 
   /*
    * Same as `add(val, 1)`.
    */
-  public Multiset add(long val) {
+  public Multiset<E> add(E val) {
     return add(val, 1);
   }
 
   /*
    * Add `n` elements `val`.
    */
-  public Multiset add(long val, int n) {
+  public Multiset<E> add(E val, int n) {
     table.put(val, table.getOrDefault(val, 0) + n);
     size += n;
     return this;
@@ -51,7 +60,7 @@ class Multiset {
   /*
    * Same as `remove(val, 1)`.
    */
-  public Multiset remove(long val) {
+  public Multiset<E> remove(E val) {
     return remove(val, 1);
   }
 
@@ -59,7 +68,7 @@ class Multiset {
    * Delete `n` elements `val`.
    * If the number of elements to be deleted is greater than the actual number, delete them all and do not treat it as an error
    */
-  public Multiset remove(long val, int n) {
+  public Multiset<E> remove(E val, int n) {
     int curr = count(val);
     int next = curr - n;
     if (next > 0) {
@@ -75,40 +84,54 @@ class Multiset {
   /*
    * Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
    */
-  public Optional<Long> lower(long val) {
+  public Optional<E> lower(E val) {
     return Optional.ofNullable(table.lowerKey(val));
   }
 
   /*
    * Returns the least element in this set strictly greater than the given element, or null if there is no such element.
    */
-  public Optional<Long> higher(long val) {
+  public Optional<E> higher(E val) {
     return Optional.ofNullable(table.higherKey(val));
   }
 
   /*
    * Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
    */
-  public Optional<Long> ceiling(long val) {
+  public Optional<E> ceiling(E val) {
     return Optional.ofNullable(table.ceilingKey(val));
   }
 
   /*
    * Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
    */
-  public Optional<Long> floor(long val) {
+  public Optional<E> floor(E val) {
     return Optional.ofNullable(table.floorKey(val));
   }
 
   /*
    * Returns a sorted array corresponding to the multiset.
    */
-  public long[] toArray() {
+  public List<E> toArray() {
     int i = 0;
-    long[] ret = new long[size];
-    for (long val: set())
-      for (int s = 0, e = count(val); s < e; s++) ret[i++] = val;
-    return ret;
+    List<E> lis = new ArrayList<>();
+    for (E val: set())
+      for (int s = 0, e = count(val); s < e; s++) lis.add(val);
+    return lis;
+  }
+
+  /*
+   * Returns the i-th elements of this multiset.
+   */
+  public E get(int i) {
+    int j = 0;
+    for (E val: set()) {
+      for (int s = 0, e = count(val); s < e; s++) {
+        if (j == i) return val;
+        j++;
+      }
+    }
+    return null;
   }
 
 }
