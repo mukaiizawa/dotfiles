@@ -4,8 +4,8 @@
 class Permutator<E> implements Iterator<E[]> {
 
   /*
-   *  var ia = new Integer[] { 1, 2, 3 };
-   *  Permutator<Integer> it = new Permutator<Integer>(ia);
+   *  var a = new Integer[] { 1, 2, 3 };
+   *  Permutator<Integer> it = new Permutator<>(a);
    *  while (it.hasNext()) {
    *    wr.writeLine(it.next());
    *  }
