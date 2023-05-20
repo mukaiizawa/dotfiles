@@ -233,6 +233,12 @@ public class Main {
       return a;
     }
 
+    public String[][] readString(int n, int m) {
+      String[][] a = new String[n][m];
+      for (int i = 0; i < n; i++) a[i] = readString(m);
+      return a;
+    }
+
   }
 
   static class ExWriter {

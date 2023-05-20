@@ -82,28 +82,28 @@ class Multiset<E> {
   }
 
   /*
-   * Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
+   * Returns the greatest element in this set strictly less than the given element.
    */
   public Optional<E> lower(E val) {
     return Optional.ofNullable(table.lowerKey(val));
   }
 
   /*
-   * Returns the least element in this set strictly greater than the given element, or null if there is no such element.
+   * Returns the least element in this set strictly greater than the given element.
    */
   public Optional<E> higher(E val) {
     return Optional.ofNullable(table.higherKey(val));
   }
 
   /*
-   * Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
+   * Returns the least element in this set greater than or equal to the given element.
    */
   public Optional<E> ceiling(E val) {
     return Optional.ofNullable(table.ceilingKey(val));
   }
 
   /*
-   * Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
+   * Returns the greatest element in this set less than or equal to the given element.
    */
   public Optional<E> floor(E val) {
     return Optional.ofNullable(table.floorKey(val));
