@@ -118,8 +118,6 @@ nn gf :vs<CR>gf
 nn j gj
 nn k gk
 nn s  <NOP>
-nn sc" f"r',.
-nn sc' f'r",.
 nn sd" f"x,x
 nn sd' f'x,x
 nn sd( f)xF(x
