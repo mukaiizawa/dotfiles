@@ -22,7 +22,7 @@ fu! s:unite_source.gather_candidates(args, context)
   let s:root = $HOME . '/dotfiles/dict/'
   let s:path = s:root . s:FuzzyFileType(s:fileType) . '/index.csv'
   if !filereadable(s:path)
-    exe 'VimFiler' s:root
+    exe 'VimFiler' s:root . '/etc'
     retu []
   en
   let s:result = []
