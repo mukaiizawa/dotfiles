@@ -254,6 +254,7 @@ getFileSystem
 getLowestSetBit
 getName
 getNameCount
+getOrDefault
 getParent
 getRoot
 hasNext
