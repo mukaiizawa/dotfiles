@@ -125,13 +125,27 @@ public class Main {
       return primes;
     }
 
-    public long euclidean(long a, long b) {
+    /*
+     * Calculate the greatest common divisor (GCD) with the Euclidean algorithm.
+     */
+    long gcd(long a, long b) {
       while (b != 0) {
         long m = a % b;
         a = b;
         b = m;
       }
       return a;
+    }
+
+    /*
+     * Compute the inversion number of array `a` representing permutations of length `a.length`.
+     */
+    int inversionNumber(int[] a) {
+      int n = 0;
+      for (int i = 0; i < a.length; i++)
+        for (int j = i - 1; j >= 0 ; j--)
+          if (a[i] < a[j]) n++;
+      return n;
     }
 
     @Override
