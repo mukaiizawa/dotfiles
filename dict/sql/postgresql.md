@@ -2,7 +2,20 @@ PostgreSQL
 
 # psql
 
-    $ psql -h 192.168.xxx.xxx -U postgres -d postgres -f xxx.sql
+    $ psql -h192.168.xxx.xxx -p5432 -Upostgres -dpostgres
+    
+    -q
+        静かに実行
+    -c QUERY
+        QUERYを実行
+    -f FILE
+        FILEからクエリを読み込んで実行
+    -A
+        桁そろえなしで出力
+    --csv
+        CSV形式で出力
+    -F DELIM
+        DELIM区切りで出力
 
 ## pgpass.conf
 pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる。
