@@ -12,6 +12,8 @@ PostgreSQL
         FILEからクエリを読み込んで実行
     -A
         桁そろえなしで出力
+    -t
+        ヘッダとフッタを省略
     --csv
         CSV形式で出力
     -F DELIM
