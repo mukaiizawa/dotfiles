@@ -14,16 +14,18 @@
 
     docker container run -it --rm --name NAME IMAGE
 
+    --entrypoint CMD
+        エントリーポイントをCMDにする。デバッグ時などに重宝する。
     --name NAME
-        NAMEと名付けてコンテナを起動
+        NAMEと名付けてコンテナを起動する。
     --rm
-        コンテナ終了時に削除する
+        コンテナ終了時に削除する。
     -i
-        stdinを開く
+        stdinを開く。
     -t
-        擬似ttyを使用
+        擬似ttyを使用する。
     -t P:Q
-        ホストのport Pをコンテナのport Qに割り当てる
+        ホストのport Pをコンテナのport Qに割り当てる。
 
 ### docker save & docker load
 
