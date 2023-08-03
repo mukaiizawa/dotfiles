@@ -21,7 +21,9 @@
     -i
         stdinを開く
     -t
-        tty割り当て
+        擬似ttyを使用
+    -t P:Q
+        ホストのport Pをコンテナのport Qに割り当てる
 
 ### docker save & docker load
 
