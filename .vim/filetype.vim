@@ -5,4 +5,5 @@ en
 aug filetypedetect
   au! BufRead,BufNewFile *.m setfiletype mulk
   au! BufRead,BufNewFile *.p setfiletype paren
+  au! BufRead,BufNewFile *.rrpt setfiletype json    " RapidReport
 aug END
