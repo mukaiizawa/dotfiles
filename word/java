@@ -310,6 +310,7 @@ hasNextShort
 hashCode
 headSet
 higher
+ifPresent
 indexOf
 int
 intValue
@@ -322,6 +323,7 @@ isDirectory
 isEmpty
 isExecutable
 isHidden
+isPresent
 isProbablePrime
 isReadOnly
 isReadable
@@ -389,6 +391,9 @@ of
 ofNullable
 offsetByCodePoints
 or
+orElse
+orElseGet
+orElseThrow
 parallelPrefix
 parallelSetAll
 parallelSort
