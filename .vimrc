@@ -297,6 +297,18 @@ let g:user_emmet_settings = {
       \       'while': "while (|) {\n}",
       \     }
       \   },
+      \   'jsp': {
+      \     'expandos': {
+      \       'c:choose': 'c:choose>c:when,c:otherwise',
+      \     },
+      \     'default_attributes': {
+      \       'c:forEach': [{'var': ''}, {'items': '${|}'}, {'varStatus': 'status'}, ],
+      \       'c:if': {'test': '${|}'},
+      \       'c:out': {'value': '${|}'},
+      \       'c:set': [{'var': ''}, {'value': '${|}'}, ],
+      \       'c:when': {'test': '${|}'},
+      \     },
+      \   },
       \   'paren': {
       \     'snippets': {
       \       'main': "(function! main (args)\n  (write :hello-world))",
