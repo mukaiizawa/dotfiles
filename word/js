@@ -188,6 +188,7 @@ parent
 parse
 pop
 prepend
+preventDefault
 private
 prompt
 protected
@@ -239,6 +240,8 @@ split
 startsWith
 static
 status
+stopImmediatePropagation
+stopPropagation
 strike
 stringify
 stroke
