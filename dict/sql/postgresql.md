@@ -41,6 +41,10 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
     
     <database> -- database name.
 
+以下のクエリで最大接続数を確認できる。
+
+    show max_connections;
+
 # export
 ## script形式
 以下の書式で標準出力にpsqlが解釈可能なsqlを出力する。
