@@ -28,11 +28,16 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
     192.168.xxx.xxx:5432:postgres:postgres:xxxx
     ...
 
-# kill session
+# session
+以下のクエリでセッションを確認できる。実行するユーザの権限によって項目がnullになることがあるので注意。
 
-    SELECT pg_terminate_backend(pid)
-    FROM pg_stat_activity
-    WHERE datname = '<database>' AND pid <> pg_backend_pid();
+    select * from pg_stat_activity;
+
+確認したセッションは以下の書式でkillすることができる。
+
+    select pg_terminate_backend(pid)
+    from pg_stat_activity
+    where datname = '<database>' and pid <> pg_backend_pid();
     
     <database> -- database name.
 
@@ -53,7 +58,7 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
 ## script形式
 
     $ psql -h localhost -U postgres -d <database>
-    DROP SCHEMA IF EXISTS <schema> CASCADE;
+    drop schema if exists <schema> cascade;
     $ psql -h localhost -U postgres -d <database> -f xxx.dump
 
 ## archive形式
@@ -65,4 +70,4 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
 
 事前にデータベースを削除する場合は以下のようにする。
 
-    DROP DATABASE IF EXISTS <database>;
+    drop database if exists <database>;
