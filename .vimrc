@@ -175,6 +175,10 @@ call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
 
 " NeoMRU
 let g:neomru#file_mru_limit = 5000
+let g:neomru#file_mru_ignore_pattern = '\~$' .
+      \ '\|^\%(http[s]\|file\|quickrun\):' .
+      \ '\|^\%(//\|\\\\\)' .
+      \ '\|\.\%(o\|exe\|dll\|bak\|zwc\|pyc\|sw\)$'
 let g:neomru#directory_mru_limit = 500
 let g:neomru#directory_mru_ignore_pattern = ''
 
