@@ -1,9 +1,14 @@
+__import__
+__init__
 abs
+aiter
 all
+anext
 any
 ascii
 bin
 bool
+breakpoint
 bytearray
 bytes
 callable
@@ -11,6 +16,8 @@ chr
 classmethod
 compile
 complex
+date
+datetime
 delattr
 dict
 dir
@@ -63,7 +70,11 @@ staticmethod
 str
 sum
 super
+time
+timedelta
+timezone
 tuple
 type
+tzinfo
 vars
 zip
