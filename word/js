@@ -156,6 +156,7 @@ importNode
 in
 includes
 indexOf
+innerHTML
 insertAdjacentElement
 insertAdjacentHTML
 insertAdjacentText
