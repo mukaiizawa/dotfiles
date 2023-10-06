@@ -27,6 +27,16 @@ datetime
 
     datetime.now() + timedelta(1)
 
+### 年月日の取得
+
+    >>> dt = datetime.now()
+    >>> dt.year
+    2023
+    >>> dt.month
+    10
+    >>> dt.day
+    6
+
 ## date
 ### システム日付を取得
 
