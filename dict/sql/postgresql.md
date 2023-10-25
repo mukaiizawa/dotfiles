@@ -75,3 +75,10 @@ pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる�
 事前にデータベースを削除する場合は以下のようにする。
 
     drop database if exists <database>;
+
+# 所有者の変更
+`xxx`スキーマのテーブルの所有者を`yyy`に変更するクエリを生成するクエリ。
+
+    select concat('alter table ', schemaname, '.', tablename, ' owner to yyy;')
+    from pg_tables
+    where schemaname ='xxx'
