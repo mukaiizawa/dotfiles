@@ -83,4 +83,5 @@ type
 tzinfo
 vars
 writelines
+zfill
 zip
