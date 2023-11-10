@@ -56,7 +56,7 @@ hi StatusLineNC   guifg=#808080               gui=BOLD
 hi TabLine        guifg=#CCCCCC guibg=#666666
 hi TabLineFill                  guibg=#666666
 hi TabLineSel     guifg=#EEEEEE guibg=#666666
-hi Terminal       guifg=#A6F02E
+hi Terminal       guifg=#A6F02E guibg=#303030
 hi Title          guifg=#F86060               gui=BOLD
 hi VertSplit      guifg=#666666               gui=BOLD
 hi Visual         guifg=#FFFFFF guibg=#3399FF gui=BOLD
