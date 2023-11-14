@@ -1,4 +1,4 @@
-datetime
+datetime module
 
 # import
 
@@ -36,7 +36,7 @@ datetime
         in range(60) を満たす。
     time.second
         in range(60) を満たす。
-    time.microsecond¶
+    time.microsecond
         in range(1000000) を満たす。
 
 ## datetime
