@@ -57,7 +57,7 @@ NOTは真偽値を反転させる。
 # カレントディレクトリの取得
 カレントディレクトリは環境変数CDに保持されている。
 
-    > ECHO %CD%
+    $ ECHO %CD%
     C:\
 
 # バッチファイルの起動ディレクトリ
@@ -179,19 +179,37 @@ SETXの利用には管理者権限が必要。
 ## 標準エラー出力のリダイレクト
 以下のようにして、標準エラー出力をファイルや、標準出力へリダイレクトできる。
 
-    prog > stdout.txt 2> stderr.txt
-    prog > log.txt 2>&1
+    $ prog > stdout.txt 2> stderr.txt
+    $ prog > log.txt 2>&1
 
 ## nulデバイスへのリダイレクト
 以下のようにしてnulデバイスへリダイレクトするとquietモードのような振る舞いを実現可能。
 
-    del *.pdf > nul > 2>&1
+    $ del *.pdf > nul > 2>&1
 
-# 時刻
-時刻は環境変数`TIME`から取得できる。
+# 日付と時刻
+日付と時刻はそれぞれ環境変数`DATE`と`TIME`から取得できる。
+
+    $ ECHO %DATE%
+    2023/11/16
+    
+    $ ECHO %TIME%
+    11:57:54.43
+
+各種値は次のように取得できる。
+
+    SET WKDATE=%DATE:/=%
+    SET WKTIME=%TIME: =0%
+    SET YYYY=%WKDATE:~0,4%
+    SET YY=%WKDATE:~2,2%
+    SET MM=%WKDATE:~4,2%
+    SET DD=%WKDATE:~6,2%
+    SET HH=%WKTIME:~0,2%
+    SET MI=%WKTIME:~3,2%
+    SET SS=%WKTIME:~6,2%
+    SET DATETIME=%YYYY%-%MM%-%DD% %HH%:%MI%:%SS%
 
 ## 午前中の判定
-環境変数`TIME`を用いて午前中にのみ実行する処理は以下のように書ける。
 
     if %TIME:~0,2% LEQ 12 goto end
     start xxx
