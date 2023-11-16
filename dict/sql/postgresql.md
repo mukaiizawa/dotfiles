@@ -18,15 +18,26 @@ PostgreSQL
         CSV形式で出力
     -F DELIM
         DELIM区切りで出力
+    -v X=Y
+        パラメーターXを値Yで定義する。
+        `-v ON_ERROR_STOP=1`などのように組み込みのパラメーターに値を指定する他、
+        任意のパラメーターに値を設定して参照することも可能。
 
-## pgpass.conf
-pgpass.confを作成すると認証情報をpsqlに渡す必要がなくなる。
+## パスワードファイル
+認証情報をあらかじめファイルに保存しておくことで、psqlなどで認証を省略することができる。このファイルのことをパスワードファイルという。
+
+パスワードファイルは`~/.pgpass`（windowsの場合は`%APPDATA%\postgresql\pgpass.conf`）または、環境変数`PGPASSFILE`で指定した場所に配置する。
 
     $ cat C:/Users/xxx/AppData/Roaming/postgresql/pgpass.conf
     # pgpass.conf
     # hostname:port:database:username:password
     192.168.xxx.xxx:5432:postgres:postgres:xxxx
+    *:*:*:*:password
     ...
+
+上から順に最初にマッチしたレコードが使用される。
+
+各列にはワイルドカード`*`を使用することが可能。
 
 # session
 以下のクエリでセッションを確認できる。実行するユーザの権限によって項目がnullになることがあるので注意。
