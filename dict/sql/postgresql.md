@@ -39,23 +39,6 @@ PostgreSQL
 
 各列にはワイルドカード`*`を使用することが可能。
 
-# session
-以下のクエリでセッションを確認できる。実行するユーザの権限によって項目がnullになることがあるので注意。
-
-    select * from pg_stat_activity;
-
-確認したセッションは以下の書式でkillすることができる。
-
-    select pg_terminate_backend(pid)
-    from pg_stat_activity
-    where datname = '<database>' and pid <> pg_backend_pid();
-    
-    <database> -- database name.
-
-以下のクエリで最大接続数を確認できる。
-
-    show max_connections;
-
 # export
 ## script形式
 以下の書式で標準出力にpsqlが解釈可能なsqlを出力する。
@@ -93,3 +76,27 @@ PostgreSQL
     select concat('alter table ', schemaname, '.', tablename, ' owner to yyy;')
     from pg_tables
     where schemaname ='xxx'
+
+# セッションの取得・削除
+以下のクエリでセッションを確認できる。実行するユーザの権限によって項目がnullになることがあるので注意。
+
+    select * from pg_stat_activity;
+
+確認したセッションは以下の書式でkillすることができる。
+
+    select pg_terminate_backend(pid)
+    from pg_stat_activity
+    where datname = '<database>' and pid <> pg_backend_pid();
+    
+    <database> -- database name.
+
+以下のクエリで最大接続数を確認できる。
+
+    show max_connections;
+
+# テーブル一覧の取得
+以下のクエリで該当スキーマに存在するテーブルの一覧を取得できる。
+
+    select schemaname, tablename, tableowner
+    from pg_tables
+    where schemaname = 'foo';
