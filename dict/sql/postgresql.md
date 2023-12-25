@@ -94,6 +94,20 @@ PostgreSQL
 
     show max_connections;
 
+# デッドロックの確認・解除
+以下のクエリで取得中のロックが確認できる。
+
+    select l.pid, l.granted, d.datname, l.locktype, relation, relation::regclass, transactionid,l.mode
+    from
+        pg_locks l
+        left join pg_database d on l.database = d.oid
+    where l.pid != pg_backend_pid()
+    order by l.pid;
+
+問題のあるpidは次のクエリで要求を取消できる。
+
+    select pg_cancel_backend(<pid>);
+
 # テーブル一覧の取得
 以下のクエリで該当スキーマに存在するテーブルの一覧を取得できる。
 
