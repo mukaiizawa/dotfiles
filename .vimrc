@@ -114,7 +114,7 @@ nn dj <NOP>
 nn dk <NOP>
 nn dl <NOP>
 nn gcd  :<C-u>lcd %:h<CR>:pwd<CR>
-nn gf :vs<CR>gf
+nn gf :vs<CR>gF
 nn j gj
 nn k gk
 nn s  <NOP>
