@@ -316,6 +316,7 @@ sy keyword ParenBuiltIn upper?
 sy keyword ParenBuiltIn utcoffset
 sy keyword ParenBuiltIn utime
 sy keyword ParenBuiltIn vals
+sy keyword ParenBuiltIn var
 sy keyword ParenBuiltIn wcwidth
 sy keyword ParenBuiltIn when
 sy keyword ParenBuiltIn while
