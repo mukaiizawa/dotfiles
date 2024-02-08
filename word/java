@@ -105,6 +105,8 @@ OutOfMemoryError
 OutputStream
 OutputStreamWriter
 Package
+Path
+Paths
 PipedInputStream
 PipedOutputStream
 PipedReader
