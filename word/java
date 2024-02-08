@@ -344,6 +344,7 @@ length
 limit
 lines
 list
+listFiles
 listIterator
 locale
 long
