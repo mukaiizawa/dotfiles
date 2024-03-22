@@ -236,15 +236,15 @@ let g:quickrun_config = {
       \     'exec': '%c %s',
       \   },
       \   'lisp': {
-      \     'type': executable('lx86cl64')? 'lisp/ccll':
+      \     'type': executable('sbcl')? 'lisp/sbcl':
+      \             executable('lx86cl64')? 'lisp/ccll':
       \             executable('wx86cl64')? 'lisp/cclw':
-      \             executable('clisp')? 'lisp/clisp':
-      \             executable('sbcl')? 'lisp/sbcl': '',
+      \             executable('clisp')? 'lisp/clisp': '',
       \     'hook/time/enable': 1,
       \   },
       \   'lisp/sbcl': {
-      \    'command': 'sbcl',
-      \    'cmdopt': '--script',
+      \     'command': 'sbcl',
+      \     'exec': '%c --noinform --non-interactive --load %s',
       \   },
       \   'lisp/ccll': {
       \     'command': 'lx86cl64',
