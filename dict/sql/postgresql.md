@@ -114,3 +114,8 @@ PostgreSQL
     select schemaname, tablename, tableowner
     from pg_tables
     where schemaname = 'foo';
+
+# DDLの出力
+`pg_dump`に`-s`オプションを使用するとデータは対象外となるので、それを利用してDDLを出力できる。
+
+    $ pg_dump -h localhost -U postgres -d <database> -s -n <schema> > ddl.sql
