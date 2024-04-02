@@ -40,7 +40,7 @@ fu! PutPrintFunction() range
         \   'java'       : ['System.out.println(' , ');'],
         \   'javascript' : ['console.log(' , ');'],
         \   'jsp'        : ['console.log(' , ');'],
-        \   'lisp'       : ['(print' , ')'],
+        \   'lisp'       : ['(print ' , ')'],
         \   'paren'      : ['(write ' , ')'],
         \   'peal'       : ['print ' , ';'],
         \   'python'     : ['print(' , ')'],
