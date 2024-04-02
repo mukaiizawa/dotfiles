@@ -1,6 +1,6 @@
 " surround.vim
 
-fu! SurroundWith(leftPart, rightPart, currentLine)
+fu! s:SurroundWith(leftPart, rightPart, currentLine)
   " move the first non-blank character of the line.
   exe ':normal ^'
   " removed blanc of current line.
@@ -59,7 +59,7 @@ fu! PutPrintFunction() range
     let s:rightPart = (s:printDic[s:filetype])[1]
     " surround each line
     for n in range(a:firstline, a:lastline)
-      call SurroundWith(s:leftPart, s:rightPart, n)
+      call s:SurroundWith(s:leftPart, s:rightPart, n)
     endfo
   en
 endf
