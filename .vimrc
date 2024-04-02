@@ -346,8 +346,8 @@ nn <silent>ml :<C-u>Unite line -no-wrap<CR>
 nn <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
 nn <silent>mx :<C-u>Unite quickfix<CR>
 
-nn sp :<C-u>PrintSurround<CR>
-vn sp :PrintSurround<CR>
+nn sp :<C-u>PutPrintFunction<CR>
+vn sp :PutPrintFunction<CR>
 
 " autocmd
 aug vimrc

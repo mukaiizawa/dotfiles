@@ -30,7 +30,7 @@ fu! SurroundWith(leftPart, rightPart, currentLine)
   exe ':normal == '
 endf
 
-fu! PrintSurround() range
+fu! PutPrintFunction() range
   let s:filetype = &filetype
   let s:printDic = {
         \   'c'          : ['printf("%d\n", ' , ');'],
@@ -40,7 +40,7 @@ fu! PrintSurround() range
         \   'java'       : ['System.out.println(' , ');'],
         \   'javascript' : ['console.log(' , ');'],
         \   'jsp'        : ['console.log(' , ');'],
-        \   'lisp'       : ['#o' , ''],
+        \   'lisp'       : ['(print' , ')'],
         \   'paren'      : ['(write ' , ')'],
         \   'peal'       : ['print ' , ';'],
         \   'python'     : ['print(' , ')'],
@@ -64,4 +64,4 @@ fu! PrintSurround() range
   en
 endf
 
-com! -range PrintSurround <line1>, <line2>call PrintSurround()
+com! -range PutPrintFunction <line1>, <line2>call PutPrintFunction()
