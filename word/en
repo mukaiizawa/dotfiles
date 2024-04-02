@@ -135,6 +135,7 @@ deny
 depend
 deployment
 describe
+description
 design
 determine
 develop
@@ -480,6 +481,7 @@ successful
 suggest
 support
 suppress
+synopsis
 system
 taken
 taking
