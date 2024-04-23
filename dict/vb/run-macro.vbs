@@ -1,7 +1,7 @@
 Option Explicit
 
 Sub Usage()
-  WScript.StdErr.Write("Usage: cscript mso2pdf.vbs PATH [MACRO]" & vbCrLf)
+  WScript.StdErr.Write("Usage: cscript run-macro.vbs PATH [MACRO]" & vbCrLf)
   WScript.StdErr.Write("Running excel macros." & vbCrLf)
 End Sub
 
