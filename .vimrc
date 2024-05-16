@@ -60,7 +60,7 @@ se si
 se sm
 se spr
 se stal=2
-se stl=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{&fenc}\ %{CurrentFileformat()}\ [%{CurrentLine()},%{CurrentCol()}]
+se stl=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{status_line#fenc()}\ %{status_line#ff()}\ [%{status_line#row()},\ %{status_line#col()}]
 se sw=2
 se tal=%t
 se title
