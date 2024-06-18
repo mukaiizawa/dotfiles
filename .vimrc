@@ -70,7 +70,7 @@ se vi=
 se wmnu
 se ws
 
-ino <C-d> <Esc>:call InsertDate()<CR>
+ino <C-d> <Esc>:call ec#ino#ctrl_d()<CR>
 ino <C-l> <C-n>
 ino <Tab> <C-v><Tab>
 ino <silent><ESC> <ESC>:set iminsert=0<CR>
@@ -95,8 +95,8 @@ nn <Space> <NOP>
 nn <Space><Space> zz
 nn <Space>j Lzz
 nn <Space>k Hzz
-nn <silent><Space>h :call MoveLeftEnd()<CR>
-nn <silent><Space>l :call MoverRightEnd()<CR>
+nn <silent><Space>h :call ec#nn#h()<CR>
+nn <silent><Space>l :call ec#nn#l()<CR>
 nn <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
 nn <silent><Space>w :set wrap!<CR>
 nn <silent>mm :e #<CR>
@@ -151,7 +151,7 @@ vn <Space>h 0
 vn <Space>j Lzz
 vn <Space>k Hzz
 vn <Space>l $
-vn gzc :'<,'>call Xfold()<CR>
+vn gzc :call ec#vn#gzc()<CR>
 vn j gj
 vn k gk
 
