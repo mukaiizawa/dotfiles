@@ -111,6 +111,7 @@ PipedInputStream
 PipedOutputStream
 PipedReader
 PipedWriter
+PreparedStatement
 PrimitiveIterator
 PrintStream
 PrintWriter
@@ -145,6 +146,7 @@ Stack
 StackOverflowError
 StackTraceElement
 StackWalker
+Statement
 StreamTokenizer
 StrictMath
 String
@@ -254,6 +256,7 @@ ensureCapacity
 entrySet
 equals
 equalsIgnoreCase
+executeQuery
 exists
 false
 fill
