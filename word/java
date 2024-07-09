@@ -407,6 +407,10 @@ parallelPrefix
 parallelSetAll
 parallelSort
 parallelStream
+parseDouble
+parseInt
+parseLong
+parseUnsignedInt
 peek
 pollFirst
 pollLast
