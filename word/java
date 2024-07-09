@@ -4,6 +4,7 @@ ArrayList
 Arrays
 AssertionError
 Base64
+BigDecimal
 BigInteger
 BitSet
 Boolean
@@ -251,6 +252,7 @@ divideAndRemainder
 doubleValue
 dropWhile
 empty
+emptyList
 endsWith
 ensureCapacity
 entrySet
