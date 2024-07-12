@@ -486,6 +486,7 @@ subSet
 subpath
 substring
 subtract
+switch
 tailSet
 takeWhile
 testBit

@@ -299,6 +299,7 @@ let g:user_emmet_settings = {
       \       'forj': "for (int j = 0; j < |; j++) {\n}",
       \       'fork': "for (int k = 0; k < |; k++) {\n}",
       \       'while': "while (|) {\n}",
+      \       'switch': "switch (|) {\n\tcase xxx:\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}",
       \     }
       \   },
       \   'jsp': {
