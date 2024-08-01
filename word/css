@@ -19,6 +19,8 @@ bgsound
 blink
 block
 blockquote
+bold
+bolder
 border
 border-bottom
 border-bottom-color
@@ -150,10 +152,14 @@ ilayer
 image
 ime-mode
 include-source
+inherit
+initial
 inline
 input
 isindex
 label
+large
+larger
 layer
 layer-background-color
 layer-background-image
@@ -180,6 +186,7 @@ margin-top
 marquee
 max-height
 max-width
+medium
 min-height
 min-width
 multicol
@@ -218,6 +225,7 @@ quotes
 repeat
 repeat-x
 repeat-y
+revert
 right
 ruby-align
 ruby-overhang
@@ -233,6 +241,7 @@ scrollbar-highlight-color
 scrollbar-shadow-color
 select
 small
+smaller
 spacer
 strike
 strong
@@ -252,6 +261,7 @@ tfoot
 thead
 title
 unicode-bidi
+unset
 vertical-align
 visibility
 visible
@@ -262,4 +272,9 @@ word-break
 word-spacing
 word-wrap
 writing-mode
+x-large
+x-small
+xx-large
+xx-small
+xxx-large
 z-index
