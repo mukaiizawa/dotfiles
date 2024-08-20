@@ -450,6 +450,7 @@ probeContentType
 public
 put
 putAll
+putIfAbsent
 radix
 read
 readAllBytes
