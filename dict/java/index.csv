@@ -11,6 +11,7 @@ Snippets Write to File	~/dotfiles/dict/java/Writer.java
 Snippets XMLChecker	~/dotfiles/dict/java/XMLChecker.java
 Tutorial JAX-RS	~/dotfiles/dict/java/JAX-RS.md
 Tutorial date	~/dotfiles/dict/java/date.md
+Tutorial javac	~/dotfiles/dict/java/javac.md
 Utility javac/java wrapper	~/dotfiles/dict/java/run.bat
 Utility javadoc CustomDoclet	~/dotfiles/dict/java/CustomDoclet.java
 class AheadReader	~/dotfiles/dict/java/AheadReader.java
