@@ -43,9 +43,7 @@ PostgreSQL
 ## script形式
 以下の書式で標準出力にpsqlが解釈可能なsqlを出力する。
 
-必要に応じてリダイレクトするとよい。
-
-    $ pg_dump -h localhost -p 5432 -U postgres -d <database> -n <schema>
+    $ pg_dump -h localhost -p 5432 -U postgres -d <database> -n <schema> -f <dumpfile>
 
 ## archive形式
 以下の書式で標準出力にpg_restoreが解釈可能なバイト列を出力する。
