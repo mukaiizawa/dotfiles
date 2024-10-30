@@ -143,6 +143,7 @@ depend
 deployment
 describe
 description
+deserialize
 design
 determine
 develop
@@ -457,6 +458,7 @@ season
 second
 seems
 semicolon
+serialize
 serious
 serve
 server
