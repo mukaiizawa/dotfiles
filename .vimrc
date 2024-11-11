@@ -318,7 +318,12 @@ let g:user_emmet_settings = {
       \     'snippets': {
       \       'main': "(function! main (args)\n  (write :hello-world))",
       \     }
-      \   }
+      \   },
+      \   'sql': {
+      \     'snippets': {
+      \       'case': "case\n  when | then expr\n  else expr\nend",
+      \     },
+      \   },
       \ }
 
 " quickfix
