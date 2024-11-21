@@ -1,10 +1,11 @@
 curl
 
 # curl
+## Synopsis
 
-    curl [options...] <url>
+    curl [OPTIONS...] URL
 
-## options
+## Options
 
     -d
         HTTP POST dataを指定する。
