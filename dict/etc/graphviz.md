@@ -56,10 +56,14 @@ dot言語はdotが解釈する言語である。
     edgeRHS = edgeop (node_id | subgraph) [ edgeRHS ]
     node_stmt = node_id [ attr_list ]
     node_id = ID [ ':' port ]
-    port = ID [ ':' compass_pt ]
-            | compass_pt
+    port = ID [ ':' compass_pt ] | compass_pt
     subgraph = [ subgraph [ ID ] ] '{' stmt_list '}'
     compass_pt = n | ne | e | se | s | sw | w | nw | c | _
+    edgeop = '--' | '->'
+    ID -- Any string of alphabetic ([a-zA-Z\200-\377]) characters, underscores ('_') or digits([0-9]), not beginning with a digit
+            | a numeral [-]?(.[0-9]⁺ | [0-9]⁺(.[0-9]*)? )
+            | any double-quoted string ("...") possibly containing escaped quotes (\")¹
+            | an HTML string (<...>)
 
 Cスタイルのコメントをサポートする。即ち、`//`から行末までと`/*`から`*/` で囲まれた文字列は無視される。
 
