@@ -101,6 +101,9 @@ nn <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
 nn <silent><Space>w :set wrap!<CR>
 nn <silent>mm :e #<CR>
 nn <silent>sq :<C-u>q<CR>
+nn N Nzz
+nn * *zz
+nn # #zz
 nn Q <NOP>
 nn U  <C-r>
 nn Y y$
@@ -117,6 +120,7 @@ nn gcd  :<C-u>lcd %:h<CR>:pwd<CR>
 nn gf :vs<CR>gF
 nn j gj
 nn k gk
+nn n nzz
 nn s  <NOP>
 nn sd" f"x,x
 nn sd' f'x,x
@@ -144,7 +148,7 @@ tno <Esc> <C-w>N
 
 vn ( {
 vn ) }
-vn / y/<C-r>"<CR>
+vn / y/<C-r>"<CR>zz
 vn <C-Insert> "*y
 vn <S-Insert> "*p
 vn <Space>h 0
