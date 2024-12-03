@@ -1,30 +1,30 @@
+Algorithm DisjointSet	~/dotfiles/dict/java/DisjointSet.java
+Algorithm FenwickTree	~/dotfiles/dict/java/FenwickTree.java
 Algorithm Knapsack problem	~/dotfiles/dict/java/KnapsackProblem.java
 Algorithm NQueenProblem	~/dotfiles/dict/java/NQueenProblem.java
+Algorithm Permutator	~/dotfiles/dict/java/Permutator.java
 Algorithm QuickSort	~/dotfiles/dict/java/QuickSort.java
 Snippets Competitive Programming	~/dotfiles/dict/java/Competitive.java
+Snippets Exception to String	~/dotfiles/dict/java/Exception2String.java
+Snippets File IO	~/dotfiles/dict/java/FileIO.java
 Snippets JDBC PostgreSQL	~/dotfiles/dict/java/JDBCPostgres.java
 Snippets JUnit	~/dotfiles/dict/java/JUnit.java
-Snippets Stream	~/dotfiles/dict/java/Stream.md
 Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
-Snippets Util	~/dotfiles/dict/java/Util.java
-Snippets Write to File	~/dotfiles/dict/java/Writer.java
 Snippets XMLChecker	~/dotfiles/dict/java/XMLChecker.java
 Tutorial JAX-RS	~/dotfiles/dict/java/JAX-RS.md
+Tutorial Stream	~/dotfiles/dict/java/Stream.md
 Tutorial date	~/dotfiles/dict/java/date.md
 Tutorial javac	~/dotfiles/dict/java/javac.md
+Utility AheadReader	~/dotfiles/dict/java/AheadReader.java
+Utility DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
+Utility DateUtil	~/dotfiles/dict/java/DateUtil.java
+Utility FileUtil	~/dotfiles/dict/java/FileUtil.java
+Utility KeyValues	~/dotfiles/dict/java/KeyValues.java
+Utility Lexer	~/dotfiles/dict/java/Lexer.java
+Utility MailUtil	~/dotfiles/dict/java/MailUtil.java
+Utility Multiset	~/dotfiles/dict/java/Multiset.java
+Utility Point	~/dotfiles/dict/java/Point.java
+Utility ResourceManager	~/dotfiles/dict/java/ResourceManager.java
+Utility XDateUtil	~/dotfiles/dict/java/XDateUtil.java
 Utility javac/java wrapper	~/dotfiles/dict/java/run.bat
 Utility javadoc CustomDoclet	~/dotfiles/dict/java/CustomDoclet.java
-class AheadReader	~/dotfiles/dict/java/AheadReader.java
-class DatabaseManager	~/dotfiles/dict/java/DatabaseManager.java
-class DateUtil	~/dotfiles/dict/java/DateUtil.java
-class DisjointSet	~/dotfiles/dict/java/DisjointSet.java
-class FenwickTree	~/dotfiles/dict/java/FenwickTree.java
-class FileUtil	~/dotfiles/dict/java/FileUtil.java
-class KeyValues	~/dotfiles/dict/java/KeyValues.java
-class Lexer	~/dotfiles/dict/java/Lexer.java
-class MailUtil	~/dotfiles/dict/java/MailUtil.java
-class Multiset	~/dotfiles/dict/java/Multiset.java
-class Permutator	~/dotfiles/dict/java/Permutator.java
-class Point	~/dotfiles/dict/java/Point.java
-class ResourceManager	~/dotfiles/dict/java/ResourceManager.java
-class XDateUtil	~/dotfiles/dict/java/XDateUtil.java

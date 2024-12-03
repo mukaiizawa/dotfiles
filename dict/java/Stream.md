@@ -122,6 +122,10 @@ filterは写像後の値が真になるデータのみ抽出する。
 比較は`equals`で行われる。
 
 # 終端操作
+## 反復処理
+
+    stream.forEach(x -> System.out.println(x));
+
 ## コレクションの生成
 ### 配列の生成
 
