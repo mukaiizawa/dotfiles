@@ -297,6 +297,7 @@ let g:user_emmet_settings = {
       \   'java': {
       \     'snippets': {
       \       '!': "public static void main(String[] args) {\n\t|\n}",
+      \       'class': "public class | {\n}",
       \       'main': "public static void main(String[] args) {\n\t|\n}",
       \       'if': "if (|) {\n}",
       \       'fori': "for (int i = 0; i < |; i++) {\n}",
