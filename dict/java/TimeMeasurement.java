@@ -12,10 +12,10 @@ public class TimeMeasurement {
   }
 
   public static void main(String[] args) {
-    long start = System.nanoTime();
+    long start = System.nanoTime();    // or currentTimeMillis() [msec]
     tarai(12, 6, 0);
     long end = System.nanoTime();
-    System.out.println((end - start)  + "ms");
+    System.out.println((end - start)  + "ns");
   }
 
 }
