@@ -248,6 +248,7 @@ createStruct
 createSymbolicLink
 createTempDirectory
 createTempFile
+currentTimeMillis
 deepEquals
 deepHashCode
 deepToString
@@ -397,6 +398,7 @@ modPow
 move
 multiply
 nCopies
+nanoTime
 nativeSQL
 negate
 newBufferedReader
