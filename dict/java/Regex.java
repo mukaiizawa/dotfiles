@@ -21,6 +21,6 @@ import java.util.regex.*;
     Pattern pattern = Pattern.compile("[a-z]+");
     Matcher matcher = pattern.matcher(text);
 
-    while (find.matches()) {
+    while (matcher.matches()) {
       System.out.println(matcher.group());
     }
