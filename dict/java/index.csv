@@ -10,6 +10,7 @@ Snippets File IO	~/dotfiles/dict/java/FileIO.java
 Snippets JDBC PostgreSQL	~/dotfiles/dict/java/JDBCPostgres.java
 Snippets JUnit	~/dotfiles/dict/java/JUnit.java
 Snippets Regex	~/dotfiles/dict/java/Regex.java
+Snippets Thread	~/dotfiles/dict/java/Thread.java
 Snippets TimeMeasurement	~/dotfiles/dict/java/TimeMeasurement.java
 Snippets XML parser	~/dotfiles/dict/java/XMLParser.java
 Tutorial JAX-RS	~/dotfiles/dict/java/JAX-RS.md
