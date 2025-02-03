@@ -1,4 +1,5 @@
 Clock	~/dotfiles/dict/cs/Clock.cs
 Cycroid	~/dotfiles/dict/cs/Cycroid.cs
 Template	~/dotfiles/dict/cs/Template.cs
-Tutorial C	~/dotfiles/dict/cs/tutorial.md
+Tutorial C#	~/dotfiles/dict/cs/tutorial.md
+Utility csc wrapper	~/dotfiles/dict/cs/run.bat
