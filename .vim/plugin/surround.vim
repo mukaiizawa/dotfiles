@@ -35,6 +35,7 @@ fu! PutPrintFunction() range
   let s:printDic = {
         \   'c'          : ['printf("%d\n", ' , ');'],
         \   'cpp'        : ['std::cout << "' , '";'],
+        \   'cs'         : ['Debug.Log(' , ');'],
         \   'dosbatch'   : ['echo "' , '"'],
         \   'html'       : ['console.log(' , ');'],
         \   'java'       : ['System.out.println(' , ');'],
