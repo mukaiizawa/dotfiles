@@ -263,6 +263,7 @@ Translate
 TryGetComponent
 Update
 Vector2
+Vector2Int
 Vector3
 WakeUp
 Where
