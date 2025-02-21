@@ -1,5 +1,6 @@
 Abs
 Acos
+Add
 AddComponent
 AddForce
 AddForceAtPosition
@@ -101,6 +102,7 @@ GetSiblingIndex
 GetTouch
 GetVector
 HalfToFloat
+IEnumerable
 Image
 Infinity
 Input
@@ -223,6 +225,7 @@ Rotate
 RotateAround
 Round
 RoundToInt
+Select
 SendMessage
 SendMessageUpwards
 SetActive
@@ -247,6 +250,7 @@ Tan
 Text
 Texture
 Time
+ToArray
 ToString
 Transform
 TransformDirection
@@ -261,6 +265,7 @@ Update
 Vector2
 Vector3
 WakeUp
+Where
 acceleration
 accelerationEventCount
 accelerationEvents
