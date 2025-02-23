@@ -33,6 +33,7 @@ Collider
 Color
 CompareTag
 Component
+ConcurrentDictionary
 Coroutine
 CorrelatedColorTemperatureToRGB
 Cos
@@ -102,6 +103,7 @@ GetSiblingIndex
 GetTouch
 GetVector
 HalfToFloat
+HashSet
 IEnumerable
 Image
 Infinity
