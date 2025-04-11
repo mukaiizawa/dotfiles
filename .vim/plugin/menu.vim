@@ -1,23 +1,22 @@
 " menu.vim
 
+fu! GetRandomElement(array)
+    return a:array[rand() % len(a:array)]
+endfunction
+
 fu! GetStartUpList()
-  let banner_path = $HOME . '/dotfiles/startup.banner'
-  let logo_path = $HOME . '/dotfiles/startup.logo'
   let action = "Unite neomru/file -hide-source-names -no-split -no-wrap -start-insert"
   let result = []
-  if !filereadable(banner_path) || !filereadable(logo_path)
-    call PrintError(printf('GetStartUpList: logo not found.'))
-    retu result
-  en
-  let banner =  readfile(banner_path)
+  " banner
+  let banner = readfile($HOME . '/dotfiles/startup.banner')
   for line in banner
     call add(result, [line, action])
   endfo
-  let logo =  readfile(logo_path)
+  let logo = readfile($HOME . '/dotfiles/startup.logo')
   let win_height = &lines
   let win_width = &columns
   if has('win32') || has('win64')
-    let win_height = 55
+    let win_height = 46
     let win_width = 230
   en
   let padding_top = win_height - len(banner) - len(logo) - 7
@@ -26,9 +25,14 @@ fu! GetStartUpList()
     call add(result, ["", action])
     let padding_top = padding_top - 1
   endw
+  " logo
   for line in logo
     call add(result, [padding_left . line, action])
   endfo
+  " quote
+  for line in split(GetRandomElement(readfile($HOME . '/dotfiles/startup.quotes')), "	")
+    call add(result, [line, action])
+  endfor
   retu result
 endf
 
