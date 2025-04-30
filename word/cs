@@ -223,6 +223,7 @@ OnTriggerStay
 OnTriggerStay2D
 OnValidate
 OnWillRenderObject
+OrderBy
 OverlapCollider
 OverlapPoint
 PI
@@ -295,6 +296,7 @@ Text
 Texture
 Time
 ToArray
+ToList
 ToString
 Transform
 TransformDirection
