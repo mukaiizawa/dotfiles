@@ -11,6 +11,7 @@ AddTorque
 Animator
 Application
 Approximately
+Array
 Asin
 Assert
 AssertFormat
@@ -56,6 +57,7 @@ Distance
 DontDestroyOnLoad
 DrawLine
 DrawRay
+Empty
 Epsilon
 Event
 Exp
@@ -144,6 +146,7 @@ IsSleeping
 IsTouching
 IsTouchingLayers
 LateUpdate
+Length
 Lerp
 LerpAngle
 LerpUnclamped
