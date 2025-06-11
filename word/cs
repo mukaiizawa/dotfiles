@@ -21,6 +21,7 @@ AudioSource
 Break
 BroadcastMessage
 Button
+Button
 CalculateFrustumCorners
 CalculateObliqueMatrix
 CalculateProjectionMatrixFromPhysicalProperties
@@ -125,6 +126,7 @@ HalfToFloat
 HashSet
 HorizontalToVerticalFieldOfView
 IEnumerable
+Image
 Image
 Infinity
 Input
@@ -294,13 +296,17 @@ Sqrt
 Start
 Static 関数
 SubmitRenderRequest
+TMP_InputField
+TMPro
 Tan
 Text
+TextMeshProUGUI
 Texture
 Time
 ToArray
 ToList
 ToString
+Toggle
 Transform
 TransformDirection
 TransformDirections
