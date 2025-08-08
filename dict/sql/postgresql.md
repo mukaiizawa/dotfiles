@@ -133,3 +133,9 @@ PostgreSQL
 `pg_dump`に`-s`オプションを使用するとデータは対象外となるので、それを利用してDDLを出力できる。
 
     $ pg_dump -h localhost -U postgres -d <database> -s -n <schema> > ddl.sql
+
+# DBの複製
+
+    $ pg_dump -U postgres -d <database> -Fc -f dump_file.dump
+    $ createdb -U postgres <new_database>
+    $ pg_restore -U postgres -d <new_database> dump_file.dump
