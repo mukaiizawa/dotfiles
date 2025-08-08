@@ -136,6 +136,6 @@ PostgreSQL
 
 # DBの複製
 
-    $ pg_dump -U postgres -d <database> -Fc -f dump_file.dump
-    $ createdb -U postgres <new_database>
-    $ pg_restore -U postgres -d <new_database> dump_file.dump
+    $ pg_dump -h <host> -U postgres -d <database> -Fc -f dump_file.dump
+    $ createdb -h <host> -U postgres <new_database>
+    $ pg_restore -h <host> -U postgres -d <new_database> dump_file.dump
