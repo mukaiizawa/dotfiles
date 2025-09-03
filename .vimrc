@@ -10,10 +10,11 @@ if !has('gui_running')
 en
 
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
+Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'mattn/emmet-vim'
+Plug 'mukaiizawa/neoyank.vim'
 Plug 'osyo-manga/unite-quickfix'
 Plug 'thinca/vim-quickrun'
 Plug 'tpope/vim-fugitive'
@@ -174,7 +175,8 @@ call unite#custom#profile('default', 'context', {
       \   'cursor_line_time': '0.0',
       \   'cursor_line_highlight': 'Visual',
       \ })
-call unite#custom_default_action('directory', 'vimfiler')
+call unite#custom#default_action('directory', 'vimfiler')
+call unite#custom#default_action('source/history/yank', 'setreg')
 call unite#custom#source('neomru/file', 'ignore_pattern','**/dict/*.*')
 
 " NeoMRU
@@ -353,6 +355,7 @@ nn <silent>me :<C-u>Unite menu<CR>
 nn <silent>mf :<C-u>VimFilerBufferDir -create<CR>
 nn <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
 nn <silent>mk :<C-u>Unite file_mru<CR>
+nn <silent>mr :<C-u>Unite history/yank -default-action=setreg<CR>
 nn <silent>ml :<C-u>Unite line -no-wrap<CR>
 nn <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
 nn <silent>mx :<C-u>Unite quickfix<CR>
