@@ -312,6 +312,7 @@ getFileName
 getFileStore
 getFileSystem
 getHoldability
+getKey
 getLastModifiedTime
 getLowestSetBit
 getMetaData
@@ -326,6 +327,7 @@ getRoot
 getSchema
 getTransactionIsolation
 getTypeMap
+getValue
 getWarnings
 hasNext
 hasNextBigDecimal
