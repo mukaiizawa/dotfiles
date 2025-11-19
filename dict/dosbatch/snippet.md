@@ -222,3 +222,8 @@ SETXの利用には管理者権限が必要。
     if %TIME:~0,2% LEQ 12 goto end
     start xxx
     :end
+
+# UACによる権限昇格
+
+    $ powershell Start-process cmd -Verb runas
+    $ Start-process powershell -Verb runas
