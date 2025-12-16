@@ -6,5 +6,5 @@
 
 # wslが起動しない場合
 
-    $ Start-processes cmd -Verb runas
+    $ Start-process cmd -Verb runas
     $ Restart-Service -Name vmcompute,vmms -Verbose -PassThru
