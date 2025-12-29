@@ -326,6 +326,11 @@ let g:user_emmet_settings = {
       \       'main': "(function! main (args)\n  (write :hello-world))",
       \     }
       \   },
+      \   'python': {
+      \     'snippets': {
+      \       'main': "if __name__ == '__main__':|"
+      \     }
+      \   },
       \   'sql': {
       \     'snippets': {
       \       'case': "case\n  when | then expr\n  else expr\nend",
