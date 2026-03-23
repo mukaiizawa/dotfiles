@@ -1,6 +1,7 @@
 .claude/*
 !.claude/settings.json
 !.claude/statusline.sh
+!.claude/commands/
 !.claude/commands/*
 .vim/plugged/*
 wk/
