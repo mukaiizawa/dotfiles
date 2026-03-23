@@ -1,4 +1,5 @@
-.back/*
+.claude/*
+!.claude/settings.json
+!.claude/statusline.sh
 .vim/plugged/*
-tags
 wk/
