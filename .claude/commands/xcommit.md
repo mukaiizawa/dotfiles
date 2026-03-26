@@ -1,11 +1,13 @@
 Commit the current changes. Follow these steps:
 
 1. Run `git status` and `git diff` (both staged and unstaged) in parallel to understand what changed.
-2. Run `git log --oneline -5` to see the recent commit message style.
-3. Draft a concise English commit message (1-2 sentences) that summarizes the intent of the changes.
-4. Stage the relevant files by name (do NOT use `git add -A` or `git add .`). Do not stage files that contain secrets (.env, credentials, etc.).
-5. Commit with the drafted message.
-6. Run `git status` to verify the commit succeeded.
+2. If any changed files contain secrets (.env, credentials, etc.), do NOT proceed to commit. Report the files and stop.
+3. If refactoring is needed (dead code, commented-out code, unused variables/imports, etc.), perform the cleanup first but do NOT proceed to commit. Report what was cleaned up and stop so the user can verify.
+4. Stage all changed files with `git add .`.
+5. Run `git log --oneline -5` to see the recent commit message style.
+6. Draft a concise English commit message (1-2 sentences) that summarizes the intent of the changes.
+7. Commit with the drafted message.
+8. Run `git status` to verify the commit succeeded.
 
 Important:
 - Always write the commit message in English.
