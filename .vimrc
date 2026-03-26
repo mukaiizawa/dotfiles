@@ -19,7 +19,6 @@ Plug 'osyo-manga/unite-quickfix'
 Plug 'thinca/vim-quickrun'
 Plug 'tpope/vim-fugitive'
 Plug 'tyru/caw.vim'
-Plug 'tyru/open-browser.vim'
 call plug#end()
 filetype plugin indent on
 sy enable
@@ -346,13 +345,9 @@ let g:unite_quickfix_is_multiline = 0
 nm gca <Plug>(caw:dollarpos:toggle)
 nm gcc <Plug>(caw:wrap:toggle)
 nm gci <Plug>(caw:hatpos:toggle)
-nm gw  <Plug>(openbrowser-open)
-nm gww <Plug>(openbrowser-search)
 vm gca <Plug>(caw:dollarpos:toggle)
 vm gcc <Plug>(caw:wrap:toggle)
 vm gci <Plug>(caw:hatpos:toggle)
-vm gw  <Plug>(openbrowser-open)
-vm gww <Plug>(openbrowser-search)
 
 nn <silent>mb :<C-u>Unite bookmark<CR>
 nn <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
