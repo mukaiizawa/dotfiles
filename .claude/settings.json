@@ -1,5 +1,5 @@
 {
-  "model": "claude-opus-4-6",
+  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
