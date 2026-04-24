@@ -17,7 +17,6 @@ Plug 'mattn/emmet-vim'
 Plug 'mukaiizawa/neoyank.vim'
 Plug 'osyo-manga/unite-quickfix'
 Plug 'thinca/vim-quickrun'
-Plug 'tpope/vim-fugitive'
 Plug 'tyru/caw.vim'
 call plug#end()
 filetype plugin indent on
