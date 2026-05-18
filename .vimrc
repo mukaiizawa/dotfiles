@@ -154,7 +154,7 @@ vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
 vnoremap <Space>l $
-vnoremap gzc :call editor_commands#visual#Gzc()<CR>
+vnoremap gzc :<C-u>call editor_commands#visual#Gzc()<CR>
 vnoremap j gj
 vnoremap k gk
 
