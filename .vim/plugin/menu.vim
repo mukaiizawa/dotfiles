@@ -1,44 +1,44 @@
 " menu.vim
 
-fu! GetRandomElement(array)
+function! GetRandomElement(array)
     return a:array[rand() % len(a:array)]
 endfunction
 
-fu! GetStartUpList()
+function! GetStartUpList()
   let action = "Unite neomru/file -hide-source-names -no-split -no-wrap -start-insert"
   let result = []
   " banner
   let banner = readfile($HOME . '/dotfiles/startup.banner')
   for line in banner
     call add(result, [line, action])
-  endfo
+  endfor
   let logo = readfile($HOME . '/dotfiles/startup.logo')
   let win_height = &lines
   let win_width = &columns
   if has('win32') || has('win64')
     let win_height = 46
     let win_width = 230
-  en
+  endif
   let padding_top = win_height - len(banner) - len(logo) - 7
   let padding_left = repeat(" ", win_width - 50)
   while padding_top > 0
     call add(result, ["", action])
     let padding_top = padding_top - 1
-  endw
+  endwhile
   " logo
   for line in logo
     call add(result, [padding_left . line, action])
-  endfo
+  endfor
   " quote
   for line in split(GetRandomElement(readfile($HOME . '/dotfiles/startup.quotes')), "	")
     call add(result, [line, action])
   endfor
-  retu result
-endf
+  return result
+endfunction
 
 if !exists("g:unite_source_menu_menus")
   let g:unite_source_menu_menus = {}
-en
+endif
 
 let g:unite_source_menu_menus.Setting = {
       \  "command_candidates" : [
@@ -103,7 +103,7 @@ let g:unite_source_menu_menus.ShiftWidth = {
 
 let g:unite_source_menu_menus.Substitute = {
       \  "command_candidates" : [
-      \      ["Remove ", "%s///g"],
+      \      ["Remove \\r", '%s/\r//g'],
       \  ]
       \ }
 
@@ -111,14 +111,14 @@ let g:unite_source_menu_menus.StartupLogo = {
       \  "command_candidates" : GetStartUpList(),
       \ }
 
-fu! UniteStartup()
+function! UniteStartup()
   if argc() == 0 && bufnr('$') == 1 
     Unite menu:StartupLogo -hide-source-names -no-split -no-wrap -no-start-insert
-  en
-endf
+  endif
+endfunction
 
-com! UniteStartup call UniteStartup()
-aug startupMenu
-  au!
-  au VimEnter * nested :UniteStartup
-aug END
+command! UniteStartup call UniteStartup()
+augroup startupMenu
+  autocmd!
+  autocmd VimEnter * nested :UniteStartup
+augroup END

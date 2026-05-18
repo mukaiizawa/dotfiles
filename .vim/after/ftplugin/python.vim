@@ -1,3 +1,3 @@
 " python.vim
 
-setl cpt+=s~/dotfiles/word/python
+setlocal complete+=s~/dotfiles/word/python

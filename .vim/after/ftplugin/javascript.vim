@@ -1,3 +1,3 @@
 " javascript.vim
 
-setl cpt+=s~/dotfiles/word/js
+setlocal complete+=s~/dotfiles/word/js

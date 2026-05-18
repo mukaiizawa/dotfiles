@@ -1,3 +1,3 @@
 " css.vim
 
-setl cpt+=s~/dotfiles/word/css
+setlocal complete+=s~/dotfiles/word/css

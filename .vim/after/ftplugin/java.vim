@@ -1,9 +1,9 @@
 " html.vim
 
-setl cpt+=s~/dotfiles/word/java
+setlocal complete+=s~/dotfiles/word/java
 
 " add accessor
-nn <buffer> sa ^t mawv;"ty;wve"nyG{o
+nnoremap <buffer> sa ^t mawv;"ty;wve"nyG{o
       \ public <C-r>t get<C-r>n<ESC>,3l~A() {<CR>
       \   return this.<C-r>n;<CR>
       \ }<CR><Esc>{=ap}o

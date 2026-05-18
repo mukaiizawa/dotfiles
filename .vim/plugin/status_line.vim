@@ -1,27 +1,27 @@
 " status_line.vim
 
-fu! status_line#ff()
+function! status_line#ff()
   if &fileformat == 'unix'
-    retu 'LF'
-  elsei &fileformat == 'dos'
-    retu 'CRLF'
-  el
-    retu 'CR'
-  en
-endf
+    return 'LF'
+  elseif &fileformat == 'dos'
+    return 'CRLF'
+  else
+    return 'CR'
+  endif
+endfunction
 
-fu! status_line#fenc()
+function! status_line#fenc()
   let val = &fenc
   if (exists('+bomb') && &bomb)
     let val = val . '+BOM'
-  en
-  retu val
-endf
+  endif
+  return val
+endfunction
 
-fu! status_line#row()
-  retu join([line('.'), line('$')], '/')
-endf
+function! status_line#row()
+  return join([line('.'), line('$')], '/')
+endfunction
 
-fu! status_line#col()
-  retu join([col('.'), col('$')], '/')
-endf
+function! status_line#col()
+  return join([col('.'), col('$')], '/')
+endfunction

@@ -1,8 +1,8 @@
 " surround.vim
 
-fu! s:SurroundWith(leftPart, rightPart, currentLine)
+function! s:SurroundWith(leftPart, rightPart, currentLine)
   " move the first non-blank character of the line.
-  exe ':normal ^'
+  execute ':normal ^'
   " removed blanc of current line.
   let s:targetString = getline(a:currentLine)[col('.') - 1 : ]
   let s:substIndex = stridx(s:targetString, a:leftPart)
@@ -15,22 +15,22 @@ fu! s:SurroundWith(leftPart, rightPart, currentLine)
       while s:substIndex != -1
         let s:copyOfTargetString = s:copyOfTargetString[s:substIndex + 1: ]
         let s:substIndex = stridx(s:copyOfTargetString, a:rightPart)
-      endw
+      endwhile
       let s:outputLine = s:targetString[ : s:substIndex - strlen(a:rightPart)]
     else
       " case of empty rightPart.
       let s:outputLine = s:targetString
-    en
+    endif
   else
     " surround print string!
     let s:outputLine = a:leftPart . s:targetString . a:rightPart
-  en
+  endif
   " write and indent
   call setline(a:currentLine, s:outputLine)
-  exe ':normal == '
-endf
+  execute ':normal == '
+endfunction
 
-fu! PutPrintFunction() range
+function! PutPrintFunction() range
   let s:filetype = &filetype
   let s:printDic = {
         \   'c'          : ['printf("%d\n", ' , ');'],
@@ -54,15 +54,15 @@ fu! PutPrintFunction() range
         \ }
   if has_key(s:printDic, s:filetype ) != 1    " is this file type supported?
     echo "This file type isn't supported."
-    retu
+    return
   else
     let s:leftPart = (s:printDic[s:filetype])[0]
     let s:rightPart = (s:printDic[s:filetype])[1]
     " surround each line
     for n in range(a:firstline, a:lastline)
       call s:SurroundWith(s:leftPart, s:rightPart, n)
-    endfo
-  en
-endf
+    endfor
+  endif
+endfunction
 
-com! -range PutPrintFunction <line1>, <line2>call PutPrintFunction()
+command! -range PutPrintFunction <line1>, <line2>call PutPrintFunction()

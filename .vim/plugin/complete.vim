@@ -5,26 +5,26 @@ let s:unite_source = {
       \   "default_action" : "vsplit",
       \ }
 
-fu! s:FuzzyFileType(fileType)
+function! s:FuzzyFileType(fileType)
   if a:fileType =~ '\(html\|htm\|xhtml\|jsp\|css\|javascript\)'
-    retu 'web'
-  elsei a:fileType =~ '.git.*'
-    retu 'git'
-  elsei a:fileType == 'cpp'
-    retu 'c'
-  el
-    retu a:fileType
-  en
-endf
+    return 'web'
+  elseif a:fileType =~ '.git.*'
+    return 'git'
+  elseif a:fileType == 'cpp'
+    return 'c'
+  else
+    return a:fileType
+  endif
+endfunction
 
-fu! s:unite_source.gather_candidates(args, context)
+function! s:unite_source.gather_candidates(args, context)
   let s:fileType = &ft
   let s:root = $HOME . '/dotfiles/dict/'
   let s:path = s:root . s:FuzzyFileType(s:fileType) . '/index.csv'
   if !filereadable(s:path)
-    exe 'VimFiler' s:root . '/etc'
-    retu []
-  en
+    execute 'VimFiler' s:root . '/etc'
+    return []
+  endif
   let s:result = []
   let s:lines = readfile(s:path)
   for s:line in s:lines
@@ -36,9 +36,9 @@ fu! s:unite_source.gather_candidates(args, context)
           \   'action__path' : split(s:line, '	')[1],
           \   'action__line' :1,
           \ })
-  endfo
-  retu s:result
-endf
+  endfor
+  return s:result
+endfunction
 
 call unite#define_source(s:unite_source)
-unl s:unite_source
+unlet s:unite_source

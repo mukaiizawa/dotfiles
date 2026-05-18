@@ -1,5 +1,5 @@
 " editor commands inor map.
 
-fu! ec#ino#ctrl_d()
-  exe ":normal a" . strftime("%Y-%m-%d")
-endf
+function! ec#ino#ctrl_d()
+  execute ":normal a" . strftime("%Y-%m-%d")
+endfunction

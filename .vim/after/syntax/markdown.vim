@@ -1,8 +1,8 @@
 " markdown.vim
 
-hi def link markdownItalic              NONE
-hi def link markdownItalicDelimiter     NONE
-hi def link markdownBold                NONE
-hi def link markdownBoldDelimiter       NONE
-hi def link markdownBoldItalic          NONE
-hi def link markdownBoldItalicDelimiter NONE
+highlight def link markdownItalic              NONE
+highlight def link markdownItalicDelimiter     NONE
+highlight def link markdownBold                NONE
+highlight def link markdownBoldDelimiter       NONE
+highlight def link markdownBoldItalic          NONE
+highlight def link markdownBoldItalicDelimiter NONE

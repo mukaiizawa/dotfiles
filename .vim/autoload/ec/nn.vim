@@ -1,17 +1,17 @@
 " editor commands nnore map.
 
-fu! ec#nn#h()
+function! ec#nn#h()
   if &wrap
-    norm g0
-  el
-    norm 0
-  en
-endf
+    normal g0
+  else
+    normal 0
+  endif
+endfunction
 
-fu! ec#nn#l()
+function! ec#nn#l()
   if &wrap
-    norm g$
-  el
-    norm $
-  en
-endf
+    normal g$
+  else
+    normal $
+  endif
+endfunction

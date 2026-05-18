@@ -90,7 +90,7 @@ endif
 let g:loaded_plug = 1
 
 let s:cpo_save = &cpo
-set cpo&vim
+set cpoptions&vim
 
 let s:plug_src = 'https://github.com/junegunn/vim-plug.git'
 let s:plug_tab = get(s:, 'plug_tab', -1)
@@ -524,7 +524,7 @@ endif
 
 function! s:err(msg)
   echohl ErrorMsg
-  echom '[vim-plug] '.a:msg
+  echomsg '[vim-plug] '.a:msg
   echohl None
 endfunction
 
@@ -801,53 +801,53 @@ function! s:syntax()
   syntax clear
   syntax region plug1 start=/\%1l/ end=/\%2l/ contains=plugNumber
   syntax region plug2 start=/\%2l/ end=/\%3l/ contains=plugBracket,plugX
-  syn match plugNumber /[0-9]\+[0-9.]*/ contained
-  syn match plugBracket /[[\]]/ contained
-  syn match plugX /x/ contained
-  syn match plugDash /^-\{1}\ /
-  syn match plugPlus /^+/
-  syn match plugStar /^*/
-  syn match plugMessage /\(^- \)\@<=.*/
-  syn match plugName /\(^- \)\@<=[^ ]*:/
-  syn match plugSha /\%(: \)\@<=[0-9a-f]\{4,}$/
-  syn match plugTag /(tag: [^)]\+)/
-  syn match plugInstall /\(^+ \)\@<=[^:]*/
-  syn match plugUpdate /\(^* \)\@<=[^:]*/
-  syn match plugCommit /^  \X*[0-9a-f]\{7,9} .*/ contains=plugRelDate,plugEdge,plugTag
-  syn match plugEdge /^  \X\+$/
-  syn match plugEdge /^  \X*/ contained nextgroup=plugSha
-  syn match plugSha /[0-9a-f]\{7,9}/ contained
-  syn match plugRelDate /([^)]*)$/ contained
-  syn match plugNotLoaded /(not loaded)$/
-  syn match plugError /^x.*/
-  syn region plugDeleted start=/^\~ .*/ end=/^\ze\S/
-  syn match plugH2 /^.*:\n-\+$/
-  syn match plugH2 /^-\{2,}/
-  syn keyword Function PlugInstall PlugStatus PlugUpdate PlugClean
-  hi def link plug1       Title
-  hi def link plug2       Repeat
-  hi def link plugH2      Type
-  hi def link plugX       Exception
-  hi def link plugBracket Structure
-  hi def link plugNumber  Number
+  syntax match plugNumber /[0-9]\+[0-9.]*/ contained
+  syntax match plugBracket /[[\]]/ contained
+  syntax match plugX /x/ contained
+  syntax match plugDash /^-\{1}\ /
+  syntax match plugPlus /^+/
+  syntax match plugStar /^*/
+  syntax match plugMessage /\(^- \)\@<=.*/
+  syntax match plugName /\(^- \)\@<=[^ ]*:/
+  syntax match plugSha /\%(: \)\@<=[0-9a-f]\{4,}$/
+  syntax match plugTag /(tag: [^)]\+)/
+  syntax match plugInstall /\(^+ \)\@<=[^:]*/
+  syntax match plugUpdate /\(^* \)\@<=[^:]*/
+  syntax match plugCommit /^  \X*[0-9a-f]\{7,9} .*/ contains=plugRelDate,plugEdge,plugTag
+  syntax match plugEdge /^  \X\+$/
+  syntax match plugEdge /^  \X*/ contained nextgroup=plugSha
+  syntax match plugSha /[0-9a-f]\{7,9}/ contained
+  syntax match plugRelDate /([^)]*)$/ contained
+  syntax match plugNotLoaded /(not loaded)$/
+  syntax match plugError /^x.*/
+  syntax region plugDeleted start=/^\~ .*/ end=/^\ze\S/
+  syntax match plugH2 /^.*:\n-\+$/
+  syntax match plugH2 /^-\{2,}/
+  syntax keyword Function PlugInstall PlugStatus PlugUpdate PlugClean
+  highlight def link plug1       Title
+  highlight def link plug2       Repeat
+  highlight def link plugH2      Type
+  highlight def link plugX       Exception
+  highlight def link plugBracket Structure
+  highlight def link plugNumber  Number
 
-  hi def link plugDash    Special
-  hi def link plugPlus    Constant
-  hi def link plugStar    Boolean
+  highlight def link plugDash    Special
+  highlight def link plugPlus    Constant
+  highlight def link plugStar    Boolean
 
-  hi def link plugMessage Function
-  hi def link plugName    Label
-  hi def link plugInstall Function
-  hi def link plugUpdate  Type
+  highlight def link plugMessage Function
+  highlight def link plugName    Label
+  highlight def link plugInstall Function
+  highlight def link plugUpdate  Type
 
-  hi def link plugError   Error
-  hi def link plugDeleted Ignore
-  hi def link plugRelDate Comment
-  hi def link plugEdge    PreProc
-  hi def link plugSha     Identifier
-  hi def link plugTag     Constant
+  highlight def link plugError   Error
+  highlight def link plugDeleted Ignore
+  highlight def link plugRelDate Comment
+  highlight def link plugEdge    PreProc
+  highlight def link plugSha     Identifier
+  highlight def link plugTag     Constant
 
-  hi def link plugNotLoaded Comment
+  highlight def link plugNotLoaded Comment
 endfunction
 
 function! s:lpad(str, len)
@@ -951,7 +951,7 @@ function! s:prepare(...)
   if exists('+colorcolumn')
     setlocal colorcolumn=
   endif
-  setf vim-plug
+  setfiletype vim-plug
   if exists('g:syntax_on')
     call s:syntax()
   endif
@@ -1222,7 +1222,7 @@ function! s:update_impl(pull, force, args) abort
     try
       let imd = &imd
       if s:mac_gui
-        set noimd
+        set noimdisable
       endif
       if ruby
         call s:update_ruby()
@@ -1821,7 +1821,7 @@ class Plugin(object):
     cmd = 'git clone {0} {1} {2} {3} 2>&1'.format(
           '' if self.tag else G_CLONE_OPT, G_PROGRESS, self.args['uri'],
           esc(target))
-    com = Command(cmd, None, G_TIMEOUT, callback, clean(target))
+    command = Command(cmd, None, G_TIMEOUT, callback, clean(target))
     result = com.execute(G_RETRIES)
     self.write(Action.DONE, self.name, result[-1:])
 
@@ -1849,7 +1849,7 @@ class Plugin(object):
       callback = functools.partial(self.write, Action.UPDATE, self.name)
       fetch_opt = '--depth 99999999' if self.tag and os.path.isfile(os.path.join(self.args['dir'], '.git/shallow')) else ''
       cmd = 'git fetch {0} {1} 2>&1'.format(fetch_opt, G_PROGRESS)
-      com = Command(cmd, self.args['dir'], G_TIMEOUT, callback)
+      command = Command(cmd, self.args['dir'], G_TIMEOUT, callback)
       result = com.execute(G_RETRIES)
       self.write(Action.DONE, self.name, result[-1:])
     else:
@@ -2741,7 +2741,7 @@ endfunction
 
 function! s:snapshot(force, ...) abort
   call s:prepare()
-  setf vim
+  setfiletype vim
   call append(0, ['" Generated by vim-plug',
                 \ '" '.strftime("%c"),
                 \ '" :source this file in vim to restore the snapshot',
@@ -2767,7 +2767,7 @@ function! s:snapshot(force, ...) abort
     call writefile(getline(1, '$'), fn)
     echo 'Saved as '.a:1
     silent execute 'e' s:esc(fn)
-    setf vim
+    setfiletype vim
   endif
 endfunction
 

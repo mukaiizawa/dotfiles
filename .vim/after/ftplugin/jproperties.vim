@@ -1,5 +1,5 @@
 " jproperties.vim
 
 if has('win32') || has ('win64')
-  setl fenc=cp932
-en
+  setlocal fileencoding=cp932
+endif

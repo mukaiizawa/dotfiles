@@ -1,3 +1,3 @@
 " jsp.vim
 
-setl sw=4
+setlocal shiftwidth=4

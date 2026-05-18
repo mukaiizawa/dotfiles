@@ -1,4 +1,4 @@
 " dosbatch.vim
 
-setl fenc=cp932
-setl ff=dos
+setlocal fileencoding=cp932
+setlocal fileformat=dos

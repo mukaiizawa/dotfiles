@@ -1,6 +1,6 @@
 " html.vim
 
-hi def link htmlBoldItalic NONE
-hi def link htmlBoldUnderlineItalic NONE
-hi def link htmlItalic NONE
-hi def link htmlUnderlineItalic NONE
+highlight def link htmlBoldItalic NONE
+highlight def link htmlBoldUnderlineItalic NONE
+highlight def link htmlItalic NONE
+highlight def link htmlUnderlineItalic NONE
