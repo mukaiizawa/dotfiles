@@ -59,7 +59,7 @@ set smartindent
 set showmatch
 set splitright
 set showtabline=2
-set statusline=%F%#Exception#%m%r%##\ %=\ %{&ft}\ %{status_line#fenc()}\ %{status_line#ff()}\ [%{status_line#row()},\ %{status_line#col()}]
+set statusline=%!status_line#Build()
 set shiftwidth=2
 set tabline=%t
 set title
