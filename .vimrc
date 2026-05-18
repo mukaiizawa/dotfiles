@@ -69,7 +69,7 @@ set viminfo=
 set wildmenu
 set wrapscan
 
-inoremap <C-d> <Esc>:call ec#ino#ctrl_d()<CR>
+inoremap <C-d> <Esc>:call editor_commands#insert#CtrlD()<CR>
 inoremap <C-l> <C-n>
 inoremap <Tab> <C-v><Tab>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
@@ -94,8 +94,8 @@ nnoremap <Space> <NOP>
 nnoremap <Space><Space> zz
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
-nnoremap <silent><Space>h :call ec#nn#h()<CR>
-nnoremap <silent><Space>l :call ec#nn#l()<CR>
+nnoremap <silent><Space>h :call editor_commands#normal#H()<CR>
+nnoremap <silent><Space>l :call editor_commands#normal#L()<CR>
 nnoremap <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
 nnoremap <silent><Space>w :set wrap!<CR>
 nnoremap <silent>mm :e #<CR>
@@ -154,7 +154,7 @@ vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
 vnoremap <Space>l $
-vnoremap gzc :call ec#vn#gzc()<CR>
+vnoremap gzc :call editor_commands#visual#Gzc()<CR>
 vnoremap j gj
 vnoremap k gk
 
