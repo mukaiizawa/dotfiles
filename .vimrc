@@ -370,12 +370,12 @@ nnoremap sp :<C-u>DebugPrint<CR>
 vnoremap sp :DebugPrint<CR>
 
 # autocmd
-command! UniteStartup UniteStartup()
 augroup vimrc
   autocmd!
   autocmd TerminalOpen * setlocal nonumber
 augroup END
 
+command! UniteStartup UniteStartup()
 augroup startupMenu
   autocmd!
   autocmd VimEnter * ++nested UniteStartup
