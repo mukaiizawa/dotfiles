@@ -1,4 +1,4 @@
-" .gvimrc
+vim9script
 
 set guioptions-=m
 set guioptions-=T
@@ -17,7 +17,7 @@ set mouse-=a
 set nomousefocus
 set mousehide
 
-if has('win32') || has ('win64')
+if has('win32') || has('win64')
   autocmd GUIEnter * simalt ~x
   set guifont=Iosevka_Fixed_Slab_Medium:h12,Consolas:h12,MS_Gothic:h12
   set linespace=1
