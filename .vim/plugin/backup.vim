@@ -1,38 +1,49 @@
-" backup.vim
+vim9script
 
-let s:backupRootDir = $HOME . '/.back/'
-let s:expired = 60 * 60 * 24 * 8
+var backupRootDir = $HOME .. '/.back/'
+var expired = 60 * 60 * 24 * 8
 
-function! s:isBackupEnable()
+def IsBackupEnable(): bool
   return exists('*strftime') && exists('*mkdir')
-endfunction
+enddef
 
-function! MakeBackup()
-  if !s:isBackupEnable() | return | endif
-  let fname = expand('%')
-  if !filereadable(fname) || !filewritable(fname) | return | endif    " new file
-  let backupDir = s:backupRootDir . strftime('%Y-%m-%d') . '/'
-  if !isdirectory(backupDir) | call mkdir(backupDir , 'p') | endif
-  call writefile(readfile(fname, 'b'), backupDir . expand('%:t') . '.' .
-        \ localtime(), 'b')
-endfunction
+def MakeBackup()
+  if !IsBackupEnable()
+    return
+  endif
+  var fname = expand('%')
+  if !filereadable(fname) || !filewritable(fname)
+    return
+  endif
+  var backupDir = backupRootDir .. strftime('%Y-%m-%d') .. '/'
+  if !isdirectory(backupDir)
+    mkdir(backupDir, 'p')
+  endif
+  writefile(
+    readfile(fname, 'b'),
+    backupDir .. expand('%:t') .. '.' .. localtime(),
+    'b'
+  )
+enddef
 
-function! RemoveBackup()
-  if !s:isBackupEnable() | return | endif
-  let now = localtime()
-  let backupDirs = split(glob(s:backupRootDir . '*'), "\n")
+def RemoveBackup()
+  if !IsBackupEnable()
+    return
+  endif
+  var now = localtime()
+  var backupDirs = split(glob(backupRootDir .. '*'), "\n")
   for backupDir in backupDirs
-    if getftime(backupDir) < now - s:expired
-      call delete(backupDir, 'rf')
+    if getftime(backupDir) < now - expired
+      delete(backupDir, 'rf')
     endif
   endfor
-endfunction
+enddef
 
-command! MakeBackup call MakeBackup()
-command! RemoveBackup call RemoveBackup()
+command! MakeBackup call <SID>MakeBackup()
+command! RemoveBackup call <SID>RemoveBackup()
 
 augroup backup
   autocmd!
-  autocmd BufWritePre * nested :MakeBackup
-  autocmd VimLeave * nested :RemoveBackup
+  autocmd BufWritePre * MakeBackup
+  autocmd VimLeave * RemoveBackup
 augroup END
