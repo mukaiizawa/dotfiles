@@ -14,6 +14,7 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'mattn/emmet-vim'
+Plug 'mukaiizawa/neorepo.vim'
 Plug 'mukaiizawa/neoyank.vim'
 Plug 'osyo-manga/unite-quickfix'
 Plug 'thinca/vim-quickrun'
@@ -355,7 +356,7 @@ vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 vmap gci <Plug>(caw:hatpos:toggle)
 
-nnoremap <silent>mb :<C-u>Unite bookmark<CR>
+nnoremap <silent>mb :<C-u>Unite neorepo<CR>
 nnoremap <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
 nnoremap <silent>me :<C-u>Unite menu<CR> 
 nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
