@@ -10,16 +10,11 @@ if !has('gui_running')
 endif
 
 plug#begin('~/.vim/plugged')
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'mattn/emmet-vim'
-Plug 'mukaiizawa/neorepo.vim'
-Plug 'mukaiizawa/neoyank.vim'
-Plug 'osyo-manga/unite-quickfix'
 Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
 plug#end()
+set runtimepath^=~/.vim/plugged/vim9-unite
 filetype plugin indent on
 syntax enable
 
@@ -159,61 +154,6 @@ vnoremap gzc :<C-u>call editor_commands#visual#Gzc()<CR>
 vnoremap j gj
 vnoremap k gk
 
-# unite
-g:html_number_lines = 0
-g:unite_no_default_keymappings = 1
-g:unite_source_rec_min_cache_files = 100
-g:unite_source_rec_max_cache_files = 200
-unite#custom#profile('default', 'context', {
-  'start_insert': 1,
-  'no_wrap': 1,
-  'prompt': '> ',
-  'marked_icon': '@',
-  'candidate_icon': '*',
-  'direction': 'topleft',
-  'cursor_line_time': '0.0',
-  'cursor_line_highlight': 'Visual',
-})
-unite#custom#default_action('directory', 'vimfiler')
-unite#custom#default_action('source/history/yank', 'setreg')
-unite#custom#source('neomru/file', 'ignore_pattern', '**/dict/*.*')
-unite_menu#Setup()
-
-def UniteStartup()
-  if argc() == 0 && bufnr('$') == 1
-    execute 'Unite startup_logo -hide-source-names -no-split -no-wrap -no-start-insert'
-  endif
-enddef
-
-# NeoMRU
-g:neomru#file_mru_limit = 5000
-g:neomru#file_mru_ignore_pattern = '\~$' ..
-      \ '\|^\%(http[s]\|file\|quickrun\):' ..
-      \ '\|^\%(//\|\\\\\)' ..
-      \ '\|\.\%(o\|exe\|dll\|bak\|zwc\|pyc\|sw\)$'
-g:neomru#directory_mru_limit = 500
-g:neomru#directory_mru_ignore_pattern = ''
-
-# vimfiler
-g:loaded_netrwPlugin = 1
-g:vimfiler_as_default_explorer = 1
-g:vimfiler_ignore_pattern = ''
-g:vimfiler_directory_display_top = 1
-g:vimfiler_tree_leaf_icon = '|'
-g:vimfiler_tree_opened_icon = '-'
-g:vimfiler_tree_closed_icon = '+'
-g:vimfiler_file_icon = ' '
-g:vimfiler_readonly_file_icon = 'X'
-g:vimfiler_marked_file_icon = '*'
-g:vimfiler_tree_indentation = 1
-vimfiler#custom#profile('default', 'context', {
-  'safe': 0,
-  'auto-expand': 1,
-  'auto-cd': 1,
-  'find': 1,
-  'status': 1,
-})
-
 # quickrun
 g:quickrun_no_default_key_mappings = 1
 g:quickrun_config = {
@@ -344,10 +284,6 @@ g:user_emmet_settings = {
   },
 }
 
-# quickfix
-g:unite_quickfix_filename_is_pathshorten = 0
-g:unite_quickfix_is_multiline = 0
-
 # plugin mapping
 nmap gca <Plug>(caw:dollarpos:toggle)
 nmap gcc <Plug>(caw:wrap:toggle)
@@ -356,16 +292,7 @@ vmap gca <Plug>(caw:dollarpos:toggle)
 vmap gcc <Plug>(caw:wrap:toggle)
 vmap gci <Plug>(caw:hatpos:toggle)
 
-nnoremap <silent>mb :<C-u>Unite neorepo<CR>
-nnoremap <silent>md :<C-u>NeoMRUReload<CR>:Unite directory_mru<CR>
-nnoremap <silent>me :<C-u>Unite menu<CR> 
-nnoremap <silent>mf :<C-u>VimFilerBufferDir -create<CR>
-nnoremap <silent>mh :<C-u>Unite help -no-wrap -no-empty -horizontal<CR>
-nnoremap <silent>mk :<C-u>Unite file_mru<CR>
-nnoremap <silent>mr :<C-u>Unite history/yank -default-action=setreg<CR>
-nnoremap <silent>ml :<C-u>Unite line -no-wrap<CR>
 nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
-nnoremap <silent>mx :<C-u>Unite quickfix<CR>
 
 nnoremap sp :<C-u>DebugPrint<CR>
 vnoremap sp :DebugPrint<CR>
@@ -374,10 +301,4 @@ vnoremap sp :DebugPrint<CR>
 augroup vimrc
   autocmd!
   autocmd TerminalOpen * setlocal nonumber
-augroup END
-
-command! UniteStartup UniteStartup()
-augroup startupMenu
-  autocmd!
-  autocmd VimEnter * ++nested UniteStartup
 augroup END
