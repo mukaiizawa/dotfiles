@@ -11,10 +11,11 @@ endif
 
 plug#begin('~/.vim/plugged')
 Plug 'mattn/emmet-vim'
+Plug 'mukaiizawa/vim9-filer'
+Plug 'mukaiizawa/vim9-unite'
 Plug 'thinca/vim-quickrun'
 Plug 'tyru/caw.vim'
 plug#end()
-set runtimepath^=~/.vim/plugged/vim9-unite
 filetype plugin indent on
 syntax enable
 
@@ -293,6 +294,17 @@ vmap gcc <Plug>(caw:wrap:toggle)
 vmap gci <Plug>(caw:hatpos:toggle)
 
 nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
+
+nnoremap <silent>mb :<C-u>Unite repo<CR>
+nnoremap <silent>md :<C-u>Unite dir<CR>
+nnoremap <silent>me :<C-u>Unite menu<CR>
+nnoremap <silent>mh :<C-u>Unite help<CR>
+nnoremap <silent>mk :<C-u>Unite file<CR>
+nnoremap <silent>ml :<C-u>Unite line<CR>
+nnoremap <silent>mr :<C-u>Unite yank<CR>
+nnoremap <silent>mx :<C-u>Unite quickfix<CR>
+
+nnoremap <silent>mf :<C-u>FilerBufferDir<CR>
 
 nnoremap sp :<C-u>DebugPrint<CR>
 vnoremap sp :DebugPrint<CR>
