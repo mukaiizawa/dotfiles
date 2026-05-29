@@ -66,43 +66,14 @@ set viminfo=
 set wildmenu
 set wrapscan
 
-inoremap <C-d> <Esc>:call editor_commands#insert#CtrlD()<CR>
-inoremap <C-l> <C-n>
-inoremap <Tab> <C-v><Tab>
-inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
-
-nnoremap ( {
-nnoremap ) }
-nnoremap <C-Insert> "*y
 nnoremap <C-d> <NOP>
 nnoremap <C-e> <NOP>
 nnoremap <C-u> <NOP>
 nnoremap <C-y> <NOP>
 nnoremap <Del> <NOP>
-nnoremap <F1> :windo diffthis<CR>
-nnoremap <F2> :windo diffoff!<CR>
-nnoremap <F3> :<C-u>e $MYVIMRC<CR>
-nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
-nnoremap <F5> :<C-u>source $MYVIMRC<CR>
-nnoremap <F6> :<C-u>source $MYGVIMRC<CR>
 nnoremap <Insert> <NOP>
-nnoremap <S-Insert> "*p
 nnoremap <Space> <NOP>
-nnoremap <Space><Space> zz
-nnoremap <Space>j Lzz
-nnoremap <Space>k Hzz
-nnoremap <silent><Space>h :call editor_commands#normal#H()<CR>
-nnoremap <silent><Space>l :call editor_commands#normal#L()<CR>
-nnoremap <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
-nnoremap <silent><Space>w :set wrap!<CR>
-nnoremap <silent>mm :e #<CR>
-nnoremap <silent>sq :<C-u>q<CR>
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
 nnoremap Q <NOP>
-nnoremap U  <C-r>
-nnoremap Y y$
 nnoremap ZZ <NOP>
 nnoremap ch <NOP>
 nnoremap cj <NOP>
@@ -112,12 +83,47 @@ nnoremap dh <NOP>
 nnoremap dj <NOP>
 nnoremap dk <NOP>
 nnoremap dl <NOP>
+nnoremap s  <NOP>
+
+nnoremap # #zz
+nnoremap ( {
+nnoremap ) }
+nnoremap * *zz
+nnoremap <C-Insert> "*y
+nnoremap <F1> :windo diffthis<CR>
+nnoremap <F2> :windo diffoff!<CR>
+nnoremap <F3> :<C-u>e $MYVIMRC<CR>
+nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
+nnoremap <F5> :<C-u>source $MYVIMRC<CR>
+nnoremap <F6> :<C-u>source $MYGVIMRC<CR>
+nnoremap <S-Insert> "*p
+nnoremap <Space><Space> zz
+nnoremap <Space>j Lzz
+nnoremap <Space>k Hzz
+nnoremap <silent><Space>f :<C-u>FilerBufferDir<CR>
+nnoremap <expr> <silent><Space>h &wrap ? 'g0' : '0'
+nnoremap <expr> <silent><Space>l &wrap ? 'g$' : '$'
+nnoremap <silent><Space>s :lcd %:h<CR>:vs<CR>:terminal ++curwin<CR>
+nnoremap <silent><Space>w :set wrap!<CR>
+nnoremap <silent>md :<C-u>Unite dir<CR>
+nnoremap <silent>mf :<C-u>Unite file<CR>
+nnoremap <silent>mh :<C-u>Unite help<CR>
+nnoremap <silent>ml :<C-u>Unite line<CR>
+nnoremap <silent>mm :<C-u>Unite menu<CR>
+nnoremap <silent>mq :<C-u>Unite quickfix<CR>
+nnoremap <silent>mr :<C-u>Unite repo<CR>
+nnoremap <silent>mx :<C-u>lcd %:h<CR> :QuickRun<CR>
+nnoremap <silent>my :<C-u>Unite yank<CR>
+nnoremap <silent>sq :<C-u>q<CR>
+nnoremap N Nzz
+nnoremap U  <C-r>
+nnoremap Y y$
 nnoremap gcd  :<C-u>lcd %:h<CR>:pwd<CR>
 nnoremap gf :vs<CR>gF
 nnoremap j gj
 nnoremap k gk
 nnoremap n nzz
-nnoremap s  <NOP>
+nnoremap sb :e #<CR>
 nnoremap sd" f"x,x
 nnoremap sd' f'x,x
 nnoremap sd( f)xF(x
@@ -134,13 +140,12 @@ nnoremap sh <C-w>h
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
+nnoremap sp :<C-u>DebugPrint<CR>
 nnoremap sr <C-w>r
 nnoremap ss <C-w>s
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sv <C-w>v
 nnoremap zc zM
-
-tnoremap <Esc> <C-w>N
 
 vnoremap ( {
 vnoremap ) }
@@ -151,163 +156,17 @@ vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
 vnoremap <Space>l $
-vnoremap gzc :<C-u>call editor_commands#visual#Gzc()<CR>
+vnoremap gzc :<C-u>call folds#InsertMarkersForSelection()<CR>
 vnoremap j gj
 vnoremap k gk
-
-# quickrun
-g:quickrun_no_default_key_mappings = 1
-g:quickrun_config = {
-  '_': {
-    'split': 'vertical',
-    'outputter/buffer/close_on_empty': 1,
-  },
-  'c': {
-    'hook/time/enable': 1,
-    'type': executable('clang') ? 'c/clang' :
-            executable('gcc') ? 'c/gcc' : '',
-  },
-  'cs': {
-    'runmode': 'simple',
-    'command': 'csc',
-    'exec': [
-      '%c /nologo %s > nul',
-      '%s:p:r.exe %a',
-      ':call delete("%S:p:r.exe")',
-    ],
-    'tempfile': '{tempname()}.cs',
-  },
-  'java': {
-    'exec': [
-      'javac -J-Dfile.encoding=UTF8 %o %s',
-      '%c -ea -Dfile.encoding=UTF8 %s:t:r %a',
-    ],
-    'hook/time/enable': 1,
-  },
-  'javascript': {
-    'command': 'cscript',
-    'exec': '%c %s',
-  },
-  'lisp': {
-    'type': executable('sbcl') ? 'lisp/sbcl' :
-            executable('lx86cl64') ? 'lisp/ccll' :
-            executable('wx86cl64') ? 'lisp/cclw' :
-            executable('clisp') ? 'lisp/clisp' : '',
-    'hook/time/enable': 1,
-  },
-  'lisp/sbcl': {
-    'command': 'sbcl',
-    'exec': '%c --noinform --non-interactive --load %s',
-  },
-  'lisp/ccll': {
-    'command': 'lx86cl64',
-    'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
-  },
-  'lisp/cclw': {
-    'command': 'wx86cl64',
-    'exec': '%c -K utf8 -l %s -e "(ccl:quit)"',
-  },
-  'lisp/clisp': {
-    'command': 'clisp',
-  },
-  'markdown': {
-    'command': 'paren',
-    'input': '%{expand("%:p")}',
-    'outputter': 'file',
-    'outputter/file/name': '%{expand("%:r")}.html',
-    'exec': '%c md2html.p',
-  },
-  'paren': {
-    'command': 'paren',
-    'exec': '%c %s',
-  },
-}
-
-# caw
-g:caw_no_default_keymappings = 1
-
-# emmet
-g:user_emmet_settings = {
-  'variables': {
-    'lang': 'ja',
-  },
-  'html': {
-    'indentation': '    ',
-    'quote_char': "'",
-    'expandos': {
-      'ol': 'ol>li',
-      'ul': 'ul>li',
-      'table': 'table>thead>tr>th*3^^tbody>tr>td*3',
-    },
-    'default_attributes': {
-      'a': {'href': ''},
-    },
-  },
-  'java': {
-    'snippets': {
-      '!': "public static void main(String[] args) {\n\t|\n}",
-      'class': "public class | {\n}",
-      'main': "public static void main(String[] args) {\n\t|\n}",
-      'if': "if (|) {\n}",
-      'fori': "for (int i = 0; i < |; i++) {\n}",
-      'forj': "for (int j = 0; j < |; j++) {\n}",
-      'fork': "for (int k = 0; k < |; k++) {\n}",
-      'while': "while (|) {\n}",
-      'switch': "switch (|) {\n\tcase xxx:\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}",
-    },
-  },
-  'jsp': {
-    'expandos': {
-      'c:choose': 'c:choose>c:when,c:otherwise',
-    },
-    'default_attributes': {
-      'c:forEach': [{'var': ''}, {'items': '${|}'}, {'varStatus': 'status'}],
-      'c:if': {'test': '${|}'},
-      'c:out': {'value': '${|}'},
-      'c:set': [{'var': ''}, {'value': '${|}'}],
-      'c:when': {'test': '${|}'},
-    },
-  },
-  'paren': {
-    'snippets': {
-      'main': "(function! main (args)\n  (write :hello-world))",
-    },
-  },
-  'python': {
-    'snippets': {
-      'main': "if __name__ == '__main__':|",
-    },
-  },
-  'sql': {
-    'snippets': {
-      'case': "case\n  when | then expr\n  else expr\nend",
-    },
-  },
-}
-
-# plugin mapping
-nmap gca <Plug>(caw:dollarpos:toggle)
-nmap gcc <Plug>(caw:wrap:toggle)
-nmap gci <Plug>(caw:hatpos:toggle)
-vmap gca <Plug>(caw:dollarpos:toggle)
-vmap gcc <Plug>(caw:wrap:toggle)
-vmap gci <Plug>(caw:hatpos:toggle)
-
-nnoremap <silent>mq :<C-u>lcd %:h<CR> :QuickRun<CR>
-
-nnoremap <silent>mb :<C-u>Unite repo<CR>
-nnoremap <silent>md :<C-u>Unite dir<CR>
-nnoremap <silent>me :<C-u>Unite menu<CR>
-nnoremap <silent>mh :<C-u>Unite help<CR>
-nnoremap <silent>mk :<C-u>Unite file<CR>
-nnoremap <silent>ml :<C-u>Unite line<CR>
-nnoremap <silent>mr :<C-u>Unite yank<CR>
-nnoremap <silent>mx :<C-u>Unite quickfix<CR>
-
-nnoremap <silent>mf :<C-u>FilerBufferDir<CR>
-
-nnoremap sp :<C-u>DebugPrint<CR>
 vnoremap sp :DebugPrint<CR>
+
+inoremap <C-d> <C-r>=strftime('%Y-%m-%d')<CR>
+inoremap <C-l> <C-n>
+inoremap <Tab> <C-v><Tab>
+inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
+
+tnoremap <Esc> <C-w>N
 
 # autocmd
 augroup vimrc

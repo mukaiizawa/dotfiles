@@ -27,7 +27,7 @@ def BuildFoldComment(marker: string): string
   return prefix .. marker .. suffix
 enddef
 
-export def Gzc()
+export def InsertMarkersForSelection()
   var start_line = getpos("'<")[1]
   var end_line = getpos("'>")[1]
   if start_line < 1 || end_line < 1
