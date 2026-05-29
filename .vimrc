@@ -162,6 +162,7 @@ vnoremap k gk
 vnoremap sp :DebugPrint<CR>
 
 inoremap <C-d> <C-r>=strftime('%Y-%m-%d')<CR>
+inoremap <C-e> <C-r>=execute('message')<CR><ESC>:message clear<CR>
 inoremap <C-l> <C-n>
 inoremap <Tab> <C-v><Tab>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
