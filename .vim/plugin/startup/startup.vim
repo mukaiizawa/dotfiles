@@ -5,6 +5,7 @@ var saved_showtabline = -1
 var saved_tabline = ''
 var saved_ruler = false
 var has_saved_ruler = false
+const startup_dir = expand('<sfile>:p:h')
 
 def ReadLines(path: string): list<string>
   return filereadable(path) ? readfile(path) : []
@@ -29,7 +30,7 @@ def BlockRightAlign(lines: list<string>, width: number): list<string>
 enddef
 
 def RandomQuote(): string
-  var quotes = ReadLines($HOME .. '/dotfiles/startup.quotes')
+  var quotes = ReadLines(startup_dir .. '/quotes')
   if empty(quotes)
     return ''
   endif
@@ -37,8 +38,8 @@ def RandomQuote(): string
 enddef
 
 def SplashLines(): list<string>
-  var banner = ReadLines($HOME .. '/dotfiles/startup.banner')
-  var logo = ReadLines($HOME .. '/dotfiles/startup.logo')
+  var banner = ReadLines(startup_dir .. '/banner')
+  var logo = ReadLines(startup_dir .. '/logo')
   var lines = copy(banner)
   var right_margin = 0
 
