@@ -169,3 +169,7 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 tnoremap <Esc> <C-w>N
 
+var local_vimrc = expand('~/.vimrc.local')
+if filereadable(local_vimrc)
+  execute 'source ' .. fnameescape(local_vimrc)
+endif
