@@ -23,7 +23,7 @@ set autoindent
 set backspace=start,eol,indent
 set colorcolumn=100
 set cmdheight=2
-set complete=.,b,u,s~/dotfiles/word/en
+set complete=.,b,u,s~/dotfiles/word/en,s~/dotfiles/word/it
 set cursorline
 set encoding=utf-8
 set expandtab
