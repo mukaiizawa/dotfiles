@@ -1,4 +1,6 @@
-" paren.vim
+vim9script
+
+# paren.vim
 
 setlocal complete+=s~/dotfiles/word/paren
 setlocal nocindent
@@ -10,13 +12,13 @@ setlocal comments=:;;;;;;,:;;;;;,:;;;;,:;;;,:;;,:;
 setlocal commentstring=;%s
 setlocal shiftwidth=4
 
-" special operator
+# special operator
 setlocal lispwords=let
 setlocal lispwords+=catch
 setlocal lispwords+=f
 setlocal lispwords+=macro
 
-" macro
+# macro
 setlocal lispwords+=built-in-function
 setlocal lispwords+=class
 setlocal lispwords+=doarray

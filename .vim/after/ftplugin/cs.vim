@@ -1,4 +1,6 @@
-" cs.vim
+vim9script
+
+# cs.vim
 
 setlocal complete+=s~/dotfiles/word/cs
 setlocal shiftwidth=4

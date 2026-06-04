@@ -1,9 +1,11 @@
+vim9script
+
 set background=dark
 highlight clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "shin-dark-term"
+g:colors_name = "shin-dark-term"
 
 highlight Comment        ctermfg=120   cterm=NONE
 highlight Constant       ctermfg=123   cterm=NONE

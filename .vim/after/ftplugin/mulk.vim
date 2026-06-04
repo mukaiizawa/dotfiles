@@ -1,4 +1,6 @@
-" mulk.vim
+vim9script
+
+# mulk.vim
 
 setlocal noexpandtab
 setlocal shiftwidth=2

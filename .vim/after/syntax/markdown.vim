@@ -1,4 +1,6 @@
-" markdown.vim
+vim9script
+
+# markdown.vim
 
 highlight def link markdownItalic              NONE
 highlight def link markdownItalicDelimiter     NONE

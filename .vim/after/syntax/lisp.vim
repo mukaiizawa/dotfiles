@@ -1,8 +1,10 @@
-" lisp.vim
+vim9script
+
+# lisp.vim
 
 setlocal iskeyword=33,38,42,43,45,47-58,60-90,97-122,_
 
-" stdlib
+# stdlib
 syntax keyword lispFunc with-gensyms
 syntax keyword lispFunc with-encoding
 syntax keyword lispFunc mkstr-if
@@ -112,19 +114,19 @@ syntax keyword lispKey :recursive
 syntax keyword lispKey :left :right :float :padding
 syntax keyword lispKey :title :desc :opts :foot
 
-" ahead-reader
+# ahead-reader
 syntax keyword lispFunc with-ahead-reader
 syntax keyword lispFunc with-string-ahead-reader
 syntax keyword lispFunc with-open-ahead-reader
 
-" coordinate-manager
+# coordinate-manager
 syntax keyword lispFunc with-coordinates
 
-" database-manager
+# database-manager
 syntax keyword lispFunc deftable
 syntax keyword lispFunc defschema
 
-" xml-manager
+# xml-manager
 syntax keyword lispFunc with-html-output
 syntax keyword lispKey :a
 syntax keyword lispKey :abbr
@@ -247,7 +249,7 @@ syntax keyword lispKey :video
 syntax keyword lispKey :wbr
 syntax keyword lispKey :time
 
-" predicates
+# predicates
 syntax keyword lispFunc adjustable-array?
 syntax keyword lispFunc alpha-char?
 syntax keyword lispFunc alphanumeric?
@@ -327,6 +329,6 @@ syntax keyword lispFunc eql?
 syntax keyword lispFunc symbol?
 syntax keyword lispFunc null?
 
-" ltk
+# ltk
 syntax keyword lispFunc with-ltk
 syntax keyword lispFunc with-ltk-handlers

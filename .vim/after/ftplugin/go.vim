@@ -1,4 +1,6 @@
-" go.vim
+vim9script
+
+# go.vim
 
 setlocal noexpandtab
 setlocal tabstop=2

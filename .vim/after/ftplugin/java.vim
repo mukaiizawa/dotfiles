@@ -1,8 +1,10 @@
-" html.vim
+vim9script
+
+# html.vim
 
 setlocal complete+=s~/dotfiles/word/java
 
-" add accessor
+# add accessor
 nnoremap <buffer> sa ^t mawv;"ty;wve"nyG{o
       \ public <C-r>t get<C-r>n<ESC>,3l~A() {<CR>
       \   return this.<C-r>n;<CR>

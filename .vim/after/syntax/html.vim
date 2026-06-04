@@ -1,4 +1,6 @@
-" html.vim
+vim9script
+
+# html.vim
 
 highlight def link htmlBoldItalic NONE
 highlight def link htmlBoldUnderlineItalic NONE

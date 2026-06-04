@@ -1,4 +1,6 @@
-" paren.vim
+vim9script
+
+# paren.vim
 
 if exists("b:current_syntax")
  finish
@@ -24,7 +26,7 @@ syntax keyword ParenSymbol nil true self
 syntax match ParenTodo "\c\<\(todo\|note\)\>" contained
 syntax match ParenError ")"
 
-" automatic generated -- see make rw.vim {{{
+# automatic generated -- see make rw.vim {{{
 
 syntax keyword ParenBuiltIn -
 syntax keyword ParenBuiltIn --
@@ -332,7 +334,7 @@ syntax keyword ParenBuiltIn write-line
 syntax keyword ParenBuiltIn zero?
 syntax keyword ParenBuiltIn zip
 
-" }}}
+# }}}
 
 syntax match ParenMethod "\<\.\k*\>"
 syntax match ParenClass "\<:\u\k*\>"
@@ -353,4 +355,4 @@ highlight def link ParenMethod Function
 highlight def link ParenInstansAccesser Function
 highlight def link ParenError Error
 
-let b:current_syntax = "paren"
+b:current_syntax = "paren"

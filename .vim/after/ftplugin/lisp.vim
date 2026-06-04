@@ -1,4 +1,6 @@
-" lisp.vim
+vim9script
+
+# lisp.vim
 
 setlocal complete+=s~/dotfiles/word/lisp
 setlocal lisp
@@ -6,7 +8,7 @@ setlocal nocindent
 
 nnoremap <buffer>gcl  :<C-u>lcd %:h<CR> :!clisp -i %<CR>
 
-if has('win32') || has ('win64')
+if has('win32') || has('win64')
   nnoremap <buffer>gcw  :<C-u>lcd %:h<CR> :!wx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
 else
   nnoremap <buffer>gcw  :<C-u>lcd %:h<CR> :!lx86cl64 --terminal-encoding cp932 --load  % --eval "(ccl:quit)"<CR>
@@ -14,7 +16,7 @@ endif
 
 nnoremap <buffer>gcs  :<C-u>lcd %:h<CR> :!sbcl --sysinit .sbclrc --script %<CR>
 
-" stdlib
+# stdlib
 setlocal lispwords+=set-macro-character
 setlocal lispwords+=set-dispatch-macro-character
 setlocal lispwords+=mkstr-if
@@ -42,19 +44,19 @@ setlocal lispwords+=getopt
 setlocal lispwords+=parse-args
 setlocal lispwords+=defexe
 
-" ahead-reader
+# ahead-reader
 setlocal lispwords+=with-ahead-reader
 setlocal lispwords+=with-string-ahead-reader
 setlocal lispwords+=with-open-ahead-reader
 
-" coordinate-manager
+# coordinate-manager
 setlocal lispwords+=with-coordinates
 
-" database-manager
+# database-manager
 setlocal lispwords+=deftable
 setlocal lispwords+=deftables
 
-" xml-manager
+# xml-manager
 setlocal lispwords+=with-html-output
 setlocal lispwords+=:a
 setlocal lispwords+=:abbr
@@ -177,6 +179,6 @@ setlocal lispwords+=:video
 setlocal lispwords+=:wbr
 setlocal lispwords+=:time
 
-" ltk
+# ltk
 setlocal lispwords+=with-ltk
 setlocal lispwords+=with-ltk-handlers
