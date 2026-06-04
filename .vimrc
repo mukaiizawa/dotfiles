@@ -169,8 +169,3 @@ inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
 tnoremap <Esc> <C-w>N
 
-# autocmd
-augroup vimrc
-  autocmd!
-  autocmd TerminalOpen * setlocal nonumber
-augroup END
