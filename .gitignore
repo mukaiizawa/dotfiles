@@ -1,6 +1,6 @@
 .claude/*
 !.claude/settings.json
-!.claude/statusline.sh
+!.claude/statusline.py
 !.claude/commands/
 !.claude/commands/*
 .vim/plugged/*
