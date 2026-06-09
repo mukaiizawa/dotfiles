@@ -1,7 +1,9 @@
 .claude/*
-!.claude/settings.json
-!.claude/statusline.py
 !.claude/commands/
 !.claude/commands/*
+!.claude/rules/
+!.claude/rules/*
+!.claude/settings.json
+!.claude/statusline.py
 .vim/plugged/*
 wk/
