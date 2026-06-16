@@ -22,7 +22,7 @@ unite#Register('quickfix', {
   action: function('unite#action#Open'),
 })
 unite#Register('repo', {
-  source: function('unite#repo#GatherCandidates'),
+  source: function('unite#file#GatherRepositoryCandidates'),
   action: function('unite#action#Open'),
 })
 unite#Register('menu', {
@@ -38,14 +38,7 @@ def TrackFileBuffer()
   if bufnr('%') != str2nr(expand('<abuf>')) || empty(expand('<amatch>'))
     return
   endif
-  unite#file#AppendCurrent()
-enddef
-
-def TrackRepoBuffer()
-  if bufnr('%') != str2nr(expand('<abuf>')) || empty(expand('<amatch>'))
-    return
-  endif
-  unite#repo#AppendCurrent()
+  unite#file#AppendCurrentBuffer()
 enddef
 
 augroup unite_file
@@ -53,14 +46,6 @@ augroup unite_file
   autocmd BufEnter * call TrackFileBuffer()
   autocmd VimLeavePre * call unite#file#Save({event: 'VimLeavePre'})
 augroup END
-
-if !unite#store#IsSudo()
-  augroup unite_repo
-    autocmd!
-    autocmd BufEnter * call TrackRepoBuffer()
-    autocmd VimLeavePre * call unite#repo#Save()
-  augroup END
-endif
 
 augroup unite_yank
   autocmd!
