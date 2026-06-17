@@ -89,14 +89,13 @@ nnoremap # #zz
 nnoremap ( {
 nnoremap ) }
 nnoremap * *zz
-nnoremap <C-Insert> "*y
 nnoremap <F1> :windo diffthis<CR>
 nnoremap <F2> :windo diffoff!<CR>
 nnoremap <F3> :<C-u>e $MYVIMRC<CR>
 nnoremap <F4> :<C-u>e $MYGVIMRC<CR>
 nnoremap <F5> :<C-u>source $MYVIMRC<CR>
 nnoremap <F6> :<C-u>source $MYGVIMRC<CR>
-nnoremap <S-Insert> "*p
+nnoremap <S-Insert> "+p
 nnoremap <Space><Space> zz
 nnoremap <Space>j Lzz
 nnoremap <Space>k Hzz
@@ -150,8 +149,8 @@ nnoremap zc zM
 vnoremap ( {
 vnoremap ) }
 vnoremap / y/<C-r>"<CR>zz
-vnoremap <C-Insert> "*y
-vnoremap <S-Insert> "*p
+vnoremap <C-Insert> "+y
+vnoremap <S-Insert> "+p
 vnoremap <Space>h 0
 vnoremap <Space>j Lzz
 vnoremap <Space>k Hzz
