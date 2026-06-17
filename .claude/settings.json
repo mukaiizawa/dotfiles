@@ -4,6 +4,9 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "defaultMode": "plan"
+  },
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
