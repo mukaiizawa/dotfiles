@@ -1,5 +1,9 @@
 {
   "model": "opusplan",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
