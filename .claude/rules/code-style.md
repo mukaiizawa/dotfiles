@@ -9,3 +9,4 @@
 - DO NOT define unnecessary temporary variables. Use them only when they clarify meaning.
 - DO NOT ignore the local style of the existing file.
 - DO NOT override the project's formatter, linter, or established conventions with these preferences.
+- DO NOT pack multiple statements on a single line with `;` joins or compact braces (e.g. avoid `A(); B();` or `foreach (...) { A(); B(); }`). Put one statement per line. Single-statement `if`/`for`/`foreach` like `if (cond) X();` or `for (...) arr[i] = ...;` are fine.
