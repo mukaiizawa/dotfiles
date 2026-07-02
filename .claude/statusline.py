@@ -20,6 +20,12 @@ def color_for_pct(pct):
     if pct >= 70: return YELLOW
     return GREEN
 
+def resets_at_str(key, ts, pct):
+    if key == 'five_hour':
+        return time.strftime('%H:%M', time.localtime(ts))
+    fmt = '%m/%d %H:%M' if pct >= 90 else '%m/%d'
+    return time.strftime(fmt, time.localtime(ts))
+
 def git_run(*args, cwd):
     r = subprocess.run(['git', '-C', cwd] + list(args),
                        capture_output=True, text=True)
@@ -68,7 +74,9 @@ if rate_limits is not None:
         entry = rate_limits.get(key)
         if entry is not None:
             pct = int(entry.get('used_percentage') or 0)
-            parts.append(f"{color_for_pct(pct)}{label}:{pct}%{RESET}")
+            reset_at = entry.get('resets_at')
+            reset_part = f"[{resets_at_str(key, reset_at, pct)}]" if reset_at else ''
+            parts.append(f"{color_for_pct(pct)}{label}:{pct}%{reset_part}{RESET}")
 else:
     cost = data.get('cost', {}).get('total_cost_usd') or 0
     if cost > 0:
