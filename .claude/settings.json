@@ -12,6 +12,6 @@
     "command": "python ~/.claude/statusline.py"
   },
   "language": "japanese",
-  "tui": "default",
-  "askUserQuestionTimeout": "never"
+  "askUserQuestionTimeout": "never",
+  "tui": "default"
 }
