@@ -1,6 +1,5 @@
 # Preferences
 
-- DO NOT proceed or make assumptions if I do not respond to your question. Always wait for my explicit input.
 - DO NOT alter the implementation path autonomously if any pre-requisites or assumptions are found to be flawed during development. Halt all operations and seek user validation.
 - DO NOT apply superficial or temporary fixes when a root-cause fix is feasible.
 - DO NOT commit any changes automatically.

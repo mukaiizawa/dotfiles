@@ -6,10 +6,12 @@
   "permissions": {
     "defaultMode": "plan"
   },
+  "model": "fable",
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
   },
   "language": "japanese",
-  "tui": "default"
+  "tui": "default",
+  "askUserQuestionTimeout": "never"
 }
