@@ -6,7 +6,6 @@
   "permissions": {
     "defaultMode": "plan"
   },
-  "model": "fable",
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
