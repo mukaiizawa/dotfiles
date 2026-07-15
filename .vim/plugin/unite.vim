@@ -1,5 +1,9 @@
 vim9script
 
+g:unite_mappings = {
+  prompt_redo: 'U',
+}
+
 unite#Register('line', {
   source: function('unite#line#GatherCandidates'),
   action: function('unite#action#Open'),
