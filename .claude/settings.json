@@ -6,6 +6,7 @@
   "permissions": {
     "defaultMode": "plan"
   },
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
