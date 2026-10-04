@@ -4,9 +4,9 @@
     "pr": ""
   },
   "permissions": {
-    "defaultMode": "plan"
+    "defaultMode": "auto"
   },
-  "model": "claude-opus-5",
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "python ~/.claude/statusline.py"
