@@ -1,3 +1,10 @@
+---
+name: xcommit
+description: Stage all changes and commit.
+argument-hint: "[nodiff]"
+disable-model-invocation: true
+---
+
 Stage all changes and commit.
 
 1. Run `git add .`

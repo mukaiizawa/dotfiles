@@ -1,8 +1,8 @@
 .claude/*
-!.claude/commands/
-!.claude/commands/*
 !.claude/rules/
 !.claude/rules/*
+!.claude/skills/
+.claude/skills/synced/
 !.claude/settings.json
 !.claude/statusline.py
 .vim/plugged/*
