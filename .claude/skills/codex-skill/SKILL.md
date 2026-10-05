@@ -1,7 +1,7 @@
 ---
 name: codex-skill
-description: Select the Codex skill under ~/.codex/skills that fits the given request and execute it as Codex would for `$<skill> <request>`.
-argument-hint: <request>
+description: Select the Codex skill (current directory or ~/.codex/skills) that fits the given request and execute it as Codex would for `$<skill> <request>`.
+argument-hint: "[request]"
 disable-model-invocation: true
 ---
 
@@ -21,11 +21,23 @@ invoking the matching Codex skill with the same request in Codex.
 
 $ARGUMENTS
 
+## Skill sources
+
+Collect `*/SKILL.md` from the following directories. Skip directories that do
+not exist.
+
+- `./.agents/skills` (current directory)
+- `./.codex/skills` (current directory)
+- `~/.codex/skills`, excluding `~/.codex/skills/.system`
+
+If the same skill name appears in multiple sources, the current directory wins.
+
 ## Workflow
 
-1. If the request is empty, ask the user for it and stop.
-2. Read the frontmatter (`name`, `description`) of every
-   `~/.codex/skills/*/SKILL.md`. Exclude `~/.codex/skills/.system`.
+1. Read the frontmatter (`name`, `description`) of every skill in the skill
+   sources.
+2. If the request is empty, list the available skills as a table with name,
+   source, and a one-line summary of the description, then stop.
 3. Select the single skill that best fits the request.
    - If the request names a skill, use it.
    - If no skill fits, report that and stop. Do not handle the request
