@@ -3,6 +3,8 @@
 !.claude/rules/*
 !.claude/skills/
 .claude/skills/synced/
+.claude/skills/unity-localization-skill/
+.claude/skills/unity-mcp-skill/
 !.claude/settings.json
 !.claude/statusline.py
 .vim/plugged/*
