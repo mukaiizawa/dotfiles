@@ -1,23 +1,23 @@
-APIGateway
+API Gateway
 ASCII
 Agile
 Amazon
-AmazonMQ
+Amazon MQ
 Android
 Angular
 Ansible
 Apache
+App Mesh
+App Runner
 AppArmor
 AppConfig
 AppFlow
-AppMesh
-AppRunner
 AppStream
 AppSync
 Apple
 Athena
 Aurora
-AutoScaling
+Auto Scaling
 Azure
 Backup
 Batch
@@ -29,9 +29,9 @@ Bootstrap
 Braket
 Browser
 Cassandra
-CertificateManager
+Certificate Manager
 Cisco
-ClientVPN
+Client VPN
 Clojure
 Cloud9
 CloudFormation
@@ -53,12 +53,12 @@ Cognito
 Comprehend
 Config
 Connect
-ControlTower
+Control Tower
 DataSync
-DatabaseMigrationService
+Database Migration Service
 Debian
 DevOps
-DirectConnect
+Direct Connect
 Django
 Docker
 Dockerfile
@@ -66,11 +66,11 @@ DocumentDB
 DynamoDB
 ESLint
 ElastiCache
-ElasticBeanstalk
-ElasticBlockStore
-ElasticContainerRegistry
-ElasticFileSystem
-ElasticLoadBalancing
+Elastic Beanstalk
+Elastic Block Store
+Elastic Container Registry
+Elastic File System
+Elastic Load Balancing
 Elasticsearch
 Electron
 Elixir
@@ -84,26 +84,26 @@ Firehose
 Flask
 Flutter
 Forecast
-FraudDetector
+Fraud Detector
 GameLift
 GitHub
 GitLab
-GlobalAccelerator
+Global Accelerator
 Godot
 Gradle
 Grafana
 GraphQL
 Graviton
-GroundStation
+Ground Station
 GuardDuty
 HTTPS
 Hadoop
 Haskell
 Hibernate
-IdentityCenter
+Identity Center
 InfluxDB
 Inspector
-IoTSiteWise
+IoT SiteWise
 JavaScript
 Jenkins
 Jetty
@@ -113,14 +113,14 @@ Keyspaces
 Kinesis
 Kotlin
 Kubernetes
-LakeFormation
+Lake Formation
 Lambda
 Laravel
 Lightsail
 Linux
-LocationService
+Location Service
 Macie
-ManagedBlockchain
+Managed Blockchain
 MariaDB
 Markdown
 Marketplace
@@ -130,7 +130,7 @@ MediaPackage
 MediaStore
 MediaTailor
 Memcached
-MigrationHub
+Migration Hub
 MongoDB
 MySQL
 Neptune
@@ -160,39 +160,39 @@ React
 Redis
 Redshift
 Rekognition
-ResilienceHub
+Resilience Hub
 RoboMaker
-Route53
+Route 53
 SQLite
 SageMaker
 Scala
-SecretsManager
-SecurityHub
-ServerlessApplicationRepository
-ServiceCatalog
+Secrets Manager
+Security Hub
+Serverless Application Repository
+Service Catalog
 Shield
 Snowball
 Snowcone
 Snowmobile
 Spring
-StepFunctions
-StorageGateway
+Step Functions
+Storage Gateway
 Svelte
 Swift
-SystemsManager
+Systems Manager
 Terraform
 Textract
 Timestream
 Transcribe
-TransferFamily
+Transfer Family
 Translate
-TrustedAdvisor
+Trusted Advisor
 TypeScript
 Ubuntu
 Unity
 Vagrant
 Vault
-VisualStudio
+Visual Studio
 Wavelength
 WebSocket
 Webpack
@@ -204,7 +204,7 @@ WorkMail
 WorkSpaces
 YAGNI
 accessibility
-accountId
+account ID
 adapter
 aggregate
 allocator
@@ -213,8 +213,8 @@ antivirus
 application
 architecture
 artifact
-assumeRole
-assumedRole
+assume role
+assumed role
 asterisk
 asynchronous
 attachment
@@ -224,7 +224,7 @@ authentication
 authorization
 authorize
 availability
-availabilityZone
+availability zone
 backend
 backport
 bandwidth
@@ -282,8 +282,8 @@ credential
 cryptography
 daemon
 dashboard
+data center
 database
-datacenter
 dataflow
 dataframe
 datagram
@@ -335,7 +335,7 @@ hotfix
 hypervisor
 hyphen
 identifier
-identityPool
+identity pool
 image
 immutable
 implement
@@ -349,7 +349,7 @@ initialization
 injector
 insert
 instance
-instanceProfile
+instance profile
 integration
 interface
 internet
@@ -359,18 +359,18 @@ intranet
 invalid
 iterate
 kernel
+key pair
 keychain
-keypair
 latency
-launchTemplate
+launch template
 library
-loadbalancer
+load balancer
 local
 logging
 machine
 mainframe
 malformed
-managedPolicy
+managed policy
 member
 members
 memory
@@ -425,7 +425,7 @@ replica
 replication
 repository
 request
-reservedInstance
+reserved instance
 resource
 response
 retention
@@ -440,7 +440,7 @@ scheduler
 schema
 search
 security
-securityGroup
+security group
 semicolon
 serialize
 serializer
@@ -456,8 +456,8 @@ snapshot
 socket
 software
 source
-sourcemap
-spotInstance
+source map
+spot instance
 stack
 staging
 standard
@@ -473,7 +473,7 @@ synopsis
 syntax
 syscall
 system
-targetGroup
+target group
 technical
 technology
 template
@@ -491,7 +491,7 @@ unexpected
 unknown
 unreachable
 uptime
-userPool
+user pool
 username
 validation
 variable
@@ -500,8 +500,8 @@ vertex
 viewport
 virtualization
 vulnerability
+web server
 webhook
-webserver
 website
 wildcard
 wireless

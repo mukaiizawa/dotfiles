@@ -24,6 +24,7 @@ set backspace=start,eol,indent
 set colorcolumn=100
 set cmdheight=2
 set complete=.,b,u,s~/dotfiles/word/en,s~/dotfiles/word/it
+set completefunc=word_complete#Complete
 set cursorline
 set encoding=utf-8
 set expandtab
@@ -162,7 +163,9 @@ vnoremap sp :DebugPrint<CR>
 
 inoremap <C-d> <C-r>=strftime('%Y-%m-%d')<CR>
 inoremap <C-e> <C-r>=execute('message')<CR><ESC>:message clear<CR>
-inoremap <C-l> <C-n>
+inoremap <expr> <C-n> word_complete#Start(false)
+inoremap <expr> <C-p> word_complete#Start(true)
+inoremap <expr> <C-l> word_complete#Start(false)
 inoremap <Tab> <C-v><Tab>
 inoremap <silent><ESC> <ESC>:set iminsert=0<CR>
 
