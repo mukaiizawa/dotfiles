@@ -8,9 +8,47 @@ def SourceLines(info: dict<any>): list<string>
   return filereadable(info.name) ? readfile(info.name) : []
 enddef
 
+def WordStart(text: string): number
+  var start = strlen(text)
+  var chars = split(text, '\zs')
+  if empty(chars) || chars[-1] !~# '\k'
+    return start
+  endif
+  var word_class = charclass(chars[-1])
+  for char in reverse(chars)
+    if charclass(char) != word_class
+      break
+    endif
+    start -= strlen(char)
+  endfor
+  return start
+enddef
+
+def Words(text: string): list<string>
+  var words: list<string> = []
+  var word = ''
+  var previous_class = 0
+  for char in split(text, '\zs')
+    var current_class = charclass(char)
+    if current_class != previous_class && word !=# ''
+      add(words, word)
+      word = ''
+    endif
+    if current_class > 1
+      word ..= char
+    endif
+    previous_class = current_class
+  endfor
+  if word !=# ''
+    add(words, word)
+  endif
+  return words
+enddef
+
 export def Complete(findstart: number, base: string): any
   if findstart
-    return match(strpart(getline('.'), 0, col('.') - 1), '\k*$')
+    # Like native completion, stop where Vim's character class changes.
+    return WordStart(strpart(getline('.'), 0, col('.') - 1))
   endif
   var candidates: list<string> = []
   var seen: dict<bool> = {}
@@ -27,7 +65,7 @@ export def Complete(findstart: number, base: string): any
             || (source ==# 'b' && info.listed && info.loaded && info.bufnr != bufnr())
             || (source ==# 'u' && info.listed && !info.loaded)
           for text in SourceLines(info)
-            extend(entries, split(text, '\k\@!.'))
+            extend(entries, Words(text))
           endfor
         endif
       endfor

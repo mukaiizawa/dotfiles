@@ -8,4 +8,5 @@
 !.claude/settings.json
 !.claude/statusline.py
 .vim/plugged/*
+/word/local
 wk/

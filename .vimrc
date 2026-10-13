@@ -23,7 +23,7 @@ set autoindent
 set backspace=start,eol,indent
 set colorcolumn=100
 set cmdheight=2
-set complete=.,b,u,s~/dotfiles/word/en,s~/dotfiles/word/it
+set complete=.,b,u,s~/dotfiles/word/en,s~/dotfiles/word/it,s~/dotfiles/word/local
 set completefunc=word_complete#Complete
 set cursorline
 set encoding=utf-8
