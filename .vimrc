@@ -110,6 +110,7 @@ nnoremap <silent>mf :<C-u>Unite file<CR>
 nnoremap <silent>mh :<C-u>Unite help<CR>
 nnoremap <silent>ml :<C-u>Unite line<CR>
 nnoremap <silent>mm :<C-u>Unite menu<CR>
+nnoremap <silent>mo :<C-u>Unite outline<CR>
 nnoremap <silent>mq :<C-u>Unite quickfix<CR>
 nnoremap <silent>mr :<C-u>Unite repo<CR>
 nnoremap <silent>mx :<C-u>lcd %:h<CR> :QuickRun<CR>

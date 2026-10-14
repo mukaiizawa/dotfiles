@@ -9,6 +9,11 @@ unite#Register('line', {
   action: function('unite#action#Open'),
   syntax: 'line-numbers',
 })
+unite#Register('outline', {
+  source: function('unite#outline#GatherCandidates'),
+  action: function('unite#action#Open'),
+  syntax: 'line-numbers',
+})
 unite#Register('file', {
   source: function('unite#file#GatherCandidates'),
   action: function('unite#action#Open'),
